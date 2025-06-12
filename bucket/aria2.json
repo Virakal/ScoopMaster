@@ -1,17 +1,29 @@
 {
-    "version": "1.37.0",
-    "homepage": "https://aria2.github.io/",
-    "license": "",
-    "url": "https://github.com/aria2/aria2/releases/download/release-1.37.0/aria2-1.37.0-win-64bit-build1.zip",
-    "hash": "67d015301eef0b612191212d564c5bb0a14b5b9c4796b76454276a4d28d9b288",
-    "extract_dir": "aria2-1.37.0-win-64bit-build1",
+    "version": "v0.1.0",
+    "description": "Simple Aria2 Wrapper",
+    "homepage": "https://github.com/Syndim/aria2-wrapper",
+    "license": "MIT",
+    "depends": "aria2-orig",
+    "architecture": {
+        "64bit": {
+            "url": "https://ghproxy.cn/https://github.com/Syndim/aria2-wrapper/releases/download/v0.1.0/aria2-wrapper-windows-amd64.zip",
+            "hash": "1de4d30b0ec415417dd37f1b8322ffd277dbea440ac8d5ea304b7af75d669531"
+        }
+    },
+    "pre_install": [
+        "Write-Host 'Renaming aria2-wrapper.exe to aria2c.exe'",
+        "Rename-Item \"$dir\\aria2-wrapper.exe\" \"aria2c.exe\" -ErrorAction SilentlyContinue"
+    ],
     "bin": "aria2c.exe",
     "checkver": {
-        "github": "https://github.com/aria2/aria2",
-        "regex": "/releases/tag/release-([\\d.]+)"
+        "github": "https://github.com/Syndim/aria2-wrapper",
+        "regex": "releases/tag/(v[\\d\\.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/aria2/aria2/releases/download/release-$matchVersion/aria2-$matchVersion-win-64bit-build1.zip",
-        "extract_dir": "aria2-$matchVersion-win-64bit-build1"
+        "architecture": {
+            "64bit": {
+                "url": "https://ghproxy.cn/https://github.com/Syndim/aria2-wrapper/releases/download/$version/aria2-wrapper-windows-amd64.zip"
+            }
+        }
     }
 }
