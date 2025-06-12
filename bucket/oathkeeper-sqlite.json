@@ -1,12 +1,12 @@
 {
-    "version": "0.40.7",
+    "version": "0.40.9",
     "description": "A cloud native Identity & Access Proxy / API (IAP) and Access Control Decision API that authenticates, authorizes, and mutates incoming HTTP(s) requests. Inspired by the BeyondCorp / Zero Trust white paper. Written in Go.",
     "homepage": "https://www.ory.sh/oathkeeper/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ory/oathkeeper/releases/download/v0.40.7/oathkeeper_0.40.7-windows_sqlite_64bit.zip",
-            "hash": "bef1a33998090363789cd6c3550ecf7f504654e09c56bd9c9a748d67f5984815"
+            "url": "https://github.com/ory/oathkeeper/releases/download/v0.40.9/oathkeeper_0.40.9-windows_sqlite_64bit.zip",
+            "hash": "6a3862c31165b3d3365f06570c796c3503d8b57a0a46888205dd0e841ef3cd06"
         }
     },
     "bin": "oathkeeper.exe",

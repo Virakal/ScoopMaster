@@ -1,20 +1,20 @@
 {
-    "version": "18.1.8",
+    "version": "20.1.6",
     "description": "Collection of modular and reusable compiler and toolchain technologies.",
     "homepage": "https://www.llvm.org/",
     "license": "NCSA",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win64.exe#/dl.7z",
-            "hash": "94af030060d88cc17e9f00ef1663ebdc1126b35e16bebdfa1e807984b70abd8f"
+            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/LLVM-20.1.6-win64.exe#/dl.7z",
+            "hash": "57024002751f27981485aecf9215088887641e116f8a3971bd63090e38b42e9e"
         },
         "32bit": {
-            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-win32.exe#/dl.7z",
-            "hash": "4ce39685d593a33cdbcdd10bec2288b65e020b38995d684c19cb56cad0fa43ac"
+            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/LLVM-20.1.6-win32.exe#/dl.7z",
+            "hash": "09000eb6344ff5ffb020686767a8daeb34892b9686b8a9dd9f85bc8fe3073f79"
         },
         "arm64": {
-            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-18.1.8/LLVM-18.1.8-woa64.exe#/dl.7z",
-            "hash": "e25bf44d67fe86708490cf08de085fe1d6e1e50f3249c212c9077a06247cdc9e"
+            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.6/LLVM-20.1.6-woa64.exe#/dl.7z",
+            "hash": "92f69a1134e32e54b07d51c6e24d9594852f6476f32c3d70471ae00fffc2d462"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",

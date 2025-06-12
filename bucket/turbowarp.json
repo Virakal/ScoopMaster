@@ -1,23 +1,23 @@
 {
-    "version": "1.12.3",
+    "version": "1.14.2",
     "description": "A better offline editor for Scratch 3.",
     "homepage": "https://desktop.turbowarp.org/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.12.3/TurboWarp-Setup-1.12.3-x64.exe#/dl.7z",
+            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.14.2/TurboWarp-Setup-1.14.2-x64.exe#/dl.7z",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "hash": "f2e773a8289d56a61edf1bad6209a74a3d9bfedcb412066689b8325ec4a836b5"
+            "hash": "9aa4bd9799984ed6bad35b52d572b3c5c5b4836c5c910e4736e93f03576f8624"
         },
         "32bit": {
-            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.12.3/TurboWarp-Setup-1.12.3-ia32.exe#/dl.7z",
+            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.14.2/TurboWarp-Setup-1.14.2-ia32.exe#/dl.7z",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
-            "hash": "bc04f499791030b58e8e519e0ee74b462a5cf948a5ae17ec0fbe7955dae63b61"
+            "hash": "7a736a06839c8e89ba1ab88f4a821589e5f897233f2ddd8db0bf40c335c54caf"
         },
         "arm64": {
-            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.12.3/TurboWarp-Setup-1.12.3-arm64.exe#/dl.7z",
+            "url": "https://github.com/TurboWarp/desktop/releases/download/v1.14.2/TurboWarp-Setup-1.14.2-arm64.exe#/dl.7z",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
-            "hash": "153cccb4f71e51b72cb9bffce340e998d0fa504af5935d66e39f5a477730d137"
+            "hash": "9162f90b5b76b9de780b016cba1ca22ea8276186022667503ee78b0aaea09fb0"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\resources\\app-update.yml\"  -Force -Recurse",

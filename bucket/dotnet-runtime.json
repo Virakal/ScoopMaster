@@ -1,20 +1,39 @@
 {
-    "version": "6.0.4",
-    "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
-    "homepage": "https://dotnet.microsoft.com/",
-    "license": "MIT",
-    "notes": "This package only contains the .NET Core runtime, install 'dotnet-sdk' instead if you need .NET Core SDK",
-    "depends": "dark",
     "architecture": {
-        "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.4/windowsdesktop-runtime-6.0.4-win-x64.exe",
-            "hash": "sha512:209e596edd7ab022241ab378e66703912974e7aa6168f287c9ce036fb31e58029ad304c8182b4b62a08e8d5ae4db74de277e298ced6d2746ef08da2352a2a252"
-        },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.4/windowsdesktop-runtime-6.0.4-win-x86.exe",
-            "hash": "sha512:e3e52096d09782b35d6dfe15c8ed8eed978d7def198696f2e6f3ce7c83e7526b5e74955de2ca68ae94bbbd6c1d01d4faf2f4a5252c1e7c99b0746e2716a0a8e5"
+            "hash": "sha512:8cd87203979b7ca6c191bb5f46f71ade8f00439a564fbe73caa48c8bc0d33701893fff51d0e1c58fcb9cd83cdc420748fb30f4daa221e7417012d136bbd2310f",
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.6/windowsdesktop-runtime-8.0.6-win-x86.exe"
+        },
+        "64bit": {
+            "hash": "sha512:91bec94f32609fd194ac47a893cea1466e6ad25a16bbaf39cd6989fa9f09e865ba87669aabfe26cd3c8f2a57296170cc021dc762e238a6c5cb5e843d3df3169f",
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.6/windowsdesktop-runtime-8.0.6-win-x64.exe"
         }
     },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x86.exe"
+            },
+            "64bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x64.exe"
+            }
+        },
+        "hash": {
+            "mode": "extract",
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$version-sha.txt"
+        }
+    },
+    "bin": "dotnet.exe",
+    "checkver": {
+        "regex": "(?s)([\\d.]+)[^\\d]*?(?<sdkversion>[\\d.]+)[^\\d]*?(?:current|lts)",
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json"
+    },
+    "depends": "dark",
+    "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
+    "env_set": {
+        "DOTNET_ROOT": "$dir"
+    },
+    "homepage": "https://dotnet.microsoft.com/",
     "installer": {
         "script": [
             "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
@@ -23,26 +42,7 @@
             "@('dotnet', 'extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
         ]
     },
-    "bin": "dotnet.exe",
-    "env_set": {
-        "DOTNET_ROOT": "$dir"
-    },
-    "checkver": {
-        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
-        "regex": "(?s)([\\d.]+)[^\\d]*?(?<sdkversion>[\\d.]+)[^\\d]*?(?:current|lts)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x64.exe"
-            },
-            "32bit": {
-                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x86.exe"
-            }
-        },
-        "hash": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$version-sha.txt",
-            "mode": "extract"
-        }
-    }
+    "license": "MIT",
+    "notes": "This package only contains the .NET Core runtime, install 'dotnet-sdk' instead if you need .NET Core SDK",
+    "version": "8.0.6"
 }

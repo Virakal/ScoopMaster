@@ -1,0 +1,28 @@
+{
+    "version": "1.0.12",
+    "description": "George ID Desktop",
+    "homepage": "https://www.sparkasse.at/sgruppe/privatkunden/digitales-banking/alternative-login-methoden#voraussetzungen",
+    "license": "Proprietary",
+    "url": "https://cdn0.erstegroup.com/content/dam/at/spk-sgruppe/www_sparkasse_at/george/george-id-computer/prod-windows/George_ID_Installer_1.0.12.msi#/setup.msi_",
+    "hash": "d4a0668d2ffaae8383e56e0e46dc8cb308e3c225ee2fe61a8f107e135a0a1f3d",
+    "##": "No quiet installation possible",
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process 'msiexec' -ArgumentList @('/i', \"$dir\\setup.msi_\") -Wait -Verb 'RunAs'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process 'msiexec' -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn', '/norestart') -Wait -Verb 'RunAs'"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.sparkasse.at/erstebank/privatkunden/digitales-banking/alternative-login-methoden#/georgeid-desktop-download",
+        "regex": "George_ID_Installer_([\\d.]+)\\.msi"
+    },
+    "autoupdate": {
+        "url": "https://cdn0.erstegroup.com/content/dam/at/spk-sgruppe/www_sparkasse_at/george/george-id-computer/prod-windows/George_ID_Installer_$version.msi#/setup.msi_"
+    }
+}

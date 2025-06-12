@@ -1,32 +1,32 @@
 {
-    "version": "4.1.1",
+    "version": "4.4.0",
     "description": "RedisShake is a Redis data processing and migration tool.",
     "homepage": "https://github.com/tair-opensource/RedisShake",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tair-opensource/RedisShake/releases/download/v4.1.1/redis-shake-windows-amd64.tar.gz",
-            "hash": "dd185c8d1ad19790173584c84b314133f350d1ddb4b091aaa83eade7e2b0ba54"
+            "url": "https://github.com/tair-opensource/RedisShake/releases/download/v4.4.0/redis-shake-v4.4.0-windows-amd64.tar.gz",
+            "hash": "9359099c274fdb2963b0a42256b6642f5d9bd6a906751ddbdaab9dc41f879f84"
         },
         "arm64": {
-            "url": "https://github.com/tair-opensource/RedisShake/releases/download/v4.1.1/redis-shake-windows-arm64.tar.gz",
-            "hash": "937751262a7a8d5b3eb20bcd18fcad22dc8fde82b507453a0a40464a3a9454e7"
+            "url": "https://github.com/tair-opensource/RedisShake/releases/download/v4.4.0/redis-shake-v4.4.0-windows-arm64.tar.gz",
+            "hash": "555f7feaf5720b090a3fe1c01ffd6d5fe4b00be46f6d4e53f899ef1bd99abfc9"
         }
     },
-    "pre_install": "Rename-Item -Path \"$dir\\redis-shake\" -NewName 'redis-shake.exe'",
+    "pre_install": "Get-ChildItem \"$dir\" 'redis-shake' | Select-Object -First 1 | Rename-Item -NewName 'redis-shake.exe'",
     "bin": "redis-shake.exe",
     "persist": "shake.toml",
     "checkver": {
-        "url": "https://github.com/tair-opensource/RedisShake/releases/latest",
-        "regex": "/RedisShake/tree/v([^/]+?)\""
+        "url": "https://github.com/tair-opensource/RedisShake/releases.atom",
+        "regex": "Repository/\\d+/v(.+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tair-opensource/RedisShake/releases/download/v$version/redis-shake-windows-amd64.tar.gz"
+                "url": "https://github.com/tair-opensource/RedisShake/releases/download/v$version/redis-shake-v$version-windows-amd64.tar.gz"
             },
             "arm64": {
-                "url": "https://github.com/tair-opensource/RedisShake/releases/download/v$version/redis-shake-windows-arm64.tar.gz"
+                "url": "https://github.com/tair-opensource/RedisShake/releases/download/v$version/redis-shake-v$version-windows-arm64.tar.gz"
             }
         }
     }

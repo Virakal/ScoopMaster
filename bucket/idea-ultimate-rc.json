@@ -1,13 +1,13 @@
 {
-    "version": "2024.2.2-242.22855.36",
+    "version": "2025.1.1-251.25410.59",
     "description": "Cross-Platform IDE for Java by JetBrains. (Release Candidate)",
     "homepage": "https://www.jetbrains.com/idea/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "url": "https://download.jetbrains.com/idea/ideaIU-242.22855.36.win.zip",
-    "hash": "b7a76874316a07bfcdc45e98b6670709ea7ca46afaeaa52b2898201ae7084842",
+    "url": "https://download.jetbrains.com/idea/ideaIU-251.25410.59.win.zip",
+    "hash": "afa172b97cd4a17aaa4a44a021eaabe3275d4e37a9b90af08131dd125374db4a",
     "extract_to": "IDE",
     "installer": {
         "script": "& \"$bucketsdir\\versions\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir"

@@ -1,12 +1,12 @@
 {
-    "version": "24.05-3241",
+    "version": "25.04-3886",
     "description": "Convergent podcast application",
     "homepage": "https://apps.kde.org/kasts/",
     "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-24.05/windows/kasts-release_24.05-3241-windows-gcc-x86_64.7z",
-            "hash": "c5e4d83d4564af1880ccfd1556539817976c6fee7a09798f8c3b3838acc2181d"
+            "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-25.04/windows/kasts-release_25.04-3886-windows-cl-msvc2022-x86_64.7z",
+            "hash": "e7a6b82977e80d4a54501c056a8d6d4d62bd2d07751c2f9a5b656f1135b2defd"
         }
     },
     "bin": "bin\\kasts.exe",
@@ -17,13 +17,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-24.05/windows/",
-        "regex": "kasts-release_([\\d.-]+)-windows-gcc-x86_64\\.7z"
+        "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-25.04/windows/",
+        "regex": "kasts-release_([\\d.-]+)-windows-cl-(?<lib>\\w+)-x86_64\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-$matchHead/windows/kasts-release_$version-windows-gcc-x86_64.7z",
+                "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-$matchHead/windows/kasts-release_$version-windows-cl-$matchLib-x86_64.7z",
                 "hash": {
                     "url": "$url.sha256"
                 }

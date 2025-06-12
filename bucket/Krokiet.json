@@ -1,16 +1,15 @@
 {
-    "version": "7.0.0",
+    "version": "9.0.0",
     "description": "GUI tool to find duplicates, similar images and music.",
     "homepage": "https://github.com/qarmin/czkawka",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qarmin/czkawka/releases/download/7.0.0/windows_krokiet.exe#/krokiet.exe",
-            "hash": "c98191d420f3c66f56fab9e232e604c354ecae30513b79497f8430f6111be42c"
+            "url": "https://github.com/qarmin/czkawka/releases/download/9.0.0/windows_krokiet.exe#/krokiet.exe",
+            "hash": "d91c05d0d33b9891038658d5d90a6a46567c15eb6be823521b32b628e0805d4f"
         }
     },
-    "shortcuts": 
-    [
+    "shortcuts": [
         [
             "krokiet.exe",
             "Krokiet"

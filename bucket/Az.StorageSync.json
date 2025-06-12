@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:082b4afb26ccb30b2d71419911c1ec436540ac0412f1ba60afa3d9ca2779c2bb4b5a5faefbb4a4377a3e03da8b4916742a3f0f11a8446e34624db3c48540866a",
+    "hash": "sha512:e2c19f4572bd0fb9c99d9248f72d086d24328053935012ce48a15a5e3951dbf33ac38e24125da46c574f6e108186daa87f07e0a16564a6ee182691cd3a43b9de",
     "description": "Microsoft Azure PowerShell - Storage Sync cmdlets in Windows PowerShell and PowerShell Core. Manages operations pertaining to Azure File Sync in PowerShell.",
     "psmodule": {
         "name": "Az.StorageSync"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.StorageSync/2.3.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.StorageSync/2.5.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.3.1"
+    "version": "2.5.0"
 }

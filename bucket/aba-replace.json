@@ -1,0 +1,25 @@
+{
+    "autoupdate": {
+        "url": "https://www.abareplace.com/AbaReplace$cleanVersionportable.zip"
+    },
+    "bin": "AbaReplace.exe",
+    "checkver": {
+        "regex": "Aba Search and Replace ([\\d.]+) installer",
+        "url": "https://www.abareplace.com/download/"
+    },
+    "hash": "1fde19b97470a702d5c4754589d44f3829cc373b11d897bd8d2cc0d59f6ee799",
+    "homepage": "https://www.abareplace.com/",
+    "license": "shareware",
+    "persist": [
+        "AbaReplace.ini",
+        "UndoInfo"
+    ],
+    "shortcuts": [
+        [
+            "AbaReplace.exe",
+            "Aba Search & Replace"
+        ]
+    ],
+    "url": "https://www.abareplace.com/AbaReplace284portable.zip",
+    "version": "2.8.4"
+}

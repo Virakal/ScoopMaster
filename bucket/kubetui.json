@@ -1,13 +1,13 @@
 {
-    "version": "1.5.3",
+    "version": "1.7.1",
     "description": "A terminal UI for Kubernetes",
     "homepage": "https://github.com/sarub0b0/kubetui",
     "license": "MIT",
     "depends": "extras/vcredist2022",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sarub0b0/kubetui/releases/download/v1.5.3/kubetui-x86_64-pc-windows-msvc.exe#/kubetui.exe",
-            "hash": "46578baacd92ec83dca54d271f8fc8d06b558310ed3ae24f9f67594b4e2d0918"
+            "url": "https://github.com/sarub0b0/kubetui/releases/download/v1.7.1/kubetui-x86_64-pc-windows-msvc.exe#/kubetui.exe",
+            "hash": "8ea573ba5d63893c869128144d56f6dc439a2e87295560c10586930cd3be92ed"
         }
     },
     "bin": "kubetui.exe",

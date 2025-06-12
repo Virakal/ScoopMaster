@@ -1,12 +1,12 @@
 {
-    "version": "2.12.1",
-    "homepage": "https://runjs.dev/",
-    "license": "Freeware",
-    "description": "A JavaScript playground that auto-evaluates as you type.",
-    "url": "https://github.com/lukehaas/RunJS/releases/download/v2.12.1/RunJS-Setup-2.12.1.exe#/dl.7z",
-    "hash": "f58317a848dcce8e29213babac2afccf4e21833dc9aa07d36491df4f54371be6",
+    "version": "3.1.2",
+    "homepage": "https://runjs.app",
+    "license": "N/A",
+    "description": "RunJS is a JavaScript playground for macOS, Windows and Linux. Write code with instant feedback and access to Node.js and browser APIs.",
+    "url": "https://github.com/lukehaas/RunJS/releases/download/v3.1.2/RunJS-Setup-3.1.2.exe#/dl.7z",
+    "hash": "494381AB5DE1A8170015C7AB38EDF202F7A273CE99E8896AB9AEA4C9FF57009B",
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+        "7z x \"$dir\\`$PLUGINSDIR\\app-64.7z\" -o\"$dir\"",
         "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse"
     ],
     "shortcuts": [

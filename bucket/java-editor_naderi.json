@@ -1,40 +1,40 @@
 {
-    "homepage": "http://www.javaeditor.org/",
-    "version": "22.06",
-    "license": "freeware",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.javaeditor.org/download/javaeditor64.22.06.zip",
-            "hash": "a2bfbe684d6df8a6accf1d51ba10d4b1778e3b8428afc7360af2d1e0a1b8825f"
-        },
-        "32bit": {
-            "url": "https://www.javaeditor.org/download/javaeditor22.06.zip",
-            "hash": "3f55fb129baaeb70d0ea28074c21dd999b1916acffc335f2151216cfc2c48c53"
-        }
+  "homepage": "http://www.javaeditor.org/",
+  "version": "23.06",
+  "license": "freeware",
+  "architecture": {
+    "64bit": {
+      "url": "https://www.javaeditor.org/download/javaeditor64.23.06.zip",
+      "hash": "aa40a1f46e88f34a7b13179d4ff0f1642ad9684d1e221e71cc6f9298455fc975"
     },
-    "persist": [
-        "JEMachine.INI",
-        "Data",
-        "languages\\schinese.ini"
-    ],
-    "shortcuts": [
-        [
-            "javaeditor.exe",
-            "Java-Editor"
-        ]
-    ],
-    "checkver": {
-        "url": "http://www.javaeditor.org/doku.php?id=en:download",
-        "regex": "Version ([\\d.]+) from"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.javaeditor.org/download/javaeditor64.$version.zip"
-            },
-            "32bit": {
-                "url": "https://www.javaeditor.org/download/javaeditor$version.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://www.javaeditor.org/download/javaeditor23.06.zip",
+      "hash": "e9f6be6b0dfd103479e399b189495f5d324c7c7de14363efc56954aaa7c40758"
     }
+  },
+  "persist": [
+    "JEMachine.INI",
+    "Data",
+    "languages\\schinese.ini"
+  ],
+  "shortcuts": [
+    [
+      "javaeditor.exe",
+      "Java-Editor"
+    ]
+  ],
+  "checkver": {
+    "url": "http://www.javaeditor.org/doku.php?id=en:download",
+    "regex": "Version ([\\d.]+) from"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.javaeditor.org/download/javaeditor64.$version.zip"
+      },
+      "32bit": {
+        "url": "https://www.javaeditor.org/download/javaeditor$version.zip"
+      }
+    }
+  }
 }

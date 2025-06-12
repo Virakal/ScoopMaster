@@ -1,12 +1,12 @@
 {
-    "version": "0.4.50",
+    "version": "0.8.5",
     "description": "nitropy is a command-line interface for the Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 and NetHSM.",
     "homepage": "https://github.com/Nitrokey/pynitrokey",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Nitrokey/pynitrokey/releases/download/v0.4.50/nitropy-v0.4.50-x64-windows-binary.zip",
-            "hash": "8dd4b61247be3f0a1f0c35739a5488e6406c9e42f79d8cd5e95fcca8200941cf"
+            "url": "https://github.com/Nitrokey/pynitrokey/releases/download/v0.8.5/nitropy-v0.8.5-x64-windows-binary.zip",
+            "hash": "b8ce1b1caa9d541fb8c62c7d100f5a08a0c9ce0608c8259bf4e4e3157f9d65fe"
         }
     },
     "pre_install": "Rename-Item \"$dir\\nitropy-v$version-x64-windows-binary.exe\" 'nitropy.exe'",

@@ -1,20 +1,16 @@
 {
     "homepage": "https://github.com/xwmx/nb",
     "license": "AGPL-3.0",
-    "version": "7.14.0",
+    "version": "7.19.1",
     "depends": "main/unzip",
     "suggest": {
         "git": "git"
     },
-    "url": "https://github.com/xwmx/nb/archive/refs/tags/7.14.0.zip",
-    "hash": "8720e9fee693c8ef59019f6932b109321f7cced6d57c35f0a6f1b615f4331ae6",
+    "url": "https://github.com/xwmx/nb/archive/refs/tags/7.19.1.zip",
+    "hash": "abf76960358b2c37f83aea6476332b4b7ad7414acc119d12d947aa0248a8130b",
+    "extract_dir": "nb-7.19.1",
     "installer": {
         "script": [
-            "$zipfile = (Get-ChildItem \"$dir\" '*.zip#' | Select-Object -First 1).FullName",
-            "Start-Process -Wait -FilePath \"unzip.exe\" -ArgumentList \"$zipfile -d $dir\" -WindowStyle Hidden",
-            "$folder = (Get-Childitem -Directory \"$dir\"| Select-Object -First 1).FullName",
-            "Move-Item \"$folder\\*\" \"$dir\"",
-            "Remove-Item \"$folder\"",
             "Set-Content \"$dir\\nb.bat\" \"@for /f %%i in ('scoop prefix git') do @%%i\\bin\\bash.exe %~dp0nb %*\" -Encoding ASCII",
             "Set-Content \"$dir\\bookmark.bat\" \"@for /f %%i in ('scoop prefix git') do @%%i\\bin\\bash.exe %~dp0bin\\bookmark %*\" -Encoding ASCII",
             "Remove-Item \"$zipfile\" -Force",

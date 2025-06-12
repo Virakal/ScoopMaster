@@ -1,14 +1,19 @@
 {
-    "version": "0.6.2",
+    "version": "0.26.0",
     "description": "Modern markdown editor application, Build fast and efficient workflows.",
     "homepage": "https://github.com/drl990114/MarkFlowy",
     "license": "AGPL-3.0",
-    "url": "https://github.com/drl990114/MarkFlowy/releases/download/v0.6.2/MarkFlowy_0.6.2_x64_en-US.msi",
-    "hash": "9598f1610217e94e2bc061418da8d5c340e6ead32e329eaaf42fec3cec6d6480",
-    "shortcuts": [["MarkFlowy.exe", "MarkFlowy"]],
+    "url": "https://github.com/drl990114/MarkFlowy/releases/download/v0.26.0/MarkFlowy_0.26.0_windows_x86_64.msi",
+    "hash": "165038a0c215fdcbc73c8e3bc7997405ad844c11a8449f6f3d71e7a0ec75efce",
+    "shortcuts": [
+        [
+            "markflowy.exe",
+            "MarkFlowy"
+        ]
+    ],
     "extract_dir": "PFiles\\MarkFlowy\\",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/drl990114/MarkFlowy/releases/download/v$version/MarkFlowy_$version_x64_en-US.msi"
+        "url": "https://github.com/drl990114/MarkFlowy/releases/download/v$version/MarkFlowy_$version_windows_x86_64.msi"
     }
 }

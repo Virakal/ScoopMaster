@@ -1,15 +1,14 @@
 {
-    "version": "1.29.1",
+    "version": "2.5.0",
     "homepage": "https://www.usebruno.com/",
     "license": "MIT",
     "description": "Open source IDE for exploring and testing APIs (lightweight alternative to Postman/Insomnia)",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/usebruno/bruno/releases/download/v1.29.1/bruno_1.29.1_x64_win.zip",
-            "hash": "9144bfd15db5e285f5bece16bbbb7fd7aa9b7b3387933224affb74c58ad7ef30"
+            "url": "https://github.com/usebruno/bruno/releases/download/v2.5.0/bruno_2.5.0_x64_win.zip",
+            "hash": "2712ae12b650b1b2dabede7778a14f0e962ace1c4bc028509542153f7b89aa84"
         }
     },
-    "extract_dir": "win-unpacked",
     "shortcuts": [
         [
             "Bruno.exe",

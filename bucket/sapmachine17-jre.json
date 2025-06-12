@@ -1,15 +1,15 @@
 {
     "description": "SapMachine 17: An OpenJDK release maintained and supported by SAP",
     "homepage": "https://sap.github.io/SapMachine/",
-    "version": "17.0.12",
+    "version": "17.0.15",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-17.0.12/sapmachine-jre-17.0.12_windows-x64_bin.zip",
-            "hash": "9502cd934aae24a9d89d86fe20766c8ab4932871e9c4d86f06fc500fe1d63bda"
+            "url": "https://github.com/SAP/SapMachine/releases/download//sapmachine-17.0.15/sapmachine-jre-17.0.15_windows-x64_bin.zip",
+            "hash": "e77fbea163c6aeab7217e162dde92d7b1424e445f314207824a9c5bf5fbb121a"
         }
     },
-    "extract_dir": "sapmachine-jre-17.0.12",
+    "extract_dir": "sapmachine-jre-17.0.15",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"

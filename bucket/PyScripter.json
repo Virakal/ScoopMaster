@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/pyscripter/pyscripter",
     "description": "an open-source Python Integrated Development Environment (IDE)",
-    "version": "5.0.1",
+    "version": "5.2.3",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.0/PyScripter-5.0.1-x64.zip",
-            "hash": "sha1:b6ba0863de889626c728873bc80d904d38d21440",
+            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.2/PyScripter-5.2.3-x64.zip",
+            "hash": "sha1:7819d22313ee037d4061184f3047356e85685ab5",
             "extract_dir": "PyScripter"
         },
         "32bit": {
-            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.0/PyScripter-5.0.1-x86.zip",
-            "hash": "sha1:04c1c1e948fd280a1cfb4bca3e42737036a9826b",
+            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.2/PyScripter-5.2.3-x86.zip",
+            "hash": "sha1:e7d186cfce758ecf732c334fdb48c717eb6b59f7",
             "extract_dir": "PyScripter"
         }
     },

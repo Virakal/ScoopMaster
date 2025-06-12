@@ -1,13 +1,13 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.8",
     "description": "Handy tool set for developers. 开发者常备小工具",
     "homepage": "https://rememberber.github.io/MooTool/",
     "license": {
         "identifier": "MIT license",
         "url": "https://github.com/rememberber/MooTool#MIT-1-ov-file"
     },
-    "url": "https://github.com/rememberber/MooTool/releases/download/v1.6.1/MooTool-1.6.1-windows.zip",
-    "hash": "769fbbeb76c4f38e50bbb2a46ecaca5fadb164b8cdd3f864a6e170c36b25183a",
+    "url": "https://github.com/rememberber/MooTool/releases/download/v1.6.8/MooTool-1.6.8-windows.zip",
+    "hash": "15d210f7ef333cb509f8535e4bd9a2e5902d7f55c9f4f052af4b9903e4f5e028",
     "extract_dir": "MooTool",
     "shortcuts": [
         [
@@ -18,7 +18,8 @@
     "persist": "MooTool.l4j.ini",
     "checkver": {
         "url": "https://api.github.com/repos/rememberber/MooTool/releases",
-        "regex": "/releases/tag/v([\\d.]+)"
+        "jp": "$[*].assets[*].browser_download_url",
+        "regex": "/releases/download/v([\\d.]+)/MooTool-([\\d.]+)-windows\\.zip"
     },
     "autoupdate": {
         "url": "https://github.com/rememberber/MooTool/releases/download/v$version/MooTool-$version-windows.zip"

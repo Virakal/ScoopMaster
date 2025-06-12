@@ -1,12 +1,16 @@
 {
-    "version": "0.16.3",
+    "version": "0.22.2",
     "description": "A privacy-focussed, local-first, open-source, and ready-to-use alternative for Notion & Miro.",
     "homepage": "https://affine.pro/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.16.3/affine-0.16.3-stable-windows-x64.exe#/dl.7z",
-            "hash": "sha512:e3bcda2e40214b13ee5ac2aad3575212df06bac5ea2b5ae649a88e4c12dedf69665225cf854a983b9261cdbae324ac7bfd315c89ce140c9fd98abdf07fd7ca44"
+            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.22.2/affine-0.22.2-stable-windows-x64.exe#/dl.7z",
+            "hash": "sha512:04cc33de954139cbd1755118e679c4c5ef47b3edbc861a6d1cc89f7a7f72d2a826187d161ed8cd88193a5d3445be63d5cd43e208d79d87a45adeb85135ac522d"
+        },
+        "arm64": {
+            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.22.2/affine-0.22.2-stable-windows-arm64.exe#/dl.7z",
+            "hash": "sha512:0bbc0a35c05ae88a233f9851c1061eb92d051d718ebdb86199acf7bbe57a129adb80c25a3653712d4d7a9946335f5b170f0f50d19fc66c904fa8f6239395e5a9"
         }
     },
     "pre_install": [
@@ -25,12 +29,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-$version-stable-windows-x64.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s+$base64"
-                }
+                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-$version-stable-windows-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-$version-stable-windows-arm64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "$basename\\s+sha512:\\s+$base64"
         }
     }
 }

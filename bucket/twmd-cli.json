@@ -1,16 +1,16 @@
 {
-    "version": "1.13.3",
+    "version": "1.14.2",
     "description": "Apiless twitter downlaoder. Download medias from single tweet or a whole profile.",
     "homepage": "https://github.com/mmpx12/twitter-media-downloader",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mmpx12/twitter-media-downloader/releases/download/v1.13.3/twitter-media-downloader-v1.13.3-windows-386.zip",
-            "hash": "c20b46a9d8b5a4f09839a7da15d9fbbd6dac09bcea2d2d3f9c8d9e2834603c90"
+            "url": "https://github.com/mmpx12/twitter-media-downloader/releases/download/v1.14.2/twitter-media-downloader-v1.14.2-windows-386.zip",
+            "hash": "5c64fd14960242037080ba317e706c0bd18e2a254bab1178c4a1f7c38e1a53fa"
         },
         "arm64": {
-            "url": "https://github.com/mmpx12/twitter-media-downloader/releases/download/v1.13.3/twitter-media-downloader-v1.13.3-windows-amd64.zip",
-            "hash": "32c83598f98b89e36e55dab03cd482144106e08a673b9aa07e550303968f56f6"
+            "url": "https://github.com/mmpx12/twitter-media-downloader/releases/download/v1.14.2/twitter-media-downloader-v1.14.2-windows-amd64.zip",
+            "hash": "1951e8c40dca0105dcaf8cef10107c9fe1a746a2d32601e6890e06e89e07831b"
         }
     },
     "autoupdate": {

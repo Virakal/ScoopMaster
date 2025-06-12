@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "4ca4f29b5be2ae7b581fd542e9659c4dfa2c1396496537091413066ce740b673",
-            "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20240901/LinuxmintlmdeWSL2.zip"
+            "hash": "5a5b768ff2aaeeb41e15a1af37d138d2a19c25ec4bccff9f59f23288ee1649af",
+            "url": "https://github.com/sileshn/LinuxmintWSL2/releases/download/20250303/LinuxmintlmdeWSL2.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Linuxmint.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20240901"
+    "version": "20250303"
 }

@@ -1,19 +1,19 @@
 {
-    "version": "0.4.7",
+    "version": "0.4.10",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_windows_amd64.zip",
+            "url": "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_windows_amd64.zip",
             "bin": [
                 "lintnet.exe"
             ],
-            "hash": "9370539ca39373cefbbf2c7acbcc729b6af612a0bc39fd0dbd48c165cec23a0d"
+            "hash": "706aa350efdd5e869e7456ab67c84b79436e20333fee70b100e9a1beea8374f0"
         },
         "arm64": {
-            "url": "https://github.com/lintnet/lintnet/releases/download/v0.4.7/lintnet_windows_arm64.zip",
+            "url": "https://github.com/lintnet/lintnet/releases/download/v0.4.10/lintnet_windows_arm64.zip",
             "bin": [
                 "lintnet.exe"
             ],
-            "hash": "2a7cc0c952f33a8b40f71f5fdd8180244213d0896c1e430c6f60544639af5d2a"
+            "hash": "4f31ac1ed7476fdcc01ba211068038717a320b33e545b6230ecb175498ac2fff"
         }
     },
     "license": "MIT",

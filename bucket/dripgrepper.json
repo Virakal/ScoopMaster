@@ -1,16 +1,51 @@
 {
-    "version": "3.4.1-beta",
+    "version": "4.7.1-beta",
     "description": "DRipGrepper is a UI to search files with ripgrep.",
     "homepage": "https://github.com/mattia72/DRipGrepper",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mattia72/DripGrepper/releases/download/v3.4.1-beta/DRipGrepper.v3.4.1-beta.zip",
-            "hash": "3bca9e643e94ee03131768e6adcb2a9204e2a22fead4039ca14e56367b9d4747"
+            "url": [
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipGrepper.x64.v4.7.1-beta.zip",
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipExtension.Dll.x86.Delphi11.v4.7.1-beta.zip",
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipExtension.Dll.x86.Delphi12.v4.7.1-beta.zip"
+            ],
+            "hash": [
+                "d161316cfcaccb06d0cf6c7d602d8b68d11baf09a7e11b4530558e1bf37207e5",
+                "9dcad8e70f9ee1c32e7066797a5853ef32704dcfa959bf0e5c48c5179abc0dfd",
+                "5c3542764553ced4826c67c89595e3aead16d02e85596f5c69ff419e25947dfa"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipGrepper.x86.v4.7.1-beta.zip",
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipExtension.Dll.x86.Delphi11.v4.7.1-beta.zip",
+                "https://github.com/mattia72/DripGrepper/releases/download/v4.7.1-beta/DRipExtension.Dll.x86.Delphi12.v4.7.1-beta.zip"
+            ],
+            "hash": [
+                "00c18db6daff0c18a9805bda03b7b8205a97ec41fd5fb49dd5201e41f2af067b",
+                "9dcad8e70f9ee1c32e7066797a5853ef32704dcfa959bf0e5c48c5179abc0dfd",
+                "5c3542764553ced4826c67c89595e3aead16d02e85596f5c69ff419e25947dfa"
+            ]
         }
     },
     "autoupdate": {
-        "url": "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipGrepper.v$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipGrepper.x64.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi12.v$version.zip"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipGrepper.x86.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi11.v$version.zip",
+                    "https://github.com/mattia72/DripGrepper/releases/download/v$version/DRipExtension.Dll.x86.Delphi12.v$version.zip"
+                ]
+            }
+        }
     },
     "bin": [
         [
@@ -18,7 +53,7 @@
             "DRipGrepper"
         ]
     ],
-    "pre_install": "New-Item $dir\\DripGrepper.ini -Verbose",
+    "pre_install": "New-Item $dir\\DripGrepper.ini",
     "persist": "DRipGrepper.ini",
     "shortcuts": [
         [

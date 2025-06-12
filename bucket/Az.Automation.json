@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:2a65f4063951d9e65950632d87514694a539ee1d63ed949b4a3a9d3d37a6086b648d24d89286dbaa75820086cab9506427eac7b16407f9ec854b706c1b893196",
+    "hash": "sha512:3383a6b357bfb864b473234d0c17b5100795d57f007de3b798fa026901345accbbcc882cf6f5c8fe51da896844b7905ba22f50b039c40d7427ad8d03a21eb4a9",
     "description": "Microsoft Azure PowerShell - Automation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Automation, please visit the following: https://docs.microsoft.com/azure/automation/",
     "psmodule": {
         "name": "Az.Automation"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Automation/1.10.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Automation/1.11.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.10.0"
+    "version": "1.11.1"
 }

@@ -1,30 +1,25 @@
 {
-    "version": "0.15.0",
-    "description": "小狼毫输入法",
-    "homepage": "https://github.com/gendloop/Rime",
-    "license": "LGPL-2.1-or-later",
-    "notes": [
-        "<Installer>"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/gendloop/Rime/releases/download/v0.15.0/Rime-0.15.0-win64.7z",
-            "hash": "bf0d26b74f7871353fdd8f0ce057748ddc785646b77459b52c8dba290a4b4da1"
-        }
-    },
+    "homepage": "https://rime.im/",
+    "license": "GPL-3.0-or-later",
+    "version": "0.17.4",
+    "url": "https://github.com/rime/weasel/releases/download/0.17.4/weasel-0.17.4.0-installer.exe#/dl.7z",
+    "hash": "cf509534a8f5f8af9c98ed7cbb8f135439f145a8cbe7e50ede42bb5b5ab45c29",
     "installer": {
         "script": [
-            "Push-Location \"$dir\"",
-            "Start-Process Rime-$version-win64.exe",
-            "Pop-Location"
+            "if(!(Test-Path \"$dir\\Rime\")) {New-Item \"$dir\\Rime\" -ItemType Directory | Out-Null} ",
+            "& \"$dir\\WeaselSetup.exe\" /i",
+            "& \"$dir\\WeaselDeployer.exe\" /install",
+            "& \"$dir\\WeaselServer.exe\""
         ]
     },
-    "checkver": "github",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "persist": "Rime",
+    "pre_uninstall": "Start-Process -FilePath \"$dir/weaselserver.exe\" -ArgumentList \"/q\" | Out-Null",
+    "checkver": {
+        "url": "https://api.github.com/repos/rime/weasel/releases/latest",
+        "regex": "rime/weasel/releases/download/(?<Version>[\\d.]+)/weasel-(?<Real>[\\d.]+)-installer.exe"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/gendloop/Rime/releases/download/v$version/Rime-$version-win64.7z"
-            }
-        }
+        "url": "https://github.com/rime/weasel/releases/download/$matchVersion/weasel-$matchReal-installer.exe#/dl.7z"
     }
 }

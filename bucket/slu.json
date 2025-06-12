@@ -1,28 +1,28 @@
 {
-    "version": "0.79.0",
-    "description": "SikaLabs Utils",
-    "homepage": "https://github.com/sikalabs/slu",
-    "license": "Freeware",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/sikalabs/slu/releases/download/v0.79.0/slu_v0.79.0_windows_386.tar.gz",
-            "hash": "e8ddbb17baadf40a830d3615423ab9d8c4d562e1719cde55645cf86079c644da"
-        },
-        "64bit": {
-            "url": "https://github.com/sikalabs/slu/releases/download/v0.79.0/slu_v0.79.0_windows_amd64.tar.gz",
-            "hash": "2034fb359ff43919c8ee50a4e1345351b82afbd7482b5ca00e154f210076f915"
-        }
+  "version": "0.87.0",
+  "description": "SikaLabs Utils",
+  "homepage": "https://github.com/sikalabs/slu",
+  "license": "Freeware",
+  "architecture": {
+    "32bit": {
+      "url": "https://github.com/sikalabs/slu/releases/download/v0.87.0/slu_v0.87.0_windows_386.tar.gz",
+      "hash": "00a0fb268a061d9e3c53a22197e5c0ffe0a86658510a4c05ef956807d3663473"
     },
-    "bin": "slu.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/sikalabs/slu/releases/download/v$version/slu_v$version_windows_386.tar.gz"
-            },
-            "64bit": {
-                "url": "https://github.com/sikalabs/slu/releases/download/v$version/slu_v$version_windows_amd64.tar.gz"
-            }
-        }
+    "64bit": {
+      "url": "https://github.com/sikalabs/slu/releases/download/v0.87.0/slu_v0.87.0_windows_amd64.tar.gz",
+      "hash": "fcb204a39af94016569df70ceae214683cb85c0d16b151cdf70da2b0506ee927"
     }
+  },
+  "bin": "slu.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://github.com/sikalabs/slu/releases/download/v$version/slu_v$version_windows_386.tar.gz"
+      },
+      "64bit": {
+        "url": "https://github.com/sikalabs/slu/releases/download/v$version/slu_v$version_windows_amd64.tar.gz"
+      }
+    }
+  }
 }

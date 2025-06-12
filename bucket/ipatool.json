@@ -1,22 +1,29 @@
 {
-    "version": "2.1.4",
-    "description": "CLI tool that allows searching and downloading app packages (i.e. ipa files) from the iOS App Store",
+    "version": "2.2.0",
+    "description": "A command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store.",
     "homepage": "https://github.com/majd/ipatool",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/majd/ipatool/releases/download/v2.1.4/ipatool-2.1.4-windows-amd64.tar.gz",
-            "hash": "331e48552bbe19113387349f04c448c8f1ea0457b9f11fd379247d67fd30fe2a"
+            "url": "https://github.com/majd/ipatool/releases/download/v2.2.0/ipatool-2.2.0-windows-amd64.tar.gz",
+            "hash": "660b77a49045ee104a504ac2411f0b1b438238bcf257a978602e6f0103e52d44"
+        },
+        "arm64": {
+            "url": "https://github.com/majd/ipatool/releases/download/v2.2.0/ipatool-2.2.0-windows-arm64.tar.gz",
+            "hash": "1fd5675d09597c635b1b466ae0e2fb3ec82d110c4f044ed997f2bee68a6d41e1"
         }
     },
     "extract_dir": "bin",
-    "pre_install": "Rename-Item \"$dir\\ipatool-$version-windows-*.exe\" 'ipatool.exe'",
     "bin": "ipatool.exe",
+    "pre_install": "Get-ChildItem \"$dir\" 'ipatool-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'ipatool.exe'",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/majd/ipatool/releases/download/v$version/ipatool-$version-windows-amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/majd/ipatool/releases/download/v$version/ipatool-$version-windows-arm64.tar.gz"
             }
         },
         "hash": {

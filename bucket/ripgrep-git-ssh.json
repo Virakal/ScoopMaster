@@ -1,0 +1,33 @@
+{
+    "version": "cbc598f245f3c157a872b69102653e2e349b6d92",
+    "description": "ripgrep recursively searches directories for a regex pattern while respecting your gitignore (git https clone)",
+    "license": "MIT license",
+    "homepage": "https://github.com/BurntSushi/ripgrep",
+    "notes": "Type rg to use it.",
+    "url": "https://raw.githubusercontent.com/ingenarel/ingenarel-scoop-bucket/refs/heads/master/decoy/ripgrep-decoy",
+    "hash": "bd7450bdebe695050e5d67f6e3a6b9dfced74ea9f85c192d698d10692009fff8",
+    "depends": [
+        "rustup-msvc",
+        "git"
+    ],
+    "pre_install": [
+        "echo '' 'trying to uninstall conflicts'",
+        "scoop uninstall ripgrep ripgrep-git",
+        "cd $dir",
+        "git clone --depth 1 --branch master git@github.com:BurntSushi/ripgrep.git",
+        "echo 'building ripgrep...' ''",
+        "cd ripgrep",
+        "cargo build --release --locked",
+        "echo 'Removing unneeded stuff' ''",
+        "cd $dir",
+        "Move-Item ripgrep/target/release/rg.exe rg.exe",
+        "Remove-Item -Recurse -Force ripgrep"
+    ],
+    "bin": [
+        "rg.exe"
+    ],
+    "conflicts": [
+        "ripgrep",
+        "ripgrep-git"
+    ]
+}

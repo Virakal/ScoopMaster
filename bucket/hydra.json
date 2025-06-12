@@ -1,40 +1,21 @@
 {
-    "version": "2.2.0",
-    "description": "OpenID Certified™ OpenID Connect and OAuth Provider written in Go - cloud native, security-first, open source API security for your infrastructure. SDKs for any language. Works with Hardware Security Modules. Compatible with MITREid.",
-    "homepage": "https://www.ory.sh/hydra/",
-    "license": "Apache-2.0",
+    "version": "9.1",
+    "description": "The great THC-HYDRA tool compiled for Windows(Scoop bucket by arch3rpro)",
+    "homepage": "https://github.com/vanhauser-thc/thc-hydra",
+    "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_64bit.zip",
-            "hash": "bab30d975c281b5ab649869a7ea0bda24facbfb41ebcc1806d970393a5aceba7"
-        },
-        "32bit": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_32bit.zip",
-            "hash": "b14042782d6b809f7be1112ef8f1157d621390c9973fc2c1f9aa94e52856fcad"
-        },
-        "arm64": {
-            "url": "https://github.com/ory/hydra/releases/download/v2.2.0/hydra_2.2.0-windows_arm64.zip",
-            "hash": "96916e7fe6c2188b2605680c099555e88943b0329b2a46c228cd88ce14130e96"
+            "url": "https://github.com/maaaaz/thc-hydra-windows/releases/download/v9.1/thc-hydra-windows-v9.1.zip",
+            "hash": "9187807a0eb685af0449b7af030f8966fc4bf61dbfa2b06039c29535d8b2d343"
         }
     },
     "bin": "hydra.exe",
-    "checkver": {
-        "github": "https://github.com/ory/hydra"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ory/hydra/releases/download/v$version/hydra_$version-windows_64bit.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/ory/hydra/releases/download/v$version/hydra_$version-windows_32bit.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/ory/hydra/releases/download/v$version/hydra_$version-windows_arm64.zip"
+                "url": "https://github.com/maaaaz/thc-hydra-windows/releases/download/v$version/thc-hydra-windows-v$version.zip"
             }
-        },
-        "hash": {
-            "url": "https://github.com/ory/hydra/releases/download/v$version/checksums.txt"
         }
     }
 }

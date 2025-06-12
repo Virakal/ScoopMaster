@@ -1,23 +1,23 @@
 {
-    "version": "20.17.0",
+    "version": "20.19.2",
     "description": "An asynchronous event driven JavaScript runtime designed to build scalable network applications.",
     "homepage": "https://nodejs.org",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nodejs.org/dist/v20.17.0/node-v20.17.0-win-x64.7z",
-            "hash": "d0e84c8afb6e57301904339501d62e4d817575367219f71bf34a5069999ae3c8",
-            "extract_dir": "node-v20.17.0-win-x64"
+            "url": "https://nodejs.org/dist/v20.19.2/node-v20.19.2-win-x64.7z",
+            "hash": "eb6bde3d812ee065a94fc81e39dc16a56ec41f3039e6a27022326b3b59ee895b",
+            "extract_dir": "node-v20.19.2-win-x64"
         },
         "32bit": {
-            "url": "https://nodejs.org/dist/v20.17.0/node-v20.17.0-win-x86.7z",
-            "hash": "c363fa469754fcf3f387e483df9292994a2335fb4abf2f933249c22b76037245",
-            "extract_dir": "node-v20.17.0-win-x86"
+            "url": "https://nodejs.org/dist/v20.19.2/node-v20.19.2-win-x86.7z",
+            "hash": "6e56ea449e6581e8d7251b1960585d4e4cd53d99df34363483099fe864de1023",
+            "extract_dir": "node-v20.19.2-win-x86"
         },
         "arm64": {
-            "url": "https://nodejs.org/dist/v20.17.0/node-v20.17.0-win-arm64.7z",
-            "hash": "326cb8176f5fd64ce4cf0cd6d96c41ef4bfb2a6599763e5a55e6f61816d40b58",
-            "extract_dir": "node-v20.17.0-win-arm64"
+            "url": "https://nodejs.org/dist/v20.19.2/node-v20.19.2-win-arm64.7z",
+            "hash": "3a19f4949b422309a2806083580528c2c87e8169755f31fb7521d5f7b5fdba22",
+            "extract_dir": "node-v20.19.2-win-arm64"
         }
     },
     "persist": [

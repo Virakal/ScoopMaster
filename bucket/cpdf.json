@@ -1,5 +1,5 @@
 {
-    "version": "v2.7.1",
+    "version": "v2.8.1",
     "description": "Powerful PDF manipulation tool",
     "homepage": "http://community.coherentpdf.com/",
     "license": {
@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": "https://raw.githubusercontent.com/coherentgraphics/cpdf-binaries/master/Windows64bit/cpdf.exe",
-            "hash": "e7509f90afd70bc22980233f715f1c2dec6641ffbb61f37260fcd029cade2fb0"
+            "hash": "a59aab4896d1c83f700dabeb311ad0112946390c69c941379e9f440dfecc149c"
         },
         "32bit": {
             "url": "https://raw.githubusercontent.com/coherentgraphics/cpdf-binaries/master/Windows32bit/cpdf.exe",
-            "hash": "ed4ba81ce01a892520e04cba5a78f8c74542de2415a893f869cc69af76835f4c"
+            "hash": "4439df47659b08dd8d00167950e354159a0b176a7fa3669d140ff1ee5aedc95c"
         }
     },
     "bin": "cpdf.exe",

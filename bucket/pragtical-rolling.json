@@ -1,0 +1,46 @@
+{
+    "version": "324-20250611-a0cb46e",
+    "description": "The practical and pragmatic code editor.",
+    "homepage": "https://pragtical.dev/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pragtical/pragtical/releases/download/rolling/pragtical-rolling-windows-x86_64.zip",
+            "hash": "0628b1cc77004c4cca739ac277872067e850c0601351c2dd035554b50ca4c4e5"
+        },
+        "32bit": {
+            "url": "https://github.com/pragtical/pragtical/releases/download/rolling/pragtical-rolling-windows-i686.zip",
+            "hash": "fb47772fc527d61b23e0d026b13be2d508116a648760b68172eaa96bd96bcc4f"
+        }
+    },
+    "extract_dir": "pragtical",
+    "bin": "pragtical.exe",
+    "shortcuts": [
+        [
+            "pragtical.exe",
+            "Pragtical"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://api.github.com/repos/pragtical/pragtical/actions/workflows/rolling.yml/runs?branch=master&status=success",
+        "script": [
+            "$sha = json_path $page $.workflow_runs[0].head_sha",
+            "$runId = json_path $page $.workflow_runs[0].run_number",
+            "$date = json_path $page $.workflow_runs[0].created_at",
+            "Write-Output \"$runId $date $sha\""
+        ],
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pragtical/pragtical/releases/download/rolling/pragtical-rolling-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/pragtical/pragtical/releases/download/rolling/pragtical-rolling-windows-i686.zip"
+            }
+        }
+    }
+}

@@ -1,15 +1,15 @@
 {
-    "version": "6.5",
+    "version": "6.7.5",
     "description": "A simple yet configurable alternative to Microsoft's \"Sticky Notes\"",
     "homepage": "https://www.simplestickynotes.com/",
     "license": "Freeware",
     "notes": [
         "File association(s) were not registered. It may not be possible to install add-ons normally.",
         "It stores its settings at \"HKCU\\SOFTWARE\\Simnet\\Simple Sticky Notes\".",
-        "It also stores add-on content at \"C:\\Users\\<username>\\AppData\\Roaming\\Simnet\\Simple Sticky Notes\"."
+        "It also stores add-on content at \"%appdata%\\Simnet\\Simple Sticky Notes\"."
     ],
     "url": "https://www.simplestickynotes.com/setup/Setup_SimpleStickyNotes.exe",
-    "hash": "a5d997857ff5f3c2b3607a24a0eb4cc968a828029ac9b29f4311a78b89d458bc",
+    "hash": "27ae4fde0a1cbaf80822b0aaf69d40dad1731550f435fed46e9504c4682f2e85",
     "innosetup": true,
     "pre_install": [
         "if(!(Test-Path \"HKCU:\\SOFTWARE\\Simnet\\Simple Sticky Notes\")) { New-Item -Path \"HKCU:\\SOFTWARE\\Simnet\\Simple Sticky Notes\" -Force | Out-Null }",

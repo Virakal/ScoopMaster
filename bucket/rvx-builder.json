@@ -1,16 +1,26 @@
 {
     "depends": "java/liberica-jre",
-    "version": "3.15.1",
+    "version": "3.18.5",
     "description": "A NodeJS ReVanced Extended builder.",
     "homepage": "https://github.com/inotia00/rvx-builder",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/inotia00/rvx-builder/blob/revanced-extended/LICENSE"
     },
-    "url": "https://github.com/inotia00/rvx-builder/releases/download/v3.15.1/rvx-builder-win.exe",
-    "hash": "sha256:B88CA298988A0310763EDE6E852DBA47D7BE4C1BB939189DCBB30EFB9F1CA667",
+    "url": "https://github.com/inotia00/rvx-builder/releases/download/v3.18.5/rvx-builder-win.exe",
+    "hash": "8aae347cecf5d647c86c41a091db2a56137004179783dd4c5221464ad3f4b50e",
     "pre_install": [
-        "If (!(Test-Path \"$persist_dir\\settings.json\")) { New-Item \"$dir\\settings.json\" -ItemType File | Out-Null }"
+        "'{",
+        "  \"sources\": {",
+        "    \"cli\": \"inotia00/revanced-cli\",",
+        "    \"patches\": \"inotia00/revanced-patches\",",
+        "    \"integrations\": \"inotia00/revanced-integrations\",",
+        "    \"microg\": \"ReVanced/GmsCore\",",
+        "    \"prereleases\": \"null\",",
+        "    \"cli4\": \"false\"",
+        "  },",
+        "  \"patches\": []",
+        "}' | Out-File -File \"$dir\\settings.json\" -Encoding utf8"
     ],
     "bin": "rvx-builder-win.exe",
     "shortcuts": [

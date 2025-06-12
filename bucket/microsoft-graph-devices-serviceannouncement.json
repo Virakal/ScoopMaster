@@ -1,0 +1,26 @@
+{
+    "version": "2.28.0",
+    "description": "Microsoft Graph PowerShell Cmdlets",
+    "homepage": "https://github.com/microsoftgraph/msgraph-sdk-powershell",
+    "license": "https://aka.ms/devservicesagreement",
+    "depends": "microsoft-graph-authentication",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content_Types*.xml\" -Recurse",
+    "pre_uninstall": [
+        "$InstalledDeps = $manifest.depends | Where-Object { Test-Path \"$(appdir $_)\\current\" }",
+        "if (-not $InstalledDeps) { return }",
+        "if ($global) { scoop uninstall --global $InstalledDeps }",
+        "else { scoop uninstall $InstalledDeps }"
+    ],
+    "checkver": {
+        "regex": "<h2>([\\d\\.]+)</h2>",
+        "url": "https://www.powershellgallery.com/packages/microsoft.graph.devices.serviceannouncement"
+    },
+    "autoupdate": {
+        "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.devices.serviceannouncement.$version.nupkg"
+    },
+    "hash": "ca298a7f87fc8e8854ede7a4376e39388e94064cbc570781078c2716cfefeea3",
+    "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.devices.serviceannouncement.2.28.0.nupkg",
+    "psmodule": {
+        "name": "Microsoft.Graph.Devices.ServiceAnnouncement"
+    }
+}

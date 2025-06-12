@@ -1,21 +1,21 @@
 {
-    "version": "0.10.0",
+    "version": "1.2.1",
     "description": "Fully cross platform dotfile manager and dev environment bootstrapper written in Rust",
     "homepage": "https://github.com/volllly/rotz",
     "license": "MIT",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/volllly/rotz/releases/download/v0.10.0/rotz-x86_64-pc-windows-msvc.zip",
-            "hash": "ede51a8227e818a85df54ad2e7f4beed4e24f06ddfdbdf631fb3eea3123d7665"
+            "url": "https://github.com/volllly/rotz/releases/download/v1.2.1/rotz-x86_64-pc-windows-msvc.zip",
+            "hash": "ed6d95e46e13ff502da4c405493ea8b3b86b38b5d33b55e5c1e98fe5eda978ab"
         },
         "32bit": {
-            "url": "https://github.com/volllly/rotz/releases/download/v0.10.0/rotz-i686-pc-windows-msvc.zip",
-            "hash": "00341033282ddfd09a145a410cd8d289215abcee0efd713eb2670d4ee214cc6a"
+            "url": "https://github.com/volllly/rotz/releases/download/v1.2.1/rotz-i686-pc-windows-msvc.zip",
+            "hash": "699cd15d8bce5f0489449742ed9b0b3df5785273ca53294c46b38a03bc8b6dcb"
         },
         "arm64": {
-            "url": "https://github.com/volllly/rotz/releases/download/v0.10.0/rotz-aarch64-pc-windows-msvc.zip",
-            "hash": "df21358f7f0b3b77cfff064904635cdb9e10253d3e906d6c17370b0e859b2526"
+            "url": "https://github.com/volllly/rotz/releases/download/v1.2.1/rotz-aarch64-pc-windows-msvc.zip",
+            "hash": "7a8d2be6b3188ed5dfbf1c0e7b0ae805e4279a07bf5fb1a82bf85741cb73a273"
         }
     },
     "bin": "rotz.exe",

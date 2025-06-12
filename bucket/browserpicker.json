@@ -1,15 +1,15 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "2.0.7",
+   "version": "2.2.4",
    "description": "Smart browser selector for Windows.",
    "homepage": "https://github.com/mortenn/BrowserPicker/",
    "license": "MIT",
-   "url": "https://github.com/mortenn/BrowserPicker/releases/download/v2.0.7/portable.zip",
-   "hash": "5455c38b22b6a51a718088d2f8f193005ac690919c1b60984a0e9d99fd440626",
+   "url": "https://github.com/mortenn/BrowserPicker/releases/download/v2.2.4/portable.zip",
+   "hash": "0c82d380a77bc552640019d13742a86ea11175a4db58018029abd89b0e4080f0",
    "pre_install": "if (!(Test-Path \"$persist_dir\\config.reg\")) { New-Item \"$dir\\config.reg\" | Out-Null }",
    "installer": {
       "script": [
-         "if (-not (is_admin)) { error 'This package requires admin privileges to install'; break }",
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to install' }",
          "$browserPicker = \"$dir\\BrowserPicker.exe\"",
          "$registryPath = 'Registry::HKCR\\BrowserPicker'",
          "New-Item -Force -Path \"$registryPath\" > $null",
@@ -74,7 +74,7 @@
    },
    "uninstaller": {
       "script": [
-         "if (-not (is_admin)) { error 'This package requires admin privileges to uninstall'; break }",
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to uninstall' }",
          "Remove-Item -Force -Recurse -Path 'Registry::HKCR\\BrowserPicker'",
          "Remove-Item -Force -Recurse -Path 'Registry::HKCU\\Software\\Clients\\StartMenuInternet\\BrowserPicker'",
          "Remove-ItemProperty -Force -Path 'Registry::HKCU\\Software\\RegisteredApplications' -Name 'BrowserPicker'",

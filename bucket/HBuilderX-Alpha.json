@@ -1,27 +1,27 @@
 {
-    "homepage": "https://www.dcloud.io/hbuilderx.html",
-    "version": "4.27.2024091308-alpha",
-    "license": "Freeware",
-    "extract_dir": "HBuilderX",
-    "url": "https://download1.dcloud.net.cn/download/HBuilderX.4.27.2024091308-alpha.zip",
-    "hash": "9f58e14693c272c98d6ca29a19e35a4ea9fbd4b33f9afb54643ec7834c9274aa",
-    "bin": [
-        [
-            "HBuilderX.exe",
-            "HBuilderXAlpha"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "HBuilderX.exe",
-            "HBuilderX Alpha"
-        ]
-    ],
-    "checkver": {
-        "url": "https://download1.dcloud.net.cn/hbuilderx/alpha.json",
-        "jsonpath": "$.version"
-    },
-    "autoupdate": {
-        "url": "https://download1.dcloud.net.cn/download/HBuilderX.$version.zip"
-    }
+  "homepage": "https://www.dcloud.io/hbuilderx.html",
+  "version": "4.63.2025042307-alpha",
+  "license": "Freeware",
+  "extract_dir": "HBuilderX",
+  "url": "https://download1.dcloud.net.cn/download/HBuilderX.4.63.2025042307-alpha.zip",
+  "hash": "f825109c4ef88ffea3aaee3bdb0dbe3f4124678f935efa8be606f2da865722e4",
+  "bin": [
+    [
+      "HBuilderX.exe",
+      "HBuilderXAlpha"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "HBuilderX.exe",
+      "HBuilderX Alpha"
+    ]
+  ],
+  "checkver": {
+    "url": "https://download1.dcloud.net.cn/hbuilderx/alpha.json",
+    "jsonpath": "$.version"
+  },
+  "autoupdate": {
+    "url": "https://download1.dcloud.net.cn/download/HBuilderX.$version.zip"
+  }
 }

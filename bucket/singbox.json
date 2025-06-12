@@ -1,11 +1,15 @@
 {
-    "version": "1.9.5",
-    "description": "翻墙工具 Singbox",
+    "version": "1.11.13",
+    "description": "翻墙: Singbox",
     "homepage": "https://github.com/SagerNet/sing-box",
-    "url": "https://github.com/SagerNet/sing-box/releases/download/v1.9.5/sing-box-1.9.5-windows-386.zip",
-    "hash": "3e3d7e317044c6b3f66b89c1b095cacc63ca004bd6e41916ad1a38b71894e2a4",
-    "extract_dir": "sing-box-1.9.5-windows-386",
-    "pre_install": "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\run.ps1\" -Destination \"$dir\\run.ps1\"",
+    "license": "Unknown",
+    "url": "https://github.com/SagerNet/sing-box/releases/download/v1.11.13/sing-box-1.11.13-windows-386.zip",
+    "hash": "1f019504e3697f18d2dc91ff76d36d371f14273fee700f402b045d537e67d9e9",
+    "extract_dir": "sing-box-1.11.13-windows-386",
+    "pre_install": [
+        "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\run.ps1\" -Destination \"$dir\\run.ps1\"",
+        "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\default.json\" -Destination \"$dir\\default.json\""
+    ],
     "shortcuts": [
         [
             "run.ps1",

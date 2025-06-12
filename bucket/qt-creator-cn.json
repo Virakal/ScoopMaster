@@ -1,16 +1,16 @@
 {
-    "version": "14.0.1",
+    "version": "16.0.0",
     "description": "IDE for development with the Qt framework",
     "homepage": "https://doc.qt.io/qtcreator/index.html",
     "license": "GPL-3.0-only",
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qtcreator/14.0/14.0.1/installer_source/windows_x64/qtcreator.7z",
-            "hash": "md5:8a0eb4d3a2fe172313ca05f374f742f0"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qtcreator/16.0/16.0.0/installer_source/windows_x64/qtcreator.7z",
+            "hash": "md5:fb1dfc0ff9d80de872ebb2edf5211fe9"
         }
+    },
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
     },
     "bin": "bin\\qtcreator.exe",
     "shortcuts": [
@@ -20,7 +20,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.qt.io/offline-installers",
+        "url": "https://qt.io/offline-installers",
         "regex": "Qt Creator\\s+([\\d.]+)\\s+for Windows"
     },
     "autoupdate": {

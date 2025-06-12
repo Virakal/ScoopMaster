@@ -1,44 +1,44 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.0.100-rc.1.24452.12",
-    "homepage": "https://www.microsoft.com/net/",
-    "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-x64.zip",
-            "hash": "sha512:88b4e63017663e807a26b6e3775cb67644f205a03e865f2b67c327e17120e46e0bf6aeb6f4c098cacb9822987d9f167a890c69d733e83dd998041d24c09ceb84"
-        },
-        "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-x86.zip",
-            "hash": "sha512:376ab68351566f8eebb837959d2e5c441e33081ca67fe1aa1223bc9bb7f0e86b626da01be9f5fb7e5a8601e61b48bd5a73955a0911633951c68aedbff4b53a57"
-        },
-        "arm64": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-arm64.zip",
-            "hash": "sha512:d8ed11c6490cb532cdadd9f36b75e11643cc4ce771d8d68efece94fa3be438c2304eabd890dff7363c7fdb18214bb7ef1534fe28a7a9d5672c4ede81a70ade0e"
-        }
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "10.0.100-preview.5.25277.114",
+  "homepage": "https://www.microsoft.com/net/",
+  "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100-preview.5.25277.114/dotnet-sdk-10.0.100-preview.5.25277.114-win-x64.zip",
+      "hash": "sha512:e54a15f594474dd9902aebcb99c3ec0963d7e4dcd73935dade6e70d726bcc21410dea104ca699f19d8caeb4d3e82ee52f8f373102d4e46f5e9121cacf9dc53cf"
     },
-    "bin": "dotnet.exe",
-    "checkver": {
-        "url": "https://raw.githubusercontent.com/dotnet/core/master/release-notes/releases-index.json",
-        "jsonpath": "$..releases-index[0]",
-        "regex": "\"latest-release\": \"(?<shaver>[^\"]+)\",(?s:.)*?\"latest-sdk\": \"(?<version>[^\"]+)\",",
-        "replace": "${version}"
+    "32bit": {
+      "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100-preview.5.25277.114/dotnet-sdk-10.0.100-preview.5.25277.114-win-x86.zip",
+      "hash": "sha512:bec0fc40e823827f6f6691af1cd7febfc7045a2f36dd60fa551caf1cc191ff9b51f640cedd39cbdc873a94d7501f0d93e6a4023b64b048e67873d46c0fa115a9"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
-            },
-            "32bit": {
-                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
-            },
-            "arm64": {
-                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$matchShaver-sha.txt"
-        }
+    "arm64": {
+      "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100-preview.5.25277.114/dotnet-sdk-10.0.100-preview.5.25277.114-win-arm64.zip",
+      "hash": "sha512:67ff83bffedd09d513636a870247da9157096dc22fb30d1e7de3d4c7268892396b89542d2c7f7593eb154f3e1cf54cecc754640585f5081aa44ab2b6c8defdfe"
     }
+  },
+  "bin": "dotnet.exe",
+  "checkver": {
+    "url": "https://raw.githubusercontent.com/dotnet/core/master/release-notes/releases-index.json",
+    "jsonpath": "$..releases-index[0]",
+    "regex": "\"latest-release\": \"(?<shaver>[^\"]+)\",(?s:.)*?\"latest-sdk\": \"(?<version>[^\"]+)\",",
+    "replace": "${version}"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
+      },
+      "32bit": {
+        "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
+      },
+      "arm64": {
+        "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$matchShaver-sha.txt"
+    }
+  }
 }

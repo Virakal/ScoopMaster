@@ -1,10 +1,18 @@
 {
-    "version": "0.24.2",
+    "version": "0.24.6",
     "description": "The to-do app to organize your life.",
     "homepage": "https://vikunja.io",
     "license": "GPL-3.0-or-later",
-    "url": "https://dl.vikunja.io/desktop/0.24.2/Vikunja%20Desktop-v0.24.2.zip",
-    "hash": "2f2d2550c35eb38bb472618bf0b7f054bf2bb19c177a37ccec8d211102ba6a92",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.vikunja.io/desktop/0.24.6/Vikunja%20Desktop-v0.24.6.exe#/dl.7z",
+            "hash": "189dfa4ce6968f68f5ec7cd08f0a171507902a1ca5c40a84475bb3c9322c77cf",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
     "shortcuts": [
         [
             "Vikunja Desktop.exe",
@@ -19,6 +27,10 @@
         "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://dl.vikunja.io/desktop/$version/Vikunja%20Desktop-v$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.vikunja.io/desktop/$version/Vikunja%20Desktop-v$version.exe#/dl.7z"
+            }
+        }
     }
 }

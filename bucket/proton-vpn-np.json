@@ -1,0 +1,45 @@
+{
+   "version": "4.1.13",
+   "description": "The best VPN for speed and security.",
+   "homepage": "https://protonvpn.com/",
+   "license": "GPL-3.0-only",
+   "architecture": {
+      "64bit": {
+         "url": "https://github.com/ProtonVPN/win-app/releases/download/4.1.13/ProtonVPN_v4.1.13_x64.exe#/dl.exe",
+         "hash": "cd2c6bc19821c5deaf02c7b62d56d8f5b79fe1a8ca3102905194f17bd6d52ef6"
+      }
+   },
+   "installer": {
+      "script": [
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to install' }",
+         ".\"$dir\\dl.exe\" /VERYSILENT /DIR=\"$dir\" /TASKS=''",
+         "while (-not (Test-Path \"$dir\\Install.log.txt\")) {",
+         "   Start-Sleep -Milliseconds 500",
+         "}",
+         "if (-not (Select-String -Path \"$dir\\Install.log.txt\" -Pattern 'Installation process succeeded.')) {",
+         "   error 'Installation failed'",
+         "}",
+         "Remove-Item -Path \"$dir\\dl.exe\" -Force"
+      ]
+   },
+   "uninstaller": {
+      "script": [
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to uninstall' }",
+         "$uninstaller = Get-ChildItem \"$dir\" -Filter 'unins*.exe' | Sort-Object -Descending CreationTime -Top 1",
+         ".\"$($uninstaller.FullName)\" /VERYSILENT",
+         "while (Test-Path $uninstaller.FullName) {",
+         "   Start-Sleep -Milliseconds 500",
+         "}"
+      ]
+   },
+   "checkver": {
+      "github": "https://github.com/ProtonVPN/win-app"
+   },
+   "autoupdate": {
+      "architecture": {
+         "64bit": {
+            "url": "https://github.com/ProtonVPN/win-app/releases/download/$version/ProtonVPN_v$version_x64.exe#/dl.exe"
+         }
+      }
+   }
+}

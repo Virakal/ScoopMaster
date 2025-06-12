@@ -1,0 +1,28 @@
+{
+    "version": "2.6.8",
+    "description": "Unit and Integration Test generation for Developers. Generate tests and stubs for your application that actually work",
+    "homepage": "https://github.com/keploy/keploy",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/keploy/keploy/releases/download/v2.6.8/keploy_windows_amd64.tar.gz",
+            "hash": "eb73282c955de1120a8cf3898e3413b1689f34897a06bf055c8c0fa9b3968eb3"
+        },
+        "arm64": {
+            "url": "https://github.com/keploy/keploy/releases/download/v2.6.8/keploy_windows_arm64.tar.gz",
+            "hash": "96c176eab6b0f4548642cff97a735d6d0f36adeaa8428e5d944ea401fa9ddad4"
+        }
+    },
+    "bin": "keploy.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/keploy/keploy/releases/download/v$version/keploy_windows_amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/keploy/keploy/releases/download/v$version/keploy_windows_arm64.tar.gz"
+            }
+        }
+    }
+}

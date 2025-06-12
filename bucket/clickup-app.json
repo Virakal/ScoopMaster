@@ -1,0 +1,42 @@
+{
+    "version": "3.5.87",
+    "description": "The everything app, for work.",
+    "homepage": "https://clickup.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://clickup.com/terms/privacy"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.todesktop.com/221003ra4tebclw/ClickUp%20Setup%203.5.87%20-%20Build%202503108np1f9072-x64.exe#/dl.7z",
+            "hash": "sha512:5a8587038c9598ebc2929e8446aefc8939203a55fca5c4f9fa579e99334e1c5f7df23391b94beea496c69407ab1e31e3b7bb73ae5675bd033f8f851997b1151b",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "ClickUp.exe",
+            "ClickUp App",
+            "--user-data-dir=\"$dir\\data\\user-data\""
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://download.todesktop.com/221003ra4tebclw/latest.yml",
+        "regex": "Setup\\s+([\\d.]+).*Build\\s+(?<Build>[\\w]+)-x64.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.todesktop.com/221003ra4tebclw/ClickUp%20Setup%20$version%20-%20Build%20$matchBuild-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

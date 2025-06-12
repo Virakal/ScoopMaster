@@ -1,0 +1,37 @@
+{
+    "version": "21-20250607",
+    "description": "Collection of modular and reusable compiler and toolchain technologies. (trcrsired build)",
+    "homepage": "https://github.com/trcrsired/llvm-releases",
+    "license": "NCSA",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/trcrsired/llvm-releases/releases/download/llvm21-20250607/x86_64-windows-gnu.tar.xz",
+            "hash": "a7774d1eb858d7a072f0e11dde9e10313b527556a340cffb64e32e743c949dfc"
+        }
+    },
+    "pre_install": [
+        "$subDirs = Get-ChildItem -Path \"$dir\\x86_64-windows-gnu\" -Directory",
+        "foreach ($subDir in $subDirs) {",
+        "    Copy-Item $subDir\\* $dir -Force -Recurse",
+        "}",
+        "Remove-Item -Path \"$dir\\x86_64-windows-gnu\" -Recurse",
+        "Get-ChildItem -Path \"$dir\\lib\" -Recurse -Filter *.dll | Move-Item -Destination \"$dir\\bin\" -Force"
+    ],
+    "env_add_path": "bin",
+    "env_set": {
+        "LIBCLANG_PATH": "$dir\\bin",
+        "LLVM_LIB_DIR": "$dir\\lib"
+    },
+    "checkver": {
+        "github": "https://github.com/trcrsired/llvm-releases",
+        "regex": "tag/llvm(\\d+)-(\\d+)",
+        "replace": "${1}-${2}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/trcrsired/llvm-releases/releases/download/llvm$version/x86_64-windows-gnu.tar.xz"
+            }
+        }
+    }
+}

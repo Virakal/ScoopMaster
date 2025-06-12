@@ -1,0 +1,39 @@
+{
+    "version": "2.3.4",
+    "description": "A script/software for automatically enrolling/joining 100% discounted Udemy courses for free. Get Paid Udemy courses for free with just a few clicks. CLI version.",
+    "homepage": "https://github.com/techtanic/Discounted-Udemy-Course-Enroller",
+    "license": "MIT",
+    "url": "https://github.com/techtanic/Discounted-Udemy-Course-Enroller/releases/download/v2.3.4/DUCE-CLI-windows.exe",
+    "hash": "aebe0cf806ab66e99250dd4ecab4a1bf27b2fe7fe5de28fb7c1aefc8a30a2aaa",
+    "shortcuts": [
+        [
+            "DUCE-CLI-windows.exe",
+            "Discounted Udemy Course Enroller (CLI)"
+        ]
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\duce-cli-settings.json\")) {",
+        "Write-Host \"\nConfig file not found. Attempting to download the default configuration file...\"",
+        "try {",
+        "Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/techtanic/Discounted-Udemy-Course-Enroller/v$version/default-duce-cli-settings.json\" -OutFile \"$dir\\duce-cli-settings.json\" -ErrorAction Stop",
+        "if (Test-Path \"$dir\\duce-cli-settings.json\") {",
+        "Write-Host \"\nDefault configuration file downloaded successfully.\"",
+        "} else {",
+        "Write-Error \"\nDownload completed, but the file is missing. Please check permissions or disk space.\"",
+        "}",
+        "} catch {",
+        "Write-Error \"\nFailed to download the default configuration file. Error: $_\"",
+        "}",
+        "} else {",
+        "Write-Host \"\nConfig file already exists. Skipping download.\"",
+        "}"
+    ],
+    "persist": [
+        "Courses",
+        "duce-cli-settings.json"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/techtanic/Discounted-Udemy-Course-Enroller/releases/download/v$version/DUCE-CLI-windows.exe"
+    }
+}

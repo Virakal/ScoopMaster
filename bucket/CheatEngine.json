@@ -7,22 +7,22 @@
         "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
     "url": "https://github.com/ardittristan/cheat-engine/releases/download/7.5.0-7712/release.zip",
-    "hash": "ed9ebf8952ee04af166f90dd28e49835149f122c699aa85b56e0bee9730a2dac",
+    "hash": "99e54cc29597af79a151e62f90f653b5577691bc1094a12e6c1f1d88689e787d",
     "architecture": {
         "64bit": {
             "shortcuts": [
                 [
                     "cheatengine-x86_64.exe",
-                    "Cheat Engine",
+                    "Cheat Engine\\Cheat Engine",
                     "--LANG zh_CN"
                 ],
                 [
                     "windowsrepair.exe",
-                    "Cheat Engine Windows Repair"
+                    "Cheat Engine\\Cheat Engine Windows Repair"
                 ],
                 [
                     "tutorial-x86_64.exe",
-                    "Cheat Engine Tutorial"
+                    "Cheat Engine\\Cheat Engine Tutorial"
                 ]
             ]
         },
@@ -30,16 +30,16 @@
             "shortcuts": [
                 [
                     "cheatengine-i386.exe",
-                    "Cheat Engine",
+                    "Cheat Engine\\Cheat Engine",
                     "--LANG zh_CN"
                 ],
                 [
                     "windowsrepair.exe",
-                    "Cheat Engine Windows Repair"
+                    "Cheat Engine\\Cheat Engine Windows Repair"
                 ],
                 [
                     "tutorial-i386.exe",
-                    "Cheat Engine Tutorial"
+                    "Cheat Engine\\Cheat Engine Tutorial"
                 ]
             ]
         }

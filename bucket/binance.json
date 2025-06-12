@@ -1,12 +1,12 @@
 {
-    "version": "1.53.4",
+    "version": "1.54.17",
     "description": "Cryptocurrency Exchange for Bitcoin, Ethereum & Altcoins",
     "homepage": "https://www.binance.com/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://ftp.binance.com/electron-desktop/windows/production/binance-setup-1.53.4.exe#/dl.7z",
-            "hash": "sha512:a41d097f948b8c37f412cb9f8f70cea3f254d50acac7653479a83c3324997640081413ea199831c42ce23dffa44091cce9fae681c63181539754666ede859900"
+            "url": "https://ftp.binance.com/electron-desktop/windows/production/binance-setup-1.54.17.exe#/dl.7z",
+            "hash": "sha512:21bf4bf6eb796aa72de2163b6dbc6ac0f9a81654c86f1e4c4204d427ee9a626b367fad1937ff8bd75e0d458458694677e4795abb781f7574a66c090b240b3642"
         }
     },
     "installer": {

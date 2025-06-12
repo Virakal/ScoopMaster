@@ -1,0 +1,77 @@
+{
+    "version": "2.934",
+    "description": "A large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows",
+    "homepage": "https://cygwin.com/",
+    "license": "GPL-3.0-or-later,X11,Public Domain",
+    "notes": "To start a Cygwin shell, type \"cygwin\"",
+    "architecture": {
+        "64bit": {
+            "url": "https://cygwin.com/setup-x86_64.exe#/cygwin-setup.exe",
+            "hash": "sha512:dcb2076ed54f54737555afb184372d3483e516a7503f19cc984515091f7f832d3c5c1eeaf7c38236e9902eb779ca7fa4f95dd923fd8e85beb8d5f402d27c63f7"
+        },
+        "32bit": {
+            "url": "https://cygwin.com/setup-x86.exe#/cygwin-setup.exe",
+            "hash": "sha512:2981d06d5ee8755c6155059c00572220bbe9d18ce06bba6d0489552c0038d96639811b73943e2f57503a0d95f819fbcb7e8dddaed777143eefd5ff3358008b86"
+        }
+    },
+    "checkver": {
+        "regex": ">release_([\\d.]+)<",
+        "url": "https://cygwin.com/git/?p=cygwin-apps/setup.git;a=tags"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cygwin.com/setup-x86_64.exe#/cygwin-setup.exe",
+                "hash": {
+                    "url": "https://cygwin.com/sha512.sum",
+                    "regex": "$sha512\\s+$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://cygwin.com/setup-x86.exe#/cygwin-setup.exe",
+                "hash": {
+                    "url": "https://cygwin.com/sha512.sum",
+                    "regex": "$sha512\\s+$basename"
+                }
+            }
+        }
+    },
+    "bin": [
+        [
+            "root\\bin\\bash.exe",
+            "cygwin",
+            "--login -i"
+        ]
+    ],
+    "installer": {
+        "args": [
+            "--no-admin",
+            "--no-shortcuts",
+            "--quiet-mode",
+            "--local-package-dir \"$persist_dir\\packages\"",
+            "--root \"$persist_dir\\root\"",
+            "--site \"https://mirrors.kernel.org/sourceware/cygwin/\""
+        ],
+        "keep": true
+    },
+    "pre_install": "persist_data @{persist = @('packages', 'root')} $original_dir $persist_dir",
+    "shortcuts": [
+        [
+            "root\\Cygwin.bat",
+            "Cygwin",
+            "",
+            "root\\Cygwin-Terminal.ico"
+        ],
+        [
+            "cygwin-setup.exe",
+            "Cygwin Setup",
+            "--no-admin --no-shortcuts --root \"$persist_dir\\root\" --local-package-dir \"$persist_dir\\packages\""
+        ],
+        [
+            "root\\bin\\mintty.exe",
+            "Cygwin Terminal",
+            "-i \"$dir\\root\\Cygwin-Terminal.ico\" -",
+            "root\\Cygwin-Terminal.ico"
+        ]
+    ]
+}

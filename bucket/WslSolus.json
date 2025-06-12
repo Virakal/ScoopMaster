@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "a03c1b3183e29e857b2db1862da6d306305b61fc65d5d659d266dfb7c349fba6",
-            "url": "https://github.com/sileshn/SolusWSL2/releases/download/20240901/SolusWSL2.zip"
+            "hash": "cd4b17a855be2b3806be300d6e3d28fda2fd5fbdb09367f2fc0475aee8e1ef71",
+            "url": "https://github.com/sileshn/SolusWSL2/releases/download/20250304/SolusWSL2.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Solus.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20240901"
+    "version": "20250304"
 }

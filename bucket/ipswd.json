@@ -1,0 +1,22 @@
+{
+    "version": "3.1.611",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.611/ipswd_3.1.611_windows_x86_64.zip",
+            "bin": [
+                "ipswd.exe"
+            ],
+            "hash": "219fee0a1389e6b12f4c37ababc8e2b85642cf35afe9012462489d8e85cadee0"
+        },
+        "arm64": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.611/ipswd_3.1.611_windows_arm64.zip",
+            "bin": [
+                "ipswd.exe"
+            ],
+            "hash": "3e48858ee2bc3f485078fed22e2428cfcb19ba8cab84c19b6c6caa38c155ad8d"
+        }
+    },
+    "homepage": "https://blacktop.github.io/ipsw",
+    "license": "MIT",
+    "description": "ipsw - Daemon"
+}

@@ -1,0 +1,57 @@
+{
+    "version": "1.28.1",
+    "description": "Linear is a purpose-built tool for planning and building products",
+    "homepage": "https://linear.app/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://linear.app/privacy"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.todesktop.com/200315glz2793v6/Linear%20Setup%201.28.1%20-%20Build%20250327xk0y0g2t4-x64.exe#/dl.7z",
+            "hash": "sha512:1a761ddfb7bacc25681cea84694bf43bad067275c52bbf7bbdab6e7698e7c4da63541d9a8d32af6622f0f5c80e4cc283429f04fdee6e37cb01f1f23ffd6cb0da",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        },
+        "arm64": {
+            "url": "https://download.todesktop.com/200315glz2793v6/Linear%20Setup%201.28.1%20-%20Build%20250327xk0y0g2t4-arm64.exe#/dl.7z",
+            "hash": "sha512:93513ef0564944f18fd1a06893eda8deaa7484ad834d51ac199e577c8ddccf5390434b1a2facd87bad39f8bf9df6a81c611d55dd6c55994df15cd73bb32933cf",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Linear.exe",
+            "Linear App",
+            "--user-data-dir=\"$dir\\data\\user-data\""
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://download.todesktop.com/200315glz2793v6/latest.yml",
+        "regex": "Setup\\s+([\\d.]+).*Build\\s+(?<Build>[\\w]+).exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.todesktop.com/200315glz2793v6/Linear%20Setup%20$version%20-%20Build%20$matchBuild-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?sha512:\\s+$base64"
+                }
+            },
+            "arm64": {
+                "url": "https://download.todesktop.com/200315glz2793v6/Linear%20Setup%20$version%20-%20Build%20$matchBuild-arm64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)arm64.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

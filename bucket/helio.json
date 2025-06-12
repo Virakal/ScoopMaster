@@ -1,16 +1,16 @@
 {
+    "version": "3.16",
+    "description": "A free and open-source music sequencer, designed to be used on all major platforms.",
     "homepage": "https://helio.fm/",
-    "description": "Libre music composition software",
     "license": "GPL-3.0-only",
-    "version": "3.14",
     "architecture": {
         "64bit": {
-            "url": "https://ci.helio.fm/helio-3.14-x64.zip",
-            "hash": "d77cae12a891a0ced7cc0bb5672054b6fcef20258a6af111fdd8df6c93ef6dcf"
+            "url": "https://ci.helio.fm/helio-3.16-x64.zip",
+            "hash": "117bb09f5b8309e1a2dc7f3c2bd399da9093e147b222cfebbf5d9dcc4e110ddd"
         },
         "32bit": {
-            "url": "https://ci.helio.fm/helio-3.14-x32.zip",
-            "hash": "7906704b40c15cd45f1276afe07ae779ec51a8fb306274c26514232facbf4465"
+            "url": "https://ci.helio.fm/helio-3.16-x32.zip",
+            "hash": "bc40eecbde604eee8745505c3ecdc2d9e62566477462845c7fb677cfd715bcc7"
         }
     },
     "shortcuts": [
@@ -19,9 +19,13 @@
             "Helio"
         ]
     ],
+    "notes": [
+        "Helio is NOT portable.",
+        "The configuration directory is %APPDATA%\\Helio\\",
+        "The projects directory is %HOMEPATH%\\Helio\\"
+    ],
     "checkver": {
-        "url": "https://docs.helio.fm/changelog.html",
-        "regex": "Version ([\\d.]+)"
+        "regex": "helio-([\\d.]+)-x64.zip"
     },
     "autoupdate": {
         "architecture": {

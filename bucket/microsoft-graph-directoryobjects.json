@@ -1,0 +1,26 @@
+{
+    "version": "2.28.0",
+    "description": "Microsoft Graph PowerShell Cmdlets",
+    "homepage": "https://github.com/microsoftgraph/msgraph-sdk-powershell",
+    "license": "https://aka.ms/devservicesagreement",
+    "depends": "microsoft-graph-authentication",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content_Types*.xml\" -Recurse",
+    "pre_uninstall": [
+        "$InstalledDeps = $manifest.depends | Where-Object { Test-Path \"$(appdir $_)\\current\" }",
+        "if (-not $InstalledDeps) { return }",
+        "if ($global) { scoop uninstall --global $InstalledDeps }",
+        "else { scoop uninstall $InstalledDeps }"
+    ],
+    "checkver": {
+        "regex": "<h2>([\\d\\.]+)</h2>",
+        "url": "https://www.powershellgallery.com/packages/microsoft.graph.directoryobjects"
+    },
+    "autoupdate": {
+        "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.directoryobjects.$version.nupkg"
+    },
+    "hash": "6254b0d574c41b520f8010aa330b7adc8c66d83e42fdbaa95d0fe030ca10c2e7",
+    "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.directoryobjects.2.28.0.nupkg",
+    "psmodule": {
+        "name": "Microsoft.Graph.DirectoryObjects"
+    }
+}

@@ -1,16 +1,16 @@
 {
-    "version": "0.0.2",
+    "version": "0.1.0",
     "description": "红队行动下的重点资产指纹识别工具。(Scoop bucket for Cybersecurity by whoopscs)",
     "homepage": "https://github.com/P001water/P1finger",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/P001water/P1finger/releases/download/P1finger_0.0.2/P1finger64.exe",
-            "hash": "20ff7fc68dc08c6ae445a89b11ea1695d70df2b130020690d5554b553162a5ca"
+            "url": "https://github.com/P001water/P1finger/releases/download/P1finger_0.1.0/P1finger_windows_amd64.exe",
+            "hash": "e10913e2727857fb97ea129ef7b5aa2c8cf19083a667183eeb96bc8cbc8d0a0f"
         },
         "32bit": {
-            "url": "https://github.com/P001water/P1finger/releases/download/P1finger_0.0.2/P1finger86.exe",
-            "hash": "2ed40f2e1500c4e11d5ea9667b30c8f306f97b04d25e0f57847d32d149259099"
+            "url": "https://github.com/P001water/P1finger/releases/download/P1finger_0.1.0/P1finger_windows_386.exe",
+            "hash": "48bc5400fccb2290d13fdc879e35ba97c71fe7d2de491497c721f70cb50f838f"
         }
     },
     "bin": "P1finger.exe",
@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/P001water/P1finger/releases/download/P1finger_$version/P1finger64.exe"
+                "url": "https://github.com/P001water/P1finger/releases/download/P1finger_$version/P1finger_windows_amd64.exe"
             },
             "32bit": {
-                "url": "https://github.com/P001water/P1finger/releases/download/P1finger_$version/P1finger86.exe"
+                "url": "https://github.com/P001water/P1finger/releases/download/P1finger_$version/P1finger_windows_386.exe"
             }
         }
     }

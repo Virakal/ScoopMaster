@@ -1,5 +1,5 @@
 {
-    "version": "2.3",
+    "version": "2.5",
     "description": "Flycast is a multi-platform Sega Dreamcast, Naomi and Atomiswave emulator derived from reicast",
     "homepage": "https://github.com/flyinghead/flycast",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/flyinghead/flycast/releases/download/v2.3/flycast-win64-2.3.zip",
-            "hash": "40be348dd17a9461012062e10f9981e6ea7dd4741cf770786a603252c85ea500"
+            "url": "https://github.com/flyinghead/flycast/releases/download/v2.5/flycast-win64-2.5.zip",
+            "hash": "af027ef0ad7b5c34f1367bc20b696c0d9be4dd2495ec65f717e25c96f5024954"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\emu.cfg\")) { New-Item -ItemType File \"$dir\\emu.cfg\" | Out-Null }",

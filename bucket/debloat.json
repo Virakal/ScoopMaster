@@ -1,10 +1,10 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.4",
     "description": "A GUI and CLI tool for removing bloat from executables",
     "homepage": "https://github.com/Squiblydoo/debloat",
     "license": "BSD-3-Clause",
-    "url": "https://github.com/Squiblydoo/debloat/releases/download/1.6.1/Windows_debloat_1.6.1.zip",
-    "hash": "212e1df64840552677b700556a49f54bcdaef3dbcbf7f12510fc2598916fc93e",
+    "url": "https://github.com/Squiblydoo/debloat/releases/download/1.6.4/windows-latest_debloat.zip",
+    "hash": "153ca1a4992d81d124ac72f76b866f9934505497d6661425c72e7f06a0798e93",
     "bin": "debloat.exe",
     "shortcuts": [
         [
@@ -14,6 +14,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Squiblydoo/debloat/releases/download/$version/Windows_debloat_$version.zip"
+        "url": "https://github.com/Squiblydoo/debloat/releases/download/$version/windows-latest_debloat.zip"
     }
 }

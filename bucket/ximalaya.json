@@ -1,13 +1,12 @@
 {
     "version": "3.3.7.384",
-    "description": "音频平台 喜马拉雅",
+    "description": "音频: 喜马拉雅",
     "homepage": "https://www.ximalaya.com",
+    "license": "Unknown",
     "url": "https://webcdn.m.qq.com/spcmgr/download/GMCoOR8H-MTsACAAAAIIDKxD_3.3.7.384.exe#/dl.7z",
     "hash": "ce29a53ef89878d3396949f5245f62d332cb55f540a326313a8eb9cc0102febc",
     "installer": {
-        "script": [
-            "(Get-ChildItem $dir 'ximalaya-*-ia32.nsis.7z').Fullname | Expand-7zipArchive -DestinationPath $dir -Removal"
-        ]
+        "script": "(Get-ChildItem $dir 'ximalaya-*-ia32.nsis.7z').Fullname | Expand-7zipArchive -DestinationPath $dir -Removal"
     },
     "bin": [
         [
@@ -24,13 +23,15 @@
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "checkver": {
         "script": [
-            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=26167' -Method 'POST'",
-            "Write-Output $res.Content"
+            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq[req][soft_id_list]=26167' -Method 'POST'",
+            "$content = $res.Content | ConvertFrom-Json",
+            "$verName = $content.resp.soft_list[0].ver_name",
+            "$fileName = $content.resp.soft_list[0].file_name",
+            "Write-Output \"$verName|$fileName\""
         ],
-        "jsonpath": "$..file_name",
-        "regex": "GMCoOR8H-MTsACAAAAIIDKxD_(?<version>.*?).exe"
+        "regex": "(?<version>[\\d.]+)\\|(?<id>.*)"
     },
     "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/GMCoOR8H-MTsACAAAAIIDKxD_$version.exe#/dl.7z"
+        "url": "https://webcdn.m.qq.com/spcmgr/download/$matchId#/dl.7z"
     }
 }

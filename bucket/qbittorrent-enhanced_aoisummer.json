@@ -2,18 +2,14 @@
     "homepage": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
     "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
     "license": "GPL-2.0-only",
-    "version": "4.6.6.10",
+    "version": "5.1.0.11",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.6.6.10/qbittorrent_enhanced_4.6.6.10_x64_setup.exe#/dl.7z",
-            "hash": "1f9d5ad09376c7ec2b65de96c81cdd973c41d8b6c94317fa5cb16fb725972b8c"
-        },
-        "32bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.6.6.10/qbittorrent_enhanced_4.6.6.10_setup.exe#/dl.7z",
-            "hash": "ee29b09b616472b121e7e78c07cbd18ddf15167082977e11663e061c1c087a15"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-5.1.0.11/qbittorrent_enhanced_5.1.0.11_x64_setup.exe#/dl.7z",
+            "hash": "39edeff1f8f839761cbde39ece848a3ea3d0642641e4061110aa170eb604fb20"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "shortcuts": [
         [
             "qbittorrent.exe",
@@ -29,9 +25,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_enhanced_$version_x64_setup.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_enhanced_$version_setup.exe#/dl.7z"
             }
         }
     }

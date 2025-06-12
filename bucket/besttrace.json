@@ -1,12 +1,12 @@
 {
-    "version": "20240731",
+    "version": "20250428",
     "description": "Initiate a traceroute request from a Windows device with a link visualization.",
     "homepage": "https://en.ipip.net/product/client.html",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://cdn.ipip.net/17mon/besttrace.exe",
-            "hash": "57e257daac1b2241ca41c6d77c869c088f6b55481bcbfcd2e76f9ece5c844142"
+            "hash": "b018a74cba0f34683d749cfd6511e4d04aba85b4517e5dce0adc0c33dbd2a925"
         }
     },
     "innosetup": true,

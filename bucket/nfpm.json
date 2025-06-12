@@ -1,22 +1,31 @@
 {
-    "version": "2.40.0",
+    "version": "2.43.0",
+    "description": "nFPM is Not FPM - a simple deb, rpm, apk, ipk, and arch linux packager written in Go",
+    "homepage": "https://github.com/goreleaser/nfpm",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/goreleaser/nfpm/releases/download/v2.40.0/nfpm_2.40.0_Windows_x86_64.zip",
-            "bin": [
-                "nfpm.exe"
-            ],
-            "hash": "9a060da0f52888db1dab16b79ca8db56c755cbb616925f74f92cc94db7f92430"
+            "url": "https://github.com/goreleaser/nfpm/releases/download/v2.43.0/nfpm_2.43.0_Windows_x86_64.zip",
+            "hash": "e3551b135b37d4a19521db4c549a2c81a214d819ee09623ac092c89f3324a854"
         },
         "arm64": {
-            "url": "https://github.com/goreleaser/nfpm/releases/download/v2.40.0/nfpm_2.40.0_Windows_arm64.zip",
-            "bin": [
-                "nfpm.exe"
-            ],
-            "hash": "b7f18bdd5eea89eb5b664579264bbab53584abe70b4f89ed62cc392f97182329"
+            "url": "https://github.com/goreleaser/nfpm/releases/download/v2.43.0/nfpm_2.43.0_Windows_arm64.zip",
+            "hash": "53dbc58b49e7bd54d63694f1460363b593b760e4328f61ec32afb0f39df080e9"
         }
     },
-    "homepage": "https://nfpm.goreleaser.com",
-    "license": "MIT",
-    "description": "nFPM is a simple, 0-dependencies, deb, rpm and apk packager."
+    "bin": "nfpm.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/goreleaser/nfpm/releases/download/v$version/nfpm_$version_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/goreleaser/nfpm/releases/download/v$version/nfpm_$version_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/goreleaser/nfpm/releases/download/v$version/checksums.txt"
+        }
+    }
 }

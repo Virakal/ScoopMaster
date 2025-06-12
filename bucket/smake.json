@@ -1,16 +1,16 @@
 {
-    "version": "0.4.1",
-    "description": "SMake (Make by S-expression)",
+    "version": "0.5.1",
+    "description": "SMake: Make Powered by S-expressions",
     "homepage": "https://github.com/hymkor/smake",
     "license": "MIT License",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/hymkor/smake/releases/download/v0.4.1/smake-v0.4.1-windows-386.zip",
-            "hash": "b703d0e1eb90c99327c092484bebeab4236caefe453926bf2e7f4a1f436b41d6"
+            "url": "https://github.com/hymkor/smake/releases/download/v0.5.1/smake-v0.5.1-windows-386.zip",
+            "hash": "5348e80f19dee04df1ccd224440f940b76d7440dcce099d8a70c75e029026f08"
         },
         "64bit": {
-            "url": "https://github.com/hymkor/smake/releases/download/v0.4.1/smake-v0.4.1-windows-amd64.zip",
-            "hash": "bffbb7db6fc2fcbe3828bfcc989bf4ebdb49905622516fd42bae6ebd6e085e8c"
+            "url": "https://github.com/hymkor/smake/releases/download/v0.5.1/smake-v0.5.1-windows-amd64.zip",
+            "hash": "d958b8306b15949b281c9f9dc88f0c02ed81422cc6f18bccafb16a8846c66f39"
         }
     },
     "bin": "smake.exe",

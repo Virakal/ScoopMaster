@@ -1,0 +1,27 @@
+{
+    "version": "2.7.8",
+    "description": "Update all the DLSS/XeSS DLLs for the games detected on your system.",
+    "homepage": "https://github.com/Recol/DLSS-Updater",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Recol/DLSS-Updater/releases/download/V2.7.8/DLSS.Updater.2.7.8.zip",
+            "hash": "e60bd39dd5b6bc2b204823ecc392344d7c778ef3c3a324a5778759e70d6e49af"
+        }
+    },
+    "shortcuts": [
+        [
+            "DLSS_Updater.exe",
+            "DLSS Updater"
+        ]
+    ],
+    "notes": "DLSS Updater is NOT portable.",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Recol/DLSS-Updater/releases/download/V$version/DLSS.Updater.$version.zip"
+            }
+        }
+    }
+}

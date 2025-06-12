@@ -1,48 +1,83 @@
 {
-    "version": "nightly",
-    "description": "Docker Desktop. Open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.",
-    "homepage": "https://www.docker.com",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/moby/moby/blob/master/LICENSE"
-    },
-    "notes": [
-        "This version of docker manifest is nightly and have it's own mind.",
-        "All files will be installed into DEFAULT docker directory. (C:\\Program Files\\Docker)",
-        "I suggest to change docker images location:",
-        "    https://docs.docker.com/v1.11/engine/reference/commandline/daemon/#daemon-configuration-file",
-        "",
-        "Updating is handled by docker itself.",
-        "    No updates will be done to this manifest.",
-        "",
-        "'scoop uninstall docker' will uninstall docker completely.",
-        "    Images, vms, settings, ..."
-    ],
+    "version": "4.42.0",
+    "description": "(sudo) Docker Desktop. Open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.",
+    "homepage": "https://www.docker.com/products/docker-desktop/",
+    "license": "Proprietary",
     "architecture": {
+        "arm64": {
+            "url": "https://alist.xrgzs.top/d/pxy/Software/Docker/Desktop/win/main/arm64/Docker%20Desktop%20Installer.exe#/installer.exe",
+            "hash": "79af232819ca3441e0bd6376ca8cf4ac6576192e19cb0731d737f6aea8348911"
+        },
         "64bit": {
-            "url": "https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe#/dockerInstall.exe",
-            "pre_install": [
-                "if(is_admin) {",
-                "    if((Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online).State -eq 'Disabled') {",
-                "        Write-Host 'Hyper-V is disabled. Enabling. Please restart PC before first start of Docker.' -f Yellow",
-                "        Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart",
-                "    }",
-                "}"
-            ],
-            "installer": {
-                "args": [
-                    "install",
-                    "--quiet"
-                ],
-                "keep": true
+            "url": "https://alist.xrgzs.top/d/pxy/Software/Docker/Desktop/win/main/amd64/Docker%20Desktop%20Installer.exe#/installer.exe",
+            "hash": "664189e3e61a7555edd2cc9420a48b8fdb06de55d376d80ac6a7e12ffa90554d"
+        }
+    },
+    "shortcuts": [
+        [
+            "docker\\Docker Desktop.exe",
+            "Docker Desktop"
+        ]
+    ],
+    "suggest": {
+        "Windows Subsystem for Linux 2": "sdoog/wsl2"
+    },
+    "bin": "docker\\DockerCli.exe",
+    "installer": {
+        "args": [
+            "install",
+            "--quiet",
+            "--accept-license",
+            "--backend=wsl-2",
+            "--installation-dir=$dir\\docker"
+        ]
+    },
+    "pre_install": [
+        "if (!(is_admin)) {",
+        "    error \"Administrator rights are required to install $app.\"",
+        "    scoop uninstall $app",
+        "    exit 1",
+        "}",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "New-PersistDirectory \"$env:USERPROFILE\\.docker\" \"$persist_dir\\USERPROFILE\\.docker\" -Migrate",
+        "New-PersistDirectory \"$env:LOCALAPPDATA\\Docker\" \"$persist_dir\\LOCALAPPDATA\\Docker\" -Migrate",
+        "New-PersistDirectory \"$env:APPDATA\\Docker\" \"$persist_dir\\APPDATA\\Docker\" -Migrate"
+    ],
+    "post_install": [
+        "Remove-Item \"$env:USERPROFILE\\Desktop\\Docker Desktop.lnk\" -Force",
+        "Remove-Item \"$env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Docker Desktop.lnk\" -Force"
+    ],
+    "pre_uninstall": [
+        "if (!(is_admin)) {",
+        "    error \"Administrator rights are required to uninstall $app.\"",
+        "    exit 1",
+        "}",
+        "info 'Shutting down Docker Desktop...'",
+        ". \"$dir\\docker\\DockerCli.exe\" -Shutdown",
+        "info 'Uninstalling Docker Desktop...'",
+        "Start-Process -FilePath \"$dir\\docker\\Docker Desktop Installer.exe\" -ArgumentList @('uninstall', '--quiet', \"--installation-dir=$dir\\docker\") -Wait -Verb RunAs",
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "Remove-Junction \"$env:USERPROFILE\\.docker\"",
+        "Remove-Junction \"$env:LOCALAPPDATA\\Docker\"",
+        "Remove-Junction \"$env:APPDATA\\Docker\""
+    ],
+    "checkver": {
+        "url": "https://alist.xrgzs.top/d/pxy/Software/Docker/Desktop/Version.txt",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://alist.xrgzs.top/d/pxy/Software/Docker/Desktop/win/main/arm64/Docker%20Desktop%20Installer.exe#/installer.exe"
             },
-            "uninstaller": {
-                "file": "dockerInstall.exe",
-                "args": [
-                    "uninstall",
-                    "--quiet"
-                ]
+            "64bit": {
+                "url": "https://alist.xrgzs.top/d/pxy/Software/Docker/Desktop/win/main/amd64/Docker%20Desktop%20Installer.exe#/installer.exe"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

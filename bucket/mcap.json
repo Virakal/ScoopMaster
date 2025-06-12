@@ -1,12 +1,12 @@
 {
-    "version": "0.0.47",
+    "version": "0.0.53",
     "description": "A CLI tool for interacting with MCAP format that is a modular container format and logging library for pub/sub messages with arbitrary message serialization.",
     "homepage": "https://mcap.dev/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/foxglove/mcap/releases/download/releases%2Fmcap-cli%2Fv0.0.47/mcap-windows-amd64.exe#/mcap.exe",
-            "hash": "1637d378fb46e4b359b381acb840d5b46475da2012b06ac059b997e9c34e6cfe"
+            "url": "https://github.com/foxglove/mcap/releases/download/releases%2Fmcap-cli%2Fv0.0.53/mcap-windows-amd64.exe#/mcap.exe",
+            "hash": "6cd2d250ed8dcd23a11150759bdf6618dbebc2c53231222467057a86a155368b"
         }
     },
     "bin": "mcap.exe",

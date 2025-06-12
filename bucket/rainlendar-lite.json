@@ -1,16 +1,16 @@
 {
-    "version": "2.21.3",
+    "version": "2.22.1",
     "description": "A skinnable, easy-to-use calendar that resides on your desktop and shows the days of the current month.",
     "homepage": "https://www.rainlendar.net/",
     "license": "Liteware",
     "architecture": {
         "64bit": {
-            "url": "https://www.rainlendar.net/download/2.21.3/Rainlendar-Lite-2.21.3-64bit.exe#/dl.7z",
-            "hash": "8af73804af8fe8f193c0eb1a582dad2fd2a9050dd0c44d37cd7e57191ac94bb4"
+            "url": "https://www.rainlendar.net/download/2.22.1/Rainlendar-Lite-2.22.1-64bit.exe#/dl.7z",
+            "hash": "2b04b8387cb9e2242ae518d0dc2d9b8ff1ef09f90294b20a8aafcfc44a79aa6e"
         },
         "32bit": {
-            "url": "https://www.rainlendar.net/download/2.21.3/Rainlendar-Lite-2.21.3-32bit.exe#/dl.7z",
-            "hash": "a8f9e36181f9740c4c0e46cc74890e67a372f046a39d4f4a9d6747bbf5ac2bb7"
+            "url": "https://www.rainlendar.net/download/2.22.1/Rainlendar-Lite-2.22.1-32bit.exe#/dl.7z",
+            "hash": "70c72b0855b320848f68e0b38be056ea730b5b045a2a3deade3fc6d78fd78757"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\"  -Force -Recurse",

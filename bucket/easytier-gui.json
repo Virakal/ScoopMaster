@@ -1,0 +1,49 @@
+{
+    "version": "2.3.1",
+    "description": "A simple, decentralized mesh VPN with WireGuard support.",
+    "homepage": "https://easytier.cn/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/EasyTier/EasyTier/releases/download/v2.3.1/easytier-gui_2.3.1_x64-setup.exe#/dl.7z",
+            "hash": "b69a87f059bfeb80b2474380a7e51914a1d29576884811f99a36ff9014b4761b"
+        },
+        "arm64": {
+            "url": "https://github.com/EasyTier/EasyTier/releases/download/v2.3.1/easytier-gui_2.3.1_arm64-setup.exe#/dl.7z",
+            "hash": "d322e809bb3f934f0f681526bfbe24b9b0ff9a331fdb8a11eaaf31f80200e138"
+        }
+    },
+    "bin": "easytier-gui.exe",
+    "shortcuts": [
+        [
+            "easytier-gui.exe",
+            "easytier-gui"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\uninstall.exe\" -Force",
+            "Remove-Item \"$dir\\`$*\" -Recurse -Force",
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:LOCALAPPDATA\\com.kkrainbow.easytier\" \"$persist_dir\\LocalAppData\" -Migrate"
+        ]
+    },
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App"
+    ],
+    "checkver": {
+        "github": "https://github.com/EasyTier/EasyTier"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/EasyTier/EasyTier/releases/download/v$version/easytier-gui_$version_x64-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/EasyTier/EasyTier/releases/download/v$version/easytier-gui_$version_arm64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

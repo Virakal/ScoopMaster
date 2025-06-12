@@ -1,5 +1,5 @@
 {
-    "version": "19.24.0.0.0",
+    "version": "19.26.0.0.0",
     "description": "Additional libraries for enabling ODBC applications with Oracle Instant Client.",
     "homepage": "https://www.oracle.com/database/technologies/instant-client.html",
     "license": {
@@ -9,15 +9,15 @@
     "depends": "oracle-instant-client19",
     "architecture": {
         "64bit": {
-            "url": "https://download.oracle.com/otn_software/nt/instantclient/1924000/instantclient-odbc-windows.x64-19.24.0.0.0dbru.zip",
-            "hash": "edd7e520758cb42d64077a76cdea0e2b7f73d0406a397b73ad2a20ebc5745600"
+            "url": "https://download.oracle.com/otn_software/nt/instantclient/1926000/instantclient-odbc-windows.x64-19.26.0.0.0dbru.zip",
+            "hash": "066e6b3cf7e48ec6f98b8ee6fbc5bb79d0ab7829f27f8dfb99944c6cc2eb5d89"
         },
         "32bit": {
-            "url": "https://download.oracle.com/otn_software/nt/instantclient/1924000/instantclient-odbc-nt-19.24.0.0.0dbru.zip",
-            "hash": "ca98c711862d47734732274f55783f8d76a7449743fa1ea2917c09c0844329a8"
+            "url": "https://download.oracle.com/otn_software/nt/instantclient/1926000/instantclient-odbc-nt-19.26.0.0.0dbru.zip",
+            "hash": "ed916c74b8cd96d9e3f3175129580d60d866b84f91cc1a4092ebfca81b2b3575"
         }
     },
-    "extract_dir": "instantclient_19_24",
+    "extract_dir": "instantclient_19_26",
     "pre_install": [
         "$instantclient = currentdir 'oracle-instant-client19'",
         "Copy-Item -Path \"$dir\\*\" -Destination \"$instantclient\" -Force -Recurse | Out-Null"
@@ -45,6 +45,7 @@
         "extract_dir": "instantclient_$majorVersion_$minorVersion"
     },
     "notes": [
+        "Note: The following steps requir Administrator privileges.",
         "Use 'odbc_install.exe' in Oracle Instant Client's dir to install ODBC.",
         "Use 'odbc_uninstall.exe' in above dir to uninstall it."
     ]

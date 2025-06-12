@@ -1,0 +1,49 @@
+{
+    "homepage": "https://github.com/Vodes/FFmpeg-Builds",
+    "description": "Nonfree ffmpeg autobuilds with yt-dlp patches and arm64 builds.",
+    "license": "GPL-3.0-or-later",
+    "version": "7.1.1-6",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/autobuild-2025-04-14-19-41/ffmpeg-n7.1.1-6-g48c0f071d4-win64-nonfree-7.1.zip",
+            "hash": "d206e285b5d76ef5c7e243777257fd4031abf7dc2a751b36c34416597611b3bb",
+            "extract_dir": "ffmpeg-n7.1.1-6-g48c0f071d4-win64-nonfree-7.1"
+        },
+        "arm64": {
+            "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/autobuild-2025-04-14-19-41/ffmpeg-n7.1.1-6-g48c0f071d4-winarm64-nonfree-7.1.zip",
+            "hash": "09e7431657b4c9cc1685e1a3e442aef4e94edc80b98d7110a989fd8ff27153b6",
+            "extract_dir": "ffmpeg-n7.1.1-6-g48c0f071d4-winarm64-nonfree-7.1"
+        }
+    },
+    "bin": [
+        [
+            "bin\\ffmpeg.exe",
+            "ffmpeg"
+        ],
+        [
+            "bin\\ffprobe.exe",
+            "ffprobe"
+        ],
+        [
+            "bin\\ffplay.exe",
+            "ffplay"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Vodes/FFmpeg-Builds/releases",
+        "jsonpath": "$[1].assets[1].browser_download_url",
+        "regex": "download\\/(?<build>autobuild-(?:\\d+(?:-\\d+)+))\\/(?<filename>ffmpeg-n(?<version>(?:\\d+\\.)+\\d+-\\d+)-(?<commit>\\w+)-(?<arch>\\w+)-nonfree-(?<release>\\d+.\\d+))\\.(?:zip|tar\\.xz)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/$matchBuild/ffmpeg-n$matchVersion-$matchCommit-win64-nonfree-$matchRelease.zip",
+                "extract_dir": "ffmpeg-n$matchVersion-$matchCommit-win64-nonfree-$matchRelease"
+            },
+            "arm64": {
+                "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/$matchBuild/ffmpeg-n$matchVersion-$matchCommit-winarm64-nonfree-$matchRelease.zip",
+                "extract_dir": "ffmpeg-n$matchVersion-$matchCommit-winarm64-nonfree-$matchRelease"
+            }
+        }
+    }
+}

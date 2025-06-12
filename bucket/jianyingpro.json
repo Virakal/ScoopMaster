@@ -1,35 +1,30 @@
 {
-    "##": "剪映专业版",
-    "version": "5.5.0.11332",
-    "description": "[剪映专业版] - 剪映专业版拥有强大的素材库，支持多视频轨/音频轨编辑，用AI为创作赋能，满足多种专业剪辑场景。目前这款剪辑软件广泛应用于自媒体从业者和影视后期专业人士的视频创作工作中。",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://sf6-cdn-tos.huoshanstatic.com/obj/ies-hotsoon-draft/vco/ffd22c0b-e01c-400c-a09e-24671a1575a1.html"
-    },
-    "homepage": "https://lv.ulikecam.com",
-    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_split_5_5_0_11332_jianyingpro_0.exe#/dl.7z",
-    "hash": "855cdd7c3816813773e79c6b0e532b248c526e2d56907faa346afa7ec070cdfe",
-    "pre_install": [
-        "Move-Item \"$dir\\JYPacket\\$version\\*\" $dir -Force",
-        "Remove-Item \"$dir\\JYPacket\" -Force -Recurse"
-    ],
-    "bin": "JianyingPro.exe",
+    "homepage": "https://www.capcut.cn/",
+    "description": "Video editing application produced by ByteDance",
+    "license": "Proprietary",
+    "version": "8.4.0.13142",
+    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_8_4_0_13142_jianyingpro_0_creatortool.exe#/dl.7z",
+    "hash": "9c6ddc33ae16c1457acb18d6bdb1a6b39aa12eece345fa4dc7c7f9331fa93e5f",
+    "extract_dir": "JYPacket/8.4.0.13142",
     "shortcuts": [
         [
             "JianyingPro.exe",
-            "剪映专业版"
+            "Jianying Pro"
         ]
     ],
     "checkver": {
-        "url": "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
-        "jsonpath": "$.windows_download_pkg.channel_default",
-        "regex": "(?<link>Jianying_split_(\\d+)_(\\d+)_(\\d+)_(\\d+)_.*?\\.exe)",
-        "replace": "${1}.${2}.${3}.${4}"
+        "script": [
+            ". \"$pwd\\bin\\utils.ps1\"",
+            "$dl_info = get_installer_info 'ByteDance/JianyingPro'",
+            "\"ver:$($dl_info.PackageVersion);\"",
+            "\"x64:$($dl_info.x64_exe.InstallerUrl);\"",
+            "\"hash:$($dl_info.x64_exe.InstallerSha256);\""
+        ],
+        "regex": "ver:(?<version>.+?); x64:(?<x64>.+?); hash:(?<hash>.+?)$"
     },
     "autoupdate": {
-        "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/$matchLink#/dl.7z",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "$matchX64#/dl.7z",
+        "hash": "$matchHash",
+        "extract_dir": "JYPacket/$version"
     }
 }

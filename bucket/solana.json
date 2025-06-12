@@ -1,30 +1,35 @@
 {
-    "version": "1.18.23",
-    "description": "Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces",
-    "homepage": "https://solana.com/",
+    "version": "2.2.15",
+    "description": "Solana CLI - Agave",
+    "homepage": "https://anza.xyz",
     "license": "Apache-2.0",
+    "extract_dir": "solana-release\\bin",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/solana-labs/solana/releases/download/v1.18.23/solana-release-x86_64-pc-windows-msvc.tar.bz2",
-            "hash": "66a62aa4b2618ce99750e9999746d40fb101e1a9f111e26e43bebcbba9e5b69d",
-            "extract_dir": "solana-release"
+            "url": "https://github.com/anza-xyz/agave/releases/download/v2.2.15/solana-release-x86_64-pc-windows-msvc.tar.bz2",
+            "hash": "9d86e249093074c95f43ecf3c10f0975711b167d36603b710a5b1863af036229"
         }
     },
     "bin": [
-        "bin\\solana-keygen.exe",
-        "bin\\solana-stake-accounts.exe",
-        "bin\\solana-test-validator.exe",
-        "bin\\solana-tokens.exe",
-        "bin\\solana.exe",
-        "bin\\spl-token.exe"
+        "cargo-build-sbf.exe",
+        "cargo-test-sbf.exe",
+        "agave-install-init.exe",
+        "agave-install.exe",
+        "solana-keygen.exe",
+        "solana-stake-accounts.exe",
+        "solana-test-validator.exe",
+        "solana-tokens.exe",
+        "solana.exe",
+        "spl-token.exe"
     ],
+    "env_add_path": ".",
     "checkver": {
-        "github": "https://github.com/solana-labs/solana"
+        "github": "https://github.com/anza-xyz/agave"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/solana-labs/solana/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
+                "url": "https://github.com/anza-xyz/agave/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
             }
         }
     }

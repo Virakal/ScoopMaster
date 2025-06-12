@@ -1,23 +1,22 @@
 {
-    "version": "1.14.9",
+    "version": "1.15.11",
     "description": "Official Go implementation of the Ethereum protocol",
     "homepage": "https://geth.ethereum.org",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-amd64-1.14.9-c350d3ac.zip",
-            "hash": "md5:4070a515b2078c5e2c3f388917dbe942",
-            "extract_dir": "geth-alltools-windows-amd64-1.14.9-c350d3ac"
+            "url": "https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-amd64-1.15.11-36b2371c.zip",
+            "hash": "md5:bf20ea844d2b4b78ed27b11debb06e5a",
+            "extract_dir": "geth-alltools-windows-amd64-1.15.11-36b2371c"
         },
         "32bit": {
-            "url": "https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-386-1.14.9-c350d3ac.zip",
-            "hash": "md5:cb4e0595827b553c36ae4282b84bfecd",
-            "extract_dir": "geth-alltools-windows-386-1.14.9-c350d3ac"
+            "url": "https://gethstore.blob.core.windows.net/builds/geth-alltools-windows-386-1.15.11-36b2371c.zip",
+            "hash": "md5:9a68730ed58394db52294d3cdf4209eb",
+            "extract_dir": "geth-alltools-windows-386-1.15.11-36b2371c"
         }
     },
     "bin": [
         "abigen.exe",
-        "bootnode.exe",
         "clef.exe",
         "evm.exe",
         "geth.exe",

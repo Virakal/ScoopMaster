@@ -1,13 +1,13 @@
 {
-    "version": "18.0.8.1",
+    "version": "18.1.1.4",
     "description": "Driver removal utility that can help you completely uninstall AMD/NVIDIA graphics card drivers and packages from your system, without leaving leftovers behind (including registry keys, folders and files, driver store)",
-    "homepage": "https://github.com/Wagnard/display-drivers-uninstaller",
+    "homepage": "https://www.wagnardsoft.com/",
     "license": {
-        "identifier": "Freeware",
-        "url": "https://github.com/Wagnard/display-drivers-uninstaller/blob/WPF/LICENSE.md"
+        "identifier": "MIT",
+        "url": "https://github.com/Wagnard/display-drivers-uninstaller/blob/WPF/LICENSE"
     },
-    "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D.com%5D-DDU.zip",
-    "hash": "bcb05518abd93eccc9d52bc6aec26211ad1e36f0b36fb0b1f09edc84d1b19225",
+    "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D%5D-DDU.zip",
+    "hash": "8781d062dd671fc50d01852a0cc018f8eef3d967c92a3367dbc24e0a9b4d2d42",
     "pre_install": [
         "$ddu = \"DDU v$version\"",
         "Expand-7zipArchive \"$dir/$ddu.exe\" \"$dir\" -ExtractDir $ddu -Removal",
@@ -22,10 +22,10 @@
     ],
     "persist": "Settings\\Settings.xml",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/Wagnard/display-drivers-uninstaller/WPF/display-driver-uninstaller/Display%20Driver%20Uninstaller/My%20Project/AssemblyInfo.vb",
-        "regex": "<Assembly: AssemblyVersion\\(\"([\\d.]+)\"\\)>"
+        "url": "https://www.guru3d.com/download/display-driver-uninstaller-download/",
+        "re": "<title>Display Driver Uninstaller \\(DDU\\) download version ([\\d.]+)</title>"
     },
     "autoupdate": {
-        "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D.com%5D-DDU.zip"
+        "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/ddu/%5BGuru3D%5D-DDU.zip"
     }
 }

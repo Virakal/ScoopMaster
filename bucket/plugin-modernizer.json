@@ -1,0 +1,26 @@
+{
+    "version": "1878.v029d4eb_a_798d",
+    "description": "Plugin Modernizer Tool",
+    "homepage": "https://github.com/jenkins-infra/plugin-modernizer-tool",
+    "license": "MIT",
+    "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/1878.v029d4eb_a_798d/jenkins-plugin-modernizer-1878.v029d4eb_a_798d.jar",
+    "hash": "sha256:8b88f024f931507073cc462d203be56db20633c51a36499e525e152aeaf35b4c",
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "pre_install": "\"@java -jar \"\"$dir\\jenkins-plugin-modernizer-1878.v029d4eb_a_798d.jar\"\" %*\" | out-file -en oem \"$dir\\plugin-modernizer.bat\"",
+    "bin": "plugin-modernizer.bat",
+    "checkver": {
+        "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/latest",
+        "re": "v([\\d.]+).jar"
+    },
+    "autoupdate": {
+        "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/$version/jenkins-plugin-modernizer-$version.jar",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

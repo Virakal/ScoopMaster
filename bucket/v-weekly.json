@@ -1,13 +1,13 @@
 {
-    "version": "2024.37",
+    "version": "2025.24",
     "description": "The V programming language (weekly release channel)",
     "homepage": "https://vlang.io",
     "license": "MIT",
     "notes": "Windows SDK is required, you can either install it using Visual Studio Installer, or download from: https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vlang/v/releases/download/weekly.2024.37/v_windows.zip",
-            "hash": "fe75a854dfec752dbde4b648ddaee98880c030374b94623fdef193150423833b"
+            "url": "https://github.com/vlang/v/releases/download/weekly.2025.24/v_windows.zip",
+            "hash": "ca00b78b6abbf99a775e349c4ba511f3c1c223d072ff5c2ea0ebc3094ca197a9"
         }
     },
     "extract_dir": "v",

@@ -1,15 +1,33 @@
 {
-    "version": "0.5.0",
+    "version": "0.6.1",
     "description": "A multi-game multiworld randomizer.",
     "homepage": "https://archipelago.gg",
     "license": "MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ArchipelagoMW/Archipelago/releases/download/0.5.0/Setup.Archipelago.0.5.0.exe",
-            "hash": "b7f436cc2f8d7b888b4c1172792a49ecdfa2b1d649afc6e4352bf10de1b6f083"
+            "url": "https://github.com/ArchipelagoMW/Archipelago/releases/download/0.6.1/Setup.Archipelago.0.6.1.exe",
+            "hash": "ba89320ad0cfdf45333f3e068a0b1b3175d78b628000bd79de96ffc4ab0a3262"
         }
     },
     "innosetup": true,
+    "post_install": [
+        "Get-ChildItem \"$persist_dir\" -File | % {",
+        "   Copy-Item -LiteralPath $_ -Destination \"$dir\" -Force",
+        "}",
+        "$archidir = \"$dir\".Replace('\\', '\\\\')",
+        "Get-ChildItem \"$bucketsdir\\$bucket\\scripts\\$app\\*.reg\" | ForEach-Object {",
+        "    $content = Get-Content \"$_\"",
+        "    $content = $content.Replace('$archidir', $archidir)",
+        "    if ($global) {",
+        "        $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    Set-Content \"$dir\\$($_.Name)\" $content -Encoding utf8",
+        "}",
+        "reg import \"$dir\\install-associations.reg\" | Out-Null"
+    ],
     "bin": [
         [
             "ArchipelagoLauncher.exe",
@@ -21,6 +39,20 @@
             "ArchipelagoLauncher.exe",
             "Archipelago Launcher"
         ]
+    ],
+    "persist": [
+        "custom_worlds",
+        "Players"
+    ],
+    "pre_uninstall": [
+        "Get-ChildItem \"$dir\" | ? {",
+        "   $_.Name -match '\\.(yaml|gb|nes|sfc|z64|bin|a26)'",
+        "} | % {",
+        "   Copy-Item -LiteralPath $_ -Destination \"$persist_dir\" -Force",
+        "}",
+        "if ($cmd -eq 'uninstall') {",
+        "   reg import \"$dir\\uninstall-associations.reg\" | Out-Null",
+        "}"
     ],
     "checkver": {
         "github": "https://github.com/ArchipelagoMW/Archipelago"

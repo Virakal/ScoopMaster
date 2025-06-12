@@ -2,9 +2,9 @@
     "homepage": "https://crystalmark.info/ja/software/crystaldiskinfo/",
     "description": "CrystalDiskInfo is a HDD/SSD utility software which supports S.M.A.R.T and a part of USB-HDD.",
     "license": "MIT",
-    "version": "9.4.4",
-    "url": "https://downloads.sourceforge.net/project/crystaldiskinfo/9.4.4/CrystalDiskInfo9_4_4KureiKei.zip",
-    "hash": "sha1:76db9568a5af21e19e079ef45e4af515388077d2",
+    "version": "9.6.3",
+    "url": "https://downloads.sourceforge.net/project/crystaldiskinfo/9.6.3/CrystalDiskInfo9_6_3KureiKei.zip",
+    "hash": "sha1:049cc7bb40fc6dea773e25ff0afdb8dc856cec1e",
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -21,10 +21,28 @@
                     "CrystalDiskInfo KureiKei Edition"
                 ]
             ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "DiskInfoA64K.exe",
+                    "CrystalDiskInfo KureiKei Edition"
+                ]
+            ]
         }
     },
-    "persist": "DiskInfo.ini",
-    "pre_install": "if(!(Test-Path \"$dir/DiskInfo.ini\")) { Add-Content \"$dir/DiskInfo.ini\" $null }",
+    "persist": [
+        "DiskInfo.ini",
+        "DiskInfo32K.ini",
+        "DiskInfo64K.ini",
+        "DiskInfoA64K.ini"
+    ],
+    "pre_install": [
+        "$ls = @('DiskInfo.ini', 'DiskInfo32K.ini', 'DiskInfo64K.ini', 'DiskInfoA64K.ini')",
+        "foreach ($name in $ls) {",
+        "  if (!(Test-Path \"$persist_dir/$name\")) { Add-Content \"$persist_dir/$name\" $null }",
+        "}"
+    ],
     "checkver": {
         "url": "https://crystalmark.info/en/download/",
         "regex": "CrystalDiskInfo\\s+([\\w.]+)\\s"

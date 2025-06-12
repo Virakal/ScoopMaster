@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:1bf238c2bf21cd1c92008366313a240ee9cd9af338b6033049023aff92dbc7255455a78372544b412845029d2fdf3beea8f609000136f8334925a418047c3120",
+    "hash": "sha512:be7d54c8e34be3b3e002f13d18559f91b09d4ceac5ca8414142ae41d04e25f068d8902f3d99d1c33592c51a332ad9a734804aa243731ddb3c8ebda393774d581",
     "description": "Microsoft Azure PowerShell: MarketplaceOrdering cmdlets",
     "psmodule": {
         "name": "Az.MarketplaceOrdering"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.MarketplaceOrdering/2.0.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.MarketplaceOrdering/2.2.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.0.1"
+    "version": "2.2.0"
 }

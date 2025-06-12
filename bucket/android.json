@@ -1,9 +1,10 @@
 {
-    "version": "2024.1.2.12",
-    "description": "Android IDE Android Studio",
+    "version": "2024.3.2.15",
+    "description": "IDE: Android Studio",
     "homepage": "https://developer.android.com/studio?hl=zh-cn",
-    "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.2.12/android-studio-2024.1.2.12-windows.zip",
-    "hash": "50180dc87d045f4c9a6ba6aa920f8a06780bf27325b2676a5e232871d772f77e",
+    "license": "Unknown",
+    "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.3.2.15/android-studio-2024.3.2.15-windows.zip",
+    "hash": "93e639a4297aa576faae9f93b727a368dfd7126da921797031259aab7b8d1372",
     "extract_dir": "android-studio",
     "shortcuts": [
         [
@@ -14,8 +15,8 @@
     "env_set": {
         "ANDROID_HOME": "%LOCALAPPDATA%\\Android\\Sdk"
     },
-    "post_install": "[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH', 'User') + ';%LOCALAPPDATA%\\Android\\Sdk\\platform-tools', 'User')",
     "persist": "plugins",
+    "post_install": "[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH', 'User') + ';%LOCALAPPDATA%\\Android\\Sdk\\platform-tools', 'User')",
     "suggest": {
         "Android SDK": "android-clt"
     },

@@ -1,0 +1,25 @@
+{
+    "version": "4.2.06",
+    "description": "Fldigi is a modem program for most of the digital modes used by radio amateurs today: CW, PSK, MFSK, RTTY, Hell, DominoEX, Olivia, and Throb are all supported. It can help calibrate a sound card to a time signal and do frequency measurement tests.",
+    "homepage": "http://www.w1hkj.com/",
+    "license": "GPL-3.0-only",
+    "url": "http://www.w1hkj.com/files/fldigi/fldigi-4.2.06_setup.exe#dl.7z",
+    "hash": "e00d553a87abc3959b96dceee3a887949eda4e95c02bb4b57f16882c10bb86b1",
+    "shortcuts": [
+        [
+            "fldigi.exe",
+            "fldigi"
+        ],
+        [
+            "flarq.exe",
+            "flarq"
+        ]
+    ],
+    "checkver": {
+        "url": "http://www.w1hkj.com/files/fldigi/",
+        "regex": "fldigi-([\\d.]+)_setup.exe"
+    },
+    "autoupdate": {
+        "url": "http://www.w1hkj.com/files/fldigi/fldigi-$version_setup.exe#dl.7z"
+    }
+}

@@ -1,24 +1,23 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.9.15.27597",
-    "description": "An instant messaging software built with Electron and developed by Tencent.",
     "homepage": "https://im.qq.com/pcqq/index.shtml",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://ti.qq.com/agreement/index.html"
-    },
+    "description": "An instant messaging software service developed by Tencent",
+    "license": "Freeware",
+    "version": "9.9.19.250523",
     "architecture": {
         "64bit": {
-            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x64_01.exe#/dl.7z",
-            "hash": "4911e1e5cc0cb51e9d78395d95be1b5cf900e7d413d0870907310e8e0d14c18b"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.19_250523_x64_01.exe#/dl.7z",
+            "hash": "0174f703d02d8389f3228e6aa39aacf9688b5ac31a7d8aa2ebb1afd1a7c3ade7"
         },
         "32bit": {
-            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x86_01.exe#/dl.7z",
-            "hash": "757312daf31d98f4eaf95537af9bce030684cd8617f6f573ca1510bf37fdb070"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.19_250523_x86_01.exe#/dl.7z",
+            "hash": "bd31a48c294579e77cae54488b5d6424e72ac45c95e4c78e0cc65fce0e254db5"
+        },
+        "arm64": {
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.19_250523_arm64_01.exe#/dl.7z",
+            "hash": "c6229c12a79c45519bddb85dabdecf6b5b6f285ef95e59a26c0a3130cae921f6"
         }
     },
     "extract_dir": "Files",
-    "post_install": "Remove-Item \"$dir\\Uninstall.exe\" -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "QQ.exe",
@@ -27,43 +26,26 @@
     ],
     "checkver": {
         "script": [
-            "$uri = 'https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/t/Tencent/QQ/NT'",
-            "$prevProgressPreference = $global:ProgressPreference",
-            "$global:ProgressPreference = 'SilentlyContinue'",
-            "$latestVersion = ((Invoke-WebRequest -Uri $uri).Content |",
-            "  ConvertFrom-Json |",
-            "  ForEach-Object { $_.name } |",
-            "  Where-Object { $_ -notmatch '^\\.' } |",
-            "  Sort-Object -Descending { try { [version]$_ } catch {} })[0]",
-            "\"version:$latestVersion\"",
-            "$uri = \"https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$latestVersion/Tencent.QQ.NT.installer.yaml\"",
-            "$installerInfo = (Invoke-WebRequest -Uri $uri).Content",
-            "$global:ProgressPreference = $prevProgressPreference",
-            "$installerInfo -split '[\\r\\n]+' | ForEach-Object {",
-            "  if ($_ -cmatch '^\\s+InstallerUrl:\\s*https://(.+_x86_.+)$') {",
-            "    \"url_x86:$($Matches[1])\"",
-            "  } elseif ($_ -cmatch '^\\s+InstallerUrl:\\s*https://(.+_x64_.+)$') {",
-            "    \"url_x64:$($Matches[1])\"",
-            "  }",
-            "}"
+            "$url = 'https://im.qq.com/pcqq/index.shtml'",
+            "$resp = Invoke-WebRequest -Uri $url",
+            "$cont = $resp.Content",
+            "$pattern = 'https://qq-web.cdn-go.cn.*windowsDownloadUrl.js'",
+            "$jsUrl = [regex]::Match($cont, $pattern).Value",
+            "Invoke-WebRequest -Uri $jsUrl"
         ],
-        "regex": "^version:(?<version>\\S+)\\s+url_x86:(?<URLX86>\\S+)\\s+url_x64:(?<URLX64>\\S+)$"
+        "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchURLX64#/dl.7z",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$version/Tencent.QQ.NT.installer.yaml",
-                    "regex": "- Architecture:\\s*x64[\\s\\S]+?InstallerSha256:\\s*$sha256"
-                }
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x64_01.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://$matchURLX86#/dl.7z",
-                "hash": {
-                    "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/$version/Tencent.QQ.NT.installer.yaml",
-                    "regex": "- Architecture:\\s*x86[\\s\\S]+?InstallerSha256:\\s*$sha256"
-                }
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x86_01.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_arm64_01.exe#/dl.7z"
             }
         }
     }

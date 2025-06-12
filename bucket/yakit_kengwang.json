@@ -1,23 +1,24 @@
 {
-    "version": "1.3.6-0906",
+    "version": "1.4.1-0606",
     "description": "Cyber ctftools ALL-IN-ONE Platform",
     "homepage": "https://www.yaklang.io/",
     "license": "AGPL-3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/1.3.6-0906/Yakit-1.3.6-0906-windows-amd64.exe#/dl.7z",
-            "hash": "2663f20b6e640b6acd102776fbc676e95348ea34eec09449d66ad0bc0d188430",
-            "extract_dir": "$PLUGINSDIR"
-        }
+    "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/1.4.1-0606/Yakit-1.4.1-0606-windows-amd64.exe#/dl.7z",
+    "hash": "16ca1c83403c555a2245189748a4f4c887f30666eccea7c38b7af815e0dda965",
+    "extract_dir": "$PLUGINSDIR",
+    "suggest": {
+        "yak": "yak"
     },
     "checkver": {
-        "url": "https://www.yaklang.com/api/yak/versions/info",
-        "jsonpath": "$.data[0].content",
-        "regex": "version\":\"v?(.*?)\""
+        "url": "https://api.github.com/repos/yaklang/Yakit/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?(.*)"
     },
-    "persist": "yakit-projects",
+    "persist": [
+        "yakit-projects",
+        "nuclei-templates"
+    ],
     "pre_install": [
-        "taskkill /f /im Yakit.exe",
         "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
         "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
     ],

@@ -1,0 +1,30 @@
+{
+    "version": "0.3.12",
+    "description": "AALC，大概能正常使用的PC端LimbusCompany小助手",
+    "homepage": "https://github.com/KIYI671/AhabAssistantLimbusCompany",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/KIYI671/AhabAssistantLimbusCompany/releases/download/V0.3.12/AALC_V0.3.12.7z",
+            "hash": "690b4a591db2c0965e7e35f6ad1db5accbfdd2acf35c133300c6712a6899bab8"
+        }
+    },
+    "extract_dir": "AALC",
+    "shortcuts": [
+        [
+            "AALC.exe",
+            "AhabAssistantLimbusCompany"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/KIYI671/AhabAssistantLimbusCompany",
+        "regex": "tag/[vV]([\\d._]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/KIYI671/AhabAssistantLimbusCompany/releases/download/V$version/AALC_V$version.7z"
+    },
+    "persist": [
+        "config.yaml",
+        "theme_pack_list.yaml"
+    ]
+}

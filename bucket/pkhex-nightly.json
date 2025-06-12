@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
+    "version": "25.6.10+1",
     "description": "Pokémon core series save editor (Development Build)",
     "license": "GPL-3.0-only",
     "homepage": "https://projectpokemon.org/home/files/file/2445-pkhex-development-build/",
-    "url": "https://github.com/kwsch/PKHeX/raw/master/Directory.Build.props",
+    "url": "https://github.com/kwsch/PKHeX/commit/master.patch",
+    "hash": "622bf8a09002e2f81b0b8d4ad372550fd9f7cea63ea006d2282b66ce7dee44a1",
     "shortcuts": [
         [
             "PKHeX.exe",
@@ -37,5 +38,12 @@
             "Expand-7ZipArchive $file \"$dir\"",
             "Remove-Item -Path $file -Force"
         ]
+    },
+    "checkver": {
+        "url": "https://projectpokemon.org/home/files/file/2445-pkhex-development-build/?changelog=0",
+        "regex": "PKHeX Development Build (\\d+\\.\\d+\\.\\d+\\+?\\d*)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/kwsch/PKHeX/commit/master.patch"
     }
 }

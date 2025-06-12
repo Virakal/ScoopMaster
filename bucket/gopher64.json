@@ -1,0 +1,28 @@
+{
+    "version": "1.0.17",
+    "description": "A N64 emulator written in Rust.",
+    "homepage": "https://github.com/gopher64/gopher64",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gopher64/gopher64/releases/download/v1.0.17/gopher64-windows-x86_64.exe#/gopher64.exe",
+            "hash": "0cd391392011644d94da01b66c0e6f4495721f346e1cc2a371db2d7ddaa6dd2d"
+        }
+    },
+    "shortcuts": [
+        [
+            "gopher64.exe",
+            "gopher64"
+        ]
+    ],
+    "pre_install": "if (!(Test-Path \"$dir\\portable.txt\")) { Set-Content -Encoding ASCII -Path \"$dir\\portable.txt\" -Value $null }",
+    "persist": "portable_data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gopher64/gopher64/releases/download/v$version/gopher64-windows-x86_64.exe#/gopher64.exe"
+            }
+        }
+    }
+}

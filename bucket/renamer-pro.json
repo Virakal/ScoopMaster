@@ -1,23 +1,103 @@
 {
-    "version": "7.5.0",
-    "description": "ReNamer Pro 是一款超级强大的文件批量重命名工具",
-    "homepage": "https://www.ypojie.com/5931.html",
-    "license": "Proprietary",
-    "notes": "基于官方最新安装版集成河蟹授权补丁文件制作打包而成，完美和谐主程序组件；删减多余用户界面语言及帮助说明文档，中文语言包可能存在的不完全汉化问题",
-    "url": "https://raw.githubusercontent.com/meihanai/jikoapp/main/app/ReNamer-pro/7.5.0/ReNamer.7z",
-    "hash": "d82bf386bcca8befed3180e4e37699ebaeea174c61cfa9fa0b3a6ff86efb51da",
-    "bin": "ReNamerPortable.exe",
-    "shortcuts": [
-        [
-            "ReNamerPortable.exe",
-            "ReNamerPortable"
-        ]
+    "description": "ReNamer Pro cracked version by Dayanzai.me",
+    "homepage": "https://www.dayanzai.me/renamer-pro.html",
+    "license": "Unknown",
+    "version": "7.7.0.2",
+    "depends": [
+        "baidupcs-go",
+        "7zip"
     ],
+    "url": "https://httpstat.us/200#/placeholder",
+    "hash": "f9bafc82ba5f8fb02b25020d66f396860604f496ca919480147fa525cb505d88",
+    "real_hash": "9291b00d19519b8176543838d4b3a075",
+    "name": "ReNamer",
+    "pre_install": [
+        "$webResponse = Invoke-WebRequest $manifest.homepage",
+        "$downloadURL = ($webResponse.Links | Where-Object {($_.outerHTML -like \"*>点击下载<*\") -and ($_.href -like \"*pan.baidu.com*\")} | Select-Object -first 1).href",
+        "$passcode = $downloadURL.Split(\"?pwd=\")[-1]",
+        "$downloadURL = $downloadURL.Split(\"?pwd=\")[0]",
+        "$webResponse.Content -match \"资源：\\s*(?<filename>\\d+\\.rar)\" | Out-Null",
+        "$filename = $matches[\"filename\"]",
+        "$baiduLogedin = (BaiduPCS-Go loglist | Measure-Object -l).Lines -gt 1",
+        "while (!$baiduLogedin) {",
+        "    Write-Host \"Please login to Baidu to download the software.\"",
+        "    if ($manifest.noninteractive) { error \"Noninteractive mode detected. Aborted.\" }",
+        "    BaiduPCS-Go login",
+        "    $baiduLogedin = (BaiduPCS-Go loglist | Measure-Object -l).Lines -gt 1",
+        "}",
+        "BaiduPCS-Go cd / | Out-Null",
+        "BaiduPCS-Go mkdir Scoop | Out-Null",
+        "BaiduPCS-Go cd Scoop | Out-Null",
+        "BaiduPCS-Go rm $filename | Out-Null",
+        "BaiduPCS-Go transfer $downloadURL $passcode | Out-Null",
+        "$remoteHash = (BaiduPCS-Go meta $filename | Select-String \"md5\").Line.split() | Where-Object {$_} | Select-Object -Last 1",
+        "$ghxiInfo = @{",
+        "    \"url\" = $downloadURL",
+        "    \"passcode\" = $passcode",
+        "    \"dir\" = \"/Scoop\"",
+        "    \"filename\" = $filename",
+        "    \"hash\" = $remoteHash",
+        "}",
+        "if ($manifest.noninteractive) {",
+        "$ghxiInfo | ConvertTo-Json | Out-File -FilePath \"$($Env:TMP)\\$([System.Diagnostics.Process]::GetCurrentProcess().Id)_$($manifest.name).json\" -Encoding utf8",
+        "} else {",
+        "$ghxiInfo | ConvertTo-Json | Out-File -FilePath \"$dir\\ghxi.json\" -Encoding utf8",
+        "}",
+        "BaiduPCS-Go cd / | Out-Null"
+    ],
+    "installer": {
+        "script": [
+            "if (-not (Test-Path \"$dir\\ghxi.json\")) {",
+            "    error \"Failed to obtain software metadata.\"",
+            "}",
+            "$ghxiInfo = Get-Content \"$dir\\ghxi.json\" | ConvertFrom-Json",
+            "if ($manifest.real_hash -ne $ghxiInfo.hash) {",
+            "    error \"The hash of the downloaded file does not match the expected hash.\"",
+            "}",
+            "BaiduPCS-Go download \"$($ghxiInfo.dir)/$($ghxiInfo.filename)\" --saveto $dir",
+            "# There used to be a nested zip file, but now it's a plain directory",
+            "# $innerzipfile = (([regex]\"renamer-[^\\.]*\\.zip\").Matches($(7z l $(Join-Path -Path $dir -ChildPath $filename))) | Select-Object -First 1).Value",
+            "# Push-Location $dir && (7z e $filename $innerzipfile | Out-Null) && Expand-Archive $innerzipfile -DestinationPath . -Force && Remove-Item $innerzipfile && Remove-Item $filename && Pop-Location",
+            "# Push-Location $dir && 7z x -y $ghxiInfo.filename && Move-Item \"renamer-$version\\*\" .\\ && Remove-Item $ghxiInfo.filename && Pop-Location",
+            "Push-Location $dir && 7z x -y $ghxiInfo.filename && Expand-ZipArchive \"renamer-$version.zip\" $dir && Remove-Item $ghxiInfo.filename",
+            "if (Test-Path \"renamer-$version\") { Move-Item \"renamer-$version\\*\" .\\ && Remove-Item \"renamer-$version\" -Recurse }",
+            "Pop-Location",
+            "Remove-Item -Path $dir\\placeholder -ErrorAction SilentlyContinue"
+        ]
+    },
     "checkver": {
-        "url": "https://raw.githubusercontent.com/meihanai/jikoapp/main/versions/ReNamer.latest",
-        "regex": "([\\d.]+)"
+        "script": [
+            "# Manifest is loaded as variable `$json` in `checkver.ps1`",
+            "$manifest = $json | ConvertTo-Json | ConvertFrom-Json",
+            "if ($Env:GITHUB_ACTIONS) {return ($manifest.version + '以及' + $manifest.real_hash)}",
+            "$manifest | Add-Member -MemberType NoteProperty -Name 'noninteractive' -Value $true -Force",
+            "$oldVersion = $manifest.version",
+            "$webResponse = Invoke-WebRequest $manifest.homepage",
+            "$newVersion = (($webResponse.Content | Select-String \"<title>.*</title>\").Matches.Value | Select-String [\\d\\.]+).Matches.Value",
+            "if ($oldVersion -ne $newVersion) {",
+            "    $infoFile = \"$($Env:TMP)\\$([System.Diagnostics.Process]::GetCurrentProcess().Id)_$($manifest.name).json\"",
+            "    Invoke-HookScript -HookType 'pre_install' -Manifest $manifest -ProcessorArchitecture $(Get-DefaultArchitecture) | Out-Null",
+            "    if (-not (Test-Path $infoFile)) { error \"Failed to obtain software metadata.\" }",
+            "    $ghxiInfo = Get-Content $infoFile | ConvertFrom-Json",
+            "    $hash = $ghxiInfo.hash",
+            "}",
+            "\"$($newVersion)以及$($hash)\""
+        ],
+        "regex": "(?<Version>\\d+(\\.\\d+)*)以及(?<Hash>.*)$",
+        "replace": "${Version}"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/meihanai/jikoapp/main/app/ReNamer-pro/$version/ReNamer.7z"
-    }
+        "real_hash": "$matchHash"
+    },
+    "shortcuts": [
+        [
+            "ReNamer.exe",
+            "ReNamer"
+        ]
+    ],
+    "persist": [
+        "Settings.ini",
+        "Presets"
+    ],
+    "bin": "ReNamer.exe"
 }

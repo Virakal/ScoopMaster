@@ -1,8 +1,8 @@
 {
-    "version": "208.4.5824",
+    "version": "211.4.6008",
     "homepage": "https://www.dropbox.com",
-    "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20208.4.5824%20Offline%20Installer.x86.exe#/dl.7z",
-    "hash": "d10fae9a1cebfac983e2066b71d638e7f0029b27a4b85ca20e5b0c9c685170d9",
+    "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20211.4.6008%20Offline%20Installer.x86.exe#/dl.7z",
+    "hash": "5baf99d5ebce31dd30c1af49636ebb6063687713005719d8ec4ff9e50cdf1d90",
     "installer": {
         "script": [
             "Expand-7zipArchive $dir\\DropboxClientInstaller.exe* $dir",

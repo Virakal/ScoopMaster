@@ -2,8 +2,6 @@
     "homepage": "https://github.com/Locietta/xanmod-kernel-WSL2",
     "description": "Xanmod Kernel for WSL2.",
     "license": "GPL-2.0",
-    "extract_dir": "",
-    "bin": "",
     "post_install": [
         "#########################################",
         "# set `.wslconfig` to use custom kernel #",
@@ -25,9 +23,9 @@
         "\"@ -passthru -name CustomWSL2ProfileUninstall -UsingNamespace System.Text",
         "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernel\", $null, \"$env:USERPROFILE\\.wslconfig\")"
     ],
-    "version": "6.9.9-1.1",
-    "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/6.9.9-locietta-WSL2-xanmod1.1/bzImage-skylake",
-    "hash": "47ab2f5153de8f4275f1f77af58610392c5101458bade14c38078e0d115f4d47",
+    "version": "6.14.11-1.1",
+    "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/6.14.11-locietta-WSL2-xanmod1.1/bzImage-skylake",
+    "hash": "519d2a53148d1b0c0339d6503778a8c09ca708d03c636129c7377f158b77f01b",
     "checkver": {
         "script": [
             "$LATEST = ((curl.exe -sL -H \"Authorization: Bearer $(Get-GitHubToken)\" https://api.github.com/repos/Locietta/xanmod-kernel-WSL2/tags?per_page=60 | ConvertFrom-Json).name | Select-String 'lts' -NotMatch)[0]",

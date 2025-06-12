@@ -1,6 +1,6 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "24215.1007.3082.1590",
+   "version": "25122.1415.3698.6812",
    "description": "Proprietary business communication platform developed by Microsoft",
    "homepage": "https://adoption.microsoft.com/new-microsoft-teams/",
    "license": {
@@ -8,26 +8,34 @@
    },
    "architecture": {
       "32bit": {
-         "url": "https://statics.teams.cdn.office.net/production-windows-x86/24215.1007.3082.1590/MSTeams-x86.msix#/dl.zip",
-         "hash": "cf45934536e75edc8cae3e51de8bfb36c3dafca84fc3d967a92b541bf66e084b"
+         "url": "https://statics.teams.cdn.office.net/production-windows-x86/25122.1415.3698.6812/MSTeams-x86.msix#/dl.zip",
+         "hash": "25372ac6cda9777cb7407a4b96848a287dbecda8df237ef80118e02a4f50fab9"
       },
       "64bit": {
-         "url": "https://statics.teams.cdn.office.net/production-windows-x64/24215.1007.3082.1590/MSTeams-x64.msix#/dl.zip",
-         "hash": "8a9a839e2ae31ce7dbff439e7bdf6906c1118d5a8f28ab17f1629d66e71b37e5"
+         "url": "https://statics.teams.cdn.office.net/production-windows-x64/25122.1415.3698.6812/MSTeams-x64.msix#/dl.zip",
+         "hash": "b703e53ea5ff7bc3ded25c6a66a7eecfb3f83e69a1dddf71dbda7a462cb452d0"
       },
       "arm64": {
-         "url": "https://statics.teams.cdn.office.net/production-windows-arm64/24215.1007.3082.1590/MSTeams-arm64.msix#/dl.zip",
-         "hash": "85d3b10835d7ef562d832614a09a6b7810bcded8d3f17bfa2d37e6a56f20724d"
+         "url": "https://statics.teams.cdn.office.net/production-windows-arm64/25122.1415.3698.6812/MSTeams-arm64.msix#/dl.zip",
+         "hash": "c369e816961f6c57a024c1ddf545487629144d9450e00e7b84a583ff0c99d20c"
       }
    },
    "installer": {
       "script": [
+         "if ((Get-ItemPropertyValue -Path 'Registry::HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock' -Name AllowDevelopmentWithoutDevLicense) -eq 1) { $AppModelUnlocked = $true }",
+         "if (-not $AppModelUnlocked) {",
+         "   if (-not (is_admin)) { abort 'This package requires admin privileges to install' }",
+         "   New-ItemProperty -Force -Path 'Registry::HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock' -Name 'AllowDevelopmentWithoutDevLicense' -PropertyType DWord -Value '1' > $null",
+         "}",
          "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
          "Add-AppxPackage -Path \"$dir\\AppxManifest.xml\" -Register",
          "@(",
          "   'Set SHL = CreateObject(\"WScript.Shell\")'",
          "   \"call SHL.Run(`\"$env:LocalAppData\\Microsoft\\WindowsApps\\ms-teams.exe`\", o, false)\"",
-         ") | Set-Content -Path \"$dir\\ms-teams.vbs\""
+         ") | Set-Content -Path \"$dir\\ms-teams.vbs\"",
+         "if (-not $AppModelUnlocked) {",
+         "   Remove-ItemProperty -Force -Path 'Registry::HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock' -Name 'AllowDevelopmentWithoutDevLicense'",
+         "}"
       ]
    },
    "uninstaller": {

@@ -1,11 +1,11 @@
 {
-    "version": "2.1.2",
+    "version": "2.2",
     "description": "This plugin adds support for more global hot keys to auto-type alternative sequences. Furthermore, it can add a database name column in the auto-type entry selection dialog.",
     "homepage": "https://github.com/Rookiestyle/AlternateAutoType",
     "license": "GPL-3.0-only",
     "depends": "keepass",
-    "url": "https://github.com/Rookiestyle/AdvancedAutoType/releases/download/v2.1.2/AdvancedAutoType.plgx",
-    "hash": "9b6568b4f6aa58315025876309043f226749ec24a463b5240c925325e2ad292f",
+    "url": "https://github.com/Rookiestyle/AdvancedAutoType/releases/download/v2.2/AdvancedAutoType.plgx",
+    "hash": "111dd5176312c2d87998b91669162dbe791ad153d5b2a9108daa514e5e7ef2ff",
     "installer": {
         "script": "Copy-Item \"$dir\\AdvancedAutoType.plgx\" \"$(appdir keepass $global)\\current\\Plugins\""
     },

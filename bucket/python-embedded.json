@@ -2,15 +2,15 @@
     "homepage": "https://www.python.org/",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "license": "Python-2.0",
-    "version": "3.12.6",
+    "version": "3.13.4",
     "architecture": {
         "64bit": {
-            "url": "https://www.python.org/ftp/python/3.12.6/python-3.12.6-embed-amd64.zip#/python312.zip_",
-            "hash": "md5:ae256f31ee4700eba679802233bff3e9"
+            "url": "https://www.python.org/ftp/python/3.13.4/python-3.13.4-embed-amd64.zip#/python313.zip_",
+            "hash": "md5:7820da5998bf7d5d25530d871a1e0e28"
         },
         "32bit": {
-            "url": "https://www.python.org/ftp/python/3.12.6/python-3.12.6-embed-win32.zip#/python312.zip_",
-            "hash": "md5:b6eecbdfd865e4a3ae8bed93b9f2cd95"
+            "url": "https://www.python.org/ftp/python/3.13.4/python-3.13.4-embed-win32.zip#/python313.zip_",
+            "hash": "md5:21a460c5b1fd2d791755e239dfbf1141"
         }
     },
     "checkver": {

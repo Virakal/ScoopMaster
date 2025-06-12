@@ -1,16 +1,16 @@
 {
-  "version": "0.1.28",
+  "version": "0.1.30",
   "description": "Cargo subcommand for proper use of -Z minimal-versions",
   "homepage": "https://github.com/taiki-e/cargo-minimal-versions",
   "license": "Apache-2.0|MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.28/cargo-minimal-versions-x86_64-pc-windows-msvc.zip",
-      "hash": "a846792875f3b9db260a5bde1c90deff312bb6a3d1f1629adaca17375fb85413"
+      "url": "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.30/cargo-minimal-versions-x86_64-pc-windows-msvc.zip",
+      "hash": "1ff25a5a0467a78fc1070262b94ea3b1991bc26be9f56dfd4375ae273f43494d"
     },
     "arm64": {
-      "url": "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.28/cargo-minimal-versions-aarch64-pc-windows-msvc.zip",
-      "hash": "55ed212c162c17c4aff7520689b94c7a8269912bba437042fe8d34a1a37116f3"
+      "url": "https://github.com/taiki-e/cargo-minimal-versions/releases/download/v0.1.30/cargo-minimal-versions-aarch64-pc-windows-msvc.zip",
+      "hash": "c4e59616d39d1a21e774823d675c241057e729496799f71e2968e93c7c0d895b"
     }
   },
   "bin": "cargo-minimal-versions.exe"

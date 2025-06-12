@@ -1,20 +1,20 @@
 {
-    "version": "2.2.1",
+    "version": "2.2.4",
     "description": "A free source code editor based on Scintilla.",
     "homepage": "https://yubsoft.com/ccode/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://download.yubsoft.com/ccode_2.2.1_x64.zip",
-            "hash": "24c092a40bf41dcd6cab68464c85db96c5a4102479059f998f30bb59489408d3"
+            "url": "https://download.yubsoft.com/ccode_2.2.4_x64.zip",
+            "hash": "cb9f0ab5d285b17ffaaf1d72ced684e3515ab010c2fd378cb0462bfede0acb51"
         },
         "32bit": {
-            "url": "https://download.yubsoft.com/ccode_2.2.1_x86.zip",
-            "hash": "89d048ea86aa9d1703f76b471bcf7709019817ac7966f06e789806d6bbc19d96"
+            "url": "https://download.yubsoft.com/ccode_2.2.4_x86.zip",
+            "hash": "e19c4d7c166db8efb279b99ae668dfe1c135275b6900ad8498ea6957a2e8d6c0"
         },
         "arm64": {
-            "url": "https://download.yubsoft.com/ccode_2.2.1_arm64.zip",
-            "hash": "8a61552dbb6c1f1a49ac803f27974fa745ff52b29517cca8277ccc1298fd0613"
+            "url": "https://download.yubsoft.com/ccode_2.2.4_arm64.zip",
+            "hash": "1751245080d180f02c324dab9c1346cc3a80dc442c4f5891b821ec318d2c52b3"
         }
     },
     "bin": "ccode.exe",

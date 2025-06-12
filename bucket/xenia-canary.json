@@ -1,26 +1,31 @@
 {
-    "version": "20240918174239-5abf67f",
-    "description": "Microsoft Xbox 360 emulator",
-    "homepage": "https://xenia.jp",
+    "version": "20250606174337-422517c",
+    "description": "Xbox 360 Emulator Research Project (development version)",
+    "homepage": "https://github.com/xenia-canary/xenia-canary",
     "license": {
-        "url": "https://github.com/xenia-canary/xenia-canary/blob/canary_pr/LICENSE",
-        "identifier": "BSD-3-Clause"
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/xenia-canary/xenia-canary/blob/canary_experimental/LICENSE"
+    },
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xenia-canary/xenia-canary/releases/download/5abf67f/xenia_canary.zip",
-            "hash": "4a7a405b8184b8308ed3666ce234b804c727dacbe4f44b26d09b192b746244fe"
+            "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/422517c/xenia_canary_windows.zip",
+            "hash": "ae30ecd27bc9712995f687674f03fa61ac80704ad669372bf7429f53e21ad2b6"
         }
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
-        "   New-item \"$persist_dir\\portable.txt\" -ItemType File | Out-Null",
-        "   New-item \"$persist_dir\\xenia-canary.config.toml\" -ItemType File | Out-Null",
         "   if (Test-Path \"$env:USERPROFILE\\Documents\\Xenia\") {",
         "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
         "       Copy-Item -Path \"$env:USERPROFILE\\Documents\\Xenia\\*\" -Destination \"$persist_dir\" -Recurse",
+        "       Rename-Item \"$persist_dir\\xenia.config.toml\" -NewName \"xenia-canary.config.toml\"",
         "       Remove-Item -Path \"$env:USERPROFILE\\Documents\\Xenia\" -Recurse",
+        "   } else {",
+        "       New-item \"$dir\\recent.toml\" -ItemType File | Out-Null",
+        "       New-item \"$dir\\xenia-canary.config.toml\" -ItemType File | Out-Null",
         "   }",
         "}"
     ],
@@ -28,17 +33,19 @@
     "shortcuts": [
         [
             "xenia_canary.exe",
-            "Xenia (canary)"
+            "Xenia Canary"
         ]
     ],
     "persist": [
-        "portable.txt",
-        "xenia-canary.config.toml",
+        "cache",
+        "cache_host",
         "content",
-        "cache"
+        "patches",
+        "recent.toml",
+        "xenia-canary.config.toml"
     ],
     "checkver": {
-        "url": "https://github.com/xenia-canary/xenia-canary/releases.atom",
+        "url": "https://github.com/xenia-canary/xenia-canary-releases/releases.atom",
         "script": [
             "$xml = [xml]$page",
             "$updated = ($xml.feed.entry | Where-Object {$_.title -ne 'canary_experimental'} | Sort-Object -Descending { $_.updated })[0].updated",
@@ -51,7 +58,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary.zip"
+                "url": "https://github.com/xenia-canary/xenia-canary-releases/releases/download/$matchCommit/xenia_canary_windows.zip"
             }
         }
     }

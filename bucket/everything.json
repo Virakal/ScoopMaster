@@ -1,16 +1,16 @@
 {
-    "version": "1.5.0.1383a",
+    "version": "1.5.0.1394a",
     "description": "(Alpha Version) Locate files and folders by name instantly.",
     "homepage": "https://www.voidtools.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://www.voidtools.com/Everything-1.5.0.1383a.x64.zip",
-            "hash": "4be2468cfc245fc20266f887838b38eeab7f6edb069d244538370c7b2f3a8d97"
+            "url": "https://www.voidtools.com/Everything-1.5.0.1394a.x64.zip",
+            "hash": "93ccf8ae2627a4e6b1be6a64242e5f1d1922364af749d08ac864cd0835e20f8f"
         },
         "32bit": {
-            "url": "https://www.voidtools.com/Everything-1.5.0.1383a.x86.zip",
-            "hash": "1285924fcb0da992b75fdba0c4107cffc4bf9ec644d3e8cc14a8ac9cb675652f"
+            "url": "https://www.voidtools.com/Everything-1.5.0.1394a.x86.zip",
+            "hash": "86bf961640a65ae2153fdfe05e7eba46b8e9b01ca3bda18467ff292fb1dbaa67"
         }
     },
     "bin": [
@@ -46,7 +46,7 @@
         "}",
         "# Configure Everything.ini",
         "if (!(Test-Path \"$persist_dir\\Everything.ini\")) {",
-        "    $ini_content = \"[Everything]\r\napp_data=0\r\nalpha_instance=0\r\ncheck_for_updates_on_startup=0\"",
+        "    $ini_content = \"[Everything]`napp_data=0`nalpha_instance=0`ncheck_for_updates_on_startup=0\"",
         "    Set-Content -Path \"$dir\\Everything.ini\" -Value $ini_content -Force -Encoding UTF8;",
         "}"
     ],
@@ -60,9 +60,8 @@
         ]
     },
     "checkver": {
-        "url": "https://www.voidtools.com/Everything-1.5a-update.ini",
-        "regex": "(?m)^major=(?<major>\\d+)\\s*?^minor=(?<minor>\\d+)\\s*?^revision=(?<revision>\\d+)\\s*?^build=(?<build>\\d+)",
-        "replace": "${major}.${minor}.${revision}.${build}a"
+        "url": "https://www.voidtools.com/forum/app.php/feed/topic/9787",
+        "regex": "Everything\\-([\\d.a]+)\\.x64"
     },
     "autoupdate": {
         "architecture": {

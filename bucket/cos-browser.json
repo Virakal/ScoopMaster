@@ -1,10 +1,10 @@
 {
-    "version": "2.11.23",
+    "version": "2.11.26",
     "description": "A visualization interface tool provided by Tencent Cloud COS, view, transfer, and manage COS resources easily",
     "homepage": "https://github.com/tencentyun/cosbrowser",
     "license": "Freeware",
-    "url": "https://cos5.cloud.tencent.com/cosbrowser/cosbrowser-setup-2.11.23.exe#/dl.7z",
-    "hash": "sha512:e0089fc54f7155ee1f13cdabfd8deae88a340f6144613e4e58682cc2f0f5f9b59293e7a8b84b40b74c032e3f10cc98185d766157abfd00874161440a5265faaa",
+    "url": "https://cos5.cloud.tencent.com/cosbrowser/cosbrowser-setup-2.11.26.exe#/dl.7z",
+    "hash": "sha512:5c53ae3f26bbc7088c55f17817f2dbcb45d2eed8bee8eced059199473577c89bba67555e0d4a9f026fb1ef03148a6628e2e3376828bad46f6bbc735212e8133a",
     "architecture": {
         "64bit": {
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""

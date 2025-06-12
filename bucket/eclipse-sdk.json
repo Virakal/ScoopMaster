@@ -1,12 +1,12 @@
 {
-    "version": "4.33-202409030240",
+    "version": "4.36-202505281830",
     "description": "Eclipse SDK",
     "homepage": "https://www.eclipse.org",
     "license": "EPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "http://download.eclipse.org/eclipse/downloads/drops4/R-4.33-202409030240/eclipse-SDK-4.33-win32-x86_64.zip",
-            "hash": "sha512:338894ccf8666dd3d75ddf8f75759cd0a4a5e2fa7d7c4189c588711dc035a793a0b165492d71637803daef577b137b4efd8bec89fc99a00092367a6c617b96e6"
+            "url": "http://download.eclipse.org/eclipse/downloads/drops4/R-4.36-202505281830/eclipse-SDK-4.36-win32-x86_64.zip",
+            "hash": "sha512:bd9e48aaf6a39d2acf1de0f6ada69f9331ff9b5c76f1b3ed99038f33bea08c7cd575939d294360f9c945352e7e9028b406b1c4678abc99fff646619ccf09e80a"
         }
     },
     "extract_dir": "eclipse",

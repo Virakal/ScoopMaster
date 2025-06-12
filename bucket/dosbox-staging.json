@@ -1,13 +1,13 @@
 {
-    "version": "0.81.2",
+    "version": "0.82.1",
     "description": "A DOS/x86 emulator based on DOSBox which focuses on ease of use.",
     "homepage": "https://dosbox-staging.github.io/",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.81.2/dosbox-staging-windows-v0.81.2.zip",
-            "hash": "d7ec6054ae58d287c3ad5fbf4c3df732ea3fd75ae828c8f4481fcf7c6203d168",
-            "extract_dir": "dosbox-staging-v0.81.2"
+            "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.82.1/dosbox-staging-windows-x64-v0.82.1.zip",
+            "hash": "a8d4452801f4dde295d1e0835826878e710d1a14a9e2525b190347c9f38a13a2",
+            "extract_dir": "dosbox-staging-v0.82.1"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\dosbox-staging.conf\")) { New-Item -ItemType File \"$dir\\dosbox-staging.conf\" | Out-Null }",
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v$version/dosbox-staging-windows-v$version.zip",
+                "url": "https://github.com/dosbox-staging/dosbox-staging/releases/download/v$version/dosbox-staging-windows-x64-v$version.zip",
                 "extract_dir": "dosbox-staging-v$version"
             }
         }

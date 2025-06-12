@@ -1,11 +1,11 @@
 {
-    "version": "6.27.11214",
+    "version": "6.36.11508",
     "description": "CCleaner. Number-one tool for cleaning your PC.",
     "homepage": "https://www.ccleaner.com/ccleaner",
     "license": "Freeware",
     "changelog": "https://www.ccleaner.com/ccleaner/version-history",
-    "url": "https://download.ccleaner.com/portable/ccsetup627.zip",
-    "hash": "b4655722664a4c9ff51a848807470b2437c94865a1ca94eaefa234d15e67bef6",
+    "url": "https://download.ccleaner.com/portable/ccsetup636.zip",
+    "hash": "e23428a15237cf7de8507355cda490ba48e25220e36c407166bbbda982a1c96b",
     "architecture": {
         "64bit": {
             "bin": [
@@ -46,8 +46,8 @@
         "winsys.ini"
     ],
     "checkver": {
-        "url": "https://www.ccleaner.com/ccleaner/release-notes",
-        "regex": "CCleaner v([\\d.]+)"
+        "url": "https://www.ccleaner.com/ccleaner/version-history",
+        "regex": "latest-version\">v([\\d.]+)</span>"
     },
     "autoupdate": {
         "url": "https://download.ccleaner.com/portable/ccsetup$majorVersion$minorVersion.zip"

@@ -1,11 +1,11 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "2.1.9",
+    "version": "2.2.2",
     "description": "A lightweight virtual CD/DVD/Blu-ray drive software.",
     "homepage": "https://www.yubsoft.com/imgdrivelite/",
     "license": "Freeware",
-    "url": "https://download.yubsoft.com/imgdrivelite_2.1.9.zip",
-    "hash": "ce3faeee3e6a5bdf17d1867f0d493f1de5c7771ac19219b909b4ac3101a6d924",
+    "url": "https://download.yubsoft.com/imgdrivelite_2.2.2.zip",
+    "hash": "ac1497d83fb387b16a18c8968f4d88f7d8ea8a7010a5091868c6e5f562128baf",
     "pre_install": "if (!(Test-Path \"$persist_dir\\ImgDrive.ini\")) { New-Item \"$dir\\ImgDrive.ini\" | Out-Null }",
     "architecture": {
         "64bit": {

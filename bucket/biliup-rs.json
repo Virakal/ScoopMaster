@@ -1,14 +1,14 @@
 {
-    "version": "v0.2.1",
+    "version": "v0.2.3",
     "description": "命令行投稿(B站)和视频下载工具，提供多种登录方式，支持多p。 ",
     "homepage": "https://github.com/biliup/biliup-rs",
     "license": "MIT license ",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/biliup/biliup-rs/releases/download/v0.2.1/biliupR-v0.2.1-x86_64-windows.zip",
-            "hash": "c88733206d45a5a0d2e57b6c1add9c6de887defab8a64aa16a3b821ccecdeeb6",
-            "extract_dir": "biliupR-v0.2.1-x86_64-windows"
+            "url": "https://github.com/biliup/biliup-rs/releases/download/v0.2.3/biliupR-v0.2.3-x86_64-windows.zip",
+            "hash": "f1821820fc43f08b8d0b68e2266e8160037202cea2a27399205d7c9ce8fcbe9b",
+            "extract_dir": "biliupR-v0.2.3-x86_64-windows"
         }
     },
     "bin": "biliup.exe",

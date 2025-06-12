@@ -1,5 +1,5 @@
 {
-    "version": "99.0.4780.0",
+    "version": "121.0.5558.0",
     "description": "Fast, secure, easy-to-use browser.",
     "homepage": "https://www.opera.com/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download1.operacdn.com/pub/opera-developer/99.0.4780.0/win/Opera_Developer_99.0.4780.0_Autoupdate_x64.exe#/dl.7z",
-            "hash": "229f687663c71f3479d6c66f940dc0b36eb5594f30afef11a59fc18236962c63"
+            "url": "https://download1.operacdn.com/pub/opera-developer/121.0.5558.0/win/Opera_Developer_121.0.5558.0_Autoupdate_x64.exe#/dl.7z",
+            "hash": "bd624dc8bd6b80bef4f7dc55d591b2d57e591b10b715dd4908fdcac974afbe4d"
         },
         "32bit": {
-            "url": "https://download1.operacdn.com/pub/opera-developer/99.0.4780.0/win/Opera_Developer_99.0.4780.0_Autoupdate.exe#/dl.7z",
-            "hash": "db09cc874d8c5ae5349a2f1678f705d63c51dff818136e4c958ba021d865b9c6"
+            "url": "https://download1.operacdn.com/pub/opera-developer/121.0.5558.0/win/Opera_Developer_121.0.5558.0_Autoupdate.exe#/dl.7z",
+            "hash": "e20704d67e598ea84b7cd9dfa0480487ac81d824b7f0bf33c8e39c4724574485"
         }
     },
     "installer": {
@@ -35,9 +35,8 @@
     ],
     "persist": "profile",
     "checkver": {
-        "url": "http://get.opera.com/ftp/pub/opera-developer/",
-        "regex": "([\\d.]+)/",
-        "reverse": true
+        "url": "https://fossies.org/windows/www/",
+        "regex": "Opera_Developer_([\\d.]+)_"
     },
     "autoupdate": {
         "architecture": {

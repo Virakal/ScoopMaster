@@ -1,18 +1,32 @@
 {
-    "hash": "345789e5535292cef651e8f87fc94848bb8306ea9615271f9faf1c76f2832267",
-    "version": "0.1.14",
-    "url": "https://github.com/raphamorim/rio/releases/download/v0.1.14/Rio-portable.exe#/rio.exe",
-    "license": "MIT",
+    "version": "0.2.18",
+    "description": "A modern terminal for the 21st century.",
+    "homepage": "https://raphamorim.io/rio/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/raphamorim/rio/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/raphamorim/rio/releases/download/v0.2.18/Rio-portable-x86_64.exe#/rio.exe",
+            "hash": "b5cab193ee065a161e35631f97735ed811c8e5f0e912114c1033494bcd5b65f9"
+        }
+    },
     "bin": "rio.exe",
-    "homepage": "https://github.com/raphamorim/rio",
-    "checkver": "github",
     "shortcuts": [
         [
             "rio.exe",
-            "Rio"
+            "Rio Terminal"
         ]
     ],
+    "checkver": {
+        "github": "https://github.com/raphamorim/rio"
+    },
     "autoupdate": {
-        "url": "https://github.com/raphamorim/rio/releases/download/v$version/Rio-portable.exe#/rio.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/raphamorim/rio/releases/download/v$version/Rio-portable-x86_64.exe#/rio.exe"
+            }
+        }
     }
 }

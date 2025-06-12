@@ -1,12 +1,12 @@
 {
-    "version": "7.0.2-1",
+    "version": "7.1.1-5",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video. (Jellyfin build)",
     "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.0.2-1/jellyfin-ffmpeg_7.0.2-1-portable_win64.zip",
-            "hash": "8749542c863f0f896d952bc6b8d2981a6adfc0636706a2beef89d3f3cfb8ba06"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.1-5/jellyfin-ffmpeg_7.1.1-5-portable_win64.zip",
+            "hash": "720fcb6becde3836c163bd1ba7d436fc50c66a7f24e03ef32f86d242122729b9"
         }
     },
     "checkver": {

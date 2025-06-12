@@ -1,10 +1,10 @@
 {
-    "version": "3.46.1.0",
+    "version": "3.50.1.0",
     "description": "SQLite JDBC Driver",
     "homepage": "https://github.com/xerial/sqlite-jdbc",
     "license": "Apache-2.0|BSD-2-Clause",
-    "url": "https://github.com/xerial/sqlite-jdbc/releases/download/3.46.1.0/sqlite-jdbc-3.46.1.0.jar",
-    "hash": "6dc7464e3803648d3ff18a7359bab6adf079fcd8495b18991f6f5edcb8ac6e3b",
+    "url": "https://github.com/xerial/sqlite-jdbc/releases/download/3.50.1.0/sqlite-jdbc-3.50.1.0.jar",
+    "hash": "1c08ea201c1eb39f81624cfe6bd5157954f1e246eba5b2d01e2cb7d4deb8eb7b",
     "checkver": "github",
     "installer": {
         "script": "Move-Item \"$dir\\sqlite-jdbc-$version.jar\" \"$dir\\sqlite-jdbc.jar\""

@@ -1,26 +1,18 @@
 {
-    "version": "0.2.23",
-    "description": "Download media content from a DASH-MPEG or DASH-WebM MPD manifest",
-    "homepage": "https://github.com/emarsden/dash-mpd-cli",
+    "version": "0.2.26",
+    "description": "A commandline application for downloading media content from a DASH MPD file.",
+    "homepage": "https://emarsden.github.io/dash-mpd-cli/",
     "license": "MIT",
-    "suggest": {
-        "ffmpeg": [
-            "scoop-alts/ffmpeg-shared-nightly",
-            "ffmpeg-yt-dlp",
-            "ffmpeg"
-        ],
-        "mkvmerge": "mkvtoolnix",
-        "mp4box": "gpac",
-        "mp4decrypt": "bento4"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emarsden/dash-mpd-cli/releases/download/v0.2.23/dash-mpd-cli-windows.exe#/dash-mpd-cli.exe",
-            "hash": "7d66e951a32325f95407049dac311697d688b30c89b9a5be6d26a6b24301138e"
+            "url": "https://github.com/emarsden/dash-mpd-cli/releases/download/v0.2.26/dash-mpd-cli-windows.exe#/dash-mpd-cli.exe",
+            "hash": "69ce81d85aca96d62570883e33f2684a50dc5081cb20cc8fc524e2392f7a9cc5"
         }
     },
     "bin": "dash-mpd-cli.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/emarsden/dash-mpd-cli"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

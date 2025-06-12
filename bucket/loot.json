@@ -1,5 +1,5 @@
 {
-    "version": "0.23.1",
+    "version": "0.26.1",
     "description": "Plugin load order optimisation tool for The Elder Scrolls and Fallout series",
     "homepage": "https://loot.github.io",
     "license": "GPL-3.0-or-later",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/loot/loot/releases/download/0.23.1/loot_0.23.1-win64.7z",
-            "hash": "b7a44f45044bffabd6eec359244036dcb16355f4f4aea94cab327b7eef2cf88f"
+            "url": "https://github.com/loot/loot/releases/download/0.26.1/loot_0.26.1-win64.7z",
+            "hash": "ddcd4f9038cc5e108940b7dbede43afebc3435ce9286c705fa82766cafbbd71c"
         }
     },
     "pre_install": [

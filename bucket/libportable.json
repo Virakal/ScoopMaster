@@ -1,14 +1,17 @@
 {
-    "version": "53470403",
+    "version": "56942737",
     "description": "Portable Runtime For Firefox.",
     "homepage": "https://github.com/adonais/libportable",
-    "license": "BSD-3-Clause",
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/adonais/libportable/blob/master/COPYING.BSD"
+    },
     "url": "https://sourceforge.net/projects/libportable/files/Tools/portable_bin.7z",
-    "hash": "sha1:fcf1bf95c1f26469bfcd090c72942d9825bb6ea1",
+    "hash": "sha1:5550c2d3ae5ece26c8dc4c62a5d4bd0fbe7b36eb",
     "extract_dir": "portable_bin",
     "checkver": {
         "url": "https://sourceforge.net/projects/libportable/rss?path=/Tools",
-        "regex": "(?sm)portable_bin.7z.*?(\\d+)</files:sf-file-id>"
+        "re": "(?sm)portable_bin.7z.*?(\\d+)</files:sf-file-id>"
     },
     "autoupdate": {
         "url": "https://sourceforge.net/projects/libportable/files/Tools/portable_bin.7z"

@@ -1,5 +1,5 @@
 {
-    "version": "2.4.2.32922",
+    "version": "2.6.3.43718",
     "description": "Toolbox App. A control panel for all JetBrains tools.",
     "homepage": "https://www.jetbrains.com/toolbox/",
     "license": {
@@ -10,8 +10,8 @@
         "By default all your tools are installed into '$dir\\apps' folder and are persisted.",
         "This could be changed inside settings menu."
     ],
-    "url": "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.4.2.32922.exe",
-    "hash": "281f575872c5519b4d831f63783513d21e868e83a16711d72cc2f1c68776063e",
+    "url": "https://download.jetbrains.com/toolbox/jetbrains-toolbox-2.6.3.43718.exe",
+    "hash": "3b9e627ff835736dda22561e3e0d9d05a6955556a8b790f7fd9eb9e3c6522ceb",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\jetbrains-toolbox-$version.exe\" \"$dir\\installer\" -Removal",
         "Expand-7zipArchive \"$dir\\installer\\.text\" \"$dir\"",

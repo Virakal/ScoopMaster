@@ -1,5 +1,5 @@
 {
-    "version": "4.4.0",
+    "version": "4.4.7",
     "description": "A network protocol analyzer that lets you see what’s happening on your network at a microscopic level.",
     "homepage": "https://www.wireshark.org/",
     "license": "GPL-2.0-or-later",
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://www.wireshark.org/download/win64/Wireshark-4.4.0-x64.exe#/dl.7z",
-            "hash": "f635e68ef536fe85b2c0d5ac12a1197ba015cacc0c866c1995ae75b2b5d957fd"
+            "url": "https://www.wireshark.org/download/win64/Wireshark-4.4.7-x64.exe#/dl.7z",
+            "hash": "2e33fbda09cbc697a293faeba8a4fe4c2fcfc57db7ccf6421ec1f2c05223e6ac"
         }
     },
     "installer": {

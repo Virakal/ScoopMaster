@@ -1,23 +1,18 @@
 {
-    "version": "23.0.0-nightly20240529c0c598d753",
+    "version": "25.0.0-nightly202506115f7dbf45a3",
     "description": "An asynchronous event driven JavaScript runtime designed to build scalable network applications. (nightly verison)",
     "homepage": "https://nodejs.org",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nodejs.org/download/nightly/v23.0.0-nightly20240529c0c598d753/node-v23.0.0-nightly20240529c0c598d753-win-x64.7z",
-            "hash": "41ff011765e0d20fe70c6240e9715b09d5439954dc19f73ba4fd9cd5924c865f",
-            "extract_dir": "node-v23.0.0-nightly20240529c0c598d753-win-x64"
-        },
-        "32bit": {
-            "url": "https://nodejs.org/download/nightly/v23.0.0-nightly20240529c0c598d753/node-v23.0.0-nightly20240529c0c598d753-win-x86.7z",
-            "hash": "9b8440d721a98533cbdbbf5fc92c2bc184bbd316ca54076d22834d694734615c",
-            "extract_dir": "node-v23.0.0-nightly20240529c0c598d753-win-x86"
+            "url": "https://nodejs.org/download/nightly/v25.0.0-nightly202506115f7dbf45a3/node-v25.0.0-nightly202506115f7dbf45a3-win-x64.7z",
+            "hash": "bd7082cab199025f03faf9fdd4ec396703f159800e97056094c703ab666e0c4b",
+            "extract_dir": "node-v25.0.0-nightly202506115f7dbf45a3-win-x64"
         },
         "arm64": {
-            "url": "https://nodejs.org/download/nightly/v23.0.0-nightly20240529c0c598d753/node-v23.0.0-nightly20240529c0c598d753-win-arm64.7z",
-            "hash": "4758608c52d3a7d93c07913c95109b5e8c657d378f249c59d58d0b5b9b60993d",
-            "extract_dir": "node-v23.0.0-nightly20240529c0c598d753-win-arm64"
+            "url": "https://nodejs.org/download/nightly/v25.0.0-nightly202506115f7dbf45a3/node-v25.0.0-nightly202506115f7dbf45a3-win-arm64.7z",
+            "hash": "b7d746be5f001681ff310e349564fc230cb346802276891bc6c6165bfa93ef51",
+            "extract_dir": "node-v25.0.0-nightly202506115f7dbf45a3-win-arm64"
         }
     },
     "persist": [
@@ -42,10 +37,6 @@
             "64bit": {
                 "url": "https://nodejs.org/download/nightly/v$version/node-v$version-win-x64.7z",
                 "extract_dir": "node-v$version-win-x64"
-            },
-            "32bit": {
-                "url": "https://nodejs.org/download/nightly/v$version/node-v$version-win-x86.7z",
-                "extract_dir": "node-v$version-win-x86"
             },
             "arm64": {
                 "url": "https://nodejs.org/download/nightly/v$version/node-v$version-win-arm64.7z",

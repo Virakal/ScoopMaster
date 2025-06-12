@@ -1,0 +1,18 @@
+{
+    "homepage": "https://im.qq.com/pcqq",
+    "description": "QQ by Tencent",
+    "license": "Commercial",
+    "version": "9.7.23.29406",
+    "url": "https://dldir1.qq.com/qqfile/qq/PCQQ9.7.23/QQ9.7.23.29406.exe",
+    "hash": "8de2ab423b1a5fc49204d03fe922219a09194efbbdddcf154e632c3c4b9f8478",
+    "installer": {
+        "script": "Start-Process -FilePath \"$dir\\$fname\" -Verb RunAs | Wait-Process"
+    },
+    "checkver": {
+        "url": "https://qq-web.cdn-go.cn/im.qq.com_new/863ecfe8/202504291714/windowsDownloadUrl.js",
+        "regex": "QQ([\\d._]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://dldir1.qq.com/qqfile/qq/PCQQ$majorVersion.$minorVersion.$patchVersion/QQ$version.exe"
+    }
+}

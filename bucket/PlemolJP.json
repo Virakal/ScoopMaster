@@ -1,10 +1,11 @@
 {
-    "version": "1.7.1",
+    "version": "2.0.4",
     "description": "IBM Plex Mono と IBM Plex Sans JP を合成したプログラミングフォント PlemolJP (プレモル ジェイピー)",
     "homepage": "https://github.com/yuru7/PlemolJP",
     "license": "OFL-1.1",
-    "url": "https://github.com/yuru7/PlemolJP/releases/download/v1.7.1/PlemolJP_v1.7.1.zip",
-    "hash": "6aab0c223b60e90470d58b7bf7a1dfb4280d9a47112cefadf6d35bc92e0f534d",
+    "url": "https://github.com/yuru7/PlemolJP/releases/download/v2.0.4/PlemolJP_v2.0.4.zip",
+    "hash": "0bf19bd2a242e70582bb8c0be084c878e843f6aeaa9e00210828532285599757",
+    "extract_dir": "PlemolJP_v2.0.4",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -46,7 +47,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*.ttf' -Recurse | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -87,6 +88,7 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/yuru7/PlemolJP/releases/download/v$version/PlemolJP_v$version.zip"
+        "url": "https://github.com/yuru7/PlemolJP/releases/download/v$version/PlemolJP_v$version.zip",
+        "extract_dir": "PlemolJP_v$version"
     }
 }

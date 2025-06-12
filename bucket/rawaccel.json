@@ -1,8 +1,8 @@
 {
-    "version": "1.6.1",
+    "version": "1.7.0",
     "homepage": "https://github.com/a1xd/rawaccel/",
-    "url": "https://github.com/a1xd/rawaccel/releases/download/v1.6.1/RawAccel_v1.6.1.zip",
-    "hash": "0ff7b09e34e846df33ae617eac8ae1c30587e0cd6c5dac9c76eb15a371b4b574",
+    "url": "https://github.com/a1xd/rawaccel/releases/download/v1.7.0/RawAccel_v1.7.0.zip",
+    "hash": "57fbafbc1da5b43579ad777fa1f6327cd1cea319940cf2bf63e6ab56bcbd1da1",
     "installer": {
         "script": [
             "Move-Item \"$dir\\RawAccel\\*\" -Destination \"$dir\"",

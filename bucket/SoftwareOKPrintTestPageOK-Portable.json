@@ -1,12 +1,12 @@
 {
-    "version": "3.11",
+    "version": "3.33",
     "description": "SoftwareOK PrintTestPageOK. Print.Test.Page.OK. The alternative test page printout for all MS Windows operating systems!",
     "homepage": "http://www.softwareok.com/?seite=Microsoft/Print.Test.Page.OK",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/Print.Test.Page.OK_x64_Portable.zip",
-            "hash": "64ce2c16c1f5e1162961040a3937aa9a5f9b54fd5b065c9298d680139e64c970",
+            "hash": "d569c8e12cb0c521b9243498fbfebd646bf85eb89686c74203298c2a44ba7725",
             "shortcuts": [
                 [
                     "Print.Test.Page.OK_Portable.exe",
@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/Print.Test.Page.OK_Portable.zip",
-            "hash": "3cad002d2d5f53babfa92f566669623355c392b3fac7ccb5f28258d1a41ccee5",
+            "hash": "0396e499a1b30c5764c9cb2307ccfeb83a74d0ca609027586a12956c67625250",
             "shortcuts": [
                 [
                     "Print.Test.Page.OK_Portable.exe",

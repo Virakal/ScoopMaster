@@ -1,16 +1,16 @@
 {
-    "version": "1.21.5",
+    "version": "1.27.0",
     "description": "A command-line tool for Stripe.",
     "homepage": "https://stripe.com/docs/stripe-cli",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.21.5/stripe_1.21.5_windows_x86_64.zip",
-            "hash": "2856916dda1fbf752bf54d5d195d2f6de4d65cee516a52abace6278761a0e7b8"
+            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.27.0/stripe_1.27.0_windows_x86_64.zip",
+            "hash": "3020eed1cbe6981110dba5509d7e0189f7013e5f3b518fdb8e080e610e6a6f81"
         },
         "32bit": {
-            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.21.5/stripe_1.21.5_windows_i386.zip",
-            "hash": "6afd0021e8a894aaa3fd3023ef86af1f19d189a6e05c089b5eca31dd23822394"
+            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.27.0/stripe_1.27.0_windows_i386.zip",
+            "hash": "043283fad45ab8a7058673033c7e8d8cddc8c0edb0e63e9d076af60f42fcfac6"
         }
     },
     "bin": "stripe.exe",

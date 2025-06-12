@@ -1,19 +1,19 @@
 {
-    "version": "20240001",
-    "description": "OC 编辑器",
+    "version": "20250001",
+    "description": "A GUI-based Configurator for editing config.plist files for Acidanthera's OpenCore Boot Manager",
     "homepage": "https://github.com/ic005k/OCAuxiliaryTools",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ic005k/OCAuxiliaryTools/releases/download/20240001/OCAT-Win64.zip",
-            "hash": "983b05c5b7bd23b058832df94923035c471cba178c3753191208ef1b77e23cd8"
+            "url": "https://github.com/ic005k/OCAuxiliaryTools/releases/download/20250001/OCAT-Win64.zip",
+            "hash": "1752a53ed1d781fb815209362704210bb728a6831082aa15f37d71591859add4",
+            "extract_dir": "OCAT-Win64"
         }
     },
-    "extract_dir": "OCAT-Win64",
     "shortcuts": [
         [
             "OCAuxiliaryTools.exe",
-            "OCAuxiliaryTools"
+            "OpenCore Auxiliary Tools"
         ]
     ],
     "checkver": "github",

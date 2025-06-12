@@ -1,10 +1,11 @@
 {
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "Moralerspace は、欧文フォント Monaspace と日本語フォント IBM Plex Sans JP 等を合成したプログラミング向けフォントです。 with Nerd Fonts glyph",
     "homepage": "https://github.com/yuru7/moralerspace",
     "license": "OFL-1.1",
-    "url": "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip",
-    "hash": "06dbd8f2bdd5259d07e43e9fd5601f6a62f80a69813cab1801c9e9dc499c71ce",
+    "url": "https://github.com/yuru7/moralerspace/releases/download/v1.1.0/MoralerspaceNF_v1.1.0.zip",
+    "hash": "07a47b320adee33140562f2b0aeb3f853e5fd86760fbeaa1036bb8d19ad433a6",
+    "extract_dir": "MoralerspaceNF_v1.1.0",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -37,7 +38,7 @@
             "}",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' -Recurse | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
@@ -76,7 +77,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' -Recurse | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
@@ -87,6 +88,7 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceNF_v$version.zip"
+        "url": "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceNF_v$version.zip",
+        "extract_dir": "MoralerspaceNF_v$version"
     }
 }

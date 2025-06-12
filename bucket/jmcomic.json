@@ -1,5 +1,5 @@
 {
-    "version": "1.2.3",
+    "version": "1.2.9",
     "description": "JMComic PC client (Support Window, Linux and macOS). Interface using QT.",
     "homepage": "https://github.com/tonquer/JMComic-qt",
     "license": " LGPL-3.0-only",
@@ -14,9 +14,9 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tonquer/JMComic-qt/releases/download/v1.2.1/jmcomic_v1.2.1_windows_x64.zip",
-            "X_hash": "630CB0C33902B130B22BC4AD6F7660572DF8E078B5B5BD2EB3A5D6600AAF362A",
-            "extract_dir": "jmcomic_v1.2.1_windows_x64/jmcomic"
+            "url": "https://github.com/tonquer/JMComic-qt/releases/download/v1.2.9/jmcomic_v1.2.9_windows_x64.zip",
+            "hash": "564f54a02f8aba797b582aac8e73c9aceba9f089e711f474d36a9c0cfec2f54b",
+            "extract_dir": "jmcomic_v1.2.9_windows_x64/jmcomic"
         }
     },
     "shortcuts": [

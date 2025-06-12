@@ -1,12 +1,12 @@
 {
-    "version": "8.0.5",
+    "version": "9.0.2",
     "description": "Electronics Design Automation Suite",
     "homepage": "https://www.kicad.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/8.0.5/kicad-8.0.5-x86_64.exe#/dl.7z",
-            "hash": "aeb417c70da6217ddb845a7d848e3abf8b9a0fb11104b389a177a5e638826035"
+            "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/9.0.2/kicad-9.0.2-x86_64.exe#/dl.7z",
+            "hash": "9bc40bcd596dac78acc46833d65f29495c9d1645e9342e14ebabac8daff97f5b"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",

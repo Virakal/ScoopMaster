@@ -1,9 +1,10 @@
 {
-    "version": "16.0.17830.20162",
-    "description": "办公软件 Office",
+    "version": "16.0.18730.20142",
+    "description": "办公: Office",
     "homepage": "https://office.com",
-    "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_17830-20162.exe#/dl.7z_",
-    "hash": "a8a4de8802352348c1218298cbad68c6bc4ec5fd247e9b70eba01098e121637c",
+    "license": "Unknown",
+    "url": "https://download.microsoft.com/download/6c1eeb25-cf8b-41d9-8d0d-cc1dbc032140/officedeploymenttool_18623-20156.exe#/dl.7z_",
+    "hash": "8b7c8c7cf7bc38bc7167c883073cf1490744443222fdcd5027d2142127a1ec66",
     "pre_install": [
         "$scriptdir = \"$bucketsdir\\rainte\\scripts\\office\"",
         "Copy-Item \"$scriptdir\\install.xml\" \"$dir\\\"",
@@ -23,7 +24,7 @@
             "$ProgressPreference = 'SilentlyContinue'",
             "$url1 = 'https://docs.microsoft.com/en-us/officeupdates/odt-release-history'",
             "$regex1 = '<p>Version ([\\d.]+)'",
-            "$url2 = 'https://www.microsoft.com/en-au/download/confirmation.aspx?id=49117'",
+            "$url2 = 'https://www.microsoft.com/en-au/download/details.aspx?id=49117'",
             "$regex2 = 'download/([\\w/-]+)(officedeploymenttool_[\\d-]+\\.exe)'",
             "",
             "$cont = $(Invoke-WebRequest $url1).Content",

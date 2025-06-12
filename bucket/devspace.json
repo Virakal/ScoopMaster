@@ -1,16 +1,16 @@
 {
-    "version": "6.3.12",
+    "version": "6.3.15",
     "description": "DevSpace is an open-source developer tool for Kubernetes that lets you develop and deploy cloud-native software faster",
     "homepage": "https://devspace.sh",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/devspace-sh/devspace/releases/download/v6.3.12/devspace-windows-amd64.exe#/devspace.exe",
-            "hash": "c369068b2c73af085e8fb6ac6439a88de37d55500d6124575319f40785c63023"
+            "url": "https://github.com/devspace-sh/devspace/releases/download/v6.3.15/devspace-windows-amd64.exe#/devspace.exe",
+            "hash": "a599a07da666adc34a979fd9c52cf2ba8e7010407e662db7e742cf088d3f5517"
         },
         "32bit": {
-            "url": "https://github.com/devspace-sh/devspace/releases/download/v6.3.12/devspace-windows-386.exe#/devspace.exe",
-            "hash": "021d95f5c0c557225b29fc823488f3a1c288c7f1fdb11b7baff66407e57a8178"
+            "url": "https://github.com/devspace-sh/devspace/releases/download/v6.3.15/devspace-windows-386.exe#/devspace.exe",
+            "hash": "8a1663a6bfaed81ea4ec4d373b5abbbf147f85ff4526c5fc95c9acaf93708ee9"
         }
     },
     "bin": "devspace.exe",

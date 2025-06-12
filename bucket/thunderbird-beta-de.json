@@ -1,16 +1,16 @@
 {
-    "version": "131.0b3",
+    "version": "140.0b1",
     "description": "A free email application that’s easy to set up and customize. (Beta)",
     "homepage": "https://www.thunderbird.net",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/thunderbird/releases/131.0b3/win64/de-DE/Thunderbird%20Setup%20131.0b3.exe#/dl.7z",
-            "hash": "sha512:2e4d811fe242d878655b54a439115bc28994b908c73f08a1d3858bb552db358c4189b3dd1104dc47ceef58556a4da124d2a955d64512680c21d98a16f5e08bf2"
+            "url": "https://archive.mozilla.org/pub/thunderbird/releases/140.0b1/win64/de-DE/Thunderbird%20Setup%20140.0b1.exe#/dl.7z",
+            "hash": "sha512:ea876272c99fb22eb5c435f54ed514d18f176aeab8787081175f4f9df1b3a73bdab53274769f3609bb71529b763fc472fd76d27a2c232b66b35db8381e9b5b81"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/thunderbird/releases/131.0b3/win32/de-DE/Thunderbird%20Setup%20131.0b3.exe#/dl.7z",
-            "hash": "sha512:2e4d811fe242d878655b54a439115bc28994b908c73f08a1d3858bb552db358c4189b3dd1104dc47ceef58556a4da124d2a955d64512680c21d98a16f5e08bf2"
+            "url": "https://archive.mozilla.org/pub/thunderbird/releases/140.0b1/win32/de-DE/Thunderbird%20Setup%20140.0b1.exe#/dl.7z",
+            "hash": "sha512:ea876272c99fb22eb5c435f54ed514d18f176aeab8787081175f4f9df1b3a73bdab53274769f3609bb71529b763fc472fd76d27a2c232b66b35db8381e9b5b81"
         }
     },
     "extract_dir": "core",

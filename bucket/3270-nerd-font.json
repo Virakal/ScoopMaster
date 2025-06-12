@@ -1,10 +1,10 @@
 {
-    "version": "3.2.1",
+    "version": "3.3.0",
     "description": "Nerd Fonts patched '3270' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/3270.tar.xz",
-    "hash": "6168e416a4331e8d59d5436d9a3c8170f98ee044e2fe662cbf1d7bea612f927d",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/3270.tar.xz",
+    "hash": "304010729a11da9bea9f2f1e35e84f4f2240cd8b0ec2a315ef3c1af0ba3af185",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

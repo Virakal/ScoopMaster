@@ -1,0 +1,26 @@
+{
+    "version": "2.28.0",
+    "description": "Microsoft Graph PowerShell Cmdlets",
+    "homepage": "https://github.com/microsoftgraph/msgraph-sdk-powershell",
+    "license": "https://aka.ms/devservicesagreement",
+    "depends": "microsoft-graph-authentication",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content_Types*.xml\" -Recurse",
+    "pre_uninstall": [
+        "$InstalledDeps = $manifest.depends | Where-Object { Test-Path \"$(appdir $_)\\current\" }",
+        "if (-not $InstalledDeps) { return }",
+        "if ($global) { scoop uninstall --global $InstalledDeps }",
+        "else { scoop uninstall $InstalledDeps }"
+    ],
+    "checkver": {
+        "regex": "<h2>([\\d\\.]+)</h2>",
+        "url": "https://www.powershellgallery.com/packages/microsoft.graph.crossdeviceexperiences"
+    },
+    "autoupdate": {
+        "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.crossdeviceexperiences.$version.nupkg"
+    },
+    "hash": "6b24191a43d7678081170ca1b9b1a9b8dca6d34a02550d8668b5c50148ae51df",
+    "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.crossdeviceexperiences.2.28.0.nupkg",
+    "psmodule": {
+        "name": "Microsoft.Graph.CrossDeviceExperiences"
+    }
+}

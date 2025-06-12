@@ -1,23 +1,26 @@
 {
-    "version": "0.4.12",
+    "version": "0.7.12",
     "description": "An extremely fast Python package installer and resolver, written in Rust.",
-    "homepage": "https://github.com/astral-sh/uv",
+    "homepage": "https://docs.astral.sh/uv/",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.4.12/uv-x86_64-pc-windows-msvc.zip",
-            "hash": "4dc5e08f2f69245859b8ff57c7e6f844ebd1a65df12ae13f66a068268af17389"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.7.12/uv-x86_64-pc-windows-msvc.zip",
+            "hash": "2cf29c8ffaa2549aa0f86927b2510008e8ca3dcd2100277d86faf437382a371b"
         },
         "32bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.4.12/uv-i686-pc-windows-msvc.zip",
-            "hash": "e0550b4db9d9074560cdff66e81298288ddeb75347585514601c598ea46df54f"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.7.12/uv-i686-pc-windows-msvc.zip",
+            "hash": "c7ec71ba64d01ef3cdb89553445de94ab4fd7375c8f2a7068353aec7a3a06342"
         }
     },
     "bin": [
         "uv.exe",
-        "uvx.exe"
+        "uvx.exe",
+        "uvw.exe"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/astral-sh/uv"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

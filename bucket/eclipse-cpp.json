@@ -1,12 +1,12 @@
 {
-    "version": "2024-09",
+    "version": "2025-06",
     "description": "Eclipse IDE for C and C++ Developers",
     "homepage": "https://www.eclipse.org",
     "license": "EPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "http://download.eclipse.org/technology/epp/downloads/release/2024-09/R/eclipse-cpp-2024-09-R-win32-x86_64.zip",
-            "hash": "sha512:5fa2b632dae655cd363add5637049f73e1591f6d2ccd18b81a1119c63e991bf9a80783f0b4dbc02770e857a7f5112c0b40fcf3cfb0b2cce6300c13bbea09984f"
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2025-06/R/eclipse-cpp-2025-06-R-win32-x86_64.zip",
+            "hash": "sha512:da77e423ef81df2c11e7e5b4137d4caca7c981fb91bfbe18a4f92606836b19e6c5a60f225f4b88ca775d18a758f5da2b4966f6daa1d8f7f66bdbc58c06413de1"
         }
     },
     "extract_dir": "eclipse",

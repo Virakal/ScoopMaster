@@ -1,24 +1,24 @@
 {
     "##": "The shortcut will be created when adding the Appx package",
-    "version": "4.7.3",
+    "version": "4.8.1",
     "description": "第三方哔哩哔哩UWP客户端",
     "homepage": "https://github.com/ywmoyue/biliuwp-lite",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_x64.zip",
-            "hash": "526fa6145ba7014df6062a079408a52e431ed04a978194222289961787bc1d50",
-            "extract_dir": "BiliLite.Packages_4.7.3.0_x64_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.1/BiliLite.Packages_4.8.1.0_x64.zip",
+            "hash": "df6fc290bfefacecb08d0e55f3859cac60407d1bfd25bc2cb528dc8c2b75d068",
+            "extract_dir": "BiliLite.Packages_4.8.1.0_x64_Test"
         },
         "32bit": {
-            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_x86.zip",
-            "hash": "d92b229a7f0ec67dd9e9342353e9d417a619bb0df55751cbb70e3a5f4adaf2dc",
-            "extract_dir": "BiliLite.Packages_4.7.3.0_x86_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.1/BiliLite.Packages_4.8.1.0_x86.zip",
+            "hash": "4100e0d7e7d2a7420902c21ddfeb5ff2062ee9e3c8b23fce29527e657d50dc70",
+            "extract_dir": "BiliLite.Packages_4.8.1.0_x86_Test"
         },
         "arm64": {
-            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_ARM64.zip",
-            "hash": "aa3d2048b7e40282c282eec981d4d0dd7e1df1b2bbf523ff1709eb90666d16e1",
-            "extract_dir": "BiliLite.Packages_4.7.3.0_ARM64_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.1/BiliLite.Packages_4.8.1.0_ARM64.zip",
+            "hash": "365f738e72e1e82be9ea97bff524d04eb0960c09e29274fbffbf78ebb973cf75",
+            "extract_dir": "BiliLite.Packages_4.8.1.0_ARM64_Test"
         }
     },
     "pre_install": [

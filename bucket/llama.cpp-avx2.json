@@ -1,24 +1,14 @@
 {
-    "version": "b3777",
-    "description": "LLM inference in C/C++",
-    "homepage": "https://github.com/ggerganov/llama.cpp",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ggerganov/llama.cpp/releases/download/b3777/llama-b3777-bin-win-avx2-x64.zip",
-            "hash": "9bb116acacc6cfe2f79000249e2259f0840e1e62852af9289e9fee1b98b36115"
-        }
-    },
-    "bin": "llama-cli.exe",
+    "homepage": "https://github.com/ggml-org/llama.cpp",
+    "version": "b5273",
+    "description": "Inference of Meta's LLaMA model (and others) in pure C/C++",
     "checkver": {
-        "url": "https://github.com/ggerganov/llama.cpp/releases/latest",
-        "regex": "/releases/tag/(b[\\d]+)"
+        "url": "https://github.com/ggml-org/llama.cpp/releases/latest",
+        "re": "llama.cpp/releases/tag/(.*?)&.*?data-view-component=\"true\""
     },
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b5273/llama-b5273-bin-win-avx2-x64.zip",
+    "hash": "b4e67dead9d459336fdb6cabce18f729f687c8420b00cc87f7523dfc5f3f07c8",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ggerganov/llama.cpp/releases/download/$version/llama-$version-bin-win-avx2-x64.zip"
-            }
-        }
+        "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-avx2-x64.zip"
     }
 }

@@ -1,20 +1,20 @@
 {
-    "version": "2.1.5",
+    "version": "2.3.12",
     "description": "ReplayWeb.page provides a full web archive replay system running directly in the browser.",
     "homepage": "https://github.com/webrecorder/replayweb.page",
     "license": "AGPL-3.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.1.5/ReplayWeb.page-2.1.5.exe#/dl.7z",
-            "hash": "c3ef3be36bce735ffe62d4a13d206796f51042ccb487f10a1fd961ff046e5874",
+            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.3.12/ReplayWeb.page-2.3.12.exe#/dl.7z",
+            "hash": "702c652b29b21571df4371c0cbd0a2ae3f95a3d25dae7a988f1dc60d75dcc59d",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$R0\", \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
             ]
         },
         "64bit": {
-            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.1.5/ReplayWeb.page-2.1.5.exe#/dl.7z",
-            "hash": "c3ef3be36bce735ffe62d4a13d206796f51042ccb487f10a1fd961ff046e5874",
+            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.3.12/ReplayWeb.page-2.3.12.exe#/dl.7z",
+            "hash": "702c652b29b21571df4371c0cbd0a2ae3f95a3d25dae7a988f1dc60d75dcc59d",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$R0\", \"$dir\\`$PLUGINSDIR\" -Force -Recurse"

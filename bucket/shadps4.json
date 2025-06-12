@@ -1,32 +1,27 @@
 {
-    "version": "0.2.0",
-    "description": "shadPS4 is an early PlayStation 4 emulator for Windows, Linux and macOS written in C++",
-    "homepage": "https://shadps4.net/",
-    "license": "GPL-2.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.2.0/shadps4-win64-qt.zip",
-            "hash": "5dcec90992b1325868d6bd75ff4506d52f5c969ba235aa9ab336ff6c764ed51e"
-        }
-    },
-    "shortcuts": [
-        [
-            "shadPS4.exe",
-            "shadPS4"
-        ]
-    ],
-    "persist": [
-        "user"
-    ],
-    "checkver": {
-        "github": "https://github.com/shadps4-emu/shadPS4",
-        "regex": "/releases/tag/(?<prefix>v?\\.?)(?<version>[\\w-\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchPrefix$version/shadps4-win64-qt.zip"
-            }
-        }
-    }
+  "version": "0.9.0",
+  "description": "PlayStation 4 emulator for Windows, Linux and macOS",
+  "homepage": "https://shadps4.net/",
+  "license": {
+    "identifier": "GPL-2.0-only",
+    "url": "https://github.com/shadps4-emu/shadPS4/blob/main/LICENSE"
+  },
+  "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.9.0/shadps4-win64-qt-0.9.0.zip",
+  "hash": "cd9ccd9569df67126632b2b1222307700488654636d63b280c86bc36caa5aed8",
+  "bin": "shadPS4.exe",
+  "shortcuts": [
+    [
+      "shadPS4.exe",
+      "shadPS4"
+    ]
+  ],
+  "persist": "user",
+  "checkver": {
+    "url": "https://api.github.com/repos/shadps4-emu/shadPS4/releases/latest",
+    "jsonpath": "$.tag_name",
+    "regex": "v\\.([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.$version/shadps4-win64-qt-$version.zip"
+  }
 }

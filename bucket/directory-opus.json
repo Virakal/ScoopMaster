@@ -1,16 +1,36 @@
 {
-    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
-    "version": "13.5",
-    "description": "irectory Opus is a complete replacement for Explorer, with far more functionality than any other file manager available today.",
-    "homepage": "https://www.gpsoft.com.au/",
-    "license": "",
-    "notes": "",
-    "architecture": {
-        "64bit": {
-            "url": "https://cdn.gpsoft.com.au/files/Opus13/DOpusInstall-13.5.exe#/dl.7z",
-            "hash": "sha256:cd583dd102b93e2bcabf01e0b37eab7f9d024cf7eee0f963bdae05a59e84db3f"
-        }
-    },
+    "version": "13.16",
+    "description": "a complete replacement for Explorer, with far more functionality than any other file manager available today.",
+    "homepage": "https://www.gpsoft.com.au",
+    "license": "Proprietary",
+    "url": "https://cdn2.gpsoft.com.au/files/Opus13/DOpusInstall-13.16.exe",
+    "hash": "ce2b66e4bf8f247005555d495766568502bc41d25590b8cd598fcbe839199dc6",
     "innosetup": true,
-    "bin": "dopus.exe"
+    "persist_link": [
+        [
+            "$env:ProgramData\\GPSoftware\\Directory Opus",
+            "ProgramData"
+        ],
+        [
+            "$env:AppData\\GPSoftware\\Directory Opus",
+            "AppData"
+        ],
+        [
+            "$env:LocalAppData\\GPSoftware\\Directory Opus",
+            "LocalAppData"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "dopus.exe",
+            "Directory Opus"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.gpsoft.com.au/endpoints/curVersion.php",
+        "jp": ".release"
+    },
+    "autoupdate": {
+        "url": "https://cdn2.gpsoft.com.au/files/Opus$majorVersion/DOpusInstall-$version.exe"
+    }
 }

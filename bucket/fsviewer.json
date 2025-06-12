@@ -1,11 +1,11 @@
 {
-    "version": "7.8",
+    "version": "8.0",
     "description": "FastStone Image Viewer is a fast, stable, user-friendly image browser, converter and editor",
     "homepage": "https://www.faststone.org/FSViewerDetail.htm",
     "license": "Unknown",
-    "url": "http://www.faststonesoft.net/DN/FSViewer78.zip",
-    "hash": "00be74622143aa0d7d77c57ff6fc8030c90a2b698cf1495ab86787c1410bf0e9",
-    "extract_dir": "FSViewer78",
+    "url": "http://www.faststonesoft.net/DN/FSViewer80.zip",
+    "hash": "1f10782a7bf7552e08cf9062b132fd4f36bebdd8849b592f9b209be40e89e072",
+    "extract_dir": "FSViewer80",
     "pre_install": [
         "'FSSettings.db', 'HisFolderList.db' | ForEach-Object {",
         "    if (!(Test-Path \"$persist_dir\\$_\") -and !(Test-Path \"$dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",

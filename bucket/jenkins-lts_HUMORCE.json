@@ -1,5 +1,5 @@
 {
-    "version": "2.462.2",
+    "version": "2.504.2",
     "description": "(Long Term Support) An automation server which enables developers around the world to reliably build, test, and deploy their software",
     "homepage": "https://www.jenkins.io/",
     "license": "MIT",
@@ -10,8 +10,8 @@
             "java/zulu11-jdk"
         ]
     },
-    "url": "https://get.jenkins.io/war-stable/2.462.2/jenkins.war#/jenkins.jar",
-    "hash": "0e4c94d3a4bd40576d6791c1264cda66e4468e37929e7c5cb3e56cfa50803474",
+    "url": "https://get.jenkins.io/war-stable/2.504.2/jenkins.war#/jenkins.jar",
+    "hash": "e52347c01dd39116c364fb7ebab78d156bce8f6add28484ff571fe0d0faeabf6",
     "bin": "jenkins.jar",
     "checkver": {
         "url": "https://www.jenkins.io/changelog-stable/rss.xml",

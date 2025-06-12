@@ -1,16 +1,16 @@
 {
-    "version": "7.2.2.4600",
+    "version": "7.2.2.7800",
     "description": "A state-of-the-art,multi-platform web browser that offers users a seamless browsing and sharing experience.",
     "homepage": "https://www.maxthon.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x64.zip",
-            "hash": "f8a6668f0dc4fb0476b8bd04bf0bc3680782aa4e0313baf4a1f4cd6fc986360b"
+            "url": "https://dl.mxfast.com/7.2.2.7800/maxthon_portable_7.2.2.7800_x64_win7.zip",
+            "hash": "7599f5f7b381bbee90d20ecdb2a521e085d9bb085b4ba3764ec2cefd69f3ae8a"
         },
         "32bit": {
-            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x86.zip",
-            "hash": "64aa756b9e692fe74a9947f9a0b2c5804ad5face7b7f2c17c8cec3403ebfa7fd"
+            "url": "https://dl.mxfast.com/7.2.2.7800/maxthon_portable_7.2.2.7800_x86_win7.zip",
+            "hash": "4f8da4ca4e868bf3361f207c9347684ff61bc53f10d460255cf0175d26e37be8"
         }
     },
     "shortcuts": [
@@ -26,15 +26,15 @@
     "persist": "User Data",
     "checkver": {
         "url": "https://api.github.com/repos/maxthon/Maxthon/releases/latest",
-        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64.zip"
+        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64(?<anothersuffix>(_[^_]+)?).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x64.zip"
+                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x64$matchAnothersuffix.zip"
             },
             "32bit": {
-                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x86.zip"
+                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x86$matchAnothersuffix.zip"
             }
         }
     }

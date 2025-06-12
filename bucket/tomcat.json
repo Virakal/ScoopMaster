@@ -1,5 +1,5 @@
 {
-    "version": "10.1.30",
+    "version": "10.1.42",
     "description": "Implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies",
     "homepage": "https://tomcat.apache.org",
     "license": "Apache-2.0",
@@ -8,15 +8,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.apache.org/tomcat/tomcat-10/v10.1.30/bin/apache-tomcat-10.1.30-windows-x64.zip",
-            "hash": "sha512:8daa855cb8bd85610aa5b95f513505e384640e181705088eb89f0876d9ba81fdfbb73442c4f9133ca32a1edd22a5bc9ee3562ba9a90df01d25da013aa0bebd53"
+            "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.42/bin/apache-tomcat-10.1.42-windows-x64.zip",
+            "hash": "sha512:cf8297ee33025b2644e9844ccc1838a5d88552f40bd90abbd024176913dbf22593611818dd141c5214842580706ae1013f4f0b8ff6a106c6e2a87647717ccbda"
         },
         "32bit": {
-            "url": "https://downloads.apache.org/tomcat/tomcat-10/v10.1.30/bin/apache-tomcat-10.1.30-windows-x86.zip",
-            "hash": "sha512:4f6d15e4e9d4398e02494e515400d2ea25e0764a54885ebe118d74da199c3e5f830d7a9665b74745d01b3f5ccf22e0f3111a21604c328a7ed2ce8ecc6e3a7f15"
+            "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.42/bin/apache-tomcat-10.1.42-windows-x86.zip",
+            "hash": "sha512:72ca5f7b12da75a115b297b2da5def81328a3c1bc7d84becbb8c6263a6870d6d0a54b98b84dbc966c6f40fa206e4be9b2412523d77a770627063749034550b87"
         }
     },
-    "extract_dir": "apache-tomcat-10.1.30",
+    "extract_dir": "apache-tomcat-10.1.42",
     "bin": "bin\\catalina.bat",
     "env_set": {
         "CATALINA_HOME": "$dir",
@@ -27,16 +27,16 @@
         "webapps"
     ],
     "checkver": {
-        "url": "https://downloads.apache.org/tomcat/tomcat-10/?C=M;O=D",
+        "url": "https://dlcdn.apache.org/tomcat/tomcat-10/?C=M;O=D",
         "regex": "v([\\d.]+)/"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
+                "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://downloads.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
+                "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
             }
         },
         "hash": {

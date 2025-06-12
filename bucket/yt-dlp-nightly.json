@@ -1,26 +1,27 @@
 {
-    "version": "2024.09.17.232940",
+    "version": "2025.06.09.234059",
     "description": "yt-dlp (official) nightly builds",
     "homepage": "https://github.com/yt-dlp/yt-dlp-nightly-builds",
     "license": "Freeware",
     "suggest": {
-        "ffmpeg": "ffmpeg-nightly"
+        "ffmpeg": "versions/ffmpeg-yt-dlp"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/2024.09.17.232940/yt-dlp.exe",
-            "hash": "sha512:ed37ec96110d43314e47d19594e8f9de4cd039a06e59c7ddc8b60bca83534cb3b3148e0cc332a7e93e41797c661cc0f8b72255da49aab4e92ce467e31a68751f"
+            "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/2025.06.09.234059/yt-dlp.exe",
+            "hash": "sha512:70cdd4536c131a94310967fa7e0e261f150b1d0f530451939acb80134ca708b1bad1c97291f2b6e74a68a2c1a0c118b4c1a98fc9944852380b619fa4a661f0f8"
         },
         "32bit": {
-            "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/2024.09.17.232940/yt-dlp_x86.exe#/yt-dlp.exe",
-            "hash": "sha512:92853a8f588feca09d05ab82fdc054a486d786e560e9e5de188fb86b50d0e78d4de0c86508c3e5d05fb4f8dbd73bae89cc93e1b975a515a3df858cfd1bb6c103"
+            "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/2025.06.09.234059/yt-dlp_x86.exe#/yt-dlp.exe",
+            "hash": "sha512:6680dbffe5de38221ea4123b659012aecbdc6f4f116a56764c3e7662e29e967420fde4dcee4a227c2e0c0f3dfc7f0c1f19733533060d3e9021a143cc0e0d3878"
         }
     },
     "bin": "yt-dlp.exe",
     "pre_install": "$null = if (!(Test-Path \"$persist_dir/yt-dlp.conf\")) { New-Item \"$dir/yt-dlp.conf\" }",
     "persist": [
         "yt-dlp.conf",
-        "ytdlp_plugins"
+        "ytdlp_plugins",
+        "yt-dlp-plugins"
     ],
     "checkver": "github",
     "autoupdate": {

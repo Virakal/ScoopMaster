@@ -1,5 +1,5 @@
 {
-    "version": "7.0.2-17-20240915",
+    "version": "7.1.1-23-20250611",
     "description": "FFMpeg builds of latest release branch with patches necessary for smooth integration with yt-dlp",
     "homepage": "https://github.com/yt-dlp/FFmpeg-Builds",
     "license": "MIT",
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2024-09-15-14-14/ffmpeg-n7.0.2-17-gf705bc5b73-win64-gpl-7.0.zip",
-            "hash": "e5800db38190ce1e7de8492a415c781911b39609465d59eaecac7f76dbb3d209",
-            "extract_dir": "ffmpeg-n7.0.2-17-gf705bc5b73-win64-gpl-7.0"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-06-11-16-50/ffmpeg-n7.1.1-23-g20f266abc0-win64-gpl-7.1.zip",
+            "hash": "32ca83e9952781601612cff8af280b13e36f38011e8d637a5ed7a9d66fec724a",
+            "extract_dir": "ffmpeg-n7.1.1-23-g20f266abc0-win64-gpl-7.1"
         },
         "32bit": {
-            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2024-09-15-14-14/ffmpeg-n7.0.2-17-gf705bc5b73-win32-gpl-7.0.zip",
-            "hash": "d40c2a9cc99c1afbe6a96fe7e38cee874d4d00e67fbc04a065184c26a8266e76",
-            "extract_dir": "ffmpeg-n7.0.2-17-gf705bc5b73-win32-gpl-7.0"
+            "url": "https://github.com/yt-dlp/FFmpeg-Builds/releases/download/autobuild-2025-06-11-16-50/ffmpeg-n7.1.1-23-g9f2e953c3f-win32-gpl-7.1.zip",
+            "hash": "bdf8db92ee0b25c335fcdc3aac7ac59bc279c2c26d5b338ad1c906e33df875b7",
+            "extract_dir": "ffmpeg-n7.1.1-23-g9f2e953c3f-win32-gpl-7.1"
         }
     },
     "bin": [

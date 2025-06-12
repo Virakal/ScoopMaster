@@ -1,5 +1,5 @@
 {
-    "version": "1.6.3",
+    "version": "1.8.6",
     "description": "简简单单的看直播",
     "homepage": "https://github.com/xiaoyaocz/dart_simple_live",
     "license": "GPL-3.0-only",
@@ -12,21 +12,17 @@
             "extra/vcredist"
         ]
     },
-    "disable_checkver": {
-        "url": "https://github.com/xiaoyaocz/dart_simple_live/releases",
-        "regex": "v(?<ver>\\d*\\.\\d*\\.\\d*).*\\+(?<number>\\d*)-",
-        "replace": "$matchVer"
-    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v$version/simple_live_app-$version+$matchNumber-windows.zip"
+                "url": "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v$version/simple_live_app-$version+$majorVersion0$minorVersion0$patchVersion-windows.zip"
             }
         }
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v1.5.3/simple_live_app-1.5.3+10503-windows.zip"
+            "url": "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v1.8.6/simple_live_app-1.8.6+10806-windows.zip",
+            "hash": "22c40eca86780a25421a6f3af6dbe500d43f4d3934a1722e0aca20fab2cdd51c"
         }
     },
     "shortcuts": [

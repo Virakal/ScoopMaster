@@ -1,5 +1,5 @@
 {
-    "version": "13.1.6",
+    "version": "14.8.0",
     "description": "Screenshot OCR search translate search for picture paste the picture on the screen screen recorder.",
     "homepage": "https://github.com/xushengfeng/eSearch",
     "license": {
@@ -8,18 +8,18 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xushengfeng/eSearch/releases/download/13.1.6/eSearch-13.1.6-win32-x64.zip",
-            "hash": "ce415c1420ca55cf4928a2bad81d87addc8f83903473b6e5fe9e7304924e153e"
+            "url": "https://github.com/xushengfeng/eSearch/releases/download/14.8.0/eSearch-14.8.0-win32-x64.zip",
+            "hash": "5e96d87479e37db1e4f74cc5bd15d10132fe7d8c2a752aea6d96765a06b0365f"
         },
         "arm64": {
-            "url": "https://github.com/xushengfeng/eSearch/releases/download/13.1.6/eSearch-13.1.6-win32-arm64.zip",
-            "hash": "edd6f904217d6b211280c629f5feeb47afcf4937c293b9ee17c159a631a83606"
+            "url": "https://github.com/xushengfeng/eSearch/releases/download/14.8.0/eSearch-14.8.0-win32-arm64.zip",
+            "hash": "1ff949be8bea57184227193fa0fd66a6e7f4de5f7c01607e601e8c08797bf8ab"
         }
     },
-    "bin": "eSearch.exe",
+    "bin": "e-search.exe",
     "shortcuts": [
         [
-            "eSearch.exe",
+            "e-search.exe",
             "eSearch"
         ]
     ],

@@ -1,32 +1,22 @@
 {
-    "version": "8.13.176095",
-    "description": "数据恢复工具，特色是支持Linux、Mac的文件系统",
-    "homepage": "https://www.423down.com/8132.html",
-    "url": "http://xqh.ma:33001/189/R-Studio_Network_v8.13.176095_Portable.7z",
-    "hash": "5d9b3e94f3e31777bcdbff198e1d202f0b1a6f34aeccbffcf196c77c3a9ff629",
-    "bin": [
-        [
-            "RStudioPortable.exe",
-            "RStudio"
-        ]
-    ],
+    "version": "191520",
+    "license": "https://www.r-studio.com/includes/eula/PopupEulaDRC.shtml",
+    "description": "Disk Recovery Software and Hard Drive Recovery tool",
+    "homepage": "https://www.r-studio.com/",
+    "checkver": {
+        "url": "https://www.r-studio.com/Data_Recovery_Download.shtml",
+        "re": " build ([0-9]+)</a>"
+    },
+    "url": "https://www.r-studio.com/downloads/RStudio9.exe#/dl.7z",
+    "hash": "1f63d8c29f43a7a9d8559707075fb7b460085d1b91c0a326a63c9ddb42b55e9a",
+    "autoupdate": {
+        "url": "https://www.r-studio.com/downloads/RStudio9.exe#/dl.7z"
+    },
+    "bin": "RStudio.exe",
     "shortcuts": [
         [
-            "RStudioPortable.exe",
-            "R-Studio"
+            "RStudio.exe",
+            "RStudio"
         ]
-    ],
-    "persist": [
-        [
-            "Data",
-            "RStudio_Data"
-        ]
-    ],
-    "checkver": {
-        "encode": "UTF-8",
-        "re": "v([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "http://xqh.ma:33001/189/R-Studio_Network_v$version_Portable.7z"
-    }
+    ]
 }

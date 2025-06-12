@@ -1,0 +1,42 @@
+{
+    "version": "1.01",
+    "homepage": "https://www.nirsoft.net/utils/bluetooth_low_energy_scanner.html",
+    "bin": "BluetoothLEView.exe",
+    "shortcuts": [
+        [
+            "BluetoothLEView.exe",
+            "NirSoft\\BluetoothLEView"
+        ]
+    ],
+    "persist": [
+        "bluetoothleview_lng.ini",
+        "bluetoothleview.cfg"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/bluetoothleview-x64.zip",
+            "hash": "e019ae7bf8df58bebca064c019dd850739eda8d7366e32a415bff256f1bc51ba"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/bluetoothleview.zip",
+            "hash": "1c919806872ccf30b736ccebb75543e0c580229d9b8805b9026e2fd33bde7cab"
+        }
+    },
+    "description": "Monitors the activity of Bluetooth Low Energy devices around you.",
+    "license": "Freeware",
+    "notes": "If this application is useful to you, please consider donating to NirSoft - https://www.nirsoft.net/donate.html",
+    "checkver": {
+        "url": "https://www.nirsoft.net/pad/bluetoothleview.xml",
+        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/bluetoothleview-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/bluetoothleview.zip"
+            }
+        }
+    }
+}

@@ -1,12 +1,12 @@
 {
-    "version": "1.5.0",
+    "version": "1.5.4",
     "description": "This keyboard configuration utility is for programming small keyboards",
     "homepage": "https://github.com/kriomant/ch57x-keyboard-tool",
     "license": "MIT license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kriomant/ch57x-keyboard-tool/releases/download/v1.5.0/ch57x-keyboard-tool-x86_64-pc-windows-msvc.zip",
-            "hash": "6e74c26fa88bca95cefd2a9dd236d752273530665793ff373b156971d9fd32a7"
+            "url": "https://github.com/kriomant/ch57x-keyboard-tool/releases/download/v1.5.4/ch57x-keyboard-tool-x86_64-pc-windows-msvc.zip",
+            "hash": "19a055882a0c5d15de8fe0fa24704eb972a596b4293d621a8a56fb1700565647"
         }
     },
     "bin": "ch57x-keyboard-tool.exe",

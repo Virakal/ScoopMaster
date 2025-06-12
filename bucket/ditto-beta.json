@@ -1,0 +1,41 @@
+{
+  "version": "3.25.60.0",
+  "description": "An enhanced clipboard manager.",
+  "homepage": "https://ditto-cp.sourceforge.io/",
+  "license": "GPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/sabrogden/Ditto/releases/download/nightly/DittoPortable_3_25_60_0.zip",
+      "hash": "414F47783A24F6928859585E368F53A843B2A4FE95C78D37EACF85D82F1CDC32"
+    }
+  },
+  "extract_dir": "Ditto",
+  "bin": "Ditto.exe",
+  "shortcuts": [
+    [
+      "Ditto.exe",
+      "Ditto"
+    ]
+  ],
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\Ditto.db\")) {",
+    "    Write-Host 'File Ditto.db does not exists. Creating.' -f Yellow",
+    "    Start-Process -FilePath \"$dir\\Ditto.exe\"",
+    "    while (!(Test-Path \"$dir\\Ditto.db\")) {",
+    "        Start-Sleep -Milliseconds 500",
+    "    }",
+    "    Start-Sleep 1",
+    "    Stop-Process -Name Ditto",
+    "}",
+    "$file = 'Ditto.Settings'",
+    "if (!(Test-Path \"$persist_dir\\$file\")) {",
+    "    Write-Host 'File' $file 'does not exists. Creating.' -f Yellow",
+    "    $CONT = @('[Ditto]', 'DBPath3=Ditto.db')",
+    "    Set-Content \"$dir\\$file\" ($CONT -join \"`r`n\") -Encoding Ascii",
+    "}"
+  ],
+  "persist": [
+    "Ditto.db",
+    "Ditto.Settings"
+  ]
+}

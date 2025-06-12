@@ -1,20 +1,16 @@
 {
-    "version": "20240918",
+    "version": "20250612",
     "description": "A free and open source multimedia player and framework that plays most multimedia files as well as DVDs, Audio CDs, VCDs, and various streaming protocols.",
     "homepage": "https://www.videolan.org/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://artifacts.videolan.org/vlc/nightly-win64/20240918-0417/vlc-4.0.0-dev-win64-b5e27edc.7z",
-            "hash": "sha512:e558726f3f0ac9978fdc1f4f651e91b3889b3b9288f9540c872e38acdca8f23477479d0b951d087a79b5535d10b797c08df531bb10b7c085c3aa84fd266feb5c"
-        },
-        "32bit": {
-            "url": "https://artifacts.videolan.org/vlc/nightly-win32/20240202-0423/vlc-4.0.0-dev-win32-82f3c433.7z",
-            "hash": "sha512:785af62fd28a9de212735087f75d834a95ad081899b0af7fa567ba164c89f2fa8a2cd7855693f82859eec2d32d945b9cbd9963012799b174679e88579ed620ea"
+            "url": "https://artifacts.videolan.org/vlc/nightly-win64/20250612-0427/vlc-4.0.0-dev-win64-52ed2542.7z",
+            "hash": "sha512:be141edb2823a1738f1f0c8d4f82fdc014414508b5bc4bb3fbc9d972770fb8a0a49adb4e89fab2c2d16812b93e628cd2fc951e3a04282d5749cb07ba98d5f82b"
         },
         "arm64": {
-            "url": "https://artifacts.videolan.org/vlc/nightly-win64-arm-llvm/20240918-0444/vlc-4.0.0-dev-win64-b5e27edc.7z",
-            "hash": "sha512:b08832836168850ea2739580740f7ac4ac5f8ffdcb101d2eac9e614b5b8462698c7dc0080cb40a6bf50352f36268a45e00f42b0b2af8e6726e3dce3b31a8ce81"
+            "url": "https://artifacts.videolan.org/vlc/nightly-win64-arm-llvm/20250612-0436/vlc-4.0.0-dev-win64-52ed2542.7z",
+            "hash": "sha512:5a9a701f195fd2cebadc470256f20cc2b4d38db5e08b85916fe90c3008375890543e6809931a747de512b42bda9530980db854d0f0ecdc06abe7a1016dee29e5"
         }
     },
     "extract_dir": "vlc-4.0.0-dev",
@@ -36,7 +32,7 @@
     "persist": "portable",
     "checkver": {
         "script": [
-            "$builds = 'win32', 'win64', 'win64-arm-llvm'",
+            "$builds = 'win64', 'win64-arm-llvm'",
             "$scriptver = ''",
             "$urls =  @()",
             "foreach ($build in $builds) {",
@@ -50,7 +46,7 @@
             "}",
             "Write-Output ('version:\"' + $scriptver + '\"') ('urls:\"' + $urls + '\"')"
         ],
-        "regex": "version:\"(?<version>\\d+)\"\\surls:\"(?<win32bitver>.+\\/)(?<win32bitfile>(?<folderversion>vlc-[\\d.]+-dev).+)\\s(?<win64bitver>.+\\/)(?<win64bitfile>.+)\\s(?<winarm64ver>.+\\/)(?<winarm64file>.+)\""
+        "regex": "version:\"(?<version>\\d+)\"\\surls:\"(?<win64bitver>.+\\/)(?<win64bitfile>(?<folderversion>vlc-[\\d.]+-dev).+)\\s(?<winarm64ver>.+\\/)(?<winarm64file>.+)\""
     },
     "autoupdate": {
         "architecture": {
@@ -58,12 +54,6 @@
                 "url": "https://artifacts.videolan.org/vlc/nightly-win64/$matchWin64bitver$matchWin64bitfile",
                 "hash": {
                     "url": "https://artifacts.videolan.org/vlc/nightly-win64/$matchWin64bitverSHA512SUM"
-                }
-            },
-            "32bit": {
-                "url": "https://artifacts.videolan.org/vlc/nightly-win32/$matchWin32bitver$matchWin32bitfile",
-                "hash": {
-                    "url": "https://artifacts.videolan.org/vlc/nightly-win32/$matchWin32bitverSHA512SUM"
                 }
             },
             "arm64": {

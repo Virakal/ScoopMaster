@@ -1,6 +1,6 @@
 {
-    "version": "5.0.1",
-    "description": "Tiny alternative Discord client with a smaller footprint, themes and plugins, multi-profile, and more!",
+    "version": "6.7.1",
+    "description": "Tiny alternative Discord client with a smaller footprint, snappier startup, themes, plugins and more!",
     "homepage": "https://github.com/SpikeHD/Dorion",
     "license": {
         "identifier": "GPL-3.0",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SpikeHD/Dorion/releases/download/v5.0.1/Dorion_5.0.1_win64_portable.zip",
-            "hash": "319dd2c2eec48a35fa13ea2b58130aff5d809a65734bfac2b8842a5af439e64c"
+            "url": "https://github.com/SpikeHD/Dorion/releases/download/v6.7.1/Dorion_6.7.1_win64_portable.zip",
+            "hash": "08dc1479be3b459068271624127aa8ec629f4d1054e3f584d96a713636d14c4b"
         }
     },
     "pre_install": [

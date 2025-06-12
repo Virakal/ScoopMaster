@@ -1,16 +1,16 @@
 {
-    "version": "0.96.12a",
+    "version": "0.97.5",
     "description": "RAINE is an emulator for arcade games",
     "homepage": "https://raine.1emulation.com/",
     "license": "Artistic-2.0",
     "architecture": {
         "32bit": {
             "url": [
-                "https://raine.1emulation.com/archive/raine32-0.96.12a.7z",
+                "https://raine.1emulation.com/archive/raine32-0.97.5.7z",
                 "https://raine.1emulation.com/archive/dlls32-0.96.7z"
             ],
             "hash": [
-                "def54ceda4074613150320412e6e68a8a74c304dea7ff400211389264cdc7a1b",
+                "2fdb983592aa484448bf55ae6d4aeb9b609bcd97a8ec8708b38eef6a462fc603",
                 "50001a8768ee57134403cda1fb7c87141dfed3e1b19ab36ec9278eae2a9667dd"
             ],
             "extract_dir": "raine32",
@@ -29,12 +29,12 @@
         },
         "64bit": {
             "url": [
-                "https://raine.1emulation.com/archive/raine64-0.96.12a.7z",
+                "https://raine.1emulation.com/archive/raine64-0.97.5.7z",
                 "https://raine.1emulation.com/archive/dlls64-0.96.7z"
             ],
             "hash": [
-                "0e1ecb5fa5e4e374ce6010a02ed15bb489dc824ade08390effa062a7aed28e06",
-                "643abad5850d3e5a73c6d61fe3563162403d81238d8c8ac47f9e700a75a34f0c"
+                "402adb03b2d9f2b41dbf125f8c3f250be5940305243231527304cb999c57012f",
+                "512f42da5d07933661c0da7b7f32bc776f31f281c13ce4a65c500441bbcc2eb2"
             ],
             "extract_dir": "raine64",
             "bin": [

@@ -1,18 +1,21 @@
 {
-    "version": "0.28.0",
+    "version": "1.23.3",
     "description": "An open source user-friendly database for logs from VictoriaMetrics.",
     "homepage": "https://docs.victoriametrics.com/VictoriaLogs/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v0.28.0-victorialogs/victoria-logs-windows-amd64-v0.28.0-victorialogs.zip",
-            "hash": "71af6fd5f078d9f39f7ea1b262407b6f518698b6efdfd8aa78fcfde11b7b04f1"
+            "url": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.23.3-victorialogs/victoria-logs-windows-amd64-v1.23.3-victorialogs.zip",
+            "hash": "b0119ab6892662383fbc0d0f48349a98034f22abf2d7111518989f6f38e802a2"
         }
     },
     "bin": "victoria-logs.exe",
     "pre_install": "Get-ChildItem \"$dir\" '*.exe' | ForEach-Object { Rename-Item $_.Fullname ($_.Name -Replace '-windows-amd64-prod') }",
     "persist": "victoria-logs-data",
     "notes": "Example: victoria-logs.exe -storageDataPath=$dir\\victoria-logs-data\\",
+    "suggest": {
+        "vlogsqcli": "vlogsqcli"
+    },
     "checkver": {
         "url": "https://github.com/VictoriaMetrics/helm-charts/raw/master/charts/victoria-logs-single/Chart.yaml",
         "regex": "appVersion: v([\\d.]+)"

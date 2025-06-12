@@ -1,16 +1,13 @@
 {
-    "version": "7.4.3.0",
-    "description": "Pixel phone flashing GUI utility with features.",
+    "version": "8.0.2.1",
+    "description": "Pixel phone flashing GUI utility with features",
     "homepage": "https://github.com/badabing2005/PixelFlasher",
-    "license": "GPL-3.0-only",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/badabing2005/PixelFlasher/releases/download/v7.4.3.0/PixelFlasher.exe",
-            "hash": "cf471fc028c8fdde78cba8e0b1bb93d4d0fe7e067e2ecb74dd530e760d68f555"
+            "url": "https://github.com/badabing2005/PixelFlasher/releases/download/v8.0.2.1/PixelFlasher.exe",
+            "hash": "ec315264f504be2d3c246de21893fe1241c72f205ef2d0c379f22e07be8a88a9"
         }
-    },
-    "suggest": {
-        "adb": "main/adb"
     },
     "shortcuts": [
         [
@@ -18,16 +15,19 @@
             "PixelFlasher"
         ]
     ],
+    "suggest": {
+        "adb": "main/adb"
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/badabing2005/PixelFlasher/releases/download/v$version/PixelFlasher.exe"
+                "url": "https://github.com/badabing2005/PixelFlasher/releases/download/v$version/PixelFlasher.exe",
+                "hash": {
+                    "url": "$url.sha256",
+                    "find": "$sha256"
+                }
             }
-        },
-        "hash": {
-            "url": "$url.sha256",
-            "regex": "$sha256"
         }
     }
 }

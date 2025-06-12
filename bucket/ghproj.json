@@ -1,19 +1,19 @@
 {
-    "version": "0.1.1",
+    "version": "0.1.6",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/ghproj/releases/download/v0.1.1/ghproj_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghproj/releases/download/v0.1.6/ghproj_windows_amd64.zip",
             "bin": [
                 "ghproj.exe"
             ],
-            "hash": "a787e6464ff0a96fbdae609c05e712c090506d157e933f9b2a874aa2962c14ee"
+            "hash": "953b27932e7ab2f86fa3a1c53f8e55359b00c68e54d88008ae5ab23a8e895787"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/ghproj/releases/download/v0.1.1/ghproj_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghproj/releases/download/v0.1.6/ghproj_windows_arm64.zip",
             "bin": [
                 "ghproj.exe"
             ],
-            "hash": "c1929e823caf725645ddda009774e8986206f0c90a0af2961d28346b000ea2ac"
+            "hash": "e76131a3e9109db7512573a2bc50a145952d4f0acba951313e796251556d2792"
         }
     },
     "license": "MIT",

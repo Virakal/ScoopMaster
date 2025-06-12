@@ -1,0 +1,32 @@
+{
+    "version": "3.2.0",
+    "description": "EmulationStation Desktop Edition. Frontend for browsing and launching games from your multi-platform collection.",
+    "homepage": "https://www.es-de.org/",
+    "license": "Freeware",
+    "url": "https://gitlab.com/es-de/emulationstation-de/-/package_files/164503025/download#ES-DE-x64_Portable.zip",
+    "extract_dir": "ES-DE",
+    "hash": "ec574a24a19414ee00746278940b5de41085ceed371239811f408459015f8c19",
+    "persist": [
+        "Emulators",
+        "ES-DE",
+        "ROMs"
+    ],
+    "shortcuts": [
+        [
+            "ES-DE.exe",
+            "ES-DE (EmulationStation Desktop Edition)"
+        ]
+    ],
+    "checkver": ">(\\d+\\.\\d+\\.\\d+) </span>",
+    "autoupdate": {
+        "url": "https://gitlab.com/es-de/emulationstation-de/-/package_files/164503025/download#ES-DE-x64_Portable.zip"
+    },
+    "notes": [
+        "To install RetroArch:",
+        "Choose 'Windows > Download (64bit)' from 'https://www.retroarch.com/?page=platforms'",
+        "and extract to $persist_dir\\Emulators",
+        "",
+        "ROMs root folder: $persist_dir\\ROMs",
+        "Media root folder: $persist_dir\\downloaded_media"
+    ]
+}

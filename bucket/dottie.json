@@ -1,26 +1,26 @@
 {
-    "version": "0.14.2",
+    "version": "0.16.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/jippi/dottie/releases/download/v0.14.2/dottie_Windows_i386.zip",
+            "url": "https://github.com/jippi/dottie/releases/download/v0.16.0/dottie_Windows_i386.zip",
             "bin": [
                 "dottie.exe"
             ],
-            "hash": "9ae44c1bfbc0821e43f7fc2a38a6646128aa613e07f517f764ead0ae038266fd"
+            "hash": "16eb3c72b147c8b9b18b885961d26c3dc2435d48fd39d855d8e43dffa0706a2b"
         },
         "64bit": {
-            "url": "https://github.com/jippi/dottie/releases/download/v0.14.2/dottie_Windows_x86_64.zip",
+            "url": "https://github.com/jippi/dottie/releases/download/v0.16.0/dottie_Windows_x86_64.zip",
             "bin": [
                 "dottie.exe"
             ],
-            "hash": "66b9c5c611db95097980998d6301cd20cbc70fdabcc535445b9ba836eb961dd5"
+            "hash": "2160ba11e82321651f91204d6140e08666c976bf10358cde6980ce7874fcfa14"
         },
         "arm64": {
-            "url": "https://github.com/jippi/dottie/releases/download/v0.14.2/dottie_Windows_arm64.zip",
+            "url": "https://github.com/jippi/dottie/releases/download/v0.16.0/dottie_Windows_arm64.zip",
             "bin": [
                 "dottie.exe"
             ],
-            "hash": "5847653d198411e0949f12b878bd3f7d3b9cbfd3d1b2103f325617387466a2ed"
+            "hash": "382aeb0706a432895df956614f3240ed04d519e893489851a7ddbcfc9e8c1778"
         }
     },
     "homepage": "https://github.com/jippi/dottie",

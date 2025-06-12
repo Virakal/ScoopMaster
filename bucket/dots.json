@@ -1,16 +1,16 @@
 {
-    "version": "2.0.2",
+    "version": "2.1.1",
     "description": "A commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more.",
     "homepage": "https://github.com/nor0x/Dots",
     "license": "Apache 2.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/nor0x/Dots/releases/download/2.0.2/Dots-2.0.2-win-x86.zip",
-            "hash": "df40118fe736515e46dcb3607b6d76f121d180a0352e32303598a0242964f725"
+            "url": "https://github.com/nor0x/Dots/releases/download/v2.1.1/Dots-2.1.1-win-x86.zip",
+            "hash": "8eeccdecade9fa21bc7d88ecf4c3c8c91f75ad7128a536a2f7231eac37c8562f"
         },
         "64bit": {
-            "url": "https://github.com/nor0x/Dots/releases/download/2.0.2/Dots-2.0.2-win-x64.zip",
-            "hash": "9b43754f6d70426aeb377df372ba2350c2a4821e3938b5ee38f01079bd58eaac"
+            "url": "https://github.com/nor0x/Dots/releases/download/v2.1.1/Dots-2.1.1-win-x64.zip",
+            "hash": "d513883e37be515d80bd69c659220e4243140aff02bc8995481403ba6f1a1994"
         }
     },
     "bin": "Dots.exe",
@@ -24,10 +24,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/nor0x/Dots/releases/download/$version/Dots-$version-win-x86.zip"
+                "url": "https://github.com/nor0x/Dots/releases/download/v$version/Dots-$version-win-x86.zip"
             },
             "64bit": {
-                "url": "https://github.com/nor0x/Dots/releases/download/$version/Dots-$version-win-x64.zip"
+                "url": "https://github.com/nor0x/Dots/releases/download/v$version/Dots-$version-win-x64.zip"
             }
         }
     }

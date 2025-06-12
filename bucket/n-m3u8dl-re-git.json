@@ -1,6 +1,6 @@
 {
-    "version": "e9b6c9f+20240828143435",
-    "description": "DASH/HLS stream downloader supporting on-demand/live broadcasts (CI build)",
+    "version": "20250311154712+5ed7b23",
+    "description": "DASH/HLS/MSS/MPD/M3U8/ISM stream downloader (CI build)",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE",
     "license": "MIT",
     "suggest": {
@@ -17,11 +17,28 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/10598853685/N_m3u8DL-RE_Beta_win-x64.zip",
-            "hash": "9eeeb10d53a427e97a4506cf8f12da174f03f76fd5e9c683be9ffeebbcf62d61"
+            "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/13792327257/win-x64.zip",
+            "hash": "7354d7e717de3532d8114e6c94011aa81d9ab9d313af92424aa1129470d155cf"
+        },
+        "32bit": {
+            "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/13792327257/win-NT6.0-x86.zip",
+            "hash": "c897578b0f958a30a79eed334e582c9e14cad494a0510bd71c8c607645d382e8"
+        },
+        "arm64": {
+            "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/13792327257/win-arm64.zip",
+            "hash": "0a5ddec54204fd6ac2ae48acf505f032c0a951783d2ecd63d3476eac28d041ab"
         }
     },
-    "bin": "N_m3u8DL-RE.exe",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\N_m3u8DL-RE*win*2*.zip\" \"$dir\" -Removal"
+    },
+    "bin": [
+        [
+            "N_m3u8DL-RE.exe",
+            "n_m3u8dl-re",
+            "--disable-update-check"
+        ]
+    ],
     "checkver": {
         "script": [
             "$url = 'https://api.github.com/repositories/496221318/actions/workflows/build_latest.yml/runs?branch=main&status=success&per_page=1&exclude_pull_requests=true'",
@@ -33,12 +50,18 @@
             "Write-Output ('commit:\"' + $commit + '\"') ('date:\"' + $created_date + '\"') ('id:\"' + $id + '\"')"
         ],
         "regex": "commit:\"(?<commit>[\\w\\d]+)\"\\sdate:\"(?<date>\\d+)\"\\sid:\"(?<id>\\d+)\"",
-        "replace": "${commit}+${date}"
+        "replace": "${date}+${commit}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/$matchId/N_m3u8DL-RE_Beta_win-x64.zip"
+                "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/$matchId/win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/$matchId/win-NT6.0-x86.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/nilaoda/N_m3u8DL-RE/actions/runs/$matchId/win-arm64.zip"
             }
         }
     }

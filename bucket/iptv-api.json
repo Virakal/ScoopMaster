@@ -1,0 +1,24 @@
+{
+    "version": "1.7.2",
+    "description": "A portable IPTV API to manage IPTV playlists",
+    "homepage": "https://github.com/Guovin/iptv-api",
+    "license": "MIT",
+    "url": "https://github.com/Guovin/iptv-api/releases/download/1.7.2/IPTV-API-v1.7.2.zip",
+    "hash": "30c642d9cea9cc2a088cc3f2a41daa69ff37f913a84213f84ebab124b74a466d",
+    "pre_install": "Rename-Item \"$dir\\IPTV-API-v1.6.3.exe\" \"$dir\\IPTV-API.exe\"",
+    "bin": "IPTV-API.exe",
+    "shortcuts": [
+        [
+            "IPTV-API.exe",
+            "IPTV-API"
+        ]
+    ],
+    "persist": "config",
+    "checkver": {
+        "url": "https://api.github.com/repos/Guovin/iptv-api/releases/latest",
+        "jsonpath": "$.tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Guovin/iptv-api/releases/download/$version/IPTV-API-v$version.zip"
+    }
+}

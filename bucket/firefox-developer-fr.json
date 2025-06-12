@@ -1,5 +1,5 @@
 {
-    "version": "129.0b5",
+    "version": "135.0b2",
     "description": "Developer builds of Firefox: the popular open source web browser. French Language Pack.",
     "homepage": "https://www.mozilla.org/fr/firefox/developer/",
     "license": "MPL-2.0",
@@ -11,12 +11,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/129.0b5/win64/fr/Firefox%20Setup%20129.0b5.exe#/dl.7z",
-            "hash": "sha512:9c77d0e7c8db3a47cc147d7bed33279868361c47642a1d9b3ab335d79b56f7700d264346cc3d1999532b7cf850d602a37d8b2016968ea8c412fce369cdfeb758"
+            "url": "https://archive.mozilla.org/pub/devedition/releases/135.0b2/win64/fr/Firefox%20Setup%20135.0b2.exe#/dl.7z",
+            "hash": "sha512:a1e60f9bb8c4d5d0f2989faf3e558db42cd689c300d0579292b1a537ff659ff021fdfc5e9067768a332ed56846e848442a895778c17eb1425deaadac61b6c7d9"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/129.0b5/win32/fr/Firefox%20Setup%20129.0b5.exe#/dl.7z",
-            "hash": "sha512:70fd2a074d13651e9199aceb5166b8694570a3d28d7460d2d9a69deb1b36dab80d8973de52140b64c6a0db7496dc448a926ec8c64465586326be75ded7116a94"
+            "url": "https://archive.mozilla.org/pub/devedition/releases/135.0b2/win32/fr/Firefox%20Setup%20135.0b2.exe#/dl.7z",
+            "hash": "sha512:fe5cbcaf3d10130ce26e71d3a04bb54a38a6e3432df28434f588e2e8c5f816ff02ea2fe6e15bc66d812fa3b13dc5c0786b5ed36bc8cc484be8ce511f307e8d14"
         }
     },
     "extract_dir": "core",

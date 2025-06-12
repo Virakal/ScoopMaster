@@ -1,44 +1,44 @@
 {
-    "homepage": "https://github.com/mstorsjo/llvm-mingw",
-    "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
-    "version": "19.1.0-20240917",
-    "license": "ISC",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-x86_64.zip",
-            "hash": "7e11dfc9c576046dd2eb37187b6f2fd1ace8f2e2259ee6434174262d62ecaee2",
-            "extract_dir": "llvm-mingw-20240917-ucrt-x86_64"
-        },
-        "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-i686.zip",
-            "hash": "ea45344a082098bb57623a6e1fa9b461a6c51e415770ea696d3527e0c0deb6ec",
-            "extract_dir": "llvm-mingw-20240917-ucrt-i686"
-        },
-        "arm64": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-aarch64.zip",
-            "hash": "14d662fc8d7b40f0cfd062ef5f3e8cbbc1b643004d9a20d1eb9b1e212e1782ef",
-            "extract_dir": "llvm-mingw-20240917-ucrt-aarch64"
-        }
+  "homepage": "https://github.com/mstorsjo/llvm-mingw",
+  "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
+  "version": "20.1.6-20250528",
+  "license": "ISC",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250528/llvm-mingw-20250528-ucrt-x86_64.zip",
+      "hash": "cd7813524da5e5cc747d47fbb483a45d39cdf7e0d8e44a60d17d6dd819290359",
+      "extract_dir": "llvm-mingw-20250528-ucrt-x86_64"
     },
-    "env_add_path": "bin",
-    "checkver": {
-        "regex": "llvm-mingw\\s+(?<date>\\d+)\\swith\\s+LLVM\\s+(?<llvmversion>[\\d.]+)",
-        "replace": "${llvmversion}-${date}"
+    "32bit": {
+      "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250528/llvm-mingw-20250528-ucrt-i686.zip",
+      "hash": "ce3bd286ecdc9912e6815fb5ad58e80d37fcb153a4e10181a364c9d4bffc9747",
+      "extract_dir": "llvm-mingw-20250528-ucrt-i686"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-x86_64.zip",
-                "extract_dir": "llvm-mingw-$matchDate-ucrt-x86_64"
-            },
-            "32bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-i686.zip",
-                "extract_dir": "llvm-mingw-$matchDate-ucrt-i686"
-            },
-            "arm64": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-aarch64.zip",
-                "extract_dir": "llvm-mingw-$matchDate-ucrt-aarch64"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250528/llvm-mingw-20250528-ucrt-aarch64.zip",
+      "hash": "4b4ac50f94cc14f297d3c140cc8260bbbf9c45720c22fd97393ce6fd6605f78c",
+      "extract_dir": "llvm-mingw-20250528-ucrt-aarch64"
     }
+  },
+  "env_add_path": "bin",
+  "checkver": {
+    "regex": "llvm-mingw\\s+(?<date>\\d+)\\swith\\s+LLVM\\s+(?<llvmversion>[\\d.]+)",
+    "replace": "${llvmversion}-${date}"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-x86_64.zip",
+        "extract_dir": "llvm-mingw-$matchDate-ucrt-x86_64"
+      },
+      "32bit": {
+        "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-i686.zip",
+        "extract_dir": "llvm-mingw-$matchDate-ucrt-i686"
+      },
+      "arm64": {
+        "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-aarch64.zip",
+        "extract_dir": "llvm-mingw-$matchDate-ucrt-aarch64"
+      }
+    }
+  }
 }

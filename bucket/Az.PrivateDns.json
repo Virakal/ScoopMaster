@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:65c9d48a5823084f02c3fd926bfcfaa69641024887a67c3e0ab485424b6c4d67ef5fa7e9305ef77327481496f839f49d8e81d8bd604a026132a2c533c7063204",
+    "hash": "sha512:afa6f03d88e507900979f98eab7c1b60e2f9173e70d5d9284352d025ec895c321ae048f85a6f4059104ba19b8a52fc5802030e262440da0dda99ac23620f1568",
     "description": "Microsoft Azure PowerShell - Private DNS service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Private DNS, please visit the following: https://docs.microsoft.com/azure/privatedns/",
     "psmodule": {
         "name": "Az.PrivateDns"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.PrivateDns/1.0.5#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.PrivateDns/1.2.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.0.5"
+    "version": "1.2.0"
 }

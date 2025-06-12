@@ -1,5 +1,5 @@
 {
-    "version": "6.10.0-24-ge847708",
+    "version": "7.4.0-1",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -16,23 +16,20 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86_64.zip.zip",
-            "hash": "9fb76b11964431398ac2a47074757dec9e1a3b0f60564c417c1cde6631cc2db5"
-        },
-        "32bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86.zip.zip",
-            "hash": "1e95f63af362cc66276b7bfa62229296020d16327caf0963a90ff57f8406fb9c"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-7.4.0-1-py313-x86_64.zip.zip",
+            "hash": "da10ff669333c44efb2ff25dda10e50416df5e43af132cd88a801d43c3969a37"
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir/streamlink-$version-py312-x86*.zip\" \"$dir\" -Removal",
-        "$python = try { (py.exe -0p | Select-Object -First 1 | Select-String \\S+\\Z).Matches.Value } catch {}",
+        "Expand-7zipArchive \"$dir/streamlink-$version-py313-x86*.zip\" \"$dir\" -Removal",
+        "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[1] } catch {}",
         "$paths = 'bin', 'pkgs'",
-        "if ($python -and ($ver = [System.Version]((py.exe -V) -Replace '[^\\d.]')) -lt [System.Version]'3.13.0' -and $ver -ge [System.Version]'3.12.0') {",
-        "$null = New-Item -ItemType SymbolicLink -Path \"$dir/Python\" -Target ($python | Split-Path)",
-        "} else { $paths += 'Python' }",
-        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py312-x86*/$_\" \"$dir\" }",
-        "Remove-Item -Recurse \"$dir/streamlink-$version-py312-x86*\"",
+        "if ($python -and ($ver = try { [Version]((py.exe -V) -Replace '[^\\d.]') } catch {}) -lt [Version]'3.14.0' -and $ver -ge [Version]'3.13.0') {",
+        "    $null = New-Item -ItemType Junction -Path \"$dir/Python\" -Target (Split-Path $python)",
+        "}",
+        "else { $paths += 'Python' }",
+        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py313-x86*/$_\" \"$dir\" }",
+        "Remove-Item -Recurse \"$dir/streamlink-$version-py313-x86*\"",
         "if (Test-Path \"$persist_dir/config\") { return }",
         "if (Test-Path \"$env:APPDATA/streamlink/config\") {",
         "    info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
@@ -67,10 +64,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py312-x86_64.zip.zip"
-            },
-            "32bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py312-x86.zip.zip"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py313-x86_64.zip.zip"
             }
         }
     }

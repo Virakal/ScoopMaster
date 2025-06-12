@@ -1,13 +1,23 @@
 {
-    "version": "1.10.0-beta.9",
+    "version": "1.12.0-beta.23",
     "description": "The universal proxy platform (beta/alpha)",
     "homepage": "https://sing-box.sagernet.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SagerNet/sing-box/releases/download/v1.10.0-beta.9/sing-box-1.10.0-beta.9-windows-amd64v3.zip",
-            "hash": "a431b62f43cb1bfa9b40327fd169d4819da15b01dd9160ea3fa7c14fa30d8c31",
-            "extract_dir": "sing-box-1.10.0-beta.9-windows-amd64v3"
+            "url": "https://github.com/SagerNet/sing-box/releases/download/v1.12.0-beta.23/sing-box-1.12.0-beta.23-windows-amd64.zip",
+            "hash": "55a4f7af06cb860709866ea89add28ec0fe998e02b34ba9f3d5e65125918c992",
+            "extract_dir": "sing-box-1.12.0-beta.23-windows-amd64"
+        },
+        "32bit": {
+            "url": "https://github.com/SagerNet/sing-box/releases/download/v1.12.0-beta.23/sing-box-1.12.0-beta.23-windows-386.zip",
+            "hash": "73086a0aea3e3fd3624e98c2a9a088a9ffaeb5ca9dd48e36ed9fa99a75f7ecff",
+            "extract_dir": "sing-box-1.12.0-beta.23-windows-386"
+        },
+        "arm64": {
+            "url": "https://github.com/SagerNet/sing-box/releases/download/v1.12.0-beta.23/sing-box-1.12.0-beta.23-windows-arm64.zip",
+            "hash": "cb9fb23a3dfcf16f9c6b46407e1307a1ae407bc732d1e8f553efcf4040f119dc",
+            "extract_dir": "sing-box-1.12.0-beta.23-windows-arm64"
         }
     },
     "bin": [
@@ -32,8 +42,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-amd64v3.zip",
-                "extract_dir": "sing-box-$version-windows-amd64v3"
+                "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-amd64.zip",
+                "extract_dir": "sing-box-$version-windows-amd64"
+            },
+            "32bit": {
+                "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-386.zip",
+                "extract_dir": "sing-box-$version-windows-386"
+            },
+            "arm64": {
+                "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-arm64.zip",
+                "extract_dir": "sing-box-$version-windows-arm64"
             }
         }
     }

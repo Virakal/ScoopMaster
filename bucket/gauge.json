@@ -1,16 +1,16 @@
 {
-    "version": "1.6.8",
+    "version": "1.6.17",
     "description": "Test automation tool",
     "homepage": "https://gauge.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/getgauge/gauge/releases/download/v1.6.8/gauge-1.6.8-windows.x86_64.zip",
-            "hash": "a232786b1311dc1d8875439ee47a8105ec53dd860892dcf6a614b12ee4a5a176"
+            "url": "https://github.com/getgauge/gauge/releases/download/v1.6.17/gauge-1.6.17-windows.x86_64.zip",
+            "hash": "2f9c2c09e25bca1653df8ca32e0ff248bad053561a4268e844230750aa17e07c"
         },
         "32bit": {
-            "url": "https://github.com/getgauge/gauge/releases/download/v1.6.8/gauge-1.6.8-windows.x86.zip",
-            "hash": "211fc499a2c04edca12bdffbef406834e550c0eb427fdc5dc5f2d5aee1f15342"
+            "url": "https://github.com/getgauge/gauge/releases/download/v1.6.17/gauge-1.6.17-windows.x86.zip",
+            "hash": "e7545fa8c10fcabef35782c79c0e0c40428dcbea8b0700ea78b962f466a9f6ce"
         }
     },
     "bin": "gauge.exe",

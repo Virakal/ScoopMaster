@@ -1,8 +1,11 @@
 {
     "version": "1.4.0",
-    "description": "A cross platform cli app for installing Vencord",
-    "homepage": "https://github.com/Vencord/Installer",
+    "description": "A TUI app for installing Vencord, a Discord client mod",
+    "homepage": "https://vencord.dev/",
     "license": "GPL-3.0-only",
+    "suggest": {
+        "discord": "extras/discord"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Vencord/Installer/releases/download/v1.4.0/VencordInstallerCli.exe",
@@ -10,10 +13,6 @@
         }
     },
     "bin": "VencordInstallerCli.exe",
-    "pre_install": "New-Item -ItemType Directory -Force -Path $persist_dir\\..\\_vencord | Out-Null",
-    "env_set": {
-        "VENCORD_USER_DATA_DIR": "$persist_dir\\..\\_vencord"
-    },
     "checkver": {
         "github": "https://github.com/Vencord/Installer"
     },

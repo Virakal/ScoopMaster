@@ -1,5 +1,5 @@
 {
-    "version": "24.0116",
+    "version": "25.0601",
     "description": "bookget 数字古籍图书下载工具",
     "homepage": "https://github.com/deweizhu/bookget",
     "license": {
@@ -8,27 +8,20 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/deweizhu/bookget/releases/download/24.0116/bookget-24.0116.windows-amd64.7z",
-            "extract_dir": "bookget-24.0116.windows-amd64",
-            "hash": "c87921d63eb911a7cebeb8b3adaed7c37af642de039f3e8a294e8b05cd37c8a4"
+            "url": "https://github.com/deweizhu/bookget/releases/download/v25.0601/bookget.exe",
+            "hash": "5644d551a94bd47e9c145aedfc54cd8f216f25173a286fc2b6eec31e89f8f508"
         }
     },
     "bin": "bookget.exe",
-    "persist": [
-        "config.ini",
-        "cookie.txt"
-    ],
     "checkver": {
         "url": "https://api.github.com/repos/deweizhu/bookget/releases",
         "jsonpath": "$[0].assets[*].browser_download_url",
-        "regex": "/releases/download/([\\d.]+)/bookget-([\\d.]+).windows-amd64.7z",
-        "replace": "${2}"
+        "regex": "/releases/download/v([\\d.]+)/bookget\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/deweizhu/bookget/releases/download/$match1/bookget-$match2.windows-amd64.7z",
-                "extract_dir": "bookget-$version.windows-amd64"
+                "url": "https://github.com/deweizhu/bookget/releases/download/v$version/bookget.exe"
             }
         }
     }

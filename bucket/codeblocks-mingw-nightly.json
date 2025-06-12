@@ -1,42 +1,43 @@
 {
-    "version": "20240914.13570",
+    "version": "1366715103281510",
     "description": "Free open-source C/C++/Fortran IDE (includes additional GCC/G++ compiler and GDB debugger)",
     "homepage": "http://www.codeblocks.org",
     "license": {
         "identifier": "GPL-3.0-or-later"
     },
-    "depends": [
-        "7zip",
-        "mingw-winlibs"
-    ],
+    "depends": "mingw-winlibs",
     "architecture": {
         "64bit": {
-            "hash": "sha1:3b6ca15f426d2f7cf66d777b0b6e5d9d46578134",
-            "url": "https://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/2024/CB_20240914_rev13570_win64.7z",
-            "pre_install": [
-                "$url = \"https://sourceforge.net/projects/codeblocks/rss?path=/Binaries/Nightlies/Prerequisites/\"",
-                "$response = Invoke-WebRequest -Uri $url",
-                "$mingwPath = [regex]::Matches($response.Content, \"/Binaries/Nightlies/Prerequisites/Mingw64dlls(?<ver>[\\d.]+).7z\")[0]",
-                "if ($mingwPath) {",
-                "    $fileUrl = \"https://nchc.dl.sourceforge.net/project/codeblocks$mingwPath\"",
-                "    $tempFileName = ([System.IO.Path]::GetFileName($fileUrl))",
-                "    $tempFile = Join-Path $ENV:TEMP $tempFileName",
-                "    & { Invoke-WebRequest -Uri $fileUrl -OutFile $tempFile } *>&1 | Out-Null",
-                "    & { 7z x $tempFile \"-o$($dir)\" -y } *>&1 | Out-Null",
-                "    & { Remove-Item -Path $tempFile -Confirm:$false -Force | Out-Null } *>&1 | Out-Null",
-                "}",
-                "$gccPath = [regex]::Matches($response.Content, \"/Binaries/Nightlies/Prerequisites/wxmsw(?<sw>[\\d]+)[\\w]+_gcc_cb_wx(?<wx>[\\d]+)_2D_gcc(?<gcc>[\\d]+)-mingw64.7z\")[0]",
-                "if ($gccPath) {",
-                "    $fileUrl = \"https://nchc.dl.sourceforge.net/project/codeblocks$gccPath\"",
-                "    $tempFileName = ([System.IO.Path]::GetFileName($fileUrl))",
-                "    $tempFile = Join-Path $ENV:TEMP $tempFileName",
-                "    & { Invoke-WebRequest -Uri $fileUrl -OutFile $tempFile } *>&1 | Out-Null",
-                "    & { 7z x $tempFile \"-o$($dir)\" -y } *>&1 | Out-Null",
-                "    & { Remove-Item -Path $tempFile -Confirm:$false -Force | Out-Null } *>&1 | Out-Null",
-                "}"
+            "hash": [
+                "sha1:e6e9f6f5264250473409cac93a3cccfc1d200a41",
+                "sha1:05117cf0590b40fd00fe03ee27f7f70cd0c63d28",
+                "sha1:04b4ca59bd298d4e41bab099fd82a122f3089f37"
+            ],
+            "url": [
+                "https://downloads.sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/2025/CB_20250523_rev13667_win64.7z",
+                "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/Mingw64dlls15.1.0.7z",
+                "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/wxmsw32u_gcc_cb_wx328_2D_gcc1510-mingw64.7z"
             ]
         }
     },
+    "post_install": [
+        "Copy-Item \"$bucketsdir\\$bucket\\scripts\\$app\\spellchecker\" \"$dir\\share\\CodeBlocks\" -Recurse -Force",
+        "if (Test-Path \"$Env:AppData\\CodeBlocks\") {",
+        "    if (-not (Get-Item \"$Env:AppData\\CodeBlocks\" -ErrorAction SilentlyContinue).Attributes.HasFlag([IO.FileAttributes]::ReparsePoint)) {",
+        "        Write-Host \"Copying old '$Env:AppData\\CodeBlocks' to '$persist_dir'\" -ForegroundColor Yellow",
+        "        Copy-Item \"$Env:AppData\\CodeBlocks\" \"$persist_dir\" -Recurse -Force",
+        "    }",
+        "}",
+        "Remove-Item \"$Env:AppData\\CodeBlocks\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "New-Item -ItemType Directory -Path \"$persist_dir\" -Force | Out-Null",
+        "New-DirectoryJunction \"$Env:AppData\\CodeBlocks\" \"$persist_dir\" | Out-Null"
+    ],
+    "pre_uninstall": [
+        "Get-Process | Where-Object { $_.Path -like \"$scoopdir\\apps\\$app\\*\" } | Stop-Process -Force -ErrorAction SilentlyContinue",
+        "if ($purge) {",
+        "    Remove-Item \"$Env:AppData\\CodeBlocks\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
     "bin": [
         [
             "codeblocks.exe",
@@ -50,14 +51,30 @@
         ]
     ],
     "checkver": {
-        "url": "https://sourceforge.net/projects/codeblocks/rss?path=/Binaries/Nightlies/",
-        "regex": "/Binaries/Nightlies/(?<year>\\d{4})/CB_(?<date>\\d{8})_rev(?<rev>\\d{5})_win64.7z",
-        "replace": "${date}.${rev}"
+        "script": [
+            "$mainContent = (Invoke-WebRequest 'https://sourceforge.net/projects/codeblocks/rss?path=/Binaries/Nightlies/' -UseBasicParsing).Content;",
+            "$preReqContent = (Invoke-WebRequest 'https://sourceforge.net/projects/codeblocks/rss?path=/Binaries/Nightlies/Prerequisites/' -UseBasicParsing).Content;",
+            "$r1 = [regex]::Match($mainContent, '/Binaries/Nightlies/(?<year>\\d{4})/CB_(?<date>\\d{8})_rev(?<cbVersion>\\d{5})_win64\\.7z');",
+            "$r2 = [regex]::Match($preReqContent, '/Binaries/Nightlies/Prerequisites/Mingw64dlls(?<mingwVersion>[\\d.]+)\\.7z');",
+            "$r3 = [regex]::Match($preReqContent, '/Binaries/Nightlies/Prerequisites/wxmsw(?<wxArch>\\d+u?)_gcc_cb_wx(?<wxVersion>\\d+)_2D_gcc(?<gccVersion>\\d+)-mingw64\\.7z');",
+            "if ($r1.Success -and $r2.Success -and $r3.Success) {",
+            "    $version = \"$($r1.Groups['cbVersion'].Value)$($r2.Groups['mingwVersion'].Value)$($r3.Groups['wxVersion'].Value)$($r3.Groups['gccVersion'].Value)\" -replace '\\.', '';",
+            "    Write-Output \"$version $($r1.Groups['year'].Value) $($r1.Groups['date'].Value) $($r1.Groups['cbVersion'].Value) $($r2.Groups['mingwVersion'].Value) $($r3.Groups['wxArch'].Value) $($r3.Groups['wxVersion'].Value) $($r3.Groups['gccVersion'].Value)\";",
+            "} else {",
+            "    throw 'Error: Version check failed. One or more regex patterns did not match.'",
+            "}"
+        ],
+        "regex": "(?<version>.+)\\s(?<year>.+)\\s(?<date>.+)\\s(?<cbver>.+)\\s(?<mingwver>.+)\\s(?<wxarch>.+)\\s(?<wxver>.+)\\s(?<gccver>.+)",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/$matchYear/CB_$matchDate_rev$matchRev_win64.7z"
+                "url": [
+                    "https://downloads.sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/$matchYear/CB_$matchDate_rev$matchCbver_win64.7z",
+                    "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/Mingw64dlls$matchMingwver.7z",
+                    "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/wxmsw$matchWxarch_gcc_cb_wx$matchWxver_2D_gcc$matchGccver-mingw64.7z"
+                ]
             }
         }
     }

@@ -1,0 +1,26 @@
+{
+    "version": "2.28.0",
+    "description": "Microsoft Graph PowerShell Cmdlets",
+    "homepage": "https://github.com/microsoftgraph/msgraph-sdk-powershell",
+    "license": "https://aka.ms/devservicesagreement",
+    "depends": "microsoft-graph-authentication",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content_Types*.xml\" -Recurse",
+    "pre_uninstall": [
+        "$InstalledDeps = $manifest.depends | Where-Object { Test-Path \"$(appdir $_)\\current\" }",
+        "if (-not $InstalledDeps) { return }",
+        "if ($global) { scoop uninstall --global $InstalledDeps }",
+        "else { scoop uninstall $InstalledDeps }"
+    ],
+    "checkver": {
+        "regex": "<h2>([\\d\\.]+)</h2>",
+        "url": "https://www.powershellgallery.com/packages/microsoft.graph.devicemanagement.enrollment"
+    },
+    "autoupdate": {
+        "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.devicemanagement.enrollment.$version.nupkg"
+    },
+    "hash": "d1a06138e26b59717ee7feb9a6b0e6a24cc84c8a0b7f2d5a31adcfa9b2666ad4",
+    "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.devicemanagement.enrollment.2.28.0.nupkg",
+    "psmodule": {
+        "name": "Microsoft.Graph.DeviceManagement.Enrollment"
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "version": "1.15",
+    "version": "1.17",
     "notes": "记得康康 Readme",
     "description": "Plugin for viewing images in Total Commander.",
     "homepage": "https://totalcmd.net/plugring/TCIrfanView.html",
@@ -9,8 +9,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "http://wincmd.ru/files/9924384/wlx_TCIrfanView_1.15.7z",
-            "hash": "823e93e2d9581873e83e5f2d8d53c92472bca94bb21cb689ed70502d33a81675"
+            "url": "http://wincmd.ru/files/9924384/wlx_TCIrfanView_1.17.7z",
+            "hash": "bdfb9c71a936fbfc9f9db252e4302842b298520d2c06a749d1b6619191ac14eb"
         }
     },
     "post_install": [

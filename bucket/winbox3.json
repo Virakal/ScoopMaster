@@ -1,0 +1,20 @@
+{
+    "version": "3.42",
+    "homepage": "https://mikrotik.com/",
+    "license": "",
+    "url": "https://download.mikrotik.com/routeros/winbox/3.42/winbox64.exe",
+    "hash": "47e83dfd0f9680d2e9623fee92c0acc4db40ea4272edeb53164304620305a24f",
+    "shortcuts": [
+        [
+            "winbox64.exe",
+            "WinBox (v3)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://mikrotik.com/download",
+        "regex": "WinBox (3\\.[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.mikrotik.com/routeros/winbox/$version/winbox64.exe"
+    }
+}

@@ -1,18 +1,19 @@
 {
-    "version": "6.24.2.5857",
-    "description": "下载工具 Free Download Manager",
-    "homepage": "https://freedownloadmanager.org",
+    "version": "6.28.0.6294",
+    "description": "下载: Free Download Manager",
+    "homepage": "https://www.freedownloadmanager.org",
+    "license": "Unknown",
     "url": "https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe",
-    "hash": "781872549e02ad494a7e44675241bbdfe589866302b5e4f94c8d2ee5e31ccb89",
+    "hash": "9f59595d7d79650e1fd9ee86c3e115e4ae336e14596f11f6e3a7807135a55170",
     "innosetup": true,
     "shortcuts": [
         [
             "fdm.exe",
-            "FDM"
+            "Free Download Manager"
         ]
     ],
     "checkver": {
-        "url": "https://freedownloadmanager.org/board/viewtopic.php?f=1&t=17900",
+        "url": "https://www.freedownloadmanager.org/board/viewtopic.php?f=1&t=17900",
         "regex": "([\\d.]+)\\s*\\[\\w+.*?STABLE"
     },
     "autoupdate": {

@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:49c5d9081d76400a3115143cae63852cda746f6b9a2305ffb8d659b7c08e91f9f2d2dbb6b084d918711ece66bc943e03ff14fe7f879f5e17f4633450d6fa289e",
+    "hash": "sha512:7104b3aa6c6e4bd5693a3b9f4ef772c9dc4902d628a61b90e552f0b11b04f76dd3e374502a77f51fb090227ae5aae73cc0288d3150c39b44c08648411221f978",
     "description": "Microsoft Azure PowerShell - Azure Policy Insights cmdlets for Windows PowerShell and PowerShell Core. Allows querying policy evaluation events and compliance states.  For more information on Policy Insights, please visit the following: https://learn.microsoft.com/azure/governance/policy/overview",
     "psmodule": {
         "name": "Az.PolicyInsights"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.PolicyInsights/1.6.5#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.PolicyInsights/1.7.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.6.5"
+    "version": "1.7.1"
 }

@@ -1,13 +1,15 @@
 {
-    "version": "0.92.88",
+    "version": "0.93.26",
     "description": "VKB controllers configuration software",
     "homepage": "https://www.vkbcontrollers.com/pages/downloads",
     "license": "Proprietary",
-    "depends": "megatools",
+    "suggest": {
+        "User guide": "vkb-devcfg-userguide"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.shopify.com/s/files/1/0551/4739/7238/files/VKBDevCfg-C_v0.92.88.zip",
-            "hash": "514b0df0ea304a02eb0274429c8ce0ed431f3c32db226585fa74349d6689c3d1"
+            "url": "https://cdn.shopify.com/s/files/1/0551/4739/7238/files/VKBDevCfg-C_v0.93.26.zip#archive.zip",
+            "hash": "5be8528ab5bd60fe11f0598b3b787b115e7de8717ed587095362eccec27a169c"
         }
     },
     "checkver": {
@@ -15,18 +17,14 @@
         "regex": "https://cdn.shopify.com/s/files/(?<path>[\\d/]+)/files/VKBDevCfg-C_v?([\\d.]+).zip"
     },
     "pre_install": [
-        "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | % { Rename-Item $_.Fullname 'VKBDevCfg-C.exe' }",
-        "$null = New-Item -Path $dir -Name zconfig.ini -ItemType File",
-        "megatools dl --path=$dir https://mega.nz/folder/ghtAlCTD#0br8bLP0UEWIv9BIkewI2g/file/Qg0EiJCJ"
+        "Get-ChildItem $dir 'VKBDevCfg-C*.zip' | Expand-Archive -DestinationPath $dir",
+        "Get-ChildItem $dir 'VKBDevCfg-C*.exe' | Rename-Item -NewName 'VKBDevCfg-C.exe'",
+        "$null = New-Item -Path $dir -Name zconfig.ini -ItemType File"
     ],
     "shortcuts": [
         [
             "VKBDevCfg-C.exe",
             "VKB Device Config"
-        ],
-        [
-            "controller2_17En.pdf",
-            "VKB Device Config documentation"
         ]
     ],
     "persist": [

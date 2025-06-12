@@ -1,10 +1,10 @@
 {
-    "version": "0.83.0",
+    "version": "0.91.0",
     "description": "All-in-one repack for latest Microsoft Visual C++ Redistributable Runtimes, without the original setup bloat payload.",
     "homepage": "https://github.com/abbodi1406/vcredist",
     "license": "Unlicense",
-    "url": "https://github.com/abbodi1406/vcredist/releases/download/v0.83.0/VisualCppRedist_AIO_x86_x64_83.zip",
-    "hash": "3bf5be17793b4236df3248adb7955135223c46a4d13ae8af8b0ff8c7e339bb6e",
+    "url": "https://github.com/abbodi1406/vcredist/releases/download/v0.91.0/VisualCppRedist_AIO_x86_x64_91.zip",
+    "hash": "4b235bbf1aacf638613ee0cf96c7accb312ffac4521d81f6174e73eeaa5f576e",
     "installer": {
         "script": [
             "if (!(is_admin)) { error 'This package requires admin rights to install'; break }",

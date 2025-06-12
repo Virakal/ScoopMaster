@@ -1,9 +1,10 @@
 {
-    "version": "5.7.5.8271",
-    "description": "游戏平台 WeGame",
+    "version": "5.9.5.4191",
+    "description": "游戏: WeGame",
     "homepage": "https://www.wegame.com.cn",
-    "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup5.7.5.8271_gjwegame_0_0.exe#/dl.7z",
-    "hash": "2d2dc91bf404f55af941e627c86c660a0f14b21ada81a1f438d343e61ed7b3e0",
+    "license": "Unknown",
+    "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup5.9.5.4191_gjwegame_0_0.exe#/dl.7z",
+    "hash": "8de9f53ac411a6e27116e598d5e3aff8fa660dc1da2e6fbbc666aa93d6aed330",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\WeGameSetup.exe\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$SYSDIR\",\"$dir\\WeGameSetup.exe\" -Force -Recurse"
@@ -23,13 +24,15 @@
     ],
     "checkver": {
         "script": [
-            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=23761' -Method 'POST'",
-            "Write-Output $res.Content"
+            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq[req][soft_id_list]=23761' -Method 'POST'",
+            "$content = $res.Content | ConvertFrom-Json",
+            "$verName = $content.resp.soft_list[0].ver_name",
+            "$fileName = $content.resp.soft_list[0].file_name",
+            "Write-Output \"$verName|$fileName\""
         ],
-        "jsonpath": "$..file_name",
-        "regex": "WeGameSetup(?<version>.*?)_gjwegame_0_0.exe"
+        "regex": "(?<version>[\\d.]+)\\|(?<id>.*)"
     },
     "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup$version_gjwegame_0_0.exe#/dl.7z"
+        "url": "https://webcdn.m.qq.com/spcmgr/download/$matchId#/dl.7z"
     }
 }

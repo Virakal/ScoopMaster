@@ -1,0 +1,19 @@
+{
+    "homepage": "https://github.com/andy-portmen/native-client",
+    "description": "A NodeJS-based small client helps the following extensions to communicate with your operating system.",
+    "version": "1.0.0",
+    "license": "MTL-2.0",
+    "url": "https://github.com/andy-portmen/native-client/releases/download/1.0.0/windows.zip",
+    "hash": "7760bd7a702f786616c294d6ced90d8cc2df8907e84b562418b04b71f3067295",
+    "installer": {
+        "script": "cmd /c \"$dir\\install.bat\""
+    },
+    "uninstaller": {
+        "script": "cmd /c \"$dir\\uninstall.bat\""
+    },
+    "notes": "First install the \"open in\" series of extensions at https://add0n.com/open-in.html.",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/andy-portmen/native-client/releases/download/$version/windows.zip"
+    }
+}

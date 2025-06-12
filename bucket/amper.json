@@ -1,0 +1,25 @@
+{
+    "version": "0.7.0",
+    "description": "The project configuration and build tool with a focus on the user experience and the IDE support",
+    "homepage": "https://github.com/JetBrains/amper",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://packages.jetbrains.team/maven/p/amper/amper/org/jetbrains/amper/cli/0.7.0/cli-0.7.0-dist.tgz",
+            "hash": "c98afab6c152937dacd27d47575dd521eec95848504d0a140e496d8e2840f184"
+        }
+    },
+    "bin": "amper.ps1",
+    "depends": "intellij-jbr21",
+    "pre_install": "\"& `\"`$(scoop prefix intellij-jbr21)\\bin\\java.exe`\" -ea -XX:+EnableDynamicAgentLoading `$env:AMPER_JAVA_OPTIONS -cp `\"$dir\\lib\\*`\" org.jetbrains.amper.cli.MainKt `@args\" > \"$dir\\amper.ps1\"",
+    "checkver": {
+        "github": "https://github.com/JetBrains/amper"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://packages.jetbrains.team/maven/p/amper/amper/org/jetbrains/amper/cli/$version/cli-$version-dist.tgz"
+            }
+        }
+    }
+}

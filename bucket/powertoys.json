@@ -1,16 +1,23 @@
 {
-    "version": "0.84.1",
+    "version": "0.91.1",
     "description": "A set of utilities for power users to tune and streamline their Windows experience for greater productivity.",
     "homepage": "https://github.com/microsoft/PowerToys",
     "license": "MIT",
+    "notes": [
+        "Add PowerToys context menu option by running:",
+        "Invoke-Expression -Command \"$dir\\install-context.ps1\"",
+        "",
+        "If an error occurs when updating or uninstalling, execute the following command then retry:",
+        "`Stop-Process -Name 'explorer'`"
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.84.1/PowerToysUserSetup-0.84.1-x64.exe",
-            "hash": "1cdaf3482b031d84dae15188de292fb44c5d211698089921040d94b256ebd3ca"
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.91.1/PowerToysUserSetup-0.91.1-x64.exe",
+            "hash": "42ea4a3e8c79a5456476d19e72b3e2ab9393a89c4dc7442eb7ee5a1e3490d38a"
         },
         "arm64": {
-            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.84.1/PowerToysUserSetup-0.84.1-arm64.exe",
-            "hash": "e0207ef5147ee281d4f438e87a30586d8caa24de948950ff1b12e05454622cd9"
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.91.1/PowerToysUserSetup-0.91.1-arm64.exe",
+            "hash": "f3f433fe04049f9197411d792aadebf34e3be7fe16327bd8b73d2a046ed8baf6"
         }
     },
     "installer": {
@@ -19,6 +26,43 @@
             "Get-ChildItem \"$dir\\.tmp\\AttachedContainer\\PowerToysUserSetup*.msi\" | Rename-Item -NewName 'PowerToysSetup.msi' -Force",
             "Expand-MsiArchive \"$dir\\.tmp\\AttachedContainer\\PowerToysSetup.msi\" \"$dir\" -ExtractDir 'PowerToys'",
             "Remove-Item \"$dir\\.tmp\", \"$dir\\$fname\" -Force -Recurse"
+        ]
+    },
+    "post_install": [
+        "'install-context', 'uninstall-context' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\$bucket\\scripts\\$app\\$_.ps1\") {",
+        "        $content = Get-Content \"$bucketsdir\\$bucket\\scripts\\$app\\$_.ps1\"",
+        "        $content = $content.Replace('{{scoop_dir}}', $original_dir)",
+        "        if ($global) {",
+        "            $content = $content.Replace('{{install_scope}}', 'perMachine')",
+        "            $content = $content.Replace('{{registry_scope}}', 'HKLM')",
+        "        }",
+        "        $content = $content.Replace('{{install_scope}}', 'perUser')",
+        "        $content = $content.Replace('{{registry_scope}}', 'HKCU')",
+        "        $content | Set-Content -Path \"$dir\\$_.ps1\"",
+        "    }",
+        "}",
+        "$regpath = 'HKCU:\\Software\\Classes\\powertoys'",
+        "if ($global) {",
+        "    $regpath = $regpath.Replace('HKCU', 'HKLM')",
+        "}",
+        "if (Test-Path -Path $regpath) {",
+        "    Remove-Item -Path $regpath -Recurse -Force | Out-Null",
+        "    Invoke-Expression -Command \"$dir\\install-context.ps1\"",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "$regpath = 'HKCU:\\Software\\Classes\\powertoys'",
+            "if ($global) {",
+            "    $regpath = $regpath.Replace('HKCU', 'HKLM')",
+            "}",
+            "if (Test-Path -Path $regpath) {",
+            "    Invoke-Expression -Command \"$dir\\uninstall-context.ps1\"",
+            "    if ($cmd -ne 'uninstall') {",
+            "        New-Item -Path $regpath -Force | Out-Null",
+            "    }",
+            "}"
         ]
     },
     "shortcuts": [

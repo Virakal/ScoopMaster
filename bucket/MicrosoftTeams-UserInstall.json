@@ -1,16 +1,16 @@
 {
-    "version": "1.7.00.24670",
+    "version": "1.8.00.12555",
     "description": "Microsoft Teams. A unified communication and collaboration platform that combines persistent workplace chat, video meetings, file storage, and application integration",
     "homepage": "https://products.office.com/en-AU/microsoft-teams/group-chat-software",
     "license": "",
     "architecture": {
         "64bit": {
-            "url": "https://statics.teams.cdn.office.net/production-windows/1.7.00.24670/TeamsSetup.exe#/setup.exe",
-            "hash": "162f9a17fcec3a0e9740e8dd0398e617a2b83114fb088d28b2687a2a6ba7cb3f"
+            "url": "https://statics.teams.cdn.office.net/production-windows/1.8.00.12555/TeamsSetup.exe#/setup.exe",
+            "hash": "67a3f926745ef6465a70eb0654905c40da3e5af2f911d99f8084f57362f2f1f2"
         },
         "32bit": {
-            "url": "https://statics.teams.cdn.office.net/production-windows/1.7.00.24670/TeamsSetup.exe#/setup.exe",
-            "hash": "162f9a17fcec3a0e9740e8dd0398e617a2b83114fb088d28b2687a2a6ba7cb3f"
+            "url": "https://statics.teams.cdn.office.net/production-windows/1.8.00.12555/TeamsSetup.exe#/setup.exe",
+            "hash": "67a3f926745ef6465a70eb0654905c40da3e5af2f911d99f8084f57362f2f1f2"
         }
     },
     "pre_install": [

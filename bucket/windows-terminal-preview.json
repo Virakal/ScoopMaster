@@ -1,24 +1,24 @@
 {
-    "version": "1.22.2362.0",
+    "version": "1.23.11132.0",
     "description": "The new Windows Terminal, and the original Windows console host - all in the same place! (Preview version)",
     "homepage": "https://github.com/microsoft/terminal",
     "license": "MIT",
     "notes": "Add Windows Terminal Preview as a context menu option by running `reg import \"$dir\\install-context.reg\"`",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/microsoft/terminal/releases/download/v1.22.2362.0/Microsoft.WindowsTerminalPreview_1.22.2362.0_x64.zip",
-            "hash": "6ea8daf670a28dd43823079617e2054a9a5f4411d0b7025c637b6c6276621d81"
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.23.11132.0/Microsoft.WindowsTerminalPreview_1.23.11132.0_x64.zip",
+            "hash": "83721cda3e0b0ee6ef75b30620579e792f18b081e5e1a71af968d17162143f59"
         },
         "32bit": {
-            "url": "https://github.com/microsoft/terminal/releases/download/v1.22.2362.0/Microsoft.WindowsTerminalPreview_1.22.2362.0_x86.zip",
-            "hash": "ab59cfb83e645012733b13bf9c155c7f29d70e3de75886d46f1cfaf64e90e915"
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.23.11132.0/Microsoft.WindowsTerminalPreview_1.23.11132.0_x86.zip",
+            "hash": "f6534396d44e96207e86d7a49b605fa84ec11b319c9a96af0ffd9ef8c964114b"
         },
         "arm64": {
-            "url": "https://github.com/microsoft/terminal/releases/download/v1.22.2362.0/Microsoft.WindowsTerminalPreview_1.22.2362.0_arm64.zip",
-            "hash": "8f3a10ed10980379277127037fb4a66f40e1a113edf83991b6ff7b2d24613ba5"
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.23.11132.0/Microsoft.WindowsTerminalPreview_1.23.11132.0_arm64.zip",
+            "hash": "2b45ec2e3be93745474b0841ced5141e16dc5b9c0b82686178e48ff2a9ff6499"
         }
     },
-    "extract_dir": "terminal-1.22.2362.0",
+    "extract_dir": "terminal-1.23.11132.0",
     "pre_install": [
         "# Remove this hint in 2023-12-01",
         "$settings_path = \"$env:LOCALAPPDATA\\Packages\\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\\LocalState\"",

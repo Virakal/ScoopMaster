@@ -1,0 +1,57 @@
+{
+    "version": "586d0391952ecb46ddf4754ea6a344133e4bbdab",
+    "description": "nQuake is an ezQuake distro pre-configured to be a complete QuakeWorld experience",
+    "homepage": "https://nquake.com/",
+    "license": "Shareware",
+    "notes": [
+        "nQuake requires the original Quake game files to run",
+        "You can obtain the shareware version from the distribution files for nQuake here:",
+        "https://github.com/nQuake/distfiles/raw/refs/heads/master/qsw106/ID1/PAK0.PAK",
+        "Or, you may obtain a full version of Quake from Steam or GOG, and copy the PAK0.PAK and PAK1.PAK files to the id1 folder"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/gpl.zip",
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/non-gpl.zip",
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/textures.zip",
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-clanarena.zip",
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-fortress.zip",
+                "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-textures.zip"
+            ],
+            "hash": [
+                "ed47ade3ae8015dac224f809dbd1dcea8bea08226b06628f2e3ac0f4db6d7302",
+                "d3878cf6061687febc99241bbadb76df3a55c670eb3daeaa3e3458868572e136",
+                "d9a318c06b9cad5f9854dd7cc35fe62c49562359f16de1fb8c62d962992e35bb",
+                "5f45daa1cff957f912d3c3c52ed8a53ae9897229ce986433562b3b0d52023a21",
+                "f229080e749ba4919dab0a1f3f4ca525357421f2b27450d222ee5c9eb7a56a7e",
+                "3baec9f0a74969b0f89404ff50cf2433a304487522f93ab4c40a52fc1ce59912"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "ezquake.exe",
+            "nQuake"
+        ]
+    ],
+    "persist": "ezquake/configs/config.cfg",
+    "checkver": {
+        "url": "https://api.github.com/repos/nQuake/distfiles/commits/HEAD",
+        "jsonpath": "$.sha"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/gpl.zip",
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/non-gpl.zip",
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/textures.zip",
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-clanarena.zip",
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-fortress.zip",
+                    "https://github.com/nQuake/distfiles/releases/download/snapshot/addon-textures.zip"
+                ]
+            }
+        }
+    }
+}

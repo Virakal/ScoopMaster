@@ -1,5 +1,5 @@
 {
-    "version": "5.23",
+    "version": "5.25",
     "description": "A guided tool will be provided to enable the controlled clean up of a system such that only the desired versions of the Runtime and SDKs remain.",
     "homepage": "https://github.com/dotnet/cli-lab",
     "license": "Copyright © 2024 DigitalVolcano Software Ltd",
@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.digitalvolcano.co.uk/download/DuplicateCleaner-Setup-5.msi",
-            "hash": "a094b8832205a8959d423b08cdfbc67fbbb0dffd04913be54f47b78c7f70ec4e"
+            "hash": "52cf63843eb40bdb5c5161bf5d10cbbb00ccf028726976039be61cdc475138e4"
         }
     },
     "extract_dir": "Duplicate Cleaner 5",

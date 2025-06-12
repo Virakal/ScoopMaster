@@ -1,0 +1,16 @@
+{
+    "version": "2.5.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/FrontasticGmbH/frontastic-cli/releases/download/2.5.0/frontastic-cli_2.5.0_windows_amd64.zip",
+            "bin": [
+                "frontastic.exe"
+            ],
+            "hash": "e4ca7be4ca67325a1b789bd7960f8c93ec41a5cffe9812040fbcff5a65b5c93c"
+        }
+    },
+    "homepage": "https://frontastic.cloud",
+    "post_install": [
+        "Write-Host \"Run 'frontastic init' to get started.\""
+    ]
+}

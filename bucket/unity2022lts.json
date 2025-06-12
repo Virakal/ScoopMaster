@@ -1,27 +1,38 @@
 {
-    "version": "2022.3.47f1",
-    "description": "Unity 3D 2022 (Long Term Support) editor and build tools",
+    "version": "2022.3.63f1",
+    "description": "Unity 3D 2022 (Long Term Support) editor",
     "homepage": "https://unity3d.com/unity/qa/lts-releases",
     "license": "https://unity.com/legal/terms-of-service",
     "notes": [
         "To register:",
         " PS> unity -quit -batchmode -nographics -serial SE-R-I-A-L -username \"username\" -password \"password\""
     ],
-    "url": "https://download.unity3d.com/download_unity/88c277b85d21/Windows64EditorInstaller/UnitySetup64-2022.3.47f1.exe",
-    "hash": "f8594f673ebdc2d28afc15c0006f0fb32de541daff876784bf64d0f85e830aab",
-    "installer": {
-        "script": "Start-Process -FilePath \"$dir\\UnitySetup64-${version}.exe\" -ArgumentList \"/S /D=$dir\" -Wait"
+    "architecture": {
+        "64bit": {
+            "url": "https://download.unity3d.com/download_unity/627856a17a90/Windows64EditorInstaller/UnitySetup64-2022.3.63f1.exe#/dl.exe",
+            "hash": "e542d44bdc0de4130cf4f3f321709fea20509ff4898787d3b5018dcb0eb3dbef"
+        }
     },
+    "installer": {
+        "script": "Start-Process -FilePath \"$dir\\dl.exe\" -ArgumentList \"/S /D=$dir\" -Wait"
+    },
+    "post_install": [
+        "Remove-Item \"$Env:Public\\Desktop\\Unity ${version}.lnk\"",
+        "Remove-Item \"$dir\\dl.exe\""
+    ],
     "uninstaller": {
         "script": "Start-Process -FilePath \"$dir\\Editor\\Uninstall.exe\" -ArgumentList \"/S\" -Wait"
     },
     "bin": "Editor\\Unity.exe",
     "checkver": {
-        "url": "https://unity.com/releases/editor/archive",
-        "regex": "unityhub://2022.(\\d+\\.\\d+f\\d+)/([a-f0-9]+)",
-        "replace": "2022.${1}"
+        "script": "scripts\\unitylts-checkver-2022.ps1",
+        "regex": "([\\d.]+f\\d)\\|([a-zA-Z0-9]+)"
     },
     "autoupdate": {
-        "url": "https://download.unity3d.com/download_unity/$match2/Windows64EditorInstaller/UnitySetup64-2022.$match1.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.unity3d.com/download_unity/$match2/Windows64EditorInstaller/UnitySetup64-$version.exe#/dl.exe"
+            }
+        }
     }
 }

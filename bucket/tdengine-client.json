@@ -1,18 +1,24 @@
 {
-    "version": "3.3.2.0",
+    "version": "3.3.6.9",
     "description": "An open-source big data platform designed and optimized for the Internet of Things (IoT).",
     "homepage": "https://www.taosdata.com/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://tdengine.com/assets-download/3.0/TDengine-client-3.3.2.0-Windows-x64.exe",
-            "hash": "d9ccb5e0fd981b76ac1d479ebabff7ecba69eaa5e5f22ae1d818f6c32ab6e185"
+            "url": "https://tdengine.com/assets-download/3.0/TDengine-client-3.3.6.9-Windows-x64.exe#/setup.exe",
+            "hash": "2d8d49743a859e6c28040998bdfe39aab198ba84b7ffdeadabc1f7f7bc46ecef"
         }
     },
-    "innosetup": true,
+    "installer": {
+        "script": [
+            "Expand-InnoArchive -Path \"$dir\\setup.exe\" -DestinationPath \"$dir\" -ExtractDir '{win}\\System32'",
+            "Expand-InnoArchive -Path \"$dir\\setup.exe\" -DestinationPath \"$dir\" -ExtractDir '{app}' -Removal"
+        ]
+    },
     "bin": [
         "taos.exe",
-        "taosBenchmark.exe"
+        "taosBenchmark.exe",
+        "taosdump.exe"
     ],
     "persist": "cfg",
     "checkver": {
@@ -22,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://tdengine.com/assets-download/$majorVersion.0/TDengine-client-$version-Windows-x64.exe"
+                "url": "https://tdengine.com/assets-download/$majorVersion.0/TDengine-client-$version-Windows-x64.exe#/setup.exe"
             }
         }
     }

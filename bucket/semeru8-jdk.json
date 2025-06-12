@@ -1,19 +1,19 @@
 {
     "description": "The IBM Semeru Runtimes are free production-ready binaries built with the OpenJDK class libraries and the Eclipse OpenJ9 JVM",
     "homepage": "https://developer.ibm.com/languages/java/semeru-runtimes/",
-    "version": "8u422-b05-0.46.1",
+    "version": "8u452-b09-0.51.0",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0,EPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u422-b05_openj9-0.46.1/ibm-semeru-open-jdk_x64_windows_8u422b05_openj9-0.46.1.zip",
-            "hash": "ae9aaa8aac0266f743452849efb93d051f3073f443efb31b4df7cc0220b24435"
+            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u452-b09_openj9-0.51.0/ibm-semeru-open-jdk_x64_windows_8u452b09_openj9-0.51.0.zip",
+            "hash": "bebd4fd9b0d016231642465e88789bbb2049ae32fdf3cf1740ae91a8e9dc031f"
         },
         "32bit": {
-            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u422-b05_openj9-0.46.1/ibm-semeru-open-jdk_x86-32_windows_8u422b05_openj9-0.46.1.zip",
-            "hash": "a1e52dcacf12df74ea6a21d4eb337d274d5a6dba577e8a42dce6a6fc8828a007"
+            "url": "https://github.com/ibmruntimes/semeru8-binaries/releases/download/jdk8u452-b09_openj9-0.51.0/ibm-semeru-open-jdk_x86-32_windows_8u452b09_openj9-0.51.0.zip",
+            "hash": "e3459303a0b060566dab7e8f667e7716de282a99989ee8a344a26891c20e81e6"
         }
     },
-    "extract_dir": "jdk8u422-b05",
+    "extract_dir": "jdk8u452-b09",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"

@@ -1,16 +1,16 @@
 {
-  "version": "0.2.13",
+  "version": "0.2.15",
   "description": "Cargo subcommand for running cargo without dev-dependencies",
   "homepage": "https://github.com/taiki-e/cargo-no-dev-deps",
   "license": "Apache-2.0|MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.13/cargo-no-dev-deps-x86_64-pc-windows-msvc.zip",
-      "hash": "ac354bcc90a2476b466ef213f79829aa9d8797c0b20cec682310902e415b95de"
+      "url": "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.15/cargo-no-dev-deps-x86_64-pc-windows-msvc.zip",
+      "hash": "082581e6aeb3e3056b3f1035db2b87bf0f66b711e3ed28d628880ccba8cef38b"
     },
     "arm64": {
-      "url": "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.13/cargo-no-dev-deps-aarch64-pc-windows-msvc.zip",
-      "hash": "a823c54c44bfbfe8e8c00ebd59aec4de6da70009fba5f9fbfc43ed0e38c83a56"
+      "url": "https://github.com/taiki-e/cargo-no-dev-deps/releases/download/v0.2.15/cargo-no-dev-deps-aarch64-pc-windows-msvc.zip",
+      "hash": "126ac673ae71b420cdc93288a688901640b3a4b332324c11064fe7db84040b39"
     }
   },
   "bin": "cargo-no-dev-deps.exe"

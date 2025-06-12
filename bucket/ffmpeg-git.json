@@ -1,0 +1,31 @@
+{
+    "version": "20250611",
+    "description": "A complete, cross-platform solution to record, convert and stream audio and video.",
+    "homepage": "https://ffmpeg.org",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/EndlesslyFlowering/mpv-winbuild-cmake/releases/download/20250611/ffmpeg-x86_64-znver3-git-f531c9117.7z",
+            "hash": "3f518d2480dd09521d9eff268dc3f29c1e035146c48f10778e4d67bb16d5a072"
+        }
+    },
+    "bin": [
+        "ffmpeg.exe",
+        "ffplay.exe",
+        "ffprobe.exe"
+    ],
+    "checkver": {
+        "script": [
+            "$gh_url = Invoke-WebRequest -Uri 'https://github.com/EndlesslyFlowering/mpv-winbuild-cmake/releases/latest'",
+            "$gh_ass = $gh_url.Content | Select-String -Pattern 'https://github.com/EndlesslyFlowering/mpv-winbuild-cmake/releases/expanded_assets/[\\d]+' | % { $_.Matches.Value }",
+            "$gh_ver = $gh_ass | Select-String -Pattern '[\\d]+' | % { $_.Matches.Value }",
+            "$gh_ur2 = Invoke-WebRequest -Uri $gh_ass",
+            "$gh_fil = $gh_ur2.Content | Select-String -Pattern 'ffmpeg-x86_64-znver3-git-[\\da-f]+.7z' | % { $_.Matches.Value }",
+            "Write-Output $gh_ver $gh_fil"
+        ],
+        "regex": "(?<version>.+)\\s(?<filename>.+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/EndlesslyFlowering/mpv-winbuild-cmake/releases/download/$version/$matchFilename"
+    }
+}

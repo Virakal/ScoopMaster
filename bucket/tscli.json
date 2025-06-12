@@ -1,0 +1,21 @@
+{
+    "version": "0.0.7",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.0.7/tscli_0.0.7_windows_amd64.zip",
+            "bin": [
+                "tscli.exe"
+            ],
+            "hash": "9cb72093c400a77d13482e76ab08a1091971cc83a68f7c6c58cef6826390b394"
+        },
+        "arm64": {
+            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.0.7/tscli_0.0.7_windows_arm64.zip",
+            "bin": [
+                "tscli.exe"
+            ],
+            "hash": "e3b915da1c9884dad90add860ce34cb2c963e5cc4ab9002c0137cd66935fb27e"
+        }
+    },
+    "homepage": "https://github.com/jaxxstorm/tscli",
+    "description": "Interact with the Tailscale API from a CLI."
+}

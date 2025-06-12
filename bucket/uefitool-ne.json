@@ -1,31 +1,31 @@
 {
-    "version": "A68",
-    "description": " Automagically sends IP broadcast packets to all interfaces on Windows.",
+    "version": "A71",
+    "description": "UEFI firmware image viewer and editor.",
     "homepage": "https://github.com/LongSoft/UEFITool",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIExtract_NE_A68_win64.zip",
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIFind_NE_A68_win64.zip",
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFITool_NE_A68_win64.zip"
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFIExtract_NE_A71_win64.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFIFind_NE_A71_win64.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFITool_NE_A71_win64.zip"
             ],
             "hash": [
-                "e5246736373fc0ae4bfe3e7441967bd050ee68281e45e9ba5022595e07a65775",
-                "437edd63683ffec9e3298c58d93a930c9f68edb6d5b5de723de42b49bd514ced",
-                "40a7dc4238523ae22d92e61ec9e254b3458a44fd4faeb8046c47ec66197fff45"
+                "58414048c86135a1639eef79afac9893eaaba84778596593f7f64d1e9dd98b69",
+                "7a1822d605d4c42d2d624d98ca4da1b19fa76ffa9883114e4094b4ba7ef4bac5",
+                "71e5c2e3b3927184a620776005833926b9b1593c36b2aa87d732089bf0d1f480"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIExtract_NE_A68_win32.zip",
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFIFind_NE_A68_win32.zip",
-                "https://github.com/LongSoft/UEFITool/releases/download/A68/UEFITool_NE_A68_win32.zip"
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFIExtract_NE_A71_win32.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFIFind_NE_A71_win32.zip",
+                "https://github.com/LongSoft/UEFITool/releases/download/A71/UEFITool_NE_A71_win32.zip"
             ],
             "hash": [
-                "5eb67043442c20648b54c1eb68bcdafff11640cfcf5ffdaf10d344450822dd25",
-                "37a83e343ca6214d6a5171ccf7c5889e71caa40c93cd3c9ec0eb3a045717e26c",
-                "e949ddf68294f794327afe4a187a81e32b8363ebcbe85a5bd54c64ed5a313039"
+                "79eedc1412227861a21e0e59f5568bbafb5109eb88bb98e9fb9c1aa15a972720",
+                "5eb0e6f45cdb92daf5cc94ed56cddbac63ce0c0b47ffb235c5150e2d3598452b",
+                "fb78e1e6f973c9d738e173adae54a763fa64f1669599953e31eba7ea4f8491fa"
             ]
         }
     },

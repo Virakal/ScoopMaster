@@ -1,11 +1,20 @@
 {
-    "version": "5.1.0",
+    "version": "5.4.0",
     "description": "A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.",
     "homepage": "https://github.com/mhogomchungu/media-downloader",
     "license": "GPL-2.0",
-    "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.1.0/MediaDownloader-5.1.0.zip",
-    "hash": "d09ac00411887504415ec6488779fee5d93ebe59e58647b5402d81037ca511e3",
-    "extract_dir": "MediaDownloader-5.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.0/MediaDownloaderQt6-5.4.0.zip",
+            "hash": "4bb6a7ffe36f0bf07636348c808ea07a6e02580251d0e8297038fde01c0adc6d",
+            "extract_dir": "MediaDownloaderQt6-5.4.0"
+        },
+        "32bit": {
+            "url": "https://github.com/mhogomchungu/media-downloader/releases/download/5.4.0/MediaDownloaderQt5-5.4.0.zip",
+            "hash": "48ab16fd3c7751df6d6eb4e56de7c0ef949903c1a424f7018a6475ae47b77599",
+            "extract_dir": "MediaDownloaderQt5-5.4.0"
+        }
+    },
     "bin": "media-downloader.exe",
     "shortcuts": [
         [
@@ -15,7 +24,15 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/mhogomchungu/media-downloader/releases/download/$version/MediaDownloader-$version.zip",
-        "extract_dir": "MediaDownloader-$version"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mhogomchungu/media-downloader/releases/download/$version/MediaDownloaderQt6-$version.zip",
+                "extract_dir": "MediaDownloaderQt6-$version"
+            },
+            "32bit": {
+                "url": "https://github.com/mhogomchungu/media-downloader/releases/download/$version/MediaDownloaderQt5-$version.zip",
+                "extract_dir": "MediaDownloaderQt5-$version"
+            }
+        }
     }
 }

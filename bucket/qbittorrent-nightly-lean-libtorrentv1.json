@@ -1,5 +1,5 @@
 {
-    "version": "10890682964",
+    "version": "15536072891",
     "description": "Free and reliable P2P Bittorent client.",
     "homepage": "https://github.com/qbittorrent/qBittorrent",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-1.2.19.zip",
-            "hash": "3eb85f451d4033a2037c128e950433ab9c9aeb534dea26da21555f3d31fed970",
+            "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-1.2.20.zip",
+            "hash": "339bfc1a42f364d6721e995d620e6b8b4d56c32b978000810235433eb3505b74",
             "extract_dir": "qBittorrent"
         }
     },
@@ -47,12 +47,13 @@
     "checkver": {
         "script": [
             "try {",
-            "    (Invoke-RestMethod 'https://api.github.com/repositories/3351871/actions/workflows/ci_windows.yaml/runs?branch=master&status=success').workflow_runs[0].id,",
-            "    (Invoke-RestMethod https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml | Select-String 'libt_version: \\[\"[\\d.]+\", \"([\\d.]+)\"\\]').matches.groups[1].value -join ' '",
+            "    $null = (Invoke-WebRequest https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml).Content -cmatch 'libt_version: \\[\"[\\d.]+\", \"([\\d.]+)\"\\]'",
+            "    $Matches[1],",
+            "    (Invoke-RestMethod 'https://api.github.com/repositories/3351871/actions/workflows/ci_windows.yaml/runs?branch=master&status=success').workflow_runs[0].id -join ' '",
             "}",
             "catch { '' }"
         ],
-        "regex": "\\A(\\d+) (?<libtorrent>[\\d.]+)\\Z"
+        "regex": "\\A(?<libtorrent>[\\d.]+) (\\d+)\\Z"
     },
     "autoupdate": {
         "architecture": {

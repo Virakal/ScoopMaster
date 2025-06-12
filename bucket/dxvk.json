@@ -1,5 +1,5 @@
 {
-    "version": "2.4",
+    "version": "2.6",
     "description": "A Vulkan-based translation layer for Direct3D 9/10/11",
     "homepage": "https://github.com/doitsujin/dxvk",
     "license": "Zlib",
@@ -14,12 +14,10 @@
         "Finding other DLL files is usually a good indication of where to copy the DLL file from DXVK.",
         ""
     ],
-    "url": "https://github.com/doitsujin/dxvk/releases/download/v2.4/dxvk-2.4.tar.gz",
-    "hash": "784eb023fb8da8868aa562c30ef5562989211fc9fda6bc5155d95e28049fccc7",
-    "extract_dir": "dxvk-2.4",
+    "url": "https://github.com/doitsujin/dxvk/releases/download/v2.6/dxvk-2.6.tar.gz",
+    "hash": "0d762c33869c46aa85ad563057a9cbe0a247cd5a7d1209e484bdbe7335c77f01",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/doitsujin/dxvk/releases/download/v$version/dxvk-$version.tar.gz",
-        "extract_dir": "dxvk-$version"
+        "url": "https://github.com/doitsujin/dxvk/releases/download/v$version/dxvk-$version.tar.gz"
     }
 }

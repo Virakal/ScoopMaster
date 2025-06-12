@@ -1,26 +1,24 @@
 {
-    "version": "15.9.66",
+    "version": "15.9.74",
     "description": "Microsoft Visual Studio Build Tools 2017",
     "homepage": "https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017",
     "license": "https://visualstudio.microsoft.com/license-terms/mlt552233/",
     "url": "https://aka.ms/vs/15/release/vs_buildtools.exe",
-    "hash": "bbf021f8fbb892f45a64e14d468e53c074f83dc5c11031e11d9eb7575a9984bf",
+    "hash": "77663a26daed6f3e36e1d1982dcb488522fa02d360a7060c570a8ecde0ab70b4",
     "installer": {
         "script": "Start-Process -FilePath \"$dir\\vs_buildtools.exe\" -ArgumentList \"--installPath $dir\\vs\\ --add Microsoft.VisualStudio.Workload.MSBuildTools --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --quiet --norestart\" -Wait"
     },
     "uninstaller": {
         "script": "Start-Process -FilePath \"$dir\\vs_buildtools.exe\" -ArgumentList \"uninstall --installPath $dir\\vs\\ --quiet --norestart\" -Wait"
     },
+    "env_set": {
+        "VS2017_ROOT": "$dir\\vs"
+    },
     "env_add_path": [
         "vs\\Common7\\Tools",
         "vs\\Common7\\IDE",
         "vs\\MSBuild\\15.0\\Bin",
         "vs\\VC\\Auxiliary\\Build"
-    ],
-    "bin": [
-        "vs\\VC\\Auxiliary\\Build\\vcvars64.bat",
-        "vs\\VC\\Auxiliary\\Build\\vcvars32.bat",
-        "vs\\VC\\Auxiliary\\Build\\vcvarsall.bat"
     ],
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes",

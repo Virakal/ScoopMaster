@@ -1,0 +1,54 @@
+{
+    "version": "139.0.1",
+    "description": "Firefox(ja)",
+    "homepage": "https://www.mozilla.org/firefox/",
+    "license": "MPL-2.0",
+    "notes": [
+        "For policies, run 'scoop install firefox-policies'.",
+        "First, make sure to run the 'Firefox Profile Manager' and set default profile, even after an update.",
+        "Check the following resources to completely uninstall:",
+        "- HKCU:\\Software\\Mozilla",
+        "- %APPDATA%\\Mozilla",
+        "- %LOCALAPPDATA%\\Mozilla",
+        "- %ProgramData%\\Mozilla-*"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://archive.mozilla.org/pub/firefox/releases/139.0.1/win64/ja/Firefox%20Setup%20139.0.1.exe#/dl.7z",
+            "hash": "sha512:404974b17b2277b3a4ac0dd0cabf45e9c4d68c149a6d85a4c12432585ecdec5f7104c4ff161708cbf1ca6c4506c2f9b627a84a2849ebafc9e6f7dbaa3193d840"
+        }
+    },
+    "extract_dir": "core",
+    "post_install": "firefox -CreateProfile \"Scoop $persist_dir\\profile\"",
+    "bin": "firefox.exe",
+    "shortcuts": [
+        [
+            "firefox.exe",
+            "Firefox"
+        ],
+        [
+            "firefox.exe",
+            "Firefox Profile Manager",
+            "-P"
+        ]
+    ],
+    "persist": [
+        "distribution",
+        "profile"
+    ],
+    "checkver": {
+        "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+        "jsonpath": "$.LATEST_FIREFOX_VERSION"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/ja/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win64/ja/$basename"
+                }
+            }
+        }
+    }
+}

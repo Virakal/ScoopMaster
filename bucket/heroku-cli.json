@@ -1,16 +1,16 @@
 {
-    "version": "9.2.1",
+    "version": "10.10.0",
     "description": "An essential part of using Heroku, which can perform nearly any Heroku-related task right from your terminal.",
     "homepage": "https://devcenter.heroku.com/articles/heroku-cli",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://cli-assets.heroku.com/versions/9.2.1/6e4f307/heroku-v9.2.1-6e4f307-win32-x64.tar.xz#/dl.xz",
-            "hash": "f71c3e41c795d1b8f65d3ba772d0d5af1accad4f6d36404614f153f3a64a82ff"
+            "url": "https://cli-assets.heroku.com/versions/10.10.0/552ceae/heroku-v10.10.0-552ceae-win32-x64.tar.xz#/dl.xz",
+            "hash": "87496c3569adaf4319944d891e7c2b21392ccd8c59eb31c785e566aed6e16f9f"
         },
         "32bit": {
-            "url": "https://cli-assets.heroku.com/versions/9.2.1/6e4f307/heroku-v9.2.1-6e4f307-win32-x86.tar.xz#/dl.xz",
-            "hash": "5cd9f4f78d208d0159b57ed5e686417ec1765d5086e122b89d0d47cef955e2d7"
+            "url": "https://cli-assets.heroku.com/versions/10.10.0/552ceae/heroku-v10.10.0-552ceae-win32-x86.tar.xz#/dl.xz",
+            "hash": "a5abc83eb6700d17eec4f20b4a71e4e94f664abd71cf304e6d14935f697d0301"
         }
     },
     "pre_install": [

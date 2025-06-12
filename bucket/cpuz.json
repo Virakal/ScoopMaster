@@ -1,41 +1,26 @@
 {
-    "version": "2.11",
+    "version": "2.15",
     "description": "System information software",
     "homepage": "https://www.cpuid.com/softwares/cpu-z.html",
     "license": "Freeware",
-    "url": "https://download.cpuid.com/cpu-z/cpu-z_2.11-cn.zip",
-    "hash": "531147444d1dab6c99ff9586dbb38abfd2be8a85145a705140f51b95d13967d5",
-    "architecture": {
-        "64bit": {
-            "bin": [
-                [
-                    "cpuz_x64.exe",
-                    "cpuz"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "cpuz_x64.exe",
-                    "CPU-Z"
-                ]
-            ]
-        },
-        "32bit": {
-            "bin": [
-                [
-                    "cpuz_x32.exe",
-                    "cpuz"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "cpuz_x32.exe",
-                    "CPU-Z"
-                ]
-            ]
-        }
-    },
+    "url": "https://download.cpuid.com/cpu-z/cpu-z_2.15-cn.zip",
+    "hash": "1fe7d88d79dab8cb813937475bcfd11097850ddb85c37e17f5ed8300e2766997",
+    "pre_install": [
+        "if([System.Environment]::Is64BitOperatingSystem){",
+        "    Remove-Item \"$dir\\cpuz_x32.exe\" -ErrorAction SilentlyContinue",
+        "    Rename-Item \"$dir\\cpuz_x64.exe\" -NewName \"cpuz.exe\"",
+        "} else {",
+        "    Remove-Item \"$dir\\cpuz_x64.exe\" -ErrorAction SilentlyContinue",
+        "    Rename-Item \"$dir\\cpuz_32x.exe\" -NewName \"cpuz.exe\"",
+        "}"
+    ],
     "persist": "cpuz.ini",
+    "shortcuts": [
+        [
+            "cpuz.exe",
+            "CPU-Z"
+        ]
+    ],
     "checkver": "Version ([\\d.]+) for windows",
     "autoupdate": {
         "url": "https://download.cpuid.com/cpu-z/cpu-z_$version-cn.zip"

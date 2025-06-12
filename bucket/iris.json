@@ -1,22 +1,27 @@
 {
-    "version": "0.2.2",
-    "description": "Decentralized messenger",
-    "homepage": "https://iris.to/",
-    "license": "MIT",
-    "url": "https://github.com/irislib/iris-messenger/releases/download/app-v0.2.2/iris_0.2.2_x64_en-US.msi",
-    "hash": "18d1b74612ae6200a29e1ae80d130dd2a3527a6d125926a6784b9f1f6aa8badf",
-    "extract_dir": "PFiles/iris",
+    "version": "1.3.4",
+    "description": "A lightweight video player / 轻量级视频播放器",
+    "homepage": "https://github.com/nini22P/Iris",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/nini22P/Iris/releases/download/v1.3.4/Iris_windows.zip",
+            "hash": "f738d2f6cc9b1e384ae8dd296a47af8325ddf056406bae0edeb9c2a2fb1ade7f"
+        }
+    },
+    "extract_dir": "Iris",
     "shortcuts": [
         [
             "iris.exe",
             "Iris"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/irislib/iris-messenger/releases/latest",
-        "regex": "/iris_(?<version>[\\d.]+)_x64_en-US.msi"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/irislib/iris-messenger/releases/download/app-v$version/iris_$version_x64_en-US.msi"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/nini22P/Iris/releases/download/v$version/Iris_windows.zip"
+            }
+        }
     }
 }

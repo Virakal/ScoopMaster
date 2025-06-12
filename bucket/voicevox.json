@@ -1,6 +1,6 @@
 {
-  "version": "0.19.1",
-  "description": "VOICEVOX GPU/CPU",
+  "version": "0.23.0",
+  "description": "VOICEVOX GPU/DirectML",
   "homepage": "https://voicevox.hiroshiba.jp/",
   "notes": "インストーラーの利用が公式により推奨されています。",
   "license": [
@@ -10,17 +10,17 @@
     }
   ],
   "url": [
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/VOICEVOX.Web.Setup.0.19.1.exe",
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-0.19.1-x64.nsis.7z.0",
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-0.19.1-x64.nsis.7z.1"
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/VOICEVOX.Web.Setup.0.23.0.exe",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/voicevox-0.23.0-x64.nsis.7z.0",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/voicevox-0.23.0-x64.nsis.7z.1"
   ],
   "hash": [
-    "d06ab63688be7cbf5bcffc1f075d61cef25435231d73394fb49c7aebbcac09b4",
-    "a4e1da9bc98e0524c82ce6e7efdc68be9b6704e8d962457a3029c80c2aaf512e",
-    "f18cb03d6939908cf41e5042c4d7c0fd75f6005f5936627cd983b9845f501cfc"
+    "90e17c6e1f6671161d8d486731141f7f4837d0b0019a586bdc0ceba782c9f994",
+    "9fbc2f8a2779df2014d762746ac01a261efa23f19daeacb071d9cd49d18843c2",
+    "4c111dd33b248186edb7380b3c2b88885ed428f5943f47dba0cb28edec9be14e"
   ],
   "installer": {
-    "file": "VOICEVOX.Web.Setup.0.19.1.exe"
+    "file": "VOICEVOX.Web.Setup.0.23.0.exe"
   },
   "uninstaller": {
     "script": [

@@ -1,12 +1,12 @@
 {
-    "version": "6.1.5",
+    "version": "6.2.2",
     "description": "A Mastodon, Pleroma, and Misskey client for desktop application.",
     "homepage": "https://whalebird.social/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/v6.1.5/Whalebird-6.1.5-win-x64.exe#/dl.7z",
-            "hash": "888803a5a42d7a8271e5e27081bec2d574e2852ea70391ac112c226509efe92a",
+            "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/v6.2.2/Whalebird-6.2.2-win-x64.exe#/dl.7z",
+            "hash": "b1fa470e32d3195de2c7881313c56666dd949caf659e73495b02f69f291ed304",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         }
     },

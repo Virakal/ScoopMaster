@@ -1,21 +1,29 @@
 {
-    "version": "10.0.9",
+    "version": "13.0.11",
     "description": "To-do list & time tracker for programmers and other digital workers with Jira, Github, and Gitlab integration",
     "homepage": "https://super-productivity.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/johannesjo/super-productivity/releases/download/v10.0.9/superProductivity-Setup-10.0.9.exe#/dl.7z",
-            "hash": "2fd220c68c009dfcf1048f824ddaa0f6b68c48c6354ff143607edb1e2bd1a4f1",
+            "url": "https://github.com/johannesjo/super-productivity/releases/download/v13.0.11/Super-Productivity-Setup-x64.exe#/dl.7z",
+            "hash": "sha512:feb827411064c0254cbf6582923ecde73dd14cfb7b9563fb948b6f2c745e09a1c8be1fed027ced9c67487ddff6a22e34aab4058aa7d17ee8b3009d62ca6cd6b0",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/johannesjo/super-productivity/releases/download/v13.0.11/Super-Productivity-Setup-arm64.exe#/dl.7z",
+            "hash": "sha512:d9dff0dedbfdddb73cf4d8f9bb81b2644e02b9ad60ac364300ecd5d3a20998f29dc817b4f72c76a89372515aca43b2310aaf06e5ca62e8e58ec8078b1600a8de",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
             ]
         }
     },
     "shortcuts": [
         [
-            "superProductivity.exe",
+            "Super Productivity.exe",
             "Super Productivity"
         ]
     ],
@@ -25,8 +33,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/johannesjo/super-productivity/releases/download/v$version/superProductivity-Setup-$version.exe#/dl.7z"
+                "url": "https://github.com/johannesjo/super-productivity/releases/download/v$version/Super-Productivity-Setup-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/johannesjo/super-productivity/releases/download/v$version/Super-Productivity-Setup-arm64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }

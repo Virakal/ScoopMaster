@@ -1,9 +1,9 @@
 {
-    "version": "2039.2821",
+    "version": "2141.3082",
     "description": "音乐播放器 QQMusic",
     "homepage": "https://y.qq.com",
-    "url": "https://webcdn.m.qq.com/spcmgr/download/QQMusic_Setup_2039.2821_QMgr.exe#/dl.7z",
-    "hash": "8e193a90ee9bace1d2a19792782037a636351ea27a70685e350eea8860a4b8d5",
+    "url": "https://webcdn.m.qq.com/spcmgr/download/QQMusic_Setup_2141.3082_QMgr.exe#/dl.7z",
+    "hash": "9feff8e1d1b268bbc13452912f9ef687da8ad14b8daa775df12dcf804cc11f14",
     "installer": {
         "script": [
             "Import-Module $bucketsdir\\rainte\\scripts\\qqmusic\\AppsUtils.psm1",

@@ -1,26 +1,24 @@
 {
-    "version": "0.4.2_upd3.1",
-    "description": "The connected place for Windows system administration",
+    "version": "0.6.2",
+    "description": "DISMTools is a front-end for DISM that lets you manage your Windows Imaging (WIM) files and a whole lot more.",
     "homepage": "https://github.com/CodingWonders/DISMTools",
     "license": "GPL-3.0-or-later",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.4.2_upd3.1/DISMTools.zip",
-            "hash": "sha512:00a653ed7d32db8eecd9f4577a8446dae680858f0438dc3f8658f0cfd342fa97d28bf8c29af0407e33d05993ff51f2c37300e0824490b780ddbfaec1d408e6f4"
-        }
-    },
+    "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.6.2_stable/DISMTools.zip",
+    "hash": "04c9284930460d18f22437e7c9525e8feec1d2ddef6cb05edf5c5137478181d7",
     "shortcuts": [
         [
             "DISMTools.exe",
             "DISMTools"
         ]
     ],
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\settings.ini\") -or !(Get-Item \"$dir\\settings.ini\").Length) {",
+        "    New-Item \"$dir\\settings.ini\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+        "}"
+    ],
+    "persist": "settings.ini",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version/DISMTools.zip"
-            }
-        }
+        "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version_stable/DISMTools.zip"
     }
 }

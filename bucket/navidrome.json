@@ -1,16 +1,16 @@
 {
-    "version": "0.53.1",
+    "version": "0.56.1",
     "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!",
     "homepage": "https://www.navidrome.org/",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/navidrome/navidrome/releases/download/v0.53.1/navidrome_0.53.1_windows_amd64.zip",
-            "hash": "e7b478866832a3fc96a768cee6090dac1ed16c4e85f675a3b69a7d430b082052"
+            "url": "https://github.com/navidrome/navidrome/releases/download/v0.56.1/navidrome_0.56.1_windows_amd64.zip",
+            "hash": "d2768f52aa292f555d55276fe226ffee2302a1066afe9c8d4ed6c982e410c669"
         },
         "32bit": {
-            "url": "https://github.com/navidrome/navidrome/releases/download/v0.53.1/navidrome_0.53.1_windows_386.zip",
-            "hash": "fd77c2c0b839453d444ddab4a875585d7f6cd4cf9a70748b34dc6603d2ee4860"
+            "url": "https://github.com/navidrome/navidrome/releases/download/v0.56.1/navidrome_0.56.1_windows_386.zip",
+            "hash": "2e681a078f3b98c4255fdf731a74ae8192e9c6466539860610bdc669d0fc27e9"
         }
     },
     "bin": "navidrome.exe",

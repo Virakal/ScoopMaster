@@ -1,0 +1,29 @@
+{
+    "version": "1.15.1",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/xavidop/voiceflow-cli/releases/download/v1.15.1/voiceflow_Windows_i386.zip",
+            "bin": [
+                "voiceflow.exe"
+            ],
+            "hash": "323054ea9b205a5a378621cbb5fdd6714d059a7c6be05c56f61978825c33bf3f"
+        },
+        "64bit": {
+            "url": "https://github.com/xavidop/voiceflow-cli/releases/download/v1.15.1/voiceflow_Windows_x86_64.zip",
+            "bin": [
+                "voiceflow.exe"
+            ],
+            "hash": "6a367731cb957ac603b0a0e39a622d296e390a4f61647626dc541477a74f1f2a"
+        },
+        "arm64": {
+            "url": "https://github.com/xavidop/voiceflow-cli/releases/download/v1.15.1/voiceflow_Windows_arm64.zip",
+            "bin": [
+                "voiceflow.exe"
+            ],
+            "hash": "37ccfb801ee32f14841680b5dddba77d1dbcd8590bdd11cd6644b62b302576fa"
+        }
+    },
+    "homepage": "https://voiceflow.xavidop.me",
+    "license": "Apache-2.0",
+    "description": "The CLI for your Voiceflow projects"
+}

@@ -1,10 +1,10 @@
 {
-    "version": "20240604-1613",
+    "version": "20250611-1611",
     "description": "BeatLeader's ranked playlists by stars.",
     "homepage": "https://github.com/ranmd9a/beatleader-ranked",
     "license": "Unknown",
     "url": "https://github.com/ranmd9a/beatleader-ranked/releases/download/latest/beatleader_ranked_all.zip",
-    "hash": "581f0fc273171591ead516280dcb68048c00861a9950b571e8ac6f1d8ab88fbb",
+    "hash": "0b99ab9edbab65e0557afc37eba56f3e117cdb2fc1667432c1913a452fb9ed87",
     "checkver": {
         "url": "https://api.github.com/repos/ranmd9a/beatleader-ranked/releases/latest",
         "jsonpath": "$.name",
@@ -14,7 +14,7 @@
         "url": "https://github.com/ranmd9a/beatleader-ranked/releases/download/latest/beatleader_ranked_all.zip"
     },
     "post_install": [
-        "$scriptFile = Join-Path -Path \"$dir\" -ChildPath \"InstallSymbolicLinks.ps1\"",
+        "$scriptFile = Join-Path -Path \"$dir\" -ChildPath \"install_symbolic_links.ps1\"",
         "New-Item -Path \"$ScriptFile\" -ItemType \"file\" -Force | Out-Null",
         "$script = @\"",
         "param (",
@@ -65,7 +65,7 @@
     ],
     "notes": [
         "Create symbolic links to the playlists located at $(scoop prefix beatleader-ranked) in the Playlists direcotory of BeatSaber to keep them updated with scoop.",
-        "You can run \"$(scoop prefix beatleader-ranked)\\InstallSymbolicLinks.ps1\" to create all links at once.",
+        "You can run \"$(scoop prefix beatleader-ranked)\\install_symbolic_links.ps1\" to create all links at once.",
         "To automatically create the links when beatleader-ranked is installed/updated, create a file named .post_install_arg in the persist directory and put the path to the Playlists directory in it.",
         "The persist directory typically defaults to $HOME\\scoop\\persist\\beatleader-ranked",
         "Uninstalling the app will not remove the symbolic links. You will need to remove them manually."

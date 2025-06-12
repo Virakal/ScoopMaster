@@ -1,56 +1,100 @@
 {
-    "version": "2024.2.1-242.21829.112",
-    "description": "Cross-Platform IDE for Data Scientists by JetBrains.",
+    "version": "2025.1.1",
+    "description": "JetBrains 的 IDE 产品，用于数据分析、数据科学和机器学习。A IDE by JetBrains for data analysis, data science and machine learning.",
     "homepage": "https://www.jetbrains.com/dataspell/",
     "license": {
-        "identifier": "Proprietary",
+        "identifier": "Unknown",
         "url": "https://www.jetbrains.com/store/license.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/python/dataspell-2024.2.1.exe#/dl.7z",
-            "hash": "3afea5489ec75a5f0bf7bed47ecce0b99d373cd22d1ed780064a610896b0e558"
+            "url": "https://download.jetbrains.com/python/dataspell-2025.1.1.exe",
+            "hash": "9e85ba16e1e13ced3d16f73b3a2e9f9071ca9e949c88f213fbbcc43c4051319d"
         },
         "arm64": {
-            "url": "https://download.jetbrains.com/python/dataspell-2024.2.1-aarch64.exe#/dl.7z",
-            "hash": "04cfc6db40eaaafe36c199f4ec380e21b076e56d2b6538e424fd3f02283cc537"
+            "url": "https://download.jetbrains.com/python/dataspell-2025.1.1-aarch64.exe",
+            "hash": "81a803009299cc2f84997ff7c465069560b998a9b5352bddf9a007cd38955cb1"
         }
     },
-    "extract_to": "IDE",
-    "installer": {
-        "script": [
-            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
-            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
+    "bin": [
+        [
+            "App\\bin\\dataspell64.exe",
+            "DataSpell"
         ]
-    },
+    ],
     "shortcuts": [
         [
-            "IDE\\bin\\dataspell64.exe",
-            "JetBrains\\DataSpell"
+            "App\\bin\\dataspell64.exe",
+            "DataSpell 2025.1.1"
         ]
     ],
-    "persist": [
-        "IDE\\bin\\idea.properties",
-        "IDE\\bin\\dataspell.exe.vmoptions",
-        "IDE\\bin\\dataspell64.exe.vmoptions",
-        "profile"
+    "pre_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "A-Start-PreInstall",
+        "A-Require-Admin",
+        "$LogLocation = '\"' + \"$env:TEMP\\scoop-$app-logs\" + '\"'",
+        "A-Install-Exe -ArgumentList @('/S', \"/LOG=$LogLocation\", \"/D=$dir\\App\") -SuccessFile 'App\\bin\\Uninstall.exe'"
+    ],
+    "post_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "A-Start-PostInstall",
+        "$versionPart = $version -split '\\.'",
+        "$versionShort = \"$($versionPart[0]).$($versionPart[1])\"",
+        "$DataDir = \"DataSpell$versionShort\"",
+        "$LinkPaths = @(\"$env:AppData\\JetBrains\\$DataDir\")",
+        "A-New-LinkDirectory $LinkPaths"
+    ],
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "A-Start-PreUninstall",
+        "A-Require-Admin",
+        "A-Stop-Process",
+        "A-Uninstall-Exe -Uninstaller 'App\\bin\\Uninstall.exe' -ArgumentList @('/S')",
+        "A-Remove-Link",
+        "$versionPart = $version -split '\\.'",
+        "$versionShort = \"$($versionPart[0]).$($versionPart[1])\"",
+        "$DataDir = \"DataSpell$versionShort\"",
+        "A-Remove-TempData @(\"$env:LocalAppData\\JetBrains\\$DataDir\")"
+    ],
+    "post_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "A-Start-PostUninstall"
     ],
     "checkver": {
-        "url": "https://data.services.jetbrains.com/products/releases?code=DS&latest=true&platform=zip&type=release",
-        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
-        "replace": "${ver}-${build}"
+        "script": [
+            ". \"$pwd\\bin\\utils.ps1\"",
+            "$InstallerInfo = A-Get-InstallerInfoFromWinget 'JetBrains.DataSpell' 'exe'",
+            "\"ver:$($InstallerInfo.PackageVersion);\"",
+            "\"x64:$($InstallerInfo.x64_user.InstallerUrl);\"",
+            "\"x86:$($InstallerInfo.x86_user.InstallerUrl);\"",
+            "\"arm64:$($InstallerInfo.arm64_user.InstallerUrl);\""
+        ],
+        "regex": "ver:(?<version>[^;]+)(?:; x64:(?<x64>[^;]*))?(?:; x86:(?<x86>[^;]*))?(?:; arm64:(?<arm64>[^;]*))?"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.jetbrains.com/python/dataspell-$matchVer.exe#/dl.7z"
+                "url": "$matchX64",
+                "hash": {
+                    "url": "bin/scoop-auto-check-update-temp-data.jsonc",
+                    "jsonpath": "$.x64_user.InstallerSha256"
+                }
             },
             "arm64": {
-                "url": "https://download.jetbrains.com/python/dataspell-$matchVer-aarch64.exe#/dl.7z"
+                "url": "$matchArm64",
+                "hash": {
+                    "url": "bin/scoop-auto-check-update-temp-data.jsonc",
+                    "jsonpath": "$.arm64_user.InstallerSha256"
+                }
             }
         },
-        "hash": {
-            "url": "$url.sha256"
-        }
+        "shortcuts": [
+            [
+                "App\\bin\\dataspell64.exe",
+                "DataSpell $version"
+            ]
+        ]
     }
 }

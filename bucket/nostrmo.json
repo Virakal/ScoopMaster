@@ -1,10 +1,11 @@
 {
-    "version": "2.9.0",
+    "version": "3.1.0",
     "description": "A flutter nostr client for all platforms",
     "homepage": "https://github.com/haorendashu/nostrmo",
-    "license": "GPL-3.0-only",
-    "url": "https://nostrmo.com/releases/2_9_0/nostrmo_2.9.0.zip",
-    "hash": "6bc9c17f3c5dec9c98c513eceac520e62d76f8da4e847f3c6b4ba17f87e255b4",
+    "license": "GPL-3.0",
+    "url": "https://github.com/haorendashu/nostrmo/releases/download/3.1.0/nostrmo_windows.zip",
+    "hash": "0b47477f5f8731262218695090d8f3fca8ff3bd94b437387f4080c1540b113de",
+    "extract_dir": "nostrmo_windows",
     "shortcuts": [
         [
             "nostrmo.exe",
@@ -13,6 +14,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://nostrmo.com/releases/$underscoreVersion/nostrmo_$version.zip"
+        "url": "https://github.com/haorendashu/nostrmo/releases/download/$version/nostrmo_windows.zip"
     }
 }

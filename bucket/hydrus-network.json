@@ -1,12 +1,12 @@
 {
-    "version": "589",
+    "version": "625",
     "description": "A personal booru-style media tagger",
     "homepage": "https://hydrusnetwork.github.io/hydrus/",
     "license": "WTFPL",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hydrusnetwork/hydrus/releases/download/v589/Hydrus.Network.589.-.Windows.-.Extract.only.zip",
-            "hash": "9385eb909afceb628fba9735b53706dec58016d6853ae94b4d409927ca16dad6"
+            "url": "https://github.com/hydrusnetwork/hydrus/releases/download/v625/Hydrus.Network.625.-.Windows.-.Extract.only.zip",
+            "hash": "91816bc6886c960ae0d6fae758fa8c7003d0275a3c315b53692323e44afcb298"
         }
     },
     "extract_dir": "Hydrus Network",
@@ -33,7 +33,9 @@
     ],
     "persist": "db",
     "checkver": {
-        "github": "https://github.com/hydrusnetwork/hydrus"
+        "url": "https://api.github.com/repositories/8285925/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "Hydrus.Network.([\\d.]+[a-z]{0,1}).-.Windows.-.Extract.only.zip"
     },
     "autoupdate": {
         "architecture": {

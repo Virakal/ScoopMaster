@@ -1,0 +1,15 @@
+{
+    "version": "1.2.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/apono-io/apono-cli/releases/download/v1.2.2/apono-cli_1.2.2_windows_amd64.zip",
+            "bin": [
+                "apono.exe"
+            ],
+            "hash": "f50ddf1c8f04230e940ad4eb4a33698f59eb6fe2073f027fe09c7009cd072685"
+        }
+    },
+    "homepage": "https://www.apono.io",
+    "license": "Apache-2.0",
+    "description": "View, request and receive permissions to services, DBs and applications."
+}

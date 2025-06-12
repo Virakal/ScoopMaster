@@ -1,19 +1,19 @@
 {
-    "version": "0.3.1",
+    "version": "0.3.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/ghatm/releases/download/v0.3.1/ghatm_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghatm/releases/download/v0.3.5/ghatm_windows_amd64.zip",
             "bin": [
                 "ghatm.exe"
             ],
-            "hash": "de46419bc2ab4f935bea7996dd7d4ced28777bf26a9f0b8b56099bb1cb244401"
+            "hash": "9e9031702285edaf8de8a8609b32fe0e5a7781dc43de9b11d0967f2f146825f3"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/ghatm/releases/download/v0.3.1/ghatm_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghatm/releases/download/v0.3.5/ghatm_windows_arm64.zip",
             "bin": [
                 "ghatm.exe"
             ],
-            "hash": "9c1516ac79ebaba39c58a2eef7b69e56ff548bd99af6bc083a0fc668d97c84a5"
+            "hash": "a2d74b7b6fb5346310b1704a40d1215e634864735299fd9b5b76329f1007f9b8"
         }
     },
     "license": "MIT",

@@ -1,17 +1,17 @@
 {
-    "version": "5.10.3.9178",
+    "version": "5.26.1.10080",
     "description": "Radarr Develop. is a movie collection manager for Usenet and BitTorrent users",
     "homepage": "https://github.com/Radarr/Radarr",
     "license": "MIT",
     "changelog": "https://github.com/Radarr/Radarr/releases",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Radarr/Radarr/releases/download/v5.10.3.9178/Radarr.develop.5.10.3.9178.windows-core-x64.zip",
-            "hash": "fef7e1e983301dc0a251d38cf184f9d303025c988e8546e20c109f15e33af750"
+            "url": "https://github.com/Radarr/Radarr/releases/download/v5.26.1.10080/Radarr.develop.5.26.1.10080.windows-core-x64.zip",
+            "hash": "8bfcf3945ecbd89720550aa5981fbcd885453ff5a100fa0c778cc4adb1816787"
         },
         "32bit": {
-            "url": "https://github.com/Radarr/Radarr/releases/download/v5.10.3.9178/Radarr.develop.5.10.3.9178.windows-core-x86.zip",
-            "hash": "1c91a8d90d40527527bb65d971ce61d9e4f6392ee6df0abe858a17c96caf372c"
+            "url": "https://github.com/Radarr/Radarr/releases/download/v5.26.1.10080/Radarr.develop.5.26.1.10080.windows-core-x86.zip",
+            "hash": "91e2ad1f21aec772f78f3468e03049dfc5e03a1b33aafa7285dbb77f14f0308a"
         }
     },
     "extract_dir": "Radarr",

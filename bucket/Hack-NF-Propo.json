@@ -1,10 +1,10 @@
 {
-    "version": "3.2.1",
+    "version": "3.4.0",
     "description": "Nerd Fonts patched 'Hack' Font family. (Proportional version, for GUI usecases)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip",
-    "hash": "70b2c3e2375f99e9d81b1f01c7ad90efc9d72177ea975fc62f2310fea21e2f18",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip",
+    "hash": "8ca33a60c791392d872b80d26c42f2bfa914a480f9eb2d7516d9f84373c36897",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "e14bccd0a1ba361d9571a61385920dbd98ebf2d93fe7a823bf28a1ded1a8f7e5",
-            "url": "https://github.com/sileshn/DebianSidWSL2/releases/download/20240901/DebianSidWSL2.zip"
+            "hash": "0cb2d1df2755af3460c1e2596af5971fa80e0fc0d083ca3699f3ea0ca726ea40",
+            "url": "https://github.com/sileshn/DebianSidWSL2/releases/download/20250303/DebianSidWSL2.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Debian.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20240901"
+    "version": "20250303"
 }

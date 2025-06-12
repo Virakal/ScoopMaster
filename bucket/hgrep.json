@@ -1,23 +1,15 @@
 {
-    "version": "0.3.7",
-    "description": "Grep with human-friendly search output",
+    "version": "0.3.8",
+    "description": "Grep with human-friendly search results",
     "homepage": "https://github.com/rhysd/hgrep",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/rhysd/hgrep/releases/download/v0.3.7/hgrep-v0.3.7-x86_64-pc-windows-msvc.zip",
-            "hash": "0d1b50cfaf3ee0c017735d01b00066ec3ced1f77de07be971851a6dcb3ee19ce",
-            "extract_dir": "hgrep-v0.3.7-x86_64-pc-windows-msvc"
-        }
-    },
-    "bin": "hgrep.exe",
+    "url": "https://github.com/rhysd/hgrep/releases/download/v0.3.8/hgrep-v0.3.8-x86_64-pc-windows-msvc.zip",
+    "hash": "",
+    "extract_dir": "hgrep-v0.3.8-x86_64-pc-windows-msvc",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/rhysd/hgrep/releases/download/v$version/hgrep-v$version-x86_64-pc-windows-msvc.zip",
-                "extract_dir": "hgrep-v$version-x86_64-pc-windows-msvc"
-            }
-        }
-    }
+        "url": "https://github.com/rhysd/hgrep/releases/download/v$version/hgrep-v$version-x86_64-pc-windows-msvc.zip",
+        "extract_dir": "hgrep-v$version-x86_64-pc-windows-msvc"
+    },
+    "bin": "hgrep.exe"
 }

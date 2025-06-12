@@ -1,12 +1,12 @@
 {
-    "version": "2.2.7.1",
+    "version": "3.0.1.0",
     "description": "Ultracopier is free and open source software licensed under GPL3 that acts as a replacement for files copy dialogs.",
     "homepage": "https://ultracopier.herman-brule.com/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.confiared.com/ultracopier.herman-brule.com/files/2.2.7.1/ultracopier-windows-x86_64-2.2.7.1-setup.exe",
-            "hash": "4dda1a4d7a78dbba5a00744fce3b90b321ff46c7dc93088bbf5c24ab9fc3a6d8"
+            "url": "https://cdn.confiared.com/ultracopier.herman-brule.com/files/3.0.1.0/ultracopier-windows-x86_64-3.0.1.0-setup.exe",
+            "hash": "e4dac636cf90d2741c6f65721018133ac29e3599e1bba3ea8d55418e54917213"
         }
     },
     "pre_install": "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",

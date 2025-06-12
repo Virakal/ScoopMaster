@@ -1,11 +1,11 @@
 {
-    "version": "7.0.0.7",
+    "version": "7.0.0.39            ",
     "description": "iDrive. Online cloud backup for your PC's, Macs and Mobile devices",
     "homepage": "https://idriveonlinebackup.com/",
     "license": "Proprietary",
     "changelog": "https://idriveonlinebackup.com/release-info#win",
     "url": "https://static.idriveonlinebackup.com/downloads/IDriveWinSetup.exe#/setup.exe",
-    "hash": "e1902acdd357a32c21d24385a1e108e38cf8fc145c8ed30d5bb35a6fe16d437e",
+    "hash": "ca08fa61f3619edb085d840fd7d1c6100b9a6c7f9db2d13a1fa8f5c535c8b9ed",
     "pre_download": "Assert-Administrator",
     "pre_install": [
         "$processname = \"id_win\"",
@@ -36,8 +36,14 @@
         ]
     },
     "checkver": {
-        "url": "https://www.majorgeeks.com/files/details/idrive.html",
-        "regex": "files/details/idrive.html\">iDrive ([\\d.]+)"
+        "script": [
+            "$dl_url = 'https://static.idriveonlinebackup.com/downloads/IDriveWinSetup.exe'",
+            "$dl = cache_path 'app_name' 'unknown' $dl_url",
+            "Start-BitsTransfer $dl_url $dl",
+            "$version = (Get-Item $dl).VersionInfo.FileVersion",
+            "return $version"
+        ],
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://static.idriveonlinebackup.com/downloads/IDriveWinSetup.exe#/setup.exe"

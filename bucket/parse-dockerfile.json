@@ -1,0 +1,17 @@
+{
+  "version": "0.1.1",
+  "description": "Dockerfile parser, written in Rust",
+  "homepage": "https://github.com/taiki-e/parse-dockerfile",
+  "license": "Apache-2.0|MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.1/parse-dockerfile-x86_64-pc-windows-msvc.zip",
+      "hash": "2c342f4786e7383c0d3204000c2e99ee75dd99fa7f67d0e98dc79c3bae9e3ce5"
+    },
+    "arm64": {
+      "url": "https://github.com/taiki-e/parse-dockerfile/releases/download/v0.1.1/parse-dockerfile-aarch64-pc-windows-msvc.zip",
+      "hash": "cfac2fb616e7c7f9e297fef1979f2fd20e96d81d0739c24bc4f230c4d6c711f3"
+    }
+  },
+  "bin": "parse-dockerfile.exe"
+}

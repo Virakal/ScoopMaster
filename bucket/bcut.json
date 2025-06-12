@@ -1,26 +1,28 @@
 {
-    "version": "3.4.0",
-    "description": "必剪，B站出品，没啥不同",
-    "homepage": "https://bcut.bilibili.cn/",
-    "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://webcdn.m.qq.com/spcmgr/download/Bcut-Win-3.4.0.exe",
-            "hash": "0a9446505692cdbcbfa0fda0c1ee01b866a00a74036d79b89d4e51cbf03e9d6d"
-        }
+    "autoupdate": {
+        "url": "$matchUrl"
     },
+    "checkver": {
+        "script": [
+            "$script:ver = json_path $page '$.data.version' -single $true",
+            "$script:matchesHashtable = @{'url' = ((json_path $page '$.data.package_download_url' -single $true) -split '\\?')[0]}",
+            "$script:regexp = $null"
+        ],
+        "url": "https://bcut.bilibili.cn/x/bcut/pc/upgrade?version=0"
+    },
+    "description": "必剪，B站官方出品。",
+    "hash": "5ff98567d0c5244966805a84c89d5eff68db89af3fb56699d4140e5cf2fba7d2",
+    "homepage": "https://bcut.bilibili.cn",
     "innosetup": true,
+    "license": {
+        "identifier": "Freeware"
+    },
     "shortcuts": [
         [
             "BCUT.exe",
             "必剪"
         ]
     ],
-    "checkver": {
-        "url": "https://pc.qq.com/detail/19/detail_24619.html",
-        "regex": "Bcut-Win-([\\d.]+).exe"
-    },
-    "autoupdate": {
-        "url": "https://webcdn.m.qq.com/spcmgr/download/Bcut-Win-$version.exe"
-    }
+    "url": "http://boss.hdslb.com/material/static/e0d4115665b5bbc8b76e280cc848bab3/Bcut-Win-3.5.0.exe",
+    "version": "v3.5.0"
 }

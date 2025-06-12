@@ -1,12 +1,12 @@
 {
-    "version": "4.2.2",
-    "description": "Authenticatomatic OpenId server command line utility",
+    "version": "6.0.0-alpha.18",
+    "description": "Authenticatomatic command line utility",
     "homepage": "https://tekelija.gitlab.io",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/recipebook-e50f0.appspot.com/Authenticatomatic.CLI-win-x64-4.2.2.7z",
-            "hash": "b1b1e62b0bcca90fcff8fd2371cd461de1f66e94e01568e260dd34348a35c1fd"
+            "url": "https://storage.googleapis.com/recipebook-e50f0.appspot.com/Authenticatomatic.CLI-win-x64-6.0.0-alpha.18.zip",
+            "hash": "545c82aefc4ad92c62caa7b87333285a3ebdde1527ce0260b4ef938749d831d4"
         }
     },
     "bin": [

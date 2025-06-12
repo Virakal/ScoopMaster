@@ -1,12 +1,12 @@
 {
-    "version": "1.29.0",
+    "version": "1.32.4",
     "description": "kubectl plugin for Kubernetes OpenID Connect authentication (kubectl oidc-login)",
     "homepage": "https://github.com/int128/kubelogin",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/int128/kubelogin/releases/download/v1.29.0/kubelogin_windows_amd64.zip",
-            "hash": "9a3c9a98819f14b727873538031848d25834a677a0964201b26311b1d8b9ddb1"
+            "url": "https://github.com/int128/kubelogin/releases/download/v1.32.4/kubelogin_windows_amd64.zip",
+            "hash": "91f8c75ec306b740ca1de8d647e8fcdf2b933bc2bbfafe2772ed4d8ea5bd2237"
         }
     },
     "bin": [

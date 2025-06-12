@@ -1,28 +1,37 @@
 {
-    "version": "0.3.10",
+    "version": "0.9.0",
     "description": "Get up and running with large language models locally.",
     "homepage": "https://ollama.com/",
     "license": "MIT",
-    "url": "https://github.com/ollama/ollama/releases/download/v0.3.10/OllamaSetup.exe",
-    "hash": "3be19a085685324066762f33c46c4a1121f27e7a1ea9b441d0becf57dbb34375",
-    "innosetup": true,
+    "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
+    "suggest": {
+        "Ollama Full": "extras/ollama-full"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.9.0/ollama-windows-amd64.zip",
+            "hash": "b4c9a283f3bcd91850dcc69bda35e8b26008ecf1394b59ac98bfbb91da7cdd71"
+        },
+        "arm64": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.9.0/ollama-windows-arm64.zip",
+            "hash": "3d5b379d57d347a7563b250779e09f487d3f40d416e7a6df8e2f277dc69ae690"
+        }
+    },
     "bin": "ollama.exe",
-    "shortcuts": [
-        [
-            "ollama app.exe",
-            "Ollama",
-            "",
-            "app.ico"
-        ]
-    ],
     "checkver": {
         "github": "https://github.com/ollama/ollama"
     },
     "autoupdate": {
-        "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe",
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
+            }
+        },
         "hash": {
             "url": "$baseurl/sha256sum.txt"
         }
-    },
-    "notes": "You should have at least 8 GB of RAM available to run the 7B models, 16 GB to run the 13B models, and 32 GB to run the 33B models."
+    }
 }

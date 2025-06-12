@@ -1,10 +1,10 @@
 {
-    "version": "6.3.3",
+    "version": "6.8.7",
     "description": "阿里云盘是一款速度快、不打扰、够安全、易于分享的网盘，由阿里巴巴集团出品",
     "homepage": "https://www.aliyundrive.com/",
     "license": "Unknown",
-    "url": "https://scoop-proxy.233366.xyz/https://cdn.aliyundrive.net/downloads/apps/desktop/update/6.3.3/win32/x64/aDrive-6.3.3.exe#/dl.7z",
-    "hash": "066b6e9759b3349879ac07d9ca45a66d8f62d7dfe5c28f7576fc6b378c7ccd15",
+    "url": "https://scoop-proxy.233366.xyz/https://cdn.aliyundrive.net/downloads/apps/desktop/update/6.8.7/win32/x64/aDrive-6.8.7.exe#/dl.7z",
+    "hash": "6e920e9f6e9ef087cca41bd0339ca70ccc9c01473c7b2b72b2bd74e7706b524c",
     "installer": {
         "script": [
             "# handle runtime cache",
@@ -46,8 +46,8 @@
         "Remove-Item -Force -Recurse \"$dir\\`$TEMP\""
     ],
     "checkver": {
-        "url": "https://www.aliyundrive.com/desktop/version/update.json",
-        "regex": "/([\\d.]+)"
+        "url": "https://api.github.com/repos/microsoft/winget-pkgs/commits?path=manifests/a/Alibaba/aDrive",
+        "regex": "New version.*? ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://scoop-proxy.233366.xyz/https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/x64/aDrive-$version.exe#/dl.7z",

@@ -1,14 +1,26 @@
 {
-    "version": "1.1.2",
+    "version": "2.2.2",
     "description": "A disk usage statistics viewer and cleanup tool.",
     "homepage": "https://windirstat.net",
     "license": {
         "identifier": "GPL-2.0-only",
         "url": "https://github.com/windirstat/windirstat/blob/master/windirstat/res/license.txt"
     },
-    "url": "https://windirstat.mirror.wearetriple.com/wds_current_setup.exe#/dl.7z",
-    "hash": "sha1:6fa92dd2ca691c11dfbfc0a239e34369897a7fab",
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/windirstat/windirstat/releases/download/release/v2.2.2/WinDirStat-x64.msi",
+            "hash": "029cc7158d5e2d475243b36ae207921d8205c1296e24c2cab13f142aefba473d"
+        },
+        "32bit": {
+            "url": "https://github.com/windirstat/windirstat/releases/download/release/v2.2.2/WinDirStat-x86.msi",
+            "hash": "6ddc832cc094bfc25be5d643abde57d408d2aade226e0aa20551f590de432156"
+        },
+        "arm64": {
+            "url": "https://github.com/windirstat/windirstat/releases/download/release/v2.2.2/WinDirStat-arm64.msi",
+            "hash": "78100ea0e828db1c7234ad407d6fff3cac40fe48c6de43126e841f498a7fb854"
+        }
+    },
+    "extract_dir": "WinDirStat",
     "bin": "windirstat.exe",
     "shortcuts": [
         [
@@ -17,14 +29,23 @@
         ]
     ],
     "checkver": {
-        "url": "https://windirstat.net/download.html",
-        "regex": "Latest version: ([\\d.]+)"
+        "url": "https://api.github.com/repos/windirstat/windirstat/releases/latest",
+        "regex": "/releases/tag/release/v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://windirstat.mirror.wearetriple.com/wds_current_setup.exe#/dl.7z",
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/windirstat/windirstat/releases/download/release/v$version/WinDirStat-x64.msi"
+            },
+            "32bit": {
+                "url": "https://github.com/windirstat/windirstat/releases/download/release/v$version/WinDirStat-x86.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/windirstat/windirstat/releases/download/release/v$version/WinDirStat-arm64.msi"
+            }
+        },
         "hash": {
-            "url": "https://windirstat.net/download.html",
-            "regex": "<tt>SHA1:\\s+$sha1</tt>"
+            "url": "$baseurl/WinDirStat-Hashes.txt"
         }
     }
 }

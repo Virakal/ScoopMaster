@@ -1,0 +1,15 @@
+{
+    "version": "1.16.1",
+    "description": "VHDL compiler and simulator",
+    "homepage": "https://github.com/nickg/nvc",
+    "license": "GPL-3.0",
+    "url": "https://github.com/nickg/nvc/releases/download/r1.16.1/nvc-1.16.1.msi",
+    "hash": "e58f008a5323033877ad89a08258ed25335b9854cb691b6c7f7eaf9b99aa1cd2",
+    "checkver": {
+        "regex": "/tag/r([\\w.-]+)"
+    },
+    "bin": "PFiles/NVC/bin/nvc.exe",
+    "autoupdate": {
+        "url": "https://github.com/nickg/nvc/releases/download/r$version/nvc-$version.msi"
+    }
+}

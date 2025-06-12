@@ -1,12 +1,12 @@
 {
-    "version": "2024-07-19",
+    "version": "2025-01-06",
     "description": "Youtube livestream downloader (Prerelease)",
     "homepage": "https://github.com/Kethsar/ytarchive",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Kethsar/ytarchive/releases/download/latest/ytarchive_windows_amd64.zip",
-            "hash": "684a248e517e2d16b56ff614d0423ab0711695f2f1d1079501f3fe97e463ad2c"
+            "hash": "c533109bd2d61704ba25e591cfed6e6aeb8400b359e244eb88f4b8dc2f18bdeb"
         }
     },
     "bin": "ytarchive.exe",

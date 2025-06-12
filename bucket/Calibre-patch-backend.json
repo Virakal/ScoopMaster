@@ -1,5 +1,5 @@
 {
-    "version": "7.18.0",
+    "version": "7.24.0",
     "description": "让 Calibre 不要把中文路径翻译成拼音",
     "homepage": "https://github.com/Cirn09/calibre-do-not-translate-my-path",
     "license": "GPL-3.0",
@@ -16,8 +16,8 @@
     "depends": "ScoopBucket/Calibre",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Cirn09/calibre-do-not-translate-my-path/releases/download/v7.18.0/win-patch-backend-v7.18.0.zip",
-            "hash": "aecc680c1bab64b5bf86445dafed692d3e7f404a885e3746abac4108a3075ff7",
+            "url": "https://github.com/Cirn09/calibre-do-not-translate-my-path/releases/download/v7.24.0/win-patch-backend-v7.24.0.zip",
+            "hash": "6f8edca805b5eb3b1ca9603b1f7557a5205879c3270cfc6ee322bcedfde396ac",
             "extract_dir": "Calibre2\\app\\bin"
         }
     },

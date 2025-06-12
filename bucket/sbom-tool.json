@@ -1,12 +1,12 @@
 {
-    "version": "2.2.9",
+    "version": "4.0.3",
     "description": "The SBOM tool is a highly scalable and enterprise ready tool to create SPDX 2.2 compatible SBOMs for any variety of artifacts.",
     "homepage": "https://github.com/microsoft/sbom-tool",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/microsoft/sbom-tool/releases/download/v2.2.9/sbom-tool-win-x64.exe",
-            "hash": "d4f0e156bc399f2c2c9d5be9355af1dd7b8298ed24e26d47ab32abdd735f06be"
+            "url": "https://github.com/microsoft/sbom-tool/releases/download/v4.0.3/sbom-tool-win-x64.exe",
+            "hash": "721661f52b264526ff5f45627e61a4b176ad463be75ea27b3c480c52d1a7e208"
         }
     },
     "checkver": "github",

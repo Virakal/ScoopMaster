@@ -1,18 +1,18 @@
 {
-    "version": "4.13.0",
+    "version": "4.15.1",
     "description": "Theorem prover from Microsoft Research.",
     "homepage": "https://github.com/Z3Prover/z3",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Z3Prover/z3/releases/download/z3-4.13.0/z3-4.13.0-x64-win.zip",
-            "hash": "2bcd14b6849fddead3d0b3cb671cc9d134a8ef0b1d3eff3efd7d75a5bbf00dd3",
-            "extract_dir": "z3-4.13.0-x64-win"
+            "url": "https://github.com/Z3Prover/z3/releases/download/z3-4.15.1/z3-4.15.1-x64-win.zip",
+            "hash": "4258c799128d49acdf7ee057089c74b6e27f5e61015e57066967980146210b60",
+            "extract_dir": "z3-4.15.1-x64-win"
         },
         "32bit": {
-            "url": "https://github.com/Z3Prover/z3/releases/download/z3-4.13.0/z3-4.13.0-x86-win.zip",
-            "hash": "2a973961389636883f482293367ceeba2e4c529e9d4b1bd7c5bdac10506d3a87",
-            "extract_dir": "z3-4.13.0-x64-win"
+            "url": "https://github.com/Z3Prover/z3/releases/download/z3-4.15.1/z3-4.15.1-x86-win.zip",
+            "hash": "894b57cc24da02154510ecd7333dcf6be77e04e128f06e67afef0f73fc52c517",
+            "extract_dir": "z3-4.15.1-x64-win"
         }
     },
     "bin": "bin\\z3.exe",

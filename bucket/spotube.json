@@ -1,12 +1,12 @@
 {
-    "version": "3.8.1",
+    "version": "4.0.2",
     "description": "A lightweight free Spotify client, which handles playback manually, streams music using Youtube & no Spotify premium account is needed.",
     "homepage": "https://spotube.krtirtho.dev/",
     "license": "BSD-4-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/KRTirtho/spotube/releases/download/v3.8.1/Spotube-windows-x86_64-setup.exe",
-            "hash": "70d1136d1838748d86c7e2dfabc4c071662c3542eef5f75ffe65c771ce6f87d4"
+            "url": "https://github.com/KRTirtho/spotube/releases/download/v4.0.2/Spotube-windows-x86_64-setup.exe",
+            "hash": "d0e1a282d89b59d99c518a8d8de14cb3cfd1ba02f8ac2ad2cfe06f38004618e7"
         }
     },
     "innosetup": true,

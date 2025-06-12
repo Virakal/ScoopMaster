@@ -1,37 +1,37 @@
 {
-    "version": "4.67",
-    "description": "Plugins for image viewer Irfanview.",
-    "homepage": "https://www.irfanview.com",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://www.irfanview.com/eula.htm"
+  "version": "4.72",
+  "description": "Plugins for image viewer Irfanview.",
+  "homepage": "https://www.irfanview.com",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://www.irfanview.com/eula.htm"
+  },
+  "depends": "Irfanview",
+  "architecture": {
+    "64bit": {
+      "url": "https://www.irfanview.info/files/iview472_plugins_x64.zip",
+      "hash": "5eed79fc51ea8a760778fb7b01ba5d9fee031cee732ca0182ff03cfcc2db0d2c"
     },
-    "depends": "Irfanview",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.irfanview.info/files/iview467_plugins_x64.zip",
-            "hash": "b4986c5039baf32a7444603d1ce6a5a57af8118cf9067198ab74d5094b7bd489"
-        },
-        "32bit": {
-            "url": "https://www.irfanview.info/files/iview467_plugins.zip",
-            "hash": "9d62c7b44c8d83c617758d90d373b3dd25dfa9af90a45a2c9629c4998b35d29a"
-        }
-    },
-    "installer": {
-        "script": "Copy-Item \"$dir\\*\" \"$(appdir Irfanview $global)\\current\\Plugins\" -Force -Recurse"
-    },
-    "checkver": {
-        "url": "https://www.irfanview.com",
-        "regex": ">\\s*version\\s+([\\d\\.-]+)\\s*<"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.irfanview.info/files/iview$cleanVersion_plugins_x64.zip"
-            },
-            "32bit": {
-                "url": "https://www.irfanview.info/files/iview$cleanVersion_plugins.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://www.irfanview.info/files/iview472_plugins.zip",
+      "hash": "67917f5fb6a03e5e581d766c6a265bc201a4fea0cafbb549688233b95f8364b6"
     }
+  },
+  "installer": {
+    "script": "Copy-Item \"$dir\\*\" \"$(appdir Irfanview $global)\\current\\Plugins\" -Force -Recurse"
+  },
+  "checkver": {
+    "url": "https://www.irfanview.com",
+    "regex": ">\\s*version\\s+([\\d\\.-]+)\\s*<"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.irfanview.info/files/iview$cleanVersion_plugins_x64.zip"
+      },
+      "32bit": {
+        "url": "https://www.irfanview.info/files/iview$cleanVersion_plugins.zip"
+      }
+    }
+  }
 }

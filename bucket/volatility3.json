@@ -1,31 +1,28 @@
 {
-    "version": "2.7.0",
-    "description": "The volatile memory extraction framework",
-    "homepage": "https://github.com/volatilityfoundation/volatility3",
-    "license": "https://github.com/volatilityfoundation/volatility3/blob/develop/LICENSE.txt",
-    "checkver": "github",
-    "suggest": {
-        "python": "python"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/volatilityfoundation/volatility3/archive/refs/tags/v2.7.0.zip",
-            "hash": "c5e8ed567e7f792f298501cc2c39edc5e064a6be9fd4c574a75e9c5d3ada3ab9"
-        }
-    },
-    "post_install": "pip3 install -r (Join-Path $dir \"requirements.txt\")",
-    "autoupdate": {
-        "url": "https://github.com/volatilityfoundation/volatility3/archive/refs/tags/v$version.zip"
-    },
-    "pre_install": [
-        "Move-Item -Path $dir\\volatility3-*\\* -Destination $dir -Force -ErrorAction Stop",
-        "Remove-Item -Path $dir\\volatility3-* -Recurse -Force -ErrorAction Stop",
-        "$content = (Get-Content -Path $(Join-Path $(Find-BucketDirectory -Root -Name ctftools) starters/volatility3.cmd)) -replace '%%HOME%%', $dir",
-        "Set-Content -Path $(Join-Path $dir volatility3.cmd) -Value $content -Encoding UTF8",
-        "Set-Content -Path $(Join-Path $dir vol3.cmd) -Value $content -Encoding UTF8"
+  "version": "2.26.0",
+  "description": "The volatile memory extraction framework",
+  "homepage": "https://github.com/volatilityfoundation/volatility3",
+  "license": "https://github.com/volatilityfoundation/volatility3/blob/develop/LICENSE.txt",
+  "checkver": "github",
+  "suggest": {
+    "python": "python"
+  },
+  "extract_dir": "volatility3-2.26.0",
+  "url": "https://github.com/volatilityfoundation/volatility3/archive/refs/tags/v2.26.0.zip",
+  "hash": "d87343f93d8e4fd321c86f821df3ce315e84587485c5842d5267ab44112cd74e",
+  "post_install": "pip3 install -r (Join-Path $dir \"requirements.txt\")",
+  "autoupdate": {
+    "url": "https://github.com/volatilityfoundation/volatility3/archive/refs/tags/v$version.zip",
+    "extract_dir": "volatility3-$version"
+  },
+  "bin": [
+    [
+      "vol.py",
+      "vol3"
     ],
-    "bin": [
-        "volatility3.cmd",
-        "vol3.cmd"
+    [
+      "vol.py",
+      "volatility3"
     ]
+  ]
 }

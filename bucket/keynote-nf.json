@@ -1,11 +1,22 @@
 {
-    "version": "1.9.5.2",
+    "version": "2.1.0.4",
     "description": "A tabbed notebook with RichText editor, multi-level notes and strong encryption.",
     "homepage": "https://github.com/dpradov/keynote-nf",
     "license": "MPL-2.0",
-    "url": "https://github.com/dpradov/keynote-nf/releases/download/v1.9.5.2/KeyNote.NF_1.9.5.2.zip",
-    "hash": "3e757ed370f72edf5c09905713d36186f1a45e07669ae4c28c6c4fd8dff1e85c",
-    "bin": "keynote.exe",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dpradov/keynote-nf/releases/download/v2.1.0.4/KeyNote.NF_2.1.0.4_x64.zip",
+            "hash": "38e3bdb5a1d0c2acb1df20dc6289af5f543aa5bc8f8099ab007224a5a0945570"
+        },
+        "32bit": {
+            "url": "https://github.com/dpradov/keynote-nf/releases/download/v2.1.0.4/KeyNote.NF_2.1.0.4_x86.zip",
+            "hash": "b467efdc358dda70f73afb09226026e75f7f460576a5cd23ad2933e1c2e4d344"
+        }
+    },
+    "bin": [
+        "keynote.exe",
+        "kntLauncher.exe"
+    ],
     "shortcuts": [
         [
             "keynote.exe",
@@ -15,7 +26,14 @@
     "persist": "Profiles",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/dpradov/keynote-nf/releases/download/v$version/KeyNote.NF_$version.zip",
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dpradov/keynote-nf/releases/download/v$version/KeyNote.NF_$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/dpradov/keynote-nf/releases/download/v$version/KeyNote.NF_$version_x86.zip"
+            }
+        },
         "hash": {
             "url": "$url.sha256",
             "regex": "$sha256"

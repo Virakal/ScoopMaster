@@ -1,0 +1,39 @@
+{
+    "version": "25.1.2.0198",
+    "description": "4K Video Downloader+. ",
+    "homepage": "https://www.4kdownload.com/products/videodownloader",
+    "license": "",
+    "changelog": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.4kdownload.com/app/4kvideodownloaderplus_25.1.2_x64.zip?source=website#/setup.7z",
+            "hash": "7a17e559a2bdb832c4e190c2525246acb0eb25b1237509b999e0e6b9e0cecb56"
+        },
+        "32bit": {
+            "url": "https://dl.4kdownload.com/app/4kvideodownloaderplus_25.1.2.zip?source=website#/setup.7z",
+            "hash": "adc95c14de062dfda713d76d9ab35f4b0d3bc6f0004b5c1b91df445f2ad289c4"
+        }
+    },
+    "extract_dir": "4kvideodownloaderplus",
+    "bin": "4kvideodownloaderplus.exe",
+    "shortcuts": [
+        [
+            "4kvideodownloaderplus.exe",
+            "4K Video Downloader+"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.4kdownload.com/products/videodownloader",
+        "regex": "softwareVersion\">([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.4kdownload.com/app/4kvideodownloaderplus_$majorVersion.$minorVersion.$patchVersion_x64.zip?source=website#/setup.7z"
+            },
+            "32bit": {
+                "url": "https://dl.4kdownload.com/app/4kvideodownloaderplus_$majorVersion.$minorVersion.$patchVersion.zip?source=website#/setup.7z"
+            }
+        }
+    }
+}

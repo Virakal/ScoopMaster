@@ -1,40 +1,47 @@
 {
-    "version": "5.38.1",
-    "description": "Galgame翻译工具, 支持剪贴板, OCR, HOOK, 支持30余种翻译工具, 支持TTS",
+    "version": "10.4.4",
+    "description": "A Visual Novel translation tool, with HOOK / OCR / clipboard support",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.38.1/LunaTranslator.zip",
-            "hash": "2de497e1bdc1ce269791034f69b1b2ecfb6bca3ecfe7b946ad5e450f8d82851e",
-            "extract_dir": "LunaTranslator"
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.4.4/LunaTranslator_x64_win10.zip",
+            "hash": "6f69792619a0e0c58ad77864f73ab7cd076eddfd2a5d64e8a2540f3d9c10531e",
+            "extract_dir": "LunaTranslator_x64_win10"
         },
         "32bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v5.38.1/LunaTranslator_x86.zip",
-            "hash": "019fd651a7b86f0d70f32dca1af0a20950323d264391048e0b57bf0c7d355eaf",
-            "extract_dir": "LunaTranslator_x86"
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.4.4/LunaTranslator_x86_win7.zip",
+            "hash": "1abecf883590b08bdfb188b111cd562ad017350d504d7c3e21b3d6266667f0c3",
+            "extract_dir": "LunaTranslator_x86_win7"
         }
     },
     "shortcuts": [
         [
             "LunaTranslator.exe",
             "LunaTranslator"
+        ],
+        [
+            "LunaTranslator_admin.exe",
+            "LunaTranslator (admin)"
+        ],
+        [
+            "LunaTranslator_debug.bat",
+            "LunaTranslator (debug)"
         ]
     ],
     "persist": [
+        "cache",
         "userconfig",
-        "resources"
+        "translation_record"
     ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator.zip",
-                "extract_dir": "LunaTranslator"
+                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win10.zip"
             },
             "32bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86.zip",
-                "extract_dir": "LunaTranslator_x86"
+                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
             }
         }
     }

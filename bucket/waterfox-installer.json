@@ -1,33 +1,26 @@
 {
-    "version": "6.0.19",
+    "version": "6.5.9",
     "description": "Fast and Private Web Browser based on Firefox.",
     "homepage": "https://www.waterfox.net/",
     "license": "https://github.com/WaterfoxCo/Waterfox/blob/current/LICENSE",
     "architecture": {
         "64bit": {
-            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.19/WINNT_x86_64/Waterfox%20Setup%20G6.0.19.exe#/waterfox-installer.exe",
-            "hash": "556e93eeadf05927102c9676cc93122f4b8afa6d0a921f96b9fced3caa7eab4a"
-        },
-        "32bit": {
-            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.19/WINNT_x86_64/Waterfox%20Setup%20G6.0.19.exe#/waterfox-installer.exe",
-            "hash": "556e93eeadf05927102c9676cc93122f4b8afa6d0a921f96b9fced3caa7eab4a"
+            "url": "https://cdn1.waterfox.net/waterfox/releases/6.5.9/WINNT_x86_64/Waterfox%20Setup%206.5.9.exe#/waterfox-installer.exe",
+            "hash": "sha512:0d39195b86de5bcfb1a435dd9d20b2a56a4578f408aa75f286565cb4a981e2947904f381a416bb34777c6594783b130fa2d453f95833f6b685c9643966d482ab"
         }
     },
     "bin": "waterfox-installer.exe",
     "checkver": {
-        "github": "https://github.com/WaterfoxCo/Waterfox",
-        "regex": "G([\\d.]+)"
+        "github": "https://github.com/BrowserWorks/Waterfox"
     },
-    "post_install":[
-        "waterfox-installer"
-    ],
+    "post_install": "waterfox-installer",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn1.waterfox.net/waterfox/releases/G$version/WINNT_x86_64/Waterfox%20Setup%20G$version.exe#/waterfox-installer.exe"
-            },
-            "32bit": {
-                "url": "https://cdn1.waterfox.net/waterfox/releases/G$version/WINNT_x86_64/Waterfox%20Setup%20G$version.exe#/waterfox-installer.exe"
+                "url": "https://cdn1.waterfox.net/waterfox/releases/$version/WINNT_x86_64/Waterfox%20Setup%20$version.exe#/waterfox-installer.exe",
+                "hash": {
+                    "url": "$url.sha512"
+                }
             }
         }
     }

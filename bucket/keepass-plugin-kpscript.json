@@ -1,15 +1,15 @@
 {
-    "version": "2.57",
+    "version": "2.58",
     "description": "A utility allows scripting KeePass.",
     "homepage": "https://keepass.info/help/v2_dev/scr_index.html",
     "license": "GPL-2.0-or-later",
     "url": [
-        "https://keepass.info/extensions/v2/kpscript/KPScript-2.57.zip",
-        "https://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.57/KeePass-2.57.zip"
+        "https://keepass.info/extensions/v2/kpscript/KPScript-2.58.zip",
+        "https://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.58/KeePass-2.58.zip"
     ],
     "hash": [
-        "4440436f768fb51cfc0fd9be8c1c24776219c4c8fab852b61319a45de7e87a74",
-        "sha1:b1b7084a50b7a3e42fdc92951e601251de6e0779"
+        "07bc724d5e47de3349b5b0151eff6372d39f6d3c9aa756008a57ded26e9ce846",
+        "sha1:5ed611196f0a97c176f7aa3c145d4d64b766749b"
     ],
     "bin": "KPScript.exe",
     "notes": "A standalone copy of KeePass is included.",

@@ -1,5 +1,5 @@
 {
-    "version": "167172",
+    "version": "195023",
     "description": "Docker Desktop. Open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.",
     "homepage": "https://www.docker.com",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://desktop.docker.com/win/main/amd64/167172/Docker%20Desktop%20Installer.exe",
-            "hash": "fb4f24872f6c0a75b6260ea369a3f0744a13d1e567f5e7f8fb76dffb701e31c2"
+            "url": "https://desktop.docker.com/win/main/amd64/195023/Docker%20Desktop%20Installer.exe",
+            "hash": "664189e3e61a7555edd2cc9420a48b8fdb06de55d376d80ac6a7e12ffa90554d"
         }
     },
     "installer": {
@@ -27,24 +27,6 @@
             "--installation-dir=$dir\\docker"
         ]
     },
-    "post_install": [
-        "function Create-Junction { param ([string]$runtimeCache, [string]$runtimeCachePersist)",
-        "  if (-not (Test-Path $runtimeCache)) { return }",
-        "  if (Test-Path $runtimeCachePersist) {",
-        "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-        "  } else {",
-        "    mkdir $runtimeCache -ErrorAction SilentlyContinue",
-        "    Move-Item $runtimeCache $runtimeCachePersist -Force",
-        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-        "  }",
-        "}",
-        "foreach ($folder in @('.docker', 'Docker', 'Docker Desktop')) {",
-        "  Create-Junction -runtimeCache \"$env:USERPROFILE\\$folder\" -runtimeCachePersist \"$persist_dir\\USERPROFILE\\$folder\"",
-        "  Create-Junction -runtimeCache \"$env:LOCALAPPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\LOCALAPPDATA\\$folder\"",
-        "  Create-Junction -runtimeCache \"$env:APPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\APPDATA\\$folder\"",
-        "}"
-    ],
     "shortcuts": [
         [
             "docker\\Docker Desktop.exe",

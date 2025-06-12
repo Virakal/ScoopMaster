@@ -1,30 +1,33 @@
 {
-    "version": "1.15",
-    "description": "密探渗透测试工具包含资产信息收集，子域名爆破，搜索语法，资产测绘（FOFA，Hunter，quake, ZoomEye），指纹识别，敏感信息采集，文件扫描、密码字典等功能",
+    "version": "1.2.3",
+    "description": "(Scoop bucket by arch3rpro) mitan - 密探渗透测试工具包含域名查询，搜索语法，资产测绘（FOFA，Hunter，quake），指纹识别，敏感信息采集，文件扫描、密码字典等功能",
     "homepage": "https://github.com/kkbo8005/mitan",
-    "license": "Freeware",
-    "notes": "https://github.com/ViCrack/scoop-bucket/blob/master/bucket/mitan.json",
+    "license": "Unknown",
     "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
-        ]
+        "JDK": "java/oraclejre8"
     },
-    "url": "https://github.com/kkbo8005/mitan/releases/download/1.15/mitan1.15.zip",
-    "hash": "327d548603f2ee0df0ab0a5469889d12e2ec7ba9e7cfa2a2096c811d528729a3",
-    "pre_install": "\n$batContent = @\"\n@echo off\n@setlocal\n\nset \"jdk_path=\"\n\nif defined JDK_19_HOME (\n    set \"jdk_path=%JDK_19_HOME%\\bin\\\"\n) else if defined JDK_17_HOME (\n    set \"jdk_path=%JDK_17_HOME%\\bin\\\"\n)  else if defined JDK_11_HOME (\n    set \"jdk_path=%JDK_11_HOME%\\bin\\\"\n) else if defined JAVA_HOME (\n    set \"jdk_path=%JAVA_HOME%\\bin\\\"\n) \n\nif not exist \"%jdk_path%\\javaw.exe\" (\n    echo ERROR: Java executable not found in %jdk_path%.\n    exit /b 1\n)\n\nset \"javafx_args=\"\nif defined JAVAFX_HOME (\n    if exist \"%JAVAFX_HOME%\\lib\" (\n        set \"javafx_args=--module-path %JAVAFX_HOME%\\lib --add-modules javafx.controls,javafx.fxml\"\n    ) else (\n        echo WARNING: JAVAFX_HOME is defined but the lib directory is missing.\n    )\n)\n\n@pushd %~dp0\n@start \"\" \"%jdk_path%javaw.exe\" %javafx_args% -jar \"mitan-jar-with-dependencies.jar\" %*\n@popd\n\nendlocal\n\"@\n\n$path = \"$dir/mitan.bat\"\nSet-Content -Path $path -Value $batContent -Encoding Ascii\n                ",
-    "bin": [
-        "mitan.bat",
-        "start.bat"
+    "url": "https://github.com/kkbo8005/mitan/releases/download/1.2.3/mitan.zip",
+    "hash": "7d7837f8e029a574d6e7cb5dc4d01c6805a0c5a0dc15a1761caef62b19b74be0",
+    "pre_install": [
+        "Rename-Item \"$dir\\mitan-jar-with-dependencies.jar\" -NewName \"mitan.jar\"",
+        "$batContent = @'",
+        "@echo off",
+        "pushd \"%~dp0\"",
+        "for /f \"tokens=*\" %%i in ('scoop prefix oraclejre8') do set JDK8_PATH=%%i",
+        "start \"\" \"%JDK8_PATH%\\bin\\javaw.exe\" -jar \"mitan.jar\" %*",
+        "popd",
+        "'@",
+        "Set-Content \"$dir\\mitan.bat\" $batContent -Encoding Ascii",
+        "Set-Content \"$dir\\mitan.vbs\"'set ws=createobject(\"wscript.shell\") : ws.Run \"mitan.bat\",0'  -Encoding Ascii"
     ],
-    "shortcuts": [
-        [
-            "mitan.bat",
-            "Mitan"
-        ]
-    ],
-    "checkver": "github",
+    "bin": "mitan.bat",
+    "persist": [ "config.yaml", "logs" ],
+    "checkver": {
+        "url": "https://api.github.com/repos/kkbo8005/mitan/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "([\\d.]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/kkbo8005/mitan/releases/download/$version/mitan$version.zip"
+        "url": "https://github.com/kkbo8005/mitan/releases/download/$version/mitan.zip"
     }
 }

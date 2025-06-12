@@ -1,18 +1,12 @@
 {
-    "version": "0.4.1",
+    "version": "0.8.0",
     "description": "CLI Jellyfin Controller Utility",
     "homepage": "https://github.com/LSchallot/JellyRoller",
     "license": "GPL-2.0-only",
-    "suggest": {
-        "vcredist": [
-            "extras/vcredist2022",
-            "extras/vcredist-aio"
-        ]
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LSchallot/JellyRoller/releases/download/v0.4.1/jellyroller-x86_64-windows.zip",
-            "hash": "621dc7bb1bb2a138c8f7826231f62a6743c65dad11ea4553674e6bbb8a38576d"
+            "url": "https://github.com/LSchallot/JellyRoller/releases/download/v0.8.0/jellyroller-0.8.0-x86_64-windows.tar.gz",
+            "hash": "2ad6d9fd3d611f9120c400cb75c13bc31c6ef5c5171110438e91c32fe239ce30"
         }
     },
     "bin": "jellyroller.exe",
@@ -20,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LSchallot/JellyRoller/releases/download/v$version/jellyroller-x86_64-windows.zip"
+                "url": "https://github.com/LSchallot/JellyRoller/releases/download/v$version/jellyroller-$version-x86_64-windows.tar.gz"
             }
         }
     }

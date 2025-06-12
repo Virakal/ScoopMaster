@@ -1,12 +1,12 @@
 {
-    "version": "20240824",
+    "version": "20250525",
     "description": "mpv 懒人包",
     "homepage": "https://github.com/hooke007/MPV_lazy",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hooke007/MPV_lazy/releases/download/20240824/mpv-lazy-20240824.exe#/dl.7z",
-            "hash": "062e04cd5e480015e66d6427b3265bcaa601af0b9ade80961d4d0b07d7311445",
+            "url": "https://github.com/hooke007/MPV_lazy/releases/download/20250525/mpv-lazy-20250525.exe#/dl.7z",
+            "hash": "34e5840e26c0418d09f8cb4d947e772784a69d89060c7bfd2cee93dcc4524737",
             "extract_dir": "mpv-lazy"
         }
     },

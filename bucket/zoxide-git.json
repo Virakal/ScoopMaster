@@ -1,0 +1,33 @@
+{
+    "version": "db14bdc2ffd2691921be830b22692e45d493557d",
+    "description": "A smarter cd command. Supports all major shells. (git https clone)",
+    "license": "MIT license",
+    "homepage": "https://github.com/ajeetdsouza/zoxide",
+    "notes": "Type zoxide to start.\nIf you want o setup the z and zi aliases, look at zoxide's readme.\nGo to https://github.com/shunsambongi/clink-zoxide if you want to see how to set up the z and zi aliases in cmd, clink is also needed for that\nAnd fzf is also needed to use the zi command",
+    "url": "https://raw.githubusercontent.com/ingenarel/ingenarel-scoop-bucket/refs/heads/master/decoy/zoxide-decoy",
+    "hash": "d4c4b9b0f4a1f5f24228c7859a169dff21a2be98aec054ded9672238da77c74c",
+    "depends": [
+        "rustup-msvc",
+        "git"
+    ],
+    "pre_install": [
+        "echo '' 'trying to uninstall conflicts'",
+        "scoop uninstall zoxide zoxide-git-ssh",
+        "cd $dir",
+        "git clone --depth 1 --branch main https://github.com/ajeetdsouza/zoxide.git",
+        "echo 'building zoxide...' ''",
+        "cd zoxide",
+        "cargo build --release --locked",
+        "echo 'Removing unneeded stuff' ''",
+        "cd $dir",
+        "Move-Item zoxide/target/release/zoxide.exe zoxide.exe",
+        "Remove-Item -Recurse -Force zoxide"
+    ],
+    "bin": [
+        "zoxide.exe"
+    ],
+    "conflicts": [
+        "zoxide",
+        "zoxide-git"
+    ]
+}

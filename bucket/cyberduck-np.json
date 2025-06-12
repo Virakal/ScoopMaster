@@ -1,6 +1,6 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "9.0.2.42108",
+   "version": "9.1.4.43177",
    "description": "This is a libre server and cloud storage browser for Mac and Windows with support for FTP, SFTP, WebDAV, Amazon S3, OpenStack Swift, Backblaze B2, Microsoft Azure & OneDrive, Google Drive and Dropbox.",
    "homepage": "https://cyberduck.io/",
    "license": {
@@ -9,13 +9,13 @@
    },
    "architecture": {
       "64bit": {
-         "url": "https://update.cyberduck.io/windows/Cyberduck-Installer-9.0.2.42108.exe#/dl.exe",
-         "hash": "ce81a305cfa205e977c888900e511ad6e683fe18885a6412fb4c79fd9d28b23e"
+         "url": "https://update.cyberduck.io/windows/Cyberduck-Installer-9.1.4.43177.exe#/dl.exe",
+         "hash": "783bd76ee2704b524fb3c9ff8bee421529406fd3e60ce1233013f052142dcdc3"
       }
    },
    "installer": {
       "script": [
-         "if (-not (is_admin)) { error 'This package requires admin privileges to install'; break }",
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to install' }",
          "Expand-DarkArchive -Path \"$dir\\dl.exe\" -DestinationPath \"$dir\\_tmp\" -Removal",
          "@('Bonjour.msi', 'Bonjour64.msi') | ForEach-Object {",
          "    Remove-Item \"$dir\\_tmp\\AttachedContainer\\$_\"",
@@ -44,7 +44,7 @@
    },
    "uninstaller": {
       "script": [
-         "if (-not (is_admin)) { error 'This package requires admin privileges to uninstall'; break }",
+         "if (-not (is_admin)) { abort 'This package requires admin privileges to uninstall' }",
          "Get-ChildItem \"$dir\\msi\\*.msi\" |",
          "    ForEach-Object {",
          "        Invoke-ExternalCommand msiexec -ArgumentList @(",

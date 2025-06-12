@@ -1,5 +1,5 @@
 {
-    "version": "2024-07-01",
+    "version": "2024-12-14",
     "description": "2^x Image Super-Resolution",
     "homepage": "https://github.com/Tohrusky/Final2x",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-07-01/Final2x-windows-x64-setup.exe#/dl.7z",
-            "hash": "f701d48a0aeddb4fea3b66692aa60ab06376d5cb731c83b524a00c1da3d4e869",
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-12-14/Final2x-windows-x64-setup.exe#/dl.7z",
+            "hash": "e6ed8c4c154f6643dd6ee4c826cdd75df61551e1e95f03e018a9b1d0758bdf89",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-07-01/Final2x-windows-arm64-setup.exe#/dl.7z",
-            "hash": "8a02bddfcb94858bc964b061aa102f7ac43ee45b44819faf33c9cbf7d9276fce",
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-12-14/Final2x-windows-arm64-setup.exe#/dl.7z",
+            "hash": "c22b1647afc0a3d4e706213b2f986772720479fc34c2bc0ef7060b268e3ab37f",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"

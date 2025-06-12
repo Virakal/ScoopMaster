@@ -1,38 +1,40 @@
 {
-    "version": "2024.09.0-45",
-    "description": "Positron, a next-generation data science IDE.",
-    "homepage": "https://github.com/posit-dev/positron",
+    "version": "2025.06.0-167",
+    "description": "A next-generation data science IDE",
+    "homepage": "https://positron.posit.co",
     "license": "Elastic-2.0",
-    "url": "https://github.com/posit-dev/positron/releases/download/2024.09.0-45/Positron-2024.09.0-45-UserSetup.exe",
-    "hash": "7333b662497f06840e920316bbce2fac1b706387a2c1e4e09711558e2b77d49b",
-    "installer": {
-        "args": [
-            "/VERYSILENT",
-            "/DIR=$dir",
-            "/NORESTART",
-            "/TASKS=\"\""
-        ]
+    "suggest": {
+        "R": "r",
+        "Python": "python"
     },
-    "bin": "Positron.exe",
-    "uninstaller": {
-        "file": "unins000.exe",
-        "args": [
-            "/VERYSILENT",
-            "/NORESTART"
-        ]
-    },
-    "checkver": {
-        "url": "https://github.com/posit-dev/positron/releases.atom",
-        "xpath": ".//entry/title"
-    },
-    "autoupdate": {
-        "url": "https://github.com/posit-dev/positron/releases/download/$version/Positron-$version-UserSetup.exe",
-        "hash": {
-            "mode": "download"
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.posit.co/positron/prereleases/win/x86_64/Positron-2025.06.0-167-UserSetup.exe",
+            "hash": "251c751e03db66e50bc6a1e7a359317256861fbdaca8a89996c117b8cc4492fc",
+            "extract_dir": "{code_GetDestDir}"
         }
     },
-    "notes": [
-        "Please review Positron's license agreement (https://github.com/posit-dev/positron?tab=License-1-ov-file#readme).",
-        "Your acceptance of this license agreement is required as a condition to proceeding with your use of the software."
-    ]
+    "innosetup": true,
+    "bin": "bin/positron.cmd",
+    "shortcuts": [
+        [
+            "Positron.exe",
+            "Positron"
+        ]
+    ],
+    "checkver": {
+        "url": "https://cdn.posit.co/positron/prereleases/win/x86_64/user-releases.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.posit.co/positron/prereleases/win/x86_64/Positron-$version-UserSetup.exe",
+                "hash": {
+                    "url": "$baseurl/user-releases.json",
+                    "jsonpath": "$.sha256hash"
+                }
+            }
+        }
+    }
 }

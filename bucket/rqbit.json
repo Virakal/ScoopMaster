@@ -1,0 +1,19 @@
+{
+    "version": "8.1.0",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/ikatson/rqbit",
+    "url": "https://github.com/ikatson/rqbit/releases/download/v8.1.0/rqbit-desktop_8.1.0_x64_en-US.msi#/setup.msi",
+    "hash": "869f84be4ed1658022a2c052d5c283f7e5346595d597f1ab740e447c2c6278ed",
+    "extract_dir": "PFiles/rqbit-desktop",
+    "shortcuts": [
+        [
+            "rqbit-desktop.exe",
+            "rqbit"
+        ]
+    ],
+    "persist": "config",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ikatson/rqbit/releases/download/v$version/rqbit-desktop_$version_x64_en-US.msi#/setup.msi"
+    }
+}

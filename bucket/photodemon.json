@@ -1,13 +1,14 @@
 {
-    "version": "2024.7",
+    "version": "2025.4",
     "description": "Photo editor focused on pro-grade features, high performance, and maximum usability.",
     "homepage": "https://photodemon.org",
     "license": {
         "identifier": "BSD-2-Clause,...",
         "url": "https://github.com/tannerhelland/PhotoDemon/blob/master/LICENSE.md"
     },
-    "url": "https://github.com/tannerhelland/PhotoDemon/releases/download/v2024.7/PhotoDemon-2024.7.zip",
-    "hash": "8b2ee00a926beed6a9e2598c84c0f43afdcff0428ef76ce13c04087272c885f7",
+    "url": "https://github.com/tannerhelland/PhotoDemon/releases/download/v2025.4/PhotoDemon-2025.4.zip",
+    "hash": "4e2c536e10645261a5dee75434a3198064982f2a2f5c9da31992c2ce1371ae2b",
+    "extract_dir": "PhotoDemon",
     "bin": "PhotoDemon.exe",
     "shortcuts": [
         [
