@@ -207,8 +207,9 @@ jobs:
               $oldpercent=$percent
             }
             $date = $file.LastWriteTimeUtc.ToString("yyyy-MM-ddTHH:mm:ssZ")
-            $filecontent = gc $file 
+            $filecontent = ""
             try{
+                $filecontent = gc $file
                 $json = $filecontent | ConvertFrom-Json
                 $version = $json.version
                 $description = "$($json.description)"
