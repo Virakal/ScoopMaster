@@ -262,6 +262,10 @@ jobs:
                 continue
             }
 
+            if (!$name) {
+              continue
+            }
+
             $app=[ref]$hash.Rows[-1]
             $current = if ($hash.Rows[-1].Bucket -match '^okibcn/' ) {'O'} else {'_'}
             $current = $current + $hash.Rows[-1].autoupdate + $hash.Rows[-1].Version
