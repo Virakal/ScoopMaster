@@ -1,0 +1,15 @@
+{
+    "version": "3.0.2",
+    "description": "Simple GUI version of Perfare's Il2CppDumper",
+    "homepage": "https://github.com/AndnixSH/Il2CppDumper-GUI",
+    "license": "MIT",
+    "url": "https://github.com/AndnixSH/Il2CppDumper-GUI/releases/download/3.0.2/Il2CppDumper.GUI.3.0.2.zip",
+    "extract_dir": "win-x64",
+    "hash": "d2f500f70934c4016a50c0654effdb0026073e8b7c4aed52682f35ccf31f4708",
+    "checkver": {
+        "github": "https://github.com/AndnixSH/Il2CppDumper-GUI"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AndnixSH/Il2CppDumper-GUI/releases/download/$version/Il2CppDumper.GUI.$version.zip"
+    }
+}

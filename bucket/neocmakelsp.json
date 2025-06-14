@@ -1,0 +1,13 @@
+{
+    "version": "0.8.23",
+    "description": "Another CMake LSP",
+    "homepage": "https://github.com/neocmakelsp/neocmakelsp",
+    "license": "MIT",
+    "url": "https://github.com/neocmakelsp/neocmakelsp/releases/download/v0.8.23/neocmakelsp-x86_64-pc-windows-msvc.exe",
+    "hash": "a8fbf32ec2303814e6ff258c055c797c8cf22ff8c16eb51e4ddfbc06711ce4b1",
+    "bin": "neocmakelsp.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/neocmakelsp/neocmakelsp/releases/download/v$version/neocmakelsp-x86_64-pc-windows-msvc.exe"
+    }
+}
