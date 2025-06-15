@@ -1,11 +1,8 @@
 {
     "version": "25.06r5696",
-    "description": "一个轻量级的基于 Scintilla 的文本编辑器。Light-weight Scintilla based text editor.",
+    "description": "Light-weight Scintilla based text editor for Windows",
     "homepage": "https://github.com/zufuliu/notepad4",
-    "license": {
-        "identifier": "Unknown",
-        "url": "https://github.com/zufuliu/notepad4/blob/main/License.txt"
-    },
+    "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
             "url": "https://github.com/zufuliu/notepad4/releases/download/v25.06r5696/Notepad4_HD_i18n_x64_v25.06r5696.zip",
@@ -20,10 +17,7 @@
             "hash": "332462e2e631aca4061f78ab15217a2ed942ad59502d66f8854c3771a207d941"
         }
     },
-    "bin": [
-        "Notepad4.exe",
-        "minipath.exe"
-    ],
+    "bin": "notepad4.exe",
     "shortcuts": [
         [
             "Notepad4.exe",
@@ -34,32 +28,13 @@
             "matepath"
         ]
     ],
-    "pre_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "A-Start-PreInstall"
-    ],
-    "post_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "A-Start-PostInstall"
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "A-Start-PreUninstall",
-        "A-Stop-Process"
-    ],
-    "post_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "A-Start-PostUninstall"
-    ],
     "persist": [
         "Notepad4.ini",
         "matepath.ini"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/zufuliu/notepad4/releases",
-        "regex": "Notepad4_HD_i18n_x64_v([\\d\\.]+r\\d+).zip"
+        "github": "https://github.com/zufuliu/notepad2",
+        "regex": "([\\d.]+r\\d+)"
     },
     "autoupdate": {
         "architecture": {
