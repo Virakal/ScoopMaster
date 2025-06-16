@@ -1,12 +1,18 @@
 {
     "homepage": "https://www.bitcomet.com/",
-    "version": "2.14",
+    "version": "2.15",
     "license": {
         "identifier": "freeware for non-commercial use",
         "url": "https://www.bitcomet.com/en/license"
     },
-    "url": "https://download.bitcomet.com/achive/BitComet_2.14.zip",
-    "hash": "31c810fa12e4f5204f6c9fa773ecd5445b24b8927851975e0de1261a3560c7f1",
+    "url": "https://download.bitcomet.com/achive/BitComet_2.15.zip",
+    "hash": "f8ef8e39d8a0dcbbe1e7d46d52fcc0164960f3159b171fe09f6ad5585f32c4b5",
+    "bin": "BitComet.exe",
+    "pre_install": [
+        "'BitComet.xml', 'Downloads.xml' | ForEach-Object {",
+        "   if(!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
+        "}"
+    ],
     "persist": [
         "BitComet.xml",
         "Downloads.xml",
@@ -33,14 +39,11 @@
         }
     },
     "checkver": {
-        "url": "https://www.bitcomet.com/en/archive",
-        "regex": "BitComet_([\\d.]+)\\.zip"
+        "url": "https://download.bitcomet.com/achive/",
+        "regex": "BitComet_([\\d.]+)\\.zip",
+        "reverse": true
     },
     "autoupdate": {
-        "url": "https://download.bitcomet.com/achive/BitComet_$version.zip",
-        "hash": {
-            "url": "https://www.bitcomet.com/en/archive",
-            "find": "BitComet_$version.zip.*?($sha256)"
-        }
+        "url": "https://download.bitcomet.com/achive/BitComet_$version.zip"
     }
 }
