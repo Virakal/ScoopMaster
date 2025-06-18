@@ -1,19 +1,41 @@
 {
     "version": "6.5.1",
-    "description": "DbGate - The smartest (no)SQL database client",
+    "description": "(Community Edition) A database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others.",
+    "homepage": "https://dbgate.org/",
     "license": "MIT",
-    "homepage": "https://github.com/dbgate/dbgate",
-    "url": "https://github.com/dbgate/dbgate/releases/download/v6.5.1/dbgate-windows-latest.zip",
-    "hash": "dcddce4aa36b168ae0704be55e1987f50b0c66cd60d93689b98523088d7ed5d6",
-    "bin": "dbgate.exe",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dbgate/dbgate/releases/download/v6.5.1/dbgate-6.5.1-win_x64.zip",
+            "hash": "dcddce4aa36b168ae0704be55e1987f50b0c66cd60d93689b98523088d7ed5d6"
+        },
+        "arm64": {
+            "url": "https://github.com/dbgate/dbgate/releases/download/v6.5.1/dbgate-6.5.1-win_arm64.zip",
+            "hash": "5b9c1c5f30932507ef3f2f4f84e4347464c224bb4cef16aba7aa9ed9f318537f"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\resources\\app-update.yml\" -Force -Recurse",
     "shortcuts": [
         [
             "dbgate.exe",
-            "DbGate"
+            "DbGate",
+            "--user-data-dir=\"User Data\" --workspace-dir workspace"
         ]
     ],
-    "checkver": "github",
+    "persist": [
+        "User Data",
+        "workspace"
+    ],
+    "checkver": {
+        "github": "https://github.com/dbgate/dbgate"
+    },
     "autoupdate": {
-        "url": "https://github.com/dbgate/dbgate/releases/download/v$version/dbgate-windows-latest.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dbgate/dbgate/releases/download/v$version/dbgate-$version-win_x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/dbgate/dbgate/releases/download/v$version/dbgate-$version-win_arm64.zip"
+            }
+        }
     }
 }
