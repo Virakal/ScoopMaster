@@ -4,7 +4,7 @@
     "homepage": "https://github.com/dege-diosg/dgVoodoo2",
     "license": "http://dege.freeweb.hu/dgVoodoo2/ReadmeGeneral/#redistributionrights",
     "url": "https://github.com/dege-diosg/dgVoodoo2/releases/download/v2.86.2/dgVoodoo2_86_2.zip",
-    "hash": "b703e1356a71aeed699a4632ef25708251cce4af7a4643587900dab88a6310b2",
+    "hash": "a8acd7205a94120272575aa742089bdabb0bb70218e6f0b278ef222d80e94064",
     "architecture": {
         "64bit": {
             "pre_install": "Move-Item $dir\\Cpl\\x64\\dgVoodooCpl.exe $dir -Force"
