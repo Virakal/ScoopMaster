@@ -1,0 +1,27 @@
+{
+    "version": "0.0.20",
+    "architecture": {
+        "64bit": {
+            "url": "https://storage.googleapis.com/axl-binaries/sai/v0.0.20/sai_0.0.20_windows_amd64.zip",
+            "bin": [
+                "sai.exe"
+            ],
+            "hash": "4f1d64ca9b936d075bff13181076bbc965ee136c83b450b7410df8ad9a6a5c8a"
+        },
+        "arm64": {
+            "url": "https://storage.googleapis.com/axl-binaries/sai/v0.0.20/sai_0.0.20_windows_arm64.zip",
+            "bin": [
+                "sai.exe"
+            ],
+            "hash": "3ed93437855f93e8f570b33cfbbe5a3392f7c0cc7cc0b8f9cb3d84711600a6cc"
+        }
+    },
+    "homepage": "https://competesai.com",
+    "license": "Proprietary",
+    "description": "CLI tool for the SAI Platform - ArenaX Labs",
+    "post_install": [
+        "Write-Host 'IMPORTANT: Before using SAI, you must authenticate with your API token:'",
+        "Write-Host 'Run: sai auth login --token YOUR_API_TOKEN'",
+        "Write-Host 'You can obtain a token from your account settings.'"
+    ]
+}
