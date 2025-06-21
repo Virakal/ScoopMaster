@@ -1,7 +1,7 @@
 {
     "version": "2.33.1",
     "description": "Web File Browser",
-    "homepage": "https://filebrowser.org/",
+    "homepage": "https://github.com/filebrowser/filebrowser",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
@@ -11,39 +11,22 @@
         "32bit": {
             "url": "https://github.com/filebrowser/filebrowser/releases/download/v2.33.1/windows-386-filebrowser.zip",
             "hash": "ac7f1f2fbf81d6d161d2792f5eaa95eba78a3ee34371efdcd3d1db029055957e"
-        },
-        "arm64": {
-            "url": "https://github.com/filebrowser/filebrowser/releases/download/v2.33.1/windows-arm64-filebrowser.zip",
-            "hash": "2c40e3e9fee1c1fa1180b297682256279496caed8cca299164de32176c82e796"
         }
     },
     "bin": "filebrowser.exe",
-    "checkver": {
-        "github": "https://github.com/filebrowser/filebrowser"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-amd64-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
+                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-amd64-filebrowser.zip"
             },
             "32bit": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-386-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-arm64-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
+                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-386-filebrowser.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/filebrowser_$version_checksums.txt",
+            "mode": "extract"
         }
     }
 }
