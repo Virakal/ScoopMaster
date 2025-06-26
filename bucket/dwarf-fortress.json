@@ -1,26 +1,26 @@
 {
-  "version": "51.11",
-  "description": "Indie construction and management game",
-  "homepage": "http://www.bay12games.com/dwarves",
-  "license": "Custom",
-  "url": "http://www.bay12games.com/dwarves/df_51_11_win.zip",
-  "hash": "ae9223725401fbeccdd20dc07dd1a3c39b3c1bcfc6fc5cd061a697fdbdeb5ab7",
-  "shortcuts": [
-    [
-      "Dwarf Fortress.exe",
-      "Dwarf Fortress"
-    ]
-  ],
-  "persist": [
-    "mods",
-    "prefs",
-    "save"
-  ],
-  "checkver": {
-    "url": "http://www.bay12games.com/dwarves",
-    "re": "DWARF FORTRESS CLASSIC ([\\d\\.]+)"
-  },
-  "autoupdate": {
-    "url": "http://www.bay12games.com/dwarves/df_$underscoreVersion_win.zip"
-  }
+    "version": "51.12",
+    "description": "Indie construction and management game",
+    "homepage": "http://www.bay12games.com/dwarves",
+    "license": "Custom",
+    "url": "http://www.bay12games.com/dwarves/df_51_12_win.zip",
+    "hash": "eab1ce1ccc74abadb5ce1bfa5aaa1b433a5899874501bf3d1025ea676c23965d",
+    "shortcuts": [
+        [
+            "Dwarf Fortress.exe",
+            "Dwarf Fortress"
+        ]
+    ],
+    "persist": [
+        "mods",
+        "prefs",
+        "save"
+    ],
+    "checkver": {
+        "url": "http://www.bay12games.com/dwarves",
+        "re": "DWARF FORTRESS CLASSIC ([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "url": "http://www.bay12games.com/dwarves/df_$underscoreVersion_win.zip"
+    }
 }
