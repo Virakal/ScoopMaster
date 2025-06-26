@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
-    "version": "0.4.13",
+    "version": "0.4.14",
     "description": "TOML Formatter / Linter / Language Server in Rust",
     "homepage": "https://github.com/tombi-toml/tombi",
     "license": "MIT",
@@ -14,7 +14,7 @@
             "hash": "sha256:b13cf03c88d9bbbf97c8f75c74534f1d498f4538c83a5bacc1f3c210b6d50835"
         }
     },
-    "bin": ["tombi.exe"],
+    "bin": "tombi.exe",
     "checkver": {
         "github": "https://github.com/tombi-toml/tombi"
     },
