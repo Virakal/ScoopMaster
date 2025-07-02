@@ -8,7 +8,7 @@
 
 </br>
 
-And don't miss **[SS (Scoop Super Search)](https://github.com/okibcn/ss)**, the associated CLI search utility.
+And don't miss **[SS (Scoop Super Search)](https://github.com/Virakal/ss)**, the associated CLI search utility.
 
 </br>
 
@@ -41,7 +41,7 @@ The system uses the platform in two ways:
 
 </br>
 
-**ScoopMaster** also provides a **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
+**ScoopMaster** also provides a **[database](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SS (Scoop Super Search)](https://github.com/Virakal/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
 
 </br>
 
@@ -58,7 +58,7 @@ ____
 
 To add this bucket, paste this in a PowerShell session: 
 ```pwsh
-scoop bucket add .SM https://github.com/okibcn/ScoopMaster
+scoop bucket add .SM https://github.com/Virakal/ScoopMaster
 ```
 install any app in the bucket just type 
 ```
@@ -83,7 +83,7 @@ scoop update *
 
 </br>
 
-The **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
+The **[database](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/Virakal/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
 
 
 
@@ -99,10 +99,10 @@ The bucket doesn't require any operation other than the installation, removal, a
 
 </br>
 
-The **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)**.
+The **[database](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)**.
 
 
-IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** that can be installed typing:
+IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/Virakal/ss)** that can be installed typing:
 ```pwsh
 scoop install ss
 ```
