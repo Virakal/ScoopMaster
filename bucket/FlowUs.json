@@ -5,12 +5,10 @@
   "license": "Proprietary",
   "architecture": {
     "64bit": {
-      "url": "https://desktopdownload2.flowus.cn/production/windows/flowus-windows-x64.zip",
-      "hash": "9EFF8AD9851BDE87AD428D1D73C3903071F893FAD8C07E2642134040CA2C2D57",
+      "url": "https://desktopdownload.flowus.cn/production/windows/x64/FlowUs%20Setup%201.1.8.exe#/dl.7z",
+      "hash": "aaff15ca8a9045a896349154b2817bdceddabac7dd25511bdb29052885928ed2",
       "installer": {
-        "script": [
-          "Start-Process \"$dir\\flowus-windows-x64.exe\" @('/S', '/InstallationType=JustMe', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
-        ]
+        "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
       }
     },
     "32bit": {
@@ -21,6 +19,11 @@
       }
     }
   },
+  "post_install": [
+    "@('$PLUGINSDIR', '$R0') | ForEach-Object {",
+    "    Remove-Item \"$dir\\$_\" -Recurse -Force",
+    "}"
+  ],
   "shortcuts": [
     [
       "FlowUs.exe",
