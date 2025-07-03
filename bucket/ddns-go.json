@@ -1,16 +1,16 @@
 {
     "version": "6.11.1",
-    "description": "简单好用的DDNS。自动更新域名解析到公网IP(支持阿里云、腾讯云dnspod、Cloudflare、华为云、百度云、porkbun)",
+    "description": "Simple and easy to use DDNS. Support Aliyun, Tencent Cloud, Dnspod, Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, Namecheap, NameSilo, Dynadot",
     "homepage": "https://github.com/jeessy2/ddns-go",
     "license": "MIT",
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/jeessy2/ddns-go/releases/download/v6.11.1/ddns-go_6.11.1_windows_x86_64.zip",
-            "hash": "5c27c03eba2199e328a45a661d8fc7c2b6b160f7fec7f0648ebb132ef450cfaf"
-        },
         "32bit": {
             "url": "https://github.com/jeessy2/ddns-go/releases/download/v6.11.1/ddns-go_6.11.1_windows_i386.zip",
             "hash": "95bc64c0a7b02f0fa558ccd7a6bc0a0e6174fea65f4528ab7e0e9f5e3d71b271"
+        },
+        "64bit": {
+            "url": "https://github.com/jeessy2/ddns-go/releases/download/v6.11.1/ddns-go_6.11.1_windows_x86_64.zip",
+            "hash": "5c27c03eba2199e328a45a661d8fc7c2b6b160f7fec7f0648ebb132ef450cfaf"
         },
         "arm64": {
             "url": "https://github.com/jeessy2/ddns-go/releases/download/v6.11.1/ddns-go_6.11.1_windows_arm64.zip",
@@ -21,15 +21,18 @@
     "checkver": "github",
     "autoupdate": {
         "architecture": {
-            "64bit": {
-                "url": "https://github.com/jeessy2/ddns-go/releases/download/v$version/ddns-go_$version_windows_x86_64.zip"
-            },
             "32bit": {
                 "url": "https://github.com/jeessy2/ddns-go/releases/download/v$version/ddns-go_$version_windows_i386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/jeessy2/ddns-go/releases/download/v$version/ddns-go_$version_windows_x86_64.zip"
             },
             "arm64": {
                 "url": "https://github.com/jeessy2/ddns-go/releases/download/v$version/ddns-go_$version_windows_arm64.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }
