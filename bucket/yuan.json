@@ -1,0 +1,19 @@
+{
+    "homepage": "https://github.com/syoius/MaaYuan",
+    "version": "0.9.10",
+    "license": "MIT",
+    "hash": "548f4bfe1172eefc8990278bf003f9506588555caf69320b55e6f7a5985084b5",
+    "url": "https://github.com/syoius/MaaYuan/releases/download/v0.9.10/MAAYuan-win-x86_64-v0.9.10.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/syoius/MaaYuan/releases/download/v$version/MAAYuan-win-x86_64-v$version.zip",
+        "extract_dir": "MAAYuan-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "bin": [
+        [
+            "MAAYuan.exe",
+            "maa-yuan"
+        ]
+    ]
+}
