@@ -15,7 +15,9 @@
             "SubRenamer"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/arition/SubRenamer"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
