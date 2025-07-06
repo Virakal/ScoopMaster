@@ -1,15 +1,23 @@
 {
     "version": "2.3.0",
-    "description": "CloudflareSpeedTest.",
     "homepage": "https://github.com/XIU2/CloudflareSpeedTest",
-    "license": "GPL-3.0-only",
+    "description": "在 Cloudflare CDN 找到适合自己的 IP",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/XIU2/CloudflareSpeedTest/blob/master/LICENSE"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_amd64.zip",
             "hash": "4a5020bac259ebd2182976ffc52e7129c48962289828eb4f3caa93f7e4dd3a26"
         }
     },
-    "bin": "CloudflareST.exe",
+    "bin": [
+        [
+            "CloudflareST.exe",
+            "CloudflareST"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
