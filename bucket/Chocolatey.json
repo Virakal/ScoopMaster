@@ -1,11 +1,11 @@
 {
-    "version": "2.4.3",
+    "version": "2.5.0",
     "description": "Chocolatey. The package manager for Windows",
     "homepage": "https://chocolatey.org/",
     "license": "Apache-2.0",
     "changelog": "https://docs.chocolatey.org/en-us/choco/release-notes",
-    "url": "https://community.chocolatey.org/api/v2/package/chocolatey/2.4.3#/dl.7z",
-    "hash": "d4998ca928a85a484507dcaa39c30948a6516de0d1469b0511931d44a53456c3",
+    "url": "https://community.chocolatey.org/api/v2/package/chocolatey/2.5.0#/dl.7z",
+    "hash": "fc48df88f46d8fd5bf3999009d25e50aef9c09567cb999506d5457f184241bb0",
     "bin": "tools/chocolateyInstall/choco.exe",
     "checkver": {
         "url": "https://github.com/chocolatey/choco/releases",
