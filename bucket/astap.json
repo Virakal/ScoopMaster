@@ -17,7 +17,6 @@
     }
   },
   "innosetup": true,
-  "extract_to": "astap",
   "bin": [
     "astap_cli.exe",
     "dcraw.exe",
@@ -36,10 +35,10 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-	"url": "https://www.hnsky.org/astap_setup.exe"
+        "url": "https://www.hnsky.org/astap_setup.exe"
       },
       "32bit": {
-	"url": "https://www.hnsky.org/astapwin32.zip"
+        "url": "https://www.hnsky.org/astapwin32.zip"
       }
     }
   }
