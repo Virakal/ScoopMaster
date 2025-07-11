@@ -1,80 +1,80 @@
 {
-    "version": "141.0b8",
-    "description": "Developer. Developer builds of Firefox: the popular open source web browser",
-    "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
-    "license": "MPL-2.0",
-    "changelog": "https://www.mozilla.org/en-US/firefox/104.0beta/releasenotes/",
-    "architecture": {
-        "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/141.0b8/win64/zh-CN/Firefox%20Setup%20141.0b8.exe#/firefox-developer.7z",
-            "hash": "sha512:4246987c32b69e3e37286503e421a58c1589eaad46d5b733805ecb1433dcf375dad7078f8eb0527ef8a249bdda028c6ed1c32421eb8550ec67d79f3a0b7cc80a"
-        },
-        "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/141.0b8/win32/zh-CN/Firefox%20Setup%20141.0b8.exe#/firefox-developer.7z",
-            "hash": "sha512:492f321063d87f7379c3b309202c5a35bffab7d3c900b88dbf0b79e76be9ef1fcf2e14ddaf59857d3c3f8d1ddcf9291a8931199a540ff63e303220dc48f084ae"
-        }
+  "version": "141.0b8",
+  "description": "Developer. Developer builds of Firefox: the popular open source web browser",
+  "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
+  "license": "MPL-2.0",
+  "changelog": "https://www.mozilla.org/en-US/firefox/104.0beta/releasenotes/",
+  "architecture": {
+    "64bit": {
+      "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/141.0b8/win64/zh-CN/Firefox%20Setup%20141.0b8.exe#/firefox-developer.7z",
+      "hash": "sha512:4246987c32b69e3e37286503e421a58c1589eaad46d5b733805ecb1433dcf375dad7078f8eb0527ef8a249bdda028c6ed1c32421eb8550ec67d79f3a0b7cc80a"
     },
-    "extract_dir": "core",
-    "bin": [
-        [
-            "firefox.exe",
-            "firefox-dev"
-        ],
-        [
-            "firefox.exe",
-            "firefox-developer"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "firefox.exe",
-            "Firefox Developer"
-        ],
-        [
-            "firefox.exe",
-            "Firefox Developer Profile Manager",
-            "-P"
-        ]
-    ],
-    "post_install": [
-        "function Create-Junction { param ([string]$runtimeCache, [string]$runtimeCachePersist)",
-        "  if (-not (Test-Path $runtimeCache)) { return }",
-        "  if (Test-Path $runtimeCachePersist) {",
-        "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-        "  } else {",
-        "    mkdir $runtimeCache -ErrorAction SilentlyContinue",
-        "    Move-Item $runtimeCache $runtimeCachePersist -Force",
-        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-        "  }",
-        "}",
-        "foreach ($folder in @('Mozilla/Firefox')) {",
-        "  Create-Junction -runtimeCache \"$env:USERPROFILE\\$folder\" -runtimeCachePersist \"$persist_dir\\USERPROFILE\\$folder\"",
-        "  Create-Junction -runtimeCache \"$env:LOCALAPPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\LOCALAPPDATA\\$folder\"",
-        "  Create-Junction -runtimeCache \"$env:APPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\APPDATA\\$folder\"",
-        "}"
-    ],
-    "checkver": {
-        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
-        "xpath": "/updates/update/patch/@URL",
-        "regex": "devedition-([\\db.]+)-"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/firefox-developer.7z",
-                "hash": {
-                    "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64/zh-CN/$basename"
-                }
-            },
-            "32bit": {
-                "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/firefox-developer.7z",
-                "hash": {
-                    "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win32/zh-CN/$basename"
-                }
-            }
-        }
+    "32bit": {
+      "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/141.0b8/win32/zh-CN/Firefox%20Setup%20141.0b8.exe#/firefox-developer.7z",
+      "hash": "sha512:492f321063d87f7379c3b309202c5a35bffab7d3c900b88dbf0b79e76be9ef1fcf2e14ddaf59857d3c3f8d1ddcf9291a8931199a540ff63e303220dc48f084ae"
     }
+  },
+  "extract_dir": "core",
+  "bin": [
+    [
+      "firefox.exe",
+      "firefox-dev"
+    ],
+    [
+      "firefox.exe",
+      "firefox-developer"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "firefox.exe",
+      "Firefox Developer"
+    ],
+    [
+      "firefox.exe",
+      "Firefox Developer Profile Manager",
+      "-P"
+    ]
+  ],
+  "post_install": [
+    "function Create-Junction { param ([string]$runtimeCache, [string]$runtimeCachePersist)",
+    "  if (-not (Test-Path $runtimeCache)) { return }",
+    "  if (Test-Path $runtimeCachePersist) {",
+    "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+    "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+    "  } else {",
+    "    mkdir $runtimeCache -ErrorAction SilentlyContinue",
+    "    Move-Item $runtimeCache $runtimeCachePersist -Force",
+    "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+    "  }",
+    "}",
+    "foreach ($folder in @('Mozilla/Firefox')) {",
+    "  Create-Junction -runtimeCache \"$env:USERPROFILE\\$folder\" -runtimeCachePersist \"$persist_dir\\USERPROFILE\\$folder\"",
+    "  Create-Junction -runtimeCache \"$env:LOCALAPPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\LOCALAPPDATA\\$folder\"",
+    "  Create-Junction -runtimeCache \"$env:APPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\APPDATA\\$folder\"",
+    "}"
+  ],
+  "checkver": {
+    "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
+    "xpath": "/updates/update/patch/@URL",
+    "regex": "devedition-([\\db.]+)-"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/firefox-developer.7z",
+        "hash": {
+          "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/SHA512SUMS",
+          "regex": "$sha512\\s+win64/zh-CN/$basename"
+        }
+      },
+      "32bit": {
+        "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/firefox-developer.7z",
+        "hash": {
+          "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/$version/SHA512SUMS",
+          "regex": "$sha512\\s+win32/zh-CN/$basename"
+        }
+      }
+    }
+  }
 }
