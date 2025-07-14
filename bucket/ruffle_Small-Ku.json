@@ -1,40 +1,40 @@
 {
-    "version": "2025-07-13",
-    "description": "A Flash Player emulator written in Rust",
-    "homepage": "https://ruffle.rs/",
-    "license": {
-        "identifier": "Apache License & MIT License",
-        "url": "https://github.com/ruffle-rs/ruffle/blob/master/LICENSE.md"
+  "version": "2025-07-13",
+  "description": "A Flash Player emulator written in Rust",
+  "homepage": "https://ruffle.rs/",
+  "license": {
+    "identifier": "Apache License & MIT License",
+    "url": "https://github.com/ruffle-rs/ruffle/blob/master/LICENSE.md"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2025-07-13/ruffle-nightly-2025_07_13-windows-x86_64.zip",
+      "hash": "15bc10246f281cd894c7afacbc732c6d90fe67a1e4ed0ab860105ca59841c26b"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2025-07-13/ruffle-nightly-2025_07_13-windows-x86_64.zip",
-            "hash": "15bc10246f281cd894c7afacbc732c6d90fe67a1e4ed0ab860105ca59841c26b"
-        },
-        "32bit": {
-            "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2025-07-13/ruffle-nightly-2025_07_13-windows-x86_32.zip",
-            "hash": "cbc349e4d48338bed973e472770249311ed778373e06f3fd5ae0702e882ab5fc"
-        }
-    },
-    "shortcuts": [
-        [
-            "ruffle.exe",
-            "Ruffle"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/ruffle-rs/ruffle/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "nightly-([\\d-]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_32.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2025-07-13/ruffle-nightly-2025_07_13-windows-x86_32.zip",
+      "hash": "cbc349e4d48338bed973e472770249311ed778373e06f3fd5ae0702e882ab5fc"
     }
+  },
+  "shortcuts": [
+    [
+      "ruffle.exe",
+      "Ruffle"
+    ]
+  ],
+  "checkver": {
+    "url": "https://api.github.com/repos/ruffle-rs/ruffle/releases",
+    "jsonpath": "$[0].tag_name",
+    "regex": "nightly-([\\d-]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-$version/ruffle-nightly-$underscoreVersion-windows-x86_32.zip"
+      }
+    }
+  }
 }
