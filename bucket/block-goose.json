@@ -1,5 +1,5 @@
 {
-    "version": "1.0.35",
+    "version": "1.0.36",
     "description": "An on-machine AI agent that automates engineering tasks from start to finish - GUI version",
     "homepage": "https://block.github.io/goose/",
     "license": "Apache-2.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/block/goose/releases/download/v1.0.35/Goose-win32-x64.zip",
-            "hash": "d3b87d12914a9e4c545902b615ef04bad58cb5f084ef48eeedef4faed51cdaa8",
+            "url": "https://github.com/block/goose/releases/download/v1.0.36/Goose-win32-x64.zip",
+            "hash": "fbcdca71fc779213df840cfb25d38e80fb0577ed1ffae16bd7577fa65928d25c",
             "extract_dir": "dist-windows"
         }
     },
