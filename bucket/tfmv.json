@@ -1,31 +1,31 @@
 {
-    "version": "0.2.7",
-    "description": "Rename Terraform resources, data sources, and modules and generate moved blocks",
-    "homepage": "https://github.com/suzuki-shunsuke/tfmv",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v0.2.7/tfmv_windows_amd64.zip",
-            "hash": "105d6a37ab4b9e0f6baa16132d3b5fdc6f0ba5b7526de49056faa7c543b8aca4"
-        },
-        "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v0.2.7/tfmv_windows_arm64.zip",
-            "hash": "aa8ce505d74e9fc6749565ce7595a78c5248d2fc929d662f07446ba725f2bf7b"
-        }
+  "version": "0.2.7",
+  "description": "Rename Terraform resources, data sources, and modules and generate moved blocks",
+  "homepage": "https://github.com/suzuki-shunsuke/tfmv",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v0.2.7/tfmv_windows_amd64.zip",
+      "hash": "105d6a37ab4b9e0f6baa16132d3b5fdc6f0ba5b7526de49056faa7c543b8aca4"
     },
-    "bin": "tfmv.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v$version/tfmv_windows_amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v$version/tfmv_windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/tfmv_$version_checksums.txt"
-        }
+    "arm64": {
+      "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v0.2.7/tfmv_windows_arm64.zip",
+      "hash": "aa8ce505d74e9fc6749565ce7595a78c5248d2fc929d662f07446ba725f2bf7b"
     }
+  },
+  "bin": "tfmv.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v$version/tfmv_windows_amd64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/suzuki-shunsuke/tfmv/releases/download/v$version/tfmv_windows_arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/tfmv_$version_checksums.txt"
+    }
+  }
 }
