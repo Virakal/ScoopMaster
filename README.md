@@ -22,9 +22,9 @@ ____
 
 To help users to maintain all the apss updated, this repo provides two services, a bucket with all the apps, and a database for fast app search. The platform surveys internet for known buckets and creates Bucket and database snapshots every 30 minutes. At this time the metrics for the **ScoopMaster** platform in its current snapshot are:
 
-- The database indexes **194583** manifests.
+- The database indexes **194593** manifests.
 - The harvester gathers data from **2004** buckets.
-- The Bucket provides last versions for all the **52390** apps.
+- The Bucket provides last versions for all the **52387** apps.
 
 The system uses the platform in two ways:
 </br>
