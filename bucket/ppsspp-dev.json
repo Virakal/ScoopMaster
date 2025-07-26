@@ -1,36 +1,36 @@
 {
-    "version": "1.19.3-363-gc77b12c932",
-    "description": "Sony PlayStation Portable (PSP) emulator",
+    "version": "1.19.3-364-gd4b57bd207",
+    "description": "Sony PlayStation Portable (PSP) emulator. Development build",
     "homepage": "https://www.ppsspp.org",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://builds.ppsspp.org/builds/v1.19.3-363-gc77b12c932/ppsspp_win_v1.19.3-363-gc77b12c932.zip",
-            "hash": "21061740d1c26f9aee7680bf881314da8800509d86550232bd3ddcdf13390187",
+            "url": "https://builds.ppsspp.org/builds/v1.19.3-364-gd4b57bd207/ppsspp_win_v1.19.3-364-gd4b57bd207.zip",
+            "hash": "ecf5412d66c3cf1a54a8db6715f65ead95810f7a81c09f5467b99a98bfa8d7cf",
             "shortcuts": [
                 [
                     "PPSSPPWindows64.exe",
-                    "Sony PlayStation Portable [psp][ppsspp] (dev)"
+                    "PPSSPP (Development)"
                 ]
             ]
         },
         "32bit": {
-            "url": "https://builds.ppsspp.org/builds/v1.19.3-363-gc77b12c932/ppsspp_win_v1.19.3-363-gc77b12c932.zip",
-            "hash": "21061740d1c26f9aee7680bf881314da8800509d86550232bd3ddcdf13390187",
+            "url": "https://builds.ppsspp.org/builds/v1.19.3-364-gd4b57bd207/ppsspp_win_v1.19.3-364-gd4b57bd207.zip",
+            "hash": "ecf5412d66c3cf1a54a8db6715f65ead95810f7a81c09f5467b99a98bfa8d7cf",
             "shortcuts": [
                 [
                     "PPSSPPWindows.exe",
-                    "Sony PlayStation Portable [psp][ppsspp] (dev)"
+                    "PPSSPP (Development)"
                 ]
             ]
         },
         "arm64": {
-            "url": "https://builds.ppsspp.org/builds/v1.19.3-363-gc77b12c932/PPSSPPWindowsARM64_v1.19.3-363-gc77b12c932.zip",
-            "hash": "9d98e26c54efd56d6682f40676bd1dc1207d3f60744dbf54dabc0ba74d576b4a",
+            "url": "https://builds.ppsspp.org/builds/v1.19.3-364-gd4b57bd207/PPSSPPWindowsARM64_v1.19.3-364-gd4b57bd207.zip",
+            "hash": "84e206f54c19b626378bebc465599cb73143c69d883608dd032c3a101099d0c0",
             "shortcuts": [
                 [
                     "PPSSPPWindowsARM64.exe",
-                    "Sony PlayStation Portable [psp][ppsspp] (dev)"
+                    "PPSSPP (Development)"
                 ]
             ]
         }
@@ -40,17 +40,6 @@
         "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
         "   New-item \"$persist_dir\\memstick\" -ItemType Directory | Out-Null",
         "}"
-    ],
-    "bin": [
-        [
-            "ppsspp.exe"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "ppsspp.exe",
-            "Sony PlayStation Portable [psp][ppsspp]"
-        ]
     ],
     "persist": [
         "memstick",
