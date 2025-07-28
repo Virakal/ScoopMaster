@@ -1,7 +1,7 @@
 {
-    "version": "0.50.1",
+    "homepage": "https://prefix.dev/",
     "description": "Package management made easy",
-    "homepage": "https://pixi.sh",
+    "version": "0.50.1",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
@@ -13,23 +13,42 @@
             "hash": "155e24d5c1e7fe1031d6d132fc7543f68774d2ffd60167f0fa4fe394da595c61"
         }
     },
-    "bin": "pixi.exe",
+    "installer": {
+        "script": [
+            "if (Test-Path \"$persist_dir\\bin\\pixi.exe\") {",
+            "    Remove-Item \"$persist_dir\\bin\\pixi.exe\" -Force",
+            "    Move-Item \"$dir\\pixi.exe\" \"$persist_dir\\bin\\pixi.exe\"",
+            "} else {",
+            "    if (!(Test-Path \"$persist_dir\\bin\")) {",
+            "        New-Item -Path \"$persist_dir\\bin\" -ItemType Directory | Out-Null",
+            "    }",
+            "    Move-Item \"$dir\\pixi.exe\" \"$persist_dir\\bin\\pixi.exe\"",
+            "}",
+            "if (!(Test-Path \"$persist_dir\\config.toml\") -and !(Test-Path \"$dir\\config.toml\")) {",
+            "    New-Item -Path \"$dir\\config.toml\" -ItemType File | Out-Null",
+            "}"
+        ]
+    },
+    "env_set": {
+        "PIXI_HOME": "$dir"
+    },
+    "env_add_path": "bin",
+    "persist": [
+        "bin",
+        "envs",
+        "config.toml",
+        "manifests"
+    ],
     "checkver": {
         "github": "https://github.com/prefix-dev/pixi"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-x86_64-pc-windows-msvc.zip",
-                "hash": {
-                    "url": "$url.sha256"
-                }
+                "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-x86_64-pc-windows-msvc.zip"
             },
             "arm64": {
-                "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-aarch64-pc-windows-msvc.zip",
-                "hash": {
-                    "url": "$url.sha256"
-                }
+                "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-aarch64-pc-windows-msvc.zip"
             }
         }
     }
