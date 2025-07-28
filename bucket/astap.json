@@ -30,7 +30,7 @@
     ],
     "checkver": {
         "url": "https://www.hnsky.org/astap.htm",
-        "regex": "v([\\d-]+)"
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
         "architecture": {
