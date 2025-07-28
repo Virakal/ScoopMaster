@@ -1,27 +1,27 @@
 {
-    "version": "1.2.5",
-    "description": "下载番茄小说",
-    "homepage": "https://github.com/ying-ck/fanqienovel-downloader",
-    "license": {
-        "identifier": "GPL-3.0 license",
-        "url": "https://github.com/ying-ck/fanqienovel-downloader#GPL-3.0-1-ov-file"
-    },
-    "url": "https://github.com/ying-ck/fanqienovel-downloader/releases/download/v1.2.5/fanqienovel-downloader-v1.2.5.exe",
-    "hash": "aa43a210b319ddd5147b1aa26d6f83287ff3876ce1e71915ac06c84712431c8c",
-    "pre_install": "Get-ChildItem \"$dir\\fanqienovel*.exe\" | Rename-Item -NewName 'fanqienovel.exe'",
-    "shortcuts": [
-        [
-            "fanqienovel.exe",
-            "fanqienovel"
-        ]
-    ],
-    "persist": "data",
-    "checkver": {
-        "url": "https://api.github.com/repos/ying-ck/fanqienovel-downloader/releases",
-        "jp": "$[*].assets[*].browser_download_url",
-        "regex": "/releases/download/v([\\d.]+)/(?<file>fanqienovel-downloader.*?\\.exe)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/ying-ck/fanqienovel-downloader/releases/download/v$version/$matchFile"
-    }
+  "version": "1.2.5",
+  "description": "下载番茄小说",
+  "homepage": "https://github.com/ying-ck/fanqienovel-downloader",
+  "license": {
+    "identifier": "GPL-3.0 license",
+    "url": "https://github.com/ying-ck/fanqienovel-downloader#GPL-3.0-1-ov-file"
+  },
+  "url": "https://github.com/ying-ck/fanqienovel-downloader/releases/download/v1.2.5/fanqienovel-downloader-v1.2.5.exe",
+  "hash": "aa43a210b319ddd5147b1aa26d6f83287ff3876ce1e71915ac06c84712431c8c",
+  "pre_install": "Get-ChildItem \"$dir\\fanqienovel*.exe\" | Rename-Item -NewName 'fanqienovel.exe'",
+  "shortcuts": [
+    [
+      "fanqienovel.exe",
+      "fanqienovel"
+    ]
+  ],
+  "persist": "data",
+  "checkver": {
+    "url": "https://api.github.com/repos/ying-ck/fanqienovel-downloader/releases",
+    "jp": "$[*].assets[*].browser_download_url",
+    "regex": "/releases/download/v([\\d.]+)/(?<file>fanqienovel-downloader.*?\\.exe)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ying-ck/fanqienovel-downloader/releases/download/v$version/$matchFile"
+  }
 }
