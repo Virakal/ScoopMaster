@@ -1,35 +1,35 @@
 {
-    "##": "see bucket/portfolio-performance.json",
-    "homepage": "https://www.portfolio-performance.info",
-    "description": "An open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return.",
-    "license": "EPL-1.0 License",
-    "version": "0.77.3",
-    "extract_dir": "portfolio",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/buchen/portfolio/releases/download/0.77.3/PortfolioPerformance-0.77.3-win32.win32.x86_64.zip",
-            "hash": "9de1d8010683fcd176c092cdd09e6f744568951d1db2eac151c59e0a0f4f6b58"
-        }
-    },
-    "bin": "PortfolioPerformance.exe",
-    "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
-        ]
-    },
-    "shortcuts": [
-        [
-            "PortfolioPerformance.exe",
-            "Portfolio Performance"
-        ]
-    ],
-    "checkver": "<strong>Desktop Version ([\\d.]+)</strong>",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/buchen/portfolio/releases/download/$version/PortfolioPerformance-$version-win32.win32.x86_64.zip"
-            }
-        }
+  "##": "see bucket/portfolio-performance.json",
+  "homepage": "https://www.portfolio-performance.info",
+  "description": "An open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return.",
+  "license": "EPL-1.0 License",
+  "version": "0.64.5",
+  "extract_dir": "portfolio",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/buchen/portfolio/releases/download/0.64.5/PortfolioPerformance-0.64.5-win32.win32.x86_64.zip",
+      "hash": "12daa3dd466d6ef51dd754ba7bfd7a76148c783f5fc05c7dbadc7a7afd63c079"
     }
+  },
+  "bin": "PortfolioPerformance.exe",
+  "suggest": {
+    "JDK": [
+      "java/oraclejdk",
+      "java/openjdk"
+    ]
+  },
+  "shortcuts": [
+    [
+      "PortfolioPerformance.exe",
+      "Portfolio Performance"
+    ]
+  ],
+  "checkver": "<strong>Download ([\\d.]+)</strong>",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/buchen/portfolio/releases/download/$version/PortfolioPerformance-$version-win32.win32.x86_64.zip"
+      }
+    }
+  }
 }

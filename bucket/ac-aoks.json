@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.petges.lu/",
-    "version": "11.40a",
+    "version": "11.30b",
     "description": "Easily change file and folder properties with a right-click in Explorer.",
     "license": "Proprietary",
-    "url": "https://www.petges.lu/pubfiles/ac-11_40a.exe#/ac.exe",
-    "hash": "29a1b2c62a70074c1af701217ca411b1e24e41b1ccaba5db2b8de55b6abd08f6",
+    "url": "https://www.petges.lu/pubfiles/ac-11_30b.exe#/ac.exe",
+    "hash": "c1dd8d58bb3c25a3970f6a7573c08c44202771dbc7e7abdc09b47f5c6ed7a746",
     "##": "see installer options here - https://jrsoftware.org/ishelp/index.php?topic=setupcmdline",
     "installer": {
         "file": "ac.exe",
@@ -28,7 +28,7 @@
         ]
     },
     "checkver": {
-        "regex": ">Version ([\\w.]+)<"
+        "regex": ">Version ([\\w.]+) "
     },
     "autoupdate": {
         "url": "https://www.petges.lu/pubfiles/ac-$underscoreVersion.exe#/ac.exe"
