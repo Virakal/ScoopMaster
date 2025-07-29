@@ -1,5 +1,5 @@
 {
-    "version": "4.4.0.0",
+    "version": "1.9.4.0",
     "bin": "ClearDiskInfo.exe",
     "homepage": "https://carifred.com/cleardiskinfo",
     "checkver": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.carifred.com/cleardiskinfo/ClearDiskInfo.exe",
-            "hash": "d8833f28fddb2e129b28e6aa1b18ac34b7d9b893f958919c3afdde66c8d5e971"
+            "hash": "74b057e31bf4b2bed6e5c750e884ab67810f7ae69a0a43d66e4e11b6dd0e2466"
         }
     },
     "autoupdate": {
@@ -19,6 +19,5 @@
                 "hash": "download"
             }
         }
-    },
-    "_from": "okibcn/ScoopMaster"
+    }
 }
