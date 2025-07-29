@@ -1,21 +1,14 @@
 {
-    "version": "0.15.6",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/itzg/mc-monitor/releases/download/0.15.6/mc-monitor_0.15.6_windows_amd64.tar.gz",
-            "bin": [
-                "mc-monitor.exe"
-            ],
-            "hash": "8bcd3a2ee5c72ccb9df2f1c0ca65b00460c8de55a927a020bc38a318a48985c2"
-        },
-        "arm64": {
-            "url": "https://github.com/itzg/mc-monitor/releases/download/0.15.6/mc-monitor_0.15.6_windows_arm64.tar.gz",
-            "bin": [
-                "mc-monitor.exe"
-            ],
-            "hash": "3f4813d49d134dc3da7cd24c0a806edcab436ac955feb7f0c620ec9c6f59e80f"
-        }
-    },
-    "license": "MIT",
-    "description": "Command/agent to monitor the status of Minecraft servers"
+  "version": "0.12.1",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/itzg/mc-monitor/releases/download/0.12.1/mc-monitor_0.12.1_windows_amd64.zip",
+      "bin": [
+        "mc-monitor.exe"
+      ],
+      "hash": "9456f270bb9bae299b83897dad5e8ea1c29c32f353215a9a544300dd0b9a8e8c"
+    }
+  },
+  "license": "MIT",
+  "description": "Command/agent to monitor the status of Minecraft servers"
 }
