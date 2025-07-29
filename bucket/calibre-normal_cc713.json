@@ -1,0 +1,67 @@
+{
+    "version": "8.7.0",
+    "description": "Powerful and easy to use e-book manager",
+    "homepage": "https://calibre-ebook.com",
+    "license": "GPL-3.0-only",
+    "notes": "Calibre drops support for 32-bit CPUs after v6.0.0, if you are running a 32-bit system, please install calibre-normal5 from Versions bucket.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.7.0/calibre-64bit-8.7.0.msi",
+            "hash": "sha512:f5fe81e15b717bd90f12a70359cc4d92c8d6cd1fddd2241cdbf7bfb9495e99ef64e3650b60b8b4478cdb8ae40bc5df03011412008fc38e85dc74b61dbd566a32",
+            "extract_dir": "PFiles64\\Calibre2"
+        }
+    },
+    "bin": [
+        "calibre.exe",
+        "calibre-complete.exe",
+        "calibre-customize.exe",
+        "calibredb.exe",
+        "calibre-debug.exe",
+        "calibre-parallel.exe",
+        "calibre-server.exe",
+        "calibre-smtp.exe",
+        "ebook-convert.exe",
+        "ebook-device.exe",
+        "ebook-edit.exe",
+        "ebook-meta.exe",
+        "ebook-polish.exe",
+        "ebook-viewer.exe",
+        "fetch-ebook-metadata.exe",
+        "lrf2lrs.exe",
+        "lrs2lrf.exe",
+        "lrfviewer.exe",
+        "markdown-calibre.exe",
+        "web2disk.exe"
+    ],
+    "shortcuts": [
+        [
+            "calibre.exe",
+            "Calibre"
+        ],
+        [
+            "ebook-edit.exe",
+            "Calibre E-Book Editor"
+        ],
+        [
+            "ebook-viewer.exe",
+            "Calibre E-Book Viewer"
+        ],
+        [
+            "lrfviewer.exe",
+            "Calibre LRF Viewer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/kovidgoyal/calibre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-64bit-$version.msi",
+                "hash": {
+                    "url": "https://calibre-ebook.com/signatures/calibre-64bit-$version.msi.sha512"
+                }
+            }
+        }
+    }
+}

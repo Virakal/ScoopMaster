@@ -1,0 +1,28 @@
+{
+    "version": "0.7.20",
+    "description": "The interpreter of ISLisp written in Go",
+    "homepage": "https://github.com/hymkor/gmnlisp",
+    "license": "MIT License",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/hymkor/gmnlisp/releases/download/v0.7.20/gmnlisp-v0.7.20-windows-386.zip",
+            "hash": "f997bf2ac97c08ae67d9373d709dc2b99eeefcac5f39401eea841d8596326415"
+        },
+        "64bit": {
+            "url": "https://github.com/hymkor/gmnlisp/releases/download/v0.7.20/gmnlisp-v0.7.20-windows-amd64.zip",
+            "hash": "8558d23a5ff30957c41313024a7b51462bfc057a08bd698b80f6b3e799dfc6cc"
+        }
+    },
+    "bin": "gmnlisp.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hymkor/gmnlisp/releases/download/v$version/gmnlisp-v$version-windows-386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/hymkor/gmnlisp/releases/download/v$version/gmnlisp-v$version-windows-amd64.zip"
+            }
+        }
+    }
+}
