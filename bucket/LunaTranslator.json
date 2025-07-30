@@ -1,18 +1,18 @@
 {
-    "version": "10.7.7.2-202507301103",
-    "description": "LunaTranslator is a Visual Novel translate tool, support clipboard / OCR/ HOOK, support 40+ translate engines.",
+    "version": "10.7.7.2",
+    "description": "A Visual Novel translation tool, with HOOK / OCR / clipboard support",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.7.7.2/LunaTranslator_x64_win10.zip",
-            "extract_dir": "LunaTranslator_x64_win10",
-            "hash": "d4b6020078470e86bd4e044a798c6dab864ffefa4342e97361972205cc859ac0"
+            "hash": "d4b6020078470e86bd4e044a798c6dab864ffefa4342e97361972205cc859ac0",
+            "extract_dir": "LunaTranslator_x64_win10"
         },
         "32bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.7.7.2/LunaTranslator_x86_win7.zip",
-            "extract_dir": "LunaTranslator_x86_win7",
-            "hash": "fc539c143d35f33a45e2277392c8889fb5b8ec78de15911cdadd3a3c6e7054c3"
+            "hash": "fc539c143d35f33a45e2277392c8889fb5b8ec78de15911cdadd3a3c6e7054c3",
+            "extract_dir": "LunaTranslator_x86_win7"
         }
     },
     "shortcuts": [
@@ -22,31 +22,26 @@
         ],
         [
             "LunaTranslator_admin.exe",
-            "LunaTranslator (Admin)"
+            "LunaTranslator (admin)"
+        ],
+        [
+            "LunaTranslator_debug.bat",
+            "LunaTranslator (debug)"
         ]
     ],
     "persist": [
+        "cache",
         "userconfig",
-        "translation_record",
-        "cache"
+        "translation_record"
     ],
-    "checkver": {
-        "script": [
-            "try { $detail = Invoke-WebRequest 'https://github.com/HIllya51/LunaTranslator/releases.atom' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }",
-            "$atom = [xml]$detail.Content",
-            "$latest = $atom.feed.entry | Select-Object -First 1",
-            "$result =  $latest.id + '-' + ([DateTime]$latest.updated).ToUniversalTime().AddHours(8).ToString('yyyyMMddHHmm')",
-            "return $result"
-        ],
-        "regex": "v((?<main>[\\d.]+)-\\d+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$matchMain/LunaTranslator_x64_win10.zip"
+                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win10.zip"
             },
             "32bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$matchMain/LunaTranslator_x86_win7.zip"
+                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
             }
         }
     }
