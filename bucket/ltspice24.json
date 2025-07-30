@@ -1,5 +1,5 @@
 {
-    "version": "24.1.4",
+    "version": "24.1.9",
     "description": "LTspice is Linear Technology Corporation's analog circuit simulation software.",
     "homepage": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://ltspice.analog.com/software/LTspice64.msi",
-            "hash": "EA39CCF0CFE6736FA3E5E6CDA5CC6AF2CEEA47627F66D578C104801D98BFD048"
+            "hash": "AF93F7916FE70CDF7D99B4E4943AE67A0737C1F2286AD9900BC1DE028A1E987F"
         }
     },
     "bin": "LTSpice.exe"
