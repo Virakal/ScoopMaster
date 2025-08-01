@@ -1,20 +1,20 @@
 {
-    "version": "0.7.1",
+    "version": "0.7.2",
     "description": "免费全能的文档解析神器，开箱即用·批量上传·多种文档·一键解析",
     "homepage": "https://mineru.net/",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://webpub.shlab.tech/MinerU/latest/win/MinerU-0.7.1-setup.exe#/dl.7z",
-            "hash": "b0eb9e2d5b0274f5add930b73265ef9f4a8173fb8970617d6aeb47b608e1893c",
+            "url": "https://webpub.shlab.tech/MinerU/latest/win/MinerU-0.7.2-setup.exe#/dl.7z",
+            "hash": "424571ed1c5b0ada3387e14453f7b19512b7846a951b34880c9f71d6e810ab66",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://webpub.shlab.tech/MinerU/latest/win/MinerU-0.7.1-setup.exe#/dl.7z",
-            "hash": "b0eb9e2d5b0274f5add930b73265ef9f4a8173fb8970617d6aeb47b608e1893c",
+            "url": "https://webpub.shlab.tech/MinerU/latest/win/MinerU-0.7.2-setup.exe#/dl.7z",
+            "hash": "424571ed1c5b0ada3387e14453f7b19512b7846a951b34880c9f71d6e810ab66",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
