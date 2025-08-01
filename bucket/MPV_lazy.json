@@ -99,7 +99,7 @@
         "               Start-Process -FilePath \"reg.exe\" -ArgumentList \"import\", \"$url_uninstaller\" -Verb RunAs -Wait -ErrorAction Stop",
         "               info \"私有协议注册表清理完成\"",
         "           } catch {",
-        "               error \"执行'$mpv_uninstaller'失败: $_\"",
+        "               error \"执行'$url_uninstaller'失败: $_\"",
         "           }",
         "       } else {",
         "           info \"已跳过注册表清理\"",
