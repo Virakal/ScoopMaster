@@ -1,21 +1,15 @@
 {
-    "version": "0.9.68",
-    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
-    "homepage": "https://readest.com/",
-    "license": {
-        "identifier": "AGPL-3.0-or-later",
-        "url": "https://github.com/readest/readest/blob/main/LICENSE"
-    },
+    "version": "0.9.69",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences.",
+    "homepage": "https://github.com/chrox/readest",
+    "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.68/Readest_0.9.68_x64-portable.exe#/Readest.exe",
-            "hash": "89222775438148947ec93029270d73de590d2124d8edf8daf1e8cdf45ed18788"
-        },
-        "arm64": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.68/Readest_0.9.68_arm64-portable.exe#/Readest.exe",
-            "hash": "7b12bfd03d4adf04cadaef8b24c80c4a5790b0bc6b8cd0bb0c25d9f0fe555794"
+            "url": "https://github.com/chrox/readest/releases/download/v0.9.69/Readest_0.9.69_x64-setup.exe#/dl.7z",
+            "hash": "1b92b43b73c7046bf6522abad6d35c509add4e10d8b3cda4599079b2abcd08d2"
         }
     },
+    "post_install": "Remove-Item \"$dir\\`$*\" -Force -Recurse",
     "shortcuts": [
         [
             "Readest.exe",
@@ -23,15 +17,12 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/readest/readest"
+        "github": "https://github.com/chrox/readest"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
+                "url": "https://github.com/chrox/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
