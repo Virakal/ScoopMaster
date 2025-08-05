@@ -1,32 +1,44 @@
 {
-    "description": "lightweight multi-platform code editor designed for modern hardware with a focus on responsiveness and performance",
+    "version": "0.7.2",
+    "description": "Lightweight multi-platform code editor designed for modern hardware with a focus on responsiveness and performance.",
     "homepage": "https://github.com/SpartanJ/ecode",
     "license": "MIT",
-    "version": "0.7.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-0.7.2/ecode-windows-0.7.2-x86_64.zip",
+            "hash": "6c7e2efa5bdd7f70c7f7cfd00499ebf6d5add549f8e8e36cc2d65b8bdcb29bba"
+        },
+        "32bit": {
+            "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-0.7.2/ecode-windows-0.7.2-x86_64.zip",
+            "hash": "6c7e2efa5bdd7f70c7f7cfd00499ebf6d5add549f8e8e36cc2d65b8bdcb29bba"
+        },
+        "arm64": {
+            "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-0.7.2/ecode-windows-0.7.2-arm64.zip",
+            "hash": "5329c4f96070f143c82b04f7b0d12bb3e09a62504f05460f041ad12dd31e3ae4"
+        }
+    },
+    "bin": "ecode/ecode.exe",
+    "shortcuts": [
+        [
+            "ecode/ecode.exe",
+            "ecode"
+        ]
+    ],
     "checkver": {
-        "github": "https://github.com/SpartanJ/ecode"
+        "github": "https://github.com/SpartanJ/ecode",
+        "regex": "/releases/tag/ecode-([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-$version/ecode-windows-$version-x86_64.zip",
-                "hash": {
-                    "mode": "download"
-                }
+                "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-$version/ecode-windows-$version-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-$version/ecode-windows-$version-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-$version/ecode-windows-$version-arm64.zip"
             }
         }
-    },
-    "extract_dir": "ecode",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/SpartanJ/ecode/releases/download/ecode-0.7.1/ecode-windows-0.7.1-x86_64.zip",
-            "hash": "9F8F13623AC10223358CFE418FE5ECFD6A3E32510C14A7AEED81F6A1AA62A6F2"
-        }
-    },
-    "shortcuts": [
-        [
-            "ecode.exe",
-            "ecode"
-        ]
-    ]
+    }
 }
