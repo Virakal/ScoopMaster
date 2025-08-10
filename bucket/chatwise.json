@@ -3,13 +3,17 @@
     "description": "An AI Chatbot for many LLMs",
     "homepage": "https://chatwise.app/",
     "license": "freeware",
-    "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.8.95/ChatWise_0.8.95_x64-setup.exe#/dl.7z",
-    "hash": "89550303e2b431167b2135c69ca5369464dc11b4b371a8b7c8647ead4ea0c067",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.8.95/ChatWise_0.8.95_x64-setup.exe#/dl.7z",
+            "hash": "89550303e2b431167b2135c69ca5369464dc11b4b371a8b7c8647ead4ea0c067"
+        }
+    },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "bin": "ChatWise.exe",
     "shortcuts": [
         [
-            "ChatWise.exe",
+            "chatwise.exe",
             "ChatWise"
         ]
     ],
@@ -17,6 +21,10 @@
         "github": "https://github.com/egoist/chatwise-releases"
     },
     "autoupdate": {
-        "url": "https://github.com/egoist/chatwise-releases/releases/download/v$version/ChatWise_$version_x64-setup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/egoist/chatwise-releases/releases/download/v$version/ChatWise_$version_x64-setup.exe#/dl.7z"
+            }
+        }
     }
 }
