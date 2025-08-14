@@ -1,13 +1,13 @@
 {
-    "version": "2.0.10",
+    "version": "2.0.12",
     "description": " ProxiFyre: SOCKS5 Proxifier for Windows.",
     "homepage": "https://github.com/wiresock/proxifyre",
     "license": "AGPL-3",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.10/ProxiFyre-v2.0.10-x64-signed.zip",
-            "hash": "ba9bd437abf04b6b97f2bda69e9437ecb0b51739d2f03bc50f0a218fa0b8febd"
+            "url": "https://github.com/wiresock/proxifyre/releases/download/v2.0.12/ProxiFyre-v2.0.12-x64-signed.zip",
+            "hash": "f6916ef0b5115431644c6e0ae3fecceab8370720d2f26e507e4850d50384476b"
         }
     },
     "checkver": "github",
