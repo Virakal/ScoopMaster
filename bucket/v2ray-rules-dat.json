@@ -1,5 +1,5 @@
 {
-    "version": "202508132214",
+    "version": "202508140036",
     "description": "Data files from Loyalsoldier/v2ray-rules-dat, works for v2ray and Xray.",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
     "license": {
@@ -8,12 +8,12 @@
     },
     "depends": "v2ray",
     "url": [
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508132214/geoip.dat",
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508132214/geosite.dat"
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508140036/geoip.dat",
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202508140036/geosite.dat"
     ],
     "hash": [
-        "8b74eb9558286fae0388317f5d9e631d563adfef1307f5112c9a7c5adc1d928c",
-        "e50dfb69e8da3a1c8d9c4c40bcec26d80e4bc3ccc3593182c5587817f04e0dd7"
+        "f490d394f51f91e4befea1abd68a7b9574fe1bffc89d25bc26bcf90fc481d47e",
+        "010a9ec49039ff72b538310e218888a3e7f41bf7b2f43b1713aeb2bd8010b6a4"
     ],
     "installer": {
         "script": [
@@ -27,14 +27,15 @@
     },
     "uninstaller": {
         "script": [
-            "Remove-Item \"$(appdir v2ray $global)\\current\\LoyalsoldierIP.dat\" -Force -ErrorAction 'SilentlyContinue'",
-            "Remove-Item \"$(appdir v2ray $global)\\current\\LoyalsoldierSite.dat\" -Force -ErrorAction 'SilentlyContinue'",
-            "Remove-Item \"$(appdir v2ray $global)\\current\\geosite.dat\" -Force -ErrorAction 'SilentlyContinue'",
-            "Remove-Item \"$(appdir v2ray $global)\\current\\geoip.dat\" -Force -ErrorAction 'SilentlyContinue'"
+            "Remove-Item \"$(appdir v2ray $global)\\current\\LoyalsoldierIP.dat\" -ErrorAction 'SilentlyContinue' -Force",
+            "Remove-Item \"$(appdir v2ray $global)\\current\\LoyalsoldierSite.dat\" -ErrorAction 'SilentlyContinue' -Force",
+            "Remove-Item \"$(appdir v2ray $global)\\current\\geosite.dat\" -ErrorAction 'SilentlyContinue' -Force",
+            "Remove-Item \"$(appdir v2ray $global)\\current\\geoip.dat\" -ErrorAction 'SilentlyContinue' -Force"
         ]
     },
     "env_set": {
-        "V2RAY_LOCATION_ASSET": "$(scoop prefix v2ray)"
+        "V2RAY_LOCATION_ASSET": "$(scoop prefix v2ray)",
+        "V2RAYA_V2RAY_ASSETSDIR": "$(scoop prefix v2ray)"
     },
     "checkver": "github",
     "autoupdate": {
