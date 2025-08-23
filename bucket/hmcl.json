@@ -14,7 +14,7 @@
     ],
     "pre_install": [
         ". \"$bucketsdir\\doge\\scripts\\utils.ps1\"",
-        "Ensure-File -Name 'hmcl.json'"
+        "Set-PersistFile -Name 'hmcl.json'"
     ],
     "persist": [
         "hmcl.json",
@@ -23,7 +23,7 @@
     "installer": {
         "script": [
             ". \"$bucketsdir\\doge\\scripts\\utils.ps1\"",
-            "Ensure-Junction -Source \"$persist_dir\\HMCL\\.hmcl\" -Target \"$env:APPDATA\\.hmcl\""
+            "Set-Junction -Source \"$persist_dir\\HMCL\\.hmcl\" -Target \"$env:APPDATA\\.hmcl\""
         ]
     },
     "uninstaller": {
