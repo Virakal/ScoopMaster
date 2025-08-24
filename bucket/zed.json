@@ -9,35 +9,21 @@
             "hash": "7d4768e2c6b5e0553d8084b21f43fc17a00334669ccb65e8c497f813ea5a16c7"
         }
     },
-    "persist": "data",
-    "post_install": [
-        "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:LocalAppData\\Zed\")) {",
-        "    info '[Portable Mode] Copying user data...'",
-        "    Copy-Item \"$env:LocalAppData\\Zed\\*\" \"$dir\\data\" -Recurse",
-        "}",
-        "if (!(Test-Path \"$dir\\data\\config\") -and (Test-Path \"$env:AppData\\Zed\")) {",
-        "    info '[Portable Mode] Copying config...'",
-        "    Copy-Item \"$env:AppData\\Zed\" \"$dir\\data\\config\" -Recurse",
-        "}"
-    ],
+    "bin": "zed.exe",
     "shortcuts": [
         [
             "zed.exe",
-            "Zed",
-            "--user-data-dir=\"$dir\\data\""
+            "Zed"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/deevus/zed-windows-builds"
+        "url": "https://github.com/deevus/zed-windows-builds/releases",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/zed.zip",
-                "hash": {
-                    "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/sha256sums.txt"
-                }
-            }
+        "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/zed.zip",
+        "hash": {
+            "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/sha256sums.txt"
         }
     }
 }
