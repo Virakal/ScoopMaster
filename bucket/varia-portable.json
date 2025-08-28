@@ -23,8 +23,7 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/giantpinkrobots/varia/releases",
-        "jp": "$[*].assets[*].browser_download_url",
-        "regex": "/releases/download/v([\\d.-]+)/varia-windows-portable-amd64\\.zip"
+        "regex": "/releases/tag/v([\\d.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/giantpinkrobots/varia/releases/download/v$version/varia-windows-portable-amd64.zip"
