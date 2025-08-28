@@ -1,61 +1,40 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "142.0",
-    "description": "Popular open source web browser.",
-    "homepage": "https://www.mozilla.org/firefox/",
-    "license": {
-        "identifier": "MPL-2.0",
-        "url": "https://www.mozilla.org/en-US/MPL/2.0/"
-    },
-    "notes": "For details about switching Firefox profiles, refer to https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles",
+    "description": "Popular open source web browser. (tete009 private build)",
+    "homepage": "http://www1.plala.or.jp/tete009/en-US/software.html#FIREFOX",
+    "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/142.0/win64/en-US/Firefox%20Setup%20142.0.exe#/dl.7z",
-            "hash": "sha512:3dd31dd91d4ca91fc9ae61e444387d1ecb9ce557432a0fc296a9861f43c8193055b0ce10d49ad44fd28bf4df456104468d2ca41ace5435eddbd691a14fe8b68c"
-        },
-        "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/142.0/win32/en-US/Firefox%20Setup%20142.0.exe#/dl.7z",
-            "hash": "sha512:e5dc475211201da87aef9e8da0f9d4fa838dbf3c7cf5a244bcb27aa2af6caf7abfe845de0ec3aa2b3fb5659a5945ff8cc989e40fe93e7c44503282e12e82d6a3"
+            "url": "https://github.com/by275/scoop-bucket/releases/download/firefox-tete009/firefox-142.0-2025081114.en-US.win32-tete009-x64-sse3-cspgo.7z",
+            "hash": "b18c9bab17edd8498218ac2989b5d43c0feef2b7eb8618967660dc48feaa4739",
+            "extract_dir": "firefox-142.0-2025081114.en-US.win32-tete009-x64-sse3-cspgo",
+            "bin": "firefox.exe",
+            "shortcuts": [
+                [
+                    "firefox.exe",
+                    "Firefox"
+                ]
+            ]
         }
     },
-    "extract_dir": "core",
-    "shortcuts": [
-        [
-            "firefox.exe",
-            "Firefox"
-        ]
-    ],
     "pre_install": [
-        "'defaults\\pref\\channel-prefs.js' | ForEach-Object {",
-        "  if (!(Test-Path \"$persist_dir\\$_\")) {",
-        "    Write-Host -ForegroundColor Green \"Disabling the auto-update...\"",
-        "    Set-Content -Encoding Ascii -Path \"$dir\\$_\" -Value 'pref(\"app.update.channel\", \"default\");'",
-        "  }",
-        "}"
+        "\"[General]`r`Portable=1\" | Out-File -Encoding ASCII \"$dir\\tmemutil.ini\"",
+        "ForEach ($emptyFile in $manifest.persist | Where-Object { $_ -ne 'PortableData' }) {New-Item \"$dir\\$emptyFile\" -ItemType file -ErrorAction SilentlyContinue | Out-Null}"
     ],
     "persist": [
-        "defaults\\pref\\channel-prefs.js",
-        "distribution"
+        "PortableData",
+        "tmemutil.ini"
     ],
     "checkver": {
-        "url": "https://www.mozilla.org/en-US/firefox/notes/",
-        "regex": "class=\"c-release-version\">([\\d.]+)</"
+        "url": "https://api.github.com/repos/by275/scoop-bucket/releases",
+        "regex": "firefox-([\\d.]+)-(?<date>\\d+)\\.en-US\\.win32-tete009-x64(?<buildtag>[\\w-]+)?\\.7z",
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64/en-US/$basename"
-                }
-            },
-            "32bit": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win32/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win32/en-US/$basename"
-                }
+                "url": "https://github.com/by275/scoop-bucket/releases/download/firefox-tete009/firefox-$version-$matchDate.en-US.win32-tete009-x64$matchBuildtag.7z",
+                "extract_dir": "firefox-$version-$matchDate.en-US.win32-tete009-x64$matchBuildtag"
             }
         }
     }
