@@ -1,5 +1,5 @@
 {
-    "version": "0.9.75",
+    "version": "0.9.76",
     "description": "An open-source ebook reader designed for immersive and deep reading experiences",
     "homepage": "https://readest.com/",
     "license": {
@@ -8,19 +8,51 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.75/Readest_0.9.75_x64-portable.exe#/Readest.exe",
-            "hash": "721ef235dfdb6eb549cbecead2026824b61a42ff92cf9c0a05e2fb973c510a12"
+            "url": "https://github.com/readest/readest/releases/download/v0.9.76/Readest_0.9.76_x64-setup.exe#/dl.7z",
+            "hash": "d5a7ce40364dae476cfc4ded9efcdd1e47a5f04bfbf05070a4823ea9f75a2fcb"
         },
         "arm64": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.75/Readest_0.9.75_arm64-portable.exe#/Readest.exe",
-            "hash": "6b3ed86cb8a4093f5ae70e8f60126e696f5a8ddd738a0d860c8d6c6a58a3767e"
+            "url": "https://github.com/readest/readest/releases/download/v0.9.76/Readest_0.9.76_arm64-setup.exe#/dl.7z",
+            "hash": "f75619907b76044cbaecf9612e7165befc12a678de35c88cbfd1780f474bbf83"
         }
     },
     "shortcuts": [
         [
-            "Readest.exe",
+            "readest.exe",
             "Readest"
         ]
+    ],
+    "post_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+        "Rename-Item -Path \"$dir\\`$TEMP\" -NewName \"redist\"",
+        "$appDataPath = \"$env:APPDATA\\com.bilingify.readest\"",
+        "$appLocalDataPath = \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
+        "$persistLocal = \"$persist_dir\\Local\"",
+        "$persistRoaming = \"$persist_dir\\Roaming\"",
+        "if (Test-Path $appDataPath) {",
+        "    Remove-Item $appDataPath -Recurse -Force",
+        "}",
+        "if (Test-Path $appLocalDataPath) {",
+        "    Remove-Item $appLocalDataPath -Recurse -Force",
+        "}",
+        "if (-Not (Test-Path $persistRoaming)) {",
+        "    New-Item -Path $persistRoaming -ItemType Directory | Out-Null",
+        "}",
+        "if (-Not (Test-Path $persistLocal)) {",
+        "    New-Item -Path $persistLocal -ItemType Directory | Out-Null",
+        "}",
+        "New-Item -ItemType Junction -Path \"$appDataPath\" -Target $persistRoaming | Out-Null",
+        "New-Item -ItemType Junction -Path \"$appLocalDataPath\" -Target $persistLocal | Out-Null"
+    ],
+    "post_uninstall": [
+        "$appDataPath = \"$env:APPDATA\\com.bilingify.readest\"",
+        "$appLocalDataPath = \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
+        "if (Test-Path $appDataPath) {",
+        "    Remove-Item $appDataPath -Recurse -Force",
+        "}",
+        "if (Test-Path $appLocalDataPath) {",
+        "    Remove-Item $appLocalDataPath -Recurse -Force",
+        "}"
     ],
     "checkver": {
         "github": "https://github.com/readest/readest"
@@ -28,11 +60,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-setup.exe#/dl.7z"
             }
         }
-    }
+    },
+    "notes": [
+        "You may need to install Edge WebView2 Runtime to use Readest.",
+        "A installer of Edge WebView2 Runtime is available under the 'redist' folder of the Pot installation directory."
+    ]
 }
