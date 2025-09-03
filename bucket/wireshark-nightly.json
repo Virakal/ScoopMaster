@@ -1,46 +1,46 @@
 {
-  "version": "4.7.0rc0-45-g15ffe98039e5",
-  "description": "A network protocol analyzer that lets you see what’s happening on your network at a microscopic level.",
-  "homepage": "https://www.wireshark.org/",
-  "license": "GPL-2.0-or-later",
-  "notes": [
-    "WinPcap was replaced by Npcap.",
-    "Run 'scoop install nmap' (from a elevated shell) to install 'Npcap' automatically,",
-    "or run 'scoop install nmap-portable' and then install the 'npcap-oem.exe' from the 'nmap-portable' directory manually."
-  ],
-  "suggest": {
-    "Nmap (includes Npcap)": "nmap"
-  },
-  "url": "https://www.wireshark.org/download/automated/win64/WiresharkPortable64_4.7.0rc0-45-g15ffe98039e5.paf.exe#/dl.7z",
-  "hash": "5c8fc0ad1c584c0bedadb6cf966643afdf3ed66261d47cf94f893d4876eb34fe",
-  "bin": [
-    "App\\Wireshark\\capinfos.exe",
-    "App\\Wireshark\\captype.exe",
-    "App\\Wireshark\\dumpcap.exe",
-    "App\\Wireshark\\editcap.exe",
-    "App\\Wireshark\\mergecap.exe",
-    "App\\Wireshark\\randpkt.exe",
-    "App\\Wireshark\\rawshark.exe",
-    "App\\Wireshark\\reordercap.exe",
-    "App\\Wireshark\\text2pcap.exe",
-    "App\\Wireshark\\tshark.exe",
-    [
-      "WiresharkPortable64.exe",
-      "WiresharkNightly"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "WiresharkPortable64.exe",
-      "Wireshark Nightly"
-    ]
-  ],
-  "persist": "Data",
-  "checkver": {
-    "url": "https://www.wireshark.org/download/automated/win64/?C=M;O=D",
-    "regex": "<a href=\"WiresharkPortable64_(.*?)\\.paf\\.exe\">"
-  },
-  "autoupdate": {
-    "url": "https://www.wireshark.org/download/automated/win64/WiresharkPortable64_$version.paf.exe#/dl.7z"
-  }
+    "version": "4.7.0rc0-54-g20a26d246fbe",
+    "description": "A network protocol analyzer that lets you see what’s happening on your network at a microscopic level.",
+    "homepage": "https://www.wireshark.org/",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "WinPcap was replaced by Npcap.",
+        "Run 'scoop install nmap' (from a elevated shell) to install 'Npcap' automatically,",
+        "or run 'scoop install nmap-portable' and then install the 'npcap-oem.exe' from the 'nmap-portable' directory manually."
+    ],
+    "suggest": {
+        "Nmap (includes Npcap)": "nmap"
+    },
+    "url": "https://www.wireshark.org/download/automated/win64/WiresharkPortable64_4.7.0rc0-54-g20a26d246fbe.paf.exe#/dl.7z",
+    "hash": "813a21f0662edb40ac250c4f66e4987fe3ecec0f8b5f250032498a72dea26e8a",
+    "bin": [
+        "App\\Wireshark\\capinfos.exe",
+        "App\\Wireshark\\captype.exe",
+        "App\\Wireshark\\dumpcap.exe",
+        "App\\Wireshark\\editcap.exe",
+        "App\\Wireshark\\mergecap.exe",
+        "App\\Wireshark\\randpkt.exe",
+        "App\\Wireshark\\rawshark.exe",
+        "App\\Wireshark\\reordercap.exe",
+        "App\\Wireshark\\text2pcap.exe",
+        "App\\Wireshark\\tshark.exe",
+        [
+            "WiresharkPortable64.exe",
+            "WiresharkNightly"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "WiresharkPortable64.exe",
+            "Wireshark Nightly"
+        ]
+    ],
+    "persist": "Data",
+    "checkver": {
+        "url": "https://www.wireshark.org/download/automated/win64/?C=M;O=D",
+        "regex": "<a href=\"WiresharkPortable64_(.*?)\\.paf\\.exe\">"
+    },
+    "autoupdate": {
+        "url": "https://www.wireshark.org/download/automated/win64/WiresharkPortable64_$version.paf.exe#/dl.7z"
+    }
 }
