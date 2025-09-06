@@ -1,15 +1,21 @@
 {
     "version": "0.9.78",
-    "description": "An open-source ebook reader designed for immersive and deep reading experiences.",
-    "homepage": "https://github.com/chrox/readest",
-    "license": "AGPL-3.0-only",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
+    "homepage": "https://readest.com/",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/readest/readest/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chrox/readest/releases/download/v0.9.78/Readest_0.9.78_x64-setup.exe#/dl.7z",
-            "hash": "88a7c411fcc2ef65a9ef4ec31975078f6fc2034e5d7adb524560260a5ddb85f3"
+            "url": "https://github.com/readest/readest/releases/download/v0.9.78/Readest_0.9.78_x64-portable.exe#/Readest.exe",
+            "hash": "4999120484cd727ac7963fa101a2f5c2dec14e12a79d20e26698d5bf35e0aae1"
+        },
+        "arm64": {
+            "url": "https://github.com/readest/readest/releases/download/v0.9.78/Readest_0.9.78_arm64-portable.exe#/Readest.exe",
+            "hash": "6f457df7ae4fa4f3e62063b122c71f688ef4ca1ec25708e0bbafa15ed6b77375"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$*\" -Force -Recurse",
     "shortcuts": [
         [
             "Readest.exe",
@@ -17,12 +23,15 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/chrox/readest"
+        "github": "https://github.com/readest/readest"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/chrox/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
             }
         }
     }
