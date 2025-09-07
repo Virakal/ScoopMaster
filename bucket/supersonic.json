@@ -1,26 +1,26 @@
 {
-  "version": "0.18.0",
-  "description": "A lightweight cross-platform desktop client for Subsonic and Jellyfin music servers.",
-  "homepage": "https://github.com/dweymouth/supersonic",
-  "license": "GPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/dweymouth/supersonic/releases/download/v0.18.0/Supersonic-0.18.0-windows-x64.zip",
-      "hash": "e00684a884434d8aed56485d4ad9885dc80a564314a75d23cf894ea79ed3cf43"
-    }
-  },
-  "shortcuts": [
-    [
-      "supersonic.exe",
-      "Supersonic"
-    ]
-  ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "0.18.0",
+    "description": "A lightweight cross-platform desktop client for Subsonic and Jellyfin music servers.",
+    "homepage": "https://github.com/dweymouth/supersonic",
+    "license": "GPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/dweymouth/supersonic/releases/download/v$version/Supersonic-$version-windows-x64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/dweymouth/supersonic/releases/download/v0.18.0/Supersonic-0.18.0-windows-x64.zip",
+            "hash": "e00684a884434d8aed56485d4ad9885dc80a564314a75d23cf894ea79ed3cf43"
+        }
+    },
+    "shortcuts": [
+        [
+            "supersonic.exe",
+            "Supersonic"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dweymouth/supersonic/releases/download/v$version/Supersonic-$version-windows-x64.zip"
+            }
+        }
     }
-  }
 }

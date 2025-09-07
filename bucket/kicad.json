@@ -1,58 +1,58 @@
 {
-  "version": "9.0.4",
-  "description": "Electronics Design Automation Suite",
-  "homepage": "https://www.kicad.org",
-  "license": "GPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/9.0.4/kicad-9.0.4-x86_64.exe#/dl.7z",
-      "hash": "5714ecd9cadc3c72349adc181c69939f1c329e91c2d1a4b6e2098f3e086fdb1f"
-    }
-  },
-  "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",
-  "bin": "bin\\kicad-cli.exe",
-  "shortcuts": [
-    [
-      "bin\\kicad.exe",
-      "KiCad"
-    ],
-    [
-      "bin\\eeschema.exe",
-      "Schematic Editor"
-    ],
-    [
-      "bin\\pcbnew.exe",
-      "PCB Editor"
-    ],
-    [
-      "bin\\gerbview.exe",
-      "Gerber Viewer"
-    ],
-    [
-      "bin\\pcb_calculator.exe",
-      "Calculator Tools"
-    ],
-    [
-      "bin\\pl_editor.exe",
-      "Drawing Sheet Editor"
-    ],
-    [
-      "bin\\bitmap2component.exe",
-      "Image Converter"
-    ],
-    [
-      "bin\\kicad-cmd.bat",
-      "KiCad Command Prompt"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/KiCad/kicad-source-mirror/"
-  },
-  "autoupdate": {
+    "version": "9.0.4",
+    "description": "Electronics Design Automation Suite",
+    "homepage": "https://www.kicad.org",
+    "license": "GPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/$version/kicad-$version-x86_64.exe#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/9.0.4/kicad-9.0.4-x86_64.exe#/dl.7z",
+            "hash": "5714ecd9cadc3c72349adc181c69939f1c329e91c2d1a4b6e2098f3e086fdb1f"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",
+    "bin": "bin\\kicad-cli.exe",
+    "shortcuts": [
+        [
+            "bin\\kicad.exe",
+            "KiCad"
+        ],
+        [
+            "bin\\eeschema.exe",
+            "Schematic Editor"
+        ],
+        [
+            "bin\\pcbnew.exe",
+            "PCB Editor"
+        ],
+        [
+            "bin\\gerbview.exe",
+            "Gerber Viewer"
+        ],
+        [
+            "bin\\pcb_calculator.exe",
+            "Calculator Tools"
+        ],
+        [
+            "bin\\pl_editor.exe",
+            "Drawing Sheet Editor"
+        ],
+        [
+            "bin\\bitmap2component.exe",
+            "Image Converter"
+        ],
+        [
+            "bin\\kicad-cmd.bat",
+            "KiCad Command Prompt"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/KiCad/kicad-source-mirror/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/KiCad/kicad-source-mirror/releases/download/$version/kicad-$version-x86_64.exe#/dl.7z"
+            }
+        }
     }
-  }
 }

@@ -1,40 +1,40 @@
 {
-  "version": "2025.09.0-139",
-  "description": "A next-generation data science IDE",
-  "homepage": "https://positron.posit.co",
-  "license": "Elastic-2.0",
-  "suggest": {
-    "R": "r",
-    "Python": "python"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-2025.09.0-139-UserSetup.exe",
-      "hash": "111b84580e3b8be98bb5ef8d82a02e16c229ded71c8e52429a45741efa02f401",
-      "extract_dir": "{code_GetDestDir}"
-    }
-  },
-  "innosetup": true,
-  "bin": "bin/positron.cmd",
-  "shortcuts": [
-    [
-      "Positron.exe",
-      "Positron"
-    ]
-  ],
-  "checkver": {
-    "url": "https://cdn.posit.co/positron/releases/win/x86_64/user-releases.json",
-    "jsonpath": "$.version"
-  },
-  "autoupdate": {
+    "version": "2025.09.0-139",
+    "description": "A next-generation data science IDE",
+    "homepage": "https://positron.posit.co",
+    "license": "Elastic-2.0",
+    "suggest": {
+        "R": "r",
+        "Python": "python"
+    },
     "architecture": {
-      "64bit": {
-        "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-$version-UserSetup.exe",
-        "hash": {
-          "url": "$baseurl/user-releases.json",
-          "jsonpath": "$.sha256hash"
+        "64bit": {
+            "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-2025.09.0-139-UserSetup.exe",
+            "hash": "111b84580e3b8be98bb5ef8d82a02e16c229ded71c8e52429a45741efa02f401",
+            "extract_dir": "{code_GetDestDir}"
         }
-      }
+    },
+    "innosetup": true,
+    "bin": "bin/positron.cmd",
+    "shortcuts": [
+        [
+            "Positron.exe",
+            "Positron"
+        ]
+    ],
+    "checkver": {
+        "url": "https://cdn.posit.co/positron/releases/win/x86_64/user-releases.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-$version-UserSetup.exe",
+                "hash": {
+                    "url": "$baseurl/user-releases.json",
+                    "jsonpath": "$.sha256hash"
+                }
+            }
+        }
     }
-  }
 }

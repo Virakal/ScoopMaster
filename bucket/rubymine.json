@@ -1,60 +1,60 @@
 {
-  "version": "2025.2.1-252.25557.135",
-  "description": "Cross-Platform IDE for Ruby on Rails by JetBrains.",
-  "homepage": "https://www.jetbrains.com/ruby/",
-  "license": {
-    "identifier": "Proprietary",
-    "url": "https://www.jetbrains.com/store/license.html"
-  },
-  "url": "https://download.jetbrains.com/ruby/RubyMine-2025.2.1.win.zip",
-  "hash": "4916a3688849105a8bf5c67e6ab6a73cf409aa3b6e1e25daa2cfc87ab232b6fc",
-  "extract_to": "IDE",
-  "installer": {
-    "script": [
-      "& \"$bucketsdir\\$bucket\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
-      "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
-    ]
-  },
-  "architecture": {
-    "64bit": {
-      "bin": [
-        [
-          "IDE\\bin\\rubymine64.exe",
-          "rubymine"
-        ]
-      ],
-      "shortcuts": [
-        [
-          "IDE\\bin\\rubymine64.exe",
-          "JetBrains\\RubyMine"
-        ]
-      ]
+    "version": "2025.2.1-252.25557.135",
+    "description": "Cross-Platform IDE for Ruby on Rails by JetBrains.",
+    "homepage": "https://www.jetbrains.com/ruby/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/store/license.html"
     },
-    "32bit": {
-      "bin": "IDE\\bin\\rubymine.exe",
-      "shortcuts": [
-        [
-          "IDE\\bin\\rubymine.exe",
-          "JetBrains\\RubyMine"
+    "url": "https://download.jetbrains.com/ruby/RubyMine-2025.2.1.win.zip",
+    "hash": "4916a3688849105a8bf5c67e6ab6a73cf409aa3b6e1e25daa2cfc87ab232b6fc",
+    "extract_to": "IDE",
+    "installer": {
+        "script": [
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
+            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
         ]
-      ]
+    },
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "IDE\\bin\\rubymine64.exe",
+                    "rubymine"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "IDE\\bin\\rubymine64.exe",
+                    "JetBrains\\RubyMine"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": "IDE\\bin\\rubymine.exe",
+            "shortcuts": [
+                [
+                    "IDE\\bin\\rubymine.exe",
+                    "JetBrains\\RubyMine"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "IDE\\bin\\rubymine.exe.vmoptions",
+        "IDE\\bin\\rubymine64.exe.vmoptions",
+        "profile"
+    ],
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&platform=zip&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "url": "https://download.jetbrains.com/ruby/RubyMine-$matchVer.win.zip",
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
-  },
-  "persist": [
-    "IDE\\bin\\idea.properties",
-    "IDE\\bin\\rubymine.exe.vmoptions",
-    "IDE\\bin\\rubymine64.exe.vmoptions",
-    "profile"
-  ],
-  "checkver": {
-    "url": "https://data.services.jetbrains.com/products/releases?code=RM&latest=true&platform=zip&type=release",
-    "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
-    "replace": "${ver}-${build}"
-  },
-  "autoupdate": {
-    "url": "https://download.jetbrains.com/ruby/RubyMine-$matchVer.win.zip",
-    "hash": {
-      "url": "$url.sha256"
-    }
-  }
 }

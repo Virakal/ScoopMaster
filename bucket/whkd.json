@@ -1,31 +1,31 @@
 {
-  "version": "0.2.9",
-  "description": "A simple hotkey daemon for Windows",
-  "homepage": "https://github.com/LGUG2Z/whkd",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/LGUG2Z/whkd/releases/download/v0.2.9/whkd-0.2.9-x86_64-pc-windows-msvc.zip",
-      "hash": "6f4cf3eaa9acd938ec53700c8f45da8813652de60bfcfecd1eb83299ec0b87f3"
-    },
-    "arm64": {
-      "url": "https://github.com/LGUG2Z/whkd/releases/download/v0.2.9/whkd-0.2.9-aarch64-pc-windows-msvc.zip",
-      "hash": "68f9e0b7abfffca54e00dfeb68b72fd8b3279f9c232881f84035054820f5af26"
-    }
-  },
-  "bin": "whkd.exe",
-  "checkver": "github",
-  "autoupdate": {
+    "version": "0.2.9",
+    "description": "A simple hotkey daemon for Windows",
+    "homepage": "https://github.com/LGUG2Z/whkd",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/LGUG2Z/whkd/releases/download/v$version/whkd-$version-x86_64-pc-windows-msvc.zip"
-      },
-      "arm64": {
-        "url": "https://github.com/LGUG2Z/whkd/releases/download/v$version/whkd-$version-aarch64-pc-windows-msvc.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/LGUG2Z/whkd/releases/download/v0.2.9/whkd-0.2.9-x86_64-pc-windows-msvc.zip",
+            "hash": "6f4cf3eaa9acd938ec53700c8f45da8813652de60bfcfecd1eb83299ec0b87f3"
+        },
+        "arm64": {
+            "url": "https://github.com/LGUG2Z/whkd/releases/download/v0.2.9/whkd-0.2.9-aarch64-pc-windows-msvc.zip",
+            "hash": "68f9e0b7abfffca54e00dfeb68b72fd8b3279f9c232881f84035054820f5af26"
+        }
     },
-    "hash": {
-      "url": "$baseurl/checksums.txt"
+    "bin": "whkd.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LGUG2Z/whkd/releases/download/v$version/whkd-$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/LGUG2Z/whkd/releases/download/v$version/whkd-$version-aarch64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
     }
-  }
 }

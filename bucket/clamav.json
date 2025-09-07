@@ -1,55 +1,55 @@
 {
-  "version": "1.4.3",
-  "description": " Open source (GPLv2) anti-virus toolkit",
-  "homepage": "https://www.clamav.net",
-  "license": "GPL-2.0-only",
-  "notes": [
-    "To run first time setup ",
-    "Edit Configuration files clamd.conf, freshclam.conf @ $dir",
-    "Run freshclam.exe before running first scan",
-    "visit https://docs.clamav.net/manual/Usage/Configuration.html"
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.4.3/clamav-1.4.3.win.x64.zip",
-      "hash": "5c86a6ed17e45e5c14c9c7c7b58cfaabcdee55a195991439bb6b6c6618827e6c",
-      "extract_dir": "clamav-1.4.3.win.x64"
-    },
-    "32bit": {
-      "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.4.3/clamav-1.4.3.win.win32.zip",
-      "hash": "fe127efc52880281811168d2458ccb71678f315080902cffd24d0957df7a7c7f",
-      "extract_dir": "clamav-1.4.3.win.win32"
-    }
-  },
-  "post_install": [
-    "Copy-Item \"$dir\\conf_examples\\freshclam.conf.sample\" \"$dir\\freshclam.conf\"",
-    "Copy-Item \"$dir\\conf_examples\\clamd.conf.sample\" \"$dir\\clamd.conf\""
-  ],
-  "bin": [
-    "clambc.exe",
-    "clamconf.exe",
-    "clamd.exe",
-    "clamdscan.exe",
-    "clamdtop.exe",
-    "clamscan.exe",
-    "clamsubmit.exe",
-    "freshclam.exe",
-    "sigtool.exe"
-  ],
-  "checkver": {
-    "github": "https://github.com/Cisco-Talos/clamav",
-    "regex": "/releases/tag/clamav-(?:v|V)?([\\d\\.]+)"
-  },
-  "autoupdate": {
+    "version": "1.4.3",
+    "description": " Open source (GPLv2) anti-virus toolkit",
+    "homepage": "https://www.clamav.net",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "To run first time setup ",
+        "Edit Configuration files clamd.conf, freshclam.conf @ $dir",
+        "Run freshclam.exe before running first scan",
+        "visit https://docs.clamav.net/manual/Usage/Configuration.html"
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.x64.zip",
-        "extract_dir": "clamav-$version.win.x64"
-      },
-      "32bit": {
-        "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.win32.zip",
-        "extract_dir": "clamav-$version.win.win32"
-      }
+        "64bit": {
+            "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.4.3/clamav-1.4.3.win.x64.zip",
+            "hash": "5c86a6ed17e45e5c14c9c7c7b58cfaabcdee55a195991439bb6b6c6618827e6c",
+            "extract_dir": "clamav-1.4.3.win.x64"
+        },
+        "32bit": {
+            "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.4.3/clamav-1.4.3.win.win32.zip",
+            "hash": "fe127efc52880281811168d2458ccb71678f315080902cffd24d0957df7a7c7f",
+            "extract_dir": "clamav-1.4.3.win.win32"
+        }
+    },
+    "post_install": [
+        "Copy-Item \"$dir\\conf_examples\\freshclam.conf.sample\" \"$dir\\freshclam.conf\"",
+        "Copy-Item \"$dir\\conf_examples\\clamd.conf.sample\" \"$dir\\clamd.conf\""
+    ],
+    "bin": [
+        "clambc.exe",
+        "clamconf.exe",
+        "clamd.exe",
+        "clamdscan.exe",
+        "clamdtop.exe",
+        "clamscan.exe",
+        "clamsubmit.exe",
+        "freshclam.exe",
+        "sigtool.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/Cisco-Talos/clamav",
+        "regex": "/releases/tag/clamav-(?:v|V)?([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.x64.zip",
+                "extract_dir": "clamav-$version.win.x64"
+            },
+            "32bit": {
+                "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.win32.zip",
+                "extract_dir": "clamav-$version.win.win32"
+            }
+        }
     }
-  }
 }

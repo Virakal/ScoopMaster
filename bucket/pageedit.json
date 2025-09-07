@@ -1,31 +1,31 @@
 {
-  "version": "2.5.0",
-  "description": "ePub XHTML Visual Editor",
-  "homepage": "https://github.com/Sigil-Ebook/PageEdit",
-  "license": "GPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Sigil-Ebook/PageEdit/releases/download/2.5.0/PageEdit-2.5.0-Windows-x64-Setup.exe",
-      "hash": "2ea96ba5d4341dbc6d599a1e0b6167cf0f6845fb0bcce2ff27484dcf40f4f578"
-    }
-  },
-  "innosetup": true,
-  "bin": "PageEdit.exe",
-  "shortcuts": [
-    [
-      "PageEdit.exe",
-      "PageEdit"
-    ]
-  ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "2.5.0",
+    "description": "ePub XHTML Visual Editor",
+    "homepage": "https://github.com/Sigil-Ebook/PageEdit",
+    "license": "GPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Sigil-Ebook/PageEdit/releases/download/$version/PageEdit-$version-Windows-x64-Setup.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/Sigil-Ebook/PageEdit/releases/download/2.5.0/PageEdit-2.5.0-Windows-x64-Setup.exe",
+            "hash": "2ea96ba5d4341dbc6d599a1e0b6167cf0f6845fb0bcce2ff27484dcf40f4f578"
+        }
     },
-    "hash": {
-      "url": "$baseurl/PageEdit-$version-CHECKSUMS.sha256.txt"
+    "innosetup": true,
+    "bin": "PageEdit.exe",
+    "shortcuts": [
+        [
+            "PageEdit.exe",
+            "PageEdit"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Sigil-Ebook/PageEdit/releases/download/$version/PageEdit-$version-Windows-x64-Setup.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/PageEdit-$version-CHECKSUMS.sha256.txt"
+        }
     }
-  }
 }

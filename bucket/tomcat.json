@@ -1,47 +1,47 @@
 {
-  "version": "10.1.44",
-  "description": "Implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies",
-  "homepage": "https://tomcat.apache.org",
-  "license": "Apache-2.0",
-  "suggest": {
-    "JRE": "java/openjdk"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44-windows-x64.zip",
-      "hash": "sha512:2597a07ddf0c0d1361475ce4ecd8bc9f7b51b5a2c62d7613a72d0bb56e76c3b5db3609861dd45c830514d0c34e7da676543d0a57cfc4fa77e457b41732531a6a"
+    "version": "10.1.44",
+    "description": "Implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies",
+    "homepage": "https://tomcat.apache.org",
+    "license": "Apache-2.0",
+    "suggest": {
+        "JRE": "java/openjdk"
     },
-    "32bit": {
-      "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44-windows-x86.zip",
-      "hash": "sha512:597225907ea1702be780c6be5db0898600ba674445a546087a24c298df650090f053dc7fa82a0a55b4dac0f9ca8db0ba049f6d6fd2e1cbc1d1fb73acda766c7f"
-    }
-  },
-  "extract_dir": "apache-tomcat-10.1.44",
-  "bin": "bin\\catalina.bat",
-  "env_set": {
-    "CATALINA_HOME": "$dir",
-    "CATALINA_BASE": "$dir"
-  },
-  "persist": [
-    "conf",
-    "webapps"
-  ],
-  "checkver": {
-    "url": "https://dlcdn.apache.org/tomcat/tomcat-10/?C=M;O=D",
-    "regex": "v([\\d.]+)/"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
-      },
-      "32bit": {
-        "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
-      }
+        "64bit": {
+            "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44-windows-x64.zip",
+            "hash": "sha512:2597a07ddf0c0d1361475ce4ecd8bc9f7b51b5a2c62d7613a72d0bb56e76c3b5db3609861dd45c830514d0c34e7da676543d0a57cfc4fa77e457b41732531a6a"
+        },
+        "32bit": {
+            "url": "https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.44/bin/apache-tomcat-10.1.44-windows-x86.zip",
+            "hash": "sha512:597225907ea1702be780c6be5db0898600ba674445a546087a24c298df650090f053dc7fa82a0a55b4dac0f9ca8db0ba049f6d6fd2e1cbc1d1fb73acda766c7f"
+        }
     },
-    "hash": {
-      "url": "$url.sha512"
+    "extract_dir": "apache-tomcat-10.1.44",
+    "bin": "bin\\catalina.bat",
+    "env_set": {
+        "CATALINA_HOME": "$dir",
+        "CATALINA_BASE": "$dir"
     },
-    "extract_dir": "apache-tomcat-$version"
-  }
+    "persist": [
+        "conf",
+        "webapps"
+    ],
+    "checkver": {
+        "url": "https://dlcdn.apache.org/tomcat/tomcat-10/?C=M;O=D",
+        "regex": "v([\\d.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://dlcdn.apache.org/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "apache-tomcat-$version"
+    }
 }

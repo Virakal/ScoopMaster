@@ -1,9 +1,11 @@
 {
-    "##": "See https://github.com/AntonOks/scoop-aoks/blob/master/bucket/deepgit-aoks.json",
     "version": "4.4",
     "description": "Git Archaeology Tool.",
     "homepage": "https://www.syntevo.com/deepgit/",
-    "license": "https://www.syntevo.com/documents/deepgit-license.html",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.syntevo.com/documents/deepgit-license.html"
+    },
     "architecture": {
         "64bit": {
             "url": "https://www.syntevo.com/downloads/deepgit/deepgit-portable-4_4.7z",
@@ -26,13 +28,17 @@
     "persist": ".settings",
     "checkver": {
         "url": "https://www.syntevo.com/deepgit/changelog.txt",
-        "regex": "DeepGit ([\\d.]+) \\("
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.syntevo.com/downloads/deepgit/deepgit-portable-$underscoreVersion.7z",
-        "hash": {
-            "url": "https://www.syntevo.com/deepgit/download/",
-            "regex": "$basename[\\S\\s]+?$sha1"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.syntevo.com/downloads/deepgit/deepgit-portable-$underscoreVersion.7z",
+                "hash": {
+                    "url": "https://www.syntevo.com/deepgit/download/",
+                    "regex": "$basename[\\S\\s]+?$sha1"
+                }
+            }
         }
     }
 }

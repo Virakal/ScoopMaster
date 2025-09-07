@@ -1,40 +1,33 @@
 {
     "version": "5.18.0",
-    "description": "A feature rich front-end to remotely control Transmission daemon via its RPC protocol",
+    "description": "A feature rich front-end to remotely control Transmission daemon via its RPC protocol.",
     "homepage": "https://github.com/transmission-remote-gui/transgui",
     "license": "GPL-2.0-or-later",
+    "suggest": {
+        "transmission": [
+            "transmission-cli",
+            "extras/transmission"
+        ]
+    },
     "architecture": {
         "64bit": {
-            "url": [
-                "https://github.com/transmission-remote-gui/transgui/releases/download/v5.18.0/transgui-5.18.0-x86_64-win64.zip",
-                "https://indy.fulgan.com/SSL/openssl-1.0.2u-x64_86-win64.zip"
-            ],
-            "hash": [
-                "3bef7b1ff5da7126559383e4627fd7ffec1df14f5db54eae6447cb0e4abd22ef",
-                "cf6d525dbd75997c7f8f715b77ad5d7171912603730c03ef56aba7bf2058314d"
-            ]
+            "url": "https://github.com/transmission-remote-gui/transgui/releases/download/v5.18.0/transgui-5.18.0-x86_64-win64.zip",
+            "hash": "3bef7b1ff5da7126559383e4627fd7ffec1df14f5db54eae6447cb0e4abd22ef"
         },
         "32bit": {
-            "url": [
-                "https://github.com/transmission-remote-gui/transgui/releases/download/v5.18.0/transgui-5.18.0-i386-win32.zip",
-                "https://indy.fulgan.com/SSL/openssl-1.0.2u-i386-win32.zip"
-            ],
-            "hash": [
-                "aa3debd3255621b20fe0215b38f3951c0c4c75af3bdb9d42ba4e6f3c8dc9fc00",
-                "644fedf6fc567716ef25f4fc805e2aaac5bb7d32d01349eaeb62802cd20ae81a"
-            ]
+            "url": "https://github.com/transmission-remote-gui/transgui/releases/download/v5.18.0/transgui-5.18.0-i386-win32.zip",
+            "hash": "aa3debd3255621b20fe0215b38f3951c0c4c75af3bdb9d42ba4e6f3c8dc9fc00"
         }
     },
-    "pre_install": [
-        "'lang', 'HashInfo.txt', '*License*', 'openssl.exe', 'readme*', 'transgui.png' | ForEach-Object {",
-        "  Remove-Item $dir\\$_ -Recurse }"
-    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\transgui.ini\")) { New-Item \"$dir\\transgui.ini\" | Out-Null }",
+    "bin": "transgui.exe",
     "shortcuts": [
         [
             "transgui.exe",
             "Transmission Remote GUI"
         ]
     ],
+    "persist": "transgui.ini",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

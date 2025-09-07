@@ -1,54 +1,54 @@
 {
-  "version": "3.37",
-  "description": "BitTorrent client with advanced features",
-  "homepage": "https://tixati.com",
-  "license": {
-    "identifier": "Freeware",
-    "url": "https://www.tixati.com/tixati_eula.txt"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://download.tixati.com/tixati-3.37-1.win64-install.exe#/dl.7z",
-      "hash": "5cb905ff61d9748ae8f1dfbfdecbd1c59b70751d6fba13ac3fba3d15e25adece"
+    "version": "3.37",
+    "description": "BitTorrent client with advanced features",
+    "homepage": "https://tixati.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.tixati.com/tixati_eula.txt"
     },
-    "32bit": {
-      "url": "https://download.tixati.com/tixati-3.37-1.win32-install.exe#/dl.7z",
-      "hash": "2312d9cc85eb4657b25dcf6c0b296465b63b9451bdef99c97a16e7a03a9a2575"
-    }
-  },
-  "installer": {
-    "script": [
-      "New-Item \"$dir\\tixati_portable_mode.txt\" | Out-Null",
-      "Move-Item \"$dir\\*~\" \"$dir\\tixati.exe\"",
-      "if (Test-Path \"$persist_dir\") { Copy-Item \"$persist_dir\\*\" \"$dir\" -Force }"
-    ]
-  },
-  "uninstaller": {
-    "script": "Copy-Item \"$dir\\*.dat\" \"$persist_dir\" -Force"
-  },
-  "bin": "tixati.exe",
-  "shortcuts": [
-    [
-      "tixati.exe",
-      "Tixati"
-    ]
-  ],
-  "persist": [
-    "downloads",
-    "incomplete-pieces"
-  ],
-  "checkver": {
-    "url": "https://tixati.com/",
-    "regex": "Version ([\\d.]+) Now Available!"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://download.tixati.com/tixati-$version-1.win64-install.exe#/dl.7z"
-      },
-      "32bit": {
-        "url": "https://download.tixati.com/tixati-$version-1.win32-install.exe#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://download.tixati.com/tixati-3.37-1.win64-install.exe#/dl.7z",
+            "hash": "5cb905ff61d9748ae8f1dfbfdecbd1c59b70751d6fba13ac3fba3d15e25adece"
+        },
+        "32bit": {
+            "url": "https://download.tixati.com/tixati-3.37-1.win32-install.exe#/dl.7z",
+            "hash": "2312d9cc85eb4657b25dcf6c0b296465b63b9451bdef99c97a16e7a03a9a2575"
+        }
+    },
+    "installer": {
+        "script": [
+            "New-Item \"$dir\\tixati_portable_mode.txt\" | Out-Null",
+            "Move-Item \"$dir\\*~\" \"$dir\\tixati.exe\"",
+            "if (Test-Path \"$persist_dir\") { Copy-Item \"$persist_dir\\*\" \"$dir\" -Force }"
+        ]
+    },
+    "uninstaller": {
+        "script": "Copy-Item \"$dir\\*.dat\" \"$persist_dir\" -Force"
+    },
+    "bin": "tixati.exe",
+    "shortcuts": [
+        [
+            "tixati.exe",
+            "Tixati"
+        ]
+    ],
+    "persist": [
+        "downloads",
+        "incomplete-pieces"
+    ],
+    "checkver": {
+        "url": "https://tixati.com/",
+        "regex": "Version ([\\d.]+) Now Available!"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.tixati.com/tixati-$version-1.win64-install.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://download.tixati.com/tixati-$version-1.win32-install.exe#/dl.7z"
+            }
+        }
     }
-  }
 }

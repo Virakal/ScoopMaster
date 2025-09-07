@@ -1,13 +1,14 @@
 {
     "version": "1.2",
+    "description": "A portable freeware to optimize services for almost all Windows versions (except for Win 98 and before).",
+    "homepage": "https://www.sordum.org/easy-service-optimizer",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.sordum.org/eula/"
     },
-    "extract_dir": "eso",
     "url": "https://www.sordum.org/files/easy-service-optimizer/eso.zip",
-    "homepage": "https://www.sordum.org/files/easy-service-optimizer/",
-    "hash": "7bad6041662eb09b32a7184cedd8442b6efa502e7692d1642177d35644b1ae5e",
+    "hash": "db531c9c647d96d41e8005e5e7f5cfae8151e6542c5a635a7a9b94be508c2c1b",
+    "extract_dir": "eso",
     "bin": "eso.exe",
     "shortcuts": [
         [

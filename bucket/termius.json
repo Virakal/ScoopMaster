@@ -3,7 +3,7 @@
     "description": "Modern SSH client",
     "homepage": "https://www.termius.com",
     "license": "Unknown",
-    "url": "https://autoupdate.termius.com/windows/Termius.exe#/dl.7z",
+    "url": "https://autoupdate.termius.com/windows/Install%20Termius.exe#/dl.7z",
     "hash": "sha512:040a6edc5b9d25e638d080b34e5d97864ab4298d6be88f2d3c0ecdb8c818befe70655d28146ea7d6d3b79457159631f78a7436b3fb8947fe370ef2fdd9b10850",
     "architecture": {
         "64bit": {
@@ -25,7 +25,7 @@
         "regex": "version:\\s*([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://autoupdate.termius.com/windows/Termius.exe#/dl.7z",
+        "url": "https://autoupdate.termius.com/windows/Install%20Termius.exe#/dl.7z",
         "hash": {
             "url": "$baseurl/latest.yml",
             "regex": "sha512:\\s+$base64"

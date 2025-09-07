@@ -1,40 +1,40 @@
 {
-  "version": "12.1.0",
-  "description": "Open platform for analytics and data monitoring",
-  "homepage": "https://grafana.com/",
-  "license": "Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://dl.grafana.com/oss/release/grafana-12.1.0.windows-amd64.zip",
-      "hash": "507ca9e04233a3853f9e31a2a89ffa627803db7be470e629f48bc93f0056dcde"
-    }
-  },
-  "extract_dir": "grafana-v12.1.0",
-  "bin": [
-    "bin\\grafana-cli.exe",
-    [
-      "bin\\grafana-server.exe",
-      "grafana-server",
-      "-homepath \"$dir\""
-    ]
-  ],
-  "persist": [
-    "conf",
-    "data"
-  ],
-  "checkver": {
-    "url": "https://grafana.com/grafana/download?platform=windows",
-    "regex": "-([\\d.]+)\\.windows"
-  },
-  "autoupdate": {
+    "version": "12.1.0",
+    "description": "Open platform for analytics and data monitoring",
+    "homepage": "https://grafana.com/",
+    "license": "Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://dl.grafana.com/oss/release/grafana-$version.windows-amd64.zip"
-      }
+        "64bit": {
+            "url": "https://dl.grafana.com/oss/release/grafana-12.1.0.windows-amd64.zip",
+            "hash": "507ca9e04233a3853f9e31a2a89ffa627803db7be470e629f48bc93f0056dcde"
+        }
     },
-    "hash": {
-      "url": "$url.sha256"
+    "extract_dir": "grafana-v12.1.0",
+    "bin": [
+        "bin\\grafana-cli.exe",
+        [
+            "bin\\grafana-server.exe",
+            "grafana-server",
+            "-homepath \"$dir\""
+        ]
+    ],
+    "persist": [
+        "conf",
+        "data"
+    ],
+    "checkver": {
+        "url": "https://grafana.com/grafana/download?platform=windows",
+        "regex": "-([\\d.]+)\\.windows"
     },
-    "extract_dir": "grafana-v$version"
-  }
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.grafana.com/oss/release/grafana-$version.windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "extract_dir": "grafana-v$version"
+    }
 }

@@ -1,48 +1,48 @@
 {
-  "version": "4.5.66.0",
-  "description": "Graphical GREP tool to search across text files, Word and Excel documents, PDFs and archives",
-  "homepage": "https://dngrep.github.io/",
-  "license": "GPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.5.66.0/dnGREP.4.5.66.x64.msi",
-      "hash": "da45e7baf3620674dd924628ff630b1c43652d7f4b0bb122e105a982d2564876"
-    },
-    "32bit": {
-      "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.5.66.0/dnGREP.4.5.66.x86.msi",
-      "hash": "e0ac69d5b4a60b5e62c599dad07c2a8fb50076d876fe35cd628a74cdd724e9af"
-    }
-  },
-  "pre_install": [
-    "$cont = '<?xml version=\"1.0\" encoding=\"utf-8\"?><dictionary version=\"2\"></dictionary>'",
-    "if (!(Test-Path \"$persist_dir\\dnGREP.Settings.dat\")) { Set-Content \"$dir\\dnGREP.Settings.dat\" $cont -Encoding 'ascii' }",
-    "Copy-Item \"$persist_dir\\Themes\\*\" \"$dir\\Themes\" -ErrorAction 'SilentlyContinue' -Recurse"
-  ],
-  "extract_dir": "dnGREP",
-  "bin": "dnGREP.exe",
-  "shortcuts": [
-    [
-      "dnGREP.exe",
-      "dnGREP"
-    ]
-  ],
-  "persist": "dnGREP.Settings.dat",
-  "pre_uninstall": "Copy-Item \"$dir\\Themes\\*\" \"$persist_dir\\Themes\" -ErrorAction 'SilentlyContinue' -Recurse",
-  "checkver": {
-    "github": "https://github.com/dnGrep/dnGrep"
-  },
-  "autoupdate": {
+    "version": "4.5.66.0",
+    "description": "Graphical GREP tool to search across text files, Word and Excel documents, PDFs and archives",
+    "homepage": "https://dngrep.github.io/",
+    "license": "GPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x64.msi"
-      },
-      "32bit": {
-        "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x86.msi"
-      }
+        "64bit": {
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.5.66.0/dnGREP.4.5.66.x64.msi",
+            "hash": "da45e7baf3620674dd924628ff630b1c43652d7f4b0bb122e105a982d2564876"
+        },
+        "32bit": {
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.5.66.0/dnGREP.4.5.66.x86.msi",
+            "hash": "e0ac69d5b4a60b5e62c599dad07c2a8fb50076d876fe35cd628a74cdd724e9af"
+        }
     },
-    "hash": {
-      "url": "https://github.com/dnGrep/dnGrep/releases/v$version",
-      "regex": "(?sm)$basename.*?SHA-256: $sha256"
+    "pre_install": [
+        "$cont = '<?xml version=\"1.0\" encoding=\"utf-8\"?><dictionary version=\"2\"></dictionary>'",
+        "if (!(Test-Path \"$persist_dir\\dnGREP.Settings.dat\")) { Set-Content \"$dir\\dnGREP.Settings.dat\" $cont -Encoding 'ascii' }",
+        "Copy-Item \"$persist_dir\\Themes\\*\" \"$dir\\Themes\" -ErrorAction 'SilentlyContinue' -Recurse"
+    ],
+    "extract_dir": "dnGREP",
+    "bin": "dnGREP.exe",
+    "shortcuts": [
+        [
+            "dnGREP.exe",
+            "dnGREP"
+        ]
+    ],
+    "persist": "dnGREP.Settings.dat",
+    "pre_uninstall": "Copy-Item \"$dir\\Themes\\*\" \"$persist_dir\\Themes\" -ErrorAction 'SilentlyContinue' -Recurse",
+    "checkver": {
+        "github": "https://github.com/dnGrep/dnGrep"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x64.msi"
+            },
+            "32bit": {
+                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x86.msi"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/dnGrep/dnGrep/releases/v$version",
+            "regex": "(?sm)$basename.*?SHA-256: $sha256"
+        }
     }
-  }
 }

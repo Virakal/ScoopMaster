@@ -1,38 +1,43 @@
 {
     "version": "0.24.1",
-    "description": "AFFiNE is a workspace with fully merged docs, whiteboards and databases.",
+    "description": "A privacy-focussed, local-first, open-source, and ready-to-use alternative for Notion & Miro.",
     "homepage": "https://affine.pro/",
-    "license": "MIT",
+    "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.24.1/affine-stable-windows-x64.exe#/dl.7z",
-            "hash": "sha512:2e90ad87f53f1ff34eb116b4361e701736079fc714a5e6364efe532e98e21b2cdbcb8d4a64b8c22b5d1511669f9e5aded30f47a2b87f725c236c6555ecb9a461",
-            "pre_install": [
-                "Remove-Item \"$dir\\*\" -Exclude 'AFFiNE-*-full.nupkg'",
-                "Expand-7zipArchive \"$dir\\AFFiNE-*-full.nupkg\" -ExtractDir 'lib\\net45' -Removal"
-            ]
+            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.24.1/affine-0.24.1-stable-windows-x64.exe#/dl.7z",
+            "hash": "sha512:35a23090258c9b800dc5045512b0b6d740472f5f9a9716ad0f04a70604bf69dcd5b4d3b8fea14c8c7616c13e77ddf5e7d7918ad411b6f5a05262f27095ce9047"
+        },
+        "arm64": {
+            "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.24.1/affine-0.24.1-stable-windows-arm64.exe#/dl.7z",
+            "hash": "sha512:a8aa3da93f519836d970ed744e4bb5c1dae06e2561f09338265ac57c370df2116da532e5a02f840f337fe2db1525f6e6be86e1b68c7bf11f0cf21fc7fe6e8359"
         }
     },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\AFFiNE-*-full.nupkg\" -ExtractDir 'lib\\net45' -Removal",
+        "Remove-Item \"$dir\\lib\""
+    ],
     "shortcuts": [
         [
             "AFFiNE.exe",
-            "AFFiNE",
-            "--user-data-dir=\"$dir\\User Data\""
+            "AFFiNE"
         ]
     ],
-    "persist": "User Data",
     "checkver": {
         "github": "https://github.com/toeverything/AFFiNE"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-stable-windows-x64.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s+$base64"
-                }
+                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-$version-stable-windows-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/toeverything/AFFiNE/releases/download/v$version/affine-$version-stable-windows-arm64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "$basename\\s+sha512:\\s+$base64"
         }
     }
 }

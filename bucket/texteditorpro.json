@@ -1,51 +1,51 @@
 {
-  "version": "32.2.0",
-  "description": "Powerful text editor with syntax highlighting for multiple languages and scripts. Formerly known as EditBone",
-  "homepage": "https://texteditor.pro/",
-  "license": {
-    "identifier": "Freeware",
-    "url": "https://www.texteditor.pro/support/license/"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://www.texteditor.pro/downloads/TextEditorPro64.7z",
-      "hash": "e6e77529a463f6f0e560d984c95bb07231fd14f9a748841964e02158f7d9b7cd"
+    "version": "32.2.0",
+    "description": "Powerful text editor with syntax highlighting for multiple languages and scripts. Formerly known as EditBone",
+    "homepage": "https://texteditor.pro/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.texteditor.pro/support/license/"
     },
-    "32bit": {
-      "url": "https://www.texteditor.pro/downloads/TextEditorPro32.7z",
-      "hash": "05a32beb6d04db46173273e8fb718df77fefab8a3efdd512bc4b0a15127893a6"
-    }
-  },
-  "bin": [
-    [
-      "TextEditorPro.exe",
-      "TextEditorPro",
-      "-inipath=\"$dir\\config\""
-    ]
-  ],
-  "shortcuts": [
-    [
-      "TextEditorPro.exe",
-      "Text Editor Pro",
-      "-inipath=\"$dir\\config\""
-    ]
-  ],
-  "persist": [
-    "config",
-    "Skins"
-  ],
-  "checkver": {
-    "url": "https://texteditor.pro/pages/changes.php",
-    "regex": "Version ([\\d.]+)"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://www.texteditor.pro/downloads/TextEditorPro64.7z"
-      },
-      "32bit": {
-        "url": "https://www.texteditor.pro/downloads/TextEditorPro32.7z"
-      }
+        "64bit": {
+            "url": "https://www.texteditor.pro/downloads/TextEditorPro64.7z",
+            "hash": "e6e77529a463f6f0e560d984c95bb07231fd14f9a748841964e02158f7d9b7cd"
+        },
+        "32bit": {
+            "url": "https://www.texteditor.pro/downloads/TextEditorPro32.7z",
+            "hash": "05a32beb6d04db46173273e8fb718df77fefab8a3efdd512bc4b0a15127893a6"
+        }
+    },
+    "bin": [
+        [
+            "TextEditorPro.exe",
+            "TextEditorPro",
+            "-inipath=\"$dir\\config\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TextEditorPro.exe",
+            "Text Editor Pro",
+            "-inipath=\"$dir\\config\""
+        ]
+    ],
+    "persist": [
+        "config",
+        "Skins"
+    ],
+    "checkver": {
+        "url": "https://texteditor.pro/pages/changes.php",
+        "regex": "Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.texteditor.pro/downloads/TextEditorPro64.7z"
+            },
+            "32bit": {
+                "url": "https://www.texteditor.pro/downloads/TextEditorPro32.7z"
+            }
+        }
     }
-  }
 }

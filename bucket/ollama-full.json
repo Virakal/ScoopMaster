@@ -1,41 +1,41 @@
 {
-  "version": "0.11.10",
-  "description": "Get up and running with large language models locally.",
-  "homepage": "https://ollama.com/",
-  "license": "MIT",
-  "url": "https://github.com/ollama/ollama/releases/download/v0.11.10/OllamaSetup.exe",
-  "hash": "45e564568ea3da0b72137f77ebe33cde7ff3c7a59ccf572a2ed333dc23bcede0",
-  "architecture": {
-    "64bit": {
-      "pre_install": [
-        "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',1\\.', '.' }",
-        "Get-ChildItem \"$dir\\*,2.*\" -Recurse | Remove-Item"
-      ]
+    "version": "0.11.10",
+    "description": "Get up and running with large language models locally.",
+    "homepage": "https://ollama.com/",
+    "license": "MIT",
+    "url": "https://github.com/ollama/ollama/releases/download/v0.11.10/OllamaSetup.exe",
+    "hash": "45e564568ea3da0b72137f77ebe33cde7ff3c7a59ccf572a2ed333dc23bcede0",
+    "architecture": {
+        "64bit": {
+            "pre_install": [
+                "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',1\\.', '.' }",
+                "Get-ChildItem \"$dir\\*,2.*\" -Recurse | Remove-Item"
+            ]
+        },
+        "arm64": {
+            "pre_install": [
+                "Get-ChildItem \"$dir\\*,2.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',2\\.', '.' }",
+                "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Remove-Item"
+            ]
+        }
     },
-    "arm64": {
-      "pre_install": [
-        "Get-ChildItem \"$dir\\*,2.*\" -Recurse | Rename-Item -NewName { $_.FullName -replace ',2\\.', '.' }",
-        "Get-ChildItem \"$dir\\*,1.*\" -Recurse | Remove-Item"
-      ]
+    "innosetup": true,
+    "bin": "ollama.exe",
+    "shortcuts": [
+        [
+            "ollama app.exe",
+            "Ollama",
+            "",
+            "app.ico"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ollama/ollama"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe",
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
     }
-  },
-  "innosetup": true,
-  "bin": "ollama.exe",
-  "shortcuts": [
-    [
-      "ollama app.exe",
-      "Ollama",
-      "",
-      "app.ico"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/ollama/ollama"
-  },
-  "autoupdate": {
-    "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe",
-    "hash": {
-      "url": "$baseurl/sha256sum.txt"
-    }
-  }
 }

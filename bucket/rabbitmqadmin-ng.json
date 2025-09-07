@@ -1,26 +1,26 @@
 {
-  "version": "2.9.0",
-  "description": "A command line tool for RabbitMQ that uses the HTTP API",
-  "homepage": "https://github.com/rabbitmq/rabbitmqadmin-ng",
-  "license": "Apache-2.0|MIT",
-  "notes": [
-    "If you are migrating from the original `rabbitmqadmin`,",
-    "please see Breaking or Potentially Breaking Changes:",
-    "https://github.com/rabbitmq/rabbitmqadmin-ng?tab=readme-ov-file#breaking-or-potentially-breaking-changes"
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.9.0/rabbitmqadmin-2.9.0-x86_64-pc-windows-msvc.exe#/rabbitmqadmin.exe",
-      "hash": "7e75efc09b631f5b17e9eae28a7a451ad7168beecf34a8aff416e47a74ec246e"
-    }
-  },
-  "bin": "rabbitmqadmin.exe",
-  "checkver": "github",
-  "autoupdate": {
+    "version": "2.9.0",
+    "description": "A command line tool for RabbitMQ that uses the HTTP API",
+    "homepage": "https://github.com/rabbitmq/rabbitmqadmin-ng",
+    "license": "Apache-2.0|MIT",
+    "notes": [
+        "If you are migrating from the original `rabbitmqadmin`,",
+        "please see Breaking or Potentially Breaking Changes:",
+        "https://github.com/rabbitmq/rabbitmqadmin-ng?tab=readme-ov-file#breaking-or-potentially-breaking-changes"
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v$version/rabbitmqadmin-$version-x86_64-pc-windows-msvc.exe#/rabbitmqadmin.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v2.9.0/rabbitmqadmin-2.9.0-x86_64-pc-windows-msvc.exe#/rabbitmqadmin.exe",
+            "hash": "7e75efc09b631f5b17e9eae28a7a451ad7168beecf34a8aff416e47a74ec246e"
+        }
+    },
+    "bin": "rabbitmqadmin.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rabbitmq/rabbitmqadmin-ng/releases/download/v$version/rabbitmqadmin-$version-x86_64-pc-windows-msvc.exe#/rabbitmqadmin.exe"
+            }
+        }
     }
-  }
 }

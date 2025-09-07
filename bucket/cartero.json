@@ -1,32 +1,32 @@
 {
-  "version": "0.2.4",
-  "description": "A native, lightweight, multiplatform and free HTTP client that you can use to test your APIs",
-  "homepage": "https://cartero.danirod.es",
-  "license": "GPL-3.0-or-later",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/danirod/cartero/releases/download/v0.2.4/cartero-0.2.4-windows-x64.zip",
-      "hash": "73d83437d158248f0ed8aaf53feb0ee420445c50a1da2ee7aadf4a19f34993bc"
-    }
-  },
-  "bin": "bin/cartero.exe",
-  "shortcuts": [
-    [
-      "bin/cartero.exe",
-      "Cartero"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/danirod/cartero"
-  },
-  "autoupdate": {
+    "version": "0.2.4",
+    "description": "A native, lightweight, multiplatform and free HTTP client that you can use to test your APIs",
+    "homepage": "https://cartero.danirod.es",
+    "license": "GPL-3.0-or-later",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/danirod/cartero/releases/download/v$version/cartero-$version-windows-x64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/danirod/cartero/releases/download/v0.2.4/cartero-0.2.4-windows-x64.zip",
+            "hash": "73d83437d158248f0ed8aaf53feb0ee420445c50a1da2ee7aadf4a19f34993bc"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS"
+    "bin": "bin/cartero.exe",
+    "shortcuts": [
+        [
+            "bin/cartero.exe",
+            "Cartero"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/danirod/cartero"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/danirod/cartero/releases/download/v$version/cartero-$version-windows-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
     }
-  }
 }

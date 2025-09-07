@@ -1,40 +1,40 @@
 {
-  "version": "6.5.3",
-  "description": "An offline document manager with tagging support",
-  "homepage": "https://www.tagspaces.org",
-  "license": "AGPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/tagspaces/tagspaces/releases/download/v6.5.3/tagspaces-win-x64-6.5.3.zip",
-      "hash": "ebf19d33260e73bc6dd6a42bfe50c2d2d7e5a941502fec8cacd518482ce6c57a"
-    }
-  },
-  "bin": [
-    [
-      "TagSpaces.exe",
-      "tagspaces",
-      "--portable"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "TagSpaces.exe",
-      "TagSpaces",
-      "--portable"
-    ]
-  ],
-  "persist": "tsprofile",
-  "checkver": {
-    "github": "https://github.com/tagspaces/tagspaces"
-  },
-  "autoupdate": {
+    "version": "6.5.3",
+    "description": "An offline document manager with tagging support",
+    "homepage": "https://www.tagspaces.org",
+    "license": "AGPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/tagspaces/tagspaces/releases/download/v$version/tagspaces-win-x64-$version.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/tagspaces/tagspaces/releases/download/v6.5.3/tagspaces-win-x64-6.5.3.zip",
+            "hash": "ebf19d33260e73bc6dd6a42bfe50c2d2d7e5a941502fec8cacd518482ce6c57a"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS.txt"
+    "bin": [
+        [
+            "TagSpaces.exe",
+            "tagspaces",
+            "--portable"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "TagSpaces.exe",
+            "TagSpaces",
+            "--portable"
+        ]
+    ],
+    "persist": "tsprofile",
+    "checkver": {
+        "github": "https://github.com/tagspaces/tagspaces"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tagspaces/tagspaces/releases/download/v$version/tagspaces-win-x64-$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
     }
-  }
 }

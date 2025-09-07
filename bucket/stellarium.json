@@ -1,42 +1,42 @@
 {
-  "version": "25.2",
-  "description": "Real time realistic skies generator",
-  "homepage": "https://stellarium.org",
-  "license": "GPL-2.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Stellarium/stellarium/releases/download/v25.2/stellarium-25.2-qt6-win64.exe",
-      "hash": "8dc272150c2ae630e6d889af3a33571050199f0a12d99a56cb073985cd7620b2"
-    },
-    "arm64": {
-      "url": "https://github.com/Stellarium/stellarium/releases/download/v25.2/stellarium-25.2-qt6-arm64.exe",
-      "hash": "b8daca4802904706fa4876a187d30c866ee38d1dfd7751c8fd1d63e75a594d69"
-    }
-  },
-  "innosetup": true,
-  "bin": "stellarium.exe",
-  "shortcuts": [
-    [
-      "stellarium.exe",
-      "Stellarium"
-    ]
-  ],
-  "checkver": {
-    "url": "https://github.com/Stellarium/stellarium/releases",
-    "regex": "(?sm)stellarium-(?<long>[\\d\\.]+)\\.tar\\.gz</.*?Stellarium (?<version>[\\d\\.]+) for"
-  },
-  "autoupdate": {
+    "version": "25.2",
+    "description": "Real time realistic skies generator",
+    "homepage": "https://stellarium.org",
+    "license": "GPL-2.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-win64.exe"
-      },
-      "arm64": {
-        "url": "https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-arm64.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/Stellarium/stellarium/releases/download/v25.2/stellarium-25.2-qt6-win64.exe",
+            "hash": "8dc272150c2ae630e6d889af3a33571050199f0a12d99a56cb073985cd7620b2"
+        },
+        "arm64": {
+            "url": "https://github.com/Stellarium/stellarium/releases/download/v25.2/stellarium-25.2-qt6-arm64.exe",
+            "hash": "b8daca4802904706fa4876a187d30c866ee38d1dfd7751c8fd1d63e75a594d69"
+        }
     },
-    "hash": {
-      "url": "https://github.com/Stellarium/stellarium/releases/tag/v$version",
-      "regex": "(?sm)$basename</.*?SHA256</strong>:\\s+$sha256"
+    "innosetup": true,
+    "bin": "stellarium.exe",
+    "shortcuts": [
+        [
+            "stellarium.exe",
+            "Stellarium"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Stellarium/stellarium/releases",
+        "regex": "(?sm)stellarium-(?<long>[\\d\\.]+)\\.tar\\.gz</.*?Stellarium (?<version>[\\d\\.]+) for"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-win64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-arm64.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/Stellarium/stellarium/releases/tag/v$version",
+            "regex": "(?sm)$basename</.*?SHA256</strong>:\\s+$sha256"
+        }
     }
-  }
 }
