@@ -1,46 +1,46 @@
 {
-    "version": "8.48",
-    "description": "Hard disk scan and folder size tool",
-    "homepage": "http://www.softwareok.com/?seite=Freeware/MeinPlatz",
-    "license": {
-        "identifier": "Freeware",
-        "url": "http://www.softwareok.com/?seite=Freeware/MeinPlatz/Eula"
+  "version": "8.48",
+  "description": "Hard disk scan and folder size tool",
+  "homepage": "http://www.softwareok.com/?seite=Freeware/MeinPlatz",
+  "license": {
+    "identifier": "Freeware",
+    "url": "http://www.softwareok.com/?seite=Freeware/MeinPlatz/Eula"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://www.softwareok.com/Download/MeinPlatz_Portable_x64.zip",
+      "hash": "780f784be2dbb5ca659ceb67a01fa0d903c7a0f3b7d7241b135c825cb18aa6ac"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://www.softwareok.com/Download/MeinPlatz_Portable_x64.zip",
-            "hash": "780f784be2dbb5ca659ceb67a01fa0d903c7a0f3b7d7241b135c825cb18aa6ac"
-        },
-        "32bit": {
-            "url": "https://www.softwareok.com/Download/MeinPlatz_Portable.zip",
-            "hash": "9a689320b75552306a87c33c6dd3ba0fb177313139d3a129fbf9fd956a122440"
-        }
-    },
-    "extract_dir": "MeinPlatz",
-    "bin": "MeinPlatz.exe",
-    "shortcuts": [
-        [
-            "MeinPlatz.exe",
-            "MeinPlatz"
-        ]
-    ],
-    "persist": "MeinPlatz.ini",
-    "checkver": {
-        "url": "https://www.softwareok.com/?seite=Microsoft/MeinPlatz/History",
-        "regex": "New in version ([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.softwareok.com/Download/MeinPlatz_Portable_x64.zip"
-            },
-            "32bit": {
-                "url": "https://www.softwareok.com/Download/MeinPlatz_Portable.zip"
-            }
-        },
-        "hash": {
-            "url": "https://www.softwareok.com/?Download=MeinPlatz",
-            "regex": "$basename.*?$sha256<"
-        }
+    "32bit": {
+      "url": "https://www.softwareok.com/Download/MeinPlatz_Portable.zip",
+      "hash": "9a689320b75552306a87c33c6dd3ba0fb177313139d3a129fbf9fd956a122440"
     }
+  },
+  "extract_dir": "MeinPlatz",
+  "bin": "MeinPlatz.exe",
+  "shortcuts": [
+    [
+      "MeinPlatz.exe",
+      "MeinPlatz"
+    ]
+  ],
+  "persist": "MeinPlatz.ini",
+  "checkver": {
+    "url": "https://www.softwareok.com/?seite=Microsoft/MeinPlatz/History",
+    "regex": "New in version ([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.softwareok.com/Download/MeinPlatz_Portable_x64.zip"
+      },
+      "32bit": {
+        "url": "https://www.softwareok.com/Download/MeinPlatz_Portable.zip"
+      }
+    },
+    "hash": {
+      "url": "https://www.softwareok.com/?Download=MeinPlatz",
+      "regex": "$basename.*?$sha256<"
+    }
+  }
 }

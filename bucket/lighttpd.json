@@ -1,9 +1,8 @@
 {
-    "version": "1.4.49-1",
+    "homepage": "http://lighttpd.dtech.hu/",
     "description": "An HTTP server designed and optimized for high performance environments. Here is the Cygwin compilation migrated from WLMP project",
-    "homepage": "http://lighttpd.dtech.hu",
+    "version": "1.4.49-1",
     "license": "BSD-3-Clause",
-    "notes": "For Cygwin users lighttpd package is provided in Cygwin, under which this standalone compilation were made.",
     "architecture": {
         "64bit": {
             "url": "http://lighttpd.dtech.hu/lighttpd-1.4.49-1-win64-ssl.zip",
@@ -15,6 +14,7 @@
         }
     },
     "extract_dir": "lighttpd",
+    "notes": "For Cygwin users lighttpd package is provided in Cygwin, under which this standalone compilation were made.",
     "bin": [
         "lighttpd.exe",
         [
@@ -32,7 +32,7 @@
         "logs",
         "tmp"
     ],
-    "checkver": "Package Version:\\s+([\\d.-]+)",
+    "checkver": "Package Version:\\s+([\\d\\.-]+)",
     "autoupdate": {
         "architecture": {
             "64bit": {

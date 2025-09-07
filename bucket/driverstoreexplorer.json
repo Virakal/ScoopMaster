@@ -5,12 +5,21 @@
     "license": "GPL-2.0-or-later",
     "url": "https://github.com/lostindark/DriverStoreExplorer/releases/download/v0.12.110/DriverStoreExplorer.v0.12.110.zip",
     "hash": "c91a5b2cbe0720323022bb122bff32dc8dc5a0b2834673fa489fdcd0eb1e63a4",
+    "pre_install": [
+        "'Rapr.log', 'Rapr.user.config' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -ItemType File | Out-Null }",
+        "}"
+    ],
     "bin": "Rapr.exe",
     "shortcuts": [
         [
             "Rapr.exe",
-            "DriverStore Explorer"
+            "Driver Store Explorer"
         ]
+    ],
+    "persist": [
+        "Rapr.log",
+        "Rapr.user.config"
     ],
     "checkver": "github",
     "autoupdate": {

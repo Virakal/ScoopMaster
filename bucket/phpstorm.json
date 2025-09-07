@@ -6,8 +6,8 @@
         "identifier": "Proprietary",
         "url": "https://www.jetbrains.com/store/license.html"
     },
-    "url": "https://download.jetbrains.com/webide/PhpStorm-2025.2.1.win.zip",
-    "hash": "3670e6cf1763ae018f8116ccbde1bf4bb6e0a5f1644cdf93e9444a6460da453b",
+    "url": "https://download.jetbrains.com/webide/PhpStorm-2025.2.1.exe#/dl.7z",
+    "hash": "c6c29900e4b74537fc85a555a55f27a25b9aefc708c496e5b2389bfb8a88ad30",
     "extract_to": "IDE",
     "installer": {
         "script": [
@@ -52,7 +52,7 @@
         "replace": "${ver}-${build}"
     },
     "autoupdate": {
-        "url": "https://download.jetbrains.com/webide/PhpStorm-$matchVer.win.zip",
+        "url": "https://download.jetbrains.com/webide/PhpStorm-$matchHead.exe#/dl.7z",
         "hash": {
             "url": "$url.sha256"
         }

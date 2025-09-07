@@ -1,43 +1,43 @@
 {
-    "version": "5.29.2.5628",
-    "description": "Client for Amazon workspaces service",
-    "homepage": "https://clients.amazonworkspaces.com",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://clients.amazonworkspaces.com/app-terms.html"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://d2td7dqidlhjx7.cloudfront.net/prod/global/windows/Amazon+WorkSpaces.msi",
-            "hash": "f96a0fc4ab86fa826d1d2a2b6f56745d2344ad4a997bafb7d995116bb51d90b9"
-        }
-    },
-    "extract_dir": "[ApplicationFolderName]",
-    "pre_install": [
-        "# Disable the autoupdate of amazon-workspaces client",
-        "$configFile = \"$dir\\workspaces.dll.config\"",
-        "if (Test-Path -LiteralPath $configFile) {",
-        "   [xml]$xml = Get-Content -LiteralPath $configFile",
-        "   $key = $xml.SelectSingleNode(\"(//configuration/appSettings/add[@key='UpdateUrl'])[1]\")",
-        "   $key.Value = ''",
-        "   $xml.Save($configFile)",
-        "}"
-    ],
-    "shortcuts": [
-        [
-            "workspaces.exe",
-            "Amazon Workspaces"
-        ]
-    ],
-    "checkver": {
-        "url": "https://s3.amazonaws.com/workspaces-client-updates/prod/global/windows/WorkSpacesAppCastx64.xml",
-        "regex": "title>Version ([\\d.]+)</"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://d2td7dqidlhjx7.cloudfront.net/prod/global/windows/Amazon+WorkSpaces.msi"
-            }
-        }
+  "version": "5.29.2.5628",
+  "description": "Client for Amazon workspaces service",
+  "homepage": "https://clients.amazonworkspaces.com",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://clients.amazonworkspaces.com/app-terms.html"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://d2td7dqidlhjx7.cloudfront.net/prod/global/windows/Amazon+WorkSpaces.msi",
+      "hash": "f96a0fc4ab86fa826d1d2a2b6f56745d2344ad4a997bafb7d995116bb51d90b9"
     }
+  },
+  "extract_dir": "[ApplicationFolderName]",
+  "pre_install": [
+    "# Disable the autoupdate of amazon-workspaces client",
+    "$configFile = \"$dir\\workspaces.dll.config\"",
+    "if (Test-Path -LiteralPath $configFile) {",
+    "   [xml]$xml = Get-Content -LiteralPath $configFile",
+    "   $key = $xml.SelectSingleNode(\"(//configuration/appSettings/add[@key='UpdateUrl'])[1]\")",
+    "   $key.Value = ''",
+    "   $xml.Save($configFile)",
+    "}"
+  ],
+  "shortcuts": [
+    [
+      "workspaces.exe",
+      "Amazon Workspaces"
+    ]
+  ],
+  "checkver": {
+    "url": "https://s3.amazonaws.com/workspaces-client-updates/prod/global/windows/WorkSpacesAppCastx64.xml",
+    "regex": "title>Version ([\\d.]+)</"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://d2td7dqidlhjx7.cloudfront.net/prod/global/windows/Amazon+WorkSpaces.msi"
+      }
+    }
+  }
 }

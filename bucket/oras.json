@@ -1,33 +1,33 @@
 {
-    "version": "1.2.3",
-    "description": "OCI Registry As Storage (ORAS) is the de facto tool for working with OCI Artifacts that are stored in an OCI Registry",
-    "homepage": "https://oras.land/cli/",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/oras-project/oras/releases/download/v1.2.3/oras_1.2.3_windows_amd64.zip",
-            "hash": "8fe890f5c6c89b06fb138839e533a112e0fc026a25b2c8c1b042b32455a56947"
-        }
-    },
-    "bin": "oras.exe",
-    "shortcuts": [
-        [
-            "oras.exe",
-            "oras"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/oras-project/oras"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/oras-project/oras/releases/download/v$version/oras_$version_windows_amd64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/oras_$version_checksums.txt",
-            "regex": "$sha256\\s+$basename"
-        }
+  "version": "1.2.3",
+  "description": "OCI Registry As Storage (ORAS) is the de facto tool for working with OCI Artifacts that are stored in an OCI Registry",
+  "homepage": "https://oras.land/cli/",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/oras-project/oras/releases/download/v1.2.3/oras_1.2.3_windows_amd64.zip",
+      "hash": "8fe890f5c6c89b06fb138839e533a112e0fc026a25b2c8c1b042b32455a56947"
     }
+  },
+  "bin": "oras.exe",
+  "shortcuts": [
+    [
+      "oras.exe",
+      "oras"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/oras-project/oras"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/oras-project/oras/releases/download/v$version/oras_$version_windows_amd64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/oras_$version_checksums.txt",
+      "regex": "$sha256\\s+$basename"
+    }
+  }
 }

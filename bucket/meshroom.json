@@ -1,19 +1,18 @@
 {
     "version": "2023.3.0",
-    "description": "3D Reconstruction Software based on the AliceVision Photogrammetric Computer Vision framework.",
-    "homepage": "https://alicevision.org/",
+    "description": "A free, open-source 3D Reconstruction Software based on the AliceVision Photogrammetric Computer Vision framework",
+    "homepage": "https://alicevision.org/#meshroom",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
             "url": "https://www.fosshub.com/Meshroom.html/Meshroom-2023.3.0-win64.zip",
-            "extract_dir": "Meshroom-2023.3.0",
             "hash": "2519565cd38e5d3433748cd09fcd835b7f1c709ed9b098eb6b29f4336c4e345f"
         }
     },
-    "bin": "meshroom.exe",
+    "extract_dir": "Meshroom-2023.3.0",
     "shortcuts": [
         [
-            "meshroom.exe",
+            "Meshroom.exe",
             "Meshroom"
         ]
     ],
@@ -23,9 +22,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.fosshub.com/Meshroom.html/Meshroom-$version-win64.zip",
-                "extract_dir": "Meshroom-$version"
+                "url": "https://www.fosshub.com/Meshroom.html/Meshroom-$version-win64.zip"
             }
-        }
+        },
+        "extract_dir": "Meshroom-$version"
     }
 }

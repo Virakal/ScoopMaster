@@ -1,35 +1,35 @@
 {
-    "version": "25.08.0",
-    "description": "Video editing software based on the MLT Framework, KDE and Qt",
-    "homepage": "https://kdenlive.org",
-    "license": "GPL-2.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://download.kde.org/stable/kdenlive/25.08/windows/kdenlive-25.08.0_standalone.exe#/dl.7z",
-            "hash": "4eb2ffc5accd4ba8cb90d86d71dfde36f195fcc44b24146e8a596d2049205d31"
-        }
-    },
-    "extract_dir": "kdenlive-25.08.0_standalone",
-    "bin": "bin\\kdenlive.exe",
-    "shortcuts": [
-        [
-            "bin\\kdenlive.exe",
-            "Kdenlive"
-        ]
-    ],
-    "checkver": {
-        "url": "https://kdenlive.org/download/",
-        "regex": "kdenlive-([\\d\\w.-]+)_standalone\\.exe"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.kde.org/stable/kdenlive/$majorVersion.$minorVersion/windows/kdenlive-$version_standalone.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        },
-        "extract_dir": "kdenlive-$version_standalone"
+  "version": "25.08.0",
+  "description": "Video editing software based on the MLT Framework, KDE and Qt",
+  "homepage": "https://kdenlive.org",
+  "license": "GPL-2.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://download.kde.org/stable/kdenlive/25.08/windows/kdenlive-25.08.0_standalone.exe#/dl.7z",
+      "hash": "4eb2ffc5accd4ba8cb90d86d71dfde36f195fcc44b24146e8a596d2049205d31"
     }
+  },
+  "extract_dir": "kdenlive-25.08.0_standalone",
+  "bin": "bin\\kdenlive.exe",
+  "shortcuts": [
+    [
+      "bin\\kdenlive.exe",
+      "Kdenlive"
+    ]
+  ],
+  "checkver": {
+    "url": "https://kdenlive.org/download/",
+    "regex": "kdenlive-([\\d\\w.-]+)_standalone\\.exe"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://download.kde.org/stable/kdenlive/$majorVersion.$minorVersion/windows/kdenlive-$version_standalone.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    },
+    "extract_dir": "kdenlive-$version_standalone"
+  }
 }

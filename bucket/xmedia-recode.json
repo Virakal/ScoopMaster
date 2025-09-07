@@ -1,46 +1,46 @@
 {
-    "version": "3.6.1.6",
-    "description": "An All-In-One video converter and audio converter tool.",
-    "homepage": "https://www.xmedia-recode.de/en/",
-    "license": "Unknown",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.xmedia-recode.de/download/XMediaRecode3616_x64_setup.exe",
-            "hash": "55eb4dd3c8e5c325b74d68d0c7e4ac02053b124169eca30f5fb5c4dc8b3721df"
-        },
-        "32bit": {
-            "url": "https://www.xmedia-recode.de/download/XMediaRecode3616_setup.exe",
-            "hash": "72c14fc7429188a31e0a9e586c739e60d04610a0de2dcdc7851a168365a9ff86"
-        }
+  "version": "3.6.1.6",
+  "description": "An All-In-One video converter and audio converter tool.",
+  "homepage": "https://www.xmedia-recode.de/en/",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://www.xmedia-recode.de/download/XMediaRecode3616_x64_setup.exe",
+      "hash": "55eb4dd3c8e5c325b74d68d0c7e4ac02053b124169eca30f5fb5c4dc8b3721df"
     },
-    "innosetup": true,
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\Fav.ini\")) { New-Item \"$dir\\Fav.ini\" | Out-Null }",
-        "if (!(Test-Path \"$persist_dir\\XMediaRecode.json\")) { Set-Content \"$dir\\XMediaRecode.json\" -Value '{}' -Encoding 'utf8' -Force }"
-    ],
-    "shortcuts": [
-        [
-            "XMedia Recode.exe",
-            "XMedia Recode"
-        ]
-    ],
-    "persist": [
-        "XMediaRecode.json",
-        "Fav.ini",
-        "XMedia Recode"
-    ],
-    "checkver": {
-        "url": "https://www.xmedia-recode.de/update/version.txt",
-        "regex": "Version=([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.xmedia-recode.de/download/XMediaRecode$cleanVersion_x64_setup.exe"
-            },
-            "32bit": {
-                "url": "https://www.xmedia-recode.de/download/XMediaRecode$cleanVersion_setup.exe"
-            }
-        }
+    "32bit": {
+      "url": "https://www.xmedia-recode.de/download/XMediaRecode3616_setup.exe",
+      "hash": "72c14fc7429188a31e0a9e586c739e60d04610a0de2dcdc7851a168365a9ff86"
     }
+  },
+  "innosetup": true,
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\Fav.ini\")) { New-Item \"$dir\\Fav.ini\" | Out-Null }",
+    "if (!(Test-Path \"$persist_dir\\XMediaRecode.json\")) { Set-Content \"$dir\\XMediaRecode.json\" -Value '{}' -Encoding 'utf8' -Force }"
+  ],
+  "shortcuts": [
+    [
+      "XMedia Recode.exe",
+      "XMedia Recode"
+    ]
+  ],
+  "persist": [
+    "XMediaRecode.json",
+    "Fav.ini",
+    "XMedia Recode"
+  ],
+  "checkver": {
+    "url": "https://www.xmedia-recode.de/update/version.txt",
+    "regex": "Version=([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.xmedia-recode.de/download/XMediaRecode$cleanVersion_x64_setup.exe"
+      },
+      "32bit": {
+        "url": "https://www.xmedia-recode.de/download/XMediaRecode$cleanVersion_setup.exe"
+      }
+    }
+  }
 }

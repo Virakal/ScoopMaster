@@ -1,37 +1,37 @@
 {
-    "version": "0.45.0",
-    "description": "A desktop client for IPFS",
-    "homepage": "https://ipfs.tech/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v0.45.0/ipfs-desktop-setup-0.45.0-win-x64.exe#/dl.7z",
-            "hash": "sha512:c2cbd03eb9708385bcb5a6767f7bc6ccdb193b378b56df59442b6ea6079869500d117fe3a808587fda85258f60b463e58945e4cc6b9d8ee46ae5203e8ef3e076",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\" -Recurse"
-            ]
-        }
-    },
-    "bin": "resources\\app.asar.unpacked\\node_modules\\kubo\\kubo\\ipfs.exe",
-    "shortcuts": [
-        [
-            "IPFS Desktop.exe",
-            "IPFS Desktop"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/ipfs/ipfs-desktop"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v$version/ipfs-desktop-setup-$version-win-x64.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "sha512:\\s+$base64"
-        }
+  "version": "0.45.0",
+  "description": "A desktop client for IPFS",
+  "homepage": "https://ipfs.tech/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v0.45.0/ipfs-desktop-setup-0.45.0-win-x64.exe#/dl.7z",
+      "hash": "sha512:c2cbd03eb9708385bcb5a6767f7bc6ccdb193b378b56df59442b6ea6079869500d117fe3a808587fda85258f60b463e58945e4cc6b9d8ee46ae5203e8ef3e076",
+      "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\" -Recurse"
+      ]
     }
+  },
+  "bin": "resources\\app.asar.unpacked\\node_modules\\kubo\\kubo\\ipfs.exe",
+  "shortcuts": [
+    [
+      "IPFS Desktop.exe",
+      "IPFS Desktop"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/ipfs/ipfs-desktop"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v$version/ipfs-desktop-setup-$version-win-x64.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/latest.yml",
+      "regex": "sha512:\\s+$base64"
+    }
+  }
 }

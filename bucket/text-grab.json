@@ -1,37 +1,37 @@
 {
-    "version": "4.9.6",
-    "description": "Minimal Windows utility for copying and pasting any visible text, without internet access.",
-    "homepage": "https://github.com/TheJoeFin/Text-Grab",
-    "license": "MIT",
-    "suggest": {
-        ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
+  "version": "4.9.6",
+  "description": "Minimal Windows utility for copying and pasting any visible text, without internet access.",
+  "homepage": "https://github.com/TheJoeFin/Text-Grab",
+  "license": "MIT",
+  "suggest": {
+    ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.9.6/Text-Grab.exe",
+      "hash": "852dc4c1d20bc9b86ce18183923600f7ace3f2bee920fd922f0b3494640b9994"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.9.6/Text-Grab.exe",
-            "hash": "852dc4c1d20bc9b86ce18183923600f7ace3f2bee920fd922f0b3494640b9994"
-        },
-        "arm64": {
-            "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.9.6/Text-Grab-arm64.exe#/Text-Grab.exe",
-            "hash": "75086c00da7b6b6a4c6d04cf0d590ad9d93ecff61e4a9d081591070ea7d93f05"
-        }
-    },
-    "bin": "Text-Grab.exe",
-    "shortcuts": [
-        [
-            "Text-Grab.exe",
-            "Text Grab"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab-arm64.exe#/Text-Grab.exe"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.9.6/Text-Grab-arm64.exe#/Text-Grab.exe",
+      "hash": "75086c00da7b6b6a4c6d04cf0d590ad9d93ecff61e4a9d081591070ea7d93f05"
     }
+  },
+  "bin": "Text-Grab.exe",
+  "shortcuts": [
+    [
+      "Text-Grab.exe",
+      "Text Grab"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab-arm64.exe#/Text-Grab.exe"
+      }
+    }
+  }
 }

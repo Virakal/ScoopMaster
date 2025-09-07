@@ -1,41 +1,41 @@
 {
-    "version": "25.09.03",
-    "description": "A video and audio player which can play most formats and codecs.",
-    "homepage": "https://github.com/zaps166/QMPlay2",
-    "license": "LGPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/zaps166/QMPlay2/releases/download/25.09.03/QMPlay2-Win64-25.09.03.exe#/dl.7z",
-            "hash": "744bd1101f6f1d09f40407ca19b002c706d2c202667cc30deef0fc11a9412dca"
-        },
-        "32bit": {
-            "url": "https://github.com/zaps166/QMPlay2/releases/download/25.09.03/QMPlay2-Win32-25.09.03-qt5.exe#/dl.7z",
-            "hash": "7a610d270acea72c2b086ba4a0e78d3330c0a6169dbddd8e8517aec3233b184c"
-        }
+  "version": "25.09.03",
+  "description": "A video and audio player which can play most formats and codecs.",
+  "homepage": "https://github.com/zaps166/QMPlay2",
+  "license": "LGPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/zaps166/QMPlay2/releases/download/25.09.03/QMPlay2-Win64-25.09.03.exe#/dl.7z",
+      "hash": "744bd1101f6f1d09f40407ca19b002c706d2c202667cc30deef0fc11a9412dca"
     },
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Unins*\" -Force -Recurse",
-        "New-Item \"$dir\\portable\" -ErrorAction SilentlyContinue | Out-Null"
-    ],
-    "bin": "QMPlay2.exe",
-    "shortcuts": [
-        [
-            "QMPlay2.exe",
-            "QMPlay2"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win64-$version.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win32-$version-qt5.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "https://github.com/zaps166/QMPlay2/releases/tag/$version"
-        }
+    "32bit": {
+      "url": "https://github.com/zaps166/QMPlay2/releases/download/25.09.03/QMPlay2-Win32-25.09.03-qt5.exe#/dl.7z",
+      "hash": "7a610d270acea72c2b086ba4a0e78d3330c0a6169dbddd8e8517aec3233b184c"
     }
+  },
+  "post_install": [
+    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Unins*\" -Force -Recurse",
+    "New-Item \"$dir\\portable\" -ErrorAction SilentlyContinue | Out-Null"
+  ],
+  "bin": "QMPlay2.exe",
+  "shortcuts": [
+    [
+      "QMPlay2.exe",
+      "QMPlay2"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win64-$version.exe#/dl.7z"
+      },
+      "32bit": {
+        "url": "https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win32-$version-qt5.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "https://github.com/zaps166/QMPlay2/releases/tag/$version"
+    }
+  }
 }

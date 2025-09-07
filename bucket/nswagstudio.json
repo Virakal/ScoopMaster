@@ -1,27 +1,27 @@
 {
-    "version": "14.5.0",
-    "description": "The OpenAPI/Swagger API toolchain for .NET and TypeScript",
-    "homepage": "https://github.com/RicoSuter/NSwag",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/RicoSuter/NSwag/releases/download/v14.5.0/NSwag.zip",
-            "hash": "9e75d4823a8495d02aa56a7a60eaf8308586280d0b1e8732c251cceae3536d19"
-        }
-    },
-    "bin": "Win\\NSwag.exe",
-    "shortcuts": [
-        [
-            "NSwagStudio.exe",
-            "NSwagStudio"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/RicoSuter/NSwag/releases/download/v$version/NSwag.zip"
-            }
-        }
+  "version": "14.5.0",
+  "description": "The OpenAPI/Swagger API toolchain for .NET and TypeScript",
+  "homepage": "https://github.com/RicoSuter/NSwag",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/RicoSuter/NSwag/releases/download/v14.5.0/NSwag.zip",
+      "hash": "9e75d4823a8495d02aa56a7a60eaf8308586280d0b1e8732c251cceae3536d19"
     }
+  },
+  "bin": "Win\\NSwag.exe",
+  "shortcuts": [
+    [
+      "NSwagStudio.exe",
+      "NSwagStudio"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/RicoSuter/NSwag/releases/download/v$version/NSwag.zip"
+      }
+    }
+  }
 }

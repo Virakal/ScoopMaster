@@ -1,48 +1,48 @@
 {
-    "version": "0.56-1",
-    "description": "The \"vanilla\" distribution of Pure Data (aka Pd Vanilla) is an open source visual programming language for multimedia.",
-    "homepage": "https://puredata.info/",
-    "license": {
-        "identifier": "Standard-Improved-BSD",
-        "url": "http://msp.ucsd.edu/Software/LICENSE.txt"
+  "version": "0.56-1",
+  "description": "The \"vanilla\" distribution of Pure Data (aka Pd Vanilla) is an open source visual programming language for multimedia.",
+  "homepage": "https://puredata.info/",
+  "license": {
+    "identifier": "Standard-Improved-BSD",
+    "url": "http://msp.ucsd.edu/Software/LICENSE.txt"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "http://msp.ucsd.edu/Software/pd-0.56-1.msw.zip",
+      "hash": "c5600dee375e420aa2163f36ccaab103c1af83a69061e2c19e5f812c9b3ebeaa",
+      "extract_dir": "pd-0.56-1"
     },
-    "architecture": {
-        "64bit": {
-            "url": "http://msp.ucsd.edu/Software/pd-0.56-1.msw.zip",
-            "hash": "c5600dee375e420aa2163f36ccaab103c1af83a69061e2c19e5f812c9b3ebeaa",
-            "extract_dir": "pd-0.56-1"
-        },
-        "32bit": {
-            "url": "http://msp.ucsd.edu/Software/pd-0.56-1-i386.msw.zip",
-            "hash": "8409cd8c72414d946be6f6fad269dfc654cde3fbd721cdcb8057a8177c602197",
-            "extract_dir": "pd-0.56-1-i386"
-        }
-    },
-    "bin": [
-        "bin\\pd.com",
-        "bin\\pdsend.exe",
-        "bin\\pdreceive.exe"
-    ],
-    "shortcuts": [
-        [
-            "bin\\pd.exe",
-            "Pure Data"
-        ]
-    ],
-    "checkver": {
-        "url": "http://msp.ucsd.edu/software.html",
-        "regex": "CURRENT STABLE RELEASE, version ([\\d.-]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://msp.ucsd.edu/Software/pd-$version.msw.zip",
-                "extract_dir": "pd-$version"
-            },
-            "32bit": {
-                "url": "http://msp.ucsd.edu/Software/pd-$version-i386.msw.zip",
-                "extract_dir": "pd-$version-i386"
-            }
-        }
+    "32bit": {
+      "url": "http://msp.ucsd.edu/Software/pd-0.56-1-i386.msw.zip",
+      "hash": "8409cd8c72414d946be6f6fad269dfc654cde3fbd721cdcb8057a8177c602197",
+      "extract_dir": "pd-0.56-1-i386"
     }
+  },
+  "bin": [
+    "bin\\pd.com",
+    "bin\\pdsend.exe",
+    "bin\\pdreceive.exe"
+  ],
+  "shortcuts": [
+    [
+      "bin\\pd.exe",
+      "Pure Data"
+    ]
+  ],
+  "checkver": {
+    "url": "http://msp.ucsd.edu/software.html",
+    "regex": "CURRENT STABLE RELEASE, version ([\\d.-]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "http://msp.ucsd.edu/Software/pd-$version.msw.zip",
+        "extract_dir": "pd-$version"
+      },
+      "32bit": {
+        "url": "http://msp.ucsd.edu/Software/pd-$version-i386.msw.zip",
+        "extract_dir": "pd-$version-i386"
+      }
+    }
+  }
 }

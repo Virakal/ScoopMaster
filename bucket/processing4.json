@@ -1,37 +1,37 @@
 {
-    "version": "1307-4.4.7",
-    "homepage": "https://processing.org/",
-    "description": "A flexible software sketchbook and a language for learning how to code.",
-    "license": "GPL-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/processing/processing4/releases/download/processing-1307-4.4.7/processing-4.4.7-windows-x64-portable.zip",
-            "hash": "efce64b2ae773593bf96349b604e5f93555463089b0b26d272ed45f65e287999"
-        }
-    },
-    "extract_dir": "Processing",
-    "bin": "Processing.exe",
-    "shortcuts": [
-        [
-            "Processing.exe",
-            "Processing"
-        ]
-    ],
-    "pre_uninstall": [
-        "if ($cmd -eq 'uninstall') {",
-        "   Remove-Item 'HKCU:\\SOFTWARE\\Classes\\pde', 'HKCU:\\SOFTWARE\\Classes\\Processing.Document' -ErrorAction 'SilentlyContinue' -Recurse -Force",
-        "   foreach ($item in 'Contribution', 'Sketch') { Remove-Item 'HKCU:\\SOFTWARE\\Classes\\Processing.$item.Document' -ErrorAction 'SilentlyContinue' -Recurse -Force }",
-        "}"
-    ],
-    "checkver": {
-        "github": "https://github.com/processing/processing4",
-        "regex": "tag/processing-([\\d-.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/processing/processing4/releases/download/processing-$version/processing-$preReleaseVersion-windows-x64-portable.zip"
-            }
-        }
+  "version": "1307-4.4.7",
+  "homepage": "https://processing.org/",
+  "description": "A flexible software sketchbook and a language for learning how to code.",
+  "license": "GPL-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/processing/processing4/releases/download/processing-1307-4.4.7/processing-4.4.7-windows-x64-portable.zip",
+      "hash": "efce64b2ae773593bf96349b604e5f93555463089b0b26d272ed45f65e287999"
     }
+  },
+  "extract_dir": "Processing",
+  "bin": "Processing.exe",
+  "shortcuts": [
+    [
+      "Processing.exe",
+      "Processing"
+    ]
+  ],
+  "pre_uninstall": [
+    "if ($cmd -eq 'uninstall') {",
+    "   Remove-Item 'HKCU:\\SOFTWARE\\Classes\\pde', 'HKCU:\\SOFTWARE\\Classes\\Processing.Document' -ErrorAction 'SilentlyContinue' -Recurse -Force",
+    "   foreach ($item in 'Contribution', 'Sketch') { Remove-Item 'HKCU:\\SOFTWARE\\Classes\\Processing.$item.Document' -ErrorAction 'SilentlyContinue' -Recurse -Force }",
+    "}"
+  ],
+  "checkver": {
+    "github": "https://github.com/processing/processing4",
+    "regex": "tag/processing-([\\d-.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/processing/processing4/releases/download/processing-$version/processing-$preReleaseVersion-windows-x64-portable.zip"
+      }
+    }
+  }
 }

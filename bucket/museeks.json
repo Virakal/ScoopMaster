@@ -1,33 +1,33 @@
 {
-    "version": "0.23.0",
-    "description": "A simple and clean music player",
-    "homepage": "https://museeks.io",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/martpie/museeks/releases/download/0.23.0/Museeks_0.23.0_x64-setup.exe#/dl.7z",
-            "hash": "819c4bcd8cf86f98513285b31243728d2e093857661270b1368d42a5328ab378"
-        }
-    },
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse",
-    "bin": "museeks.exe",
-    "shortcuts": [
-        [
-            "museeks.exe",
-            "Museeks"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/martpie/museeks"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/martpie/museeks/releases/download/$version/Museeks_$version_x64-setup.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
+  "version": "0.23.0",
+  "description": "A simple and clean music player",
+  "homepage": "https://museeks.io",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/martpie/museeks/releases/download/0.23.0/Museeks_0.23.0_x64-setup.exe#/dl.7z",
+      "hash": "819c4bcd8cf86f98513285b31243728d2e093857661270b1368d42a5328ab378"
     }
+  },
+  "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse",
+  "bin": "museeks.exe",
+  "shortcuts": [
+    [
+      "museeks.exe",
+      "Museeks"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/martpie/museeks"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/martpie/museeks/releases/download/$version/Museeks_$version_x64-setup.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
 }

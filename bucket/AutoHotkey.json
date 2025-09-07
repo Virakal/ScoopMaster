@@ -84,5 +84,6 @@
             "url": "https://github.com/AutoHotkey/AutoHotkey/releases/tag/v$version",
             "regex": "$sha256</code>[\\s]+AutoHotkey_$version\\.zip"
         }
-    }
+    },
+    "_comment": "This manifest derives from https://github.com/ScoopInstaller/Extras"
 }

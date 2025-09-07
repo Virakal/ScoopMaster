@@ -14,10 +14,6 @@
         "32bit": {
             "url": "https://github.com/Martchus/syncthingtray/releases/download/v2.0.1/syncthingtray-qt5-2.0.1-i686-w64-mingw32.exe.zip",
             "hash": "e582a1af232a2cabda7ba0c83d5c015f881ea1025fe605b5d2a74a53b28cc090"
-        },
-        "arm64": {
-            "url": "https://github.com/Martchus/syncthingtray/releases/download/v2.0.1/syncthingtray-2.0.1-aarch64-w64-mingw32.exe.zip",
-            "hash": "ed8b334128c72648094c8791fe9ed4c7c86e904ffd7356ef53de1faac1ed6689"
         }
     },
     "pre_install": [
@@ -50,9 +46,6 @@
             },
             "32bit": {
                 "url": "https://github.com/Martchus/syncthingtray/releases/download/v$version/syncthingtray-qt5-$version-i686-w64-mingw32.exe.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Martchus/syncthingtray/releases/download/v$version/syncthingtray-$version-aarch64-w64-mingw32.exe.zip"
             }
         }
     }

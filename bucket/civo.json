@@ -1,24 +1,24 @@
 {
-    "version": "1.4.3",
-    "description": "CLI library for managing cloud resources such as instances and Kubernetes clusters at Civo.com.",
-    "homepage": "https://github.com/civo/cli",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/civo/cli/releases/download/v1.4.3/civo-1.4.3-windows-amd64.zip",
-            "hash": "1755ea9c2b3cd800eb7b4cf0295e947a43166155858b92e9c48c3fde033f2a8a"
-        }
-    },
-    "bin": "civo.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/civo/cli/releases/download/v$version/civo-$version-windows-amd64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/civo-$version-checksums.sha256"
-        }
+  "version": "1.4.3",
+  "description": "CLI library for managing cloud resources such as instances and Kubernetes clusters at Civo.com.",
+  "homepage": "https://github.com/civo/cli",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/civo/cli/releases/download/v1.4.3/civo-1.4.3-windows-amd64.zip",
+      "hash": "1755ea9c2b3cd800eb7b4cf0295e947a43166155858b92e9c48c3fde033f2a8a"
     }
+  },
+  "bin": "civo.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/civo/cli/releases/download/v$version/civo-$version-windows-amd64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/civo-$version-checksums.sha256"
+    }
+  }
 }

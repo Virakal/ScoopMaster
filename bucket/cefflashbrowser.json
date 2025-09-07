@@ -1,41 +1,41 @@
 {
-    "version": "1.1.2",
-    "description": "Flash Browser",
-    "homepage": "https://github.com/Mzying2001/CefFlashBrowser/",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/Mzying2001/CefFlashBrowser/blob/master/LICENSE"
+  "version": "1.1.2",
+  "description": "Flash Browser",
+  "homepage": "https://github.com/Mzying2001/CefFlashBrowser/",
+  "license": {
+    "identifier": "MIT",
+    "url": "https://github.com/Mzying2001/CefFlashBrowser/blob/master/LICENSE"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/1.1.2/FlashBrowser_x64_v1.1.2.zip",
+      "hash": "b97605d26438feabe5c70e7522ef5f748359f69077a62fc1938faa884109c112"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/1.1.2/FlashBrowser_x64_v1.1.2.zip",
-            "hash": "b97605d26438feabe5c70e7522ef5f748359f69077a62fc1938faa884109c112"
-        },
-        "32bit": {
-            "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/1.1.2/FlashBrowser_x86_v1.1.2.zip",
-            "hash": "fa9046d7d16298952ce994f89c3a15f4f129c2fad2ae069cb67fab9443bdb093"
-        }
-    },
-    "extract_dir": "Release",
-    "bin": "CefFlashBrowser.exe",
-    "shortcuts": [
-        [
-            "CefFlashBrowser.exe",
-            "CefFlashBrowser"
-        ]
-    ],
-    "persist": "Caches",
-    "checkver": {
-        "github": "https://github.com/Mzying2001/CefFlashBrowser"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/$version/FlashBrowser_x64_v$version.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/$version/FlashBrowser_x86_v$version.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/1.1.2/FlashBrowser_x86_v1.1.2.zip",
+      "hash": "fa9046d7d16298952ce994f89c3a15f4f129c2fad2ae069cb67fab9443bdb093"
     }
+  },
+  "extract_dir": "Release",
+  "bin": "CefFlashBrowser.exe",
+  "shortcuts": [
+    [
+      "CefFlashBrowser.exe",
+      "CefFlashBrowser"
+    ]
+  ],
+  "persist": "Caches",
+  "checkver": {
+    "github": "https://github.com/Mzying2001/CefFlashBrowser"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/$version/FlashBrowser_x64_v$version.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/Mzying2001/CefFlashBrowser/releases/download/$version/FlashBrowser_x86_v$version.zip"
+      }
+    }
+  }
 }

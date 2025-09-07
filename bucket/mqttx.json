@@ -22,12 +22,25 @@
         "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
     ],
+    "post_install": [
+        "if (Test-Path \"$persist_dir\\data\\*\") {",
+        "    New-Item \"$Env:AppData\\mqttx\" -ItemType Directory -Force | Out-Null",
+        "    Copy-Item \"$persist_dir\\data\\*\" \"$Env:AppData\\mqttx\" -Recurse",
+        "}"
+    ],
+    "pre_uninstall": [
+        "if (Test-Path \"$Env:AppData\\mqttx\\*\") {",
+        "    Remove-Item \"$persist_dir\\data\" -Recurse -Force",
+        "    Move-Item \"$Env:AppData\\mqttx\" \"$persist_dir\\data\" -Force",
+        "}"
+    ],
     "shortcuts": [
         [
             "MQTTX.exe",
             "MQTT X"
         ]
     ],
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/emqx/MQTTX"
     },

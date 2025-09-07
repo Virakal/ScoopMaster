@@ -1,37 +1,37 @@
 {
-    "version": "8.5.4",
-    "description": "Visualizer for deep learning and machine learning models",
-    "homepage": "https://netron.app/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/lutzroeder/netron/releases/download/v8.5.4/Netron-Setup-8.5.4.exe#/dl.7z",
-            "hash": "sha512:32044ac72ee735780d1147141699b4ede92e669708d6ff4e5759544cdeaa6dc5acc8eb12f67e220961922a74a05c3132a0f6a0ba726349f0d3480c46e48f268d",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\" -Force -Recurse"
-            ]
-        }
-    },
-    "bin": "Netron.exe",
-    "shortcuts": [
-        [
-            "Netron.exe",
-            "Netron"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/lutzroeder/netron"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/lutzroeder/netron/releases/download/v$version/Netron-Setup-$version.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s+$base64"
-                }
-            }
-        }
+  "version": "8.5.4",
+  "description": "Visualizer for deep learning and machine learning models",
+  "homepage": "https://netron.app/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/lutzroeder/netron/releases/download/v8.5.4/Netron-Setup-8.5.4.exe#/dl.7z",
+      "hash": "sha512:32044ac72ee735780d1147141699b4ede92e669708d6ff4e5759544cdeaa6dc5acc8eb12f67e220961922a74a05c3132a0f6a0ba726349f0d3480c46e48f268d",
+      "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\" -Force -Recurse"
+      ]
     }
+  },
+  "bin": "Netron.exe",
+  "shortcuts": [
+    [
+      "Netron.exe",
+      "Netron"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/lutzroeder/netron"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/lutzroeder/netron/releases/download/v$version/Netron-Setup-$version.exe#/dl.7z",
+        "hash": {
+          "url": "$baseurl/latest.yml",
+          "regex": "sha512:\\s+$base64"
+        }
+      }
+    }
+  }
 }

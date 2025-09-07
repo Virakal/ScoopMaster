@@ -1,34 +1,34 @@
 {
-    "version": "2025.2.3.98",
-    "homepage": "https://cascadeur.com/",
-    "description": "A physics‑based 3D animation software powered by artificial intelligence (A.I.). ",
-    "license": {
-        "identifier": "Shareware",
-        "url": "https://cascadeur.com/help/cascadeur_end_user_agreement"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://cdn.cascadeur.com/builds/windows/98/Cascadeur_2025.2.3.exe#/dl.7z",
-            "hash": "0fbc1ca2281bf7e7157a689738fcb268d677c063c66dd4460a999e0754ef90a9"
-        }
-    },
-    "pre_install": "Remove-Item \"$dir\" -Include 'uninstall.*', '$*' -Recurse",
-    "shortcuts": [
-        [
-            "cascadeur.exe",
-            "Cascadeur"
-        ]
-    ],
-    "checkver": {
-        "url": "https://cascadeur.com/after-download?platform=windows",
-        "regex": "windows/(?<Build>[\\d]+)/(C|c)ascadeur_(?<Version>[\\w.]+)\\.exe",
-        "replace": "${Version}.${Build}"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://cdn.cascadeur.com/builds/windows/$matchBuild/Cascadeur_$matchVersion.exe#/dl.7z"
-            }
-        }
+  "version": "2025.2.3.98",
+  "homepage": "https://cascadeur.com/",
+  "description": "A physics‑based 3D animation software powered by artificial intelligence (A.I.). ",
+  "license": {
+    "identifier": "Shareware",
+    "url": "https://cascadeur.com/help/cascadeur_end_user_agreement"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://cdn.cascadeur.com/builds/windows/98/Cascadeur_2025.2.3.exe#/dl.7z",
+      "hash": "0fbc1ca2281bf7e7157a689738fcb268d677c063c66dd4460a999e0754ef90a9"
     }
+  },
+  "pre_install": "Remove-Item \"$dir\" -Include 'uninstall.*', '$*' -Recurse",
+  "shortcuts": [
+    [
+      "cascadeur.exe",
+      "Cascadeur"
+    ]
+  ],
+  "checkver": {
+    "url": "https://cascadeur.com/after-download?platform=windows",
+    "regex": "windows/(?<Build>[\\d]+)/(C|c)ascadeur_(?<Version>[\\w.]+)\\.exe",
+    "replace": "${Version}.${Build}"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://cdn.cascadeur.com/builds/windows/$matchBuild/Cascadeur_$matchVersion.exe#/dl.7z"
+      }
+    }
+  }
 }

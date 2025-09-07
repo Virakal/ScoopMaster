@@ -1,32 +1,32 @@
 {
-    "version": "1.23.3",
-    "description": "Media server for comics/mangas/BDs with API and OPDS support",
-    "homepage": "https://komga.org/",
-    "license": "MIT",
-    "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
-        ]
-    },
-    "notes": "Default URL is http://localhost:25600",
-    "url": "https://github.com/gotson/komga/releases/download/1.23.3/komga-1.23.3.jar#/komga.jar",
-    "hash": "439daedbce01a8de8892d30a3806e2c1d33bed938f42b1c8cce904c73f755dea",
-    "bin": [
-        [
-            "komga.jar",
-            "komga",
-            "--komga.config-dir=\"$dir\\config\""
-        ]
-    ],
-    "persist": "config",
-    "checkver": {
-        "github": "https://github.com/gotson/komga"
-    },
-    "autoupdate": {
-        "url": "https://github.com/gotson/komga/releases/download/$version/komga-$version.jar#/komga.jar",
-        "hash": {
-            "url": "$baseurl/checksums_sha256.txt"
-        }
+  "version": "1.23.3",
+  "description": "Media server for comics/mangas/BDs with API and OPDS support",
+  "homepage": "https://komga.org/",
+  "license": "MIT",
+  "suggest": {
+    "JDK": [
+      "java/oraclejdk",
+      "java/openjdk"
+    ]
+  },
+  "notes": "Default URL is http://localhost:25600",
+  "url": "https://github.com/gotson/komga/releases/download/1.23.3/komga-1.23.3.jar#/komga.jar",
+  "hash": "439daedbce01a8de8892d30a3806e2c1d33bed938f42b1c8cce904c73f755dea",
+  "bin": [
+    [
+      "komga.jar",
+      "komga",
+      "--komga.config-dir=\"$dir\\config\""
+    ]
+  ],
+  "persist": "config",
+  "checkver": {
+    "github": "https://github.com/gotson/komga"
+  },
+  "autoupdate": {
+    "url": "https://github.com/gotson/komga/releases/download/$version/komga-$version.jar#/komga.jar",
+    "hash": {
+      "url": "$baseurl/checksums_sha256.txt"
     }
+  }
 }
