@@ -1,7 +1,7 @@
 {
     "version": "3.3.3",
     "description": "A GUI to manage Winget and Scoop packages",
-    "homepage": "https://www.marticliment.com/wingetui/",
+    "homepage": "https://github.com/martinet101/WingetUI",
     "license": "LGPL-2.1-or-later",
     "url": "https://github.com/martinet101/WingetUI/releases/download/3.3.3/WingetUI.Installer.exe",
     "hash": "e8517bb7298e5890de3daaa661322428f95719acb2192a6cf91de20d2eaa6d5e",
@@ -13,7 +13,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/marticliment/WingetUI"
+        "url": "https://api.github.com/repos/marticliment/WingetUI/releases/latest",
+        "regex": "/releases/tag/([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/martinet101/WingetUI/releases/download/$version/WingetUI.Installer.exe",
