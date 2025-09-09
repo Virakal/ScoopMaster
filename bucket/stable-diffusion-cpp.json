@@ -1,24 +1,24 @@
 {
-    "version": "snapshot-c648001",
-    "description": "Stable Diffusion in pure C/C++ (AVX2)",
-    "homepage": "https://github.com/leejet/stable-diffusion.cpp",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/leejet/stable-diffusion.cpp/releases/download/master-c648001/sd-master-c648001-bin-win-avx2-x64.zip",
-            "hash": "d9bc6c4a8b866ce7cadd6bb31ce67777b2767a243bac3f36637e7599259b046f"
-        }
-    },
-    "bin": "sd.exe",
-    "checkver": {
-        "regex": "master-(?<commit>[0-9a-f]{7})",
-        "replace": "snapshot-$1"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/leejet/stable-diffusion.cpp/releases/download/master-$matchCommit/sd-master-$matchCommit-bin-win-avx2-x64.zip"
-            }
-        }
+  "version": "snapshot-c648001",
+  "description": "Stable Diffusion in pure C/C++ (AVX2)",
+  "homepage": "https://github.com/leejet/stable-diffusion.cpp",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/leejet/stable-diffusion.cpp/releases/download/master-c648001/sd-master-c648001-bin-win-avx2-x64.zip",
+      "hash": "d9bc6c4a8b866ce7cadd6bb31ce67777b2767a243bac3f36637e7599259b046f"
     }
+  },
+  "bin": "sd.exe",
+  "checkver": {
+    "regex": "master-(?<commit>[0-9a-f]{7})",
+    "replace": "snapshot-$1"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/leejet/stable-diffusion.cpp/releases/download/master-$matchCommit/sd-master-$matchCommit-bin-win-avx2-x64.zip"
+      }
+    }
+  }
 }
