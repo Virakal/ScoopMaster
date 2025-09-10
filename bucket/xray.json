@@ -1,25 +1,25 @@
 {
-    "version": "25.9.5",
-    "description": "A platform for building proxies to bypass network restrictions",
+    "version": "25.9.10",
+    "description": "Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.",
     "homepage": "https://github.com/XTLS/Xray-core",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/XTLS/Xray-core/releases/download/v25.9.5/Xray-windows-64.zip",
-            "hash": "5c0b2cef15cd77e32657dd23e5e1c97199a62ab886ba9ff4a7220b0ee7b7f751"
+            "url": "https://github.com/XTLS/Xray-core/releases/download/v25.9.10/Xray-windows-64.zip",
+            "hash": "sha512:50fff514f304a5d89c0b7fdd4ea7e4e2358caa9e1bf7ec32245cacd1dfa532b391164054ec83ad7ce64efd3d31f7d5e8d8274909f37f8b4e7ac2a2a78af9f476"
         },
         "32bit": {
-            "url": "https://github.com/XTLS/Xray-core/releases/download/v25.9.5/Xray-windows-32.zip",
-            "hash": "dfc110d05259b7f3e2d766ae361f1dd9a9f63be7c2762511d9b5cac2120fd813"
+            "url": "https://github.com/XTLS/Xray-core/releases/download/v25.9.10/Xray-windows-32.zip",
+            "hash": "sha512:bf703d9eac62eddaa020fbe80d74d0d255b1b4958ab105663dcb5f49cb449a1126715cff22769a8e0775f0d585e330fcbf4cd5811f04d489aab61618a37de768"
         }
     },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
-        "    Set-Content \"$dir\\config.json\" '{}' -Encoding 'Ascii'",
-        "}"
+    "pre_install": "if (-not (Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -ItemType file | Out-Null }",
+    "env_add_path": ".",
+    "persist": [
+        "config.json",
+        "geoip.dat",
+        "geosite.dat"
     ],
-    "bin": "xray.exe",
-    "persist": "config.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -29,6 +29,10 @@
             "32bit": {
                 "url": "https://github.com/XTLS/Xray-core/releases/download/v$version/Xray-windows-32.zip"
             }
+        },
+        "hash": {
+            "url": "$url.dgst",
+            "regex": "SHA2-512= $sha512"
         }
     }
 }
