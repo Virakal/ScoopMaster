@@ -9,30 +9,6 @@
             "hash": "eebb1de6d9a00cbb9d5cabea9f90b0e1101efec6efd175bbff44b285af6f7531"
         }
     },
-    "notes": [
-        "Notice: ",
-        "cache-dir: $persist_dir\\.pnpm-cache",
-        "store-dir: $persist_dir\\.pnpm-store",
-        "global-dir: $dir\\.pnpm-global",
-        "global-bin-dir: $dir\\.pnpm-global\\.bin",
-        "state-dir: $persist_dir\\.pnpm-state"
-    ],
-    "post_install": [
-        "pnpm config set store-dir $persist_dir\\.pnpm-store",
-        "pnpm config set cache-dir $persist_dir\\.pnpm-cache",
-        "pnpm config set global-dir $dir\\.pnpm-global",
-        "pnpm config set global-bin-dir $dir\\.pnpm-global\\.bin",
-        "pnpm config set state-dir $persist_dir\\.pnpm-state",
-        "pnpm config set cache-dir $persist_dir\\.pnpm-cache"
-    ],
-    "post_uninstall": [
-        "$pnpm_config_dir = $env:LOCALAPPDATA\\pnpm",
-        "if (Test-Path $pnpm_config_dir) {",
-        "    Remove-Item -Recurse -Force $pnpm_config_dir",
-        "}"
-    ],
-    "env_add_path": ".pnpm-global\\.bin",
-    "persist": ".pnpm-global",
     "bin": [
         "pnpm.exe",
         [
