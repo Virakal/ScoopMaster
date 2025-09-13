@@ -1,17 +1,22 @@
 {
     "version": "3.3.4",
-    "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
-    "homepage": "https://www.marticliment.com/unigetui/",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://raw.githubusercontent.com/marticliment/UniGetUI/main/LICENSE"
+    "description": "A GUI to manage Winget and Scoop packages",
+    "homepage": "https://github.com/marticliment/UniGetUI",
+    "license": "MIT",
+    "suggest": {
+        "scoop-search": "main/scoop-search"
     },
     "url": "https://github.com/marticliment/UniGetUI/releases/download/3.3.4/UniGetUI.Installer.exe",
     "hash": "94f262c34b1e3b99e8eaca3de129c793887a318dc2bff21bbf2419ddf62e9bad",
+    "innosetup": true,
     "pre_install": [
-        "$filePath = Join-Path $dir 'ForceUniGetUIPortable'",
-        "if (-not (Test-Path -Path $filePath -PathType Leaf)) {",
-        "    New-Item -Path $filePath -ItemType File | Out-Null",
+        "$Files = [string[]](",
+        "    [System.IO.Path]::Combine($dir,'ForceUniGetUIPortable')",
+        ")",
+        "$Files.ForEach{",
+        "    if (-not [System.IO.File]::Exists($_)) {",
+        "        $null = [System.IO.File]::Create($_)",
+        "    }",
         "}"
     ],
     "shortcuts": [
@@ -24,11 +29,8 @@
         "ForceUniGetUIPortable",
         "Settings"
     ],
-    "innosetup": true,
     "checkver": {
-        "url": "https://api.github.com/repos/marticliment/UniGetUI/releases",
-        "jp": "$..tag_name",
-        "re": "(?!v)([\\d.]+(?:-[\\da-zA-Z.-]+)?)"
+        "github": "https://github.com/marticliment/UniGetUI"
     },
     "autoupdate": {
         "url": "https://github.com/marticliment/UniGetUI/releases/download/$version/UniGetUI.Installer.exe",
