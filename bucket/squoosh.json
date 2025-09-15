@@ -1,0 +1,15 @@
+{
+    "version": "8.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sbcinnovation/squoosh-cli/releases/download/v8.1.0/squoosh_8.1.0_windows_amd64.zip",
+            "bin": [
+                "squoosh.exe"
+            ],
+            "hash": "e75e8d5e1e361c9d185b646a309e3803380fcedfeb17d387887e58a02fb54e58"
+        }
+    },
+    "homepage": "https://github.com/sbcinnovation/sbc-squoosh-cli",
+    "license": "MIT",
+    "description": "Squoosh CLI – image compression for the terminal"
+}
