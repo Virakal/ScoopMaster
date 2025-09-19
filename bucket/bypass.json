@@ -4,12 +4,16 @@
     "url": "https://www.bypass.cn/api/download?name=Bypass.zip#/dl.zip",
     "hash": "074b98f5acc203dc01449d74fe381215f5821b4a20a8b8547a4f788749a815fe",
     "extract_dir": "Bypass",
+    "license": "Freeware",
     "checkver": {
         "url": "https://www.bypass.cn/",
         "regex": "Version&#xFF1A;([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.bypass.cn/api/download?name=Bypass.zip#/dl.zip"
+        "url": "https://www.bypass.cn/api/download?name=Bypass.zip#/dl.zip",
+        "hash": {
+            "mode": "download"
+        }
     },
     "shortcuts": [
         [
