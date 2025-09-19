@@ -22,6 +22,9 @@
         "regex": "tag/([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/GoldenGnu/jeveassets/releases/download/$version/$version.zip"
+        "url": "https://github.com/GoldenGnu/jeveassets/releases/download/$version/$version.zip",
+        "hash": {
+            "mode": "download"
+        }
     }
 }
