@@ -1,15 +1,16 @@
 {
     "version": "2.0.22",
-    "description": "🔥 Draw fast, think efficiently. | A simple tool for drawing graphs",
+    "description": "An open-source project that aims to provide a next-generation node diagram tool for visual thinking.",
     "homepage": "https://github.com/LiRenTech/project-graph",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LiRenTech/project-graph/releases/download/v2.0.22/Project.Graph_2.0.22_x64-setup.exe#/app.7z",
+            "url": "https://github.com/LiRenTech/project-graph/releases/download/v2.0.22/Project.Graph_2.0.22_x64-setup.exe#/dl.7z",
             "hash": "0dbd15f80cd44c504d57b00d13c970303f9cfadfa001f6ad355e9c3bc2ce8114"
         }
     },
-    "extract_to": "",
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse",
+    "bin": "project-graph.exe",
     "shortcuts": [
         [
             "project-graph.exe",
@@ -20,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LiRenTech/project-graph/releases/download/v$version/Project.Graph_$version_x64-setup.exe#/app.7z"
+                "url": "https://github.com/LiRenTech/project-graph/releases/download/v$version/Project.Graph_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
