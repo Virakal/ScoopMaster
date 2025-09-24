@@ -17,17 +17,6 @@
             "hash": "dbb3a5bd06d20c9ab8bb9a79c7c4fb5832ca1c7ba5f231a020bc92e5a3c6dcf4"
         }
     },
-    "env_set": {
-        "UV_CACHE_DIR": "$dir\\uv\\cache",
-        "UV_PYTHON_INSTALL_BIN": 1,
-        "UV_PYTHON_INSTALL_DIR": "$dir\\uv\\python",
-        "UV_PYTHON_BIN_DIR": "$dir\\uv\\bin",
-        "UV_PYTHON_CACHE_DIR": "$dir\\uv\\cache",
-        "UV_TOOL_DIR": "$dir\\uv\\tool",
-        "UV_TOOL_BIN_DIR": "$dir\\uv\\bin"
-    },
-    "env_add_path": "uv\\bin",
-    "persist": "uv",
     "bin": [
         "uv.exe",
         "uvx.exe",
