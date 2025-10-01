@@ -19,15 +19,17 @@
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
         }
     },
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
-        "Set-Value 'User Data\\obsidian.json' 'updateDisabled' $true"
-    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
     "shortcuts": [
         [
             "Obsidian.exe",
-            "Obsidian",
-            "--user-data-dir=\"$persist_dir\\User Data\""
+            "Obsidian"
+        ]
+    ],
+    "bin": [
+        [
+            "obsidian.exe",
+            "obsidian"
         ]
     ],
     "checkver": {
