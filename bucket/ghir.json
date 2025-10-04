@@ -1,19 +1,19 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v0.0.1/ghir_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v0.0.3/ghir_windows_amd64.zip",
             "bin": [
                 "ghir.exe"
             ],
-            "hash": "bae61b3a8dd53296612e36c2c8f865287401b0d52f68d83bb07f8bc7acf22e1f"
+            "hash": "436ae75658954a906577039bbd18f1b0f6efc2c8a740816a53b8ae537ae0f85c"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v0.0.1/ghir_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v0.0.3/ghir_windows_arm64.zip",
             "bin": [
                 "ghir.exe"
             ],
-            "hash": "8596c63b6f9f0376a33a4eab85f09eaa05527af1e3281d3126e4479b03bd2a12"
+            "hash": "e890e994442e6cbc2ff7fc84138c6289c2cd9f6e507b5576907796f3010d5301"
         }
     },
     "license": "MIT",
