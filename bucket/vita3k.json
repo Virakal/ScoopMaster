@@ -1,6 +1,6 @@
 {
     "version": "3816-3df2792",
-    "description": "Experimental PlayStation Vita emulator",
+    "description": "Sony PlayStation Vita emulator",
     "homepage": "https://vita3k.org",
     "license": "GPL-2.0-only",
     "suggest": {
@@ -15,13 +15,21 @@
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.yml\")) {",
         "   New-Item \"$dir\\config.yml\" | Out-Null",
-        "   Add-Content -Path \"$dir\\config.yml\" -Value \"pref-path: $persist_dir\\pref\"-Encoding UTF8",
         "}"
     ],
     "bin": "Vita3K.exe",
-    "shortcuts": [["Vita3K.exe", "Vita3K"]],
-    "persist": ["cache", "config.yml"],
+    "shortcuts": [
+        [
+            "Vita3K.exe",
+            "Sony PlayStation Vita [vita][vita3k]"
+        ]
+    ],
+    "persist": [
+        "cache",
+        "config.yml"
+    ],
     "checkver": {
+        "regex": "(\\d+-[a-f0-9]{7})",
         "script": [
             "$url = 'https://github.com/Vita3K/Vita3K/releases/tag/continuous'",
             "$build_regex = 'Vita3K Build: (\\d+)'",
@@ -36,8 +44,7 @@
             "",
             "$script_ver = \"$build_number-$commit_sha\"",
             "Write-Output $script_ver"
-        ],
-        "regex": "(\\d+-[a-f0-9]{7})"
+        ]
     },
     "autoupdate": {
         "architecture": {
