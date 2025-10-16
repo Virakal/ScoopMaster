@@ -1,10 +1,10 @@
 {
-    "version": "16.9.2",
+    "version": "16.9.3",
     "description": "Database Subsetting and Relational Data Browsing Tool",
     "homepage": "https://wisser.github.io/Jailer",
     "license": "Apache-2.0",
-    "url": "https://github.com/Wisser/Jailer/releases/download/v16.9.2/Jailer-database-tools-16.9.2.msi",
-    "hash": "a3f9f052dcd4303f83e4af5e1d085e0ee6931caf2515dc6955a99d3ff9a8f90c",
+    "url": "https://github.com/Wisser/Jailer/releases/download/v16.9.3/Jailer-database-tools-16.9.3.msi",
+    "hash": "9f9fff9672461927ca6a295d5cb769d07041c2034189c2a6f606b468c215040d",
     "extract_dir": "Jailer Database Tools/app",
     "post_install": [
         "(Get-Content \"$dir\\jailer.bat\").replace('=lib','=%~dp0\\lib').replace(';config',';%~dp0\\config').replace('jailer.jar','%~dp0\\jailer.jar') | Set-Content \"$dir\\jailer.bat\"",
