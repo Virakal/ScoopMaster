@@ -1,19 +1,19 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Windows_x86_64.zip",
+            "url": "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.3/gqlc_Windows_x86_64.zip",
             "bin": [
                 "gqlc.exe"
             ],
-            "hash": "d09918213ee77fd48486072fd4d51ea506d97ca2a1fed891057fe27c519fa254"
+            "hash": "824501dafa15ecd62ffa35b59435e94031d9a43c4e0c7cbf9f77f5c2dae06999"
         },
         "arm64": {
-            "url": "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.0/gqlc_Windows_arm64.zip",
+            "url": "https://github.com/tsukinoko-kun/gqlc/releases/download/v1.0.3/gqlc_Windows_arm64.zip",
             "bin": [
                 "gqlc.exe"
             ],
-            "hash": "56a4b413c396d4ab1b5a9074fbff6ea1d9e147abc6b40bb86f3c7490da8203b7"
+            "hash": "c1f66e1338fab60c81aa7be6444215983c0f88ed4a89e6a4a5f961817389118e"
         }
     },
     "homepage": "https://github.com/tsukinoko-kun/gqlc",
