@@ -30,7 +30,7 @@
         "echo ''",
         "echo Notes",
         "echo '-----'",
-        "echo 'After uninstallation, you can manually delete the configuration folder at ~\\.csdm'"
+        "echo 'After uninstallation, you can manually delete the configuration folder at $HOME\\.csdm'"
     ],
     "checkver": {
         "github": "https://github.com/akiver/cs-demo-manager"
