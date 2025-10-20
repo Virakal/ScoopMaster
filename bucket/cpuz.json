@@ -23,9 +23,6 @@
     ],
     "checkver": "Version ([\\d.]+) for windows",
     "autoupdate": {
-        "url": "https://download.cpuid.com/cpu-z/cpu-z_$version-cn.zip",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://download.cpuid.com/cpu-z/cpu-z_$version-cn.zip"
     }
 }
