@@ -1,13 +1,13 @@
 {
-    "version": "2.2",
+    "version": "2.3",
     "homepage": "https://www.fjsoft.at/en/",
     "description": "A phone management software, useful for those who need to explore their Android phones.",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.fjsoft.at/en/Imprint/index.html"
     },
-    "url": "https://www.fjsoft.at/files/MyPhoneExplorer_Setup_2.2.exe#/setup.exe",
-    "hash": "053b0ea0f0dc26c731d5d55b463484f5d77cb27ccf5358fde53f230b3f0b3759",
+    "url": "https://www.fjsoft.at/files/MyPhoneExplorer_Setup_2.3.exe#/setup.exe",
+    "hash": "1867e1a96de842168b10fe91d43da93c7ba37d4f4b46a770e08c6c3bc3b3f327",
     "pre_install": "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
     "installer": {
         "args": "/S"
