@@ -1,25 +1,15 @@
 {
     "version": "4.1.2.17",
-    "description": "Weixin (微信) is a free messaging and calling app.",
-    "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'.",
+    "description": "Free messaging and calling app by Tencent",
     "homepage": "https://pc.weixin.qq.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.wechat.com/en/service_terms.html"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-            "hash": "c29fc05630cfc95ef6483f6b5b52aabfe74265bb260e210e78ae437d305d8990"
-        },
-        "32bit": {
-            "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe#/dl.7z",
-            "hash": "96e1623a1c84902cbf33138a962576c4e8ccc6babf92659c7a263f7039a8efa9"
-        }
-    },
+    "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+    "hash": "c29fc05630cfc95ef6483f6b5b52aabfe74265bb260e210e78ae437d305d8990",
     "installer": {
         "script": [
-            "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse",
             "$configpath = \"$env:APPDATA\\Tencent\\WeChat\\All Users\\config\"",
             "ensure \"$configpath\" | Out-Null",
             "Set-Content -NoNewline -Path \"$configpath\\3ebffe94.ini\" -Value \"$persist_dir\"",
@@ -33,7 +23,7 @@
     "shortcuts": [
         [
             "wechat.exe",
-            "微信"
+            "WeChat"
         ]
     ],
     "persist": "WeChat Files",
@@ -51,13 +41,6 @@
         "jsonpath": "$..ver_name"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe#/dl.7z"
-            }
-        }
+        "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
     }
 }
