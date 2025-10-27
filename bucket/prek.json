@@ -1,21 +1,21 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
-    "version": "0.2.11",
+    "version": "0.2.12",
     "description": "`-pre-commit` re-written in rust with more features.",
     "homepage": "https://github.com/j178/prek",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/j178/prek/releases/download/v0.2.11/prek-x86_64-pc-windows-msvc.zip",
-            "hash": "18980322026e389425daf8614f88aa2e156e613e7ef506fa62ebb1a7befb68f7"
+            "url": "https://github.com/j178/prek/releases/download/v0.2.12/prek-x86_64-pc-windows-msvc.zip",
+            "hash": "64042600d451bf88bea79edab7f40cfbe09fd12a090c744903f8dca5cda0a52c"
         },
         "32bit": {
-            "url": "https://github.com/j178/prek/releases/download/v0.2.11/prek-i686-pc-windows-msvc.zip",
-            "hash": "4ee24837908b649643958e6dfb45cb0e350ebd926bd45b509a2d830a67ce1dd7"
+            "url": "https://github.com/j178/prek/releases/download/v0.2.12/prek-i686-pc-windows-msvc.zip",
+            "hash": "c25e82b3636feabf2582d3311fb010b1f467c5140d10c846ccfb145744aaf3e2"
         },
         "arm64": {
-            "url": "https://github.com/j178/prek/releases/download/v0.2.11/prek-aarch64-pc-windows-msvc.zip",
-            "hash": "5567cb18e28c50ae651ad9d3bf01692dd95fee8628561d8ed203264286310a38"
+            "url": "https://github.com/j178/prek/releases/download/v0.2.12/prek-aarch64-pc-windows-msvc.zip",
+            "hash": "cbccd14d28dadbabbb13e8f8922c10db2813e3d41c5b84ef3a32fecdc8801a60"
         }
     },
     "bin": "prek.exe",
