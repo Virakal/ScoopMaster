@@ -4,7 +4,7 @@
     "homepage": "https://www.google.com/chrome/",
     "license": {
         "identifier": "Freeware",
-        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+        "url": "https://www.google.com/chrome/terms/"
     },
     "architecture": {
         "64bit": {
@@ -16,12 +16,7 @@
             "hash": "f0170785d6ea009773c54476ab246aa6dd3b24819a001602f9e5474d051e6d94"
         }
     },
-    "installer": {
-        "script": [
-            "Move-Item \"$dir\\Chrome-bin\\*\" \"$dir\\.\" -Force",
-            "Remove-Item \"$dir\\Chrome-bin\" -Force"
-        ]
-    },
+    "extract_dir": "Chrome-bin",
     "bin": [
         [
             "chrome.exe",
