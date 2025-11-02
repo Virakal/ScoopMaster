@@ -1,26 +1,43 @@
 {
+    "##": "基于 https://github.com/cel-ti/maa-bucket/blob/master/bucket/maa.json",
+    "homepage": "https://maa.plus",
+    "description": "《明日方舟》小助手，自动刷图、智能基建换班，全日常一键长草",
     "version": "5.27.1",
-    "description": "An Arknights assistant, supports ZH and EN client",
-    "homepage": "https://www.maa.plus/",
-    "license": "AGPL-3.0",
-    "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.27.1/MAA-v5.27.1-win-x64.zip",
-    "hash": "0ca5eefc6e4e197d6e451b0cb2233b7e97e3894bf4d9aff57ad15883b806a580",
+    "checkver": {
+        "github": "https://github.com/MaaAssistantArknights/MaaAssistantArknights"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.27.1/MAA-v5.27.1-win-x64.zip",
+            "hash": "0ca5eefc6e4e197d6e451b0cb2233b7e97e3894bf4d9aff57ad15883b806a580"
+        },
+        "arm64": {
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.27.1/MAA-v5.27.1-win-arm64.zip",
+            "hash": "0624a89e79a3add342ff53980647ed0c0b236562dd74d9e6c6d4b691b6ec9c34"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-arm64.zip"
+            }
+        }
+    },
+    "persist": [
+        "data",
+        "config",
+        "debug",
+        "background"
+    ],
     "bin": "MAA.exe",
     "shortcuts": [
         [
             "MAA.exe",
-            "MAA Assistant Arknights"
+            "MAA"
         ]
     ],
-    "persist": [
-        "config",
-        "debug"
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases",
-        "regex": "/releases/tag/v([\\d.]+(-alpha|-beta|-rc)?(\\.\\d+)?)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
-    }
+    "license": "AGPL-3.0"
 }
