@@ -1,0 +1,33 @@
+{
+    "version": "1.42.9",
+    "description": "Secure, seamless, and audited access to databases and infrastructure.",
+    "homepage": "https://github.com/hoophq/hoop",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.hoop.dev/release/1.42.9/hoop_1.42.9_Windows_x86_64.tar.gz",
+            "hash": "c3eab5214d1dc323ba315f781043a4a778a0bfb22ef1d53baea90aaad803e32d"
+        },
+        "arm64": {
+            "url": "https://releases.hoop.dev/release/1.42.9/hoop_1.42.9_Windows_arm64.tar.gz",
+            "hash": "c7df952c067e2ff4a9f51195f84ea781ef79241d192ba04bb6f421fd8fefcd08"
+        }
+    },
+    "bin": "hoop.exe",
+    "checkver": {
+        "github": "https://github.com/hoophq/hoop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://releases.hoop.dev/release/$version/hoop_$version_Windows_x86_64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://releases.hoop.dev/release/$version/hoop_$version_Windows_arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "https://releases.hoop.dev/release/$version/checksums.txt"
+        }
+    }
+}
