@@ -1,24 +1,38 @@
 {
     "version": "1.0.22308",
-    "description": "An AI-powered IDE(China Edition) that makes programming more enjoyable and efficient.",
+    "description": "An AI-powered IDE that makes programming more enjoyable and efficient.",
     "homepage": "https://www.trae.com.cn",
-    "license": "Freeware",
-    "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/1.0.22308/win32/Trae%20CN-Setup-x64.exe",
-    "hash": "680908015225ce16e9c51add5f4d1a212451e1936701f66636a5c21ff83ada10",
-    "extract_dir": "{code_GetDestDir}",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/1.0.22308/win32/Trae%20CN-Setup-x64.exe",
+            "hash": "680908015225ce16e9c51add5f4d1a212451e1936701f66636a5c21ff83ada10",
+            "extract_dir": "{code_GetDestDir}"
+        }
+    },
     "innosetup": true,
-    "bin": "bin/trae.cmd",
+    "bin": [
+        [
+            "bin/trae.cmd",
+            "traecn"
+        ]
+    ],
     "shortcuts": [
         [
             "Trae CN.exe",
             "Trae CN"
         ]
     ],
+    "persist": "data",
     "checkver": {
         "url": "https://api.trae.com.cn/icube/api/v1/native/version/trae/cn/latest",
         "jsonpath": "$.data.manifest.win32.version"
     },
     "autoupdate": {
-        "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/$version/win32/Trae%20CN-Setup-x64.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/$version/win32/Trae%20CN-Setup-x64.exe"
+            }
+        }
     }
 }
