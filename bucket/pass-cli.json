@@ -1,19 +1,19 @@
 {
-    "version": "0.8.73",
+    "version": "0.8.75",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ari1110/pass-cli/releases/download/v0.8.73/pass-cli_0.8.73_windows_x86_64.tar.gz",
+            "url": "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_windows_x86_64.tar.gz",
             "bin": [
                 "pass-cli.exe"
             ],
-            "hash": "bb7c4e09d5cc4f326576d73607fe8277ba1f580dfa9e157c83f5941a7070f3aa"
+            "hash": "eb22eafedc1942d66e623773ccbecca959c50809083e1c9d7266675091c4e091"
         },
         "arm64": {
-            "url": "https://github.com/ari1110/pass-cli/releases/download/v0.8.73/pass-cli_0.8.73_windows_arm64.tar.gz",
+            "url": "https://github.com/ari1110/pass-cli/releases/download/v0.8.75/pass-cli_0.8.75_windows_arm64.tar.gz",
             "bin": [
                 "pass-cli.exe"
             ],
-            "hash": "f1b87a7779c14ba65bac8074620ed11acd3ad4914f003078705b882a1063603f"
+            "hash": "29dbb853b38003e66ea1c6bef980e3915a26f6b3e8064f3b0b5d8fa30f56f1d0"
         }
     },
     "homepage": "https://github.com/ari1110/pass-cli",
