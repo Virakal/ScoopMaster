@@ -1,31 +1,27 @@
 {
-    "version": "17.06",
-    "description": "Process Explorer可以显示进程打开或加载了哪些句柄和 DLL 的信息",
-    "homepage": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
-    "license": {
-        "identifier": "Unlicense"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://download.sysinternals.com/files/ProcessExplorer.zip"
-        }
-    },
-    "bin": "procexp64.exe",
+    "version": "17.07",
+    "homepage": "https://learn.microsoft.com/sysinternals/downloads/process-explorer",
+    "license": "",
+    "url": "https://download.sysinternals.com/files/ProcessExplorer.zip",
+    "hash": "dbdc4e9e6f426d61852f3c54a4161aa7aea08aa9441f9558678a460349629403",
+    "bin": [
+        [
+            "procexp64.exe",
+            "procexp"
+        ]
+    ],
     "shortcuts": [
         [
             "procexp64.exe",
-            "ProcessExplorer"
+            "Sysinternals/Process Explorer",
+            "/accepteula"
         ]
     ],
     "checkver": {
-        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
-        "regex": "Process Explorer v([\\d.]+)"
+        "url": "https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/process-explorer.md",
+        "regex": "#.*?v([\\d.]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.sysinternals.com/files/ProcessExplorer.zip"
-            }
-        }
+        "url": "https://download.sysinternals.com/files/ProcessExplorer.zip"
     }
 }
