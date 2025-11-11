@@ -6,8 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/ruanklein/synapseq/releases/download/v3.3.0/synapseq-v3.3.0-windows-amd64.zip",
-            "hash": "24c80801952bc19ab246e461f698f044ed5a18b64054f77d9414db2cae081c56",
-            "extract_dir": "synapseq-v3.3.0-windows-amd64",
+            "hash": "02e61a274b37ed88135f16b24277ed4a02490517417c9897bca4b0d6620152de",
             "bin": [
                 [
                     "synapseq-v3.3.0-windows-amd64.exe",
@@ -18,7 +17,6 @@
         "arm64": {
             "url": "https://github.com/ruanklein/synapseq/releases/download/v3.3.0/synapseq-v3.3.0-windows-arm64.zip",
             "hash": "663a7d35965961998368b0167f773d22c38fa690a8af9530745e12b9a5c19673",
-            "extract_dir": "synapseq-v3.3.0-windows-arm64",
             "bin": [
                 [
                     "synapseq-v3.3.0-windows-arm64.exe",
