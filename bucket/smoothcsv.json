@@ -25,6 +25,6 @@
         "regex": "releases/download/v([\\d.]+)/SmoothCSV_[\\d.]+_x64_en-US_windows\\.msi"
     },
     "autoupdate": {
-        "url": "https://github.com/kohii/smoothcsv3/releases/download/v3.8.0/SmoothCSV_3.8.0_x64-setup_windows.exe#/dl.7z"
+        "url": "https://github.com/kohii/smoothcsv3/releases/download/v$version/SmoothCSV_$version_x64-setup_windows.exe#/dl.7z"
     }
 }
