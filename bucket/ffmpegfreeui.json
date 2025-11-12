@@ -1,24 +1,23 @@
 {
     "version": "3.1.0",
-    "description": "FFmpegFreeUI（简称 3FUI）是 FFmpeg 的专业交互外壳，使用 .NET 10 框架，使用纯 WinForm 开发，配合 SunnyUI 和自绘制打造专业高效的暗黑风格界面。",
+    "description": "FFmpegFreeUI（简称 3FUI）是在 Windows 上的 FFmpeg 的专业交互外壳，收录大量参数，界面美观，交互友好",
     "homepage": "https://github.com/Lake1059/FFmpegFreeUI",
-    "depends": "ffmpeg",
     "license": "MIT",
     "architecture": {
-        "arm64": {
-            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/3.1.0/FFmpegFreeUI.SelfContained.arm64.7z",
-            "hash": "08a7991bf03879e2fb7d9e63c29729697d88d5d6f7a08955f877a056ea8ff0a1",
-            "extract_dir": "FFmpegFreeUI SelfContained arm64"
-        },
         "64bit": {
             "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/3.1.0/FFmpegFreeUI.SelfContained.x64.7z",
-            "hash": "65049d931ccc5845d9f02f81493a415d800c0e33ab052d187e687bea964b2e4c",
-            "extract_dir": "FFmpegFreeUI SelfContained x64"
+            "extract_dir": "FFmpegFreeUI SelfContained x64",
+            "hash": "65049d931ccc5845d9f02f81493a415d800c0e33ab052d187e687bea964b2e4c"
         },
         "32bit": {
             "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/3.1.0/FFmpegFreeUI.SelfContained.x86.7z",
-            "hash": "93b8bc568d44e144b586ff622ccdf14cd6c299770a40e6f87e0ae4da507e1ee7",
-            "extract_dir": "FFmpegFreeUI SelfContained x86"
+            "extract_dir": "FFmpegFreeUI SelfContained x86",
+            "hash": "93b8bc568d44e144b586ff622ccdf14cd6c299770a40e6f87e0ae4da507e1ee7"
+        },
+        "arm64": {
+            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/3.1.0/FFmpegFreeUI.SelfContained.arm64.7z",
+            "extract_dir": "FFmpegFreeUI SelfContained arm64",
+            "hash": "08a7991bf03879e2fb7d9e63c29729697d88d5d6f7a08955f877a056ea8ff0a1"
         }
     },
     "shortcuts": [
@@ -27,17 +26,20 @@
             "FFmpegFreeUI"
         ]
     ],
+    "suggest": {
+        "ffmpeg": "ffmpeg"
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
-            "arm64": {
-                "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.SelfContained.arm64.7z"
-            },
             "64bit": {
                 "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.SelfContained.x64.7z"
             },
             "32bit": {
                 "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.SelfContained.x86.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.SelfContained.arm64.7z"
             }
         }
     }
