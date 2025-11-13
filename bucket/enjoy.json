@@ -34,7 +34,9 @@
             "Enjoy"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/ZuodaoTech/everyone-can-use-english"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
