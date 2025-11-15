@@ -1,20 +1,32 @@
 {
-    "version": "4.10.0",
-    "description": "Self-hosted file management and sharing system, supports multiple storage providers",
-    "homepage": "https://github.com/cloudreve/Cloudreve",
-    "license": "GPL-3.0-or-later",
+    "version": "4.10.1",
+    "description": "🌩 Self-hosted file management and sharing system, supports multiple storage providers",
+    "homepage": "https://cloudreve.org/",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/cloudreve/Cloudreve#GPL-3.0-1-ov-file"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cloudreve/Cloudreve/releases/download/4.10.0/cloudreve_4.10.0_windows_amd64.zip",
-            "hash": "6f4c18ea708f1a9f1328d3df52042f514c7830e573444aa39726a95289ce38c5"
+            "url": "https://github.com/cloudreve/Cloudreve/releases/download/4.10.1/cloudreve_4.10.1_windows_amd64.zip",
+            "hash": "356aeef01238150bd869187fd06fae503474d566252cd9197820e0312078e664"
         },
         "arm64": {
-            "url": "https://github.com/cloudreve/Cloudreve/releases/download/4.10.0/cloudreve_4.10.0_windows_arm64.zip",
-            "hash": "396c9787f5d895d9c3440025a07a4f26503f0e30ee8909ed7342bc2499ac7e6c"
+            "url": "https://github.com/cloudreve/Cloudreve/releases/download/4.10.1/cloudreve_4.10.1_windows_arm64.zip",
+            "hash": "57db662b96090be78b85e4512ec09ea96493e0c418b591e6fe73669ea7d01b87"
         }
     },
     "bin": "cloudreve.exe",
-    "checkver": "github",
+    "shortcuts": [
+        [
+            "cloudreve.exe",
+            "cloudreve"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/cloudreve/Cloudreve/releases/latest",
+        "regex": "/releases/tag/([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -23,6 +35,9 @@
             "arm64": {
                 "url": "https://github.com/cloudreve/Cloudreve/releases/download/$version/cloudreve_$version_windows_arm64.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }
