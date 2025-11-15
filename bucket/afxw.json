@@ -1,12 +1,12 @@
 {
     "version": "1.66-4.20",
     "description": "2-screen filer especially for keyboard-only usage",
-    "homepage": "http://akt.d.dooo.jp/akt_afxw.html",
+    "homepage": "http://afxw.sakura.ne.jp/akt_afxw.html",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": [
-                "http://akt.d.dooo.jp/lzh/afxw64_166.zip",
+                "http://afxw.sakura.ne.jp/lzh/afxw64_166.zip",
                 "https://bitbucket.org/k_takata/bregonig/downloads/bron420.zip"
             ],
             "hash": [
@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": [
-                "http://akt.d.dooo.jp/lzh/afxw32_166.zip",
+                "http://afxw.sakura.ne.jp/lzh/afxw32_166.zip",
                 "https://bitbucket.org/k_takata/bregonig/downloads/bron420.zip"
             ],
             "hash": [
@@ -55,9 +55,11 @@
         "script": [
             "# akt_afxw.html is written in Shift_JIS but Content-Type is missing in response headers, so output is garbled. We can extract version information anyway.",
             "$temp=$page",
-            "$stream=[System.Net.WebRequest]::Create('http://k-takata.o.oo7.jp/mysoft/bregonig.html').GetResponse().GetResponseStream()",
-            "$encoding = [System.Text.Encoding]::GetEncoding('Shift_JIS')",
-            "$temp+=(New-Object System.IO.StreamReader($stream, $encoding)).ReadToEnd()",
+            "# Site closed, so disable fetching version info from there.",
+            "#$stream=[System.Net.WebRequest]::Create('http://k-takata.o.oo7.jp/mysoft/bregonig.html').GetResponse().GetResponseStream()",
+            "#$encoding = [System.Text.Encoding]::GetEncoding('Shift_JIS')",
+            "#$temp+=(New-Object System.IO.StreamReader($stream, $encoding)).ReadToEnd()",
+            "$temp+='bregonig.dll Ver.4.20.'",
             "return $temp"
         ],
         "regex": "<div id=\"mainbox\">(.|\\n)*?v (?<version1>\\d+)\\.(?<version2>\\d+)(.|\\n)*?bregonig.dll Ver\\.(?<bversion1>\\d+)\\.(?<bversion2>\\d+)(.|\\n)",
@@ -67,13 +69,13 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "http://akt.d.dooo.jp/lzh/afxw64_$matchVersion1$matchVersion2.zip",
+                    "http://afxw.sakura.ne.jp/lzh/afxw64_$matchVersion1$matchVersion2.zip",
                     "https://bitbucket.org/k_takata/bregonig/downloads/bron$matchBversion1$matchBversion2.zip"
                 ]
             },
             "32bit": {
                 "url": [
-                    "http://akt.d.dooo.jp/lzh/afxw32_$matchVersion1$matchVersion2.zip",
+                    "http://afxw.sakura.ne.jp/lzh/afxw32_$matchVersion1$matchVersion2.zip",
                     "https://bitbucket.org/k_takata/bregonig/downloads/bron$matchBversion1$matchBversion2.zip"
                 ]
             }
