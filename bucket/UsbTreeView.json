@@ -1,9 +1,8 @@
 {
-    "version": "4.6.4",
-    "description": "A tool for exploring USB device tree.",
     "homepage": "https://www.uwe-sieber.de/usbtreeview_e.html",
-    "license": "Proprietary",
-    "notes": "",
+    "description": "Informations from the Windows Device Management are collected and matched with the found USB devices and child devices",
+    "license": "Freeware",
+    "version": "4.6.4",
     "architecture": {
         "64bit": {
             "url": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip",
@@ -14,10 +13,14 @@
             "hash": "40ffbf52dd24759ba65eeb95df6e7925566e812ea78f503adca237587b0cbdb7"
         }
     },
-    "persist": "UsbTreeView.ini",
+    "shortcuts": [
+        [
+            "UsbTreeView.exe",
+            "UsbTreeView"
+        ]
+    ],
     "checkver": {
-        "url": "https://www.uwe-sieber.de/usbtreeview_e.html",
-        "regex": "USB Device Tree Viewer V?([\\d\\.]+)"
+        "regex": "USB Device Tree Viewer V([\\d\\.]+?)\\r"
     },
     "autoupdate": {
         "architecture": {
