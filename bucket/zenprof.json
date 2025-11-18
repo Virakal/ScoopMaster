@@ -8,7 +8,8 @@
     "depends": "chris/zen",
     "installer": {
         "script": [
-            "mv -force \"$dir\\profile\" \"$persist_dir\"",
+            "[void](mkdir -force -ea 0 \"$persist_dir\")",
+            "mv -force \"$dir\\profile\" \"$persist_dir\\profile\"",
             "zen -CreateProfile Scoop \"$persist_dir\\profile\""
         ]
     },
