@@ -4,9 +4,9 @@
     "homepage": "https://github.com/differentrain/Delapp",
     "license": "MIT",
     "suggest": {
-        ".NET Desktop Runtime": "scoop-cn/windowsdesktop-runtime"
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
     },
-    "url": "https://gh-proxy.org/https://github.com/differentrain/Delapp/releases/download/1.0.2/Delapp.zip",
+    "url": "https://github.com/differentrain/Delapp/releases/download/1.0.2/Delapp.zip",
     "hash": "e1613df86a3a4928b36100de1412af694cf84476e655b12c8f50ef9560c17227",
     "shortcuts": [
         [
@@ -16,6 +16,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://gh-proxy.org/https://github.com/differentrain/Delapp/releases/download/$version/Delapp.zip"
+        "url": "https://github.com/differentrain/Delapp/releases/download/$version/Delapp.zip"
     }
 }

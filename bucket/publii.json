@@ -1,29 +1,29 @@
 {
-  "version": "0.47.2",
-  "description": "Static Site CMS with GUI to build a safe, fast and SEO-friendly website",
-  "homepage": "https://getpublii.com",
-  "license": "GPL-3.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://getpublii.com/download/Publii-0.47.2.exe#/dl.7z",
-      "hash": "a79c739044da0faa0c5b6717a23a5ef459b30cd3ea307721f9847b3825f80f13",
-      "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$*\" -Recurse"
-      ]
+    "version": "0.47.2",
+    "description": "Static Site CMS with GUI to build a safe, fast and SEO-friendly website",
+    "homepage": "https://getpublii.com",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://getpublii.com/download/Publii-0.47.2.exe#/dl.7z",
+            "hash": "a79c739044da0faa0c5b6717a23a5ef459b30cd3ea307721f9847b3825f80f13",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Publii.exe",
+            "Publii"
+        ]
+    ],
+    "checkver": {
+        "url": "https://getpublii.com/download/",
+        "regex": "Publii-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://getpublii.com/download/Publii-$version.exe#/dl.7z"
     }
-  },
-  "shortcuts": [
-    [
-      "Publii.exe",
-      "Publii"
-    ]
-  ],
-  "checkver": {
-    "url": "https://getpublii.com/download/",
-    "regex": "Publii-([\\d.]+)\\.exe"
-  },
-  "autoupdate": {
-    "url": "https://getpublii.com/download/Publii-$version.exe#/dl.7z"
-  }
 }

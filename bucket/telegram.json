@@ -11,9 +11,15 @@
         "32bit": {
             "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.1/tportable.6.3.1.zip",
             "hash": "200cde4506dcee2dfb34b6f1ab73c8e420c7b8416d3ce83e66fb9d9fc1af2c9c"
+        },
+        "arm64": {
+            "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v6.3.1/tportable-arm64.6.3.1.zip",
+            "hash": "9f94888d6218cb91b04277ac3258ea5b6fecc4391551156a904791cf92d21af3"
         }
     },
     "extract_dir": "Telegram",
+    "pre_install": "Set-Content \"$dir\\telegram.cmd\" '@start \"Telegram\" /D \"%~dp0\" \"%~dp0Telegram.exe\" %*' -Encoding Ascii",
+    "bin": "telegram.cmd",
     "shortcuts": [
         [
             "Telegram.exe",
@@ -31,6 +37,9 @@
             },
             "32bit": {
                 "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable.$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable-arm64.$version.zip"
             }
         }
     }

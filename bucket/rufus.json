@@ -1,12 +1,8 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "4.11",
     "description": "A utility that helps format and create bootable USB flash drives.",
     "homepage": "https://rufus.ie/",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/pbatard/rufus/blob/master/LICENSE.txt"
-    },
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/pbatard/rufus/releases/download/v4.11/rufus-4.11.exe#/rufus.exe",
@@ -21,11 +17,8 @@
             "hash": "d826e054400c2801ff36baa2a46684ee5e133b5267e4b6a97b02bab337152018"
         }
     },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\rufus.ini\")) {",
-        "  New-Item \"$dir\\rufus.ini\" | Out-Null",
-        "}"
-    ],
+    "pre_install": "if (!(Test-Path \"$persist_dir\\rufus.ini\")) { New-Item \"$dir\\rufus.ini\" | Out-Null }",
+    "bin": "rufus.exe",
     "shortcuts": [
         [
             "rufus.exe",
@@ -34,7 +27,7 @@
     ],
     "persist": [
         "rufus.ini",
-        "Rufus"
+        "rufus_files"
     ],
     "checkver": {
         "github": "https://github.com/pbatard/rufus"

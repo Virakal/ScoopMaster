@@ -6,18 +6,18 @@
         "identifier": "Freeware",
         "url": "https://winsshterm.blogspot.com/p/license.html"
     },
-    "depends": "scoop-cn/putty",
+    "depends": "putty",
     "suggest": {
-        "Copy files": "scoop-cn/winscp",
-        "X-server": "scoop-cn/vcxsrv"
+        "Copy files": "extras/winscp",
+        "X-server": "extras/vcxsrv"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/WinSSHTerm/WinSSHTerm/releases/download/2.41.6/WinSSHTerm-2.41.6-x64.zip",
+            "url": "https://github.com/WinSSHTerm/WinSSHTerm/releases/download/2.41.6/WinSSHTerm-2.41.6-x64.zip",
             "hash": "0ef296efaa652d307fb7b513b397b6d9311675c7706e262a20c25bde372bee99"
         },
         "arm64": {
-            "url": "https://gh-proxy.org/https://github.com/WinSSHTerm/WinSSHTerm/releases/download/2.41.6/WinSSHTerm-2.41.6-arm64.zip",
+            "url": "https://github.com/WinSSHTerm/WinSSHTerm/releases/download/2.41.6/WinSSHTerm-2.41.6-arm64.zip",
             "hash": "f41ac4223eddf5141a7477755fd2b5fafb459a5958dd42e77c903460f4528386"
         }
     },
@@ -72,10 +72,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/WinSSHTerm/WinSSHTerm/releases/download/$version/WinSSHTerm-$version-x64.zip"
+                "url": "https://github.com/WinSSHTerm/WinSSHTerm/releases/download/$version/WinSSHTerm-$version-x64.zip"
             },
             "arm64": {
-                "url": "https://gh-proxy.org/https://github.com/WinSSHTerm/WinSSHTerm/releases/download/$version/WinSSHTerm-$version-arm64.zip"
+                "url": "https://github.com/WinSSHTerm/WinSSHTerm/releases/download/$version/WinSSHTerm-$version-arm64.zip"
             }
         },
         "hash": {

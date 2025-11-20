@@ -4,11 +4,11 @@
     "homepage": "http://www.meshlab.net",
     "license": "GPL-3.0-or-later",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/cnr-isti-vclab/meshlab/releases/download/MeshLab-2025.07/MeshLab2025.07-windows_x86_64.zip",
+            "url": "https://github.com/cnr-isti-vclab/meshlab/releases/download/MeshLab-2025.07/MeshLab2025.07-windows_x86_64.zip",
             "hash": "29d2108b57189a7bb8cda1138255f3e24017ee9beb1fcc5a821d0936574769d0"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/cnr-isti-vclab/meshlab/releases/download/MeshLab-$version/MeshLab$version-windows_x86_64.zip"
+                "url": "https://github.com/cnr-isti-vclab/meshlab/releases/download/MeshLab-$version/MeshLab$version-windows_x86_64.zip"
             }
         }
     }

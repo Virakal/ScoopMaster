@@ -1,16 +1,10 @@
 {
     "version": "0.28-1",
-    "description": "pkg-config without glib dependency",
+    "description": "pkg-config-lite is based on pkg-config, but is built with a glib code snippet which eliminates the glib dependency, so it is possible once again to build and run pkg-config without dependencies.",
     "homepage": "https://sourceforge.net/projects/pkgconfiglite/",
     "license": "GPL-2.0-only",
-    "url": [
-        "http://downloads.sourceforge.net/project/pkgconfiglite/0.28-1/pkg-config-lite-0.28-1_bin-win32.zip"
-    ],
-    "hash": [
-        "sha1:e87b5ea3c9142256af60f2d5b917aa63b571e6a0"
-    ],
-    "extract_dir": [
-        "pkg-config-lite-0.28-1"
-    ],
+    "url": "https://sourceforge.net/projects/pkgconfiglite/files/0.28-1/pkg-config-lite-0.28-1_bin-win32.zip",
+    "hash": "2038c49d23b5ca19e2218ca89f06df18fe6d870b4c6b54c0498548ef88771f6f",
+    "extract_dir": "pkg-config-lite-0.28-1",
     "bin": "bin/pkg-config.exe"
 }

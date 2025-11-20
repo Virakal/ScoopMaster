@@ -1,40 +1,40 @@
 {
-  "version": "1.20.1",
-  "description": "Kubernates container management tool that can build, push, and pull images and run containers.",
-  "homepage": "https://rancherdesktop.io/",
-  "license": "Apache-2.0",
-  "notes": [
-    "Rancher Desktop requires WSL (Windows Subsystem for Linux) to work properly.",
-    "Learn more about WSL: https://aka.ms/wsl2"
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.20.1/Rancher.Desktop.Setup.1.20.1.msi",
-      "hash": "sha512:4c240329097b2a2b14ced12cd1da7b817cad2545b4a42c00650c2f9389cc541e2c6f1948b279be5660b539004d6990a3e64d578026f3c0b52456995cc3841271"
-    }
-  },
-  "extract_dir": "Rancher Desktop",
-  "env_add_path": [
-    "resources\\resources\\win32\\bin",
-    "resources\\resources\\linux\\bin"
-  ],
-  "shortcuts": [
-    [
-      "Rancher Desktop.exe",
-      "Rancher Desktop"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/rancher-sandbox/rancher-desktop"
-  },
-  "autoupdate": {
+    "version": "1.20.1",
+    "description": "Kubernates container management tool that can build, push, and pull images and run containers.",
+    "homepage": "https://rancherdesktop.io/",
+    "license": "Apache-2.0",
+    "notes": [
+        "Rancher Desktop requires WSL (Windows Subsystem for Linux) to work properly.",
+        "Learn more about WSL: https://aka.ms/wsl2"
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v$version/Rancher.Desktop.Setup.$version.msi",
-        "hash": {
-          "url": "$url.sha512sum"
+        "64bit": {
+            "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.20.1/Rancher.Desktop.Setup.1.20.1.msi",
+            "hash": "sha512:4c240329097b2a2b14ced12cd1da7b817cad2545b4a42c00650c2f9389cc541e2c6f1948b279be5660b539004d6990a3e64d578026f3c0b52456995cc3841271"
         }
-      }
+    },
+    "extract_dir": "Rancher Desktop",
+    "env_add_path": [
+        "resources\\resources\\win32\\bin",
+        "resources\\resources\\linux\\bin"
+    ],
+    "shortcuts": [
+        [
+            "Rancher Desktop.exe",
+            "Rancher Desktop"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/rancher-sandbox/rancher-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v$version/Rancher.Desktop.Setup.$version.msi",
+                "hash": {
+                    "url": "$url.sha512sum"
+                }
+            }
+        }
     }
-  }
 }

@@ -12,7 +12,7 @@
             "firstobject XML Editor"
         ]
     ],
-    "checkver": "Download ([\\d.]+)\\ zipped exe only",
+    "checkver": "Download ([\\d.]+)",
     "autoupdate": {
         "url": "https://www.firstobject.com/foxe$cleanVersion.zip"
     }

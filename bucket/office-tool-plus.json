@@ -1,27 +1,27 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "10.28.29.0",
-    "description": "A powerful and useful tool for Office deployments.",
+    "description": "A powerful and useful tool for Office deployments",
     "homepage": "https://otp.landian.vip/",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/YerongAI/Office-Tool/blob/main/LICENSE"
+    "license": "GPL-3.0-or-later",
+    "suggest": {
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime-lts"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_with_runtime_v10.28.29.0_x64.zip",
-            "hash": "2dacac08593b21c098a289f1f88a60eacce5976bce9314c4f94a2841b396d9f3"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_v10.28.29.0_x64.zip",
+            "hash": "188becb681a2f69e1b113374b51b7431243d35ed7840b20921621bbff23997e4"
         },
         "32bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_with_runtime_v10.28.29.0_x86.zip",
-            "hash": "9b30cd4d5143ea5b49b39b8f137b5de0036d1f73c3acfe2bfea19c2f36396125"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_v10.28.29.0_x86.zip",
+            "hash": "db691825a101cccaae458f8f9ec27fdf612cff2b90cbcf8e2a473d69535f014c"
         },
         "arm64": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_with_runtime_v10.28.29.0_arm64.zip",
-            "hash": "e2affc7671904391324c6d810c3f3644b8c517e476503bbf77a2169a687ee595"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.28.29.0/Office_Tool_v10.28.29.0_arm64.zip",
+            "hash": "d4774d3d228258a52399f7323b1b33f63ec4f0a62be9c42288414d79333adb96"
         }
     },
     "extract_dir": "Office Tool",
+    "bin": "Office Tool Plus.Console.exe",
     "shortcuts": [
         [
             "Office Tool Plus.exe",
@@ -34,13 +34,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x64.zip"
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_v$version_x64.zip"
             },
             "32bit": {
-                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x86.zip"
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_v$version_x86.zip"
             },
             "arm64": {
-                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_arm64.zip"
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_v$version_arm64.zip"
             }
         },
         "hash": {

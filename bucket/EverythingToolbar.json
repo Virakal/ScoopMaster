@@ -4,12 +4,12 @@
     "homepage": "https://github.com/srwi/EverythingToolbar",
     "license": "MIT",
     "suggest": {
-        "everything": "scoop-cn/everything",
-        ".NET Desktop Runtime": "scoop-cn/windowsdesktop-runtime-lts"
+        "everything": "extras/everything",
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime-lts"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/srwi/EverythingToolbar/releases/download/2.1.1/EverythingToolbar-2.1.1-x64.exe",
+            "url": "https://github.com/srwi/EverythingToolbar/releases/download/2.1.1/EverythingToolbar-2.1.1-x64.exe",
             "hash": "d2d85e74b39145304861437dec4a630b858b5ab421734be47da9edce229454ea"
         }
     },
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/srwi/EverythingToolbar/releases/download/$version/EverythingToolbar-$version-x64.exe"
+                "url": "https://github.com/srwi/EverythingToolbar/releases/download/$version/EverythingToolbar-$version-x64.exe"
             }
         },
         "hash": {

@@ -10,20 +10,23 @@
     "architecture": {
         "64bit": {
             "url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.90.8-amd64.msi",
-            "hash": "1e882ee0ac9aa403d9a3775513d7f95df2a80b97cf55e7f48d125417f229a086"
+            "hash": "1e882ee0ac9aa403d9a3775513d7f95df2a80b97cf55e7f48d125417f229a086",
+            "extract_dir": "PFiles64\\Tailscale"
         },
         "32bit": {
             "url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.90.8-x86.msi",
-            "hash": "886c38a9c71bf0df5c3660f1aab6aea7471349bc17599b81fbdbe25c63e54deb"
+            "hash": "886c38a9c71bf0df5c3660f1aab6aea7471349bc17599b81fbdbe25c63e54deb",
+            "extract_dir": "PFiles\\Tailscale"
         },
         "arm64": {
             "url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.90.8-arm64.msi",
-            "hash": "9b5794d26a2149c4d5fd8d4885ae13c6e1fa4571477e45236633005ab88a6a7b"
+            "hash": "9b5794d26a2149c4d5fd8d4885ae13c6e1fa4571477e45236633005ab88a6a7b",
+            "extract_dir": "PFiles64\\Tailscale"
         }
     },
     "pre_install": "if (!(is_admin)) {error 'This package requires admin rights to install'; break}",
     "post_install": [
-        "tailscale-ipn.exe /install",
+        "tailscaled.exe install-system-daemon",
         "$dirpath = $dir.Replace('\\', '\\\\')",
         "'add-startup.reg', 'remove-startup.reg' | ForEach-Object {",
         "    if (Test-Path \"$bucketsdir\\extras\\scripts\\$app\\$_\") {",
@@ -41,11 +44,10 @@
     ],
     "uninstaller": {
         "script": [
-            "tailscale-ipn.exe /uninstall",
+            "tailscaled.exe uninstall-system-daemon",
             "if ($cmd -eq 'uninstall') { reg import \"$dir\\remove-startup.reg\" }"
         ]
     },
-    "extract_dir": "Tailscale",
     "bin": [
         "tailscale.exe",
         "tailscale-ipn.exe",

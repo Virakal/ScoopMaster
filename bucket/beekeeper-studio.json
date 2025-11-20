@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v5.4.11/Beekeeper-Studio-Setup-5.4.11.exe#/dl.7z",
+            "url": "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v5.4.11/Beekeeper-Studio-Setup-5.4.11.exe#/dl.7z",
             "hash": "sha512:5990ffab44a2cee8d76eed891b3242691686b20b33ea5a2eb2d6233bda51067871658cc66061b32535fbd83feff0ff136ed7064c4e31d73852bfc5dceb245c52",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v$version/Beekeeper-Studio-Setup-$version.exe#/dl.7z"
+                "url": "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v$version/Beekeeper-Studio-Setup-$version.exe#/dl.7z"
             }
         },
         "hash": {
