@@ -1,33 +1,33 @@
 {
-    "homepage": "https://kopia.io/",
-    "description": "KopiaUI - Fast and Secure Open-Source Backup.",
-    "version": "0.22.0",
-    "license": "Apache-2.0",
-    "bin": "KopiaUI.exe",
-    "shortcuts": [
-        [
-            "KopiaUI.exe",
-            "KopiaUI"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/kopia/kopia"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/kopia/kopia/releases/download/v0.22.0/KopiaUI-0.22.0-win.zip",
-            "hash": "53f17eb270412337f1083d4463d2bf32a1e7ece32a6e4c5b0a5d1bae445af9e0"
-        }
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/kopia/kopia/releases/download/v$version/KopiaUI-$version-win.zip",
-                "hash": {
-                    "url": "$baseurl/checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
-            }
-        }
+  "homepage": "https://kopia.io/",
+  "description": "KopiaUI - Fast and Secure Open-Source Backup.",
+  "version": "0.13.0",
+  "license": "Apache-2.0",
+  "bin": "KopiaUI.exe",
+  "shortcuts": [
+    [
+      "KopiaUI.exe",
+      "KopiaUI"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/kopia/kopia"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/kopia/kopia/releases/download/v0.13.0/KopiaUI-0.13.0-win.zip",
+      "hash": "5fdb8c808b4f784c9470c6c6871c51d959c0a8e1e016be5a9ad170578fea22ed"
     }
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/kopia/kopia/releases/download/v$version/KopiaUI-$version-win.zip",
+        "hash": {
+          "url": "$baseurl/checksums.txt",
+          "regex": "$sha256\\s+$basename"
+        }
+      }
+    }
+  }
 }

@@ -1,39 +1,39 @@
 {
-    "version": "1.72.0",
-    "description": "Data version control for your data lake | Git for data.",
-    "homepage": "https://github.com/treeverse/lakeFS",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/treeverse/lakeFS/releases/download/v1.72.0/lakeFS_1.72.0_Windows_x86_64.zip",
-            "hash": "b1781dcac03b0015a5dba73d4b9d96b4e69a91d885ce9ae8921e58ee9903ec89"
-        },
-        "arm64": {
-            "url": "https://github.com/treeverse/lakeFS/releases/download/v1.72.0/lakeFS_1.72.0_Windows_arm64.zip",
-            "hash": "308ef762bf024a17037e472e0d780b1cdf6e4144b3e910df26449019d8389b93"
-        }
+  "version": "0.104.0",
+  "description": "Data version control for your data lake | Git for data.",
+  "homepage": "https://github.com/treeverse/lakeFS",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/treeverse/lakeFS/releases/download/v0.104.0/lakeFS_0.104.0_Windows_x86_64.zip",
+      "hash": "1c52fbb45a933154a63943cfd52f562aff3581308bb46e48fcecd8fa5a99f14c"
     },
-    "bin": [
-        "lakectl.exe",
-        "lakefs.exe"
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/treeverse/lakeFS/releases/download/v$version/lakeFS_$version_Windows_x86_64.zip",
-                "hash": {
-                    "url": "$baseurl/checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/treeverse/lakeFS/releases/download/v$version/lakeFS_$version_Windows_arm64.zip",
-                "hash": {
-                    "url": "$baseurl/checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
-            }
-        }
+    "arm64": {
+      "url": "https://ghproxy.com/https://github.com/treeverse/lakeFS/releases/download/v0.104.0/lakeFS_0.104.0_Windows_arm64.zip",
+      "hash": "d3e8627b2eb7cd16be0162d46a980d3b5314f717225d7d8a703c9b5de3f21303"
     }
+  },
+  "bin": [
+    "lakectl.exe",
+    "lakefs.exe"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/treeverse/lakeFS/releases/download/v$version/lakeFS_$version_Windows_x86_64.zip",
+        "hash": {
+          "url": "$baseurl/checksums.txt",
+          "regex": "$sha256\\s+$basename"
+        }
+      },
+      "arm64": {
+        "url": "https://ghproxy.com/https://github.com/treeverse/lakeFS/releases/download/v$version/lakeFS_$version_Windows_arm64.zip",
+        "hash": {
+          "url": "$baseurl/checksums.txt",
+          "regex": "$sha256\\s+$basename"
+        }
+      }
+    }
+  }
 }

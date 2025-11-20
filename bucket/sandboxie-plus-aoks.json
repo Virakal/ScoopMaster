@@ -1,48 +1,45 @@
 {
-    "homepage": "https://github.com/sandboxie-plus/Sandboxie",
-    "description": "A sandbox-based isolation software for 32- and 64-bit Windows NT-based operating systems.",
-    "version": "1.16.7",
-    "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.7/Sandboxie-Plus-x64-v1.16.7.exe#/SBP.exe",
-            "hash": "a6279b8ad76e354ce5dd8ddabe6cba3d1355317eaed5644e6917d5a225067b48"
-        },
-        "arm64": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.7/Sandboxie-Plus-ARM64-v1.16.7.exe#/SBP.exe",
-            "hash": "be479dfe6a21d4ddc867c5262205d024a5028db689a4a3c5d20af49e0197fa5d"
-        }
+  "homepage": "https://github.com/sandboxie-plus/Sandboxie",
+  "description": "A sandbox-based isolation software for 32- and 64-bit Windows NT-based operating systems.",
+  "version": "1.9.8",
+  "license": "GPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.9.8/Sandboxie-Plus-x64-v1.9.8.exe#/SBP.exe",
+      "hash": "765b322c908e04c9266f0b75e457eca2bd5fabdb2de4ff8b427c837079f32321"
     },
-    "innosetup": true,
-    "shortcuts": [
-        [
-            "SandMan.exe",
-            "Sandboxie+"
-        ]
-    ],
-    "bin": [
-        [
-            "SandMan.exe",
-            "Sandboxie+"
-        ]
-    ],
-    "persist": [
-        "Sandboxie.ini",
-        "Sandboxie-Plus.ini",
-        "Sandbox"
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-x64-v$version.exe#/SBP.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-ARM64-v$version.exe#/SBP.exe"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/sha256-checksums.txt"
-        }
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.9.8/Sandboxie-Plus-x86-v1.9.8.exe#/SBP.exe",
+      "hash": "bc04edc73197040c227e7012b348fddcc6120e1257bc5622e3ccbff112ed3bb3"
     }
+  },
+  "innosetup": true,
+  "shortcuts": [
+    [
+      "SandMan.exe",
+      "Sandboxie+"
+    ]
+  ],
+  "bin": [
+    [
+      "SandMan.exe",
+      "Sandboxie+"
+    ]
+  ],
+  "persist": [
+    "Sandboxie.ini",
+    "Sandboxie-Plus.ini",
+    "Sandbox"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-x64-v$version.exe#/SBP.exe"
+      },
+      "32bit": {
+        "url": "https://ghproxy.com/https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-x86-v$version.exe#/SBP.exe"
+      }
+    }
+  }
 }
