@@ -1,33 +1,33 @@
 {
-    "version": "8.1",
-    "description": "FastStone Image Viewer is a fast, stable, user-friendly image browser, converter and editor",
-    "homepage": "https://www.faststone.org/FSViewerDetail.htm",
-    "license": "Unknown",
-    "url": "https://www.faststonesoft.net/DN/FSViewer81.zip",
-    "hash": "46057b5f2459208262d77ebd63f70a7f453cf45b50c699b98f2d22fdd719e336",
-    "extract_dir": "FSViewer81",
-    "pre_install": [
-        "'FSSettings.db', 'HisFolderList.db' | ForEach-Object {",
-        "    if (!(Test-Path \"$persist_dir\\$_\") -and !(Test-Path \"$dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
-        "}"
-    ],
-    "bin": "FSViewer.exe",
-    "shortcuts": [
-        [
-            "FSViewer.exe",
-            "FastStone Image Viewer"
-        ]
-    ],
-    "persist": [
-        "FSSettings.db",
-        "HisFolderList.db"
-    ],
-    "checkver": {
-        "url": "https://www.faststone.org/FSIVDownload.htm",
-        "regex": "FastStone Image Viewer ([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://www.faststonesoft.net/DN/FSViewer$cleanVersion.zip",
-        "extract_dir": "FSViewer$cleanVersion"
-    }
+  "version": "8.1",
+  "description": "FastStone Image Viewer is a fast, stable, user-friendly image browser, converter and editor",
+  "homepage": "https://www.faststone.org/FSViewerDetail.htm",
+  "license": "Unknown",
+  "url": "https://www.faststonesoft.net/DN/FSViewer81.zip",
+  "hash": "46057b5f2459208262d77ebd63f70a7f453cf45b50c699b98f2d22fdd719e336",
+  "extract_dir": "FSViewer81",
+  "pre_install": [
+    "'FSSettings.db', 'HisFolderList.db' | ForEach-Object {",
+    "    if (!(Test-Path \"$persist_dir\\$_\") -and !(Test-Path \"$dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
+    "}"
+  ],
+  "bin": "FSViewer.exe",
+  "shortcuts": [
+    [
+      "FSViewer.exe",
+      "FastStone Image Viewer"
+    ]
+  ],
+  "persist": [
+    "FSSettings.db",
+    "HisFolderList.db"
+  ],
+  "checkver": {
+    "url": "https://www.faststone.org/FSIVDownload.htm",
+    "regex": "FastStone Image Viewer ([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://www.faststonesoft.net/DN/FSViewer$cleanVersion.zip",
+    "extract_dir": "FSViewer$cleanVersion"
+  }
 }

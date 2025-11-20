@@ -1,31 +1,35 @@
 {
     "version": "2.1.8",
-    "description": "Multipurpose launcher and more advanced and customizable freeware Windows run replacement and more.",
-    "homepage": "https://executor.dk/",
+    "description": "A multi purpose launcher and more advanced and customizable freeware windows run replacement and more...",
+    "homepage": "https://github.com/executordk/executor-community",
     "license": "MIT",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/executordk/executor-community/releases/download/v2.1.8/Executor_v2.1.8_32bit.zip",
-            "hash": "df82b60f94765730a12e75272c6d6e44a7678554b9ae0846c6ea2b4d85bcc3a2",
-            "extract_dir": "Executor32bit"
-        },
         "64bit": {
             "url": "https://github.com/executordk/executor-community/releases/download/v2.1.8/Executor_v2.1.8_64bit.zip",
             "hash": "a2e7d6dd96ccead03f946ed284c6ec580dc06d160f0e3f7cc712718daf8a3ef4",
             "extract_dir": "Executor64bit"
+        },
+        "32bit": {
+            "url": "https://github.com/executordk/executor-community/releases/download/v2.1.8/Executor_v2.1.8_32bit.zip",
+            "hash": "df82b60f94765730a12e75272c6d6e44a7678554b9ae0846c6ea2b4d85bcc3a2",
+            "extract_dir": "Executor32bit"
         }
     },
     "bin": "Executor.exe",
-    "checkver": {
-        "github": "https://github.com/executordk/executor-community"
-    },
+    "shortcuts": [
+        [
+            "Executor.exe",
+            "Executor"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_32bit.zip"
-            },
             "64bit": {
                 "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_64bit.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_32bit.zip"
             }
         }
     }

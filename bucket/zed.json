@@ -7,10 +7,6 @@
         "64bit": {
             "url": "https://github.com/zed-industries/zed/releases/download/v0.213.3/Zed-x86_64.exe",
             "hash": "6e82363f750d1125d8736c993dd0e56628a07da64b78a054fb27ec4f6bb44720"
-        },
-        "arm64": {
-            "url": "https://github.com/zed-industries/zed/releases/download/v0.213.3/Zed-aarch64.exe",
-            "hash": "bfccf711eb7e62d325a1bc5664227712a942f98cde1553541e81736ab6255fb7"
         }
     },
     "installer": {
@@ -19,10 +15,49 @@
             "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{code_GetInstallDir}' -Removal"
         ]
     },
+    "pre_install": [
+        "$local=Join-Path $env:LOCALAPPDATA \"Zed\"",
+        "$persist_local=Join-Path $persist_dir \"local\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $local $persist_local",
+        "$appdata=Join-Path $env:APPDATA \"Zed\"",
+        "$persist_appdata=Join-Path $persist_dir \"appdata\"",
+        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata $persist_appdata"
+    ],
+    "post_install": [
+        "$dirpath = \"$dir\".Replace('\\', '\\\\')",
+        "$exepath = \"$dir\\zed.exe\".Replace('\\', '\\\\')",
+        "'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context', 'install-context-it', 'uninstall-context-it', 'install-github-integration', 'uninstall-github-integration' | ForEach-Object {",
+        "  if (Test-Path \"$bucketsdir\\$bucket\\scripts\\zed\\$_.reg\") {",
+        "    $content = Get-Content \"$bucketsdir\\$bucket\\scripts\\zed\\$_.reg\"",
+        "    $content = $content.Replace('$zeddir', $dirpath)",
+        "    $content = $content.Replace('$zed', $exepath)",
+        "    if ($global) {",
+        "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "    }",
+        "    $content | Set-Content -Path \"$dir\\$_.reg\"",
+        "  }",
+        "}",
+        "# 自动导入注册表（可选）",
+        "reg import \"$dir\\install-context.reg\"",
+        "reg import \"$dir\\install-associations.reg\""
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall')",
+            "{",
+            "   reg import \"$dir\\uninstall-context.reg\" ",
+            "   reg import \"$dir\\uninstall-github-integration.reg\" ",
+            "}"
+        ]
+    },
+    "persist": [
+        "local",
+        "appdata"
+    ],
     "bin": "bin\\zed.exe",
     "shortcuts": [
         [
-            "zed.exe",
+            "Zed.exe",
             "Zed"
         ]
     ],
@@ -30,13 +65,6 @@
         "github": "https://github.com/zed-industries/zed"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/zed-industries/zed/releases/download/v$version/Zed-x86_64.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/zed-industries/zed/releases/download/v$version/Zed-aarch64.exe"
-            }
-        }
+        "url": "https://github.com/zed-industries/zed/releases/download/v$version/Zed-x86_64.exe"
     }
 }

@@ -11,10 +11,6 @@
         "32bit": {
             "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.56.0/lazygit_0.56.0_Windows_32-bit.zip",
             "hash": "04dfa669146f0ea43b3f65e75e82c4c9d2481d183a5e0cb6617625677d16a49c"
-        },
-        "arm64": {
-            "url": "https://github.com/jesseduffield/lazygit/releases/download/v0.56.0/lazygit_0.56.0_Windows_arm64.zip",
-            "hash": "bc43f05be933dce1f471b5288d66fb2fd7910aa09a258b0335691b9ceb22f278"
         }
     },
     "bin": "lazygit.exe",
@@ -26,9 +22,6 @@
             },
             "32bit": {
                 "url": "https://github.com/jesseduffield/lazygit/releases/download/v$version/lazygit_$version_Windows_32-bit.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/jesseduffield/lazygit/releases/download/v$version/lazygit_$version_Windows_arm64.zip"
             }
         },
         "hash": {

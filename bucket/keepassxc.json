@@ -11,6 +11,10 @@
             "url": "https://github.com/keepassxreboot/keepassxc/releases/download/2.7.10/KeePassXC-2.7.10-Win64.zip",
             "hash": "1769e49bec7a5681e047808876623d525a3741b58959c253e5963476d4cba217",
             "extract_dir": "KeePassXC-2.7.10-Win64"
+        },
+        "arm64": {
+            "url": "https://github.com/minnyres/keepassxc-windows-arm64/releases/download/v2.7.10/KeePassXC_2.7.10_arm64.zip",
+            "hash": "710e1ae54096abfbc6236e32ba92868cb763f65e48eaf0c6696bb9dbd29d8e5c"
         }
     },
     "post_install": "if (Test-Path \"$persist_dir\\keepassxc.ini\") { Move-Item \"$persist_dir\\keepassxc.ini\" \"$dir\\config\" -Force }",
@@ -34,6 +38,9 @@
             "64bit": {
                 "url": "https://github.com/keepassxreboot/keepassxc/releases/download/$version/KeePassXC-$version-Win64.zip",
                 "extract_dir": "KeePassXC-$version-Win64"
+            },
+            "arm64": {
+                "url": "https://github.com/minnyres/keepassxc-windows-arm64/releases/download/v$version/KeePassXC_$version_arm64.zip"
             }
         },
         "hash": {

@@ -21,6 +21,7 @@
             "eMule"
         ]
     ],
+    "persist": "config",
     "checkver": {
         "github": "https://github.com/irwir/eMule",
         "regex": "eMule v(([\\d\\.]+)[a-z])"

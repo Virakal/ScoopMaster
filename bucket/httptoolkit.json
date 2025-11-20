@@ -5,7 +5,7 @@
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v1.23.2/HttpToolkit-1.23.2-win-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v1.23.2/HttpToolkit-1.23.2-win-x64.zip",
             "hash": "79a756da9fb09dcacccb48ebeebc21912f48cc0313098b2faccafe6fd56a9318"
         }
     },
@@ -21,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v$version/HttpToolkit-$version-win-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v$version/HttpToolkit-$version-win-x64.zip"
             }
         }
     }

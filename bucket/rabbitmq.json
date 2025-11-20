@@ -3,6 +3,12 @@
     "description": "Message-broker",
     "homepage": "https://www.rabbitmq.com",
     "license": "MPL-2.0",
+    "notes": [
+        "RabbitMQ data is stored in $persist_dir\\data",
+        "To use RabbitMQ as a service, run `rabbitmq-service.bat install` with an elevated privilege. You should do this after both installation and upgrade.",
+        "To remove the service, run `rabbitmq-service.bat remove` with an elevated privilege.",
+        "In order to access the management UI, you should enable the plugin by running `rabbitmq-plugins enable rabbitmq_management`."
+    ],
     "depends": "erlang",
     "url": "https://github.com/rabbitmq/rabbitmq-server/releases/download/v4.2.0/rabbitmq-server-windows-4.2.0.zip",
     "hash": "75241116aa173850224daef49f8e54eeb020f247aa99bce876c587ec486c2122",
@@ -19,8 +25,13 @@
         "sbin\\rabbitmq-service.bat",
         "sbin\\rabbitmq-upgrade.bat"
     ],
+    "persist": [
+        "plugins",
+        "data"
+    ],
     "env_set": {
-        "RABBITMQ_SERVER": "$dir"
+        "RABBITMQ_SERVER": "$dir",
+        "RABBITMQ_BASE": "$persist_dir\\data"
     },
     "checkver": {
         "url": "https://www.rabbitmq.com/download.html",

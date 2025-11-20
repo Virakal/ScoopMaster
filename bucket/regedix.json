@@ -4,7 +4,11 @@
     "homepage": "https://regedix.webrox.fr/",
     "license": "GPL-3.0",
     "suggest": {
-        ".NET Desktop Runtime 7.0": "versions/windowsdesktop-runtime-7.0"
+        ".NET 7": [
+            "anderlli0053_DEV-tools/dotnet-7.0-desktopruntime-np",
+            "anderlli0053_DEV-tools/dotnet-7.0-desktopruntime",
+            "versions/dotnet7-sdk"
+        ],
     },
     "architecture": {
         "64bit": {
