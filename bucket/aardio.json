@@ -3,24 +3,31 @@
     "description": "灵活而强大的动态语言。A flexible and powerful dynamic language.",
     "homepage": "https://www.aardio.com/",
     "license": "Freeware",
-    "url": "https://d.aardio.com/ide/aardio.7z",
-    "hash": "0baab9f464fc47dacc490435f59fb2cde74216e0fa5fb2fd760077faa07cffd4",
+    "url": "https://www.aardio.com/download/ide/aardio.7z",
+    "hash": "5c02697324c3d6d5182fab50198a160ffe2fd0fb5441770bff6d93dafd0b601b",
     "shortcuts": [
         [
             "aardio.exe",
             "aardio"
         ]
     ],
-    "persist": [
-        "config\\USR.CFG",
-        "project"
+    "pre_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "persist_file -dir @(\"$dir\\config\",\"$dir\\project\") @(\"$persist_dir\\config\",\"$persist_dir\\project\")",
+        "handle_app_lnk",
+        "do_some_things"
+    ],
+    "pre_uninstall": [
+        "$bucket = (Get-Content \"$dir\\install.json\" | ConvertFrom-Json).bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "stop_process",
+        "remove_files @(\"$user_LocalAppData\\aardio\")"
     ],
     "checkver": {
         "url": "https://ide.update.aardio.com/log/",
         "regex": "aardio v([\\d\\.]+)"
     },
     "autoupdate": {
-        "note": "https://d.aardio.com/ide/check/",
-        "url": "https://d.aardio.com/ide/aardio.7z"
+        "url": "https://www.aardio.com/download/ide/aardio.7z"
     }
 }
