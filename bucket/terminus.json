@@ -1,25 +1,35 @@
 {
     "homepage": "https://eugeny.github.io/terminus/",
-    "version": "1.0.0-alpha.38",
+    "description": "A terminal for a more modern age.",
+    "version": "1.0.77",
     "license": "MIT",
-    "url": "https://github.com/Eugeny/terminus/releases/download/v1.0.0-alpha.38/terminus-1.0.0-alpha38-full.nupkg#/dl.7z",
-    "hash": "sha1:B39D56468C97DCAE9CB3E54C6D15F10EF2FF872C",
-    "extract_dir": "lib\\net45",
-    "bin": "Terminus.exe",
-    "shortcuts": [
-        [
-            "Terminus.exe",
-            "Terminus"
-        ]
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Eugeny/terminus/releases/download/v1.0.77/terminus-1.0.77-portable.exe#/dl.7z",
+            "hash": "c48b470dffc4677c2cb42a618e87bef091b71e13b6336c8c1556f294e07345ff",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+                ]
+            },
+            "bin": "Terminus.exe",
+            "shortcuts": [
+                [
+                    "Terminus.exe",
+                    "Terminus"
+                ]
+            ]
+        }
+    },
     "checkver": {
-        "github": "https://github.com/Eugeny/terminus",
-        "re": "/releases/tag/(?:v)?(?<version>(?<short>[\\d.]+)(?<alpha>-\\w+).(?<build>\\d+))?"
+        "github": "https://github.com/Eugeny/terminus"
     },
     "autoupdate": {
-        "url": "https://github.com/Eugeny/terminus/releases/download/v$version/terminus-$matchShort$matchAlpha$matchBuild-full.nupkg#/dl.7z",
-        "hash": {
-            "url": "$baseurl/RELEASES"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Eugeny/terminus/releases/download/v$version/terminus-$version-portable.exe#/dl.7z"
+            }
         }
     }
 }

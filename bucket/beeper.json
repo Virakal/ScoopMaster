@@ -1,32 +1,39 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-  "version": "3.110.1",
-  "description": "All your chats in one app",
-  "license": "Freeware",
-  "homepage": "https://www.beeper.com",
-  "url": "https://download.beeper.com/windows/nsis/x64#/dl.7z",
-  "hash": "62d5fd251bd4e42694ef52f397854e6eba247914e86cc29aa43d92f3920d5b7c",
-  "architecture": {
-    "64bit": {
-      "installer": {
-        "script": [
-          "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-          "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+    "version": "3.111.7",
+    "description": "An universal chat application that unifies all your chat applications into one.",
+    "homepage": "https://www.beeper.com",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.todesktop.com/2003241lzgn20jd/Beeper Setup 3.111.7 - Build 250819g4s11p2lb-x64.exe#/dl.7z",
+            "hash": "sha512:6a3591d373a62ed8392016043eef47046e9b1c64663ad8970b6d6d4379e9912dd9678f199f6449eca92e0afa34ebd328aea5f26156b04b344292663ad425d0bc",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Beeper.exe",
+            "Beeper",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
-      }
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://download.todesktop.com/2003241lzgn20jd/latest.yml",
+        "regex": "version: ([\\d.]+)\\nfiles:\\n.*url: (?<url>.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.todesktop.com/2003241lzgn20jd/$matchUrl#/dl.7z",
+                "hash": {
+                    "url": "https://download.todesktop.com/2003241lzgn20jd/latest.yml",
+                    "regex": "sha512: $base64"
+                }
+            }
+        }
     }
-  },
-  "shortcuts": [
-    [
-      "Beeper.exe",
-      "Beeper"
-    ]
-  ],
-  "checkver": {
-    "script": "curl.exe -sIXGET https://download.beeper.com/windows/nsis/x64",
-    "regex": "Beeper Setup ([\\d\\.]+) - x64.exe"
-  },
-  "autoupdate": {
-    "url": "https://download.beeper.com/windows/nsis/x64#/dl.7z"
-  }
 }
