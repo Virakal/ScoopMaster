@@ -1,22 +1,24 @@
 {
-    "version": "2025.11.20",
-    "description": "Command-line program to download image-galleries and -collections from several image hosting sites.",
-    "homepage": "https://github.com/gdl-org/builds",
-    "license": "GPL-2.0-only",
+    "version": "2025.11.26",
+    "description": "Command-line program to download image galleries and collections from several image hosting sites (Nightly)",
+    "homepage": "https://github.com/mikf/gallery-dl",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/gdl-org/builds/releases/download/2025.11.20/gallery-dl_windows.exe#/gallery-dl.exe",
-            "hash": "3f300db3ec5f5c56b63f6008580ad58a77e2fd028ccf590f67044e98fdc93e90"
+            "url": "https://github.com/gdl-org/builds/releases/download/2025.11.26/gallery-dl_windows.exe#/gallery-dl.exe",
+            "hash": "0b6a82d544af16dc7277bf15234717787cefacea33933e03053b009e38ca5315"
         },
         "32bit": {
-            "url": "https://github.com/gdl-org/builds/releases/download/2025.11.20/gallery-dl_windows_x86.exe#/gallery-dl.exe",
-            "hash": "bfea87ff65a7d68e74ef94030c5e280c9e891d08cfefdb49d36d8ee9ec695267"
+            "url": "https://github.com/gdl-org/builds/releases/download/2025.11.26/gallery-dl_windows_x86.exe#/gallery-dl.exe",
+            "hash": "55af6c393e4ed8c2cd6af7014402fd46fc068da5572e1c86d9a8fa6ed9e63674"
         }
     },
     "pre_install": "if (-not (Test-Path \"$persist_dir\\gallery-dl.conf\")) { Set-Content \"$dir\\gallery-dl.conf\" '{}' -Encoding Ascii | Out-Null }",
     "bin": "gallery-dl.exe",
     "persist": "gallery-dl.conf",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/gdl-org/builds"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
