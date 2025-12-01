@@ -1,16 +1,16 @@
 {
     "version": "4.7.0",
-    "description": "View USB devices in a tree-like structure",
+    "description": "USB device tree viewer",
     "homepage": "https://www.uwe-sieber.de/usbtreeview_e.html",
     "license": "Freeware",
     "architecture": {
-        "64bit": {
-            "url": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip",
-            "hash": "6b5399da18d5cf0d368fd88fd35e1841064055a8c32ad99c7c4778d55770cd7c"
-        },
         "32bit": {
             "url": "https://www.uwe-sieber.de/files/UsbTreeView_Win32.zip",
             "hash": "320c434d3fcb9a2e93c65cd2c2cf70598d09d1cb0531f36f6bc4a495e7832abc"
+        },
+        "64bit": {
+            "url": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip",
+            "hash": "6b5399da18d5cf0d368fd88fd35e1841064055a8c32ad99c7c4778d55770cd7c"
         },
         "arm64": {
             "url": "https://www.uwe-sieber.de/files/UsbTreeView_arm64.zip",
@@ -21,17 +21,19 @@
     "shortcuts": [
         [
             "UsbTreeView.exe",
-            "USB Device Tree Viewer"
+            "UsbTreeView - USB Device Tree Viewer"
         ]
     ],
+    "pre_install": "if(!(Test-Path \"$persist_dir\\UsbTreeView.ini\")) {New-Item \"$dir\\UsbTreeView.ini\" -ItemType File | Out-Null}",
+    "persist": "UsbTreeView.ini",
     "checkver": "USB Device Tree Viewer V([\\d.]+)",
     "autoupdate": {
         "architecture": {
-            "64bit": {
-                "url": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip"
-            },
             "32bit": {
                 "url": "https://www.uwe-sieber.de/files/UsbTreeView_Win32.zip"
+            },
+            "64bit": {
+                "url": "https://www.uwe-sieber.de/files/UsbTreeView_x64.zip"
             },
             "arm64": {
                 "url": "https://www.uwe-sieber.de/files/UsbTreeView_arm64.zip"
