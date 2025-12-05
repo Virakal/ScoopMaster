@@ -9,7 +9,7 @@
     "installer": {
         "script": "& \"$bucketsdir\\$bucket\\scripts\\$app\\$app.ps1\" -install"
     },
-    "pre_uninstall": "& \"$bucketsdir\\$bucket\\scripts\\$app\\$app.ps1\" -pre_uninstall",
+    "pre_uninstall": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -pre_uninstall",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v$version/OpenShellSetup_$underscoreVersion.exe#/setup.exe"
