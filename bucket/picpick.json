@@ -1,25 +1,26 @@
 {
-    "homepage": "https://www.picpick.org/",
     "version": "7.4.1",
-    "license": "freeware for personal use",
-    "url": "https://www.picpick.org/releases/latest/picpick_portable.zip",
-    "hash": "e112e3dad52793202f5916cbe620a500d98ec67c8acdb78c9cc83e7569c5b7fc",
-    "bin": "picpick.exe",
-    "persist": [
-        "picpick.ini",
-        "picpick_uploader.ini"
-    ],
+    "description": "A full-featured screen capture tool, intuitive image editor, color picker and more",
+    "homepage": "https://picpick.app",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://picpick.app/en/download"
+    },
+    "url": "https://download.picpick.app/7.4.1/picpick_portable.zip",
+    "hash": "26b9850ceeaae489092a1ad82e7fe937c2421b84c071c45b0451f2aa29711210",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\picpick.ini\")) { Set-Content \"$dir\\picpick.ini\" '[Setting]', 'CheckUpdate=0' -Encoding Ascii }",
     "shortcuts": [
         [
             "picpick.exe",
             "PicPick"
         ]
     ],
+    "persist": "picpick.ini",
     "checkver": {
-        "url": "https://picpick.app/en/download",
-        "regex": "v([\\d.]+)<!"
+        "url": "https://picpick.app/en/download/",
+        "regex": ">v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.picpick.org/releases/latest/picpick_portable.zip"
+        "url": "https://download.picpick.app/$version/picpick_portable.zip"
     }
 }

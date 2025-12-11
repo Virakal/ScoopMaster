@@ -1,10 +1,10 @@
 {
-    "version": "20240624",
-    "description": "An open-source DirectShow subtitle renderer. Variant with libass backend",
+    "version": "20251002",
+    "description": "A variant of XySubFilter, which uses libass to render SSA/ASS",
     "homepage": "https://github.com/Masaiki/xy-VSFilter",
-    "license": "GPL-2.0-only",
-    "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20240526/XySubFilter_with_libass_20240624.zip",
-    "hash": "a2cf41fe1b3690b0ad5ca088470de1dc1816147bad70a0ba2e84b2a68005a496",
+    "license": "GPLv2",
+    "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/20251002/XySubFilter_with_libass_20251002.zip",
+    "hash": "ebffd2348da3152782ddd0062cc5be9b71aed4f2836b2260d4e5471586225188",
     "architecture": {
         "64bit": {
             "extract_dir": "x64"
@@ -13,16 +13,14 @@
             "extract_dir": "Win32"
         }
     },
-    "pre_install": [
-        "if (-not $global) {",
-        "    Write-Host -Foreground Red \"$app should be installed globally.\"",
-        "    break",
-        "}"
-    ],
     "installer": {
-        "script": "regsvr32 /s \"$dir\\XySubFilter.dll\""
+        "script": "sudo \"$dir\\Install_XySubFilter.bat\""
     },
     "uninstaller": {
-        "script": "regsvr32 /u /s \"$dir\\XySubFilter.dll\""
+        "script": "sudo \"$dir\\Uninstall_XySubFilter.bat\""
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Masaiki/xy-VSFilter/releases/download/$version/XySubFilter_with_libass_$version.zip"
     }
 }

@@ -1,0 +1,27 @@
+{
+    "checkver": {
+        "url": "https://www.powershellgallery.com/api/v2/Packages()?$filter=Id%20eq%20'Az.AppConfiguration'%20and%20IsLatestVersion%20eq%20true",
+        "replace": "${ver}",
+        "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
+    },
+    "hash": "sha512:1181cc42a8cd2fc69f4b8121ea83dae9b92074567ea5fa1c59920fccf6fbfd04cf4a45ad9021fe7ee89f7193f18e75975c3910da38ef0771f414576a18c6e4ce",
+    "description": "Microsoft Azure PowerShell: AppConfiguration cmdlets",
+    "psmodule": {
+        "name": "Az.AppConfiguration"
+    },
+    "homepage": "https://www.powershellgallery.com/packages/Az.AppConfiguration",
+    "autoupdate": {
+        "url": "https://www.powershellgallery.com/api/v2/Package/Az.AppConfiguration/$version#/mod.nupkg",
+        "hash": {
+            "url": "https://www.powershellgallery.com/api/v2/Packages()?$filter=Id eq 'Az.AppConfiguration' and Version eq '$version'",
+            "regex": "<d:PackageHash>$base64<.d:PackageHash>"
+        }
+    },
+    "license": {
+        "identifier": "Refer to Webpage",
+        "url": "https://aka.ms/azps-license"
+    },
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.AppConfiguration/2.0.1#/mod.nupkg",
+    "depends": "Az.Accounts",
+    "version": "2.0.1"
+}

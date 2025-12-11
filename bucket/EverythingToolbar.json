@@ -1,21 +1,51 @@
 {
-    "homepage": "https://github.com/stnkl/EverythingToolbar",
     "version": "2.1.1",
-    "url": "https://github.com/stnkl/EverythingToolbar/archive/refs/tags/2.1.1.zip",
-    "notes": "Enable EverythingToolbar via the context menu of the taskbar.",
-    "hash": "d48c88db567918088e914035ed8d98a3c34c5dddd06199fbe4e7805e142324bb",
-    "depends": "extras/everything",
+    "description": "Everything integration for the Windows taskbar.",
+    "homepage": "https://github.com/srwi/EverythingToolbar",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/srwi/EverythingToolbar/blob/HEAD/LICENSE"
+    },
+    "suggest": {
+        "everything": "extras/everything",
+        ".NET Windows Desktop Runtime 8.0": "versions/windowsdesktop-runtime-8.0"
+    },
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/srwi/EverythingToolbar/releases/download/2.1.1/EverythingToolbar-2.1.1-x64.exe",
+            "hash": "d2d85e74b39145304861437dec4a630b858b5ab421734be47da9edce229454ea"
+        },
+        "arm64": {
+            "url": "https://github.com/srwi/EverythingToolbar/releases/download/2.1.1/EverythingToolbar-2.1.1-arm64.exe",
+            "hash": "422acdd1c2ebcbb9d6fb770c2a45af2043d81eaaef5f46895cf387670948f020"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem -Path $dir -Include '*,1*' -Recurse | Remove-Item -Force -ErrorAction SilentlyContinue",
+        "Get-ChildItem -Path $dir -Include '*,2*' -Recurse | Rename-Item -NewName { $_.FullName -replace ',2\\.', '.' }"
+    ],
+    "shortcuts": [
+        [
+            "EverythingToolbar.Launcher.exe",
+            "EverythingToolbar"
+        ]
+    ],
     "checkver": "github",
-    "pre_install": "if (-not (is_admin)) { error 'Administrator privileges are needed for installation'; break }",
-    "installer": {
-        "file": "install.cmd",
-        "keep": "true"
-    },
-    "uninstaller": {
-        "file": "uninstall.cmd",
-        "keep": "true"
-    },
     "autoupdate": {
-        "url": "https://github.com/stnkl/EverythingToolbar/archive/refs/tags/$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/srwi/EverythingToolbar/releases/download/$version/EverythingToolbar-$version-x64.exe",
+                "hash": {
+                    "url": "$baseurl/EverythingToolbar-$version-x64.sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/srwi/EverythingToolbar/releases/download/$version/EverythingToolbar-$version-arm64.exe",
+                "hash": {
+                    "url": "$baseurl/EverythingToolbar-$version-arm64.sha256"
+                }
+            }
+        }
     }
 }

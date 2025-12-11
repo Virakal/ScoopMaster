@@ -1,0 +1,27 @@
+{
+    "checkver": {
+        "url": "https://www.powershellgallery.com/api/v2/Packages()?$filter=Id%20eq%20'Az.DataLakeStore'%20and%20IsLatestVersion%20eq%20true",
+        "replace": "${ver}",
+        "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
+    },
+    "hash": "sha512:fbd40ce5f7c8e63c3a175cc24ee3479b983c4fed16e87f3c449f7110f5a4040cee2f32c2697084b565af57af1adfad2e2d5ff919e3ff741eb3e2d7fe0d485109",
+    "description": "Microsoft Azure PowerShell - Azure Data Lake Store cmdlets in Windows PowerShell and PowerShell Core.  For more information on Data Lake Store, please visit the following: https://docs.microsoft.com/azure/data-lake-store/",
+    "psmodule": {
+        "name": "Az.DataLakeStore"
+    },
+    "homepage": "https://www.powershellgallery.com/packages/Az.DataLakeStore",
+    "autoupdate": {
+        "url": "https://www.powershellgallery.com/api/v2/Package/Az.DataLakeStore/$version#/mod.nupkg",
+        "hash": {
+            "url": "https://www.powershellgallery.com/api/v2/Packages()?$filter=Id eq 'Az.DataLakeStore' and Version eq '$version'",
+            "regex": "<d:PackageHash>$base64<.d:PackageHash>"
+        }
+    },
+    "license": {
+        "identifier": "Refer to Webpage",
+        "url": "https://aka.ms/azps-license"
+    },
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.DataLakeStore/1.5.1#/mod.nupkg",
+    "depends": "Az.Accounts",
+    "version": "1.5.1"
+}

@@ -1,0 +1,24 @@
+{
+    "version": "2.53.8",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bcpierce00/unison/releases/download/v2.53.8/unison-2.53.8-windows-x86_64.zip",
+            "hash": "b54bfe2999d7fc0924f39c13ca5333d8e80a9e6ccf9cac8e92400ca1399ed0e3"
+        }
+    },
+    "description": "A file-synchronization tool.",
+    "homepage": "https://www.cis.upenn.edu/~bcpierce/unison",
+    "license": "GPL-3.0-only",
+    "checkver": {
+        "url": "https://github.com/bcpierce00/unison/releases/latest",
+        "regex": ">v((\\d+\\.)+(\\d+))<\\/h1>",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bcpierce00/unison/releases/download/v$version/unison-$version-windows-x86_64.zip"
+            }
+        }
+    }
+}

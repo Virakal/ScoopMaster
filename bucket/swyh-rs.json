@@ -1,22 +1,23 @@
 {
     "version": "1.12.16",
-    "description": "Stream What You Hear, re-implemented in Rust",
+    "description": "DLNA/UPnP audio streaming software",
     "homepage": "https://github.com/dheijl/swyh-rs",
     "license": "MIT",
-    "notes": [
-        "swyh-rs stores its settings at \"%userprofile%\\.swyh-rs\".",
-        "Now available: CLI version ran via swyh-rs-cli!"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/dheijl/swyh-rs/releases/download/1.12.16/swyh-rs-release.zip",
             "hash": "1ce5ee88c9e067364260461eb7e94308c7ce436b77ea5ccba7877f24f2fa272c"
         }
     },
-    "bin": "swyh-rs-cli.exe",
     "shortcuts": [
         [
             "swyh-rs.exe",
+            "SWYH-RS"
+        ]
+    ],
+    "bin": [
+        [
+            "swyh-rs-cli.exe",
             "swyh-rs"
         ]
     ],

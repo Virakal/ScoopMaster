@@ -33,6 +33,7 @@
         "cores",
         "cheats",
         "config",
+        "downloads",
         "playlists",
         "records",
         "recordings",
@@ -53,12 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://buildbot.libretro.com/stable/$version/windows/x86_64/RetroArch.7z",
-                "extract_dir": "RetroArch-Win64"
+                "url": "https://buildbot.libretro.com/stable/$version/windows/x86_64/RetroArch.7z"
             },
             "32bit": {
-                "url": "https://buildbot.libretro.com/stable/$version/windows/x86/RetroArch.7z",
-                "extract_dir": "RetroArch-Win32"
+                "url": "https://buildbot.libretro.com/stable/$version/windows/x86/RetroArch.7z"
             }
         }
     }

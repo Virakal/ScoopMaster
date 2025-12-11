@@ -1,16 +1,16 @@
 {
-    "version": "1.46.5",
+    "version": "1.46.6",
     "description": "Secure, seamless, and audited access to databases and infrastructure.",
     "homepage": "https://github.com/hoophq/hoop",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://releases.hoop.dev/release/1.46.5/hoop_1.46.5_Windows_x86_64.tar.gz",
-            "hash": "7cdf7d0643f2615d6a6689a3aa2ae7982d100d62c036e21db5e16f591fa13362"
+            "url": "https://releases.hoop.dev/release/1.46.6/hoop_1.46.6_Windows_x86_64.tar.gz",
+            "hash": "66b5c16a388601139ba92b194f16bfa9cc001fea1f11d8ec1b6db9e619b85bc9"
         },
         "arm64": {
-            "url": "https://releases.hoop.dev/release/1.46.5/hoop_1.46.5_Windows_arm64.tar.gz",
-            "hash": "55eae0985b4fcdea5503b35c5ecb4e63d6305a9fa2a67e5603ea2f72afedfda6"
+            "url": "https://releases.hoop.dev/release/1.46.6/hoop_1.46.6_Windows_arm64.tar.gz",
+            "hash": "db157664b7b712e7dbca6e5dc2c2d1b1d3bb9ef913712df7755ff017eced284e"
         }
     },
     "bin": "hoop.exe",

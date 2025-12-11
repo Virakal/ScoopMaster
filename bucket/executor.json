@@ -1,32 +1,32 @@
 {
-  "version": "2.1.11",
-  "description": "Multipurpose launcher and more advanced and customizable freeware Windows run replacement and more.",
-  "homepage": "https://executor.dk/",
-  "license": "MIT",
-  "architecture": {
-    "32bit": {
-      "url": "https://github.com/executordk/executor-community/releases/download/v2.1.11/Executor_v2.1.11_32bit.zip",
-      "hash": "e7953c8835c53f15528b2f16a402ead97aac3d3ee96d6e1a3cc8070c5bd6e8d4",
-      "extract_dir": "Executor32bit"
-    },
-    "64bit": {
-      "url": "https://github.com/executordk/executor-community/releases/download/v2.1.11/Executor_v2.1.11_64bit.zip",
-      "hash": "f72bdbac7b7523a31469b951d17aba0f877d451184a2ef5043175864848371a9",
-      "extract_dir": "Executor64bit"
-    }
-  },
-  "bin": "Executor.exe",
-  "checkver": {
-    "github": "https://github.com/executordk/executor-community"
-  },
-  "autoupdate": {
+    "version": "2.1.11",
+    "description": "Multipurpose launcher and more advanced and customizable freeware Windows run replacement and more.",
+    "homepage": "https://executor.dk/",
+    "license": "MIT",
     "architecture": {
-      "32bit": {
-        "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_32bit.zip"
-      },
-      "64bit": {
-        "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_64bit.zip"
-      }
+        "32bit": {
+            "url": "https://github.com/executordk/executor-community/releases/download/v2.1.11/Executor_v2.1.11_32bit.zip",
+            "hash": "e7953c8835c53f15528b2f16a402ead97aac3d3ee96d6e1a3cc8070c5bd6e8d4",
+            "extract_dir": "Executor32bit"
+        },
+        "64bit": {
+            "url": "https://github.com/executordk/executor-community/releases/download/v2.1.11/Executor_v2.1.11_64bit.zip",
+            "hash": "f72bdbac7b7523a31469b951d17aba0f877d451184a2ef5043175864848371a9",
+            "extract_dir": "Executor64bit"
+        }
+    },
+    "bin": "Executor.exe",
+    "checkver": {
+        "github": "https://github.com/executordk/executor-community"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_32bit.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/executordk/executor-community/releases/download/v$version/Executor_v$version_64bit.zip"
+            }
+        }
     }
-  }
 }

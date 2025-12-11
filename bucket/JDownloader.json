@@ -3,6 +3,9 @@
     "description": "Download management tool",
     "homepage": "https://jdownloader.org",
     "license": "Shareware|AGPL-3.0-only",
+    "suggest": {
+        "JRE": "java/temurin8-jre"
+    },
     "url": [
         "http://installer.jdownloader.org/JDownloader.jar",
         "http://jdownloader.org/lib/tpl/arctic/images/favicon.ico#/icon.ico"

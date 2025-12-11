@@ -2,32 +2,27 @@
     "version": "nightly",
     "description": "GPU-accelerated terminal emulator (nightly builds)",
     "homepage": "https://github.com/wez/wezterm",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-setup.exe",
-            "pre_install": [
-                "Invoke-WebRequest -Uri 'https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-setup.exe.sha256' -OutFile \"$dir\\WezTerm-nightly-setup.exe.sha256\"",
-                "$expectedHash = (Get-Content \"$dir\\WezTerm-nightly-setup.exe.sha256\" -Raw).Split(' ')[0]",
-                "$actualHash = (Get-FileHash \"$dir\\WezTerm-nightly-setup.exe\" -Algorithm SHA256).Hash",
-                "if ($expectedHash -ne $actualHash) {",
-                "   Write-Error 'Hash mismatch! Installation aborted.'",
-                "   exit 1",
-                "}"
-            ],
-            "post_install": [
-                "Remove-Item \"$dir\\WezTerm-nightly-setup.exe.sha256\""
-            ]
+            "url": "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
         }
     },
     "installer": {
-        "file": "WezTerm-nightly-setup.exe",
-        "args": ["/SP-", "/verysilent", "/norestart", "/dir=$dir"]
+        "script": [
+            "$foldername = (Get-Item $dir\\WezTerm-windows-*).Name",
+            "Move-Item $dir\\$foldername\\* $dir",
+            "Remove-Item $dir\\$foldername"
+        ]
     },
-    "uninstaller": {
-        "file": "unins000.exe",
-        "args": ["/SP-", "/verysilent", "/norestart"]
-    },
-    "bin": ["wezterm.exe", "wezterm-gui.exe"],
-    "shortcuts": [["wezterm-gui.exe", "Wezterm"]]
+    "bin": [
+        "wezterm.exe",
+        "wezterm-gui.exe"
+    ],
+    "shortcuts": [
+        [
+            "wezterm-gui.exe",
+            "WezTerm"
+        ]
+    ]
 }
