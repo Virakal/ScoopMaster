@@ -1,0 +1,29 @@
+{
+    "version": "1.8.1",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/digitalghost-dev/poke-cli/releases/download/v1.8.1/poke-cli_Windows_i386.zip",
+            "bin": [
+                "poke-cli.exe"
+            ],
+            "hash": "0e60dd780961cb4145328992e0a86a88e9d70ebe1327b4c5cdede7ca26857cb1"
+        },
+        "64bit": {
+            "url": "https://github.com/digitalghost-dev/poke-cli/releases/download/v1.8.1/poke-cli_Windows_x86_64.zip",
+            "bin": [
+                "poke-cli.exe"
+            ],
+            "hash": "025eaae27bfaf511e6404841309bc3b4e61c7b05d0e2b1f69c91ccd8cc701ca8"
+        },
+        "arm64": {
+            "url": "https://github.com/digitalghost-dev/poke-cli/releases/download/v1.8.1/poke-cli_Windows_arm64.zip",
+            "bin": [
+                "poke-cli.exe"
+            ],
+            "hash": "060027c9437f61423d0bf19af1071ce447fed9215b60d9e4fd0ae10e1921f260"
+        }
+    },
+    "homepage": "https://docs.poke-cli.com/",
+    "license": "MIT",
+    "description": "A hybrid CLI/TUI tool written in Go for viewing Pokémon data from the terminal!"
+}

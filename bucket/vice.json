@@ -1,34 +1,39 @@
 {
-  "autoupdate": {
-    "extract_dir": "GTK3VICE-$matchRelease-dev-win64-r$matchBuild",
-    "url": "https://ghproxy.com/https://github.com/Zibri/VICE/releases/download/r$matchBuild/GTK3VICE-$matchRelease-dev-win64-r$matchBuild.7z"
-  },
-  "bin": [
-    "bin\\c1541.exe",
-    "bin\\cartconv.exe",
-    "bin\\petcat.exe",
-    "bin\\vsid.exe",
-    "bin\\x128.exe",
-    "bin\\x64.exe",
-    "bin\\x64dtv.exe",
-    "bin\\x64sc.exe",
-    "bin\\xcbm2.exe",
-    "bin\\xcbm5x0.exe",
-    "bin\\xpet.exe",
-    "bin\\xplus4.exe",
-    "bin\\xscpu64.exe",
-    "bin\\xvic.exe"
-  ],
-  "checkver": {
-    "github": "https://github.com/Zibri/VICE",
-    "regex": "GTK3VICE-(?<release>[\\d.]+)-dev-win64-r(?<build>[\\d]+).7z",
-    "replace": "${release}-${build}"
-  },
-  "description": "Updated builds of the VICE emulator",
-  "extract_dir": "GTK3VICE-3.7-dev-win64-r42601",
-  "hash": "b9d815934783ddabaeba9c68d9cac5fb01a95daa6fe81601a55c7f40131edbc0",
-  "homepage": "https://github.com/Zibri/VICE",
-  "license": "GPL-2.0",
-  "url": "https://ghproxy.com/https://github.com/Zibri/VICE/releases/download/r42601/GTK3VICE-3.7-dev-win64-r42601.7z",
-  "version": "3.7-42601"
+    "version": "3.9",
+    "description": "VICE is an emulator collection which emulates the C64, the C64-DTV, the C128, the VIC20, practically all PET models, the PLUS4 and the CBM-II (aka C610)",
+    "homepage": "https://vice-emu.sourceforge.io/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/vice-emu/files/releases/binaries/windows/GTK3VICE-3.9-win64.zip",
+            "hash": "sha1:36ecbbb41a12fea51919a31442509b584998823b",
+            "extract_dir": "GTK3VICE-3.9-win64"
+        }
+    },
+    "shortcuts": [
+        [
+            "bin\\x64sc.exe",
+            "VICE\\VICE - C64"
+        ],
+        [
+            "bin\\xpet.exe",
+            "VICE\\VICE - PET"
+        ],
+        [
+            "bin\\xvic.exe",
+            "VICE\\VICE - VIC20"
+        ]
+    ],
+    "checkver": {
+        "sourceforge": "vice-emu",
+        "regex": "VICE-([\\d.]+)-win"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/vice-emu/files/releases/binaries/windows/GTK3VICE-$version-win64.zip",
+                "extract_dir": "GTK3VICE-$version-win64"
+            }
+        }
+    }
 }

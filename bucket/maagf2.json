@@ -1,0 +1,23 @@
+{
+    "homepage": "https://github.com/DarkLingYun/MaaGF2Exilium",
+    "version": "2.0.9",
+    "hash": "d9dc264ad090cf1e6308c04abe4ba99d9a2d0b5334695d36f6178c7b4fe916ad",
+    "url": "https://github.com/DarkLingYun/MaaGF2Exilium/releases/download/v2.0.9/MaaGF2ExiliumGUI-win-x86_64-v2.0.9.zip",
+    "license": "MIT",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/DarkLingYun/MaaGF2Exilium/releases/download/v$version/MaaGF2ExiliumGUI-win-x86_64-v$version.zip",
+        "extract_dir": "MaaGF2ExiliumGUI-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "bin": [
+        [
+            "MaaPiCli.exe",
+            "maa-gf2"
+        ],
+        [
+            "MaaGF2Exilium.exe",
+            "maa-gf2-gui"
+        ]
+    ]
+}

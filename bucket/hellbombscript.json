@@ -1,0 +1,32 @@
+{
+    "version": "4.0prealpha5",
+    "description": "An application to troubleshoot Helldivers 2",
+    "homepage": "https://github.com/helldivers2fixes/HellbombScript",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/helldivers2fixes/HellbombScript/releases/download/v4.0prealpha5/Hellbomb_Script_v4.0-fed81f4.exe",
+            "hash": "d89cb60ac7658a3db52383440138c539043e9b81bf7d61b19a008a0b5d26191c"
+        }
+    },
+    "pre_install": "Get-ChildItem -Path $dir -Filter '*.exe' | Rename-Item -NewName 'Hellbomb_Script.exe'",
+    "bin": "Hellbomb_Script.exe",
+    "shortcuts": [
+        [
+            "Hellbomb_Script.exe",
+            "Hellbomb Script (Helldivers 2 Troubleshooter)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repositories/783102459/releases/latest",
+        "jsonpath": "$.assets..browser_download_url",
+        "regex": "releases/download/v?(?<version>[\\d\\.]+(?:prealpha\\d*)?)/(?<assetFilename>Hellbomb.+\\.exe)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/helldivers2fixes/HellbombScript/releases/download/v$version/$matchAssetfilename"
+            }
+        }
+    }
+}

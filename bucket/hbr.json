@@ -1,0 +1,19 @@
+{
+    "homepage": "https://github.com/KarylDAZE/Maa-HBR",
+    "version": "0.6.1",
+    "license": "MIT",
+    "hash": "8133031a064fe69086abb932d238232a112e938ec4ed2a23489f69c16c726c91",
+    "url": "https://github.com/KarylDAZE/Maa-HBR/releases/download/v0.6.1/Maa-HBR-win-x86_64-v0.6.1.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/KarylDAZE/Maa-HBR/releases/download/v$version/Maa-HBR-win-x86_64-v$version.zip",
+        "extract_dir": "Maa-HBR-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "bin": [
+        [
+            "MaaHBR.exe",
+            "maa-hbr"
+        ]
+    ]
+}

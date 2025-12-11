@@ -1,0 +1,23 @@
+{
+    "homepage": "https://github.com/MAA1999/M9A",
+    "version": "3.17.0",
+    "hash": "8a8b29eaf3ead31c6b2c4be0445a2b2c50c46a24596977ba15588d61b609e5a1",
+    "url": "https://github.com/MAA1999/M9A/releases/download/v3.17.0/M9A-win-x86_64-v3.17.0.zip",
+    "license": "MIT",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/MAA1999/M9A/releases/download/v$version/M9A-win-x86_64-v$version.zip",
+        "extract_dir": "M9A-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "bin": [
+        [
+            "MaaPiCli.exe",
+            "maa-m9a"
+        ],
+        [
+            "MFAAvalonia.exe",
+            "maa-m9a-gui"
+        ]
+    ]
+}
