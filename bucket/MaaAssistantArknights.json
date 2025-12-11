@@ -1,10 +1,10 @@
 {
-    "version": "6.0.0-beta.2",
+    "version": "6.0.0",
     "description": "An Arknights assistant, supports ZH and EN client",
     "homepage": "https://www.maa.plus/",
     "license": "AGPL-3.0",
-    "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.0.0-beta.2/MAA-v6.0.0-beta.2-win-x64.zip",
-    "hash": "9fa65c11af82b47a8e2a9eea180d5bcb864fcb6521d8dc40fa238c101aa4002b",
+    "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.0.0/MAA-v6.0.0-win-x64.zip",
+    "hash": "b0157f593a1d99ee95970b83104dee9f89a41ad5cc6c2bdd69d69ad635b483ac",
     "bin": "MAA.exe",
     "shortcuts": [
         [
@@ -14,19 +14,11 @@
     ],
     "persist": [
         "config",
-        "debug",
-        "data",
-        "archievement"
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App"
+        "debug"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases?per_page=1",
-        "jsonpath": "$.tag_name",
-        "regex": "v(.*)"
+        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases",
+        "regex": "/releases/tag/v([\\d.]+(-alpha|-beta|-rc)?(\\.\\d+)?)"
     },
     "autoupdate": {
         "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
