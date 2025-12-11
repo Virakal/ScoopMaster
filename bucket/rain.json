@@ -5,12 +5,12 @@
     "license": "Apache-2.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/aws-cloudformation/rain/releases/download/v1.24.1/rain-v1.24.1_windows-i386.zip",
+            "url": "https://gh-proxy.org/https://github.com/aws-cloudformation/rain/releases/download/v1.24.1/rain-v1.24.1_windows-i386.zip",
             "hash": "e7ab8e8e22c632d5423e3612dfc05ddcff9c7030d83c2b2394229bc646e5cd95",
             "extract_dir": "rain-v1.24.1_windows-i386"
         },
         "64bit": {
-            "url": "https://github.com/aws-cloudformation/rain/releases/download/v1.24.1/rain-v1.24.1_windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/aws-cloudformation/rain/releases/download/v1.24.1/rain-v1.24.1_windows-amd64.zip",
             "hash": "6c8cf4bdd8f34036c19db4a7f453cee8e70bb9cb7e4ba39700e78ede3c5c765a",
             "extract_dir": "rain-v1.24.1_windows-amd64"
         }
@@ -20,11 +20,11 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/aws-cloudformation/rain/releases/download/v$version/rain-v$version_windows-i386.zip",
+                "url": "https://gh-proxy.org/https://github.com/aws-cloudformation/rain/releases/download/v$version/rain-v$version_windows-i386.zip",
                 "extract_dir": "rain-v$version_windows-i386"
             },
             "64bit": {
-                "url": "https://github.com/aws-cloudformation/rain/releases/download/v$version/rain-v$version_windows-amd64.zip",
+                "url": "https://gh-proxy.org/https://github.com/aws-cloudformation/rain/releases/download/v$version/rain-v$version_windows-amd64.zip",
                 "extract_dir": "rain-v$version_windows-amd64"
             }
         }

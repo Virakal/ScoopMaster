@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MoonshotAI/kimi-cli/releases/download/0.61/kimi-0.61-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/MoonshotAI/kimi-cli/releases/download/0.61/kimi-0.61-x86_64-pc-windows-msvc.zip",
             "hash": "e4adc91c605529ec0041f00ffa4a3cadd7786ae945c653bb09c9d9d362225de9"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/MoonshotAI/kimi-cli/releases/download/$version/kimi-$version-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/MoonshotAI/kimi-cli/releases/download/$version/kimi-$version-x86_64-pc-windows-msvc.zip"
             }
         },
         "hash": {

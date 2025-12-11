@@ -5,7 +5,7 @@
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trufflesecurity/trufflehog/releases/download/v3.92.2/trufflehog_3.92.2_windows_amd64.tar.gz",
+            "url": "https://gh-proxy.org/https://github.com/trufflesecurity/trufflehog/releases/download/v3.92.2/trufflehog_3.92.2_windows_amd64.tar.gz",
             "hash": "3a089ee04fdeb6ab1bdb9b56fea7477f598e82369bcb6fed943db5317e47c777"
         }
     },
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/trufflesecurity/trufflehog/releases/download/v$version/trufflehog_$version_windows_amd64.tar.gz"
+                "url": "https://gh-proxy.org/https://github.com/trufflesecurity/trufflehog/releases/download/v$version/trufflehog_$version_windows_amd64.tar.gz"
             }
         },
         "hash": {

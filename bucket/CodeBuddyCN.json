@@ -1,93 +1,43 @@
 {
-    "version": "4.1.0",
-    "description": "An AI-powered IDE that makes programming more enjoyable and efficient.",
-    "homepage": "https://www.codebuddy.ai/",
-    "license": "Proprietary",
-    "notes": [
-        "For github integration, run:",
-        "'reg import \"$dir\\install-github-integration.reg\"'"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.1.0.14556516-ffc462f926-bc94cba3-cn.exe",
-            "hash": "187221640eab37c9b023b8cd6e59725375bd7a11e5e7d4148fac0790628bc746",
-            "extract_dir": "{code_GetDestDir}"
-        }
-    },
-    "innosetup": true,
-    "pre_install": [
-        "# 处理用户配置目录",
-        "$config_dirs = @(",
-        "    '.codebuddycn'",
-        ")",
-        "foreach ($config_dir in $config_dirs) {",
-        "    $target_dir = Join-Path $env:USERPROFILE $config_dir",
-        "    $link_dir = Join-Path $persist_dir $config_dir",
-        "    & \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $target_dir $link_dir",
-        "}",
-        "",
-        "$appdata_dir = Join-Path $env:APPDATA \"CodeBuddy CN\"",
-        "$persist_data_dir = Join-Path $persist_dir data",
-        "& \"$bucketsdir\\$bucket\\scripts\\link.ps1\" $appdata_dir $persist_data_dir"
-    ],
-    "post_install": [
-        "$dirpath = \"$dir\".Replace('\\', '\\\\')",
-        "$exepath = \"$dir\\CodeBuddy CN.exe\".Replace('\\', '\\\\')",
-        "'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context', 'install-github-integration', 'uninstall-github-integration' | ForEach-Object {",
-        "  if (Test-Path \"$bucketsdir\\$bucket\\scripts\\codebuddyCN\\$_.reg\") {",
-        "    $content = Get-Content \"$bucketsdir\\$bucket\\scripts\\codebuddyCN\\$_.reg\"",
-        "    $content = $content.Replace('$buddydir', $dirpath)",
-        "    $content = $content.Replace('$buddy', $exepath)",
-        "    if ($global) {",
-        "      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
-        "    }",
-        "    $content | Set-Content -Path \"$dir\\$_.reg\"",
-        "  }",
-        "}",
-        "# 自动导入注册表（可选）",
-        "reg import \"$dir\\install-context.reg\"",
-        "reg import \"$dir\\install-associations.reg\""
-    ],
-    "uninstaller": {
-        "script": [
-            "if ($cmd -eq 'uninstall')",
-            "{",
-            "   reg import \"$dir\\uninstall-context.reg\" ",
-            "   reg import \"$dir\\uninstall-github-integration.reg\" ",
-            "}"
-        ]
-    },
-    "bin": [
-        [
-            "bin/buddycn.cmd",
-            "buddycn"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "CodeBuddy CN.exe",
-            "CodeBuddy CN"
-        ]
-    ],
-    "persist": [
-        "data",
-        ".codebuddycn"
-    ],
-    "checkver": {
-        "url": "https://copilot.tencent.com/v2/update?platform=ide-win32-x64-user",
-        "jsonpath": "$.url",
-        "regex": "://(?<link>.*)-user-(?<version>\\d+\\.\\d+\\.\\d+)\\.(?<build>.+)\\.exe"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://$matchLink-user-$version.$matchBuild.exe",
-                "hash": {
-                    "url": "https://copilot.tencent.com/v2/update?platform=ide-win32-x64-user",
-                    "jsonpath": "$.sha256hash",
-                    "type": "sha256"
-                }
-            }
-        }
+  "version": "4.0.1",
+  "description": "An AI-powered IDE",
+  "homepage": "https://copilot.tencent.com/ide/",
+  "license": "Proprietary",
+  "architecture": {
+    "64bit": {
+      "url": "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/win32-x64-user/CodeBuddy-win32-x64-user-4.0.1.14157604-a7845cb9d8-d81a7bee-cn.exe",
+      "hash": "1e3685a0e33a2f37c24ab4f8d4733afe9e65f7a543ca5ce1391990c4bb312399",
+      "extract_dir": "{code_GetDestDir}"
     }
+  },
+  "innosetup": true,
+  "post_install": [
+    "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.codebuddycn\\extensions\")) {",
+    "    info '[Portable Mode] Copying extensions...'",
+    "    Copy-Item \"$env:USERPROFILE\\.codebuddycn\\extensions\" \"$dir\\data\" -Recurse",
+    "}",
+    "if (!(Test-Path \"$dir\\data\\user-data\") -and (Test-Path \"$env:AppData\\CodeBuddy CN\")) {",
+    "    info '[Portable Mode] Copying user data...'",
+    "    Copy-Item \"$env:AppData\\CodeBuddy CN\" \"$dir\\data\\user-data\" -Recurse",
+    "}",
+    "$extensions_file = \"$dir\\data\\extensions\\extensions.json\"",
+    "if ((Test-Path \"$extensions_file\")) {",
+    "    info 'Adjusting path in extensions file...'",
+    "    (Get-Content \"$extensions_file\") -replace '(?<=codebuddycn(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
+    "}"
+  ],
+  "bin": [
+    [
+      "bin/buddycn.cmd",
+      "codebuddycn"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "CodeBuddy CN.exe",
+      "CodeBuddy CN",
+      "--user-data-dir=\"$dir\\data\\user-data\" --extensions-dir=\"$dir\\data\\extensions\""
+    ]
+  ],
+  "persist": "data"
 }

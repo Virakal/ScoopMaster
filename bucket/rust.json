@@ -1,47 +1,36 @@
 {
     "version": "1.91.1",
-    "description": "A language empowering everyone to build reliable and efficient software. (MSVC toolchain)",
+    "description": "A language empowering everyone to build reliable and efficient software. (GNU toolchain)",
     "homepage": "https://www.rust-lang.org",
     "license": "MIT|Apache-2.0",
-    "notes": [
-        "Use the rustup package instead for easier management of multiple toolchains, including beta/nightly releases.",
-        "According to https://doc.rust-lang.org/book/ch01-01-installation.html#installing-rustup-on-windows",
-        "Microsoft C++ Build Tools is needed and can be downloaded here: https://visualstudio.microsoft.com/visual-cpp-build-tools/",
-        "When installing build tools, these two components should be selected:",
-        "- MSVC - VS C++ x64/x86 build tools",
-        "- Windows SDK"
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://static.rust-lang.org/dist/rust-1.91.1-x86_64-pc-windows-msvc.msi",
-            "hash": "28b39019c244f4316a4402c0c91c0a9b56b5016ff4f7950e6b73f0ad27bb2169"
+            "url": "https://static.rust-lang.org/dist/rust-1.91.1-x86_64-pc-windows-gnu.msi",
+            "hash": "d415a8998bd616604f589fa26a2cec3dd38310e98211e0f0043156983ae30452"
         },
         "32bit": {
-            "url": "https://static.rust-lang.org/dist/rust-1.91.1-i686-pc-windows-msvc.msi",
-            "hash": "b19346035c570f673dce7dcb75864f43a07bfd398a14ef4d4456241aca3ced62"
-        },
-        "arm64": {
-            "url": "https://static.rust-lang.org/dist/rust-1.91.1-aarch64-pc-windows-msvc.msi",
-            "hash": "9aa4d87363ffeddbf77312cf1f72a3bcf11f1751f95e0b7141cf1c8f8ccde895"
+            "url": "https://static.rust-lang.org/dist/rust-1.91.1-i686-pc-windows-gnu.msi",
+            "hash": "498cb1270f64bf48098c885415649dd822cfb53b60ae8f9451b22cfda60a2ca5"
         }
     },
     "extract_dir": "Rust",
     "bin": [
+        "bin\\rls.exe",
         "bin\\rustc.exe",
         "bin\\rustdoc.exe",
         "bin\\cargo.exe"
     ],
-    "checkver": "Version ([\\d.]+)",
+    "checkver": {
+        "url": "https://www.rust-lang.org/",
+        "regex": "Version ([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://static.rust-lang.org/dist/rust-$version-x86_64-pc-windows-msvc.msi"
+                "url": "https://static.rust-lang.org/dist/rust-$version-x86_64-pc-windows-gnu.msi"
             },
             "32bit": {
-                "url": "https://static.rust-lang.org/dist/rust-$version-i686-pc-windows-msvc.msi"
-            },
-            "arm64": {
-                "url": "https://static.rust-lang.org/dist/rust-$version-aarch64-pc-windows-msvc.msi"
+                "url": "https://static.rust-lang.org/dist/rust-$version-i686-pc-windows-gnu.msi"
             }
         },
         "hash": {

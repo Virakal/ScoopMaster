@@ -1,28 +1,23 @@
 {
     "version": "3.16.1",
-    "homepage": "https://github.com/LuaLS/lua-language-server",
-    "description": "A language server written in Lua that offers Lua language support.",
-    "license": "MIT",
+    "description": "Lua Language Server coded by Lua",
+    "homepage": "https://github.com/sumneko/lua-language-server",
+    "license": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LuaLS/lua-language-server/releases/download/3.16.1/lua-language-server-3.16.1-win32-x64.zip",
+            "url": "https://gh.llkk.cc/https://github.com/sumneko/lua-language-server/releases/download/3.16.1/lua-language-server-3.16.1-win32-x64.zip",
             "hash": "76d3602ed34c662c3ce9fd83be6437b4ebacc22aea7663d600634e076f50fffd"
-        },
-        "32bit": {
-            "url": "https://github.com/LuaLS/lua-language-server/releases/download/3.16.1/lua-language-server-3.16.1-win32-ia32.zip",
-            "hash": "a77bcb62a3a69150f6f80d326a4c3c436cf25a0bc558e6a783b99f73a9578772"
         }
     },
-    "bin": "bin\\lua-language-server.exe",
-    "persist": "log",
-    "checkver": "github",
+    "bin": "bin/lua-language-server.exe",
+    "checkver": {
+        "github": "https://github.com/sumneko/lua-language-server",
+        "regex": "releases/tag/([\\d\\.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LuaLS/lua-language-server/releases/download/$version/lua-language-server-$version-win32-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/LuaLS/lua-language-server/releases/download/$version/lua-language-server-$version-win32-ia32.zip"
+                "url": "https://gh.llkk.cc/https://github.com/sumneko/lua-language-server/releases/download/$version/lua-language-server-$version-win32-x64.zip"
             }
         }
     }

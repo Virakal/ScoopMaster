@@ -19,7 +19,6 @@
             "hash": "06c05c06523abf3930301b3022527ad881b1a7f8bf036ed6d93c8e68569041bb"
         }
     },
-    "extract_dir": "git-lfs-3.7.1",
     "bin": "git-lfs.exe",
     "checkver": {
         "github": "https://github.com/git-lfs/git-lfs"
@@ -35,7 +34,6 @@
         },
         "hash": {
             "url": "$baseurl/sha256sums.asc"
-        },
-        "extract_dir": "git-lfs-$version"
+        }
     }
 }

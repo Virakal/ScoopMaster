@@ -11,10 +11,6 @@
         "32bit": {
             "url": "https://frippery.org/files/busybox/busybox-w32-FRP-5857-g3681e397f.exe#/busybox.exe",
             "hash": "94baf9f3db6edccff5dd378c14e6f61b9cbdd253479ed07671e498cf0f72ef28"
-        },
-        "arm64": {
-            "url": "https://frippery.org/files/busybox/busybox-w64a-FRP-5857-g3681e397f.exe#/busybox.exe",
-            "hash": "4e39dc577782fd0af75222738e609ba43d8d2a98131e88928f1b0dad45048b99"
         }
     },
     "post_install": [
@@ -38,9 +34,6 @@
             },
             "32bit": {
                 "url": "https://frippery.org/files/busybox/busybox-w32-FRP-$version.exe#/busybox.exe"
-            },
-            "arm64": {
-                "url": "https://frippery.org/files/busybox/busybox-w64a-FRP-$version.exe#/busybox.exe"
             }
         },
         "hash": {
@@ -48,31 +41,11 @@
         }
     },
     "bin": [
-        [
-            "busybox.exe",
-            "[",
-            "["
-        ],
-        [
-            "busybox.exe",
-            "[[",
-            "[["
-        ],
         "busybox.exe",
-        [
-            "busybox.exe",
-            "ar",
-            "ar"
-        ],
         [
             "busybox.exe",
             "arch",
             "arch"
-        ],
-        [
-            "busybox.exe",
-            "ascii",
-            "ascii"
         ],
         [
             "busybox.exe",
@@ -83,11 +56,6 @@
             "busybox.exe",
             "awk",
             "awk"
-        ],
-        [
-            "busybox.exe",
-            "base32",
-            "base32"
         ],
         [
             "busybox.exe",
@@ -103,11 +71,6 @@
             "busybox.exe",
             "bash",
             "bash"
-        ],
-        [
-            "busybox.exe",
-            "bc",
-            "bc"
         ],
         [
             "busybox.exe",
@@ -133,16 +96,6 @@
             "busybox.exe",
             "cat",
             "cat"
-        ],
-        [
-            "busybox.exe",
-            "cdrop",
-            "cdrop"
-        ],
-        [
-            "busybox.exe",
-            "chattr",
-            "chattr"
         ],
         [
             "busybox.exe",
@@ -178,11 +131,6 @@
             "busybox.exe",
             "cpio",
             "cpio"
-        ],
-        [
-            "busybox.exe",
-            "crc32",
-            "crc32"
         ],
         [
             "busybox.exe",
@@ -233,11 +181,6 @@
             "busybox.exe",
             "dpkg-deb",
             "dpkg-deb"
-        ],
-        [
-            "busybox.exe",
-            "drop",
-            "drop"
         ],
         [
             "busybox.exe",
@@ -296,18 +239,8 @@
         ],
         [
             "busybox.exe",
-            "flock",
-            "flock"
-        ],
-        [
-            "busybox.exe",
             "fold",
             "fold"
-        ],
-        [
-            "busybox.exe",
-            "free",
-            "free"
         ],
         [
             "busybox.exe",
@@ -381,23 +314,8 @@
         ],
         [
             "busybox.exe",
-            "inotifyd",
-            "inotifyd"
-        ],
-        [
-            "busybox.exe",
-            "install",
-            "install"
-        ],
-        [
-            "busybox.exe",
             "ipcalc",
             "ipcalc"
-        ],
-        [
-            "busybox.exe",
-            "jn",
-            "jn"
         ],
         [
             "busybox.exe",
@@ -408,11 +326,6 @@
             "busybox.exe",
             "killall",
             "killall"
-        ],
-        [
-            "busybox.exe",
-            "lash",
-            "lash"
         ],
         [
             "busybox.exe",
@@ -441,11 +354,6 @@
         ],
         [
             "busybox.exe",
-            "lsattr",
-            "lsattr"
-        ],
-        [
-            "busybox.exe",
             "lzcat",
             "lzcat"
         ],
@@ -463,11 +371,6 @@
             "busybox.exe",
             "lzopcat",
             "lzopcat"
-        ],
-        [
-            "busybox.exe",
-            "make",
-            "make"
         ],
         [
             "busybox.exe",
@@ -506,11 +409,6 @@
         ],
         [
             "busybox.exe",
-            "nproc",
-            "nproc"
-        ],
-        [
-            "busybox.exe",
             "od",
             "od"
         ],
@@ -523,16 +421,6 @@
             "busybox.exe",
             "patch",
             "patch"
-        ],
-        [
-            "busybox.exe",
-            "pdpmake",
-            "pdpmake"
-        ],
-        [
-            "busybox.exe",
-            "pdrop",
-            "pdrop"
         ],
         [
             "busybox.exe",
@@ -646,11 +534,6 @@
         ],
         [
             "busybox.exe",
-            "sha384sum",
-            "sha384sum"
-        ],
-        [
-            "busybox.exe",
             "sha512sum",
             "sha512sum"
         ],
@@ -691,16 +574,6 @@
         ],
         [
             "busybox.exe",
-            "strings",
-            "strings"
-        ],
-        [
-            "busybox.exe",
-            "stty",
-            "stty"
-        ],
-        [
-            "busybox.exe",
             "su",
             "su"
         ],
@@ -708,11 +581,6 @@
             "busybox.exe",
             "sum",
             "sum"
-        ],
-        [
-            "busybox.exe",
-            "sync",
-            "sync"
         ],
         [
             "busybox.exe",
@@ -776,11 +644,6 @@
         ],
         [
             "busybox.exe",
-            "tsort",
-            "tsort"
-        ],
-        [
-            "busybox.exe",
             "ttysize",
             "ttysize"
         ],
@@ -836,11 +699,6 @@
         ],
         [
             "busybox.exe",
-            "uptime",
-            "uptime"
-        ],
-        [
-            "busybox.exe",
             "usleep",
             "usleep"
         ],
@@ -868,11 +726,6 @@
             "busybox.exe",
             "wc",
             "wc"
-        ],
-        [
-            "busybox.exe",
-            "wget",
-            "wget"
         ],
         [
             "busybox.exe",

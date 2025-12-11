@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ast-grep/ast-grep/releases/download/0.40.1/app-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/0.40.1/app-x86_64-pc-windows-msvc.zip",
             "hash": "4ac3d772c3d87aff8913708219ad3ca73cff2fff4846fd12f9967e87e55fc94e"
         }
     },
@@ -19,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ast-grep/ast-grep/releases/download/$version/app-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/$version/app-x86_64-pc-windows-msvc.zip"
             }
         }
     }

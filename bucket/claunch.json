@@ -1,7 +1,19 @@
 {
+    "version": "4.04",
+    "description": "CLaunch: a skin-customizable button-based program launcher",
     "homepage": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
-    "version": "4.06",
-    "license": "",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_404.exe#/dl.7z",
+            "hash": "137377081e7d38f8d12c41b98494eff774c12c712f8400d165e99809dc39ab05"
+        },
+        "32bit": {
+            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl404.exe#/dl.7z",
+            "hash": "e34c26fc7fa6a25bd951619491bd0f0a6debcc38a2f5163ed2dbb00451ebe3b0"
+        }
+    },
+    "extract_dir": "",
     "bin": "CLaunch.exe",
     "shortcuts": [
         [
@@ -9,30 +21,22 @@
             "CLaunch"
         ]
     ],
+    "post_install": "Remove-Item (Join-Path $dir Setup.exe)",
     "persist": [
-        "Data"
+        "Data",
+        "Plugins"
     ],
-    "architecture": {
-        "64bit": {
-            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_406.zip",
-            "hash": "aba7900f526e10639b867983794c59c23347b31b17ad40cdf49dc11f096dd71f"
-        },
-        "32bit": {
-            "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl406.zip",
-            "hash": "2d2814c4bb1b55e07b11eb42c192ed65876bb46e503c110059d93b1e783d5ae6"
-        }
-    },
     "checkver": {
-        "url": "https://hp.vector.co.jp/authors/VA018351/claunch.html",
-        "re": "CLaunch Ver. (\\d+.\\d+)"
+        "url": "https://hp.vector.co.jp/authors/VA018351/history_cl.html",
+        "regex": ">Ver\\. ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_$cleanVersion.zip"
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl64_$cleanVersion.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl$cleanVersion.zip"
+                "url": "https://ss1.xrea.com/pyonkichi.g1.xrea.com/archives/cl$cleanVersion.exe#/dl.7z"
             }
         }
     }

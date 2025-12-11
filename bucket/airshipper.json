@@ -1,30 +1,37 @@
 {
-    "version": "0.16.0",
-    "description": "The official game launcher for Veloren, an action-adventure role-playing game set in a vast fantasy world.",
-    "homepage": "https://veloren.net/",
+    "homepage": "https://veloren.net/download/",
+    "description": "The official Veloren launcher",
     "license": "GPL-3.0-only",
+    "version": "0.14.0",
     "architecture": {
         "64bit": {
-            "url": "https://gitlab.com/veloren/airshipper/-/releases/v0.16.0/downloads/binaries/windows-client-x86_64#/airshipper.exe",
-            "hash": "af340a12777a0df2f601d9fa7069ba8781a0297683e1da3099f0b20b8a3d20b7"
+            "url": "https://github.com/veloren/Airshipper/releases/download/v0.14.0/airshipper-windows.msi",
+            "hash": "734ad5707f8baa86a59cf065fdf6657e99d11074f09debbd24018730b39d2cbe"
         }
     },
-    "bin": "airshipper.exe",
+    "pre_install": [
+        "robocopy \"$dir\\PFiles\\Airshipper\" \"$dir\" /MOVE /E /NFL /NDL /NJH /NJS /nc /ns /np",
+        "Remove-Item -Force -Recurse -Path \"$dir\\PFiles\""
+    ],
     "shortcuts": [
         [
             "airshipper.exe",
             "Airshipper"
+        ],
+        [
+            "airshipper.exe",
+            "Veloren"
         ]
     ],
-    "notes": "Airshipper is NOT portable.",
+    "bin": "airshipper.exe",
     "checkver": {
-        "url": "https://gitlab.com/veloren/airshipper/-/releases.atom",
-        "regex": "/-/releases/v([\\d.]+)<"
+        "github": "https://github.com/veloren/Airshipper",
+        "regex": "(?:Release|v) ?(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gitlab.com/veloren/airshipper/-/releases/v$version/downloads/binaries/windows-client-x86_64#/airshipper.exe"
+                "url": "https://github.com/veloren/Airshipper/releases/download/v$version/airshipper-windows.msi"
             }
         }
     }

@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/oxc-project/oxc/releases/download/apps_v1.32.0/oxlint-win32-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/oxc-project/oxc/releases/download/apps_v1.32.0/oxlint-win32-x64.zip",
             "hash": "0b21c4ff7222738c6089312892df57ba19153d9eee42faf19448ad34e718d711"
         },
         "arm64": {
-            "url": "https://github.com/oxc-project/oxc/releases/download/apps_v1.32.0/oxlint-win32-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/oxc-project/oxc/releases/download/apps_v1.32.0/oxlint-win32-arm64.zip",
             "hash": "9edae5d786a504bd3a0d499363d717d5482108487e0e44874cfa32de96d49f80"
         }
     },
@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/oxc-project/oxc/releases/download/apps_v$version/oxlint-win32-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/oxc-project/oxc/releases/download/apps_v$version/oxlint-win32-x64.zip"
             },
             "arm64": {
-                "url": "https://github.com/oxc-project/oxc/releases/download/apps_v$version/oxlint-win32-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/oxc-project/oxc/releases/download/apps_v$version/oxlint-win32-arm64.zip"
             }
         }
     }
