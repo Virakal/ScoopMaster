@@ -5,12 +5,12 @@
     "license": "BSD-3-Clause, GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/imputnet/helium-windows/releases/download/0.7.1.1/helium_0.7.1.1_x64-windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/imputnet/helium-windows/releases/download/0.7.1.1/helium_0.7.1.1_x64-windows.zip",
             "hash": "d7d0e7e22f1f6c27dc7fa98b5df3e588f9bb3b4acc9f308e6378a3cddbbd5532",
             "extract_dir": "helium_0.7.1.1_x64-windows"
         },
         "arm64": {
-            "url": "https://github.com/imputnet/helium-windows/releases/download/0.7.1.1/helium_0.7.1.1_arm64-windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/imputnet/helium-windows/releases/download/0.7.1.1/helium_0.7.1.1_arm64-windows.zip",
             "hash": "aabae2a1260ce6c61105d6921f3daec339b69d872c50637ad132a58b64cc4ea6",
             "extract_dir": "helium_0.7.1.1_arm64-windows"
         }
@@ -37,11 +37,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_x64-windows.zip",
+                "url": "https://gh-proxy.org/https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_x64-windows.zip",
                 "extract_dir": "helium_$version_x64-windows"
             },
             "arm64": {
-                "url": "https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_arm64-windows.zip",
+                "url": "https://gh-proxy.org/https://github.com/imputnet/helium-windows/releases/download/$version/helium_$version_arm64-windows.zip",
                 "extract_dir": "helium_$version_arm64-windows"
             }
         }

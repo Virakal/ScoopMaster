@@ -13,14 +13,14 @@
         [
             "thorium.exe",
             "thorium",
-            "--user-data-dir=\"$dir\\User Data\""
+            "--user-data-dir=\"$dir\\User Data\" --silent-debugger-extension-api"
         ]
     ],
     "shortcuts": [
         [
             "thorium.exe",
             "Thorium",
-            "--user-data-dir=\"$dir\\User Data\""
+            "--user-data-dir=\"$dir\\User Data\" --silent-debugger-extension-api"
         ]
     ],
     "post_install": [
@@ -30,7 +30,7 @@
         "}"
     ],
     "env_set": {
-        "CHROME_EXECUTABLE": "$dir\\thorium.exe"
+        "CHROME_EXECUTABLE": "$scoopdir\\shims\\thorium.exe"
     },
     "persist": "User Data",
     "checkver": {

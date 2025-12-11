@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/DanielGavin/ols/releases/download/nightly/ols-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/DanielGavin/ols/releases/download/nightly/ols-x86_64-pc-windows-msvc.zip",
             "hash": "893032bbc19cf3c2729ea696215c419d3f3be0207961c71729ca66d7e7051bda"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/DanielGavin/ols/releases/download/nightly/ols-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/DanielGavin/ols/releases/download/nightly/ols-x86_64-pc-windows-msvc.zip"
             }
         }
     }

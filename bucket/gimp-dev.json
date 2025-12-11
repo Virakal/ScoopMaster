@@ -3,7 +3,7 @@
     "description": "GNU Image Manipulation Program",
     "homepage": "https://www.gimp.org",
     "license": "GPL-3.0-only",
-    "url": "https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.0-RC1-setup.exe",
+    "url": "https://mirrors.nju.edu.cn/gimp/gimp/v3.2/windows/gimp-3.2.0-RC1-setup.exe",
     "hash": "26edf72d3b5705b5b7f3cf4bfeaf7271f484b1b84fcb8837f56def1008dbc259",
     "innosetup": true,
     "installer": {
@@ -66,7 +66,7 @@
         "regex": "The current development release of GIMP is \\<b\\>([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://download.gimp.org/mirror/pub/gimp/v$majorVersion.$minorVersion/windows/gimp-$matchHead$matchTail-setup.exe",
+        "url": "https://mirrors.nju.edu.cn/gimp/gimp/v$majorVersion.$minorVersion/windows/gimp-$matchHead$matchTail-setup.exe",
         "hash": {
             "url": "$baseurl/SHA256SUMS"
         },
