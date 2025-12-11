@@ -1,25 +1,25 @@
 {
     "version": "25.12.8",
-    "description": "Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.",
+    "description": "A platform for building proxies to bypass network restrictions",
     "homepage": "https://github.com/XTLS/Xray-core",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/XTLS/Xray-core/releases/download/v25.12.8/Xray-windows-64.zip",
-            "hash": "sha512:28681dbba03943c330b4bfc62b8b2e1fce707e92569bca068d41a55cc79533ff7c76984958ac5075d61c061ae9cc249ac65f32e323c513316a906b7dc8d6e589"
+            "hash": "5419794670658e14519409320752329375e0fd8a57089f373b3febe9bf3ec5d5"
         },
         "32bit": {
             "url": "https://github.com/XTLS/Xray-core/releases/download/v25.12.8/Xray-windows-32.zip",
-            "hash": "sha512:3790e0e0a29a4d80242a7e7228afdb0de51a4fbe5134c05127736e33f0fc4092abdebcbec26e27f7ddf36f9775d5621d391aa46e212619f2d0ecd85c121611ce"
+            "hash": "b270190001fd9e566b8c1dc5f4bd8dac62d261d26fe23b7e42953e11adcde8f9"
         }
     },
-    "pre_install": "if (-not (Test-Path \"$persist_dir\\config.json\")) { New-Item \"$dir\\config.json\" -ItemType file | Out-Null }",
-    "env_add_path": ".",
-    "persist": [
-        "config.json",
-        "geoip.dat",
-        "geosite.dat"
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
+        "    Set-Content \"$dir\\config.json\" '{}' -Encoding 'Ascii'",
+        "}"
     ],
+    "bin": "xray.exe",
+    "persist": "config.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -29,10 +29,6 @@
             "32bit": {
                 "url": "https://github.com/XTLS/Xray-core/releases/download/v$version/Xray-windows-32.zip"
             }
-        },
-        "hash": {
-            "url": "$url.dgst",
-            "regex": "SHA2-512= $sha512"
         }
     }
 }

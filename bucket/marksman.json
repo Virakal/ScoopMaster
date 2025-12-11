@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/artempyanykh/marksman/releases/download/2025-11-30/marksman.exe",
+            "url": "https://github.com/artempyanykh/marksman/releases/download/2025-11-30/marksman.exe",
             "hash": "9a9be7c71290cfe18e79c1785c16f913545b603fc8fde7a8d131462247d24a77"
         }
     },
@@ -17,7 +17,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/artempyanykh/marksman/releases/download/$version/marksman.exe"
+                "url": "https://github.com/artempyanykh/marksman/releases/download/$version/marksman.exe"
             }
         }
     }

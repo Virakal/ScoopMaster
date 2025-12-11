@@ -1,32 +1,19 @@
 {
+    "version": "2.1.40",
+    "description": "Image and Video screen capture",
     "homepage": "https://www.screenpresso.com/",
-    "license": "https://www.screenpresso.com/software-license-agreement/",
-    "version": "2.1.40.0",
+    "license": "Freeware",
     "url": "https://www.screenpresso.com/binaries/releases/stable/dotnet47/Screenpresso.exe",
     "hash": "531f5e086b276990dadae1a893d44de14b58591a022dcb746bb85f63e2175dcf",
-    "bin": [
-        [
-            "Screenpresso.exe",
-            "screenpresso",
-            "--portablemode"
-        ]
-    ],
     "shortcuts": [
         [
             "Screenpresso.exe",
-            "Screenpresso",
-            "--portablemode"
-        ],
-        [
-            "Screenpresso.exe",
-            "Screenpresso Startup",
-            "run --portablemode --hideworkspace"
+            "Screenpresso"
         ]
     ],
-    "persist": "Medias",
     "checkver": {
-        "url": "https://screenpresso.en.uptodown.com/windows",
-        "re": "Screenpresso ([\\d.]+)"
+        "url": "https://www.screenpresso.com/download/",
+        "regex": "Latest version .([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://www.screenpresso.com/binaries/releases/stable/dotnet47/Screenpresso.exe"

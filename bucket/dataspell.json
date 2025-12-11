@@ -1,56 +1,56 @@
 {
-    "version": "2025.3-253.28294.351",
-    "description": "Cross-Platform IDE for Data Scientists by JetBrains.",
-    "homepage": "https://www.jetbrains.com/dataspell/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.jetbrains.com/store/license.html"
+  "version": "2025.3-253.28294.351",
+  "description": "Cross-Platform IDE for Data Scientists by JetBrains.",
+  "homepage": "https://www.jetbrains.com/dataspell/",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://www.jetbrains.com/store/license.html"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://download.jetbrains.com/python/dataspell-2025.3.exe#/dl.7z",
+      "hash": "7586376b3f691db6705506e58ea8811cb6d246a8e1d2fa7746db4f4a9f9bf598"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://download.jetbrains.com/python/dataspell-2025.3.exe#/dl.7z",
-            "hash": "7586376b3f691db6705506e58ea8811cb6d246a8e1d2fa7746db4f4a9f9bf598"
-        },
-        "arm64": {
-            "url": "https://download.jetbrains.com/python/dataspell-2025.3-aarch64.exe#/dl.7z",
-            "hash": "1d6b57d92be7f6d08139c9a6b74892900db77af930eecd9dfaa82c8d3b121015"
-        }
-    },
-    "extract_to": "IDE",
-    "installer": {
-        "script": [
-            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
-            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
-        ]
-    },
-    "shortcuts": [
-        [
-            "IDE\\bin\\dataspell64.exe",
-            "JetBrains\\DataSpell"
-        ]
-    ],
-    "persist": [
-        "IDE\\bin\\idea.properties",
-        "IDE\\bin\\dataspell.exe.vmoptions",
-        "IDE\\bin\\dataspell64.exe.vmoptions",
-        "profile"
-    ],
-    "checkver": {
-        "url": "https://data.services.jetbrains.com/products/releases?code=DS&latest=true&platform=zip&type=release",
-        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
-        "replace": "${ver}-${build}"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.jetbrains.com/python/dataspell-$matchVer.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://download.jetbrains.com/python/dataspell-$matchVer-aarch64.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
+    "arm64": {
+      "url": "https://download.jetbrains.com/python/dataspell-2025.3-aarch64.exe#/dl.7z",
+      "hash": "1d6b57d92be7f6d08139c9a6b74892900db77af930eecd9dfaa82c8d3b121015"
     }
+  },
+  "extract_to": "IDE",
+  "installer": {
+    "script": [
+      "& \"$bucketsdir\\$bucket\\scripts\\jetbrains\\portable.ps1\" $dir $persist_dir",
+      "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
+    ]
+  },
+  "shortcuts": [
+    [
+      "IDE\\bin\\dataspell64.exe",
+      "JetBrains\\DataSpell"
+    ]
+  ],
+  "persist": [
+    "IDE\\bin\\idea.properties",
+    "IDE\\bin\\dataspell.exe.vmoptions",
+    "IDE\\bin\\dataspell64.exe.vmoptions",
+    "profile"
+  ],
+  "checkver": {
+    "url": "https://data.services.jetbrains.com/products/releases?code=DS&latest=true&platform=zip&type=release",
+    "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+    "replace": "${ver}-${build}"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://download.jetbrains.com/python/dataspell-$matchVer.exe#/dl.7z"
+      },
+      "arm64": {
+        "url": "https://download.jetbrains.com/python/dataspell-$matchVer-aarch64.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
 }

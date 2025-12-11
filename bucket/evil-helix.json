@@ -1,35 +1,18 @@
 {
-    "version": "20250915",
-    "description": "A soft fork of Helix which introduces Vim keybindings and more",
-    "homepage": "https://evil-helix.github.io/",
+    "version": "20250601b",
+    "description": "A soft fork of Helix with Vim keybindings and other enhancements",
+    "homepage": "https://github.com/usagi-flow/evil-helix",
     "license": "MPL-2.0",
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/usagi-flow/evil-helix/releases/download/release-20250915/evil-helix-amd64-windows.zip",
-            "hash": "43f2265cbcd67f70d961b13c03b20e21d68cce03753da679174df1c1514f378e",
-            "extract_dir": "helix"
-        }
-    },
-    "bin": [
-        "hx.exe",
-        [
-            "hx.exe",
-            "helix"
-        ]
-    ],
+    "url": "https://github.com/usagi-flow/evil-helix/releases/download/release-20250601/evil-helix-amd64-windows.zip",
+    "hash": "sha256:DF6D32B5557C970A70A4EAFBB58B06DE0F6951937F137A53DBDC0A969231B7F6",
+    "extract_dir": "helix",
+    "bin": "hx.exe",
     "checkver": {
-        "github": "https://github.com/usagi-flow/evil-helix",
-        "regex": "/releases/tag/release-([\\d.]+)"
+        "github": "usagi-flow/evil-helix",
+        "tag": "release-([\\d]+[a-z]?)",
+        "regex": "release-([\\d]+[a-z]?)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/usagi-flow/evil-helix/releases/download/release-$version/evil-helix-amd64-windows.zip",
-                "extract_dir": "helix"
-            }
-        }
+        "url": "https://github.com/usagi-flow/evil-helix/releases/download/release-$version/evil-helix-amd64-windows.zip"
     }
 }

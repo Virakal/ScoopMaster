@@ -1,0 +1,56 @@
+{
+    "##": "基于https://github.com/okibcn/ScoopMaster/blob/master/bucket/registry-finder.json",
+    "version": "2.60.0.0",
+    "description": "Registry Finder是内置Windows注册表编辑器的改进替代品。",
+    "license": "https://registry-finder.com/License.txt",
+    "homepage": "https://registry-finder.com/",
+    "architecture": {
+        "64bit": {
+            "url": "https://registry-finder.com/bin/2.60.0.0/RegistryFinder64.zip",
+            "hash": "b9afd948dac5cf022e455b1838324398ec8716da2ee9f95515be0e8db72259b6"
+        },
+        "32bit": {
+            "url": "https://registry-finder.com/bin/2.60.0.0/RegistryFinder.zip",
+            "hash": "559e0229efa45a8d78e305ed80434a271511da9a37c290895e07b831c620b398"
+        }
+    },
+    "shortcuts": [
+        [
+            "RegistryFinder.exe",
+            "Registry Finder"
+        ]
+    ],
+    "persist": [
+        "UndoHistory",
+        "VisitationHistory"
+    ],
+    "post_install": [
+        "'favorites.txt', 'RegistryFinder.config' | ForEach-Object {",
+        "Copy-Item \"$persist_dir\\$_\" \"$dir\" -Recurse -ErrorAction SilentlyContinue }"
+    ],
+    "pre_uninstall": [
+        "'favorites.txt', 'RegistryFinder.config' | ForEach-Object {",
+        "Copy-Item \"$dir\\$_\" \"$persist_dir\" -Recurse -ErrorAction SilentlyContinue }"
+    ],
+    "checkver": {
+        "regex": "bin/([\\d.]+)/RegistryFinder"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://registry-finder.com/bin/$version/RegistryFinder64.zip",
+                "hash": {
+                    "url": "https://registry-finder.com/",
+                    "regex": "Archive 64-bit</a> SHA-256: $sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://registry-finder.com/bin/$version/RegistryFinder.zip",
+                "hash": {
+                    "url": "https://registry-finder.com/",
+                    "regex": "Archive 32-bit</a> SHA-256: $sha256"
+                }
+            }
+        }
+    }
+}

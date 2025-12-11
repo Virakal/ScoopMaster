@@ -10,18 +10,15 @@
     "hash": "72f44c9f8ebcb1af43838f45ee5c4aa9c5444898b3468ab3f4af7b6076c5bc3f",
     "extract_dir": "gradle-9.2.1",
     "post_install": [
-        "$current_env = [System.Environment]::GetEnvironmentVariable('GRADLE_USER_HOME', 'User')",
+        "$current_env = Get-EnvVar -Name GRADLE_USER_HOME -Global:$global",
         "If ($null -eq $current_env) {",
         "    $path = \"$dir\\.gradle\"",
-        "    [System.Environment]::SetEnvironmentVariable('GRADLE_USER_HOME', $path, 'User')",
+        "    Set-EnvVar -Name GRADLE_USER_HOME -Value $path -Global:$global",
         "    $Env:GRADLE_USER_HOME = $path",
         "    Write-Host \"Environment variable 'GRADLE_USER_HOME' set to '$path'\"",
         "}"
     ],
-    "persist": [
-        ".gradle",
-        "caches"
-    ],
+    "persist": ".gradle",
     "bin": "bin\\gradle.bat",
     "checkver": {
         "url": "https://gradle.org/install/",

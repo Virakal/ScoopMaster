@@ -1,10 +1,9 @@
 {
-    "version": "0.1.1",
-    "description": "Custom password generator algorithm plugin for KeePass 2.x to generate word sequences.",
     "homepage": "https://github.com/fireout/keepasssequencer",
-    "license": "Unknown",
+    "description": "Custom password generator algorithm plugin for KeePass 2.x to generate word sequences.",
     "notes": "Default options located in \"$dir\\options.xml\".",
-    "depends": "extras/keepass",
+    "version": "0.1.1",
+    "license": "Unknown",
     "url": [
         "https://github.com/fireout/keepasssequencer/releases/download/release/0.1.1/Sequencer.dll",
         "https://github.com/fireout/keepasssequencer/releases/download/release/0.1.1/Sequencer.dll.config",
@@ -15,6 +14,7 @@
         "46935a8e2f420c629001fb6fb2850e3dd35c0ab430a5e506d159dcab1090ca0a",
         "80142a27be9faed4c8f3dad99bc77d2c196af07e6b8d57f7ccc1d831b971164d"
     ],
+    "depends": "diseq/keepass",
     "installer": {
         "script": [
             "$pluginDir = New-Item -ItemType Directory \"$(appdir keepass $global)\\current\\Plugins\\Sequencer\"",

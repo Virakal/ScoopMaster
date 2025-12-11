@@ -6,7 +6,7 @@
     "notes": "Only the full featured \"qsv\" build is included",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/dathere/qsv/releases/download/11.0.2/qsv-11.0.2-x86_64-pc-windows-msvc.zip",
+            "url": "https://github.com/dathere/qsv/releases/download/11.0.2/qsv-11.0.2-x86_64-pc-windows-msvc.zip",
             "hash": "5a6dd2aef8f853ad85180b85f55c9d95a3c2a7ebbd6e8158e806f8b9d76a68e1"
         }
     },
@@ -18,7 +18,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/dathere/qsv/releases/download/$version/qsv-$version-x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/dathere/qsv/releases/download/$version/qsv-$version-x86_64-pc-windows-msvc.zip"
             }
         }
     }

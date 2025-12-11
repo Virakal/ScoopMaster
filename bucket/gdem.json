@@ -1,0 +1,25 @@
+{
+    "version": "1.4.0",
+    "description": "一个基于 GodotHub 开发的 Godot 引擎版本管理工具。",
+    "homepage": "https://github.com/morning-start/godot-engine-manager",
+    "license": "MIT",
+    "url": "https://github.com/morning-start/godot-engine-manager/releases/download/v1.4.0/gdem-x86_64-pc-windows-gnu.zip",
+    "hash": "3ba396eaaff89d483e8b555382c3b59581e68a8d52a7eca7affdb33481f1572b",
+    "bin": "gdem.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/morning-start/godot-engine-manager/releases/download/v$version/gdem-x86_64-pc-windows-gnu.zip"
+    },
+    "env_set": {
+        "GDEM_ROOT": "$persist_dir",
+        "GODOT_PATH": "$dir/default/godot.exe"
+    },
+    "persist": [
+        "data",
+        "cache",
+        "home",
+        "default"
+    ],
+    "post_install": "gdem config",
+    "env_add_path": "default"
+}

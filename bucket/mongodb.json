@@ -16,8 +16,8 @@
         "\"$dir\\bin\\mongod.exe --config NEW_CONFIG_FILE\""
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "MongoDB Shell": "scoop-cn/mongosh"
+        "vcredist": "extras/vcredist2022",
+        "MongoDB Shell": "extras/mongosh"
     },
     "architecture": {
         "64bit": {

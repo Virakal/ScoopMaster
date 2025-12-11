@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/balena-io/balena-cli/releases/download/v23.2.8/balena-cli-v23.2.8-windows-x64-standalone.tar.gz",
+            "url": "https://github.com/balena-io/balena-cli/releases/download/v23.2.8/balena-cli-v23.2.8-windows-x64-standalone.tar.gz",
             "hash": "e7127f3d0a03839a7301f3562c26fa342a2d0cb67d2b72203111cc8e2f582878"
         }
     },
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/balena-io/balena-cli/releases/download/v$version/balena-cli-v$version-windows-x64-standalone.tar.gz"
+                "url": "https://github.com/balena-io/balena-cli/releases/download/v$version/balena-cli-v$version-windows-x64-standalone.tar.gz"
             }
         }
     }

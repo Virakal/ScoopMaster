@@ -1,50 +1,36 @@
 {
     "version": "0.92.17",
     "description": "High quality DirectShow video renderer",
-    "homepage": "https://madshi.net",
+    "homepage": "http://madvr.com",
     "license": "Freeware",
+    "notes": "Please do not move or delete this app manually!",
     "url": "https://www.videohelp.com/download/madVR09217.zip",
     "hash": "87e088f7b5de20d0a9065c73015d7fb7c225870380dd3169c70171b77e74bb97",
+    "depends": "sudo",
     "pre_install": [
-        "if (-not (Test-Path \"$persist_dir\\settings.bin\")) {",
-        "    New-Item -Path \"$dir\\settings.bin\" -ItemType File -Force | Out-Null",
+        "if (-not $global) {",
+        "    Write-Host -Foreground Red \"$app should be installed globally.\"",
+        "    break",
         "}",
-        "'install', 'uninstall' | ForEach-Object {",
-        "    $content = Get-Content -Path \"$dir\\$_.bat\" -Encoding Ascii",
-        "    $content -replace '@pause >nul' | Set-Content -Path \"$dir\\$_.bat\" -Encoding Ascii -Force",
+        "if (-not (Test-Path \"$persist_dir\\settings.bin\")) {",
+        "    New-Item -Path \"$dir\\settings.bin\" -ErrorAction SilentlyContinue | Out-Null",
+        "}",
+        "Get-ChildItem -Path $dir -Filter *install*.bat | ForEach-Object {",
+        "    $content = (Get-Content -Path $_).Replace(\"@pause >NUL\", \"\")",
+        "    $content = $content -replace \"@echo.*\", \"\"",
+        "    $content = (, \"@echo off\") + $content",
+        "    Set-Content -Path $_ -Value $content",
         "}"
     ],
     "installer": {
-        "script": [
-            "if (-not (is_admin)) { abort \"$app requires admin rights to $cmd\" }",
-            "Start-Process -FilePath \"$dir\\install.bat\" -NoNewWindow -Wait"
-        ]
+        "script": "\"$dir\\install.bat\""
     },
     "uninstaller": {
-        "script": [
-            "if (-not (is_admin)) { abort \"$app requires admin rights to $cmd\" }",
-            "Start-Process -FilePath \"$dir\\uninstall.bat\" -NoNewWindow -Wait"
-        ]
+        "script": "\"$dir\\uninstall.bat\""
     },
-    "shortcuts": [
-        [
-            "madTPG.exe",
-            "madTPG"
-        ],
-        [
-            "madLevelsTweaker.exe",
-            "NVidia & Intel RGB Levels Tweaker"
-        ],
-        [
-            "madHcCtrl.exe",
-            "mad Home Cinema Control"
-        ]
-    ],
+    "shortcuts": [["madHcCtrl.exe", "mad Home Cinema Control"]],
     "persist": "settings.bin",
-    "checkver": {
-        "url": "https://forum.doom9.org/showthread.php?t=146228",
-        "regex": ">madVR v([\\d.]+)"
-    },
+    "checkver": "latest release v([\\d.]+):",
     "autoupdate": {
         "url": "https://www.videohelp.com/download/madVR$cleanVersion.zip"
     }

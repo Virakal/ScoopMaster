@@ -5,7 +5,7 @@
     "license": "Apache-2.0,GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/osquery/osquery/releases/download/5.20.0/osquery-5.20.0.msi",
+            "url": "https://github.com/osquery/osquery/releases/download/5.20.0/osquery-5.20.0.msi",
             "hash": "68bc735b82aeb7af8660a770b6626be2adba5403e8112c62bab254ba5b917960"
         }
     },
@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/osquery/osquery/releases/download/$version/osquery-$version.msi"
+                "url": "https://github.com/osquery/osquery/releases/download/$version/osquery-$version.msi"
             }
         }
     },

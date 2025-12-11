@@ -1,10 +1,10 @@
 {
-    "version": "17.0.1",
+    "version": "14.1.2",
     "homepage": "https://archive.org/details/nintendo-switch-global-firmwares",
     "description": "released Global (Non-China) Firmware for the Nintendo Switch",
     "license": "Unlicense",
-    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2017.0.1.zip",
-    "hash": "8db3274cb050d304de53c4b2728c22d21ec41b2214b91a841bbc209e4458e105",
+    "url": "https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2014.1.2.zip",
+    "hash": "5e77b0e882643905b78619a88a8c4133ee7dd968eb0ab2ac49e124f765442eeb",
     "checkver": {
         "url": "https://archive.org/download/nintendo-switch-global-firmwares/",
         "regex": "Firmware%20(\\w\\w[\\w.]+).zip",

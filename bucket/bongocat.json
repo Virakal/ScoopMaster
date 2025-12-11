@@ -1,18 +1,43 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
-    "version": "1.0.3",
-    "description": "Adds a bongo cat on your taskbar!",
-    "homepage": "https://github.com/NSPC911/bongo-cat/",
+    "version": "0.8.2",
+    "description": "BongoCat 是一个可爱地互动桌面宠物应用，让你的桌面充满乐趣",
+    "homepage": "https://github.com/ayangweb/BongoCat",
     "license": "MIT",
-    "url": "https://github.com/NSPC911/bongo-cat/releases/download/v1.0.3/portable.zip",
-    "hash": "9a2e65f5e518838bd1c1f4271c537b2e6b91f6a83cdc79a552d0e1b81fdfd219",
-    "shortcuts": [["bongocat.exe", "Bongo Cat"]],
-    "bin": [["bongocat.exe", "bongocat"]],
-    "persist": "config",
-    "checkver": {
-        "github": "https://github.com/NSPC911/bongo-cat"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ayangweb/BongoCat/releases/download/v0.8.2/BongoCat_0.8.2_x64-setup.exe#/dl.7z",
+            "hash": "913bb5eafb515a3801819791154c017f42554a5665ccb15a3272fb64233016fc"
+        },
+        "32bit": {
+            "url": "https://github.com/ayangweb/BongoCat/releases/download/v0.8.2/BongoCat_0.8.2_x86-setup.exe#/dl.7z",
+            "hash": "85312fc93e4232bf689f0db11495acc349ba9bed4bd8076a4417eb0ed1c9022c"
+        },
+        "arm64": {
+            "url": "https://github.com/ayangweb/BongoCat/releases/download/v0.8.2/BongoCat_0.8.2_arm64-setup.exe#/dl.7z",
+            "hash": "2d67b8793132978c2a74770fad547932ff1743ba418f552b418aba4939bc1332"
+        }
     },
+    "shortcuts": [
+        [
+            "bongo-cat.exe",
+            "BongoCat"
+        ]
+    ],
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse",
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.ayangweb.BongoCat\", \"$env:LOCALAPPDATA\\com.ayangweb.BongoCat\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": "BongoCat is NOT portable. Settings are stored in '%APPDATA%\\com.ayangweb.BongoCat', and will be purged during uninstallation.",
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/NSPC911/bongo-cat/releases/download/v$version/portable.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ayangweb/BongoCat/releases/download/v$version/BongoCat_$version_x64-setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/ayangweb/BongoCat/releases/download/v$version/BongoCat_$version_x86-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/ayangweb/BongoCat/releases/download/v$version/BongoCat_$version_arm64-setup.exe#/dl.7z"
+            }
+        }
     }
 }

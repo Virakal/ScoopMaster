@@ -5,11 +5,11 @@
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/getsentry/sentry-cli/releases/download/2.58.3/sentry-cli-Windows-x86_64.exe#/sentry.exe",
+            "url": "https://github.com/getsentry/sentry-cli/releases/download/2.58.3/sentry-cli-Windows-x86_64.exe#/sentry.exe",
             "hash": "e26c363d45c572c6ae133a913657f995d171f7179aa221371da81966b0d5d2ef"
         },
         "32bit": {
-            "url": "https://gh-proxy.org/https://github.com/getsentry/sentry-cli/releases/download/2.58.3/sentry-cli-Windows-i686.exe#/sentry.exe",
+            "url": "https://github.com/getsentry/sentry-cli/releases/download/2.58.3/sentry-cli-Windows-i686.exe#/sentry.exe",
             "hash": "024a72a8ff6e076cd500c17086a7a146dfb59e9469936eb16b8a1ba31cf7394a"
         }
     },
@@ -26,10 +26,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/getsentry/sentry-cli/releases/download/$version/sentry-cli-Windows-x86_64.exe#/sentry.exe"
+                "url": "https://github.com/getsentry/sentry-cli/releases/download/$version/sentry-cli-Windows-x86_64.exe#/sentry.exe"
             },
             "32bit": {
-                "url": "https://gh-proxy.org/https://github.com/getsentry/sentry-cli/releases/download/$version/sentry-cli-Windows-i686.exe#/sentry.exe"
+                "url": "https://github.com/getsentry/sentry-cli/releases/download/$version/sentry-cli-Windows-i686.exe#/sentry.exe"
             }
         }
     }

@@ -1,56 +1,51 @@
 {
+    "homepage": "https://vivaldi.com",
     "version": "7.7.3851.61",
-    "description": "An innovatively designed web browser, based on Blink, for users in Vivaldi.net community that replaced departed My Opera.",
-    "homepage": "https://vivaldi.com/",
-    "license": "BSD-3-Clause",
+    "license": "https://vivaldi.com/zh-hans/privacy/vivaldi-end-user-license-agreement",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.x64.exe#/dl.7z",
+            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.x64.exe",
             "hash": "26709e75e79b67a7773e9bbfbc0cff89db1175da30bad7d5585a91a1d41e488b"
         },
         "32bit": {
-            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.exe#/dl.7z",
+            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.exe",
             "hash": "b10ad168650b84350b7355c89eb000b4f449528206ceda11b904b34ec2df5d16"
         },
         "arm64": {
-            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.arm64.exe#/dl.7z",
+            "url": "https://downloads.vivaldi.com/stable/Vivaldi.7.7.3851.61.arm64.exe",
             "hash": "73619118bb4e153b832d14c0087708b3e97534f7b2e5f33733a93c87802dd996"
         }
     },
+    "persist": "User Data",
     "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\vivaldi.7z\" -DestinationPath \"$dir\\Application\" -ExtractDir 'Vivaldi-bin' -Removal",
-            "Remove-Item \"$dir\\Application\\update_notifier.exe\"",
-            "Set-Content \"$dir\\Application\\stp.viv\" '// Vivaldi Standalone' -Encoding ASCII"
-        ]
+        "script": "Start-Process \"$dir\\$fname\" -ArgumentList '--vivaldi-silent', '--do-not-launch-chrome', '--vivaldi-standalone', \"--vivaldi-install-dir=$dir\" -Wait"
     },
-    "bin": "Application\\vivaldi.exe",
+    "post_install": [
+        "cd \"$dir\"",
+        "Remove-Item \"$fname\", \"Application\\update_notifier.exe\", \"Application\\$version\\Installer\" -Force -Recurse | Out-Null"
+    ],
+    "post_uninstall": "Remove-Item \"$env:UserProfile\\.vivaldi_reporting_data\" -ErrorAction SilentlyContinue",
+    "checkver": {
+        "url": "https://vivaldi.com/download",
+        "regex": "https://downloads.vivaldi.com/stable/Vivaldi.(.*?).x64.exe"
+    },
     "shortcuts": [
         [
             "Application\\vivaldi.exe",
             "Vivaldi"
         ]
     ],
-    "persist": "User Data",
-    "checkver": {
-        "url": "https://vivaldi.com/download/",
-        "regex": "Vivaldi\\.([\\d.]+)\\.exe"
-    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.x64.exe#/dl.7z"
+                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.x64.exe"
             },
             "32bit": {
-                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.exe#/dl.7z"
+                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.exe"
             },
             "arm64": {
-                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.arm64.exe#/dl.7z"
+                "url": "https://downloads.vivaldi.com/stable/Vivaldi.$version.arm64.exe"
             }
-        },
-        "hash": {
-            "url": "https://vivaldi.com/download/archive/?platform=win",
-            "find": "$basename.+?data-sha256=\"$sha256"
         }
     }
 }

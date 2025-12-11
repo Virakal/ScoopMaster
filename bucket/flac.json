@@ -25,6 +25,10 @@
     },
     "autoupdate": {
         "url": "https://github.com/xiph/flac/releases/download/$version/flac-$version-win.zip",
+        "hash": {
+            "url": "https://github.com/xiph/flac/releases/$version",
+            "regex": "$sha256.*?$basename"
+        },
         "architecture": {
             "64bit": {
                 "extract_dir": "flac-$version-win\\win64"

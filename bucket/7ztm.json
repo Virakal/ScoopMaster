@@ -1,25 +1,10 @@
 {
     "version": "2.1.1",
-    "description": "Theme manager for 7-Zip.",
+    "description": "Extract information from password-protected .7z archives.",
     "homepage": "http://www.7ztm.de/",
-    "license": "Freeware",
-    "depends": "main/7zip",
-    "url": "http://www.7ztm.de/download.php?cat=00_German&file=7zTM_2.1.1_hotfix.7z#/dl.7z",
-    "hash": "09eb32ccfed696ec2030dd87779ac03a1233897c7ef83e5c7f81f1f696b811e0",
-    "shortcuts": [
-        [
-            "7zTM.exe",
-            "7-zip Theme Manager"
-        ]
-    ],
-    "persist": [
-        "filetype",
-        "toolbar"
-    ],
-    "checkver": {
-        "regex": "7zTM ([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "http://www.7ztm.de/download.php?cat=00_German&file=7zTM_$version_hotfix.7z#/dl.7z"
-    }
+    "url": "https://raw.githubusercontent.com/thegamerx1/scoop_bucket/master/binaries/7zTM_2.1.1_patched_with_hotfix.7z",
+    "shortcuts": [["7zTM.exe", "7zTM (Theme Changer)"]],
+    "hash": "a6048f849358d1eee91bf1d2722485a2dd4f042c3e63d8646b0f2e7eabd555d5",
+    "bin": "7zTM.exe",
+    "license": "Proprietary"
 }

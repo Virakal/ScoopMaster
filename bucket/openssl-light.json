@@ -17,7 +17,7 @@
             "hash": "27d16896d67e2cd0afa72ba60c23b5c649b2af9c615f274d89eee2b704d73009"
         }
     },
-    "depends": "scoop-cn/innounp",
+    "depends": "innounp",
     "installer": {
         "script": [
             "Expand-InnoArchive -Path \"$dir\\$fname\"",
@@ -30,7 +30,7 @@
         "OPENSSL_CONF": "$dir\\bin\\cnf\\openssl.cnf"
     },
     "checkver": {
-        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
+        "url": "https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
         "jsonpath": "$.files..basever",
         "regex": "([\\d.]+)",
         "reverse": true
@@ -48,7 +48,7 @@
             }
         },
         "hash": {
-            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
+            "url": "https://raw.githubusercontent.com/slproweb/opensslhashes/master/win32_openssl_hashes.json",
             "jsonpath": "$.files.['$basename'].sha256"
         }
     }

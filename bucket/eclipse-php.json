@@ -1,34 +1,34 @@
 {
-    "version": "2025-12",
-    "description": "Eclipse IDE for PHP Developers",
-    "homepage": "https://www.eclipse.org",
-    "license": "EPL-1.0",
-    "architecture": {
-        "64bit": {
-            "url": "http://download.eclipse.org/technology/epp/downloads/release/2025-12/R/eclipse-php-2025-12-R-win32-x86_64.zip",
-            "hash": "sha512:1eabc8f3cb1647887f39582066ec82155bbdae29a32510be0a1bb0ac27e2647e23575a04a67f584fcb711f6307f9e59ee4c2be29bf35e0b6baeb89debac200d2"
-        }
-    },
-    "extract_dir": "eclipse",
-    "shortcuts": [
-        [
-            "eclipse.exe",
-            "Eclipse for PHP Developers"
-        ]
-    ],
-    "checkver": {
-        "url": "https://download.eclipse.org/technology/epp/downloads/release/release.xml",
-        "xpath": "/packages/present",
-        "regex": "([\\d-]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-php-$version-R-win32-x86_64.zip",
-                "hash": {
-                    "url": "$url.sha512"
-                }
-            }
-        }
+  "version": "2025-12",
+  "description": "Eclipse IDE for PHP Developers",
+  "homepage": "https://www.eclipse.org",
+  "license": "EPL-1.0",
+  "architecture": {
+    "64bit": {
+      "url": "http://download.eclipse.org/technology/epp/downloads/release/2025-12/R/eclipse-php-2025-12-R-win32-x86_64.zip",
+      "hash": "sha512:1eabc8f3cb1647887f39582066ec82155bbdae29a32510be0a1bb0ac27e2647e23575a04a67f584fcb711f6307f9e59ee4c2be29bf35e0b6baeb89debac200d2"
     }
+  },
+  "extract_dir": "eclipse",
+  "shortcuts": [
+    [
+      "eclipse.exe",
+      "Eclipse for PHP Developers"
+    ]
+  ],
+  "checkver": {
+    "url": "https://download.eclipse.org/technology/epp/downloads/release/release.xml",
+    "xpath": "/packages/present",
+    "regex": "([\\d-]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-php-$version-R-win32-x86_64.zip",
+        "hash": {
+          "url": "$url.sha512"
+        }
+      }
+    }
+  }
 }

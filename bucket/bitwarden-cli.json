@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/bitwarden/clients/releases/download/cli-v2025.11.0/bw-oss-windows-2025.11.0.zip",
+            "url": "https://github.com/bitwarden/clients/releases/download/cli-v2025.11.0/bw-oss-windows-2025.11.0.zip",
             "hash": "4a52fe44b51ff322b2c1987787977eae87b9bca72003d05a899651f091f33e8e"
         }
     },
@@ -17,7 +17,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/bitwarden/clients/releases/download/cli-v$version/bw-oss-windows-$version.zip",
+                "url": "https://github.com/bitwarden/clients/releases/download/cli-v$version/bw-oss-windows-$version.zip",
                 "hash": {
                     "url": "$baseurl/bw-oss-windows-sha256-$version.txt"
                 }

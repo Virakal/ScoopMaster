@@ -1,34 +1,34 @@
 {
-    "version": "2025-12",
-    "description": "Eclipse Modeling Tools",
-    "homepage": "https://www.eclipse.org",
-    "license": "EPL-1.0",
-    "architecture": {
-        "64bit": {
-            "url": "http://download.eclipse.org/technology/epp/downloads/release/2025-12/R/eclipse-modeling-2025-12-R-win32-x86_64.zip",
-            "hash": "sha512:d052b20b9d7cf767d129e1b4a74e0efe9cce6cb345b3b77158ecafdc749619ed55fa701723d59d2212159ddfd548867d20464ad2cabbae8c2e87c00b39ea3d36"
-        }
-    },
-    "extract_dir": "eclipse",
-    "shortcuts": [
-        [
-            "eclipse.exe",
-            "Eclipse Modeling Tools"
-        ]
-    ],
-    "checkver": {
-        "url": "https://download.eclipse.org/technology/epp/downloads/release/release.xml",
-        "xpath": "/packages/present",
-        "regex": "([\\d-]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-modeling-$version-R-win32-x86_64.zip",
-                "hash": {
-                    "url": "$url.sha512"
-                }
-            }
-        }
+  "version": "2025-12",
+  "description": "Eclipse Modeling Tools",
+  "homepage": "https://www.eclipse.org",
+  "license": "EPL-1.0",
+  "architecture": {
+    "64bit": {
+      "url": "http://download.eclipse.org/technology/epp/downloads/release/2025-12/R/eclipse-modeling-2025-12-R-win32-x86_64.zip",
+      "hash": "sha512:d052b20b9d7cf767d129e1b4a74e0efe9cce6cb345b3b77158ecafdc749619ed55fa701723d59d2212159ddfd548867d20464ad2cabbae8c2e87c00b39ea3d36"
     }
+  },
+  "extract_dir": "eclipse",
+  "shortcuts": [
+    [
+      "eclipse.exe",
+      "Eclipse Modeling Tools"
+    ]
+  ],
+  "checkver": {
+    "url": "https://download.eclipse.org/technology/epp/downloads/release/release.xml",
+    "xpath": "/packages/present",
+    "regex": "([\\d-]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-modeling-$version-R-win32-x86_64.zip",
+        "hash": {
+          "url": "$url.sha512"
+        }
+      }
+    }
+  }
 }

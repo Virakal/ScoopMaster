@@ -1,34 +1,41 @@
 {
-    "version": "25.08.3",
+    "version": "25.12-5580",
     "description": "Communications and data transfer between devices over local networks",
-    "homepage": "https://kdeconnect.kde.org/",
-    "license": "GPL-3.0-or-later",
-    "notes": "If you want to get the latest development branch-based installer, please install `kdeconnect-nightly` from Versions bucket.",
+    "homepage": "https://kdeconnect.kde.org",
+    "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://download.kde.org/stable/release-service/25.08.3/windows/kdeconnect-kde-windows-cl-msvc2022-x86_64.7z",
-            "hash": "dc2b5e96351d5bd2bb8d15152a039225a6b7068c432c1c37f13250945aa3de31"
+            "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-25.12/windows/kdeconnect-kde-release_25.12-5580-windows-cl-msvc2022-x86_64.7z",
+            "hash": "6a2735c2d78d0a7ec6f2ed33083e437345570dce334d59ca9882f93d971ffdcb"
         }
     },
     "bin": "bin\\kdeconnect-cli.exe",
     "shortcuts": [
         [
-            "bin\\kdeconnect-app.exe",
-            "KDEConnect"
+            "bin\\kdeconnect-indicator.exe",
+            "KDE Connect"
         ]
     ],
     "checkver": {
-        "url": "https://kdeconnect.kde.org/download.html",
-        "regex": "release-service/([\\d.]+)/windows/kdeconnect-kde-windows-cl-(?<lib>\\w+)-x86_64\\.exe"
+        "script": [
+            "$relRes = $(Invoke-WebRequest 'https://cdn.kde.org/ci-builds/network/kdeconnect-kde/?C=M;O=D').Content",
+            "$relRes -match 'release-([\\d.]+)'",
+            "$major = $Matches.1",
+            "$verRes = $(Invoke-WebRequest \"https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-$major/windows/\").Content",
+            "$verRes -match \"kdeconnect-kde-release_$major-(\\d+)\"",
+            "$build = $Matches.1",
+            "\"$major-$build\""
+        ],
+        "regex": "((?<release>[\\d.]+)-\\d+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.kde.org/stable/release-service/$version/windows/kdeconnect-kde-windows-cl-$matchLib-x86_64.7z",
-                "hash": {
-                    "url": "$url.sha256"
-                }
+                "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-$matchRelease/windows/kdeconnect-kde-release_$version-windows-cl-msvc2022-x86_64.7z"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

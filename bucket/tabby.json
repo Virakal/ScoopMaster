@@ -6,14 +6,14 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Eugeny/tabby/releases/download/v1.0.229/tabby-1.0.229-setup-x64.exe#/dl.7z",
-            "hash": "sha512:d216e57abca177ed88bf31724eef73b996d0c6e67afbb34570c8f834635f7dc19bba3a87d68f4fda332df8d4ad396187265353f259f571bbf537144733f4ad28",
+            "hash": "2b18c689f6c9c2770268d22878b77f3d53a8b30089921dcef663325b7da7dcd3",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Unins*\" -Force -Recurse"
             ],
             "post_install": [
-                "if ((Test-Path $env:APPDATA\\Tabby) -and (-not (Test-Path \"$persist_dir\\data\\*\"))) {",
-                "    Copy-Item -Path $env:APPDATA\\Tabby\\* -Destination \"$persist_dir\\data\" -Recurse",
+                "if (Test-Path $env:APPDATA\\Tabby) {",
+                "    Copy-Item -Path $env:APPDATA\\Tabby\\* -Destination \"$persist_dir\\data\" -PassThru",
                 "}"
             ]
         }
@@ -34,7 +34,7 @@
             "64bit": {
                 "url": "https://github.com/Eugeny/tabby/releases/download/v$version/tabby-$version-setup-x64.exe#/dl.7z",
                 "hash": {
-                    "url": "$baseurl/latest-x64.yml",
+                    "url": "$baseurl/latest.yml",
                     "regex": "sha512: $base64"
                 }
             }
