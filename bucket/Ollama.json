@@ -1,28 +1,41 @@
 {
     "version": "0.13.3",
-    "description": "在本地启动和运行大型语言模型（带模型安装位置环境变量，需自行调整）",
+    "description": "Get up and running with large language models locally.",
     "homepage": "https://ollama.com/",
     "license": "MIT",
-    "url": "https://github.com/ollama/ollama/releases/download/v0.13.3/OllamaSetup.exe",
-    "hash": "85ecd2a00f893d3bff30a8c0af35c10ef1e88d35a53b2ebb54f9fc949345284d",
-    "innosetup": true,
+    "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
+    "suggest": {
+        "Ollama Full": "extras/ollama-full"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.13.3/ollama-windows-amd64.zip",
+            "hash": "4a81a0f130bad31962246b31fb053f27e9d2fc8314c0a68c43fd95cf787f17c2"
+        },
+        "arm64": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.13.3/ollama-windows-arm64.zip",
+            "hash": "992ba8c0fab7c42d7f216bddcc5c7b146d5ac4feb3559f27e358bec0c4c9f8a4"
+        }
+    },
     "bin": "ollama.exe",
-    "shortcuts": [
-        [
-            "ollama app.exe",
-            "Ollama",
-            "",
-            "app.ico"
-        ]
-    ],
+    "persist": "models",
     "env_set": {
-        "OLLAMA_MODELS": "D:\\$env:UserName\\Play\\AI\\ollama\\models"
+        "OLLAMA_MODELS ": "$dir\\models"
     },
     "checkver": {
         "github": "https://github.com/ollama/ollama"
     },
     "autoupdate": {
-        "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe"
-    },
-    "notes": "您应该至少有 8 GB 可用 RAM 来运行 7B 型号，16 GB 来运行 13B 型号，32 GB 来运行 33B 型号"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
+    }
 }
