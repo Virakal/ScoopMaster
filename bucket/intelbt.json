@@ -7,15 +7,15 @@
     "hash": "47ee3a41d4c6a25d29e274be8eec8c0dc19b58a343fa78e96d15c46fb719275e",
     "installer": {
         "file": "setup.exe",
-        "args": ["-q", "-s"],
+        "args": ["/qn"],
         "keep": true
     },
     "uninstaller": {
         "file": "setup.exe",
-        "args": ["-q", "-s", "-uninstall"]
+        "args": ["/x", "/qn"]
     },
     "checkver": {
-        "regex": "name=\"DownloadVersion\" content=\"(?<version>[\\d.]+)\"|name=\"RecommendedDownloadUrl\" content=\"https://downloadmirror\\.intel\\.com/(?<url>.*WiFi.*exe)\"",
+        "regex": "name=\"DownloadVersion\" content=\"(?<version>[\\d.]+)\"|name=\"RecommendedDownloadUrl\" content=\"https://downloadmirror\\.intel\\.com/(?<url>.*WiFi.*exe)\""
     },
     "autoupdate": {
         "url": "https://downloadmirror.intel.com/$matchUrl#/setup.exe"
