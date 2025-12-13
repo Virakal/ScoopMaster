@@ -14,9 +14,9 @@
         "script": "start-process -wait \"$dir\\installer.exe\" -argumentList '-s --terminateProcesses --uninstaller'"
     },
     "checkver": {
-        "regex": "\"<meta name=\"DownloadVersion\" content=\"(?<version>[\\d.]+)\"|<meta name=\"RecommendedDownloadUrl\" content=\"(?<url>https://downloadmirror.intel.com.*/gfx_win_.*.exe)\"",
+        "regex": "\"<meta name=\"DownloadVersion\" content=\"(?<version>.+)/>\"\\|<meta name=\"RecommendedDownloadUrl\" content=\"https://downloadmirror.intel.com(?<url>.*/gfx_win_.*.exe)\"",
     },
     "autoupdate": {
-        "url": "$matchUrl#/dl.7z"
+        "url": "https://downloadmirror.intel.com/$matchUrl#/dl.7z"
     }
 }
