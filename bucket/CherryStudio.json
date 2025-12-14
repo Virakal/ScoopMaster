@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/CherryHQ/cherry-studio",
     "description": "Cherry Studio is a desktop client that supports for multiple LLM providers, available on Windows, Mac and Linux.",
-    "version": "1.7.2",
+    "version": "1.7.3",
     "license": "Apache License 2.0",
     "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.2/Cherry-Studio-1.7.2-x64-portable.exe#/Cherry-Studio.exe",
-    "hash": "d72ba833b72417728b42227fd7530cae54cdf2f0c0bf0048af294341accbacaf",
+    "hash": "",
     "notes": "App data locates in  %APPDATA%\\Roaming\\CherryStudio. Uninstaller will remove it. If you want to keep it please backup it manually.",
     "shortcuts": [
         [
