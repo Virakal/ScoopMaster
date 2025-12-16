@@ -12,11 +12,11 @@
         "Learn more at https://wiki.pcsx2.net/Setting_up_Windows_version#BIOS"
     ],
     "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "scoop-cn/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/PCSX2/pcsx2/releases/download/v2.5.387/pcsx2-v2.5.387-windows-x64-Qt.7z",
+            "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.5.387/pcsx2-v2.5.387-windows-x64-Qt.7z",
             "hash": "8a853c0a799d326143c4745183c9304c787ca368ab73e069d13f073474f339bf"
         }
     },
@@ -69,7 +69,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z"
+                "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z"
             }
         }
     }
