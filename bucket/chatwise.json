@@ -9,16 +9,16 @@
             "hash": "7c2836757a8f82917cd76339b226642cceebd4fbb0e21e5737a8ddb4e32c1514"
         }
     },
-    "bin": "chatwise.exe",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\Uninst*\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "checkver": {
+        "github": "https://github.com/egoist/chatwise-releases"
+    },
     "shortcuts": [
         [
             "chatwise.exe",
             "ChatWise"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/egoist/chatwise-releases"
-    },
     "autoupdate": {
         "architecture": {
             "64bit": {
