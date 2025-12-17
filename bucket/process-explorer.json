@@ -1,6 +1,6 @@
 {
     "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer",
-    "version": "17.08",
+    "version": "17.09",
     "description": "Ever wondered which program has a particular file or directory open? Now you can find out. Process Explorer shows you information about which handles and DLLs processes have opened or loaded.",
     "license": {
         "identifier": "Freeware"
@@ -20,7 +20,7 @@
                     "Process Explorer"
                 ]
             ],
-            "hash": "cd45246a73091befd2c1acb3db0a1e08470f6c096bd2d4dea25479df548519e6"
+            "hash": "b335da33330a7bc3a888ed04cc505daa95cfaef911563d9d5033e1e3dfd4150e"
         },
         "32bit": {
             "url": "https://download.sysinternals.com/files/ProcessExplorer.zip",
@@ -31,7 +31,7 @@
                     "Process Explorer"
                 ]
             ],
-            "hash": "cd45246a73091befd2c1acb3db0a1e08470f6c096bd2d4dea25479df548519e6"
+            "hash": "b335da33330a7bc3a888ed04cc505daa95cfaef911563d9d5033e1e3dfd4150e"
         }
     },
     "checkver": {
