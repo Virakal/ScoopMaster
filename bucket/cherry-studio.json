@@ -1,32 +1,29 @@
 {
-    "version": "1.7.5",
+    "version": "1.7.6",
     "description": "A desktop client that supports for multiple LLM providers.",
     "homepage": "https://cherry-ai.com",
-    "license": "Apache-2.0",
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
+    "license": "User-Segmented Dual Licensing (AGPLv3 + Commercial License) https://github.com/CherryHQ/cherry-studio/blob/main/LICENSE",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.5/Cherry-Studio-1.7.5-x64-portable.exe#/cherry-studio.exe",
-            "hash": "b1f425720a9fc8e5e629ed926e8225c59931dc96d79942ffc58305a1e0be5150"
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.6/Cherry-Studio-1.7.6-x64-setup.exe#/dl.7z",
+            "hash": "ee9a44adc3f3311ab069c80ab5b8cd88ee0c1b106724cc13caea8b0c78b6aa69",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
+            ]
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.5/Cherry-Studio-1.7.5-arm64-portable.exe#/cherry-studio.exe",
-            "hash": "e9fb11739a7b97c2d0a84ad1c7e45c730f1fa4d4b0cdf2abd5fe073ae21e232a"
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.7.6/Cherry-Studio-1.7.6-arm64-setup.exe#/dl.7z",
+            "hash": "7c563755d31b68748a4a37848771c47f479279c97c4165ed4f7a5fa1d850734a",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
+            ]
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path \"$persist_dir\\data\") -and (Test-Path \"$env:APPDATA\\CherryStudio\")) {",
-        "    ensure \"$persist_dir\\data\" | Out-Null",
-        "    info '[Portable Mode] Copying user data...'",
-        "    Move-Item \"$env:APPDATA\\CherryStudio\\*\" \"$persist_dir\\data\"",
-        "    Remove-Item \"$env:APPDATA\\CherryStudio\" -Recurse -Force",
-        "}"
-    ],
     "shortcuts": [
         [
-            "cherry-studio.exe",
+            "Cherry Studio.exe",
             "Cherry Studio"
         ]
     ],
@@ -37,10 +34,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-portable.exe#/cherry-studio.exe"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-portable.exe#/cherry-studio.exe"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
             }
         }
     }
