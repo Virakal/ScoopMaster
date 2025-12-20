@@ -1,31 +1,31 @@
 {
-  "version": "0.11.6",
-  "description": "Terminal client for .http/.rest files with HTTP, GraphQL and gRPC support, workflows, profiling and response diffs",
-  "homepage": "https://github.com/unkn0wn-root/resterm",
-  "license": " Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.11.6/resterm_Windows_x86_64.exe#/resterm.exe",
-      "hash": "f293cc088a36b01633d3dce137edcd5c68fe643872e5964545a03d469410a55b"
-    },
-    "arm64": {
-      "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.11.6/resterm_Windows_arm64.exe#/resterm.exe",
-      "hash": "e9eb09b9c726428e4ee28566f17a07a36b641c2efa5e4ae1e428570e1e5bd267"
-    }
-  },
-  "bin": "resterm.exe",
-  "checkver": "github",
-  "autoupdate": {
+    "version": "0.11.6",
+    "description": "Terminal client for .http/.rest files with HTTP, GraphQL and gRPC support, workflows, profiling and response diffs",
+    "homepage": "https://github.com/unkn0wn-root/resterm",
+    "license": " Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_x86_64.exe#/resterm.exe"
-      },
-      "arm64": {
-        "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_arm64.exe#/resterm.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.11.6/resterm_Windows_x86_64.exe#/resterm.exe",
+            "hash": "f293cc088a36b01633d3dce137edcd5c68fe643872e5964545a03d469410a55b"
+        },
+        "arm64": {
+            "url": "https://github.com/unkn0wn-root/resterm/releases/download/v0.11.6/resterm_Windows_arm64.exe#/resterm.exe",
+            "hash": "e9eb09b9c726428e4ee28566f17a07a36b641c2efa5e4ae1e428570e1e5bd267"
+        }
     },
-    "hash": {
-      "url": "$url.sha256"
+    "bin": "resterm.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_x86_64.exe#/resterm.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/unkn0wn-root/resterm/releases/download/v$version/resterm_Windows_arm64.exe#/resterm.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
-  }
 }
