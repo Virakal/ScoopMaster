@@ -1,31 +1,31 @@
 {
-  "version": "10233",
-  "description": "Chromium's certificate revocation list",
-  "homepage": "https://www.chromium.org/Home/chromium-security/crlsets/",
-  "license": "BSD-3-Clause",
-  "url": "http://www.google.com/dl/release2/chrome_component/adb3xr5g6nsjzldjwscorta7hhqa_10233/hfnkpimlhhgieaddgfemjhofmfblmnib_10233_all_adyiykz5byizovhzmi2c35krgqvq.crx3",
-  "hash": "sha256:86833126e62ed7b213e1a559af8ae77e361736c8b8a2254841b1e4b4b19e0e84",
-  "installer": {
-    "script": [
-      "$dest = \"$dir\\CertificateRevocation\"",
-      "Expand-7zipArchive \"$dir\\$fname\" $dest -Removal",
-      "Set-Content \"$dest\\manifest.fingerprint\" \"1.$($manifest.hash)\" -NoNewline"
-    ]
-  },
-  "checkver": {
-    "script": [
-      "$url = 'https://clients2.google.com/service/update2/crx?x=id%3Dhfnkpimlhhgieaddgfemjhofmfblmnib%26v%3D%26uc%26acceptformat%3Dcrx3'",
-      "$cont = Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri $url",
-      "$cont = $cont.gupdate.app.updatecheck",
-      "Write-Output ('version:\"' + $cont.version + '\"') ('url:\"' + $cont.codebase + '\"')"
-    ],
-    "regex": "version:\"(\\d+)\"\\surl:\"(?:https?://.+/(?<urlone>.+)/(?<basename>.+)\\.crx3)\""
-  },
-  "autoupdate": {
-    "url": "https://www.google.com/dl/release2/chrome_component/$matchUrlone/$matchBasename.crx3",
-    "hash": {
-      "url": "https://clients2.google.com/service/update2/crx?x=id%3Dhfnkpimlhhgieaddgfemjhofmfblmnib%26v%3D%26uc%26acceptformat%3Dcrx3",
-      "regex": "hash_sha256=\"([a-fA-F0-9]{64})\""
+    "version": "10234",
+    "description": "Chromium's certificate revocation list",
+    "homepage": "https://www.chromium.org/Home/chromium-security/crlsets/",
+    "license": "BSD-3-Clause",
+    "url": "https://www.google.com/dl/release2/chrome_component/iocuaemq4ioyk7ey7vns5rpvue_10234/hfnkpimlhhgieaddgfemjhofmfblmnib_10234_all_acjzuymzwxnpgkohzxmuyx2lwd3q.crx3",
+    "hash": "82da09fa2523e884c98a9b2d35677608b65d68b49c0750364fa9fe3ff75515a6",
+    "installer": {
+        "script": [
+            "$dest = \"$dir\\CertificateRevocation\"",
+            "Expand-7zipArchive \"$dir\\$fname\" $dest -Removal",
+            "Set-Content \"$dest\\manifest.fingerprint\" \"1.$($manifest.hash)\" -NoNewline"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$url = 'https://clients2.google.com/service/update2/crx?x=id%3Dhfnkpimlhhgieaddgfemjhofmfblmnib%26v%3D%26uc%26acceptformat%3Dcrx3'",
+            "$cont = Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri $url",
+            "$cont = $cont.gupdate.app.updatecheck",
+            "Write-Output ('version:\"' + $cont.version + '\"') ('url:\"' + $cont.codebase + '\"')"
+        ],
+        "regex": "version:\"(\\d+)\"\\surl:\"(?:https?://.+/(?<urlone>.+)/(?<basename>.+)\\.crx3)\""
+    },
+    "autoupdate": {
+        "url": "https://www.google.com/dl/release2/chrome_component/$matchUrlone/$matchBasename.crx3",
+        "hash": {
+            "url": "https://clients2.google.com/service/update2/crx?x=id%3Dhfnkpimlhhgieaddgfemjhofmfblmnib%26v%3D%26uc%26acceptformat%3Dcrx3",
+            "regex": "hash_sha256=\"([a-fA-F0-9]{64})\""
+        }
     }
-  }
 }
