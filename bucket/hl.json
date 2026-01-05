@@ -1,28 +1,28 @@
 {
-    "version": "0.34.0",
-    "description": "A fast and powerful log viewer and processor that translates JSON or logfmt logs into a pretty human-readable format",
-    "homepage": "https://github.com/pamburus/hl",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/pamburus/hl/releases/download/v0.34.0/hl-windows.zip",
-            "hash": "dbab93f84776c36faffe26e7c9f8cc33976c45a0f1a10aa17e2805aa18c51504"
-        },
-        "arm64": {
-            "url": "https://github.com/pamburus/hl/releases/download/v0.34.0/hl-windows-arm64.zip",
-            "hash": "31b06bc36e63a489e2d34614015699a4c1651da79cb21d1984ec412ad6b64209"
-        }
+  "version": "0.34.0",
+  "description": "A fast and powerful log viewer and processor that translates JSON or logfmt logs into a pretty human-readable format",
+  "homepage": "https://github.com/pamburus/hl",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/pamburus/hl/releases/download/v0.34.0/hl-windows.zip",
+      "hash": "dbab93f84776c36faffe26e7c9f8cc33976c45a0f1a10aa17e2805aa18c51504"
     },
-    "bin": "hl.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/pamburus/hl/releases/download/v$version/hl-windows.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/pamburus/hl/releases/download/v$version/hl-windows-arm64.zip"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/pamburus/hl/releases/download/v0.34.0/hl-windows-arm64.zip",
+      "hash": "31b06bc36e63a489e2d34614015699a4c1651da79cb21d1984ec412ad6b64209"
     }
+  },
+  "bin": "hl.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/pamburus/hl/releases/download/v$version/hl-windows.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/pamburus/hl/releases/download/v$version/hl-windows-arm64.zip"
+      }
+    }
+  }
 }
