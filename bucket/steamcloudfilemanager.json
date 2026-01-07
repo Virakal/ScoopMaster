@@ -3,6 +3,12 @@
     "description": "Cross-platform GUI for Steam Cloud. Visualizes remote storage as a file tree with download, upload, and delete capabilities.",
     "homepage": "https://github.com/Fldicoahkiin/SteamCloudFileManager",
     "license": "GPL-3.0-only",
+    "suggest": {
+        "Steam": [
+            "versions/steam",
+            "games/steam"
+        ]
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Fldicoahkiin/SteamCloudFileManager/releases/download/v1.0.0/SteamCloudFileManager-1.0.0-windows-x86_64.zip",
@@ -16,6 +22,7 @@
             "SteamCloudFileManager"
         ]
     ],
+    "notes": "ARM64 is unsupported due to Steamworks SDK limitation.",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
