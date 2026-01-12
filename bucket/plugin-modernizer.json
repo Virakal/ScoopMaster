@@ -1,17 +1,17 @@
 {
-    "version": "2613.v009d69c28251",
+    "version": "2618.vfa_fe52a_b_fda_5",
     "description": "Plugin Modernizer Tool",
     "homepage": "https://github.com/jenkins-infra/plugin-modernizer-tool",
     "license": "MIT",
-    "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2613.v009d69c28251/jenkins-plugin-modernizer-2613.v009d69c28251.jar",
-    "hash": "sha256:6208cc300b21d7a1ed94a3d9a82aa59dd9382764a39d6d014a0c45ac6513c8fc",
+    "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2618.vfa_fe52a_b_fda_5/jenkins-plugin-modernizer-2618.vfa_fe52a_b_fda_5.jar",
+    "hash": "sha256:133a90f780e8bd023ff5eab1ceed2f13f5f3887482a770d6a2229619b7fe3949",
     "suggest": {
         "JDK": [
             "java/oraclejdk",
             "java/openjdk"
         ]
     },
-    "pre_install": "\"@java -jar \"\"$dir\\jenkins-plugin-modernizer-2613.v009d69c28251.jar\"\" %*\" | out-file -en oem \"$dir\\plugin-modernizer.bat\"",
+    "pre_install": "\"@java -jar \"\"$dir\\jenkins-plugin-modernizer-2618.vfa_fe52a_b_fda_5.jar\"\" %*\" | out-file -en oem \"$dir\\plugin-modernizer.bat\"",
     "bin": "plugin-modernizer.bat",
     "checkver": {
         "url": "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/latest",
