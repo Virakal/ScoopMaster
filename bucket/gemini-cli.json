@@ -1,46 +1,30 @@
 {
-   "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "0.24.0",
-   "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-   "homepage": "https://github.com/google-gemini/gemini-cli",
-   "license": {
-      "identifier": "Apache-2.0",
-      "url": "https://github.com/google-gemini/gemini-cli/blob/master/LICENSE"
-   },
-   "suggest": {
-      "Node.js (Long Term Support)": "main/nodejs-lts",
-      "Node.js": "main/nodejs"
-   },
-   "url": [
-      "https://github.com/google-gemini/gemini-cli/releases/download/v0.24.0/gemini.js",
-      "https://registry.npmjs.com/@google/gemini-cli/0.24.0#/package.json"
-   ],
-   "hash": [
-      "2e0d713826f3ed50f3ce119e8f883319215214739637e17873252e677f0a4704",
-      "183aedc8a5a26811807bd95d266e97efcb077047995f35712d74f9e0c2086364"
-   ],
-   "installer": {
-      "script": [
-         "if (where.exe /q node || $true) {",
-         "   error 'Node.js should be installed'",
-         "}"
-      ]
-   },
-   "bin": [
-      [
-         "node.exe",
-         "gemini",
-         "$dir\\gemini.js"
-      ]
-   ],
-   "checkver": {
-      "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases",
-      "regex": "\"tag_name\": *\"v([\\d\\.]+)\","
-   },
-   "autoupdate": {
-      "url": [
-         "https://github.com/google-gemini/gemini-cli/releases/download/v$version/gemini.js",
-         "https://registry.npmjs.com/@google/gemini-cli/$version#/package.json"
-      ]
-   }
+    "version": "0.24.0",
+    "description": "Gemini CLI: A command-line AI workflow tool that connects to your tools, understands your code and accelerates your workflows.",
+    "homepage": "https://github.com/google-gemini/gemini-cli",
+    "license": "Apache-2.0",
+    "suggest": {
+        "Node.js": [
+            "nodejs",
+            "nodejs-lts"
+        ]
+    },
+    "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.24.0.tgz",
+    "hash": "10908307b711b7dac287b07ce54093dac02d7446f9d357f83da2c24778cefde8",
+    "extract_dir": "package",
+    "bin": [
+        [
+            "node",
+            "dist/index.js",
+            "gemini"
+        ]
+    ],
+    "checkver": {
+        "url": "https://registry.npmjs.org/@google/gemini-cli",
+        "jsonpath": "$.['dist-tags'].latest"
+    },
+    "autoupdate": {
+        "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-$version.tgz",
+        "extract_dir": "package"
+    }
 }
