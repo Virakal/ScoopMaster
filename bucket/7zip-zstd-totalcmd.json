@@ -47,12 +47,5 @@
                 ]
             }
         }
-    },
-    "checkver": {
-        "github": "https://github.com/mcmilk/7-Zip-zstd",
-        "regex": "releases/tag/v([\\w.-]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/mcmilk/7-Zip-zstd/releases/download/v$version/TotalCmd.7z"
     }
 }
