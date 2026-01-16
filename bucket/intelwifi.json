@@ -15,7 +15,7 @@
     },
     "checkver": {
         "script": [
-            "$src = 'https://www.intel.com/content/www/us/en/download/18649/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html'",
+            "$src = 'https://www.intel.com/content/www/us/en/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html'",
             "$html = curl -s $src",
             "$ver = [regex]::Matches($html, 'name=\"DownloadVersion\" content=\"(?<version>[\\d.]+)\"')",
             "$url = [regex]::Matches($html, 'download-button(.*)\"https://downloadmirror.intel.com/(?<url>.*exe)\"')",
