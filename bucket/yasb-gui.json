@@ -33,5 +33,12 @@
         "hash": {
             "url": "$baseurl/checksums.txt"
         }
-    }
+    },
+    "suggest": {
+        "runtime": "versions/windowsdesktop-runtime-6.0"
+    },
+    "notes": [
+        "YASB GUI needs at minimum Runtime 1.7. This is on Windows 11 by default, but unavailable on Windows 10",
+        "If you have already installed any runtime before, this can be ignored."
+    ]
 }
