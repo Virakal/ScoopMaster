@@ -55,7 +55,6 @@
     ],
     "checkver": {
         "url": "https://github.com/eugenesvk/mptrsz/releases",
-        "regex": "/([\\w\\.-]+)\""
     },
     "autoupdate": {
         "architecture": {
