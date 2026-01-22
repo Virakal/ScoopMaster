@@ -1,12 +1,12 @@
 {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "A command-line tool to play YouTube videos in mpv.",
     "homepage": "https://github.com/mustafachyi/mpv-yt-go",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mustafachyi/mpv-yt-go/releases/download/v1.0.7/play-windows-amd64.exe",
-            "hash": "927dadf31d26b3cd05b70f70fc86f969fa70d565b4489473bce8abef1fbe3f4a"
+            "url": "https://github.com/mustafachyi/mpv-yt-go/releases/download/v1.0.8/play-windows-amd64.exe",
+            "hash": "0be5b0b8f278992afd5636f098fcc09c8a1c04dee006f2c887c77b71fe13f9ff"
         }
     },
     "bin": [
