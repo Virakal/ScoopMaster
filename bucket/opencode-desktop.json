@@ -1,26 +1,34 @@
 {
-    "version": "1.1.40",
-    "description": "An open source agent that helps you write and run code with any AI model as a desktop app",
-    "homepage": "http://opencode.ai/",
-    "license": "unknown",
+    "version": "1.1.34",
+    "description": "The open source AI coding agent.",
+    "homepage": "https://opencode.ai/",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://opencode.ai/download/windows-x64-nsis#/dl.7z",
-            "hash": "b922ce51cee91da5046a79326231a1793314813cbe29ea09c7781b40d0801964"
+            "url": "https://github.com/anomalyco/opencode/releases/download/v1.1.34/opencode-desktop-windows-x64.exe#/dl.7z",
+            "hash": "1e6941a087d80d295a38511e0b3fc21321ca683e97f9f597ff6a99b1e62f3a6d"
         }
     },
-    "bin": "opencode-cli.exe",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse",
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction Ignore",
+    "bin": [
+        [
+            "opencode-cli.exe",
+            "opencode"
+        ]
+    ],
     "shortcuts": [
         [
             "OpenCode.exe",
-            "OpenCode Desktop"
+            "OpenCode"
         ]
     ],
+    "checkver": {
+        "github": "https://github.com/anomalyco/opencode"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://opencode.ai/download/windows-x64-nsis#/dl.7z"
+                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-desktop-windows-x64.exe#/dl.7z"
             }
         }
     }
