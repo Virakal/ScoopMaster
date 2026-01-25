@@ -9,7 +9,7 @@
         "script": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -install"
     },
     "uninstaller": {
-        "script": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -uninstall"
+        "script": "write-host 'calling uninstaller'; & \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -uninstall"
     },
     "checkver": "<a href=\"https://pdanet.co/bin/PdaNet(.*).exe\">Download Windows client",
     "autoupdate": {
