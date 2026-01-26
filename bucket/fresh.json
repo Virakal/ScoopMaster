@@ -1,15 +1,18 @@
 {
-    "version": "0.1.88",
-    "description": "Text editor for your terminal: easy, powerful and fast",
+    "version": "0.1.90",
+    "description": "A terminal-based text editor that brings the intuitive, conventional UX of editors like VS Code and Sublime Text to the terminal.",
     "homepage": "https://sinelaw.github.io/fresh/",
-    "license": "GPL-2.0",
+    "license": {
+        "identifier": "GPL-2.0",
+        "url": "https://github.com/sinelaw/fresh/blob/master/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sinelaw/fresh/releases/download/v0.1.88/fresh-editor-x86_64-pc-windows-msvc.zip",
-            "hash": "e39bfefa522ab4623e1e1cd683888826850051333a57f58d6713d5ce44550f3f"
+            "url": "https://github.com/sinelaw/fresh/releases/download/v0.1.90/fresh-editor-x86_64-pc-windows-msvc.zip",
+            "hash": "97f76789b5e9b55337a9ff735d033da9635e14f1d308579a91686f5f462cfeca"
         }
     },
-    "bin": "",
+    "bin": "fresh.exe",
     "checkver": {
         "github": "https://github.com/sinelaw/fresh"
     },
