@@ -1,6 +1,6 @@
 {
-    "version": "2.7.62",
-    "description": "A feature rich FOSS PlayStation 2 emulator (development version)",
+    "version": "2.7.63",
+    "description": "Sony PlayStation 2 emulator",
     "homepage": "https://pcsx2.net/",
     "license": {
         "identifier": "GPL-3.0",
@@ -12,12 +12,12 @@
         "Learn more at https://wiki.pcsx2.net/Setting_up_Windows_version#BIOS"
     ],
     "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "scoop-cn/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/PCSX2/pcsx2/releases/download/v2.7.62/pcsx2-v2.7.62-windows-x64-Qt.7z",
-            "hash": "6895bac3024d4e5c4e6b2e6d599fac05d318d9018f5cdde333018570d95ae0af"
+            "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.7.63/pcsx2-v2.7.63-windows-x64-Qt.7z",
+            "hash": "aec7ef877b6bce1965e6967e1ef553c6536fb6c88a802cc023ce10e7230087c8"
         }
     },
     "pre_install": [
@@ -44,7 +44,7 @@
     "shortcuts": [
         [
             "pcsx2-qt.exe",
-            "PCSX2 (dev)"
+            "Sony PlayStation 2 [ps2][pcsx2] (dev)"
         ]
     ],
     "persist": [
@@ -69,7 +69,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z"
+                "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z"
             }
         }
     }
