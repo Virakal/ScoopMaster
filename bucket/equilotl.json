@@ -1,8 +1,11 @@
 {
     "version": "2.1.4",
-    "description": "A cross platform gui/cli app for installing Equicord",
+    "description": "A GUI app for installing Equicord, a Discord client mod",
     "homepage": "https://equicord.org/",
     "license": "GPL-3.0-only",
+    "suggest": {
+        "discord": "extras/discord"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Equicord/Equilotl/releases/download/v2.1.4/Equilotl.exe",
