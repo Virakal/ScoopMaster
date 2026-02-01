@@ -9,7 +9,7 @@
             "hash": "94b5e741a1fc3edcfa256629684ac8b221f05eec2cf1df81a468d34652784bb5"
         }
     },
-    "extract_dir": "pdfarranger-1.13.0",
+    "extract_dir": "pdf arranger-1.13.0",
     "bin": "pdfarranger.exe",
     "shortcuts": [
         [
@@ -17,16 +17,13 @@
             "PDF Arranger"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/pdfarranger/pdfarranger/releases",
-        "regex": "(?sm)browser_download_url.*?releases/download/([\\d.]+)/pdfarranger-([\\d.]+)-windows-portable.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/pdfarranger/pdfarranger/releases/download/$version/pdfarranger-$version-windows-portable.zip"
             }
         },
-        "extract_dir": "pdfarranger-$version"
+        "extract_dir": "pdf arranger-$version"
     }
 }
