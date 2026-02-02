@@ -1,7 +1,7 @@
 {
     "version": "2.5.0",
-    "description": "Convert HTML to Markdown",
-    "homepage": "https://html-to-markdown.com/",
+    "description": "Convert HTML to Markdown. Even works with entire websites and can be extended through rules.",
+    "homepage": "https://github.com/JohannesKaufmann/html-to-markdown",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -18,31 +18,17 @@
         }
     },
     "bin": "html2markdown.exe",
-    "checkver": {
-        "github": "https://github.com/JohannesKaufmann/html-to-markdown"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_x86_64.zip",
-                "hash": {
-                    "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_$version_checksums.txt",
-                    "find": "$sha256  html-to-markdown_Windows_x86_64.zip"
-                }
+                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_x86_64.zip"
             },
             "32bit": {
-                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_i386.zip",
-                "hash": {
-                    "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_$version_checksums.txt",
-                    "find": "$sha256  html-to-markdown_Windows_i386.zip"
-                }
+                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_i386.zip"
             },
             "arm64": {
-                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_arm64.zip",
-                "hash": {
-                    "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_$version_checksums.txt",
-                    "find": "$sha256  html-to-markdown_Windows_arm64.zip"
-                }
+                "url": "https://github.com/JohannesKaufmann/html-to-markdown/releases/download/v$version/html-to-markdown_Windows_arm64.zip"
             }
         }
     }
