@@ -1,12 +1,12 @@
 {
-    "version": "0.3.12",
+    "version": "0.3.13",
     "description": "Distributed AI inference node for the Spore network",
     "homepage": "https://sporeintel.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://api.sporeintel.com/api/releases/0.3.12/windows/x86_64/spore_0_3_z4s3oarhsk.2-windows-x86_64.zip",
-            "hash": "b61683506221dd40c08e6650ad9b7c1d4ed1cb72c593575b826fa497eeae44ac"
+            "url": "https://api.sporeintel.com/api/releases/0.3.13/windows/x86_64/spore_0_3_abssn6z5am.3-windows-x86_64.zip",
+            "hash": "f4f921e41e066835335ea2375ccbaeb7c20cae5a4687f487d5a7230ba9663921"
         }
     },
     "bin": "spore.exe",
