@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/PortableGit-2.53.0-64-bit.7z.exe#/dl.7z",
+            "url": "https://mirrors.bfsu.edu.cn/github-release/git-for-windows/git/LatestRelease/PortableGit-2.53.0-64-bit.7z.exe#/dl.7z",
             "hash": "08713a710ec91ac90de1c09f861289a3b103175f098676e5e664c04dd6c6bf23"
         }
     },
@@ -15,11 +15,15 @@
         "cmd\\git-gui.exe",
         "git-bash.exe",
         "usr\\bin\\ssh.exe",
-        "usr\\bin\\sshd.exe",
         "usr\\bin\\scp.exe",
         "usr\\bin\\sftp.exe",
         "usr\\bin\\ssh-add.exe",
         "usr\\bin\\ssh-agent.exe",
+        [
+            "bin/sh.exe",
+            "ssh-copy-id",
+            "ssh-copy-id"
+        ],
         "usr\\bin\\ssh-keygen.exe",
         "usr\\bin\\ssh-keyscan.exe",
         "usr\\bin\\tig.exe"
@@ -45,7 +49,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/LatestRelease/PortableGit-$matchFull-64-bit.7z.exe#/dl.7z"
+                "url": "https://mirrors.bfsu.edu.cn/github-release/git-for-windows/git/LatestRelease/PortableGit-$matchFull-64-bit.7z.exe#/dl.7z"
             }
         },
         "hash": {
