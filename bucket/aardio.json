@@ -1,23 +1,21 @@
 {
-    "version": "40.88.1",
-    "description": "灵活而强大的动态语言。A flexible and powerful dynamic language.",
     "homepage": "https://www.aardio.com/",
-    "license": "Freeware",
+    "description": "A Windows desktop rapid programming platform",
+    "version": "40.88.3",
+    "license": "freeware",
     "url": "https://d.aardio.com/ide/aardio.7z",
-    "hash": "a3447f8d010acf845dde0b53d3399e7cf7897005ecbed4470b743188e4d86365",
+    "hash": "396d32beb2c7b1b1dc9c558997701317896b81f60a4c7f652a3a2bcb91336308",
+    "bin": "aardio.exe",
     "shortcuts": [
         [
             "aardio.exe",
             "aardio"
         ]
     ],
-    "persist": [
-        "config\\USR.CFG",
-        "project"
-    ],
+    "persist": "config\\USR.CFG",
     "checkver": {
         "url": "https://ide.update.aardio.com/log/",
-        "regex": "aardio v([\\d\\.]+)"
+        "regex": "aardio v([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://d.aardio.com/ide/aardio.7z"
