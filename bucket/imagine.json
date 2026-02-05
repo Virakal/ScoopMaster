@@ -1,19 +1,16 @@
 {
     "version": "2.4.0",
-    "description": "Fast, compact image and animation viewer. Can be used as a standalone application or integrated as a Total Commander Lister plugin.",
+    "description": "(1MB Tiny) Freeware Image & Animation Viewer for Windows",
     "homepage": "https://www.nyam.pe.kr/dev/imagine/",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.nyam.pe.kr/dev/imagine/#license"
     },
-    "suggest": {
-        "Total Commander Plugin Host": "extras/totalcommander"
-    },
     "pre_install": "if (!(Test-Path \"$persist_dir\\Imagine.ini\")) { New-Item \"$dir\\Imagine.ini\" | Out-Null }",
     "architecture": {
         "64bit": {
-            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_2.4.0_x64_Unicode_Full.zip",
-            "hash": "ab8404fbe67aa85fb2d8c8a3e4f94cacb9b83ffb706b55373ddcd610e52c5042",
+            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_2.4.0_x64_Unicode.zip",
+            "hash": "3d0d360536b557d5cd2642006b4ed876cd1ab6c7c38b51cf10f584bb1e9c23f8",
             "bin": [
                 "Imagine64.exe",
                 [
@@ -29,8 +26,8 @@
             ]
         },
         "32bit": {
-            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_2.4.0_Unicode_Full.zip",
-            "hash": "36d604c514800c706b640409a2e5d47cfa2a8f365489626bbd7ee748f34a3d9d",
+            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_2.4.0_Unicode.zip",
+            "hash": "39b5826dafe89986056a2c9a5ebc5679cf7e1e8c552d841575eca71415e7cd54",
             "bin": "Imagine.exe",
             "shortcuts": [
                 [
@@ -39,23 +36,6 @@
                 ]
             ]
         }
-    },
-    "installer": {
-        "script": [
-            "$TCDir = $(appdir totalcommander $global)",
-            "",
-            "if ($TCDir -and (Test-Path \"$TCDir\\current\")) {",
-            "    Write-Host \"Found Total Commander, integrating plugin...\" -ForegroundColor Cyan",
-            "    ",
-            "    $PluginDir = \"$TCDir\\current\\plugins\\Wlx\\Imagine\"",
-            "    if (!(Test-Path \"$PluginDir\")) { New-Item \"$PluginDir\" -ItemType Directory -Force | Out-Null }",
-            "    ",
-            "    Copy-Item \"$dir\\*\" \"$PluginDir\" -Recurse -Force -Exclude \"Imagine.ini\", \"PlugInst.inf\"",
-            "    Write-Host \"Imagine plugin installed to: $PluginDir\" -ForegroundColor Green",
-            "} else {",
-            "    Write-Host \"Total Commander (Scoop) not found. Installing as standalone application only.\" -ForegroundColor Yellow",
-            "}"
-        ]
     },
     "persist": [
         "Imagine.ini",
@@ -66,10 +46,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_$version_x64_Unicode_Full.zip"
+                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_$version_x64_Unicode.zip"
             },
             "32bit": {
-                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_$version_Unicode_Full.zip"
+                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_$version_Unicode.zip"
             }
         }
     }
