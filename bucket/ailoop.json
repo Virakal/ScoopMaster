@@ -1,12 +1,12 @@
 {
-  "version": "0.1.19",
+  "version": "0.1.21",
   "description": "Human-in-the-Loop CLI Tool for AI Agent Communication",
   "homepage": "https://github.com/goailoop/ailoop",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/goailoop/ailoop/releases/download/v0.1.19/ailoop-x86_64-pc-windows-msvc.zip",
-      "hash": "deac93e74eeab817c17dd143c48a91357155c4406679774fb5dbc178b830e289"
+      "url": "https://github.com/goailoop/ailoop/releases/download/v0.1.21/ailoop-x86_64-pc-windows-msvc.zip",
+      "hash": "3cbf798f05b8b5f958260dc1fe092ffa296d6d02ca7dcc01164f485f41293512"
     }
   },
   "bin": "ailoop.exe",
