@@ -1,0 +1,29 @@
+{
+    "version": "7.1.52.0",
+    "description": "Jump Desktop Connect - Remote desktop server application for Windows that allows remote connections via Jump Desktop clients",
+    "homepage": "https://jumpdesktop.com/",
+    "license": "proprietary",
+    "notes": [
+        "Jump Desktop Connect enables your Windows computer to accept remote desktop connections using the Fluid protocol with end-to-end encryption.",
+        "This is a nonportable application that requires admin rights to install."
+    ],
+    "url": "https://jumpdesktop.com/downloads/connect/win",
+    "hash": "8a4dfcb55ae3e059b469fbe3e31012ec678bd1c60638e1e427c88460f34eedb1",
+    "installer": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\JumpDesktopConnect.exe\" -ArgumentList '/VERYSILENT' -Verb RunAs | Out-Null",
+            "Remove-Item \"$dir\\JumpDesktopConnect.exe\""
+        ]
+    },
+    "uninstaller": {
+        "script": "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }"
+    },
+    "checkver": {
+        "url": "https://mirror.jumpdesktop.com/downloads/connect/connect-win3.txt",
+        "regex": "ProductVersion = ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://jumpdesktop.com/downloads/connect/win"
+    }
+}
