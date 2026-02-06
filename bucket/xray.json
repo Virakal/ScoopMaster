@@ -1,6 +1,6 @@
 {
     "version": "26.2.6",
-    "description": "V2Ray with XTLS support and other features",
+    "description": "A platform for building proxies to bypass network restrictions",
     "homepage": "https://github.com/XTLS/Xray-core",
     "license": "MPL-2.0",
     "architecture": {
@@ -13,7 +13,13 @@
             "hash": "a1a5ff0f7ef13ef34d5ef223022464e0c284ff4c38cb824ebdce28c40535d498"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
+        "    Set-Content \"$dir\\config.json\" '{}' -Encoding 'Ascii'",
+        "}"
+    ],
     "bin": "xray.exe",
+    "persist": "config.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
