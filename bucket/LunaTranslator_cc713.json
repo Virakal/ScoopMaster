@@ -1,48 +1,48 @@
 {
-    "version": "10.15.4.33",
-    "description": "Galgame翻译工具, 支持剪贴板, OCR, HOOK, 支持30余种翻译工具, 支持TTS",
-    "homepage": "https://github.com/HIllya51/LunaTranslator",
-    "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.4.33/LunaTranslator_x64_win10.zip",
-            "hash": "fa6b0b047678d88d5350d626a9aa9643d67121d19988e1ca6fef5a04ed3e813f",
-            "pre_install": [
-                "Rename-Item -Path \"$($dir)\\LunaTranslator*\" -NewName \"dir\" -Force",
-                "Get-ChildItem -Path \"$($dir)\\dir\" -Recurse | ForEach-Object { Move-Item -Path $_.FullName -Destination \"$($dir)\\$($_.Name)\" -Force }",
-                "Remove-Item -Path \"$($dir)\\dir\" -Recurse -Force"
-            ]
-        },
-        "32bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.4.33/LunaTranslator_x86_win7.zip",
-            "extract_dir": "LunaTranslator*",
-            "hash": "03adc9be899915ac8404ec78212565d77b39b3a380d9b30569fad3d9d7cdca4d"
-        }
+  "version": "10.15.4.33",
+  "description": "Galgame翻译工具, 支持剪贴板, OCR, HOOK, 支持30余种翻译工具, 支持TTS",
+  "homepage": "https://github.com/HIllya51/LunaTranslator",
+  "license": "GPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.4.33/LunaTranslator_x64_win10.zip",
+      "hash": "fa6b0b047678d88d5350d626a9aa9643d67121d19988e1ca6fef5a04ed3e813f",
+      "pre_install": [
+        "Rename-Item -Path \"$($dir)\\LunaTranslator*\" -NewName \"dir\" -Force",
+        "Get-ChildItem -Path \"$($dir)\\dir\" -Recurse | ForEach-Object { Move-Item -Path $_.FullName -Destination \"$($dir)\\$($_.Name)\" -Force }",
+        "Remove-Item -Path \"$($dir)\\dir\" -Recurse -Force"
+      ]
     },
-    "shortcuts": [
-        [
-            "LunaTranslator.exe",
-            "LunaTranslator"
-        ],
-        [
-            "LunaTranslator_admin.exe",
-            "LunaTranslator (Admin)"
-        ]
-    ],
-    "persist": [
-        "userconfig",
-        "translation_record",
-        "cache"
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win10.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.4.33/LunaTranslator_x86_win7.zip",
+      "extract_dir": "LunaTranslator*",
+      "hash": "03adc9be899915ac8404ec78212565d77b39b3a380d9b30569fad3d9d7cdca4d"
     }
+  },
+  "shortcuts": [
+    [
+      "LunaTranslator.exe",
+      "LunaTranslator"
+    ],
+    [
+      "LunaTranslator_admin.exe",
+      "LunaTranslator (Admin)"
+    ]
+  ],
+  "persist": [
+    "userconfig",
+    "translation_record",
+    "cache"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win10.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
+      }
+    }
+  }
 }
