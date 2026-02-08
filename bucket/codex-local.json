@@ -1,0 +1,30 @@
+{
+    "version": "202601161849",
+    "description": "在终端运行的轻量级编码代理，提供 Codex CLI 能力",
+    "homepage": "https://github.com/LaelLuo/codex",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LaelLuo/codex/releases/download/branch-release-old-local-release-202601161849-7cbefd8/codex-x86_64-pc-windows-msvc.exe.zip",
+            "hash": "fcdc5bb31c34c3e33e5253b5a2aaad96d769e0bccd86a47f60c2f2acd759e1a1"
+        }
+    },
+    "bin": [
+        [
+            "codex-x86_64-pc-windows-msvc.exe",
+            "codex-local"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/LaelLuo/codex",
+        "regex": "branch-release-old-local-release-(?<version>\\d+)-(?<tag>[0-9a-f]+)",
+        "replace": "${version}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LaelLuo/codex/releases/download/branch-release-old-local-release-$matchVersion-$matchTag/codex-x86_64-pc-windows-msvc.exe.zip"
+            }
+        }
+    }
+}
