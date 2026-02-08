@@ -1,0 +1,29 @@
+{
+    "version": "0.4.4",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/karmafun/karmafun/releases/download/v0.4.4/karmafun_v0.4.4_windows_386.zip",
+            "bin": [
+                "karmafun.exe"
+            ],
+            "hash": "6523c9a049303e73cd3c1550568351c4a4e58ce48c8f2c9bff291cb8e318e710"
+        },
+        "64bit": {
+            "url": "https://github.com/karmafun/karmafun/releases/download/v0.4.4/karmafun_v0.4.4_windows_amd64.zip",
+            "bin": [
+                "karmafun.exe"
+            ],
+            "hash": "1a1d031724ae8d7dae2985bfdad4d96faa7f81564356106a48b05b7e86ab3891"
+        },
+        "arm64": {
+            "url": "https://github.com/karmafun/karmafun/releases/download/v0.4.4/karmafun_v0.4.4_windows_arm64.zip",
+            "bin": [
+                "karmafun.exe"
+            ],
+            "hash": "a43ea3b79605c2907eaca9cb5540c9dc3969eb64f0b5f4e7047baab83a519280"
+        }
+    },
+    "homepage": "https://github.com/karmafun/karmafun",
+    "license": "Apache-2.0",
+    "description": "Kustomize SOPS KRM function"
+}
