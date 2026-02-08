@@ -1,0 +1,14 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
+    "version": "1.2.0",
+    "description": "Feature rich Discord TUI client. ",
+    "homepage": "https://github.com/sparklost/endcord",
+    "license": "GPL-3.0",
+    "url": "https://github.com/sparklost/endcord/releases/download/1.2.0/endcord-1.2.0-windows.zip",
+    "hash": "991f08cdc1d419d9ceff7725c6874c050a79aba7af26d555a67c3ef4623b99cc",
+    "bin": "endcord.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/sparklost/endcord/releases/download/$version/endcord-$version-windows.zip"
+    }
+}
