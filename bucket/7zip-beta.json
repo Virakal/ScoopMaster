@@ -1,8 +1,8 @@
 {
-    "version": "25.01",
-    "description": "Multi-format compression/decompression tool (beta version)",
     "homepage": "https://www.7-zip.org/",
+    "description": "Multi-format compression/decompression tool (beta version)",
     "license": "LGPL-2.1-or-later,BSD-3-Clause",
+    "version": "25.01",
     "architecture": {
         "64bit": {
             "url": "https://www.7-zip.org/a/7z2501-x64.msi",
@@ -18,16 +18,6 @@
         "7z.exe",
         "7zG.exe"
     ],
-    "shortcuts": [
-        [
-            "7zFM.exe",
-            "7-Zip Beta"
-        ]
-    ],
-    "persist": [
-        "Codecs",
-        "Formats"
-    ],
     "checkver": {
         "url": "https://www.7-zip.org/history.txt",
         "regex": "\\n([\\d.]+)( beta)?"
@@ -41,5 +31,11 @@
                 "url": "https://www.7-zip.org/a/7z$cleanVersion.msi"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "7zFM.exe",
+            "7-Zip"
+        ]
+    ]
 }
