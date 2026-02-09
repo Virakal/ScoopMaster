@@ -1,5 +1,5 @@
 {
-    "version": "147.0",
+    "version": "147.0.3",
     "description": "Firefox 浏览器的无 EME 版本，默认禁用 DRM 支持",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/",
     "license": "MPL-2.0",
@@ -11,12 +11,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/147.0/win64-EME-free/zh-CN/Firefox%20Setup%20147.0.exe#/dl.7z",
-            "hash": "sha512:da0a9f9da68a8f796c0218860407039c00ad0bdd19a407a855824b33da30f7033b7f0a6cddd0da826fcb522003c370cd81655a35d6190dd24c02ce7d4b44ddcf"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/147.0.3/win64-EME-free/zh-CN/Firefox%20Setup%20147.0.3.exe#/dl.7z",
+            "hash": "sha512:39f88503d2f275e23a72747d6d7ea34a859ce7dc4b828fc18e35b7356ebcbb340bdbbe721ea5049d32d37c659cf188f3697e4fda53c697947e28bdd624a9b3c5"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/147.0/win32-EME-free/zh-CN/Firefox%20Setup%20147.0.exe#/dl.7z",
-            "hash": "sha512:b6280de3bb0105373935b31ccca283821324a893635c38baf14e10dc6cb658ff6ae0e7253e299bdaf48f87a5e6108a3b8fbb83f421721d012ce26ac2c38a0455"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/147.0.3/win32-EME-free/zh-CN/Firefox%20Setup%20147.0.3.exe#/dl.7z",
+            "hash": "sha512:d28f5fad93b33326481c6685c444795ddb032c62451ef52ce6bf9550afbf6eed1c04b88db6f84bc4fa233b1a561d96b6719d4457dcc7a4f3ec699c69c7f6fa7a"
         }
     },
     "extract_dir": "core",
