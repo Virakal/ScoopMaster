@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/Aurora-RGB/Aurora/releases/download/v370/Aurora-v370.zip",
+            "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v370/Aurora-v370.zip",
             "hash": "6853a1a50304de5eaf395e22a943ec9309b1931942e719c35a4e378f49305156"
         }
     },
@@ -21,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/Aurora-RGB/Aurora/releases/download/v$version/Aurora-v$version.zip"
+                "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v$version/Aurora-v$version.zip"
             }
         }
     }

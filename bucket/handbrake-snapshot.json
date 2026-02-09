@@ -4,11 +4,11 @@
     "homepage": "https://handbrake.fr",
     "license": "GPL-2.0-only",
     "suggest": {
-        ".NET Desktop Runtime 8.0": "scoop-cn/windowsdesktop-runtime-8.0"
+        ".NET Desktop Runtime 8.0": "versions/windowsdesktop-runtime-8.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-20260207-ca742df9a-x86_64-Win_GUI.zip",
+            "url": "https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-20260207-ca742df9a-x86_64-Win_GUI.zip",
             "hash": "31a0785c49babb9d15aa9c4d522f9fee3800d297093f80ba471de62daff95d48"
         }
     },
@@ -42,7 +42,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-$version-x86_64-Win_GUI.zip",
+                "url": "https://github.com/HandBrake/HandBrake-snapshots/releases/download/win/HandBrake-$version-x86_64-Win_GUI.zip",
                 "hash": {
                     "url": "https://github.com/HandBrake/handbrake-snapshots/releases/tag/win",
                     "regex": "<td>$sha256</td>\\s+<td>HandBrake-([\\d]+-[\\w]+)-x86_64-Win_GUI.zip</td>"

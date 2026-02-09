@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-windows-64-desktop.zip",
+            "url": "https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-windows-64-desktop.zip",
             "hash": "45f84f348fad631c2574aa977771cc11afe05f0fc9e2bbb48c94b9d9adb7fe57",
             "extract_dir": "v2rayN-windows-64"
         },
         "arm64": {
-            "url": "https://gh-proxy.org/https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-windows-arm64-desktop.zip",
+            "url": "https://github.com/2dust/v2rayN/releases/download/7.17.3/v2rayN-windows-arm64-desktop.zip",
             "hash": "18f96f9437639ce9762fb582ed97af68dedf9df001e50ad50874a9a35c565893",
             "extract_dir": "v2rayN-windows-arm64"
         }
@@ -29,10 +29,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-64-desktop.zip"
+                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-64-desktop.zip"
             },
             "arm64": {
-                "url": "https://gh-proxy.org/https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-arm64-desktop.zip"
+                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-arm64-desktop.zip"
             }
         }
     }
