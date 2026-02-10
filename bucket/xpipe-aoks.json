@@ -1,42 +1,42 @@
 {
-  "##": " see also https://github.com/ScoopInstaller/Extras/blob/master/bucket/xpipe.json",
-  "version": "21.0",
-  "description": "A connection hub and remote file manager to access your entire server infrastructure from your local desktop",
-  "homepage": "https://xpipe.io/",
-  "license": "Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/xpipe-io/xpipe/releases/download/21.0/xpipe-portable-windows-x86_64.zip",
-      "hash": "0090f5e7b9ea1df7256d1cc51f6f4edeecb7cb5cdd21276de66672a6383a7d6d"
-    },
-    "arm64": {
-      "url": "https://github.com/xpipe-io/xpipe/releases/download/21.0/xpipe-portable-windows-arm64.zip",
-      "hash": "8b59fe10e1ac9e091d0ff6a615ecf7bfdd438479768c98cd3ad7d83839cec982"
-    }
-  },
-  "extract_dir": "xpipe-21.0",
-  "bin": "bin\\xpipe.exe",
-  "shortcuts": [
-    [
-      "xpiped.exe",
-      "XPipe"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/xpipe-io/xpipe"
-  },
-  "autoupdate": {
+    "##": " see also https://github.com/ScoopInstaller/Extras/blob/master/bucket/xpipe.json",
+    "version": "21.0",
+    "description": "A connection hub and remote file manager to access your entire server infrastructure from your local desktop",
+    "homepage": "https://xpipe.io/",
+    "license": "Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-x86_64.zip"
-      },
-      "arm64": {
-        "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-arm64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/xpipe-io/xpipe/releases/download/21.0/xpipe-portable-windows-x86_64.zip",
+            "hash": "0090f5e7b9ea1df7256d1cc51f6f4edeecb7cb5cdd21276de66672a6383a7d6d"
+        },
+        "arm64": {
+            "url": "https://github.com/xpipe-io/xpipe/releases/download/21.0/xpipe-portable-windows-arm64.zip",
+            "hash": "8b59fe10e1ac9e091d0ff6a615ecf7bfdd438479768c98cd3ad7d83839cec982"
+        }
     },
-    "extract_dir": "xpipe-$version",
-    "hash": {
-      "url": "$baseurl/sha256sums.txt"
+    "extract_dir": "xpipe-21.0",
+    "bin": "bin\\xpipe.exe",
+    "shortcuts": [
+        [
+            "xpiped.exe",
+            "XPipe"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/xpipe-io/xpipe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-arm64.zip"
+            }
+        },
+        "extract_dir": "xpipe-$version",
+        "hash": {
+            "url": "$baseurl/sha256sums.txt"
+        }
     }
-  }
 }
