@@ -17,9 +17,6 @@
             "hash": "3c96b93d0d225538e9fc55df2e5b13f89e4ec83795a14e617c494d37eb710713"
         }
     },
-    "env_set": {
-        "OLLAMA_MODELS": "$persist_dir\\.ollama\\models"
-    },
     "bin": "ollama.exe",
     "checkver": {
         "github": "https://github.com/ollama/ollama"
