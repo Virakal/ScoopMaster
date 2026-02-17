@@ -1,15 +1,15 @@
 {
-    "version": "1.0.2841",
-    "description": "Microsoft Xbox 360 emulator",
+    "version": "1.0.2842",
+    "description": "Xbox 360 Research Emulator",
     "homepage": "https://xenia.jp",
     "license": {
-        "url": "https://github.com/xenia-project/xenia/blob/master/LICENSE",
-        "identifier": "BSD-3-Clause"
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/xenia-project/xenia/blob/master/LICENSE"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xenia-project/release-builds-windows/releases/download/v1.0.2841-master/xenia_master.zip",
-            "hash": "b71507ae256f71a261d6856436c300fb65eab1d82e644441dda9eb5cebc22b4f"
+            "url": "https://github.com/xenia-project/release-builds-windows/releases/download/v1.0.2842-master/xenia_master.zip",
+            "hash": "2de49af3860fd3b12e04015eb2d23f8d918e72ac9a11eda116e85adac7eaf7e8"
         }
     },
     "pre_install": [
@@ -39,7 +39,7 @@
     ],
     "checkver": {
         "github": "https://github.com/xenia-project/release-builds-windows",
-        "regex": "v([\\d.]+)-master/xenia_master\\.zip"
+        "regex": "v([\\d.]+)-master"
     },
     "autoupdate": {
         "architecture": {
