@@ -21,7 +21,7 @@
         "}"
     ],
     "post_install": [
-        "'oot.otr', 'oot-mq.otr' | % {",
+        "'oot.o2r', 'oot-mq.o2r' | % {",
         "   if (Test-Path \"$persist_dir\\$_\") {",
         "       Copy-Item \"$persist_dir\\$_\" \"$dir\\$_\" -Force",
         "   }",
@@ -42,7 +42,7 @@
         "imgui.ini"
     ],
     "pre_uninstall": [
-        "'oot.otr', 'oot-mq.otr' | % {",
+        "'oot.o2r', 'oot-mq.o2r' | % {",
         "   if (Test-Path \"$dir\\$_\") {",
         "       Copy-Item \"$dir\\$_\" \"$persist_dir\\$_\" -Force",
         "   }",
