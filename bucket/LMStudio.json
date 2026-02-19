@@ -16,7 +16,7 @@
                     "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
                     "Remove-Item \"$dir\\app-64.7z\"",
                     ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = \"$env:APPDATA\\LM Studio\"; 'cache' = \"$env:USERPROFILE\\.cache\\lm-studio\"; 'userdata' = \"$env:USERPROFILE\\.lm-studio\" }"
+                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
                 ]
             }
         },
@@ -29,7 +29,7 @@
                     "Expand-7zipArchive \"$dir\\app-arm64.7z\" \"$dir\"",
                     "Remove-Item \"$dir\\app-arm64.7z\"",
                     ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = \"$env:APPDATA\\LM Studio\"; 'cache' = \"$env:USERPROFILE\\.cache\\lm-studio\"; 'userdata' = \"$env:USERPROFILE\\.lm-studio\" }"
+                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
                 ]
             }
         }
@@ -45,7 +45,7 @@
     "uninstaller": {
         "script": [
             ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = \"$env:APPDATA\\LM Studio\"; 'cache' = \"$env:USERPROFILE\\.cache\\lm-studio\"; 'userdata' = \"$env:USERPROFILE\\.lm-studio\" }"
+            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
         ]
     },
     "checkver": {
@@ -62,3 +62,4 @@
         }
     }
 }
+

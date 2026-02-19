@@ -19,13 +19,13 @@
     "installer": {
         "script": [
             ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = \"$env:APPDATA\\hikari-field-client\" }"
+            "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\hikari-field-client' }"
         ]
     },
     "uninstaller": {
         "script": [
             ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = \"$env:APPDATA\\hikari-field-client\" }"
+            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\hikari-field-client' }"
         ]
     },
     "bin": "HIKARI FIELD CLIENT.exe",
@@ -47,3 +47,4 @@
         }
     }
 }
+
