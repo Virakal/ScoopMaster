@@ -1,31 +1,31 @@
 {
-    "version": "1.37.1",
-    "description": "Easy Git worktree management for the terminal",
-    "homepage": "https://github.com/chmouel/lazyworktree",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/chmouel/lazyworktree/releases/download/v1.37.1/lazyworktree_Windows_x86_64.zip",
-            "hash": "31e095693130c9ed7a4114b462523fab76f45932d6d7c285cddcd95d9a562c48"
-        },
-        "arm64": {
-            "url": "https://github.com/chmouel/lazyworktree/releases/download/v1.37.1/lazyworktree_Windows_arm64.zip",
-            "hash": "ae5a9b78bace9910cd2b2b175b3897bc8157538f2f58adb3b844fac3a7f44cae"
-        }
+  "version": "1.37.1",
+  "description": "Easy Git worktree management for the terminal",
+  "homepage": "https://github.com/chmouel/lazyworktree",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/chmouel/lazyworktree/releases/download/v1.37.1/lazyworktree_Windows_x86_64.zip",
+      "hash": "31e095693130c9ed7a4114b462523fab76f45932d6d7c285cddcd95d9a562c48"
     },
-    "bin": "lazyworktree.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/chmouel/lazyworktree/releases/download/v$version/lazyworktree_Windows_x86_64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/chmouel/lazyworktree/releases/download/v$version/lazyworktree_Windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+    "arm64": {
+      "url": "https://github.com/chmouel/lazyworktree/releases/download/v1.37.1/lazyworktree_Windows_arm64.zip",
+      "hash": "ae5a9b78bace9910cd2b2b175b3897bc8157538f2f58adb3b844fac3a7f44cae"
     }
+  },
+  "bin": "lazyworktree.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/chmouel/lazyworktree/releases/download/v$version/lazyworktree_Windows_x86_64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/chmouel/lazyworktree/releases/download/v$version/lazyworktree_Windows_arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
 }
