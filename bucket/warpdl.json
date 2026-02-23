@@ -1,14 +1,37 @@
 {
-  "version": "0.0.48",
+  "version": "1.3.38",
   "architecture": {
     "64bit": {
-      "url": "https://ghproxy.com/https://github.com/warpdl/warp-releases/releases/download/0.0.48/warp_0.0.48_windows_amd64.zip",
+      "url": "https://github.com/warpdl/warpdl/releases/download/v1.3.38/warpdl_1.3.38_windows_amd64.zip",
       "bin": [
         "warpdl.exe"
       ],
-      "hash": "89b0162a2d6a314de70d494e8b4a25ccabeb96d290a7793e9233550d7fc38efb"
+      "hash": "6bb92bc265320e1c3308adefbf749178bd548e410a06504aba5c504bb9a1cdf2"
+    },
+    "arm64": {
+      "url": "https://github.com/warpdl/warpdl/releases/download/v1.3.38/warpdl_1.3.38_windows_arm64.zip",
+      "bin": [
+        "warpdl.exe"
+      ],
+      "hash": "33177db26712c305495dae8debc9d25b27c694fcc61cc8ce8d473a7682e6a959"
     }
   },
-  "homepage": "https://warpdl.org",
-  "description": "The official Warp CLI download manager"
+  "homepage": "https://github.com/warpdl/warpdl",
+  "description": "The official Warp CLI download manager",
+  "post_install": [
+    "$warpdl = Join-Path $dir \"warpdl.exe\"",
+    "& $warpdl native-host install --auto 2>$null"
+  ],
+  "pre_uninstall": [
+    "& (Join-Path $dir \"warpdl.exe\") native-host uninstall --browser all 2>$null",
+    "$pidFile = Join-Path $env:APPDATA \"warpdl\\daemon.pid\"",
+    "if (Test-Path $pidFile) {",
+    "  $pid = Get-Content $pidFile -ErrorAction SilentlyContinue",
+    "  if ($pid) {",
+    "    try { Stop-Process -Id $pid -Force -ErrorAction SilentlyContinue } catch {}",
+    "  }",
+    "  Remove-Item $pidFile -Force -ErrorAction SilentlyContinue",
+    "}",
+    "Write-Host \"WarpDL daemon stopped.\""
+  ]
 }
