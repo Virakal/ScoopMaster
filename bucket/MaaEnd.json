@@ -5,7 +5,7 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaEnd/MaaEnd/releases/download/v1.15.4/MaaEnd-win-x86_64-v1.15.4.zip",
+            "url": "https://gh-proxy.org/https://github.com/MaaEnd/MaaEnd/releases/download/v1.15.4/MaaEnd-win-x86_64-v1.15.4.zip",
             "hash": "65842dba9e07d1831510dfa995a9f88bd9d4b73d814790af1c560a5f2f471c20"
         }
     },
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/MaaEnd/MaaEnd/releases/download/v$version/MaaEnd-win-x86_64-v$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/MaaEnd/MaaEnd/releases/download/v$version/MaaEnd-win-x86_64-v$version.zip"
             }
         }
     }
