@@ -1,13 +1,13 @@
 {
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "TUI installer for Claude Code and Codex CLI configurations",
     "homepage": "https://github.com/devsepnine/hibi_ai",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/devsepnine/hibi_ai/releases/download/v0.1.2/hibi-ai-0.1.2-windows.zip",
-            "hash": "f5e357d5894231533d9634a1a0a5e0375790a90b7cad194be8edc4e1b573b410",
-            "extract_dir": "hibi-ai-0.1.2-windows"
+            "url": "https://github.com/devsepnine/hibi_ai/releases/download/v0.1.3/hibi-ai-0.1.3-windows.zip",
+            "hash": "6f724efca5891d74a9b48062bb883875c6c6a7571e224557df62afbd6e55da4d",
+            "extract_dir": "hibi-ai-0.1.3-windows"
         }
     },
     "bin": [
