@@ -1,19 +1,19 @@
 {
-    "version": "0.2.3",
+    "version": "0.2.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/leonamvasquez/terraview/releases/download/v0.2.3/terraview-windows-amd64.zip",
+            "url": "https://github.com/leonamvasquez/terraview/releases/download/v0.2.5/terraview-windows-amd64.zip",
             "bin": [
                 "terraview.exe"
             ],
-            "hash": "5c453f49f09e4ac20d1a9722ed615d662478f58ee42996d81789311b18de300b"
+            "hash": "6f1bf28a210cedda5279b100b869f6d5bc885baa2850a77c056805405d698735"
         },
         "arm64": {
-            "url": "https://github.com/leonamvasquez/terraview/releases/download/v0.2.3/terraview-windows-arm64.zip",
+            "url": "https://github.com/leonamvasquez/terraview/releases/download/v0.2.5/terraview-windows-arm64.zip",
             "bin": [
                 "terraview.exe"
             ],
-            "hash": "a96cec9e7a390a5b85a1d5b467a72ea2ed8bc7fbc2e4f1e0e5b9f494d7a94010"
+            "hash": "fc6a819c4103ad70ce0c114961a30ff2cf6ab26e12d201ec2f1dbbc14fcba02a"
         }
     },
     "homepage": "https://github.com/leonamvasquez/terraview",
