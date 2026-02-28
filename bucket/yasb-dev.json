@@ -1,0 +1,47 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
+    "version": "20260222-023005",
+    "description": "A highly configurable Windows status bar written in Python. ",
+    "homepage": "https://github.com/amnweb/yasb",
+    "license": "MIT",
+    "url": "https://github.com/amnweb/yasb/releases/download/dev/yasb-dev-x64.msi",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/amnweb/yasb/releases/download/dev/yasb-dev-x64.msi",
+            "hash": "9752c1442318a4df1630f23df51baaec236d2c206e30fd78548eaa29f6968ca9"
+        }
+    },
+    "bin": [
+        [
+            "yasb.exe",
+            "yasb_dev"
+        ],
+        [
+            "yasbc.exe",
+            "yasbc_dev"
+        ],
+        [
+            "yasb_themes.exe",
+            "yasb_themes_dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "yasb.exe",
+            "YASB Dev"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repositories/823761490/releases/tags/dev",
+        "jsonpath": "$.created_at",
+        "regex": "([^-]+)-([^-]+)-([^T]+)T([^:]+):([^:]+):([^Z]+)",
+        "replace": "${1}${2}${3}-${4}${5}${6}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/amnweb/yasb/releases/download/dev/yasb-dev-x64.msi"
+            }
+        }
+    }
+}
