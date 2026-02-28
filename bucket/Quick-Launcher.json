@@ -1,0 +1,22 @@
+{
+    "version": "0.1.7",
+    "description": "A lightweight Windows launcher built with Tauri + Vue 3 + SQLite",
+    "homepage": "https://github.com/maqibg/Quick-Launcher",
+    "license": "Unknown",
+    "url": "https://github.com/maqibg/Quick-Launcher/releases/download/v0.1.7/Quick-Launcher.exe",
+    "hash": "f55b496e16abbfa7ee89bdfb0bd151e36e3406e2fe1a8fa7c577d52da3ebadf7",
+    "bin": "Quick-Launcher.exe",
+    "shortcuts": [
+        [
+            "Quick-Launcher.exe",
+            "Quick Launcher"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/maqibg/Quick-Launcher"
+    },
+    "autoupdate": {
+        "url": "https://github.com/maqibg/Quick-Launcher/releases/download/v$version/Quick-Launcher.exe"
+    }
+}
