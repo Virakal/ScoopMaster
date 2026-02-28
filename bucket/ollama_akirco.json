@@ -1,40 +1,40 @@
 {
-    "version": "0.17.2",
-    "description": "Get up and running with large language models locally.",
-    "homepage": "https://ollama.com/",
-    "license": "MIT",
-    "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
-    "suggest": {
-        "Ollama Full": "extras/ollama-full"
+  "version": "0.17.2",
+  "description": "Get up and running with large language models locally.",
+  "homepage": "https://ollama.com/",
+  "license": "MIT",
+  "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
+  "suggest": {
+    "Ollama Full": "extras/ollama-full"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ollama/ollama/releases/download/v0.17.2/ollama-windows-amd64.zip",
+      "hash": "1ade3d07a5941f724d9b7e89ea1984c8a1a8b545f316ded89de8cd066e48d8d3"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.17.2/ollama-windows-amd64.zip",
-            "hash": "1ade3d07a5941f724d9b7e89ea1984c8a1a8b545f316ded89de8cd066e48d8d3"
-        },
-        "arm64": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.17.2/ollama-windows-arm64.zip",
-            "hash": "d4d62d66d968c0f1e950979d61ed0a732c1eb9a481eb4648603d1b98a540b4af"
-        }
-    },
-    "env_set": {
-        "OLLAMA_MODELS": "$persist_dir\\.ollama\\models"
-    },
-    "bin": "ollama.exe",
-    "checkver": {
-        "github": "https://github.com/ollama/ollama"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/sha256sum.txt"
-        }
+    "arm64": {
+      "url": "https://github.com/ollama/ollama/releases/download/v0.17.2/ollama-windows-arm64.zip",
+      "hash": "d4d62d66d968c0f1e950979d61ed0a732c1eb9a481eb4648603d1b98a540b4af"
     }
+  },
+  "env_set": {
+    "OLLAMA_MODELS": "$persist_dir\\.ollama\\models"
+  },
+  "bin": "ollama.exe",
+  "checkver": {
+    "github": "https://github.com/ollama/ollama"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/sha256sum.txt"
+    }
+  }
 }
