@@ -1,10 +1,10 @@
 {
-    "version": "8.7.0",
+    "homepage": "https://yun.139.com/",
     "description": "The official client for China Mobile 139 Cloud and 139 Email",
-    "homepage": "https://c.139.com/",
-    "license": "Proprietary",
-    "hash": "af1fd62e3f26f464071ab74f60b67c37352553cbc4614e49595ec88f14c61aaa",
-    "url": "https://yun.mcloud.139.com/mCloudPc/v870/mCloud-8.7.0-001.exe#/dl.7z",
+    "license": "Unknown",
+    "version": "v811",
+    "url": "https://yun.mcloud.139.com/mCloudPc/v811/mCloud_Setup-001.exe#/mcloud-setup.7z",
+    "hash": "3D1CE4F830E21489CE5545FDCEF93FEDE25FECD7EC8BB9654CE7FEAAD55E1FCA",
     "installer": {
         "script": [
             "Remove-Item -Force -Recurse \"$dir\\*\" -Exclude \"app.7z\"",
@@ -12,43 +12,17 @@
             "Remove-Item \"$dir\\app.7z\""
         ]
     },
-    "persist": [
-        "clouddb.db",
-        "cloudbackupdb.db",
-        "mountservicedb.db",
-        "syncclouddb.db",
-        "accountdb.db",
-        "config"
-    ],
     "shortcuts": [
         [
-            "mCloud.exe",
-            "中国移动云盘"
+            "mcloud.exe",
+            "移动云盘"
         ]
     ],
-    "pre_install": [
-        "function New-PersistFile([String] $path) {",
-        "    if (!(Test-Path $path) -or !(Get-Item $path).Length) {",
-        "        New-Item $path -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-        "    }",
-        "}",
-        "New-PersistFile \"$persist_dir\\clouddb.db\"",
-        "New-PersistFile \"$persist_dir\\cloudbackupdb.db\"",
-        "New-PersistFile \"$persist_dir\\mountservicedb.db\"",
-        "New-PersistFile \"$persist_dir\\syncclouddb.db\"",
-        "New-PersistFile \"$persist_dir\\accountdb.db\""
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App"
-    ],
     "checkver": {
-        "script": "(Invoke-WebRequest -UseBasicParsing -Uri 'https://yun.139.com/platformInfo/advertapi/adv-filter/adv-filter/AdInfoFilter/getAdInfos' -Method Post -ContentType 'application/json' -Body '{\"adpostid\": 2016}' -TimeoutSec 10).Content",
-        "jsonpath": "$.body[?(@.name == 'Windows')].description",
-        "regex": "V([\\d.]+)"
+        "url": "https://yun.mcloud.139.com/mCloudPc/v811/mCloud_Setup-001.exe#/mcloud-setup.7z",
+        "regex": "mCloudPc/v(\\d+)/mCloud"
     },
     "autoupdate": {
-        "url": "https://yun.mcloud.139.com/mCloudPc/v$cleanVersion/mCloud-$version-001.exe#/dl.7z"
+        "url": "https://yun.mcloud.139.com/mCloudPc/v$version/mCloud_Setup-001.exe#/mcloud-setup.7z"
     }
 }
