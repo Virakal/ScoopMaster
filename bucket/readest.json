@@ -1,46 +1,35 @@
 {
-    "version": "0.9.100",
-    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
-    "homepage": "https://readest.com/",
-    "license": {
-        "identifier": "AGPL-3.0-or-later",
-        "url": "https://github.com/readest/readest/blob/main/LICENSE"
-    },
+    "version": "0.9.101",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences.",
+    "homepage": "https://github.com/chrox/readest",
+    "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.100/Readest_0.9.100_x64-portable.exe#/Readest.exe",
-            "hash": "47b381826116c3451ab702996a8a6c5d71c968b8dc5fa79a4256a541d666152a"
+            "url": "https://github.com/chrox/readest/releases/download/v0.9.101/Readest_0.9.101_x64-setup.exe#/dl.7z",
+            "hash": "e64e98691c1b7d51c944f41c320e46a64ce8aa5561e1c8e7a64641515b3cfb87"
         },
         "arm64": {
-            "url": "https://github.com/readest/readest/releases/download/v0.9.100/Readest_0.9.100_arm64-portable.exe#/Readest.exe",
-            "hash": "e95d65753339fa1de3649b3059bff535b04265790208e6661541af4921e066ca"
+            "url": "https://github.com/chrox/readest/releases/download/v0.9.101/Readest_0.9.101_arm64-setup.exe#/dl.7z",
+            "hash": "a9a15c5873e5efde6744e8bf5010e34cdaafeb3b84080c59a336f00fb8d48cad"
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path \"$persist_dir\\settings.json\")) {",
-        "    Set-Content -Path \"$dir\\settings.json\" -Value '{\"autoCheckUpdates\":false}' -Encoding ASCII",
-        "}"
-    ],
+    "post_install": "Remove-Item \"$dir\\uninst*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "Readest.exe",
             "Readest"
         ]
     ],
-    "persist": [
-        "Readest",
-        "settings.json"
-    ],
     "checkver": {
-        "github": "https://github.com/readest/readest"
+        "github": "https://github.com/chrox/readest"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
+                "url": "https://github.com/chrox/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
+                "url": "https://github.com/chrox/readest/releases/download/v$version/Readest_$version_arm64-setup.exe#/dl.7z"
             }
         }
     }
