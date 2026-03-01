@@ -1,0 +1,31 @@
+{
+    "version": "0.1.2",
+    "description": "JS runtime lolz",
+    "homepage": "https://tryandromeda.dev/",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tryandromeda/andromeda/releases/download/0.1.2/andromeda-windows-amd64.exe#/andromeda.exe",
+            "hash": "eb59a287908cdaf53057258040859ba06a06c1b2434ac56c167e7298e70cf5e0"
+        },
+        "arm64": {
+            "url": "https://github.com/tryandromeda/andromeda/releases/download/0.1.2/andromeda-windows-arm64.exe#/andromeda.exe",
+            "hash": "5548bdb10ec8aa0065f0e27aafa81a43ffebbd52f55718709636e3e8894afc53"
+        }
+    },
+    "bin": "andromeda.exe",
+    "checkver": {
+        "github": "https://github.com/tryandromeda/andromeda",
+        "regex": "releases/tag/([\\dA-Za-z.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tryandromeda/andromeda/releases/download/$version/andromeda-windows-amd64.exe#/andromeda.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/tryandromeda/andromeda/releases/download/$version/andromeda-windows-arm64.exe#/andromeda.exe"
+            }
+        }
+    }
+}
