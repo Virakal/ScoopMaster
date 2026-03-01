@@ -1,37 +1,36 @@
 {
-    "version": "2026-02-22-12-26-c7b5f15-c6e5733",
-    "description": "A complete, cross-platform solution to record, convert and stream audio and video. (Autobuilds)",
+    "version": "8.0",
+    "description": "A complete, cross-platform solution to record, convert and stream audio and video.",
     "homepage": "https://ffmpeg.org",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://ffmpeg.org/legal.html"
-    },
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/2026-02-22-12-26-c7b5f15-c6e5733/ffmpeg-c7b5f15-c6e5733-win64-nonfree.7z",
-            "hash": "a716102a306d224cbc2991ebaeb269587bd37b8c68d46884206dc1a373344bca"
-        },
-        "32bit": {
-            "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/2026-02-22-12-26-c7b5f15-c6e5733/ffmpeg-c7b5f15-c6e5733-win32-nonfree.7z",
-            "hash": "7c22095e990fca174af78500baddaa3e61d427a95d6d193f572f3c3ed140a083"
+            "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-8.0-full_build.7z",
+            "hash": "973db2088fc8dacc927443a95e1ddbfc686170a7e748d0ac810ae5ab81587b30",
+            "extract_dir": "ffmpeg-8.0-full_build"
         }
     },
+    "post_install": [
+        "# Workaround for https://github.com/ScoopInstaller/Main/issues/2611",
+        "Remove-Item \"$scoopdir\\shims\\ffmpeg.ps1\", \"$scoopdir\\shims\\ffplay.ps1\", \"$scoopdir\\shims\\ffprobe.ps1\" -ErrorAction SilentlyContinue"
+    ],
     "bin": [
-        "ffmpeg.exe",
-        "ffplay.exe",
-        "ffprobe.exe"
+        "bin\\ffmpeg.exe",
+        "bin\\ffplay.exe",
+        "bin\\ffprobe.exe"
     ],
     "checkver": {
-        "url": "https://github.com/AnimMouse/ffmpeg-autobuild",
-        "regex": "/releases/tag/([\\w.-]+(?<src>\\w{7}-\\w{7}))"
+        "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z.ver",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/$version/ffmpeg-$matchSrc-win64-nonfree.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/AnimMouse/ffmpeg-autobuild/releases/download/$version/ffmpeg-$matchSrc-win32-nonfree.7z"
+                "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-$version-full_build.7z",
+                "hash": {
+                    "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-$version-full_build.7z.sha256"
+                },
+                "extract_dir": "ffmpeg-$version-full_build"
             }
         }
     }
