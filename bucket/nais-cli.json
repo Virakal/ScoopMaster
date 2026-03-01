@@ -1,15 +1,18 @@
 {
-  "version": "1.20230727124636",
+  "version": "v5.2.0",
   "architecture": {
     "64bit": {
-      "url": "https://ghproxy.com/https://github.com/nais/cli/releases/download/1.20230727124636/nais-cli_1.20230727124636_windows_amd64.tar.gz",
-      "bin": [
-        "nais.exe"
-      ],
-      "hash": "e0ea37d97197703da21b0794fe7b5b2157b803a558227ff8f04334a55c04eb6a"
+      "url": "https://github.com/nais/cli/releases/download/v5.2.0/nais-cli_windows_amd64.tgz",
+      "bin": ["nais.exe"],
+      "hash": "97B551B9D97A878E54F77563EC1E12C9E5FAC24C32A695AAEA041414FF07CCE8"
+    },
+    "arm64": {
+      "url": "https://github.com/nais/cli/releases/download/v5.2.0/nais-cli_windows_arm64.tgz",
+      "bin": ["nais.exe"],
+      "hash": "A0ED1673F9ABD6903A3EB20F5C0A5B2CE40B9A9FA173667AD41A4869A90FA6C8"
     }
   },
   "homepage": "https://github.com/nais/cli",
   "license": "MIT",
-  "description": "Command-line interface for NAIS"
+  "description": "Command-line interface for Nais"
 }
