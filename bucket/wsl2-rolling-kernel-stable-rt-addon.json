@@ -1,0 +1,75 @@
+{
+    "version": "6.19.5",
+    "description": "Rolling Release Stable Real-Time Kernel Addon Packages (Modules, Headers, Docs) for Windows Subsystem for Linux2 (WSL2)",
+    "homepage": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling",
+    "license": "GPL-2.0",
+    "notes": "This kernel addon package require WSL v2.5.1 or later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-6.19.5/bzImage-x86_64-rt-addon.vhdx",
+            "hash": "0c10e4e2bcbd8692265d8bc8d5e2d9264ab8ef2378febadf1913decfe4b7a612",
+            "post_install": [
+                "####################################################################",
+                "# Set WSL2 rolling Real-Time kernel addon packages in `.wslconfig` #",
+                "#                  Channel: STABLE | Arch: x86_64                  #",
+                "####################################################################",
+                "$ini = Add-Type -memberDefinition @\"",
+                "[DllImport(\"Kernel32\")]",
+                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
+                "\"@ -passthru -name WSL2RollingKernelAddonPackageInstall -UsingNamespace System.Text",
+                "$kernel_addon_path=\"$original_dir\\bzImage-x86_64-rt-addon.vhdx\" -replace \"\\\\\", \"\\\\\" # double all back-slashess",
+                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $kernel_addon_path, \"$env:USERPROFILE\\.wslconfig\")"
+            ],
+            "post_uninstall": [
+                "#######################################################################",
+                "# Remove WSL2 rolling Real-Time kernel addon packages in `.wslconfig` #",
+                "#######################################################################",
+                "$ini = Add-Type -memberDefinition @\"",
+                "[DllImport(\"Kernel32\")]",
+                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
+                "\"@ -passthru -name WSL2RollingKernelAddonPackageUninstall -UsingNamespace System.Text",
+                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $null, \"$env:USERPROFILE\\.wslconfig\")"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-6.19.5/Image-arm64-rt-addon.vhdx",
+            "hash": "27e771d14c1ee192d49a3d08bb3a06d3a110cf085da0f7873fb042ba046a2ea5",
+            "post_install": [
+                "####################################################################",
+                "# Set WSL2 rolling Real-Time kernel addon packages in `.wslconfig` #",
+                "#                  Channel: STABLE | Arch: arm64                   #",
+                "####################################################################",
+                "$ini = Add-Type -memberDefinition @\"",
+                "[DllImport(\"Kernel32\")]",
+                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
+                "\"@ -passthru -name WSL2RollingKernelAddonPackageInstall -UsingNamespace System.Text",
+                "$kernel_addon_path=\"$original_dir\\Image-arm64-rt-addon.vhdx\" -replace \"\\\\\", \"\\\\\" # double all back-slashess",
+                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $kernel_addon_path, \"$env:USERPROFILE\\.wslconfig\")"
+            ],
+            "post_uninstall": [
+                "#######################################################################",
+                "# Remove WSL2 rolling Real-Time kernel addon packages in `.wslconfig` #",
+                "#######################################################################",
+                "$ini = Add-Type -memberDefinition @\"",
+                "[DllImport(\"Kernel32\")]",
+                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
+                "\"@ -passthru -name WSL2RollingKernelAddonPackageUninstall -UsingNamespace System.Text",
+                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $null, \"$env:USERPROFILE\\.wslconfig\")"
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/latest",
+        "regex": "linux-wsl-stable-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-$version/bzImage-x86_64-rt-addon.vhdx"
+            },
+            "arm64": {
+                "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-$version/Image-arm64-rt-addon.vhdx"
+            }
+        }
+    }
+}
