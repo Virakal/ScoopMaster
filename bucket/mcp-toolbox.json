@@ -1,12 +1,12 @@
 {
-    "version": "0.27.0",
+    "version": "0.25.0",
     "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
     "homepage": "https://googleapis.github.io/genai-toolbox/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/genai-toolbox/v0.27.0/windows/amd64/toolbox.exe",
-            "hash": "957cd1ab457cee5ab986f6ee1c7267c727da5ee8c0f318982e9e7637487ce802"
+            "url": "https://storage.googleapis.com/genai-toolbox/v0.25.0/windows/amd64/toolbox.exe",
+            "hash": "53931db2dd85e9ce364a983d7f29a2bbc4d7d57a7a33ccb878697077a40ebe25"
         }
     },
     "bin": "toolbox.exe",

@@ -1,37 +1,29 @@
 {
-    "version": "0.21.1",
-    "description": "A tool for interacting with remote images and registries.",
-    "homepage": "https://github.com/google/go-containerregistry/blob/master/cmd/crane",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/google/go-containerregistry/releases/download/v0.21.1/go-containerregistry_Windows_x86_64.tar.gz",
-            "hash": "72540a3a58df43b2a13804b0b940ea0f37834dc89a004b335c83934a498b76db"
-        },
-        "arm64": {
-            "url": "https://github.com/google/go-containerregistry/releases/download/v0.21.1/go-containerregistry_Windows_arm64.tar.gz",
-            "hash": "04c2c7560029b8e86560e11141eee1e43a21405df19a12767b00424949fb63df"
-        }
-    },
-    "bin": [
-        "crane.exe",
-        "gcrane.exe",
-        "krane.exe"
-    ],
-    "checkver": {
-        "github": "https://github.com/google/go-containerregistry"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/google/go-containerregistry/releases/download/v$version/go-containerregistry_Windows_x86_64.tar.gz"
-            },
-            "arm64": {
-                "url": "https://github.com/google/go-containerregistry/releases/download/v$version/go-containerregistry_Windows_arm64.tar.gz"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+  "version": "0.16.1",
+  "description": "A tool for interacting with remote images and registries.",
+  "homepage": "https://github.com/google/go-containerregistry/blob/master/cmd/crane",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/google/go-containerregistry/releases/download/v0.16.1/go-containerregistry_Windows_x86_64.tar.gz",
+      "hash": "894f4d9ba2bcfb4ed013f7fbda7f962f7c92dbef38fdd172d4676075f4e8a519"
     }
+  },
+  "bin": [
+    "crane.exe",
+    "gcrane.exe"
+  ],
+  "checkver": {
+    "github": "https://github.com/google/go-containerregistry"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/google/go-containerregistry/releases/download/v$version/go-containerregistry_Windows_x86_64.tar.gz"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
 }

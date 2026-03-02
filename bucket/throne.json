@@ -1,20 +1,20 @@
 {
-    "version": "1.1.0-beta.3",
-    "description": "A cross-platform GUI proxy utility (Empowered by sing-box)",
-    "homepage": "https://github.com/throneproj/Throne",
+    "version": "1.0.13",
+    "description": "Cross-platform GUI proxy utility (Empowered by sing-box)",
+    "homepage": "https://github.com/throneproj/throne",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/throneproj/Throne/releases/download/1.1.0-beta.3/Throne-1.1.0-beta.3-windows64.zip",
-            "hash": "dee3e9f6ec0587d976325a6fba31bddcc82a12826ed8c61ae16cf1b2c6cafc80"
+            "url": "https://github.com/throneproj/throne/releases/download/1.0.13/Throne-1.0.13-windows64.zip",
+            "hash": "43bbf618f27e76c12d443ef0d7dc0131218e6dafcca28825163a7999cbd9f8bf"
         },
         "32bit": {
-            "url": "https://github.com/throneproj/Throne/releases/download/1.1.0-beta.3/Throne-1.1.0-beta.3-windows32.zip",
-            "hash": "a9173c169ed7852b10e2f832ae32b5ed00c97cf445c34fef40d0ef6eede0ce05"
+            "url": "https://github.com/throneproj/throne/releases/download/1.0.13/Throne-1.0.13-windows32.zip",
+            "hash": "147805f03f2041930f28d6ec1dc63f864dfa6f9833bbe69a05dbc3d48b5dcbaa"
         },
         "arm64": {
-            "url": "https://github.com/throneproj/Throne/releases/download/1.1.0-beta.3/Throne-1.1.0-beta.3-windows-arm64.zip",
-            "hash": "ec2fe17169967689707166d00dd405537d2ee37ac501afb9f95179a20d44156c"
+            "url": "https://github.com/throneproj/throne/releases/download/1.0.13/Throne-1.0.13-windows-arm64.zip",
+            "hash": "16a58c39d9f48047f1f2e09d8a95001689631862b18e78d045bc73d01f394395"
         }
     },
     "extract_dir": "Throne",
@@ -24,27 +24,19 @@
             "Throne"
         ]
     ],
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config\") -and (installed 'nekoray' $global)) { Write-Host -NoNewline \"Migrating config from nekoray...\" ; Copy-Item -Path \"$(appdir nekoray $global)\\current\\config\" -Destination \"$persist_dir\\config\" -Recurse }",
-        "if ((Test-Path \"$persist_dir\\config\") -and (Test-Path \"$persist_dir\\config.bak\")) { Remove-Item \"$persist_dir\\config.bak\" -Force -Recurse }",
-        "if (Test-Path \"$persist_dir\\config\") { Write-Host -NoNewline \"Backing up existing config...\" ; Copy-Item -Path \"$persist_dir\\config\" -Destination \"$persist_dir\\config.bak\" -Recurse }"
-    ],
     "post_install": "Remove-Item \"$dir\\updater*\" -Force -Recurse",
     "persist": "config",
-    "checkver": {
-        "url": "https://github.com/throneproj/Throne/releases.atom",
-        "regex": "Repository/\\d+/(.+?)<"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/throneproj/Throne/releases/download/$version/Throne-$version-windows64.zip"
+                "url": "https://github.com/throneproj/throne/releases/download/$version/Throne-$version-windows64.zip"
             },
             "32bit": {
-                "url": "https://github.com/throneproj/Throne/releases/download/$version/Throne-$version-windows32.zip"
+                "url": "https://github.com/throneproj/throne/releases/download/$version/Throne-$version-windows32.zip"
             },
             "arm64": {
-                "url": "https://github.com/throneproj/Throne/releases/download/$version/Throne-$version-windows-arm64.zip"
+                "url": "https://github.com/throneproj/throne/releases/download/$version/Throne-$version-windows-arm64.zip"
             }
         }
     }
