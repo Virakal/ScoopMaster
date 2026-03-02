@@ -1,23 +1,30 @@
 {
-    "version": "1.41.8",
-    "description": "A task runner and monorepo management tool for the web ecosystem, written in Rust.",
+    "version": "2.0.3",
+    "description": "A build system and monorepo management tool for the web ecosystem, written in Rust.",
     "homepage": "https://moonrepo.dev/moon",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/moonrepo/moon/releases/download/v1.41.8/moon-x86_64-pc-windows-msvc.exe#/moon.exe",
-            "hash": "4592830af50746f8e54d2f38b9676a8819fe861e1934e8d5144a08856e5f8304"
+            "url": "https://github.com/moonrepo/moon/releases/download/v2.0.3/moon_cli-x86_64-pc-windows-msvc.zip",
+            "hash": "767674c3f6425bdf6b3b91a55a2da1472570d829b2a525f5af1dc225d71e0afc"
         }
     },
-    "bin": "moon.exe",
+    "bin": [
+        "moon.exe",
+        "moonx.exe"
+    ],
     "checkver": {
-        "github": "https://github.com/moonrepo/moon"
+        "url": "https://github.com/moonrepo/moon/releases.atom",
+        "regex": "Repository/\\d+/v(.+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/moonrepo/moon/releases/download/v$version/moon-x86_64-pc-windows-msvc.exe#/moon.exe"
+                "url": "https://github.com/moonrepo/moon/releases/download/v$version/moon_cli-x86_64-pc-windows-msvc.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

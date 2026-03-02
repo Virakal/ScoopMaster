@@ -5,14 +5,14 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-amd64.zip",
+            "url": "https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-amd64.zip",
             "extract_dir": "categraf-v0.5.2-windows-amd64",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
+            "hash": "3442b2f96da3665873b66a63a81bbfbdb9374809f80ecb4d2feacafa5e2ca1e3"
         },
         "arm64": {
-            "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-arm64.zip",
+            "url": "https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-arm64.zip",
             "extract_dir": "categraf-v0.5.2-windows-arm64",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
+            "hash": "fdee74d2f835ccedf2c30c3a615315b6a64bce3b3cce623f45958c3a1c9d7085"
         }
     },
     "bin": "categraf.exe",
@@ -21,11 +21,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-amd64.zip",
+                "url": "https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-amd64.zip",
                 "extract_dir": "categraf-v$version-windows-amd64"
             },
             "arm64": {
-                "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-arm64.zip",
+                "url": "https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-arm64.zip",
                 "extract_dir": "categraf-v$version-windows-arm64"
             }
         }

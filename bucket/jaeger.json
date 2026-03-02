@@ -1,31 +1,26 @@
 {
-  "version": "1.52.0",
-  "description": "An open source, distributed tracing platform.",
-  "homepage": "https://www.jaegertracing.io/",
-  "license": "Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://mirror.ghproxy.com/https://github.com/jaegertracing/jaeger/releases/download/v1.52.0/jaeger-1.52.0-windows-amd64.zip",
-      "extract_dir": "jaeger-1.52.0-windows-amd64",
-      "hash": "ea8ea68289f48fcf8de826892ec69d81b97937cc62dcda10f58227870624161b"
-    }
-  },
-  "bin": [
-    "jaeger-ingester.exe",
-    "jaeger-all-in-one.exe",
-    "jaeger-query.exe",
-    "jaeger-collector.exe",
-    "jaeger-agent.exe"
-  ],
-  "checkver": {
-    "github": "https://github.com/jaegertracing/jaeger"
-  },
-  "autoupdate": {
+    "version": "2.15.0",
+    "description": "An open source, distributed tracing platform.",
+    "homepage": "https://www.jaegertracing.io/",
+    "license": "Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://mirror.ghproxy.com/https://github.com/jaegertracing/jaeger/releases/download/v$version/jaeger-$version-windows-amd64.zip",
-        "extract_dir": "jaeger-1.52.0-windows-amd64"
-      }
+        "64bit": {
+            "url": "https://download.jaegertracing.io/v2.15.0/jaeger-2.15.0-windows-amd64.tar.gz",
+            "extract_dir": "jaeger-2.15.0-windows-amd64",
+            "hash": "3b8e327d7d4d123d5b22e2f53c542be9bab11801d6cac2d04bc226a1bed72952"
+        }
+    },
+    "bin": "jaeger.exe",
+    "checkver": {
+        "url": "https://www.jaegertracing.io/download/",
+        "regex": "/v(?<tag>[\\d.]+)/jaeger-(2.[\\d.]+)-windows-amd64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.jaegertracing.io/v$matchTag/jaeger-$version-windows-amd64.tar.gz",
+                "extract_dir": "jaeger-$version-windows-amd64"
+            }
+        }
     }
-  }
 }
