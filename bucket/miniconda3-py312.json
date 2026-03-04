@@ -1,5 +1,5 @@
 {
-    "version": "25.11.1-1",
+    "version": "26.1.1-1",
     "description": "A cross-platform, Python-agnostic binary package manager",
     "homepage": "https://conda.io/miniconda.html",
     "license": "BSD-3-Clause",
@@ -11,8 +11,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://repo.anaconda.com/miniconda/Miniconda3-py312_25.11.1-1-Windows-x86_64.exe#/setup.exe",
-            "hash": "1f10de1cacfb8dfc1be6e8b90214c60b69ba5e50c47e8f70cb412a980be62198"
+            "url": "https://repo.anaconda.com/miniconda/Miniconda3-py312_26.1.1-1-Windows-x86_64.exe#/setup.exe",
+            "hash": "6d5c7bd0f832e76d1a0395b9cba7c792c47e86a4af48a41f95202ead46cb8333"
         }
     },
     "installer": {
