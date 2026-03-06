@@ -57,6 +57,9 @@
             "}"
         ]
     },
+    "env_set": {
+        "CODEBUDDY_CODE_GIT_BASH_PATH": "$GIT_INSTALL_ROOT\\bin\\bash.exe"
+    },
     "bin": [
         [
             "bin/buddycn.cmd",
