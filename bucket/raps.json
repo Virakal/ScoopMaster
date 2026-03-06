@@ -1,12 +1,12 @@
 {
-    "version": "5.3.0",
+    "version": "5.3.2",
     "description": "🌼 RAPS (rapeseed) — Rust Autodesk Platform Services CLI",
     "homepage": "https://rapscli.xyz",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dmytro-yemelianov/raps/releases/download/v5.3.0/raps-cli-x86_64-pc-windows-msvc.zip",
-            "hash": "6230dfc6923bd07e7ac6fa31d27429a95e28fba4108eceeb33e2096713cb91be",
+            "url": "https://github.com/dmytro-yemelianov/raps/releases/download/v5.3.2/raps-cli-x86_64-pc-windows-msvc.zip",
+            "hash": "2cbb909b07f1f9879dd58aa98a3a4f11ab029ae0da0379466ac5ead86d4f14ef",
             "bin": "raps.exe"
         }
     },
