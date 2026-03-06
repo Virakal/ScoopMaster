@@ -1,26 +1,22 @@
 {
-    "version": "4.29",
+    "version": "4.30",
     "description": "A hard drive disk space analyser that finds the files and folders using the most space.",
-    "homepage": "https://www.diskanalyzer.com",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://www.diskanalyzer.com/eula"
-    },
-    "url": "https://www.diskanalyzer.com/files/wiztree_4_29_portable.zip",
-    "hash": "083e6acc3d678a3398c4ea7446d74c8aa1fa5c0e61e296216f35e0d3482725c8",
-    "pre_install": [
-        "$default_content = \"[frmWizTreeMain]`r`nactWindowsContextMenu_Checked=FALSE`r`nactRunAsAdmin_Checked=FALSE\"",
-        "if (!(Test-Path \"$persist_dir\\WizTree3.ini\")) {",
-        "    Set-Content \"$dir\\WizTree3.ini\" $default_content -Encoding ascii",
-        "# This applies the fix when WizTree3.ini exist but is empty, see #8404 for details",
-        "} elseif ($(Get-Content \"$persist_dir\\WizTree3.ini\") -eq $null) {",
-        "    Set-Content \"$persist_dir\\WizTree3.ini\" $default_content -Encoding ascii",
-        "}"
-    ],
+    "homepage": "https://diskanalyzer.com/",
+    "license": "Unknown",
+    "url": "https://diskanalyzer.com/files/wiztree_4_30_portable.zip",
+    "hash": "8367f467070a8cf6e0608eace0dfc96796ed145e291e88f96d2621ea45fd7b5e",
     "architecture": {
+        "32bit": {
+            "bin": "WizTree.exe",
+            "shortcuts": [
+                [
+                    "WizTree.exe",
+                    "WizTree"
+                ]
+            ]
+        },
         "64bit": {
             "bin": [
-                "WizTree64.exe",
                 [
                     "WizTree64.exe",
                     "WizTree"
@@ -32,23 +28,15 @@
                     "WizTree"
                 ]
             ]
-        },
-        "32bit": {
-            "bin": "WizTree.exe",
-            "shortcuts": [
-                [
-                    "WizTree.exe",
-                    "WizTree"
-                ]
-            ]
         }
     },
+    "pre_install": "if (-not (Test-Path \"$persist_dir\\WizTree3.ini\")) { New-Item \"$dir\\WizTree3.ini\" -ItemType File | Out-Null }",
     "persist": "WizTree3.ini",
     "checkver": {
-        "url": "https://www.diskanalyzer.com/download",
-        "regex": "V(?:&nbsp;|\\s+)([\\d.]+)(?:&nbsp;|\\s+)"
+        "url": "https://diskanalyzer.com/download",
+        "re": "<h4>WizTree ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.diskanalyzer.com/files/wiztree_$underscoreVersion_portable.zip"
+        "url": "https://diskanalyzer.com/files/wiztree_$majorVersion_$minorVersion_portable.zip"
     }
 }
