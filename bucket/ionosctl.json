@@ -1,22 +1,29 @@
 {
-  "version": "6.6.5",
-  "architecture": {
-    "32bit": {
-      "url": "https://ghproxy.com/https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.5/ionosctl-6.6.5-windows-386.zip",
-      "bin": [
-        "ionosctl.exe"
-      ],
-      "hash": "c6ed7ab2e4b106c2e8db0e9f0ead24a62fd20ac5a0b2b0913a5da5377395410d"
+    "version": "6.9.8",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/ionos-cloud/ionosctl/releases/download/v6.9.8/ionosctl-6.9.8-windows-386.zip",
+            "bin": [
+                "ionosctl.exe"
+            ],
+            "hash": "b7f5e3a64e989da90ec97fda1dba91e8a9a6ceecea61d338039636adfcc3d254"
+        },
+        "64bit": {
+            "url": "https://github.com/ionos-cloud/ionosctl/releases/download/v6.9.8/ionosctl-6.9.8-windows-amd64.zip",
+            "bin": [
+                "ionosctl.exe"
+            ],
+            "hash": "8a39b46447d5ecc0908ad74aa1f987e3e2ba1c188083d42d2a2275bca87af9cb"
+        },
+        "arm64": {
+            "url": "https://github.com/ionos-cloud/ionosctl/releases/download/v6.9.8/ionosctl-6.9.8-windows-arm64.zip",
+            "bin": [
+                "ionosctl.exe"
+            ],
+            "hash": "a2365ef77e3d011f10eb72729ed6c84abc60fc394976fd9a7c892e687c329d38"
+        }
     },
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/ionos-cloud/ionosctl/releases/download/v6.6.5/ionosctl-6.6.5-windows-amd64.zip",
-      "bin": [
-        "ionosctl.exe"
-      ],
-      "hash": "cd42d590b99a7868501e559dec36e84b34d3fccf1b74f898891064c716d299a1"
-    }
-  },
-  "homepage": "https://github.com/ionos-cloud/ionosctl",
-  "license": "Apache-2.0",
-  "description": "IonosCTL is a tool to help you manage your Ionos Cloud resources directly from your terminal."
+    "homepage": "https://github.com/ionos-cloud/ionosctl",
+    "license": "Apache-2.0",
+    "description": "IonosCTL is a tool to help you manage your Ionos Cloud resources directly from your terminal."
 }
