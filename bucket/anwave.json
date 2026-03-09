@@ -10,7 +10,7 @@
         }
     },
     "checkver": {
-        "github": "https://api.github.com/repos/SimonMacer/AnWave/releases",
+        "url": "https://api.github.com/repos/SimonMacer/AnWave/releases",
         "regex": "AnWave-v(?<tagversion>[\\d.]+)/AnWave-2024-(?<version>[\\d.]+)-Windows-x64-Stable-Release\\.rar"
     },
     "pre_install": "Move-Item -Path \"$dir\\AnWave-2024-$version-Windows-x64.exe\" -Destination \"$dir\\AnWave.exe\"",
