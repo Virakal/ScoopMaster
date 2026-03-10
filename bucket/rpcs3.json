@@ -17,11 +17,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-c7a576edcea465e280c6708d9cb797080890313f/rpcs3-v0.0.40-18935-c7a576ed_win64_msvc.7z",
+            "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win/releases/download/build-c7a576edcea465e280c6708d9cb797080890313f/rpcs3-v0.0.40-18935-c7a576ed_win64_msvc.7z",
             "hash": "bd03b2b3fc06eb06e4c20d86d8f59ab7b6e692d7b8ce0fda9bea081fac4e7a2a"
         },
         "arm64": {
-            "url": "https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/build-c7a576edcea465e280c6708d9cb797080890313f/rpcs3-v0.0.40-18935-c7a576ed_win64_aarch64_clang.7z",
+            "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/build-c7a576edcea465e280c6708d9cb797080890313f/rpcs3-v0.0.40-18935-c7a576ed_win64_aarch64_clang.7z",
             "hash": "8bc61dc87d14b63d91bb99f18ec00d0040dca064fd973347eb115f091a5e2ad4"
         }
     },
@@ -65,15 +65,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/RPCS3/rpcs3-binaries-win/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_msvc.7z",
+                "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_msvc.7z",
                 "hash": {
-                    "url": "https://github.com/RPCS3/rpcs3-binaries-win/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_msvc.7z.sha256"
+                    "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_msvc.7z.sha256"
                 }
             },
             "arm64": {
-                "url": "https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_aarch64_clang.7z",
+                "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_aarch64_clang.7z",
                 "hash": {
-                    "url": "https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_aarch64_clang.7z.sha256"
+                    "url": "https://gh-proxy.org/https://github.com/RPCS3/rpcs3-binaries-win-arm64/releases/download/$matchBuild/rpcs3-v$version-$matchCommit_win64_aarch64_clang.7z.sha256"
                 }
             }
         }
