@@ -24,7 +24,7 @@
     ],
     "pre_install": [
         "Expand-Archive \"$dir\\thdmerge_*.zip\" \"$dir\"",
-        "\"finished.wav\", \"dovi_tool.exe\", \"dovi_tool.txt\", \"MediaInfoCLI.exe\", \"MediaInfoCLI.txt\", \"thdmerge_*.zip\", \"thdmerge.cpp\" | ForEach-Object { $file = \"$dir\\$_\"; Remove-Item $file }"
+        "\"finished.wav\", \"dovi_tool.exe\", \"dovi_tool.txt\", \"MediaInfoCLI.exe\", \"MediaInfoCLI.txt\", \"thdmerge_*.zip\", \"thdmerge.cpp\" | ForEach-Object { Remove-Item \"$dir\\$_\" }"
     ],
     "persist": [
         "DGDemux.ini",
