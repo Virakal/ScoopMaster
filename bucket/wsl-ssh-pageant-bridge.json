@@ -1,10 +1,10 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "0.6.0",
+   "version": "1.0.0",
    "description": "This bridges communication between Pageant and Windows Subsystem for Linux (WSL).",
    "notes": [
       "Add to startup:",
-      "New-ItemProperty -Path HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -Name 'WSL SSH Pageant Bridge' -PropertyType String -Value \"conhost.exe --headless wsl-ssh-pageant-bridge.cmd",
+      "New-ItemProperty -Path HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -Name 'WSL SSH Pageant Bridge' -PropertyType String -Value 'conhost.exe --headless wsl-ssh-pageant-bridge.cmd'",
       "",
       "Remove from startup:",
       "Remove-ItemProperty -Path HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -Name 'WSL SSH Pageant Bridge'"
@@ -14,8 +14,8 @@
       "npiperelay": "extras/npiperelay"
    },
    "url": [
-      "https://raw.githubusercontent.com/silver886/scoop/wsl-ssh-pageant-bridge/v0.6.0/assets/wsl-ssh-pageant-bridge/script.ps1",
-      "https://raw.githubusercontent.com/silver886/scoop/wsl-ssh-pageant-bridge/v0.6.0/assets/wsl-ssh-pageant-bridge/launch.cmd"
+      "https://raw.githubusercontent.com/silver886/scoop/wsl-ssh-pageant-bridge/v1.0.0/assets/wsl-ssh-pageant-bridge/script.ps1",
+      "https://raw.githubusercontent.com/silver886/scoop/wsl-ssh-pageant-bridge/v1.0.0/assets/wsl-ssh-pageant-bridge/launch.cmd"
    ],
    "hash": [
       "b000f06787393b8c5f3dcc35891ab8f26edaebee05e97f9ab3f10bea868a7bb0",
