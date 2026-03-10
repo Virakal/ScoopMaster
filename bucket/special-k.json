@@ -19,18 +19,17 @@
             "Special K/SKIV"
         ]
     ],
-    "pre_install": [
-        "\"steam_api_sk.dll\", \"steam_api_sk64.dll\" | ForEach-Object { $file = \"$persist_dir\\PlugIns\\ThirdParty\\Steamworks\\$_\"; If (Test-Path $file) { Remove-Item $file -Force }}"
-    ],
     "architecture": {
         "64bit": {
             "pre_install": [
-                "Rename-Item \"$dir\\SKIF,1.exe\" SKIF.exe; Remove-Item \"$dir\\SKIF,2.exe\""
+                "Rename-Item \"$dir\\SKIF,1.exe\" SKIF.exe; Remove-Item \"$dir\\SKIF,2.exe\"",
+                "\"steam_api_sk.dll\", \"steam_api_sk64.dll\" | ForEach-Object { $file = \"$persist_dir\\PlugIns\\ThirdParty\\Steamworks\\$_\"; If (Test-Path $file) { Remove-Item $file -Force }}"
             ]
         },
         "32bit": {
             "pre_install": [
-                "Rename-Item \"$dir\\SKIF,2.exe\" SKIF.exe; Remove-Item \"$dir\\SKIF,1.exe\""
+                "Rename-Item \"$dir\\SKIF,2.exe\" SKIF.exe; Remove-Item \"$dir\\SKIF,1.exe\"",
+                "\"steam_api_sk.dll\", \"steam_api_sk64.dll\" | ForEach-Object { $file = \"$persist_dir\\PlugIns\\ThirdParty\\Steamworks\\$_\"; If (Test-Path $file) { Remove-Item $file -Force }}"
             ]
         }
     },
