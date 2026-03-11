@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/shader-slang/slang/releases/download/v2026.4/slang-2026.4-windows-x86_64.zip",
+            "url": "https://github.com/shader-slang/slang/releases/download/v2026.4/slang-2026.4-windows-x86_64.zip",
             "hash": "65f3a3cd2fb5e7755c0a3dace870fabf635f802a6ce4abe8fcf285b2abdcdf40"
         },
         "arm64": {
-            "url": "https://gh-proxy.org/https://github.com/shader-slang/slang/releases/download/v2026.4/slang-2026.4-windows-aarch64.zip",
+            "url": "https://github.com/shader-slang/slang/releases/download/v2026.4/slang-2026.4-windows-aarch64.zip",
             "hash": "eb36df20bc1112cafb062e0f3f68f883c8febb5abafd3b3b30842a33d5b1908a"
         }
     },
@@ -23,10 +23,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/shader-slang/slang/releases/download/v$version/slang-$version-windows-x86_64.zip"
+                "url": "https://github.com/shader-slang/slang/releases/download/v$version/slang-$version-windows-x86_64.zip"
             },
             "arm64": {
-                "url": "https://gh-proxy.org/https://github.com/shader-slang/slang/releases/download/v$version/slang-$version-windows-aarch64.zip"
+                "url": "https://github.com/shader-slang/slang/releases/download/v$version/slang-$version-windows-aarch64.zip"
             }
         }
     }
