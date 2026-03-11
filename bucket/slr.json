@@ -1,19 +1,19 @@
 {
-    "version": "0.39.2",
+    "version": "0.39.4",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sikalabs/slr/releases/download/v0.39.2/slr_v0.39.2_windows_amd64.tar.gz",
+            "url": "https://github.com/sikalabs/slr/releases/download/v0.39.4/slr_v0.39.4_windows_amd64.tar.gz",
             "bin": [
                 "slr.exe"
             ],
-            "hash": "b352e71a22c56fafa07eaccbad72f844a69c1d89c73aa698140b0800baa13b3c"
+            "hash": "69c7a7869676a4abb582fb0b5c12a42b8da3f82822957c33c757adc1989da93e"
         },
         "arm64": {
-            "url": "https://github.com/sikalabs/slr/releases/download/v0.39.2/slr_v0.39.2_windows_arm64.tar.gz",
+            "url": "https://github.com/sikalabs/slr/releases/download/v0.39.4/slr_v0.39.4_windows_arm64.tar.gz",
             "bin": [
                 "slr.exe"
             ],
-            "hash": "f9e7435ac1d41e5e42f48f87d0135fc60bdc870dace331cce54d8778170e8c6e"
+            "hash": "199b50e603e95f9ac19cb828a5984fa6c2466cb2e2c404fe9f5c144af8d35df8"
         }
     },
     "homepage": "https://github.com/sikalabs/slr",
