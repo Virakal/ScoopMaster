@@ -1,15 +1,19 @@
 {
     "version": "1.2.6",
-    "description": "开源免费的跨平台抓包软件，支持手机扫码连接",
-    "homepage": "https://github.com/wanghongenpin/network_proxy_flutter",
-    "license": "Apache-2.0",
+    "description": "Open source free capture HTTP(S) traffic software ProxyPin, supporting full platform systems",
+    "homepage": "https://github.com/wanghongenpin/proxypin",
+    "license": {
+        "identifier": "Apache-2.0 license",
+        "url": "https://github.com/wanghongenpin/proxypin#Apache-2.0-1-ov-file"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wanghongenpin/proxypin/releases/download/v1.2.6/ProxyPin-windows7-x64.zip",
-            "hash": "d47ce1df753faec4197795e169152ae89ad5fca58dd7922d3bca039d25b6ce96"
+            "url": "https://github.com/wanghongenpin/proxypin/releases/download/v1.2.6/proxypin-windows-setup.exe",
+            "hash": "7763aee4ecfa3c2b5ac6abf2c6dcc1187b388f84eec303f6f3c9a2bea44295e1"
         }
     },
-    "extract_dir": "ProxyPin",
+    "innosetup": true,
+    "bin": "ProxyPin.exe",
     "shortcuts": [
         [
             "ProxyPin.exe",
@@ -20,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/wanghongenpin/proxypin/releases/download/v$version/ProxyPin-windows7-x64.zip"
+                "url": "https://github.com/wanghongenpin/proxypin/releases/download/v$version/proxypin-windows-setup.exe"
             }
         }
     }
