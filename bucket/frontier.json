@@ -1,15 +1,22 @@
 {
-  "version": "0.7.1",
-  "architecture": {
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/raystack/frontier/releases/download/v0.7.1/frontier_Windows_x86_64.zip",
-      "bin": [
-        "frontier.exe"
-      ],
-      "hash": "73826aa690dac0bdf2b709e95339dad670bb2ac331e33967968b215d996f76f4"
-    }
-  },
-  "homepage": "https://github.com/raystack/frontier",
-  "license": "Apache 2.0",
-  "description": "Identity and authorization system"
+    "version": "0.93.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/raystack/frontier/releases/download/v0.93.1/frontier_Windows_x86_64.zip",
+            "bin": [
+                "frontier.exe"
+            ],
+            "hash": "04b488f423a0cb6ef26fae583641021e2d4f84c03f6fa663a607a616249145c7"
+        },
+        "arm64": {
+            "url": "https://github.com/raystack/frontier/releases/download/v0.93.1/frontier_Windows_arm64.zip",
+            "bin": [
+                "frontier.exe"
+            ],
+            "hash": "dc335ce26c75dd663da5bddf6f43595ad1360e16f0fb414f882776466f908cbd"
+        }
+    },
+    "homepage": "https://github.com/raystack/frontier",
+    "license": "Apache 2.0",
+    "description": "Identity and authorization system"
 }

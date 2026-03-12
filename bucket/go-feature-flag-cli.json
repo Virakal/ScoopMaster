@@ -1,0 +1,28 @@
+{
+    "version": "1.51.2",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/thomaspoignant/go-feature-flag/releases/download/v1.51.2/go-feature-flag-cli_1.51.2_Windows_i386.tar.gz",
+            "bin": [
+                "go-feature-flag-cli.exe"
+            ],
+            "hash": "9408916c876cf30d686af28ab63c51516fbe5969bd46c355b8a7e3833712020d"
+        },
+        "64bit": {
+            "url": "https://github.com/thomaspoignant/go-feature-flag/releases/download/v1.51.2/go-feature-flag-cli_1.51.2_Windows_x86_64.tar.gz",
+            "bin": [
+                "go-feature-flag-cli.exe"
+            ],
+            "hash": "ecec8cc59ce27f954e99de4eaf5556ec438e1cda2d3e2aecd7f7dfbc2999204b"
+        },
+        "arm64": {
+            "url": "https://github.com/thomaspoignant/go-feature-flag/releases/download/v1.51.2/go-feature-flag-cli_1.51.2_Windows_arm64.tar.gz",
+            "bin": [
+                "go-feature-flag-cli.exe"
+            ],
+            "hash": "4d8f220031099da219a01a04b41ae660a7c3deccea74bb47d457ac5b309f0db4"
+        }
+    },
+    "homepage": "https://gofeatureflag.org/docs/tooling/cli",
+    "license": "MIT"
+}

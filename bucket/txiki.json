@@ -1,0 +1,25 @@
+{
+    "version": "26.3.0",
+    "description": "A tiny JavaScript runtime powered by QuickJS Ng",
+    "homepage": "https://github.com/saghul/txiki.js",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/saghul/txiki.js/releases/download/v26.3.0/txiki-windows-x86_64.zip",
+            "hash": "d1b17983f70d4393405bfaac3af21a82de43fc45b88d526b6da93cbd1f11393a"
+        }
+    },
+    "extract_dir": "txiki-windows-x86_64",
+    "bin": "tjs.exe",
+    "checkver": {
+        "url": "https://github.com/saghul/txiki.js",
+        "regex": "tag/v([\\w\\.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/saghul/txiki.js/releases/download/v$version/txiki-windows-x86_64.zip"
+            }
+        }
+    }
+}

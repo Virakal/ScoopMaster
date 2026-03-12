@@ -1,31 +1,14 @@
 {
-    "homepage": "https://ebstudio.info/home/xdoc2txt.html",
-    "description": "Text converter",
-    "license": "Freeware",
-    "version": "2.21",
-    "architecture": {
-        "32bit": {
-            "url": "https://ebstudio.info/download/KWICFinder/xd2tx221.zip",
-            "hash": "2396cb74922232a1091cddca4c55f1f67f51d1d6fe7fa3c22fb6eb4b0f97ea45"
-        },
-        "64bit": {
-            "url": "https://ebstudio.info/download/KWICFinder/xd2tx221_x64.zip",
-            "hash": "69b234a88812f10343bdb052a62d146a266f68258741e9f9d646fb856765e66a"
-        }
-    },
-    "bin": "command/xdoc2txt.exe",
+    "homepage": "http://ebstudio.info/home/xdoc2txt.html",
+    "url": "http://ebstudio.info/download/KWICFinder/xd2tx221_x64.zip",
+    "hash": "69b234a88812f10343bdb052a62d146a266f68258741e9f9d646fb856765e66a",
+    "version": "221_x64",
     "checkver": {
-        "url": "https://ebstudio.info/home/xdoc2txt.html ",
-        "re": "xdoc2txt (?<version>[\\d.]+) \\( xd2tx[\\d.]+_x64.zip \\)"
+        "url": "http://ebstudio.info/home/xdoc2txt.html",
+        "re": "/download/KWICFinder/xd2tx([^ ]+)\\.zip"
     },
     "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://ebstudio.info/download/KWICFinder/xd2tx$cleanVersion.zip"
-            },
-            "64bit": {
-                "url": "https://ebstudio.info/download/KWICFinder/xd2tx$cleanVersion_x64.zip"
-            }
-        }
-    }
+        "url": "http://ebstudio.info/download/KWICFinder/xd2tx$version.zip"
+    },
+    "bin": "command/xdoc2txt.exe"
 }
