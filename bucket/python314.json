@@ -6,15 +6,15 @@
     "notes": "Allow applications and third-party installers to find python by running: \"$dir\\install-pep-514.reg\"",
     "architecture": {
         "64bit": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-amd64.exe#/setup.exe",
+            "url": "https://mirrors.nju.edu.cn/python/3.14.3/python-3.14.3-amd64.exe#/setup.exe",
             "hash": "md5:897f5296196cddf98ea8c0409c299753"
         },
         "32bit": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3.exe#/setup.exe",
+            "url": "https://mirrors.nju.edu.cn/python/3.14.3/python-3.14.3.exe#/setup.exe",
             "hash": "md5:cf6a0d56f3c106dc59f2c82acdd89617"
         },
         "arm64": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-arm64.exe#/setup.exe",
+            "url": "https://mirrors.nju.edu.cn/python/3.14.3/python-3.14.3-arm64.exe#/setup.exe",
             "hash": "md5:1183951d055ef6c0ae1fb686b3342a6f"
         }
     },
@@ -106,13 +106,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.python.org/ftp/python/$version/python-$version-amd64.exe#/setup.exe"
+                "url": "https://mirrors.nju.edu.cn/python/$version/python-$version-amd64.exe#/setup.exe"
             },
             "32bit": {
-                "url": "https://www.python.org/ftp/python/$version/python-$version.exe#/setup.exe"
+                "url": "https://mirrors.nju.edu.cn/python/$version/python-$version.exe#/setup.exe"
             },
             "arm64": {
-                "url": "https://www.python.org/ftp/python/$version/python-$version-arm64.exe#/setup.exe"
+                "url": "https://mirrors.nju.edu.cn/python/$version/python-$version-arm64.exe#/setup.exe"
             }
         },
         "hash": {

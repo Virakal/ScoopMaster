@@ -1,59 +1,41 @@
 {
-    "version": "149.0b7",
-    "description": "Developer builds of Firefox: the popular open source web browser.",
-    "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
-    "license": "MPL-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/149.0b7/win64/zh-CN/Firefox%20Setup%20149.0b7.exe#/dl.7z",
-            "hash": "sha512:a51cd91bbc437ad9dbce16cfc6a17873c2b2bb9c6417d8d93de4f555c012954976c97c84ad0e9766365a05a1765e400bfff9861821a9af6c95ca4461e947f830"
-        }
-    },
-    "extract_dir": "core",
-    "post_install": [
-        "firefox-dev -CreateProfile \"Scoop-Dev $persist_dir\\profile\"",
-        "$Addition = \"$persist_dir\\addition\"",
-        "if (Test-Path $Addition) {",
-        "  info 'Copying additional items...'",
-        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
-        "}",
-        "$Police = \"$persist_dir\\distribution\"",
-        "if (!(Test-Path $Police)) {",
-        "  info 'Creating Police Directory...'",
-        "  New-Item -Path $Police -Type Directory -ErrorAction SilentlyContinue",
-        "}"
-    ],
-    "bin": [
-        [
-            "firefox.exe",
-            "firefox-dev"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "firefox.exe",
-            "Firefox Developer Edition"
-        ]
-    ],
-    "persist": [
-        "profile",
-        "addition",
-        "distribution"
-    ],
-    "checkver": {
-        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
-        "xpath": "/updates/update/patch/@URL",
-        "regex": "devedition-([\\db.]+)-"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://archive.mozilla.org/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://archive.mozilla.org/pub/devedition/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64/zh-CN/$basename"
-                }
-            }
-        }
+  "version": "116.0b8",
+  "description": "Developer builds of Firefox: the popular open source web browser.",
+  "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
+  "license": "MPL-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://archive.mozilla.org/pub/devedition/releases/116.0b8/win64/zh-CN/Firefox%20Setup%20116.0b8.exe#/dl.7z",
+      "hash": "sha512:a26912ad003c28b6a0cd73f273f12d1249552b055211862c0a94f0a218100de2363b4fe96d5dca584a74177a2ff52418012c1c55df736c240e76380ff9d08bd3"
     }
+  },
+  "extract_dir": "core",
+  "bin": [
+    [
+      "firefox.exe",
+      "firefox-dev"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "firefox.exe",
+      "Firefox Developer Edition"
+    ]
+  ],
+  "checkver": {
+    "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
+    "xpath": "/updates/update/patch/@URL",
+    "regex": "devedition-([\\db.]+)-"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://archive.mozilla.org/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+        "hash": {
+          "url": "https://archive.mozilla.org/pub/devedition/releases/$version/SHA512SUMS",
+          "regex": "$sha512\\s+win64/zh-CN/$basename"
+        }
+      }
+    }
+  }
 }

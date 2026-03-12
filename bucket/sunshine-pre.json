@@ -9,7 +9,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LizardByte/Sunshine/releases/download/v2026.311.154809/Sunshine-Windows-AMD64-portable.zip",
+            "url": "https://gh-proxy.org/https://github.com/LizardByte/Sunshine/releases/download/v2026.311.154809/Sunshine-Windows-AMD64-portable.zip",
             "hash": "81f288a67d27951d1897fd4cebbb0a47f56b6dc6fbcb19c78c91334cd8e0fe47"
         }
     },
@@ -35,7 +35,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LizardByte/Sunshine/releases/download/v$version/Sunshine-Windows-AMD64-portable.zip"
+                "url": "https://gh-proxy.org/https://github.com/LizardByte/Sunshine/releases/download/v$version/Sunshine-Windows-AMD64-portable.zip"
             }
         }
     }

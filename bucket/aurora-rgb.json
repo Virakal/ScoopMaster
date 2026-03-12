@@ -1,28 +1,28 @@
 {
-    "version": "375",
-    "description": "A fork of Aurora, providing unified lighting effects across multiple brands and various games",
-    "homepage": "https://www.project-aurora.com/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v375/Aurora-v375.zip",
-            "hash": "d8183b677b5315f82903151286f90f5c59e891877dff47f1c41a8341567d5eeb"
-        }
-    },
-    "shortcuts": [
-        [
-            "AuroraRgb.exe",
-            "Aurora"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/Aurora-RGB/Aurora"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v$version/Aurora-v$version.zip"
-            }
-        }
+  "version": "375",
+  "description": "A fork of Aurora, providing unified lighting effects across multiple brands and various games",
+  "homepage": "https://www.project-aurora.com/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v375/Aurora-v375.zip",
+      "hash": "d8183b677b5315f82903151286f90f5c59e891877dff47f1c41a8341567d5eeb"
     }
+  },
+  "shortcuts": [
+    [
+      "AuroraRgb.exe",
+      "Aurora"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/Aurora-RGB/Aurora"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Aurora-RGB/Aurora/releases/download/v$version/Aurora-v$version.zip"
+      }
+    }
+  }
 }

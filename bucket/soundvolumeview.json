@@ -1,42 +1,42 @@
 {
-    "version": "2.51",
-    "homepage": "https://www.nirsoft.net/utils/sound_volume_view.html",
-    "bin": "SoundVolumeView.exe",
-    "shortcuts": [
-        [
-            "SoundVolumeView.exe",
-            "NirSoft\\SoundVolumeView"
-        ]
-    ],
-    "persist": [
-        "soundvolumeview_lng.ini",
-        "soundvolumeview.cfg"
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://www.nirsoft.net/utils/soundvolumeview-x64.zip",
-            "hash": "e12598f1531b0a78d274e42f0615a61afd1d13b128f55d6a09e70b649eebd143"
-        },
-        "32bit": {
-            "url": "https://www.nirsoft.net/utils/soundvolumeview.zip",
-            "hash": "5351f6d4e450e1b94225dd67311eefe70e341fa88464928cadbd92ee263b5859"
-        }
+  "version": "2.51",
+  "homepage": "https://www.nirsoft.net/utils/sound_volume_view.html",
+  "bin": "SoundVolumeView.exe",
+  "shortcuts": [
+    [
+      "SoundVolumeView.exe",
+      "NirSoft\\SoundVolumeView"
+    ]
+  ],
+  "persist": [
+    "soundvolumeview_lng.ini",
+    "soundvolumeview.cfg"
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://www.nirsoft.net/utils/soundvolumeview-x64.zip",
+      "hash": "e12598f1531b0a78d274e42f0615a61afd1d13b128f55d6a09e70b649eebd143"
     },
-    "description": "View/change sound levels & save/load sound level profiles on Windows Vista/7/8",
-    "license": "Freeware",
-    "notes": "If this application is useful to you, please consider donating to NirSoft - https://www.nirsoft.net/donate.html",
-    "checkver": {
-        "url": "https://www.nirsoft.net/pad/soundvolumeview.xml",
-        "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.nirsoft.net/utils/soundvolumeview-x64.zip"
-            },
-            "32bit": {
-                "url": "https://www.nirsoft.net/utils/soundvolumeview.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://www.nirsoft.net/utils/soundvolumeview.zip",
+      "hash": "5351f6d4e450e1b94225dd67311eefe70e341fa88464928cadbd92ee263b5859"
     }
+  },
+  "description": "View/change sound levels & save/load sound level profiles on Windows Vista/7/8",
+  "license": "Freeware",
+  "notes": "If this application is useful to you, please consider donating to NirSoft - https://www.nirsoft.net/donate.html",
+  "checkver": {
+    "url": "https://www.nirsoft.net/pad/soundvolumeview.xml",
+    "xpath": "/XML_DIZ_INFO/Program_Info/Program_Version"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.nirsoft.net/utils/soundvolumeview-x64.zip"
+      },
+      "32bit": {
+        "url": "https://www.nirsoft.net/utils/soundvolumeview.zip"
+      }
+    }
+  }
 }
