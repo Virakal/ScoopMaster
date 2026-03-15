@@ -1,29 +1,21 @@
 {
-  "homepage": "https://github.com/pypa/pip",
-  "description": "The PyPA recommended tool for installing Python packages",
-  "license": "MIT",
-  "version": "23.2.1",
-  "url": "https://bootstrap.pypa.io/pip/pip.pyz#/pip-23.2.1.pyz",
-  "hash": "10f3c30df88bd1645f8e331a39077f2b8254d53d06d14f80655d9560e6be59b5",
-  "bin": [
-    [
-      "py.exe",
-      "pip",
-      "$dir\\pip-23.2.1.pyz"
-    ]
-  ],
-  "checkver": {
-    "url": "https://pypi.org/pypi/pip/json",
-    "jsonpath": "$.info.version"
-  },
-  "autoupdate": {
-    "url": "https://bootstrap.pypa.io/pip/pip.pyz#/pip-$version.pyz",
-    "bin": [
-      [
-        "py.exe",
-        "pip",
-        "$dir\\pip-$version.pyz"
-      ]
-    ]
-  }
+    "homepage": "https://github.com/pypa/pip",
+    "description": "The PyPA recommended tool for installing Python packages",
+    "license": "MIT",
+    "version": "26.0.1",
+    "url": "https://bootstrap.pypa.io/pip/zipapp/pip-26.0.1.pyz",
+    "hash": "0b82eb2cd75d2b56878d85471f9e6103d50fcaabdf637460e7addadeaf71e0b5",
+    "installer": {
+        "script": "New-Item -Type SymbolicLink -Path $scoopdir\\shims\\pip.pyz -Target $dir\\pip-$version.pyz"
+    },
+    "uninstaller": {
+        "script": "Remove-Item -ErrorAction 0 -Path $scoopdir\\shims\\pip.pyz"
+    },
+    "checkver": {
+        "url": "https://pypi.org/pypi/pip/json",
+        "jsonpath": "$.info.version"
+    },
+    "autoupdate": {
+        "url": "https://bootstrap.pypa.io/pip/zipapp/pip-$version.pyz"
+    }
 }
