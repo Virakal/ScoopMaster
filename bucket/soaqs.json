@@ -6,41 +6,36 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/soaqs/V983385-01.zip",
-            "hash": "50a7cbf9b33e04aaaede2f119ebb7869a954c9551f8626fd6ae103768786d926"
+            "hash": "086138bb03422267d97271da353a1d694e2c5acbc4f03b0222fd192878da3f8e"
         }
     },
-    "extract_dir": "fmw_12.2.1.4.0_soa_quickstart",
-    "depends": [
-        "openjdk"
-    ],
-    "pre_install": [
-        "Copy-Item \"$dir\\..\\soa_quickstart.rsp\" \"$dir\\soa_quickstart.rsp\""
-    ],
+    "extract_dir": "",
     "installer": {
         "script": [
-            "# 1. Silent install SOA QuickStart",
+            "# 1. Find the SOA QuickStart JAR",
             "$jar = Get-ChildItem $dir -Recurse -Filter *.jar | Where-Object { $_.Name -match 'soa_quickstart' } | Select-Object -First 1",
-            "if ($jar) {",
-            "    Write-Host \"Starting silent install...\"",
-            "    & java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
-            "} else {",
-            "    Write-Error \"JAR installer not found!\"",
+            "if (-not $jar) {",
+            "    Write-Error 'JAR installer not found!'",
             "    exit 1",
             "}",
             "",
-            "# 2. Create SOA Domain",
+            "# 2. Silent install using bundled RSP",
+            "& java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
+            "",
+            "# 3. Create SOA Domain if not already created",
             "$MW_HOME = 'C:\\Oracle'",
             "$ORACLE_HOME = Join-Path $MW_HOME 'Middleware'",
-            "$DOMAIN_HOME = Join-Path $ORACLE_HOME 'Domains\\soa_domain'",
+            "$DOMAIN_HOME = Join-Path $ORACLE_HOME 'user_projects\\domains\\soa_quickstart'",
             "$configCmd = Join-Path $ORACLE_HOME 'oracle_common\\common\\bin\\config.cmd'",
             "",
             "if (-not (Test-Path $DOMAIN_HOME)) {",
             "    New-Item -ItemType Directory -Path $DOMAIN_HOME | Out-Null",
-            "}",
-            "",
-            "Write-Host 'Creating SOA Domain...'",
-            "& $configCmd -mode=silent -silent_xml \"$ORACLE_HOME\\oracle_common\\common\\templates/wls/soa_quickstart_domain_template.xml\" -domain_home $DOMAIN_HOME -admin_user 'weblogic' -admin_pass 'Welcome1'",
-            "Write-Host 'SOA Domain created at ' $DOMAIN_HOME"
+            "    Write-Host 'Creating SOA Domain...'",
+            "    & $configCmd -mode=silent -silent_xml \"$ORACLE_HOME\\oracle_common\\common\\templates\\wls\\soa_quickstart_domain_template.xml\" -domain_home $DOMAIN_HOME -admin_user 'weblogic' -admin_pass 'Welcome1'",
+            "    Write-Host 'SOA Domain created at ' $DOMAIN_HOME",
+            "} else {",
+            "    Write-Host 'SOA Domain already exists at ' $DOMAIN_HOME",
+            "}"
         ]
     },
     "checkver": {
