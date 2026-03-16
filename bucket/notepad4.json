@@ -1,27 +1,23 @@
 {
     "version": "26.03r6058",
-    "description": "Notepad4 (Notepad2⨯2, Notepad2++) is a light-weight Scintilla based text editor for Windows with syntax highlighting, code folding, auto-completion and API list for many programming languages and documents, bundled with file browser plugin matepath.",
-    "license": "BSD-3-Clause",
+    "description": "Light-weight Scintilla based text editor for Windows",
     "homepage": "https://github.com/zufuliu/notepad4",
-    "notes": "If you want to replace Windows Notepad UWP, please uninstall it first.",
+    "license": "BSD-3-Clause",
     "architecture": {
-        "arm64": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_HD_zh-Hans_ARM64_v26.03r6058.zip",
-            "hash": "91202ddde8a56c0946d762a91274749ca35ae4c47783d5b4724ca238a023a629"
-        },
         "64bit": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_HD_zh-Hans_x64_v26.03r6058.zip",
-            "hash": "b339138b70cc633eff04bbdfe3bd29f795617fc9e3d300edd29eec39bf476e66"
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_HD_i18n_x64_v26.03r6058.zip",
+            "hash": "009f0fae987f56b3931dc65f68c55743449eb73c6452b92b2f3b4c5e6d1f93e6"
         },
         "32bit": {
-            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_zh-Hans_Win32_v26.03r6058.zip",
-            "hash": "cc1c860fc740eab1d7651b7ab4504c788a6810acc0afcefc86ef72c91ac9a5fb"
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_i18n_Win32_v26.03r6058.zip",
+            "hash": "218552d3a150c2e54aa187d382ad4d992cd956fba2e0df7bc08ee21e5d78e090"
+        },
+        "arm64": {
+            "url": "https://github.com/zufuliu/notepad4/releases/download/v26.03r6058/Notepad4_HD_i18n_ARM64_v26.03r6058.zip",
+            "hash": "604b25f4a47d0f1ae84392c9a57701ac118e97d020e867b597890c89200e2be6"
         }
     },
-    "bin": [
-        "Notepad4.exe",
-        "matepath.exe"
-    ],
+    "bin": "notepad4.exe",
     "shortcuts": [
         [
             "Notepad4.exe",
@@ -32,64 +28,38 @@
             "matepath"
         ]
     ],
+    "pre_install": [
+        "'Notepad4.ini', 'matepath.ini', 'Notepad4 DarkTheme.ini' | ForEach-Object {",
+        "    $persistPath = Join-Path $persist_dir $_",
+        "    $defaultPath = Join-Path $dir \"$_-default\"",
+        "    $targetPath = Join-Path $dir $_",
+        "    if (Test-Path -LiteralPath $persistPath -PathType Container) {",
+        "        Remove-Item -LiteralPath $persistPath -Recurse -Force",
+        "    }",
+        "    if (-not (Test-Path -LiteralPath $persistPath -PathType Leaf) -and (Test-Path -LiteralPath $defaultPath -PathType Leaf)) {",
+        "        Copy-Item -LiteralPath $defaultPath -Destination $targetPath",
+        "    }",
+        "}"
+    ],
     "persist": [
         "Notepad4.ini",
-        "matepath.ini"
+        "matepath.ini",
+        "Notepad4 DarkTheme.ini"
     ],
-    "installer": {
-        "script": [
-            "if ($global) {",
-            "    $registry_scope = \"HKEY_LOCAL_MACHINE\"",
-            "} else {",
-            "    $registry_scope = \"HKEY_CURRENT_USER\"",
-            "}",
-            "",
-            "reg.exe delete \"$registry_scope\\SOFTWARE\\Classes\\*\\shell\\Notepad2\" /f",
-            "",
-            "@\"",
-            "Windows Registry Editor Version 5.00",
-            "",
-            "[$registry_scope\\SOFTWARE\\Classes\\*\\shell\\Notepad4]",
-            "@=\"使用 Notepad4 编辑(&2)\"",
-            "\"icon\"=\"$($dir -replace '\\\\','\\\\')\\\\Notepad4.exe\"",
-            "",
-            "[$registry_scope\\SOFTWARE\\Classes\\*\\shell\\Notepad4\\command]",
-            "@=\"\\\"$($dir -replace '\\\\','\\\\')\\\\Notepad4.exe\\\" \\\"%1\\\"\"",
-            "\"@ | Set-Content -Path \"$dir\\install-notepad4.reg\" -Encoding Unicode",
-            "",
-            "reg import \"$dir\\install-notepad4.reg\""
-        ]
-    },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App"
-    ],
-    "uninstaller": {
-        "script": [
-            "if ($global) {",
-            "    $registry_scope = \"HKLM\"",
-            "} else {",
-            "    $registry_scope = \"HKCU\"",
-            "}",
-            "reg.exe delete \"$registry_scope\\SOFTWARE\\Classes\\*\\shell\\Notepad4\" /f"
-        ]
-    },
     "checkver": {
-        "url": "https://api.github.com/repos/zufuliu/notepad4/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "v(?<version>([\\d.]+r[\\d]+))"
+        "github": "https://github.com/zufuliu/notepad2",
+        "regex": "([\\d.]+r\\d+)"
     },
     "autoupdate": {
         "architecture": {
-            "arm64": {
-                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_ARM64_v$version.zip"
-            },
             "64bit": {
-                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_zh-Hans_x64_v$version.zip"
+                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_i18n_x64_v$version.zip"
             },
             "32bit": {
-                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_zh-Hans_Win32_v$version.zip"
+                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_i18n_Win32_v$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/zufuliu/notepad4/releases/download/v$version/Notepad4_HD_i18n_ARM64_v$version.zip"
             }
         }
     }
