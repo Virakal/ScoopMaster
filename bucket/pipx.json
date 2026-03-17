@@ -13,19 +13,6 @@
     "checkver": {
         "github": "https://github.com/pypa/pipx"
     },
-    "persist": "pipx",
-    "env_add_path": "pipx\\bin",
-    "env_set": {
-        "PIPX_HOME": "$dir\\pipx",
-        "PIPX_BIN_DIR": "$dir\\pipx\\bin",
-        "PIPX_MAN_DIR": "$dir\\pipx\\man",
-        "PIPX_SHARED_LIBS": "$dir\\pipx\\shared",
-        "PIPX_LOCAL_VENVS": "$dir\\pipx\\venvs",
-        "PIPX_LOG_DIR": "$dir\\pipx\\logs",
-        "PIPX_TRASH_DIR": "$dir\\pipx\\trash",
-        "PIPX_VENV_CACHEDIR": "$dir\\pipx\\.cache",
-        "PIPX_STANDALONE_PYTHON_CACHEDIR": "$dir\\pipx\\py"
-    },
     "autoupdate": {
         "url": "https://github.com/pypa/pipx/releases/download/$version/pipx.pyz"
     }
