@@ -1,0 +1,23 @@
+{
+    "version": "0.32.0",
+    "description": "A CLI to manage tasks from different task runners or package managers.",
+    "homepage": "https://github.com/linux-china/task-keeper",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/linux-china/task-keeper/releases/download/v0.32.0/task-keeper-x86_64-pc-windows-msvc.zip",
+            "hash": "19d6169cccceac7d9a1f97465d797ea2a4ea46d5993b500144619460b473bf78"
+        }
+    },
+    "bin": "tk.exe",
+    "checkver": {
+        "github": "https://github.com/linux-china/task-keeper"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/linux-china/task-keeper/releases/download/v$version/task-keeper-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
