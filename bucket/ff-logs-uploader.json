@@ -1,34 +1,34 @@
 {
-    "version": "9.0.24",
-    "description": "Uploads FFXIV game logs sourced from Advanced Combat Tracker",
-    "homepage": "https://www.fflogs.com",
-    "license": "Unknown",
-    "url": "https://gh-proxy.org/https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v9.0.24/fflogs-v9.0.24.exe#/dl.7z",
-    "architecture": {
-        "64bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
-        },
-        "32bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
-        }
+  "version": "9.0.24",
+  "description": "Uploads FFXIV game logs sourced from Advanced Combat Tracker",
+  "homepage": "https://www.fflogs.com",
+  "license": "Unknown",
+  "url": "https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v9.0.24/fflogs-v9.0.24.exe#/dl.7z",
+  "architecture": {
+    "64bit": {
+      "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
     },
-    "hash": "sha512:cbdc18f0ec06a0a9d508da29d89249bfd7860d9898ea1b8e80619474f7d6ffd00f77ead2abf0c7d0c704fc34d9865dce197b728dd3cf01c626ae704325052472",
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
-    "bin": "FF Logs Uploader.exe",
-    "shortcuts": [
-        [
-            "FF Logs Uploader.exe",
-            "FF Logs Uploader"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/RPGLogs/Uploaders-fflogs"
-    },
-    "autoupdate": {
-        "url": "https://gh-proxy.org/https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v$version/fflogs-v$version.exe#/dl.7z",
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "find": "sha512:\\s+(.*)"
-        }
+    "32bit": {
+      "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
     }
+  },
+  "hash": "sha512:cbdc18f0ec06a0a9d508da29d89249bfd7860d9898ea1b8e80619474f7d6ffd00f77ead2abf0c7d0c704fc34d9865dce197b728dd3cf01c626ae704325052472",
+  "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
+  "bin": "FF Logs Uploader.exe",
+  "shortcuts": [
+    [
+      "FF Logs Uploader.exe",
+      "FF Logs Uploader"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/RPGLogs/Uploaders-fflogs"
+  },
+  "autoupdate": {
+    "url": "https://github.com/RPGLogs/Uploaders-fflogs/releases/download/v$version/fflogs-v$version.exe#/dl.7z",
+    "hash": {
+      "url": "$baseurl/latest.yml",
+      "find": "sha512:\\s+(.*)"
+    }
+  }
 }
