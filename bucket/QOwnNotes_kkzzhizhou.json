@@ -1,24 +1,24 @@
 {
-    "homepage": "https://www.qownnotes.org/",
-    "version": "26.3.13",
-    "license": "GPL-2.0-only",
-    "url": "https://github.com/pbek/QOwnNotes/releases/download/v26.3.13/QOwnNotes.zip",
-    "hash": "c1a493cfd953f2fee39ffad3d778ce2c0abe2b825c382ea4c11460c36ed0b05e",
-    "bin": "QOwnNotes.exe",
-    "shortcuts": [
-        [
-            "QOwnNotes.exe",
-            "QOwnNotes",
-            "--portable"
-        ]
-    ],
-    "persist": "Data",
-    "checkver": {
-        "url": "https://api.github.com/repos/pbek/QOwnNotes/releases/latest",
-        "jp": "$.name",
-        "regex": "Release v(.*)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/pbek/QOwnNotes/releases/download/v$version/QOwnNotes.zip"
-    }
+  "homepage": "https://www.qownnotes.org/",
+  "version": "26.3.13",
+  "license": "GPL-2.0-only",
+  "url": "https://github.com/pbek/QOwnNotes/releases/download/v26.3.13/QOwnNotes.zip",
+  "hash": "c1a493cfd953f2fee39ffad3d778ce2c0abe2b825c382ea4c11460c36ed0b05e",
+  "bin": "QOwnNotes.exe",
+  "shortcuts": [
+    [
+      "QOwnNotes.exe",
+      "QOwnNotes",
+      "--portable"
+    ]
+  ],
+  "persist": "Data",
+  "checkver": {
+    "url": "https://api.github.com/repos/pbek/QOwnNotes/releases/latest",
+    "jp": "$.name",
+    "regex": "Release v(.*)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/pbek/QOwnNotes/releases/download/v$version/QOwnNotes.zip"
+  }
 }
