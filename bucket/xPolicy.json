@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.1.0/xPolicy_0.1.0_windows_amd64.zip",
+            "bin": [
+                "xPolicy.exe"
+            ],
+            "hash": "47fa6bab64daebabdd26d37554811ccccef924e7c21d8ed2b4edeccd70d21758"
+        },
+        "arm64": {
+            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.1.0/xPolicy_0.1.0_windows_arm64.zip",
+            "bin": [
+                "xPolicy.exe"
+            ],
+            "hash": "daac04729f187ae8ed3b03e28435e4630251c09fc5412d0461cb043b0d60d76c"
+        }
+    },
+    "homepage": "https://xtools.com/xpolicy",
+    "license": "MIT",
+    "description": "xPolicy - Command-line interface for Azure Policy definitions"
+}
