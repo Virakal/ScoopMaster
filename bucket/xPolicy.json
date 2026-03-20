@@ -1,19 +1,19 @@
 {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "architecture": {
         "64bit": {
-            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.1.0/xPolicy_0.1.0_windows_amd64.zip",
+            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.2.0/xPolicy_0.2.0_windows_amd64.zip",
             "bin": [
-                "xPolicy.exe"
+                "xpolicy.exe"
             ],
-            "hash": "47fa6bab64daebabdd26d37554811ccccef924e7c21d8ed2b4edeccd70d21758"
+            "hash": "c00f440b73cc6f2768765d9a7cf1e3f20ebf7609ac09b2f8ecd30c4a0d660695"
         },
         "arm64": {
-            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.1.0/xPolicy_0.1.0_windows_arm64.zip",
+            "url": "https://xtools.blob.core.windows.net/downloads/xPolicy/v0.2.0/xPolicy_0.2.0_windows_arm64.zip",
             "bin": [
-                "xPolicy.exe"
+                "xpolicy.exe"
             ],
-            "hash": "daac04729f187ae8ed3b03e28435e4630251c09fc5412d0461cb043b0d60d76c"
+            "hash": "a322b0ae36d6a34e7e6c62772a0c84b62a36dd2e83cd99583e193d5ab47d7b0c"
         }
     },
     "homepage": "https://xtools.com/xpolicy",
