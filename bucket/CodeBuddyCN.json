@@ -1,5 +1,5 @@
 {
-    "version": "4.4.3",
+    "version": "4.5.8.22610187",
     "description": "An AI-powered IDE that makes programming more enjoyable and efficient.",
     "homepage": "https://www.codebuddy.ai/",
     "license": "Proprietary",
@@ -76,14 +76,14 @@
         ".codebuddycn"
     ],
     "checkver": {
-        "url": "https://copilot.tencent.com/v2/update?platform=ide-win32-x64-user",
+        "url": "https://copilot.tencent.com/v2/update?platform=ide-win32-x64-archive",
         "jsonpath": "$.url",
-        "regex": "://(?<link>.*)-user-(?<version>\\d+\\.\\d+\\.\\d+)\\.(?<build>.+)\\.exe"
+        "regex": "CodeBuddy-win32-x64-archive-([\\d\\.]+)-([\\w-]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchLink-user-$version.$matchBuild.exe"
+                "url": "https://acc-1258344699.cos.accelerate.myqcloud.com/aiide/win32-x64-archive/CodeBuddy-win32-x64-archive-$version-$match1.exe"
             }
         }
     }
