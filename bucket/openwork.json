@@ -1,35 +1,21 @@
 {
-    "homepage": "https://openwork.software/",
-    "version": "0.11.172",
-    "description": "An open-source alternative to Claude Cowork, powered by opencode ",
+    "version": "0.11.173",
+    "description": "OpenWork - AI 驱动的智能办公助手。An open-source alternative to Claude Cowork, powered by opencode.",
+    "homepage": "https://github.com/different-ai/openwork",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/different-ai/openwork/releases/download/v0.11.172/openwork-desktop-windows-x64.msi",
-            "hash": "81a2de92cbb3667c5a23337e403a5965d7d8af17e7977cbdad058828e16f91d7"
+            "url": "https://github.com/different-ai/openwork/releases/download/v0.11.173/openwork-desktop-windows-x64.msi",
+            "hash": "9e5c72bda99b3114be889d8fb8aba55b57c7afde1a6745cdb79a60ad86907a93"
         }
     },
-    "extract_dir": "PFiles\\OpenWork",
-    "shortcuts": [
-        [
-            "openwork.exe",
-            "openwork (different-ai)"
-        ]
-    ],
-    "post_install": [
-        "if (!(Test-Path \"$persist_dir\")) {",
-        "    ensure \"$persist_dir\" | Out-Null",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\data\")) {",
-        "    ensure \"$persist_dir\\data\" | Out-Null",
-        "}",
-        "New-Item $env:AppData\\com.differentai.openwork -ItemType Junction -Target \"$persist_dir\\data\" | Out-Null"
-    ],
-    "pre_uninstall": [
-        "if (Test-Path \"$Env:AppData\\com.differentai.openwork\\*\") {",
-        "    Remove-Item $env:APPDATA\\com.differentai.openwork -Force -Recurse",
-        "}"
-    ],
+    "installer": {
+        "script": "Start-Process msiexec.exe -ArgumentList '/i', \\\"$dir\\openwork-desktop-windows-x64.msi\\\", '/quiet', '/norestart' -Wait -NoNewWindow"
+    },
+    "uninstaller": {
+        "script": "Start-Process msiexec.exe -ArgumentList '/x', (Get-ChildItem \\\"$dir\\openwork-desktop-windows-x64.msi\\\" -ErrorAction SilentlyContinue | Select-Object -First 1).Name, '/quiet', '/norestart' -Wait -NoNewWindow"
+    },
+    "bin": "openwork.exe",
     "checkver": {
         "github": "https://github.com/different-ai/openwork"
     },
@@ -38,6 +24,9 @@
             "64bit": {
                 "url": "https://github.com/different-ai/openwork/releases/download/v$version/openwork-desktop-windows-x64.msi"
             }
+        },
+        "hash": {
+            "url": "https://github.com/different-ai/openwork/releases/download/v$version/openwork-desktop-windows-x64.msi.sha256"
         }
     }
 }
