@@ -1,16 +1,16 @@
 {
-    "version": "9.0-beta.13",
+    "version": "9.0-beta.14",
     "description": "Open-source reference management software to manage bibliographic data and related research materials.",
     "homepage": "https://www.zotero.org/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.zotero.org/client/beta/9.0-beta.13%2Bba3c3a506/Zotero-9.0-beta.13%2Bba3c3a506_x64_setup.exe#/dl.7z",
-            "hash": "8912434e5b06bec418b776ced2d454652a1c33a82ddb773b1725ece2ac0742a6"
+            "url": "https://download.zotero.org/client/beta/9.0-beta.14%2B8af91b014/Zotero-9.0-beta.14%2B8af91b014_x64_setup.exe#/dl.7z",
+            "hash": "c8fc81f7fa05b48624a8cdd74dd2ec4c62229c8cfc4c8ba2191cae49cdea9c7b"
         },
         "32bit": {
-            "url": "https://download.zotero.org/client/beta/9.0-beta.13%2Bba3c3a506/Zotero-9.0-beta.13%2Bba3c3a506_win32_setup.exe#/dl.7z",
-            "hash": "f28d0045e207d30553eedf0906a664cc8ff5d2055415df250901140c3405e8dc"
+            "url": "https://download.zotero.org/client/beta/9.0-beta.14%2B8af91b014/Zotero-9.0-beta.14%2B8af91b014_win32_setup.exe#/dl.7z",
+            "hash": "5fc2614f642814b1a3db53160b4413d454efd5c207d042ad180be88a16153fa4"
         }
     },
     "extract_dir": "core",
@@ -20,51 +20,6 @@
             "zotero.exe",
             "Zotero"
         ]
-    ],
-    "notes": [
-        "To register the 'zotero://' URL protocol, run:",
-        "$dir\\install-zotero-url-protocol.ps1",
-        "",
-        "Existing 'zotero://' URL protocol may be overwrite.",
-        "",
-        "To unregister the 'zotero://' URL protocol, run:",
-        "$dir\\uninstall-zotero-url-protocol.ps1"
-    ],
-    "post_install": [
-        "if (!(Test-Path -Path $dir\\install-zotero-url-protocol.ps1)) {",
-        "    New-Item -Path $dir\\install-zotero-url-protocol.ps1 -ItemType File -Force | Out-Null",
-        "}",
-        "Set-Content -Path $dir\\install-zotero-url-protocol.ps1 -Force -Value @'",
-        "Write-Host 'Registering the ''zotero://'' URL protocol...'",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\zotero' -Value 'Zotero Protocol' -Force | Out-Null",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\zotero\\DefaultIcon' -Value \"REPLACE_HERE\\zotero.exe,1\" -Force | Out-Null",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\zotero\\shell\\open\\command' -Value \"\"\"REPLACE_HERE\\zotero.exe\"\" -url \"\"%1\"\"\" -Force | Out-Null",
-        "New-ItemProperty 'HKCU:\\SOFTWARE\\Classes\\zotero' -Name 'FriendlyTypeName' -Value 'Zotero Protocol' -Force | Out-Null",
-        "New-ItemProperty 'HKCU:\\SOFTWARE\\Classes\\zotero' -Name 'URL Protocol' -Value '' -Force | Out-Null",
-        "New-ItemProperty 'HKCU:\\SOFTWARE\\Classes\\zotero' -Name 'EditFlags' -PropertyType 'DWord' -Value '2' -Force | Out-Null",
-        "Write-Host 'Done!'",
-        "'@",
-        "if (!(Test-Path -Path $dir\\uninstall-zotero-url-protocol.ps1)) {",
-        "    New-Item -Path $dir\\uninstall-zotero-url-protocol.ps1 -ItemType File -Force | Out-Null",
-        "}",
-        "Set-Content -Path $dir\\uninstall-zotero-url-protocol.ps1 -Force -Value @'",
-        "Write-Host 'Unregistering the ''zotero://'' URL protocol...'",
-        "Remove-Item 'HKCU:\\SOFTWARE\\Classes\\zotero' -Recurse -Force",
-        "Write-Host 'Done!'",
-        "'@",
-        "Get-ChildItem \"$dir\\*.ps1\" | ForEach-Object {",
-        "    $content = Get-Content $_",
-        "    $content = $content.Replace('REPLACE_HERE', $dir)",
-        "    if ($global) { $content = $content.Replace('HKCU', 'HKLM') }",
-        "    Set-Content \"$dir\\$($_.Name)\" $content -Encoding 'utf8' -Force",
-        "}"
-    ],
-    "pre_uninstall": [
-        "if ($cmd -eq 'uninstall') {",
-        "    Write-Host 'Unregistering the ''zotero://'' URL protocol...'",
-        "    Remove-Item 'HKCU:\\SOFTWARE\\Classes\\zotero', 'HKLM:\\SOFTWARE\\Classes\\zotero' -ErrorAction 'SilentlyContinue' -Recurse -Force",
-        "    Write-Host 'Done!'",
-        "}"
     ],
     "checkver": {
         "script": [
