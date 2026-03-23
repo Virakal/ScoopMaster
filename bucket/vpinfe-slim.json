@@ -1,12 +1,12 @@
 {
-    "version": "1.1.24",
+    "version": "1.1.25",
     "description": "A vpinball frontend for Linux, Mac, and Windows (slim)",
     "homepage": "https://github.com/superhac/vpinfe",
     "license": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/superhac/vpinfe/releases/download/v1.1.24/vpinfe-v1.1.24-win-x64-slim.zip#/vpinfe.zip",
-            "hash": "1db030610f1594b2a35111e276a00a97d7a33fce0d15dc8cc8bc40d87b1eec44"
+            "url": "https://github.com/superhac/vpinfe/releases/download/v1.1.25/vpinfe-v1.1.25-win-x64-slim.zip#/vpinfe.zip",
+            "hash": "3cb6bc6363c2f936f85366bc9ed372a3ff3ab7ad48c93388c9e2c1e78b0557d1"
         }
     },
     "bin": "vpinfe/vpinfe.bat",
