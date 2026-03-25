@@ -1,16 +1,16 @@
 {
-    "version": "1.16.0",
+    "version": "1.16.1",
     "description": "High performance, multi-platform VNC client and server",
     "homepage": "https://tigervnc.org",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.0/tigervnc64-1.16.0.exe",
-            "hash": "sha1:e2bb9d96d96038e765eaf03159913ffbca3d45f7"
+            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.1/tigervnc64-1.16.1.exe",
+            "hash": "sha1:115238d2a18678a85d74078f9109d49c9c532fac"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.0/tigervnc-1.16.0.exe",
-            "hash": "sha1:7a7c9bd48a3937510c915f0b52103e54f984542b"
+            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.1/tigervnc-1.16.1.exe",
+            "hash": "sha1:15fc38c409ec32b6910aff29dd2c724297624ad1"
         }
     },
     "innosetup": true,
