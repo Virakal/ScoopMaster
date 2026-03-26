@@ -1,44 +1,23 @@
 {
-   "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "0.35.1",
-   "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-   "homepage": "https://github.com/google-gemini/gemini-cli",
-   "license": {
-      "identifier": "Apache-2.0",
-      "url": "https://github.com/google-gemini/gemini-cli/blob/master/LICENSE"
-   },
-   "suggest": {
-      "Node.js (Long Term Support)": "main/nodejs-lts",
-      "Node.js": "main/nodejs"
-   },
-   "url": [
-      "https://github.com/google-gemini/gemini-cli/releases/download/v0.35.1/gemini.js",
-      "https://registry.npmjs.com/@google/gemini-cli/0.35.1#/package.json"
-   ],
-   "hash": [
-      "9a7e4015a65f5c39b40baa8112d7a4146bab146cf6a4ea0837c54f9a2ed30f10",
-      "6b75dbd3e8d9d206e26048146e9949f1a4137d8807fe065e4870d26c0d8162b6"
-   ],
-   "pre_install": [
-      "if (where.exe /q node || $true) {",
-      "   abort 'Node.js should be installed'",
-      "}"
-   ],
-   "bin": [
-      [
-         "node.exe",
-         "gemini",
-         "$dir\\gemini.js"
-      ]
-   ],
-   "checkver": {
-      "url": "https://api.github.com/repos/google-gemini/gemini-cli/releases",
-      "regex": "\"tag_name\": *\"v([\\d\\.]+)\","
-   },
-   "autoupdate": {
-      "url": [
-         "https://github.com/google-gemini/gemini-cli/releases/download/v$version/gemini.js",
-         "https://registry.npmjs.com/@google/gemini-cli/$version#/package.json"
-      ]
-   }
+	"version": "0.35.1",
+	"description": "Brings the power of Gemini directly into your terminal",
+	"homepage": "https://geminicli.com",
+	"license": "Apache-2.0",
+	"url": "http://www.gstatic.com/generate_204#/dummy",
+	"hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+	"bin": [["node_modules\\.bin\\gemini.ps1", "gemini"]],
+	"installer": {
+		"script": "pushd $original_dir; pnpm add @google/gemini-cli@0.35.1; popd;"
+	},
+	"post_uninstall": "pnpm store prune",
+	"depends": ["pnpm", "nodejs"],
+	"checkver": {
+		"url": "https://registry.npmjs.org/@google/gemini-cli/latest",
+		"jsonpath": "$.version"
+	},
+	"autoupdate": {
+		"installer": {
+			"script": "pushd $original_dir; pnpm add @google/gemini-cli@$version; popd;"
+		}
+	}
 }
