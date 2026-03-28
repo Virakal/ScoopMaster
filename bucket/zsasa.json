@@ -1,0 +1,34 @@
+{
+  "version": "0.2.6",
+  "description": "Fast Solvent Accessible Surface Area (SASA) calculator",
+  "homepage": "https://n283t.github.io/zsasa/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/N283T/zsasa/releases/download/v0.2.6/zsasa-0.2.6-windows-x86_64.exe",
+      "hash": "881636b226e42ed64856c8515d00d5034e16268c548b2f2d9984681164394c3f"
+    }
+  },
+  "bin": [
+    [
+      "zsasa-0.2.6-windows-x86_64.exe",
+      "zsasa"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/N283T/zsasa"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/N283T/zsasa/releases/download/v$version/zsasa-$version-windows-x86_64.exe"
+      }
+    },
+    "bin": [
+      [
+        "zsasa-$version-windows-x86_64.exe",
+        "zsasa"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "3.1.11",
+    "description": "Solana-cli with agave.",
+    "homepage": "https://github.com/anza-xyz/agave",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/anza-xyz/agave/releases/download/v3.1.11/solana-release-x86_64-pc-windows-msvc.tar.bz2",
+            "hash": "e856dfc38659591d1e89358e88e5246b75b3ee1333aa93a0fbca46a896edda46"
+        }
+    },
+    "depends": "rustup",
+    "env_add_path": "solana-release\\bin",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/anza-xyz/agave/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
+            }
+        }
+    }
+}
