@@ -5,17 +5,17 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/node/v22.22.2/node-v22.22.2-win-x64.7z",
+            "url": "https://nodejs.org/dist/v22.22.2/node-v22.22.2-win-x64.7z",
             "hash": "c87622c838f312d1fcc635e09034013e983ebe8df039a62ab46c22b34b9b8a0c",
             "extract_dir": "node-v22.22.2-win-x64"
         },
         "32bit": {
-            "url": "https://mirrors.ustc.edu.cn/node/v22.22.2/node-v22.22.2-win-x86.7z",
+            "url": "https://nodejs.org/dist/v22.22.2/node-v22.22.2-win-x86.7z",
             "hash": "d73718f162d286d1deaf911d8bf224ba823a877cd0ed23c0d09b43923f6bd699",
             "extract_dir": "node-v22.22.2-win-x86"
         },
         "arm64": {
-            "url": "https://mirrors.ustc.edu.cn/node/v22.22.2/node-v22.22.2-win-arm64.7z",
+            "url": "https://nodejs.org/dist/v22.22.2/node-v22.22.2-win-arm64.7z",
             "hash": "ed1b73ffb642978e669786f9115d2579e890a3f9bf3dcd7c73272047b4895a17",
             "extract_dir": "node-v22.22.2-win-arm64"
         }
@@ -33,21 +33,21 @@
         "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
     ],
     "checkver": {
-        "url": "https://mirrors.ustc.edu.cn/node/latest-v22.x/",
+        "url": "https://nodejs.org/dist/latest-v22.x/",
         "regex": "node-v([\\d.]+)-win-x64\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-x64.7z",
+                "url": "https://nodejs.org/dist/v$version/node-v$version-win-x64.7z",
                 "extract_dir": "node-v$version-win-x64"
             },
             "32bit": {
-                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-x86.7z",
+                "url": "https://nodejs.org/dist/v$version/node-v$version-win-x86.7z",
                 "extract_dir": "node-v$version-win-x86"
             },
             "arm64": {
-                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-arm64.7z",
+                "url": "https://nodejs.org/dist/v$version/node-v$version-win-arm64.7z",
                 "extract_dir": "node-v$version-win-arm64"
             }
         },

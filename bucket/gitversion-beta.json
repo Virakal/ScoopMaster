@@ -1,21 +1,21 @@
 {
-  "homepage": "https://github.com/GitTools/GitVersion",
-  "description": "Easy Semantic Versioning for projects using Git.",
-  "license": "MIT",
-  "version": "6.7.0",
-  "url": "https://packages.chocolatey.org/GitVersion.Portable.6.7.0.nupkg",
-  "hash": "f55d77d1cfea37803172e2c15d6b3f66ccd831ebe13d319fa0e33d1df0a898b1",
-  "extract_dir": "tools",
-  "bin": "GitVersion.exe",
-  "checkver": {
-    "url": "https://chocolatey.org/packages/GitVersion.Portable",
-    "regex": "GitVersion ([\\w.-]+)"
-  },
-  "autoupdate": {
-    "url": "https://packages.chocolatey.org/GitVersion.Portable.$version.nupkg",
-    "hash": {
-      "url": "https://chocolatey.org/packages/GitVersion.Portable/$version",
-      "regex": "$sha256/analysis/\">$basename"
+    "homepage": "https://github.com/GitTools/GitVersion",
+    "description": "Easy Semantic Versioning for projects using Git.",
+    "license": "MIT",
+    "version": "6.7.0",
+    "url": "https://packages.chocolatey.org/GitVersion.Portable.6.7.0.nupkg",
+    "hash": "f55d77d1cfea37803172e2c15d6b3f66ccd831ebe13d319fa0e33d1df0a898b1",
+    "extract_dir": "tools",
+    "bin": "GitVersion.exe",
+    "checkver": {
+        "url": "https://chocolatey.org/packages/GitVersion.Portable",
+        "regex": "GitVersion ([\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://packages.chocolatey.org/GitVersion.Portable.$version.nupkg",
+        "hash": {
+            "url": "https://chocolatey.org/packages/GitVersion.Portable/$version",
+            "regex": "$sha256/analysis/\">$basename"
+        }
     }
-  }
 }

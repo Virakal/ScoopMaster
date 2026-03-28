@@ -1,0 +1,31 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "version": "1.13.3",
+    "description": "Full featured astronomical image processing software",
+    "homepage": "https://www.setiastro.com/seti-astro-suite-pro",
+    "license": "Freeware",
+    "url": "https://github.com/setiastro/setiastrosuitepro/releases/download/V1.13.3/setiastrosuitepro_windows.zip",
+    "hash": "8a02958401ec0d45040a19f4f4e1ec2ca098fc4e243503e24731e6eafdc81497",
+    "depends": "innounp",
+    "installer": {
+        "script": [
+            "Expand-ZipArchive -Path \"$dir\\setiastrosuitepro_windows.zip\" -DestinationPath \"$dir\" -Removal",
+            "Expand-InnoArchive -Path \"$dir\\SetiAstroSuitePro_Setup.exe\" -DestinationPath \"$dir\" -Removal"
+        ]
+    },
+    "notes": "Look for Cosmic Clarity, StarNet, ASTAP, Graxpert apps as suggest",
+    "bin": "setiastrosuitepro.exe",
+    "shortcuts": [
+        [
+            "setiastrosuitepro.exe",
+            "Seti Astro Suite Pro"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/setiastro/setiastrosuitepro/releases",
+        "regex": "SetiAstroSuitePro_V(.+)</h2>"
+    },
+    "autoupdate": {
+        "url": "https://github.com/setiastro/setiastrosuitepro/releases/download/V$version/setiastrosuitepro_windows.zip"
+    }
+}
