@@ -1,35 +1,35 @@
 {
-    "version": "3.6.6",
-    "description": "A note taking and to-do application with synchronization capabilities",
-    "homepage": "https://joplinapp.org",
-    "license": "MIT",
-    "url": "https://github.com/laurent22/joplin/releases/download/v3.6.6/Joplin-Setup-3.6.6.exe#/dl.7z",
-    "hash": "sha512:fe0ccd5d7f95f6da64f7979521cd589ac604f6b1967f4c845b7c50a752054725d9bda7fa8a87eb923a9247fab1cdfa1d70e5b53d2ea85dfc956220fddad18cf3",
-    "architecture": {
-        "64bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
-        },
-        "32bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
-        }
+  "version": "3.6.6",
+  "description": "A note taking and to-do application with synchronization capabilities",
+  "homepage": "https://joplinapp.org",
+  "license": "MIT",
+  "url": "https://github.com/laurent22/joplin/releases/download/v3.6.6/Joplin-Setup-3.6.6.exe#/dl.7z",
+  "hash": "sha512:fe0ccd5d7f95f6da64f7979521cd589ac604f6b1967f4c845b7c50a752054725d9bda7fa8a87eb923a9247fab1cdfa1d70e5b53d2ea85dfc956220fddad18cf3",
+  "architecture": {
+    "64bit": {
+      "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
     },
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
-    "bin": "Joplin.exe",
-    "shortcuts": [
-        [
-            "Joplin.exe",
-            "Joplin-Pre"
-        ]
-    ],
-    "checkver": {
-        "url": "https://github.com/laurent22/joplin/tags",
-        "regex": "/laurent22/joplin/releases/tag/v([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/laurent22/joplin/releases/download/v$version/Joplin-Setup-$version.exe#/dl.7z",
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "sha512:\\s+$base64"
-        }
+    "32bit": {
+      "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
     }
+  },
+  "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
+  "bin": "Joplin.exe",
+  "shortcuts": [
+    [
+      "Joplin.exe",
+      "Joplin-Pre"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/laurent22/joplin/tags",
+    "regex": "/laurent22/joplin/releases/tag/v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://github.com/laurent22/joplin/releases/download/v$version/Joplin-Setup-$version.exe#/dl.7z",
+    "hash": {
+      "url": "$baseurl/latest.yml",
+      "regex": "sha512:\\s+$base64"
+    }
+  }
 }

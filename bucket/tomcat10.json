@@ -1,47 +1,47 @@
 {
-    "version": "10.1.53",
-    "description": "Implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. (version 10)",
-    "homepage": "https://tomcat.apache.org",
-    "license": "Apache-2.0",
-    "suggest": {
-        "JDK": "java/openjdk"
+  "version": "10.1.53",
+  "description": "Implementation of the Java Servlet, JavaServer Pages, Java Expression Language and Java WebSocket technologies. (version 10)",
+  "homepage": "https://tomcat.apache.org",
+  "license": "Apache-2.0",
+  "suggest": {
+    "JDK": "java/openjdk"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.53/bin/apache-tomcat-10.1.53-windows-x64.zip",
+      "hash": "sha512:df9b801f849f5529aabecd3cf15ccf544ba6338d68d4a67755df02caa6999bca31ea4938bb186cf183d9d329de1f8ee6c9b6c57a98f641590903a4f1aa2c0e97"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.53/bin/apache-tomcat-10.1.53-windows-x64.zip",
-            "hash": "sha512:df9b801f849f5529aabecd3cf15ccf544ba6338d68d4a67755df02caa6999bca31ea4938bb186cf183d9d329de1f8ee6c9b6c57a98f641590903a4f1aa2c0e97"
-        },
-        "32bit": {
-            "url": "https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.53/bin/apache-tomcat-10.1.53-windows-x86.zip",
-            "hash": "sha512:54539b600977b2cf1135be4b74158b3b317ba19791010caef0c7a7d7f02f037eace5dd7051e61ef2615c28a9b654e367100a5de8686a37fea1cec2e480b3d3f0"
-        }
-    },
-    "extract_dir": "apache-tomcat-10.1.53",
-    "bin": "bin\\catalina.bat",
-    "env_set": {
-        "CATALINA_HOME": "$dir",
-        "CATALINA_BASE": "$dir"
-    },
-    "persist": [
-        "conf",
-        "webapps"
-    ],
-    "checkver": {
-        "url": "https://archive.apache.org/dist/tomcat/tomcat-10/?C=M;O=D",
-        "regex": "v([\\d.]+)/"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://archive.apache.org/dist/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
-            },
-            "32bit": {
-                "url": "https://archive.apache.org/dist/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
-            }
-        },
-        "hash": {
-            "url": "$url.sha512"
-        },
-        "extract_dir": "apache-tomcat-$version"
+    "32bit": {
+      "url": "https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.53/bin/apache-tomcat-10.1.53-windows-x86.zip",
+      "hash": "sha512:54539b600977b2cf1135be4b74158b3b317ba19791010caef0c7a7d7f02f037eace5dd7051e61ef2615c28a9b654e367100a5de8686a37fea1cec2e480b3d3f0"
     }
+  },
+  "extract_dir": "apache-tomcat-10.1.53",
+  "bin": "bin\\catalina.bat",
+  "env_set": {
+    "CATALINA_HOME": "$dir",
+    "CATALINA_BASE": "$dir"
+  },
+  "persist": [
+    "conf",
+    "webapps"
+  ],
+  "checkver": {
+    "url": "https://archive.apache.org/dist/tomcat/tomcat-10/?C=M;O=D",
+    "regex": "v([\\d.]+)/"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://archive.apache.org/dist/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x64.zip"
+      },
+      "32bit": {
+        "url": "https://archive.apache.org/dist/tomcat/tomcat-$majorVersion/v$version/bin/apache-tomcat-$version-windows-x86.zip"
+      }
+    },
+    "hash": {
+      "url": "$url.sha512"
+    },
+    "extract_dir": "apache-tomcat-$version"
+  }
 }
