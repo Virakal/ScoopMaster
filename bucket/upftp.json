@@ -1,19 +1,19 @@
 {
-    "version": "2.3.7",
+    "version": "0.1.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/zy84338719/upftp/releases/download/v2.3.7/upftp_Windows_386.zip",
+            "url": "https://github.com/zy84338719/upftp/releases/download/v0.1.0/upftp_Windows_386.zip",
             "bin": [
                 "upftp.exe"
             ],
-            "hash": "b582a2fb745f20616281c2a56f0af54f3311e8baa6c3a920ba0139e017ed2937"
+            "hash": "9331fb5ba2982ee7374a93b29ea2a8c3675982defb419e3ffc50ac91928065c8"
         },
         "64bit": {
-            "url": "https://github.com/zy84338719/upftp/releases/download/v2.3.7/upftp_Windows_x86_64.zip",
+            "url": "https://github.com/zy84338719/upftp/releases/download/v0.1.0/upftp_Windows_x86_64.zip",
             "bin": [
                 "upftp.exe"
             ],
-            "hash": "a3ac28cfdc822e1fad329c1f6d8cdee719e3c1322f0c0649a3fa3a0ec5ac6d86"
+            "hash": "f9bffa151749a4452b43d7e1bd770f45427ded320624c4ab53c9e80b6fa621ef"
         }
     },
     "homepage": "https://github.com/zy84338719/upftp",
