@@ -1,21 +1,22 @@
 {
     "version": "6.7.0",
-    "description": "Telegram Desktop messaging app",
-    "homepage": "https://telegram.org/",
-    "license": "GPL-3.0-only",
+    "description": "A messaging app with a focus on speed and security",
+    "homepage": "https://telegram.org",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/telegramdesktop/tdesktop/blob/dev/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://td.telegram.org/tx64/tportable-x64.6.7.0.zip",
+            "url": "https://updates.tdesktop.com/tx64/tportable-x64.6.7.0.zip",
             "hash": "8e3ec40c66538dc53526d82d29e8ec2e83597ddda2a140bdb41ba13d05e4a24f"
         },
-        "arm64": {
-            "url": "https://td.telegram.org/tsetup/tportable.4.16.4.zip",
-            "hash": ""
+        "32bit": {
+            "url": "https://updates.tdesktop.com/tsetup/tportable.6.7.0.zip",
+            "hash": "444af9ff5d6be53c3897223321014aba305cfad326178ea06359e2ba265c2391"
         }
     },
     "extract_dir": "Telegram",
-    "pre_install": "Set-Content \"$dir\\telegram.cmd\" '@start \"Telegram\" /D \"%~dp0\" \"%~dp0Telegram.exe\" %*' -Encoding Ascii",
-    "bin": "telegram.cmd",
     "shortcuts": [
         [
             "Telegram.exe",
@@ -29,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://td.telegram.org/tx64/tportable-x64.$version.zip"
+                "url": "https://updates.tdesktop.com/tx64/tportable-x64.$version.zip"
             },
             "32bit": {
-                "url": "https://td.telegram.org/tsetup/tportable.$version.zip"
+                "url": "https://updates.tdesktop.com/tsetup/tportable.$version.zip"
             }
         }
     }
