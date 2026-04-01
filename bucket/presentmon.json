@@ -1,6 +1,6 @@
 {
     "version": "2.5.0",
-    "description": "Tool for collection and processing of ETW events related to frame presentation on Windows.",
+    "description": "PresentMon is a tool to capture and analyze ETW events related to swap chain presentation on Windows.",
     "homepage": "https://github.com/GameTechDev/PresentMon",
     "license": "MIT",
     "architecture": {
@@ -9,12 +9,14 @@
             "hash": "89d2116b5acd9852d1cc31990fcfebb45fc7e27ac4bc84ae3c81c391e13ba198"
         }
     },
-    "bin": "PresentMon.exe",
-    "checkver": {
-        "url": "https://api.github.com/repos/GameTechDev/PresentMon/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "v([\\d.]+)"
-    },
+    "bin": [
+        [
+            "PresentMon.exe",
+            "PresentMon",
+            "-restart_as_admin -no_csv"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
