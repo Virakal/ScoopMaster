@@ -14,12 +14,7 @@
     },
     "extract_dir": "PFiles\\vizjj",
     "bin": "vizjj.exe",
-    "shortcuts": [
-        [
-            "vizjj.exe",
-            "Vizjj"
-        ]
-    ],
+    "shortcuts": [["vizjj.exe", "Vizjj"]],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
