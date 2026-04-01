@@ -1,15 +1,15 @@
 {
     "##": "https://github.com/ScoopInstaller/Main/commits/master/bucket/exiftool.json",
-    "version": "13.53",
+    "version": "13.54",
     "description": "A command-line application for reading, writing and editing meta information in a wide variety of files.",
     "license": "GPL-1.0-or-later|Artistic-1.0-Perl",
     "homepage": "https://exiftool.org",
     "suggest": {
         "perl": "main/perl"
     },
-    "url": "https://exiftool.org/Image-ExifTool-13.53.tar.gz",
-    "hash": "4824de6d4250926ee804c0923a95f00dd92a0d32c057d40b4dc7235e9809fab2",
-    "extract_dir": "Image-ExifTool-13.53",
+    "url": "https://exiftool.org/Image-ExifTool-13.54.tar.gz",
+    "hash": "dfe612aa4a48c220591f3889c41346274c96c822e1376b3ba81e2832ac5210c4",
+    "extract_dir": "Image-ExifTool-13.54",
     "post_install": "(Get-Content $dir\\..\\..\\..\\shims\\exiftool.cmd) -replace 'C:.*bash\\.exe','perl' | Set-Content $dir\\..\\..\\..\\shims\\exiftool.cmd",
     "bin": "exiftool",
     "checkver": {
