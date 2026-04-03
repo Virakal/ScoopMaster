@@ -3,5 +3,11 @@
   "extends": [
     "github>Jolt-Design/Renovate-Config"
   ],
-  "forkProcessing": "enabled"
+  "forkProcessing": "enabled",
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/bucket/**",
+    "**/deprecated/**"
+  ]
 }
