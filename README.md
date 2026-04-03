@@ -20,7 +20,7 @@ ____
 --------
 </br>
 
-To help users to maintain all the apss updated, this repo provides two services, a bucket with all the apps, and a database for fast app search. The platform surveys internet for known buckets and creates Bucket and database snapshots every 30 minutes. At this time the metrics for the **ScoopMaster** platform in its current snapshot are:
+To help users to maintain all the apps updated, this repo provides two services, a bucket with all the apps, and a database for fast app search. The platform surveys internet for known buckets and creates Bucket and database snapshots every 30 minutes. At this time the metrics for the **ScoopMaster** platform in its current snapshot are:
 
 - The database indexes **210400** manifests.
 - The harvester gathers data from **2342** buckets.
@@ -56,11 +56,11 @@ ____
 
 </br>
 
-To add this bucket, paste this in a PowerShell session: 
+To add this bucket, paste this in a PowerShell session:
 ```pwsh
 scoop bucket add .SM https://github.com/Virakal/ScoopMaster
 ```
-install any app in the bucket just type 
+install any app in the bucket just type
 ```
 scoop install <app_name>
 ```
@@ -71,7 +71,7 @@ scoop bucket rm .SM
 
 If you want all your local apps to be updated to the latest version provided by ScoopMaster, just change the update source for that app. You can do it for all of them by copy-n-paste this in PowerShell:
 ```pwsh
-gci ~/scoop/apps/*/current/install.json | % { 
+gci ~/scoop/apps/*/current/install.json | % {
     (gc $_) -Replace '(?<=bucket":\s+")[^"]+',".SM" |Set-Content $_ }
 scoop update
 scoop update *
@@ -99,7 +99,7 @@ The bucket doesn't require any operation other than the installation, removal, a
 
 </br>
 
-The **[database](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)**.
+The **[database](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)** is written in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/Virakal/ScoopMaster/releases/tag/Databases)**.
 
 
 IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/Virakal/ss)** that can be installed typing:
@@ -107,7 +107,7 @@ IF you want to experience the speed and the data contained, you can use the offi
 scoop install ss
 ```
 
-These are some examples of its capabilites:
+These are some examples of its capabilities:
 
 </br>
 
@@ -117,11 +117,11 @@ ss scoop search fast
 ```
 - Search for an app in which the app name contains both 'nvidia' AND 'driver'
 ```pwsh
-ss -n nvidia driver 
+ss -n nvidia driver
 ```
 - Simple search for the **ss** app
 ```pwsh
-ss -s ss 
+ss -s ss
 ```
 - Returns apps containing 'tool' and, 'nvidia' or 'radeon'
 ```pwsh
@@ -133,15 +133,15 @@ ss -l search scoop
 ```
 - Full extended regex support. Latests versions of apps ending in 'ss' starting with 's'
 ```pwsh
-ss -n -l -e ss$ ^s 
+ss -n -l -e ss$ ^s
 ```
 - UTF-8 search of all the apps containing the word 音乐 (music) in the description.
 ```pwsh
-ss -l 音乐 
+ss -l 音乐
 ```
 - stores in the `$apps` variable a PSObject with all the Scoop manifests — more than 52,000.
 ```pwsh
-$apps = ss -r .* 
+$apps = ss -r .*
 ```
 
 </br>
