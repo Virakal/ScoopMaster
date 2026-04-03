@@ -6,13 +6,18 @@
         "identifier": "BSD-3-Clause,BSL-1.0",
         "url": "https://github.com/red/red#license"
     },
-    "url": "https://static.red-lang.org/dl/auto/win/red-31mar26-aecab40ef.exe#/red.exe",
+    "url": "https://static.red-lang.org/dl/auto/win/red-31mar26-32353f8a6.exe#/red.exe",
+    "hash": "0dd21b94f51b8cdbfcb7ee7510bf7796b448995c14951c9161e9e5487d59063b",
     "bin": "red.exe",
     "checkver": {
         "url": "https://static.red-lang.org/dl/auto/win/history.html",
         "regex": "red-(\\w+)-(?<commit>\\w+).exe"
     },
     "autoupdate": {
-        "url": "https://static.red-lang.org/dl/auto/win/red-$version-$matchCommit.exe#/red.exe"
+        "url": "https://static.red-lang.org/dl/auto/win/red-$version-$matchCommit.exe#/red.exe",
+        "hash": {
+            "url": "https://static.red-lang.org/download.html",
+            "regex": "$basename[\\s\\S]+?$sha256"
+        }
     }
 }
