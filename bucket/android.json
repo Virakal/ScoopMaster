@@ -1,10 +1,9 @@
 {
-    "version": "2025.2.3.9",
-    "description": "IDE: Android Studio",
+    "version": "2024.1.2.12",
+    "description": "Android IDE Android Studio",
     "homepage": "https://developer.android.com/studio?hl=zh-cn",
-    "license": "Unknown",
-    "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2025.2.3.9/android-studio-2025.2.3.9-windows.zip",
-    "hash": "23b46808caaf81eac207d7c9a81d012b32788f65b51de43e061e27f08024960b",
+    "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.2.12/android-studio-2024.1.2.12-windows.zip",
+    "hash": "50180dc87d045f4c9a6ba6aa920f8a06780bf27325b2676a5e232871d772f77e",
     "extract_dir": "android-studio",
     "shortcuts": [
         [
@@ -15,8 +14,8 @@
     "env_set": {
         "ANDROID_HOME": "%LOCALAPPDATA%\\Android\\Sdk"
     },
-    "persist": "plugins",
     "post_install": "[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH', 'User') + ';%LOCALAPPDATA%\\Android\\Sdk\\platform-tools', 'User')",
+    "persist": "plugins",
     "suggest": {
         "Android SDK": "android-clt"
     },

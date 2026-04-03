@@ -1,12 +1,12 @@
 {
-  "version": "v1.33.0",
+  "version": "v1.12.0",
   "description": "TWSNMP For Kiosk",
   "license": "Apache-2.0 license",
   "homepage": "https://github.com/twsnmp/twsnmpfk",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/twsnmp/twsnmpfk/releases/download/v1.33.0/twsnmpfk.zip",
-      "hash": "235937c0738c8fb08755dde0acf0809f59e026e1ed5d24e7b7b0196cb23031a4"
+      "url": "https://github.com/twsnmp/twsnmpfk/releases/download/v1.12.0/twsnmpfk.zip",
+      "hash": "f81c4be411bb31d8ac2feb06228df3c1e2ef4dec704b6748e26691aac4689f21"
     }
   },
   "bin": ["twsnmpfk.exe"],

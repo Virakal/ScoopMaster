@@ -1,10 +1,10 @@
 {
-    "version": "7.9",
-    "description": "An open source monospace font with round corner and ligatures for IDE and command line. (Minimal version, ttf format, autohint version)",
+    "version": "6.4",
+    "description": "An open source monospace font with round corner and ligatures for IDE and command line. (ttf autohint version)",
     "homepage": "https://github.com/subframe7536/Maple-font",
     "license": "OFL-1.1",
-    "url": "https://github.com/subframe7536/Maple-font/releases/download/v7.9/MapleMono-TTF-AutoHint.zip",
-    "hash": "c83b45a07dcdceacbd49986a862b56f60f31c8b976546faea1a3f2ba3dba4035",
+    "url": "https://github.com/subframe7536/Maple-font/releases/download/v6.4/MapleMono-ttf-autohint.zip",
+    "hash": "ad26080b8d81b7e2858318704615d2e2c6e1e1eb4a62408ea399cfd89d811ede",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -87,9 +87,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/subframe7536/Maple-font/releases/download/v$version/MapleMono-TTF-AutoHint.zip",
-        "hash": {
-            "url": "$baseurl/MapleMono-TTF-AutoHint.sha256"
-        }
+        "url": "https://github.com/subframe7536/Maple-font/releases/download/v$version/MapleMono-ttf-autohint.zip"
     }
 }

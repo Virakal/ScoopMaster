@@ -1,42 +1,24 @@
 {
-    "version": "4.0.26092.337",
-    "description": "A powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
-    "homepage": "https://systeminformer.sourceforge.io",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/winsiderss/si-builds/blob/main/LICENSE"
-    },
+    "version": "3.1.24258",
+    "description": "Originally called Process Hacker, A powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
+    "homepage": "https://processhacker.sourceforge.io/nightly.php",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/winsiderss/si-builds/releases/download/3.1.24258/systeminformer-3.1.24258-release-bin.zip",
+    "hash": "24da39f636604f956f3a8fdacf89c7ddf78570aff9dab9bcf996cfa5feffb7c7",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/4.0.26092.337/systeminformer-build-win32-bin.zip",
-            "hash": "b873466244f45ed611fc9bfdf1d276fdb97fdb9e98b4e28ac604729faa64dd00"
+            "extract_dir": "i386"
         },
         "64bit": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/4.0.26092.337/systeminformer-build-win64-bin.zip",
-            "hash": "0728ea1fe366a6f04c9e242d87258d998885ff151b2d2b124938eb2678edee7d"
+            "extract_dir": "amd64"
         },
         "arm64": {
-            "url": "https://github.com/winsiderss/si-builds/releases/download/4.0.26092.337/systeminformer-build-arm64-bin.zip",
-            "hash": "06aa3f54974d4197798813225d88ef7ebdf6724128518421cefaeef144849d27"
+            "extract_dir": "arm64"
         }
     },
-    "pre_install": [
-        "# Hardlink cannot be used here, as System Informer would create a new file instead of writing directly.",
-        "'SystemInformer.exe.settings.xml', 'usernotesdb.xml' | ForEach-Object {",
-        "    if (-not (Test-Path \"$persist_dir\\$_\")) {",
-        "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
-        "    } else {",
-        "        Copy-Item \"$persist_dir\\$_\" \"$dir\\$_\" -ErrorAction 'SilentlyContinue'",
-        "    }",
-        "}"
-    ],
-    "post_install": [
-        "# Clear icon GUIDs",
-        "$settings = Get-ChildItem \"$dir\\SystemInformer.exe.settings.xml\"",
-        "$settingsXml = [xml](Get-Content $settings)",
-        "if ($settingsXml.settings -eq $null) { return }",
-        "($settingsXml.settings.ChildNodes | Where-Object { $_.name.Contains(\"IconGuids\") }) | ForEach-Object { [void]$_.ParentNode.RemoveChild($_) }",
-        "$settingsXml.Save($settings)"
+    "bin": [
+        "SystemInformer.exe",
+        "peview.exe"
     ],
     "shortcuts": [
         [
@@ -44,27 +26,13 @@
             "System Informer"
         ]
     ],
-    "pre_uninstall": [
-        "# Hardlink cannot be used here, as System Informer would create a new file instead of writing directly.",
-        "ensure $persist_dir",
-        "'SystemInformer.exe.settings.xml', 'usernotesdb.xml' | ForEach-Object {",
-        "    Copy-Item \"$dir\\$_\" \"$persist_dir\\$_\" -ErrorAction 'SilentlyContinue'",
-        "}"
-    ],
+    "persist": "SystemInformer.exe.settings.xml",
     "checkver": {
-        "github": "https://github.com/winsiderss/si-builds"
+        "url": "https://api.github.com/repos/winsiderss/si-builds/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "(?!v)([\\d.]+(?:-[\\da-zA-Z.-]+)?)"
     },
     "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win32-bin.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win64-bin.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-arm64-bin.zip"
-            }
-        }
+        "url": "https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-$version-release-bin.zip"
     }
 }

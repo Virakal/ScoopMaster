@@ -1,10 +1,10 @@
 {
-    "version": "7.000",
+    "version": "6.200",
     "description": "A sans-serif font family designed and optimized especially for literacy use (complete character set)",
     "homepage": "https://software.sil.org/andika/",
     "license": "SIL OFL 1.1",
-    "url": "https://software.sil.org/downloads/r/andika/Andika-7.000.zip",
-    "hash": "88ba6ea41ef4a8e5214b090df8fa2983be1babe4843efaa99cdb6078b0e2c070",
+    "url": "https://software.sil.org/downloads/r/andika/Andika-6.200.zip",
+    "hash": "cc9a7523fcdecf5d2e1858f8ed43bca8f1e1be1ad5f20ac81475d816a9dcf87c",
     "pre_install": [
         "Move-Item $dir\\Andika-$version\\* $dir",
         "Remove-Item $dir\\Andika-$version"
@@ -30,6 +30,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "if (-not $global) {",
             "    # Ensure user font install directory exists and has correct permission settings",
+            "    # See https://github.com/matthewjberger/scoop-nerd-fonts/issues/198#issuecomment-1488996737",
             "    New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
             "    $accessControlList = Get-Acl $fontInstallDir",
             "    $allApplicationPackagesAccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule([System.Security.Principal.SecurityIdentifier]::new(\"S-1-15-2-1\"), \"ReadAndExecute\", \"ContainerInherit,ObjectInherit\", \"None\", \"Allow\")",
@@ -43,7 +44,7 @@
             "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
-            "    Copy-Item $_.FullName -Destination $fontInstallDir",
+            "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
             "}"
         ]
     },

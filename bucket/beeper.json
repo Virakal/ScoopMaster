@@ -1,25 +1,14 @@
 {
-    "version": "4.2.692",
-    "homepage": "https://www.beeper.com/",
-    "description": "Universal chat app powered by Matrix",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://www.beeper.com/terms"
-    },
+    "version": "3.108.3",
+    "description": "An universal chat application that unifies all your chat applications into one.",
+    "homepage": "https://www.beeper.com",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.2.692.exe#/dl.7z",
-            "hash": "46635dddc4d6c2cbb6105da0281056cde21945f43514f24cb0147671857f3fe2",
+            "url": "https://download.todesktop.com/2003241lzgn20jd/Beeper Setup 3.108.3 - Build 2407188w36frwla-x64.exe#/dl.7z",
+            "hash": "sha512:37436b691ba452eecc94ecf5b68c2d9afd7290c4523d2bdb777302135b4cc02d82f7a751c1ee7db00301e46a41799f575e082f7c97dd99ff4d593531dd8edc79",
             "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-                "Remove-Item \"$dir\\`$*\" -Recurse"
-            ]
-        },
-        "arm64": {
-            "url": "https://beeper-desktop.download.beeper.com/builds/Beeper%20arm64%204.2.692.exe#/dl.7z",
-            "hash": "ca2b723f786845dfb8df6b46e798201031df060be1c08091331577890d5394ae",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\" -Removal",
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
             ]
         }
@@ -27,20 +16,23 @@
     "shortcuts": [
         [
             "Beeper.exe",
-            "Beeper"
+            "Beeper",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "persist": "User Data",
     "checkver": {
-        "url": "https://api.beeper.com/desktop/update-feed.json?&platform=win32&channel=stable",
-        "jp": "$.version"
+        "url": "https://download.todesktop.com/2003241lzgn20jd/latest.yml",
+        "regex": "version: ([\\d.]+)\\nfiles:\\n.*url: (?<url>.+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%20$version.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://beeper-desktop.download.beeper.com/builds/Beeper%20arm64%20$version.exe#/dl.7z"
+                "url": "https://download.todesktop.com/2003241lzgn20jd/$matchUrl#/dl.7z",
+                "hash": {
+                    "url": "https://download.todesktop.com/2003241lzgn20jd/latest.yml",
+                    "regex": "sha512: $base64"
+                }
             }
         }
     }

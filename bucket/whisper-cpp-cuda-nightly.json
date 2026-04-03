@@ -1,53 +1,48 @@
 {
-    "version": "4729",
+    "version": "3055",
     "description": "(CUDA Nightly Version) whisper.cpp is high-performance inference of OpenAI's Whisper automatic speech recognition (ASR) model",
-    "homepage": "https://github.com/ggml-org/whisper.cpp",
+    "homepage": "https://github.com/ggerganov/whisper.cpp",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/23286671964/whisper-cublas-12.4.0-bin-x64.zip#/dl.zip",
-            "hash": "7d2b6659737dcf504b7bb6dcd35813e3acffa47f36cd7db80dbd7653b9fc3a76"
+            "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/10903513514/whisper-cublas-12.2.0-bin-x64.zip",
+            "hash": "9233cb6d960317fbf33f39e97ba9dd7d741112f881194a2665f4abb65e458187"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir\" 'whisper*.zip' | Select-Object -First 1 -ExpandProperty FullName | Expand-7zipArchive -Destination \"$dir\" -ExtractDir 'Release' -Removal",
     "bin": [
         [
-            "whisper-cli.exe",
+            "main.exe",
             "whisper-cpp"
         ],
         [
-            "whisper-bench.exe",
+            "bench.exe",
             "whisper-cpp-bench"
         ],
         [
-            "whisper-command.exe",
+            "command.exe",
             "whisper-cpp-command"
         ],
         [
-            "whisper-quantize.exe",
+            "quantize.exe",
             "whisper-cpp-quantize"
         ],
         [
-            "whisper-server.exe",
+            "server.exe",
             "whisper-cpp-server"
         ],
         [
-            "whisper-stream.exe",
+            "stream.exe",
             "whisper-cpp-stream"
-        ],
-        [
-            "whisper-talk-llama.exe",
-            "whisper-cpp-talk-llama"
         ]
     ],
     "checkver": {
-        "url": "https://github.com/ggml-org/whisper.cpp/actions/workflows/build.yml?query=branch%3Amaster+event%3Apush+is%3Asuccess",
+        "url": "https://github.com/ggerganov/whisper.cpp/actions/workflows/build.yml?query=branch%3Amaster+is%3Asuccess",
         "regex": "(?sm)/actions/runs/(?<run>\\d+)\".*?#(\\d+):"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/$matchRun/whisper-cublas-12.4.0-bin-x64.zip#/dl.zip"
+                "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/$matchRun/whisper-cublas-12.2.0-bin-x64.zip"
             }
         }
     }

@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.dandanplay.com/",
     "description": "A local video player with danmu.",
-    "version": "17.2.0.0",
+    "version": "15.9.0",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kaedei/dandanplay/releases/download/windows-17.2.0.0/dandanplay-x64_17.2.0.zip",
-            "hash": "ee7bca19347b8f85cfcadaded0f91201bf645b0df908ed939d96824613547501",
+            "url": "https://dandan.sakurateam.top/dandanplay-x64_15.9.0.zip",
+            "hash": "68ff3bbf46023788c70ee47c0c2f0be339789284eeaf75020b2b3268b05b1f83",
             "extract_dir": "dandanplay-x64"
         }
     },
@@ -22,13 +22,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/kaedei/dandanplay/releases/latest",
-        "regex": "/tag/windows-([\\d.]+)"
+        "regex": "dandanplay-x64_([\\d\\.]+)\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/kaedei/dandanplay/releases/download/windows-$version/dandanplay-x64_$matchHead.zip"
+                "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.zip"
             }
         }
     }

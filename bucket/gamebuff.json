@@ -1,14 +1,13 @@
 {
-    "version": "2.3.27.326",
-    "description": "GameBuff 修改器",
-    "homepage": "https://gamebuff.cn/cn/",
+    "version": "nightly",
+    "description": "GameBuff 修改器是一款功能非常强大的单机游戏修改器",
+    "homepage": "https://soft.3dmgame.com/down/186286.html",
     "license": "Freeware",
-    "architecture": {
-        "64bit": {
-            "url": "https://dl.gamebuff.cn/download/GameBuff_Setup.exe#dl.7z",
-            "hash": "cc1bec9837b7993f498a56f96db07a0913290188be324e1c40f04e6a16d7c741"
-        }
-    },
+    "#depends": [""],
+    "notes": "⭐    No activate code Not recommand",
+    "url": "https://dl.gamebuff.cn/GameBuff_LS.exe#/dl.7z",
+    "hash": "",
+    "#extract_to": "Main",
     "installer": {
         "script": [
             "",
@@ -50,15 +49,5 @@
             "Main/GameBuff.exe",
             "GameBuff"
         ]
-    ],
-    "checkver": {
-        "url": "https://gamebuff.cn/cn/version.html",
-        "regex": "V([\\d\\.]+) 版本更新说明"
-    },
-    "autoupdate": {
-        "url": "https://dl.gamebuff.cn/download/GameBuff_Setup.exe#dl.7z",
-        "hash": {
-            "mode": "download"
-        }
-    }
+    ]
 }

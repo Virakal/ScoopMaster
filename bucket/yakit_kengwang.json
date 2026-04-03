@@ -1,34 +1,34 @@
 {
-  "version": "1.4.6-0327",
-  "description": "Cyber ctftools ALL-IN-ONE Platform",
-  "homepage": "https://www.yaklang.io/",
-  "license": "AGPL-3.0",
-  "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/1.4.6-0327/Yakit-1.4.6-0327-windows-amd64.exe#/dl.7z",
-  "hash": "27697de3c739050c79e2d2f45fe6f5047f6fb8a3bb61a5054f4f4ca5ebe1cbbb",
-  "extract_dir": "$PLUGINSDIR",
-  "suggest": {
-    "yak": "yak"
-  },
-  "checkver": {
-    "url": "https://oss-qn.yaklang.com/yak/latest/yakit-version.txt",
-    "re": "(.*)"
-  },
-  "persist": [
-    "yakit-projects",
-    "nuclei-templates"
-  ],
-  "pre_install": [
-    "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
-    "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
-  ],
-  "autoupdate": {
-    "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/$version/Yakit-$version-windows-amd64.exe#/dl.7z"
-  },
-  "bin": "Yakit.exe",
-  "shortcuts": [
-    [
-      "Yakit.exe",
-      "Yakit"
+    "version": "1.3.6-0906",
+    "description": "Cyber ctftools ALL-IN-ONE Platform",
+    "homepage": "https://www.yaklang.io/",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/1.3.6-0906/Yakit-1.3.6-0906-windows-amd64.exe#/dl.7z",
+            "hash": "2663f20b6e640b6acd102776fbc676e95348ea34eec09449d66ad0bc0d188430",
+            "extract_dir": "$PLUGINSDIR"
+        }
+    },
+    "checkver": {
+        "url": "https://www.yaklang.com/api/yak/versions/info",
+        "jsonpath": "$.data[0].content",
+        "regex": "version\":\"v?(.*?)\""
+    },
+    "persist": "yakit-projects",
+    "pre_install": [
+        "taskkill /f /im Yakit.exe",
+        "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
+        "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+    ],
+    "autoupdate": {
+        "url": "https://yaklang.oss-cn-beijing.aliyuncs.com/yak/$version/Yakit-$version-windows-amd64.exe#/dl.7z"
+    },
+    "bin": "Yakit.exe",
+    "shortcuts": [
+        [
+            "Yakit.exe",
+            "Yakit"
+        ]
     ]
-  ]
 }

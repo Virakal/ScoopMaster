@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Tinos' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Tinos.tar.xz",
-    "hash": "c54f03f38fbf897f34235bc5989500361251f61220cf63afedd730edd221714e",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Tinos.tar.xz",
+    "hash": "21b43c2314614733f5e9b4b4f3117edc3986d2b0f2a33409b111cc38360e8391",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

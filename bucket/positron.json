@@ -1,47 +1,38 @@
 {
-    "version": "2026.03.0-212",
-    "description": "A next-generation data science IDE",
-    "homepage": "https://positron.posit.co",
+    "version": "2024.09.0-45",
+    "description": "Positron, a next-generation data science IDE.",
+    "homepage": "https://github.com/posit-dev/positron",
     "license": "Elastic-2.0",
-    "suggest": {
-        "R": "r",
-        "Python": "python"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-2026.03.0-212-UserSetup-x64.exe",
-            "hash": "c83da819444a7c1cb6231795e3597b2dd85738ec48e323f830a543c41d3ed169"
-        },
-        "arm64": {
-            "url": "https://cdn.posit.co/positron/releases/win/arm64/Positron-2026.03.0-212-UserSetup-arm64.exe",
-            "hash": "d100e76016b83f109f06bce7a85dfb553c54fd93bfe68addc2b465d83923ff88"
-        }
-    },
-    "innosetup": true,
-    "extract_dir": "{code_GetDestDir}",
-    "bin": "bin/positron.cmd",
-    "shortcuts": [
-        [
-            "Positron.exe",
-            "Positron"
+    "url": "https://github.com/posit-dev/positron/releases/download/2024.09.0-45/Positron-2024.09.0-45-UserSetup.exe",
+    "hash": "7333b662497f06840e920316bbce2fac1b706387a2c1e4e09711558e2b77d49b",
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/DIR=$dir",
+            "/NORESTART",
+            "/TASKS=\"\""
         ]
-    ],
+    },
+    "bin": "Positron.exe",
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/VERYSILENT",
+            "/NORESTART"
+        ]
+    },
     "checkver": {
-        "url": "https://cdn.posit.co/positron/releases/win/x86_64/user-releases.json",
-        "jsonpath": "$.version"
+        "url": "https://github.com/posit-dev/positron/releases.atom",
+        "xpath": ".//entry/title"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://cdn.posit.co/positron/releases/win/x86_64/Positron-$version-UserSetup-x64.exe"
-            },
-            "arm64": {
-                "url": "https://cdn.posit.co/positron/releases/win/arm64/Positron-$version-UserSetup-arm64.exe"
-            }
-        },
+        "url": "https://github.com/posit-dev/positron/releases/download/$version/Positron-$version-UserSetup.exe",
         "hash": {
-            "url": "https://cdn.posit.co/positron/releases/checksums/positron-$version-checksums.json",
-            "jsonpath": "$.['$basename']"
+            "mode": "download"
         }
-    }
+    },
+    "notes": [
+        "Please review Positron's license agreement (https://github.com/posit-dev/positron?tab=License-1-ov-file#readme).",
+        "Your acceptance of this license agreement is required as a condition to proceeding with your use of the software."
+    ]
 }

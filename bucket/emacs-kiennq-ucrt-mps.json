@@ -1,26 +1,38 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://github.com/kiennq/emacs-build",
-    "license": "GPLv3",
-    "version": "31.411.20260401.e2ec4ff9",
-    "url": "https://github.com/kiennq/emacs-build/releases/download/v31.411.20260401.e2ec4ff9/mingw-w64-ucrt-x86_64_emacs_e2ec4ff9_mps_full.zip",
-    "hash": "0ad0fcfd13c1f008b01614cb3a24d7fe519b7133032fc6e36cf0aac27c520c7a",
-    "bin": [
-        "bin\\runemacs.exe",
-        "bin\\emacs.exe",
-        "bin\\emacsclient.exe",
-        "bin\\emacsclientw.exe",
+    "version": "31.315.20240904.04cfac4",
+    "description": "Scripts to build a distribution of Emacs from sources, using MSYS2 and Mingw64(32).",
+    "license": "GPL (Emacs) + MIT (build script)",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kiennq/emacs-build/releases/download/v31.315.20240904.04cfac4/emacs-04cfac4-ucrt-x86_64-mps.msix#/dl.7z",
+            "hash": "8583dc336216031e9b19a6142ebe7176bcf92ee06e6d04fa19d170ac122e9fc8"
+        }
+    },
+    "shortcuts": [
         [
-            "bin\\emacsclientw.exe",
-            "emw",
-            "-c -n -a \"\""
+            "bin\\runemacs.exe",
+            "Emacs (kiennq UCRT-mps)"
         ]
     ],
+    "installer": {
+        "script": [
+            "Push-Location \"$dir\"",
+            "dir 'bin\\*%2b*' | %{ren \"$_\" \"$($_.Name -replace '%2b','+')\"}",
+            "Pop-Location"
+        ]
+    },
     "checkver": {
-        "github": "https://github.com/kiennq/emacs-build",
-        "regex": "/tag/v([\\d\\w.-]+)"
+        "url": "https://api.github.com/repos/kiennq/emacs-build/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v(?<m1>[\\d.]+)\\.(?<m2>[\\d.]+)\\.(?<d1>[\\d.]+)\\.(?<h1>[\\da-z]+)",
+        "replace": "${1}.${2}.${3}.${4}"
     },
     "autoupdate": {
-        "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/mingw-w64-ucrt-x86_64_emacs_$buildVersion_mps_full.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/emacs-$matchH1-ucrt-x86_64-mps.msix#/dl.7z"
+            }
+        }
     }
 }

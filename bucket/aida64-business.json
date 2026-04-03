@@ -1,9 +1,9 @@
 {
-    "version": "8.25.8200",
+    "version": "7.35.7000",
     "homepage": "https://www.aida64.com",
     "license": "",
-    "url": "http://download.aida64.com/aida64business825.zip",
-    "hash": "03cb63dbd707896f7c1c221c0e1c0b50ab7a55c7bb8ead865f90932f73b87b5a",
+    "url": "http://download.aida64.com/aida64business735.zip",
+    "hash": "a6a8747db63287b40d1ae8bf08e5eda25aa289aebd43d5877f9825956766032d",
     "pre_install": [
         "$file = 'aida64.ini'",
         "if (!(Test-Path \"$persist_dir\\$file\")) {",

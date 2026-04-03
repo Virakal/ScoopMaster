@@ -1,5 +1,5 @@
 {
-    "version": "0.4.9.5-15.0.8",
+    "version": "0.4.8.12-13.5.4",
     "description": "Enables anonymous communication over the onion network (expert mode).",
     "homepage": "https://www.torproject.org",
     "license": "BSD-3-Clause",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.torproject.org/tor-package-archive/torbrowser/15.0.8/tor-expert-bundle-windows-x86_64-15.0.8.tar.gz",
-            "hash": "0f09e0502a1bb6e3a7389b773e20cf112083bf6f25c1786ed8adb4b86273ea18"
+            "url": "https://archive.torproject.org/tor-package-archive/torbrowser/13.5.4/tor-expert-bundle-windows-x86_64-13.5.4.tar.gz",
+            "hash": "d26c44f715265f57287ed16d7347fcfb0ed37dcf1a09ad4f4f02d9d4149dff84"
         },
         "32bit": {
-            "url": "https://archive.torproject.org/tor-package-archive/torbrowser/15.0.8/tor-expert-bundle-windows-i686-15.0.8.tar.gz",
-            "hash": "9b790759faa4b4a85c72036baaf3ccbc9ce00bf9948b1086e5394a58da9665d4"
+            "url": "https://archive.torproject.org/tor-package-archive/torbrowser/13.5.4/tor-expert-bundle-windows-i686-13.5.4.tar.gz",
+            "hash": "2af6f3dc46eee56e77eb52374bc06a482de4f9ccb90a7587669a0027acd6833f"
         }
     },
     "pre_install": [

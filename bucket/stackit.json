@@ -1,40 +1,15 @@
 {
-    "version": "0.59.0",
-    "description": "STACKIT Command Line Interface (CLI) to manage STACKIT resources.",
-    "homepage": "https://stackit.com/en",
-    "license": "Apache-2.0",
+    "version": "0.0.40",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v0.59.0/stackit-cli_0.59.0_windows_amd64.zip",
-            "hash": "eeee0e5f4af8b030277b78b43d8952d7ea7bddd8ef7230c5df9b30bca95308ff"
-        },
-        "32bit": {
-            "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v0.59.0/stackit-cli_0.59.0_windows_386.zip",
-            "hash": "64ea2cac7ce337c3ae848aded3da39a2e75c695ef63e12202ab8b76cafde5643"
-        },
-        "arm64": {
-            "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v0.59.0/stackit-cli_0.59.0_windows_arm64.zip",
-            "hash": "2802fd0fa0dec10ad6db6d056dad944f38c21a954a532b66e634ffaa2ad521a5"
+            "url": "https://github.com/glassechidna/stackit/releases/download/0.0.40/stackit_0.0.40_Windows_x86_64.tar.gz",
+            "bin": [
+                "stackit.exe"
+            ],
+            "hash": "f439798b000f5d4217dcfc202e62e2d44c61e4a0a864e955bad3c8f185ab766e"
         }
     },
-    "bin": "stackit.exe",
-    "checkver": {
-        "github": "https://github.com/stackitcloud/stackit-cli"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v$version/stackit-cli_$version_windows_amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v$version/stackit-cli_$version_windows_386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/stackitcloud/stackit-cli/releases/download/v$version/stackit-cli_$version_windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/stackit-cli_$version_checksums.txt"
-        }
-    }
+    "homepage": "https://github.com/glassechidna/stackit",
+    "license": "MIT",
+    "description": "stackit is a cross-platform CloudFormation CLI tool for easy synchronous and idempotent stack updates"
 }

@@ -1,43 +1,26 @@
 {
-    "version": "2026.1.3",
-    "description": "GUI for the most common CLI package managers, such as WinGet, Scoop, Chocolatey, Pip, Npm, .NET Tool, PowerShell Gallery and more.",
-    "homepage": "https://devolutions.net/unigetui/",
-    "license": "MIT",
-    "suggest": {
-        "scoop-search": "main/scoop-search"
+    "version": "3.1.2-beta2",
+    "description": "UniGetUI: The Graphical Interface for your package managers. Could be terribly described as a package manager manager to manage your package managers",
+    "homepage": "https://www.marticliment.com/unigetui/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://raw.githubusercontent.com/marticliment/UniGetUI/main/LICENSE"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Devolutions/UniGetUI/releases/download/v2026.1.3/UniGetUI.x64.zip",
-            "hash": "d14793b4044fee256520ccdb13c4b83da859611751deb93267c043a695d17cb8"
-        },
-        "arm64": {
-            "url": "https://github.com/Devolutions/UniGetUI/releases/download/v2026.1.3/UniGetUI.arm64.zip",
-            "hash": "7dc4e3189abc7037f7b4e2a5710741bf95031d4048767d174847ba86bd880031"
-        }
-    },
-    "pre_install": "Set-Content -Value $null -Path \"$dir\\ForceUniGetUIPortable\"",
+    "url": "https://github.com/marticliment/UniGetUI/releases/download/3.1.2-beta2/UniGetUI.Installer.exe",
+    "hash": "fec4eef1b5abd88ec8be6ad381871479bea54a10c5b156b8bef40b1bdcfb2202",
     "shortcuts": [
         [
             "UniGetUI.exe",
             "UniGetUI"
         ]
     ],
-    "persist": "Settings",
+    "innosetup": true,
     "checkver": {
-        "github": "https://github.com/Devolutions/UniGetUI"
+        "url": "https://api.github.com/repos/marticliment/UniGetUI/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "(?!v)([\\d.]+(?:-[\\da-zA-Z.-]+)?)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Devolutions/UniGetUI/releases/download/v$version/UniGetUI.x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Devolutions/UniGetUI/releases/download/v$version/UniGetUI.arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+        "url": "https://github.com/marticliment/UniGetUI/releases/download/$version/UniGetUI.Installer.exe"
     }
 }

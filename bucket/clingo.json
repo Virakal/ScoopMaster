@@ -18,14 +18,13 @@
         "lpconvert.exe"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/potassco/clingo/releases",
+        "url": "https://api.github.com/repositories/58459878/releases",
         "regex": "clingo-([\\d.]+)-win64\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/potassco/clingo/releases/download/v$version/clingo-$version-win64.zip",
-                "extract_dir": "clingo-$version-win64"
+                "url": "https://github.com/potassco/clingo/releases/download/v$version/clingo-$version-win64.zip"
             }
         }
     }

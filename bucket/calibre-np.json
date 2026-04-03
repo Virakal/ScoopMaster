@@ -1,25 +1,22 @@
 {
-    "version": "9.6.0",
-    "description": "Powerful and easy to use e-book manager.",
-    "homepage": "https://calibre-ebook.com",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/kovidgoyal/calibre/blob/HEAD/LICENSE"
-    },
+    "version": "7.18.0",
+    "description": "E-book manager.",
+    "homepage": "https://calibre-ebook.com/",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.calibre-ebook.com/9.6.0/calibre-64bit-9.6.0.msi",
-            "hash": "sha512:a5a6385676c7f5678543d10ce5d6efcd666b316c0097d684db10485c01988fab2c11fc2fcd3ac173b9b1733a496241e7dd7531f1161da4c71cb66322db8f78ca",
-            "extract_dir": "PFiles64\\Calibre2"
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v7.18.0/calibre-64bit-7.18.0.msi",
+            "hash": "988700135eea8005d922ac7ad8bb5e04dd8d0cc40b16816cfc1018d27a11af07",
+            "extract_dir": "PFiles\\Calibre2"
         }
     },
     "bin": [
         "calibre.exe",
         "calibre-customize.exe",
+        "calibredb.exe",
         "calibre-debug.exe",
         "calibre-server.exe",
         "calibre-smtp.exe",
-        "calibredb.exe",
         "ebook-convert.exe",
         "ebook-device.exe",
         "ebook-edit.exe",
@@ -28,27 +25,27 @@
         "ebook-viewer.exe",
         "fetch-ebook-metadata.exe",
         "lrf2lrs.exe",
-        "lrfviewer.exe",
         "lrs2lrf.exe",
+        "lrfviewer.exe",
         "markdown-calibre.exe",
         "web2disk.exe"
     ],
     "shortcuts": [
         [
             "calibre.exe",
-            "Calibre - E-book Management\\Calibre - E-book Management"
+            "Calibre"
         ],
         [
             "ebook-edit.exe",
-            "Calibre - E-book Management\\E-Book Editor"
+            "Calibre E-Book Editor"
         ],
         [
             "ebook-viewer.exe",
-            "Calibre - E-book Management\\E-Book Viewer"
+            "Calibre E-Book Viewer"
         ],
         [
             "lrfviewer.exe",
-            "Calibre - E-book Management\\LRF Viewer"
+            "Calibre LRF Viewer"
         ]
     ],
     "checkver": {
@@ -57,10 +54,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.calibre-ebook.com/$version/calibre-64bit-$version.msi",
-                "hash": {
-                    "url": "https://calibre-ebook.com/signatures/$basename.sha512"
-                }
+                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-64bit-$version.msi"
             }
         }
     }

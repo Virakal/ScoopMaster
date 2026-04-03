@@ -1,16 +1,16 @@
 {
-    "version": "0.8.0",
+    "version": "0.5.6",
     "description": "A cross-platform command-line tool for executing jobs in parallel",
     "homepage": "https://github.com/shenwei356/rush",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/shenwei356/rush/releases/download/v0.8.0/rush_windows_amd64.exe.tar.gz",
-            "hash": "cb6707800e032fefba6c126482de0f8bd5e34bc071bd9b9a6a9011a5736384b8"
+            "url": "https://github.com/shenwei356/rush/releases/download/v0.5.6/rush_windows_amd64.exe.tar.gz",
+            "hash": "0c39b872ab3506f26118a01057da9e70de05405e5a4d484ceea85f74c223555a"
         },
         "32bit": {
-            "url": "https://github.com/shenwei356/rush/releases/download/v0.8.0/rush_windows_386.exe.tar.gz",
-            "hash": "3490beec1ac0eece50ce197ff80192a58dd8a61c67d75f46430f3ed69dcdcd31"
+            "url": "https://github.com/shenwei356/rush/releases/download/v0.5.6/rush_windows_386.exe.tar.gz",
+            "hash": "e22c9fdf99fee0db0684adc0b80519182968546642abd13648dc585feffbc83e"
         }
     },
     "bin": "rush.exe",

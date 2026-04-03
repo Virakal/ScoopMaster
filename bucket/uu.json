@@ -1,25 +1,25 @@
 {
     "homepage": "https://uu.163.com/",
     "description": "Netease Online Game accelerator",
-    "version": "6.1.0",
+    "version": "5.23.1",
     "license": {
         "identifier": "Proprietary",
         "url": "https://uu.163.com/agreement.html"
     },
-    "url": "https://uu.gdl.netease.com/5210/UU-6.1.0.exe?type=pc&key1=5d9c6a6920d82b1d61e25f984babc3c4&key2=69d05c12#/dl.7z",
-    "hash": "e6c8e3f3819f5185647281f4f9a354840328c67069e4a1a98f06fd9eaf73c397",
+    "url": "https://uu.gdl.netease.com/5037/UU-5.23.1.exe#/dl.7z",
+    "hash": "582100c7d2e5d265fffbbbed756972e37a7c80d1a7b479b6f37e4dad7e7572d8",
     "shortcuts": [
         [
-            "uu_launcher.exe",
+            "uu.exe",
             "UU加速器"
         ]
     ],
     "checkver": {
-        "url": "https://adl.netease.com/d/g/uu/c/gw?type=pc",
-        "regex": "pc_link\\s*=\\s*\"https://uu\\.gdl\\.netease\\.com/(?<build>\\d+)/UU-(?<version>[\\d.]+)\\.exe\\?type=pc&key1=(?<key1>[^&]+)&key2=(?<key2>[^\"]+)\"",
-        "reverse": true
+        "url": "https://uu.163.com/baike/js/dl.js",
+        "regex": "'dlUrl': 'https://.*?.gdl.netease.com/(?<build>\\d+)/UU-(?<ver>[\\d.]+).exe'",
+        "replace": "${ver}"
     },
     "autoupdate": {
-        "url": "https://uu.gdl.netease.com/$matchBuild/UU-$version.exe?type=pc&key1=$matchKey1&key2=$matchKey2#/dl.7z"
+        "url": "https://uu.gdl.netease.com/$matchBuild/UU-$matchVer.exe#/dl.7z"
     }
 }

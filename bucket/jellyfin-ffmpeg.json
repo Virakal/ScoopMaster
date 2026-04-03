@@ -1,28 +1,14 @@
 {
-    "version": "7.1.3-4",
+    "version": "7.0.2-1",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video. (Jellyfin build)",
-    "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg",
+    "homepage": "https://github.com/jellyfin/jellyfin-ffmpeg/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-4/jellyfin-ffmpeg_7.1.3-4_portable_win64-clang-gpl.zip",
-            "hash": "7a5078cacb7e22fe7e2fd1454ac088ec4296420f6788e6eed41f4c1ee8db0e80"
-        },
-        "arm64": {
-            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-4/jellyfin-ffmpeg_7.1.3-4_portable_winarm64-clang-gpl.zip",
-            "hash": "e1a496127a0d9138b9afaf53406e7495d8e5d8a6154018568ab224caf3b2e873"
+            "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.0.2-1/jellyfin-ffmpeg_7.0.2-1-portable_win64.zip",
+            "hash": "8749542c863f0f896d952bc6b8d2981a6adfc0636706a2beef89d3f3cfb8ba06"
         }
     },
-    "bin": [
-        [
-            "ffmpeg.exe",
-            "ffmpeg-jellyfin"
-        ],
-        [
-            "ffprobe.exe",
-            "ffprobe-jellyfin"
-        ]
-    ],
     "checkver": {
         "script": [
             "$cont = (Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://api.github.com/repos/jellyfin/jellyfin-ffmpeg/releases?per_page=3')",
@@ -30,7 +16,7 @@
             "    $basever = $release.tag_name.TrimStart('v')",
             "    if ([int]($basever -split '\\.', 2)[0] -lt 6) { continue }",
             "    foreach ($asset in $release.assets) {",
-            "        if ($asset.name -eq \"jellyfin-ffmpeg_${basever}_portable_win64-clang-gpl.zip\") {",
+            "        if ($asset.name -eq \"jellyfin-ffmpeg_$basever-portable_win64.zip\") {",
             "            Write-Output $basever",
             "            break OuterLoop",
             "        }",
@@ -42,10 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v$version/jellyfin-ffmpeg_$version_portable_win64-clang-gpl.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v$version/jellyfin-ffmpeg_$version_portable_winarm64-clang-gpl.zip"
+                "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v$version/jellyfin-ffmpeg_$version-portable_win64.zip"
             }
         }
     }

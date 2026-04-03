@@ -1,10 +1,10 @@
 {
-    "version": "1.14.13",
+    "version": "1.8.0",
     "description": "Programming Environment.",
     "homepage": "https://programmingzemi.com/",
-    "url": "https://prozemi-web.cdn-dena.com/dldata/1.14.13/ProgrammingWin32_20260302-96466d3a3.zip",
-    "hash": "ecfdbfec1129b5a2347f4c4df5d9879f6e3b2ee507f9eb91d1f7179744c2efac",
-    "extract_dir": "ProgrammingWin32_20260302-96466d3a3",
+    "url": "https://prozemi-web.cdn-dena.com/dldata/1.8.0/ProgrammingWin32_20240826-246b809b0.zip",
+    "hash": "sha512:6e488a1e71be5b1c84da3e7c26fe16c374bac2bbd0c51fc1f7e83b40e2a7723e1bdc023d3966630c848faf19e4aaa05cf60c2943b2fe6d6edbf6cbc4ee3ae94c",
+    "extract_dir": "ProgrammingWin32_20240826-246b809b0",
     "shortcuts": [
         [
             "Programming.exe",
@@ -13,10 +13,6 @@
     ],
     "checkver": {
         "url": "https://programmingzemi.com/download_pc.html",
-        "regex": "<a class=\"btn-download\" href=\"https://prozemi-web\\.cdn-dena\\.com/dldata/([\\d\\.]+)/ProgrammingWin32_([\\d]+)\\-([a-f\\d]+)\\.zip\" onClick"
-    },
-    "autoupdate": {
-        "url": "https://prozemi-web.cdn-dena.com/dldata/$version/ProgrammingWin32_$match2-$match3.zip",
-        "extract_dir": "ProgrammingWin32_$match2-$match3"
+        "regex": "<a class=\"btn-download\" href=\"https://prozemi-web\\.cdn-dena\\.com/dldata/([\\d\\.]+)/ProgrammingWin32_[\\d]+\\-[a-f\\d]+\\.zip\" onClick"
     }
 }

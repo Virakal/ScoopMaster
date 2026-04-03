@@ -1,57 +1,17 @@
 {
-    "version": "0.16.0-dev.296+ef64fa01",
-    "description": "Zig language LSP server",
-    "homepage": "https://github.com/zigtools/zls",
+    "version": "0.12.0-dev.416+7c733a6",
+    "description": "A Zig language server supporting Zig developers with features like autocomplete and goto definition.",
+    "homepage": "https://install.zigtools.org/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://builds.zigtools.org/zls-x86_64-windows-0.16.0-dev.296+ef64fa01.zip",
-            "hash": "ab74dca02a234ec2450471207e1c3a8741b55bb37f2311138f60379437d43045"
+            "url": "https://zigtools-releases.nyc3.digitaloceanspaces.com/zls/0.12.0-dev.416+7c733a6/x86_64-windows/zls.exe#/zls-dev.exe",
+            "hash": "6B5D6F2074EB0C2BDA91D669E7AC24D4D43AB608EAE05511243314A2D0117978"
         },
         "32bit": {
-            "url": "https://builds.zigtools.org/zls-x86-windows-0.16.0-dev.296+ef64fa01.zip",
-            "hash": "fea744229aef26a4b87b1a9dcdd04ed22c8f51f54943d436a9ca7883174b79aa"
-        },
-        "arm64": {
-            "url": "https://builds.zigtools.org/zls-aarch64-windows-0.16.0-dev.296+ef64fa01.zip",
-            "hash": "3771625eb23e9cb1d0f1a6be2c2f70ef48b936bd3d994963c444f873dd5307a7"
+            "url": "https://zigtools-releases.nyc3.digitaloceanspaces.com/zls/0.12.0-dev.416+7c733a6/x86-windows/zls.exe#/zls-dev.exe",
+            "hash": "37C5F2B3DF3FD86C799C84A7B9F8E5D54C9180A3B3DEA86ACCD7166309AFE5F1"
         }
     },
-    "bin": "zls.exe",
-    "checkver": {
-        "script": [
-            "$zig_version_api = 'https://ziglang.org/download/index.json'",
-            "$zig_version_api_response = Invoke-RestMethod -Uri $zig_version_api",
-            "$zig_version = $zig_version_api_response.master.version.replace('+','%2B')",
-            "$zls_version_api = \"https://releases.zigtools.org/v1/zls/select-version?zig_version=$zig_version&compatibility=only-runtime\"",
-            "$zls_version_api_response = Invoke-RestMethod -Uri $zls_version_api",
-            "$zls_version_api_response.version + ',' + $zig_version"
-        ],
-        "regex": "^(?<version>.*),(?<zig>.*)$"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://builds.zigtools.org/zls-x86_64-windows-$version.zip",
-                "hash": {
-                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
-                    "jsonpath": "$.x86_64-windows.shasum"
-                }
-            },
-            "32bit": {
-                "url": "https://builds.zigtools.org/zls-x86-windows-$version.zip",
-                "hash": {
-                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
-                    "jsonpath": "$.x86-windows.shasum"
-                }
-            },
-            "arm64": {
-                "url": "https://builds.zigtools.org/zls-aarch64-windows-$version.zip",
-                "hash": {
-                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
-                    "jsonpath": "$.aarch64-windows.shasum"
-                }
-            }
-        }
-    }
+    "bin": "zls-dev.exe"
 }

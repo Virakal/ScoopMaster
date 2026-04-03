@@ -1,29 +1,28 @@
 {
-    "version": "2026.2.1",
-    "description": "Structured STEM suite",
+    "version": "1.2.9",
+    "description": "Mogan (based on GNU TeXmacs): Let us enjoy exploring science and technology!",
     "homepage": "https://mogan.app",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/XmacsLabs/mogan/releases/download/v2026.2.1/MoganSTEM-v2026.2.1-64bit-installer.exe#/dl.7z",
-    "hash": "4fdcde8ecd18e393b589b1624916fb8720a0f84641cb99b7fd094c1b9e9d0468",
+    "url": "https://github.com/XmacsLabs/mogan/releases/download/v1.2.9/MoganResearch-v1.2.9-64bit-portable.zip",
+    "hash": "16ce3e3ea3dd7f17c3a9c621d0ff40b281240d81b1f88a1026159d52bc54622d",
+    "bin": "bin\\MoganResearch.exe",
     "shortcuts": [
         [
-            "bin\\MoganSTEM.exe",
-            "Mogan"
+            "bin\\MoganResearch.exe",
+            "Mogan Research"
         ]
     ],
     "post_install": [
-        "Write-Host 'Registering the TM(U) FileType...'",
+        "Write-Host 'Registering the TM FileType...'",
         "New-Item 'HKCU:\\SOFTWARE\\Classes\\.tm' -Value \"tmfile\" -Force | Out-Null",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\.tmu' -Value \"tmfile\" -Force | Out-Null",
         "New-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile' -Value \"text/tm\" -Force | Out-Null",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile\\DefaultIcon' -Value \"$dir\\bin\\MoganSTEM.exe\" -Force | Out-Null",
-        "New-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile\\shell\\open\\command' -Value \"\"\"$dir\\bin\\MoganSTEM.exe\"\" \"\"%1\"\"\" -Force | Out-Null",
+        "New-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile\\DefaultIcon' -Value \"$dir\\bin\\MoganResearch.exe\" -Force | Out-Null",
+        "New-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile\\shell\\open\\command' -Value \"\"\"$dir\\bin\\MoganResearch.exe\"\" \"\"%1\"\"\" -Force | Out-Null",
         "Write-Host 'Done!'"
     ],
     "pre_uninstall": [
-        "Write-Host 'Unregistering the TM(U) FileType...'",
+        "Write-Host 'Unregistering the TM FileType...'",
         "Remove-Item 'HKCU:\\SOFTWARE\\Classes\\.tm' -Force -Recurse",
-        "Remove-Item 'HKCU:\\SOFTWARE\\Classes\\.tmu' -Force -Recurse",
         "Remove-Item 'HKCU:\\SOFTWARE\\Classes\\tmfile' -Force -Recurse",
         "Write-Host 'Done!'"
     ],
@@ -35,6 +34,9 @@
         "github": "https://github.com/XmacsLabs/mogan"
     },
     "autoupdate": {
-        "url": "https://github.com/XmacsLabs/mogan/releases/download/v$version/MoganSTEM-v$version-64bit-installer.exe#/dl.7z"
+        "url": "https://github.com/XmacsLabs/mogan/releases/download/v$version/MoganResearch-v$version-64bit-portable.zip",
+        "hash": {
+            "url": "https://mogan.app/guide/Install.html"
+        }
     }
 }

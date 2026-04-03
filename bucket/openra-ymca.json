@@ -1,12 +1,16 @@
 {
-    "version": "0.96.7",
+    "version": "0.95.40",
     "description": "OpenRA RTS Autobattler - You Must Construct Additional...",
     "homepage": "https://www.moddb.com/mods/you-must-construct-additional1",
     "license": "GPL-3.0-or-later",
     "architecture": {
+        "32bit": {
+            "url": "https://github.com/patrickwieth/YMCA/releases/download/v0.95.40/YouMustConstructAdditional-v0.95.40-x86-winportable.zip",
+            "hash": "96390bfc2be32b3d4521ee52d365f97d8179cc0f7b8dfb559f144dd33f4b4476"
+        },
         "64bit": {
-            "url": "https://github.com/patrickwieth/YMCA/releases/download/v0.96.7/YouMustConstructAdditional-v0.96.7-x64-winportable.zip",
-            "hash": "ce099cdd6714872073cc887301d7bd7d012e3be576d3a6cf494f9911edf65300"
+            "url": "https://github.com/patrickwieth/YMCA/releases/download/v0.95.40/YouMustConstructAdditional-v0.95.40-x64-winportable.zip",
+            "hash": "ca7b68dde19e0325ce08752a810ed608d079665b61a8bd83fe442098ace25ec1"
         }
     },
     "shortcuts": [
@@ -21,6 +25,9 @@
     },
     "autoupdate": {
         "architecture": {
+            "32bit": {
+                "url": "https://github.com/patrickwieth/YMCA/releases/download/$matchPrefix$version/YouMustConstructAdditional-$matchPrefix$version-x86-winportable.zip"
+            },
             "64bit": {
                 "url": "https://github.com/patrickwieth/YMCA/releases/download/$matchPrefix$version/YouMustConstructAdditional-$matchPrefix$version-x64-winportable.zip"
             }

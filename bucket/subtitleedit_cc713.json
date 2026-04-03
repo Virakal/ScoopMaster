@@ -1,10 +1,10 @@
 {
-    "version": "4.0.15",
+    "version": "4.0.8",
     "description": "Video subtitles editor",
     "homepage": "http://www.nikse.dk/subtitleedit/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/SubtitleEdit/subtitleedit/releases/download/4.0.15/SE4015.zip",
-    "hash": "8afb2718d2252fa7853492e9e61b887d8846fefcc2304200ba353f8a9c8a5531",
+    "url": "https://github.com/SubtitleEdit/subtitleedit/releases/download/4.0.8/SE408.zip",
+    "hash": "979c055f98c18b344de10cfc33a26e3fcbbfc368bb89eeb3359e65c173580e78",
     "pre_install": "if (!(Test-Path \"$persist_dir\\Settings.xml\")) { New-Item \"$dir\\Settings.xml\" | Out-Null }",
     "bin": "SubtitleEdit.exe",
     "shortcuts": [

@@ -1,20 +1,20 @@
 {
-    "version": "2.5.0",
+    "version": "2.3.1",
     "description": "A fast port scanner written in go with a focus on reliability and simplicity.",
     "homepage": "https://github.com/projectdiscovery/naabu",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.5.0/naabu_2.5.0_windows_amd64.zip",
-            "hash": "edcc3ebc2ac8fa924c26c464ec81486eafd827d7ffcf4b7ea552f5bd88e0c10d"
+            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.3.1/naabu_2.3.1_windows_amd64.zip",
+            "hash": "7627b64a52c489df44d21581a655fe49f317f54b5140b853498b33b9050e9977"
         },
         "32bit": {
-            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.5.0/naabu_2.5.0_windows_386.zip",
-            "hash": "3d33856d2226b4947bf4a25df187237f313015e61404c4519a1fef1d15fa9be4"
+            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.3.1/naabu_2.3.1_windows_386.zip",
+            "hash": "2b963bcd41fba18a280cfb44ccd131721aab96d14712b3a98548e9b0c6c7175c"
         },
         "arm64": {
-            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.5.0/naabu_2.5.0_windows_arm64.zip",
-            "hash": "076ade019fe7ac3dff91c427861c64f49d3b7862f33f0b9e921a630d47db460c"
+            "url": "https://github.com/projectdiscovery/naabu/releases/download/v2.3.1/naabu_2.3.1_windows_arm64.zip",
+            "hash": "c55579c9636d64f1fe6aef7289acc2b1c5c1efe068a4e520d66bb1b0b370713e"
         }
     },
     "bin": "naabu.exe",

@@ -1,12 +1,12 @@
 {
-    "version": "2026-03",
+    "version": "2024-09",
     "description": "The Data-Oriented Language for Sane Software Development.",
     "homepage": "https://odin-lang.org/",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/odin-lang/Odin/releases/download/dev-2026-03/odin-windows-amd64-dev-2026-03.zip",
-            "hash": "b3323fd9544b84e2b751b5fc1b02d9b6388fd6948d49689eb3eced6cfe3afe3b"
+            "url": "https://github.com/odin-lang/Odin/releases/download/dev-2024-09/odin-windows-amd64-dev-2024-09.zip",
+            "hash": "f1caafcbc327e50b71f980e74683488c3b99570e40e1642355e2cf7a8fde4781"
         }
     },
     "extract_dir": "windows_artifacts",

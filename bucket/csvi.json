@@ -1,28 +1,28 @@
 {
-  "version": "1.23.1",
-  "description": "Terminal CSV Editor",
-  "homepage": "https://github.com/hymkor/csvi",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/hymkor/csvi/releases/download/v1.23.1/csvi-v1.23.1-windows-amd64.zip",
-      "hash": "b693a738243f399b0484e30e66622ddac2a6de6b6615a03672abc03c37040d1e"
-    },
-    "32bit": {
-      "url": "https://github.com/hymkor/csvi/releases/download/v1.23.1/csvi-v1.23.1-windows-386.zip",
-      "hash": "09dd8e04cdfe6f24dd94849fd797e63bd8802e2aeea2c5dbc9bb6483c8bdcb51"
-    }
-  },
-  "bin": "csvi.exe",
-  "checkver": "github",
-  "autoupdate": {
+    "version": "1.10.0",
+    "description": "Terminal CSV Editor",
+    "homepage": "https://github.com/hymkor/csvi",
+    "license": "MIT License",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/hymkor/csvi/releases/download/v$version/csvi-v$version-windows-amd64.zip"
-      },
-      "32bit": {
-        "url": "https://github.com/hymkor/csvi/releases/download/v$version/csvi-v$version-windows-386.zip"
-      }
+        "32bit": {
+            "url": "https://github.com/hymkor/csvi/releases/download/v1.10.0/csvi-v1.10.0-windows-386.zip",
+            "hash": "629681d85fc73544a806e124cc055c5a04542883cc0b88d4bc913747f3b08aad"
+        },
+        "64bit": {
+            "url": "https://github.com/hymkor/csvi/releases/download/v1.10.0/csvi-v1.10.0-windows-amd64.zip",
+            "hash": "12a23a46fdc799275f3dd1b3f2ea7af87bd2a2edb1bac347290695b57b88cec2"
+        }
+    },
+    "bin": "csvi.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hymkor/csvi/releases/download/v$version/csvi-v$version-windows-386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/hymkor/csvi/releases/download/v$version/csvi-v$version-windows-amd64.zip"
+            }
+        }
     }
-  }
 }

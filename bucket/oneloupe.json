@@ -1,16 +1,16 @@
 {
-    "version": "6.21",
+    "version": "5.88.1",
     "description": "An alternative Screen Magnifier for Windows.",
     "homepage": "https://softwareok.com/?seite=Microsoft/OneLoupe",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://softwareok.com/Download/OneLoupe_x64.zip",
-            "hash": "75d166b4f7a90dce4b5e03052f8bcb3f0f2b382158f57f9e73d8ba51483e88d0"
+            "hash": "c4bdb302cd0875e250a0be18d870d86ba491a4ebeb941282d1d208c82c36e598"
         },
         "32bit": {
             "url": "https://softwareok.com/Download/OneLoupe_Unicode.zip",
-            "hash": "a9adf35a2af386763633fe3bd24ee5269848281f2d0c150c61d6ad3cf7113f3d"
+            "hash": "170163a4c68e03b90e6a4f5bdea425c7c4eb32c27b2117af7ff5db5a6e54e563"
         }
     },
     "shortcuts": [

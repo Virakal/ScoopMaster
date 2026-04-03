@@ -1,12 +1,12 @@
 {
-    "version": "20260326195500",
+    "version": "20240620221100",
     "description": "The Sysinternals Troubleshooting Utilities have been rolled up into a single Suite of tools. This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting tools like the BSOD Screen Saver.",
     "homepage": "https://learn.microsoft.com/sysinternals/downloads/sysinternals-suite",
     "license": "Unlicense",
     "architecture": {
         "arm64": {
-            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20260326195500/sysinternals-suite-20260326195500-ARM64.zip",
-            "hash": "d990c1a7f5c35be47cab5b8896bbc2f0d68bc1b69e958a0d3a08bfd2fc4bf4e3",
+            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20240620221100/sysinternals-suite-20240620221100-ARM64.zip",
+            "hash": "54a1b468bb0dc51bbbb02833ea5ec5872b7292c680535a569fbb1280974b846e",
             "bin": [
                 [
                     "accesschk64a.exe",
@@ -236,73 +236,73 @@
             "shortcuts": [
                 [
                     "ADExplorer64a.exe",
-                    "SysInternals/ADExplorer64a"
+                    "ADExplorer64a"
                 ],
                 [
                     "ADInsight64a.exe",
-                    "SysInternals/ADInsight64a"
+                    "ADInsight64a"
                 ],
                 [
                     "Autologon64a.exe",
-                    "SysInternals/Autologon64a"
+                    "Autologon64a"
                 ],
                 [
                     "Autoruns64a.exe",
-                    "SysInternals/Autoruns64a"
+                    "Autoruns64a"
                 ],
                 [
                     "Dbgview64a.exe",
-                    "SysInternals/Dbgview64a"
+                    "Dbgview64a"
                 ],
                 [
                     "disk2vhd64a.exe",
-                    "SysInternals/disk2vhd64a"
+                    "disk2vhd64a"
                 ],
                 [
                     "DiskView64a.exe",
-                    "SysInternals/DiskView64a"
+                    "DiskView64a"
                 ],
                 [
                     "LoadOrd64a.exe",
-                    "SysInternals/LoadOrd64a"
+                    "LoadOrd64a"
                 ],
                 [
                     "notmyfault64a.exe",
-                    "SysInternals/notmyfault64a"
+                    "notmyfault64a"
                 ],
                 [
                     "procexp64a.exe",
-                    "SysInternals/procexp64a"
+                    "procexp64a"
                 ],
                 [
                     "Procmon64a.exe",
-                    "SysInternals/Procmon64a"
+                    "Procmon64a"
                 ],
                 [
                     "RAMMap64a.exe",
-                    "SysInternals/RAMMap64a"
+                    "RAMMap64a"
                 ],
                 [
                     "tcpview64a.exe",
-                    "SysInternals/tcpview64a"
+                    "tcpview64a"
                 ],
                 [
                     "vmmap64a.exe",
-                    "SysInternals/vmmap64a"
+                    "vmmap64a"
                 ],
                 [
                     "Winobj64a.exe",
-                    "SysInternals/Winobj64a"
+                    "Winobj64a"
                 ],
                 [
                     "ZoomIt64a.exe",
-                    "SysInternals/ZoomIt64a"
+                    "ZoomIt64a"
                 ]
             ]
         },
         "64bit": {
-            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20260326195500/sysinternals-suite-20260326195500.zip",
-            "hash": "5e469877860907572ff88a190b9694886877c19a23852df78f2793aa2f831ba9",
+            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20240620221100/sysinternals-suite-20240620221100.zip",
+            "hash": "2f9ea97b146023af9a77c2d7e1b1700c5c278a44511a3d2177270050aebca054",
             "bin": [
                 [
                     "accesschk.exe",
@@ -411,6 +411,10 @@
                 [
                     "CPUSTRES64.EXE",
                     "CPUSTRES64"
+                ],
+                [
+                    "ctrl2cap.exe",
+                    "ctrl2cap"
                 ],
                 [
                     "Dbgview.exe",
@@ -888,201 +892,201 @@
             "shortcuts": [
                 [
                     "AccessEnum.exe",
-                    "SysInternals/AccessEnum"
+                    "AccessEnum"
                 ],
                 [
                     "ADExplorer.exe",
-                    "SysInternals/ADExplorer"
+                    "ADExplorer"
                 ],
                 [
                     "ADExplorer64.exe",
-                    "SysInternals/ADExplorer64"
+                    "ADExplorer64"
                 ],
                 [
                     "ADInsight.exe",
-                    "SysInternals/ADInsight"
+                    "ADInsight"
                 ],
                 [
                     "ADInsight64.exe",
-                    "SysInternals/ADInsight64"
+                    "ADInsight64"
                 ],
                 [
                     "Autologon.exe",
-                    "SysInternals/Autologon"
+                    "Autologon"
                 ],
                 [
                     "Autologon64.exe",
-                    "SysInternals/Autologon64"
+                    "Autologon64"
                 ],
                 [
                     "Autoruns.exe",
-                    "SysInternals/Autoruns"
+                    "Autoruns"
                 ],
                 [
                     "Autoruns64.exe",
-                    "SysInternals/Autoruns64"
+                    "Autoruns64"
                 ],
                 [
                     "Bginfo.exe",
-                    "SysInternals/Bginfo"
+                    "Bginfo"
                 ],
                 [
                     "Bginfo64.exe",
-                    "SysInternals/Bginfo64"
+                    "Bginfo64"
                 ],
                 [
                     "Cacheset.exe",
-                    "SysInternals/Cacheset"
+                    "Cacheset"
                 ],
                 [
                     "Cacheset64.exe",
-                    "SysInternals/Cacheset64"
+                    "Cacheset64"
                 ],
                 [
                     "CPUSTRES.EXE",
-                    "SysInternals/CPUSTRES"
+                    "CPUSTRES"
                 ],
                 [
                     "CPUSTRES64.EXE",
-                    "SysInternals/CPUSTRES64"
+                    "CPUSTRES64"
                 ],
                 [
                     "Dbgview.exe",
-                    "SysInternals/Dbgview"
+                    "Dbgview"
                 ],
                 [
                     "dbgview64.exe",
-                    "SysInternals/dbgview64"
+                    "dbgview64"
                 ],
                 [
                     "Desktops.exe",
-                    "SysInternals/Desktops"
+                    "Desktops"
                 ],
                 [
                     "Desktops64.exe",
-                    "SysInternals/Desktops64"
+                    "Desktops64"
                 ],
                 [
                     "disk2vhd.exe",
-                    "SysInternals/disk2vhd"
+                    "disk2vhd"
                 ],
                 [
                     "disk2vhd64.exe",
-                    "SysInternals/disk2vhd64"
+                    "disk2vhd64"
                 ],
                 [
                     "Diskmon.exe",
-                    "SysInternals/Diskmon"
+                    "Diskmon"
                 ],
                 [
                     "Diskmon64.exe",
-                    "SysInternals/Diskmon64"
+                    "Diskmon64"
                 ],
                 [
                     "DiskView.exe",
-                    "SysInternals/DiskView"
+                    "DiskView"
                 ],
                 [
                     "DiskView64.exe",
-                    "SysInternals/DiskView64"
+                    "DiskView64"
                 ],
                 [
                     "LoadOrd.exe",
-                    "SysInternals/LoadOrd"
+                    "LoadOrd"
                 ],
                 [
                     "LoadOrd64.exe",
-                    "SysInternals/LoadOrd64"
+                    "LoadOrd64"
                 ],
                 [
                     "notmyfault.exe",
-                    "SysInternals/notmyfault"
+                    "notmyfault"
                 ],
                 [
                     "notmyfault64.exe",
-                    "SysInternals/notmyfault64"
+                    "notmyfault64"
                 ],
                 [
                     "portmon.exe",
-                    "SysInternals/portmon"
+                    "portmon"
                 ],
                 [
                     "procexp.exe",
-                    "SysInternals/procexp"
+                    "procexp"
                 ],
                 [
                     "procexp64.exe",
-                    "SysInternals/procexp64"
+                    "procexp64"
                 ],
                 [
                     "Procmon.exe",
-                    "SysInternals/Procmon"
+                    "Procmon"
                 ],
                 [
                     "Procmon64.exe",
-                    "SysInternals/Procmon64"
+                    "Procmon64"
                 ],
                 [
                     "RAMMap.exe",
-                    "SysInternals/RAMMap"
+                    "RAMMap"
                 ],
                 [
                     "RAMMap64.exe",
-                    "SysInternals/RAMMap64"
+                    "RAMMap64"
                 ],
                 [
                     "RDCMan.exe",
-                    "SysInternals/RDCMan"
+                    "RDCMan"
                 ],
                 [
                     "ShareEnum.exe",
-                    "SysInternals/ShareEnum"
+                    "ShareEnum"
                 ],
                 [
                     "ShareEnum64.exe",
-                    "SysInternals/ShareEnum64"
+                    "ShareEnum64"
                 ],
                 [
                     "ShellRunas.exe",
-                    "SysInternals/ShellRunas"
+                    "ShellRunas"
                 ],
                 [
                     "tcpview.exe",
-                    "SysInternals/tcpview"
+                    "tcpview"
                 ],
                 [
                     "tcpview64.exe",
-                    "SysInternals/tcpview64"
+                    "tcpview64"
                 ],
                 [
                     "vmmap.exe",
-                    "SysInternals/vmmap"
+                    "vmmap"
                 ],
                 [
                     "vmmap64.exe",
-                    "SysInternals/vmmap64"
+                    "vmmap64"
                 ],
                 [
                     "Winobj.exe",
-                    "SysInternals/Winobj"
+                    "Winobj"
                 ],
                 [
                     "Winobj64.exe",
-                    "SysInternals/Winobj64"
+                    "Winobj64"
                 ],
                 [
                     "ZoomIt.exe",
-                    "SysInternals/ZoomIt"
+                    "ZoomIt"
                 ],
                 [
                     "ZoomIt64.exe",
-                    "SysInternals/ZoomIt64"
+                    "ZoomIt64"
                 ]
             ]
         },
         "32bit": {
-            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20260326195500/sysinternals-suite-20260326195500.zip",
-            "hash": "5e469877860907572ff88a190b9694886877c19a23852df78f2793aa2f831ba9",
+            "url": "https://github.com/zhangchaoza/sysinternals-suite-archives/releases/download/20240620221100/sysinternals-suite-20240620221100.zip",
+            "hash": "2f9ea97b146023af9a77c2d7e1b1700c5c278a44511a3d2177270050aebca054",
             "bin": [
                 [
                     "accesschk.exe",
@@ -1139,6 +1143,10 @@
                 [
                     "CPUSTRES.EXE",
                     "CPUSTRES"
+                ],
+                [
+                    "ctrl2cap.exe",
+                    "ctrl2cap"
                 ],
                 [
                     "Dbgview.exe",
@@ -1392,107 +1400,107 @@
             "shortcuts": [
                 [
                     "AccessEnum.exe",
-                    "SysInternals/AccessEnum"
+                    "AccessEnum"
                 ],
                 [
                     "ADExplorer.exe",
-                    "SysInternals/ADExplorer"
+                    "ADExplorer"
                 ],
                 [
                     "ADInsight.exe",
-                    "SysInternals/ADInsight"
+                    "ADInsight"
                 ],
                 [
                     "Autologon.exe",
-                    "SysInternals/Autologon"
+                    "Autologon"
                 ],
                 [
                     "Autoruns.exe",
-                    "SysInternals/Autoruns"
+                    "Autoruns"
                 ],
                 [
                     "Bginfo.exe",
-                    "SysInternals/Bginfo"
+                    "Bginfo"
                 ],
                 [
                     "Cacheset.exe",
-                    "SysInternals/Cacheset"
+                    "Cacheset"
                 ],
                 [
                     "CPUSTRES.EXE",
-                    "SysInternals/CPUSTRES"
+                    "CPUSTRES"
                 ],
                 [
                     "Dbgview.exe",
-                    "SysInternals/Dbgview"
+                    "Dbgview"
                 ],
                 [
                     "Desktops.exe",
-                    "SysInternals/Desktops"
+                    "Desktops"
                 ],
                 [
                     "disk2vhd.exe",
-                    "SysInternals/disk2vhd"
+                    "disk2vhd"
                 ],
                 [
                     "Diskmon.exe",
-                    "SysInternals/Diskmon"
+                    "Diskmon"
                 ],
                 [
                     "DiskView.exe",
-                    "SysInternals/DiskView"
+                    "DiskView"
                 ],
                 [
                     "LoadOrd.exe",
-                    "SysInternals/LoadOrd"
+                    "LoadOrd"
                 ],
                 [
                     "notmyfault.exe",
-                    "SysInternals/notmyfault"
+                    "notmyfault"
                 ],
                 [
                     "portmon.exe",
-                    "SysInternals/portmon"
+                    "portmon"
                 ],
                 [
                     "procexp.exe",
-                    "SysInternals/procexp"
+                    "procexp"
                 ],
                 [
                     "Procmon.exe",
-                    "SysInternals/Procmon"
+                    "Procmon"
                 ],
                 [
                     "RAMMap.exe",
-                    "SysInternals/RAMMap"
+                    "RAMMap"
                 ],
                 [
                     "RDCMan.exe",
-                    "SysInternals/RDCMan"
+                    "RDCMan"
                 ],
                 [
                     "ShareEnum.exe",
-                    "SysInternals/ShareEnum"
+                    "ShareEnum"
                 ],
                 [
                     "ShellRunas.exe",
-                    "SysInternals/ShellRunas"
+                    "ShellRunas"
                 ],
                 [
                     "tcpview.exe",
-                    "SysInternals/tcpview"
+                    "tcpview"
                 ],
                 [
                     "vmmap.exe",
-                    "SysInternals/vmmap"
+                    "vmmap"
                 ],
                 [
                     "Winobj.exe",
-                    "SysInternals/Winobj"
+                    "Winobj"
                 ],
                 [
                     "ZoomIt.exe",
-                    "SysInternals/ZoomIt"
+                    "ZoomIt"
                 ]
             ]
         }

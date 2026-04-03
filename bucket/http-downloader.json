@@ -1,25 +1,22 @@
 {
-    "version": "1.0.6.9",
+    "version": "1.0.6.4",
     "description": "A download manager for the HTTP(S) and FTP(S) protocols.",
     "homepage": "https://erickutcher.github.io/#HTTP_Downloader",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/erickutcher/httpdownloader/releases/download/v1.0.6.9/HTTP_Downloader_64.zip",
-            "hash": "a80e8a712d01f150e995c750ed1fcafe7e6e9c06f2866f2e338df2c0cc6be616"
+            "url": "https://github.com/erickutcher/httpdownloader/releases/download/v1.0.6.4/HTTP_Downloader_64.zip",
+            "hash": "b4fe0857e0768a0e1633f485406aa2ad2693262a04b3aa3b99f23cf10fba900e"
         },
         "32bit": {
-            "url": "https://github.com/erickutcher/httpdownloader/releases/download/v1.0.6.9/HTTP_Downloader_32.zip",
-            "hash": "17ce6c330068e05f521445784d560eb3f086e276613f2da996281cc88357363e"
+            "url": "https://github.com/erickutcher/httpdownloader/releases/download/v1.0.6.4/HTTP_Downloader_32.zip",
+            "hash": "59af28fd4daadf5b1f82271ab425ab4c57c57a85fda6cf062119878b6617c93a"
         }
     },
     "pre_install": [
         "New-Item \"$dir\\portable\" -Force | Out-Null",
-        "'download_history', 'http_downloader_settings' | ForEach-Object {",
-        "    if (-not (Test-Path -Path \"$persist_dir\\$_\")) {",
-        "        New-Item -Path \"$dir\\$_\" -ItemType File -Force | Out-Null",
-        "    }",
-        "}"
+        "if (!(Test-Path \"$persist_dir\\http_downloader_settings\")) { New-Item \"$dir\\http_downloader_settings\" -Force | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\download_history\")) { New-Item \"$dir\\download_history\" -Force | Out-Null }"
     ],
     "bin": "HTTP_Downloader.exe",
     "shortcuts": [
@@ -30,12 +27,12 @@
     ],
     "persist": [
         "incomplete",
-        "download_history",
-        "http_downloader_settings"
+        "http_downloader_settings",
+        "download_history"
     ],
     "checkver": {
-        "github": "https://github.com/erickutcher/httpdownloader",
-        "regex": "(?i)tag/v([\\d.]+)(?=\")"
+        "url": "https://github.com/erickutcher/httpdownloader/releases",
+        "regex": "tree/v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

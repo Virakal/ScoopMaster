@@ -1,23 +1,22 @@
 {
-    "version": "1958",
+    "version": "1606",
     "description": "A free implementation of the Remote Desktop Protocol (RDP).",
     "homepage": "https://www.freerdp.com/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1958/arch=win64,label=vs2017/artifact/*zip*/archive.zip",
-            "hash": "d3add11447be9de98d41bea5f9f2bd58b510bd48370ba5d31d9854a54fe9d608"
+            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1606/arch=win64,label=vs2017/artifact/*zip*/archive.zip",
+            "hash": "3a667f8970ec0a29d2413fe7032e8eb6871a06510f2ca87fc9ee3c5094ade3b7"
         },
         "32bit": {
-            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1958/arch=win32,label=vs2017/artifact/*zip*/archive.zip",
-            "hash": "275207b50f39f7c33cb3321be222fce67aded2dc57f0a0f97ca7000b9e13f8f9"
+            "url": "https://ci.freerdp.com/job/freerdp-nightly-windows/1606/arch=win32,label=vs2017/artifact/*zip*/archive.zip",
+            "hash": "7e4e0ba7f5fd754ceb8d65eab81e8c5054d94d480c378372aa35eb20fb459085"
         }
     },
     "extract_dir": "archive\\install\\bin",
     "bin": [
         "freerdp-proxy.exe",
-        "sdl2-freerdp.exe",
-        "sdl3-freerdp.exe",
+        "sdl-freerdp.exe",
         "sfreerdp-server.exe",
         "wfreerdp.exe",
         "winpr-hash.exe",

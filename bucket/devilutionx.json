@@ -1,10 +1,10 @@
 {
-    "version": "1.5.5",
+    "version": "1.5.3",
     "description": "Diablo build for modern operating systems",
     "homepage": "https://github.com/diasurgical/devilutionX",
     "license": "Unlicense",
-    "url": "https://github.com/diasurgical/devilutionX/releases/download/1.5.5/devilutionx-windows-i386.zip",
-    "hash": "aa2c7051495cb53a8aaf7ac1f65d3537e6f52538f96797be38aa06a4aaa90d15",
+    "url": "https://github.com/diasurgical/devilutionX/releases/download/1.5.3/devilutionx-windows-i386.zip",
+    "hash": "0c577a9b97a2c72f6ab70b76488113db4976002ac4e601dea1877c736b32d33f",
     "pre_install": "New-Item -path \"$dir\" -type \"file\" -name diabdat.mpq -value \"\"",
     "extract_dir": "devilutionx-windows-i386",
     "bin": "devilutionx.exe",

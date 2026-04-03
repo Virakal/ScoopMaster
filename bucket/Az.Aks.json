@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:6bf0a98cbba894e2c255577f8daf40f82be41e15824038ca5f70f59431377e07c80e225194cc583f52913a11663b54af67a123e3d1c94d257a3ccd5e34fd8fe3",
+    "hash": "sha512:96fa918ff5fb6b15f365e8028c8c5f8efc068b41bfe942052632780d423bf58cd208f30f2dc5aaa8e56ef69390d0840d779c55a4bcf21350fbb1b3d9b748f74d",
     "description": "Microsoft Azure PowerShell - Azure managed Kubernetes cmdlets for Windows PowerShell and PowerShell Core.  For more information on AKS, please visit the following: https://learn.microsoft.com/azure/aks/",
     "psmodule": {
         "name": "Az.Aks"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Aks/7.1.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Aks/6.0.4#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "7.1.1"
+    "version": "6.0.4"
 }

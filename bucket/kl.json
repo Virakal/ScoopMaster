@@ -1,38 +1,29 @@
 {
-    "version": "0.8.0",
-    "description": "An interactive Kubernetes log viewer for your terminal",
-    "homepage": "https://github.com/robinovitch61/kl",
-    "license": "MIT",
+    "version": "0.1.0",
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Windows_x86_64.zip",
-            "hash": "782dee759cc5e939aa9980f2afb3bf13dd2b13496c60cb756704c8bdec717100"
-        },
         "32bit": {
-            "url": "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Windows_i386.zip",
-            "hash": "2d69915e79a91c37f27f802b3a02f986d88a742ce59a40823564e03222335a23"
+            "url": "https://github.com/robinovitch61/kl/releases/download/v0.1.0/kl_0.1.0_Windows_i386.zip",
+            "bin": [
+                "kl.exe"
+            ],
+            "hash": "0ff1b5666e96d33ba41eebd3aad0ec02eae09a6388347aa7fd099213e66fb5ef"
+        },
+        "64bit": {
+            "url": "https://github.com/robinovitch61/kl/releases/download/v0.1.0/kl_0.1.0_Windows_x86_64.zip",
+            "bin": [
+                "kl.exe"
+            ],
+            "hash": "e78345c7dab6e712aabf964ec168369740d4dd6ab9724d9f65faadab49e2d163"
         },
         "arm64": {
-            "url": "https://github.com/robinovitch61/kl/releases/download/v0.8.0/kl_0.8.0_Windows_arm64.zip",
-            "hash": "7777d586c4d4535eff7ad309efc95c4106a5fc651cc198a7c79cdebe5cd0fea6"
+            "url": "https://github.com/robinovitch61/kl/releases/download/v0.1.0/kl_0.1.0_Windows_arm64.zip",
+            "bin": [
+                "kl.exe"
+            ],
+            "hash": "e7c3208830a8ff6ccd5f85e667a1fe7518e57b93f404982c80a9820195c3c9a0"
         }
     },
-    "bin": "kl.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/robinovitch61/kl/releases/download/v$version/kl_$version_Windows_x86_64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/robinovitch61/kl/releases/download/v$version/kl_$version_Windows_i386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/robinovitch61/kl/releases/download/v$version/kl_$version_Windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
-    }
+    "homepage": "https://github.com/robinovitch61/kl",
+    "license": "MIT",
+    "description": "An interactive Kubernetes log viewer for your terminal."
 }

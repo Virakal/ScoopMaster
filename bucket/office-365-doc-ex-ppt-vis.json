@@ -1,5 +1,5 @@
 {
-    "version": "8.44-5935",
+    "version": "16.0.17830.20162",
     "description": "Family of client software, server software and services developed by Microsoft. This package only includes Word, Excel, Powerpoint and Onenote.",
     "homepage": "https://www.office.com/",
     "license": {
@@ -7,8 +7,8 @@
         "url": "https://www.microsoft.com/licensing/terms/productoffering/OfficeDesktopApplicationsWindows/MCA"
     },
     "depends": "7zip19.00-helper",
-    "url": "https://download.microsoft.com/download/#/dl.7z_",
-    "hash": "dabae242749ef1e3a8854e0e0bb16ba68fd36c45431ae40965066376eb17f750",
+    "url": "https://download.microsoft.com/download/2/7/A/27AF1BE6-DD20-4CB4-B154-EBAB8A7D4A7E/officedeploymenttool_17830-20162.exe#/dl.7z_",
+    "hash": "a8a4de8802352348c1218298cbad68c6bc4ec5fd247e9b70eba01098e121637c",
     "pre_install": [
         "$scriptdir = \"$bucketsdir\\zault\\scripts\"",
         "if ($architecture -eq '64bit') {",

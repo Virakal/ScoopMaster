@@ -1,19 +1,19 @@
 {
-    "version": "147",
+    "version": "140",
     "description": "Multi-system emulator focused on accuracy and preservation",
     "homepage": "https://ares-emu.net",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/v147/ares-windows-x64.zip",
-            "hash": "58ed8d4af24f597b21a5e2060e51dbe869429ca144948b0c56c8b876d9bde2df"
+            "url": "https://github.com/ares-emulator/ares/releases/download/v140/ares-windows.zip",
+            "hash": "407a4481f1440692ae70e7930ae07b13d77676c88eddab494865b429a04dd0ba"
         },
         "arm64": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/v147/ares-windows-clang-cl-arm64.zip",
-            "hash": "6c00728fdc672cefb44880cf5f60339f3fdaa6509735449549041c8f7934702d"
+            "url": "https://github.com/ares-emulator/ares/releases/download/v140/ares-windows-msvc-arm64.zip",
+            "hash": "2b25ccc76ee5ff8ab318283fcbddf3c829557ce78414efce38da9fe6636645e0"
         }
     },
-    "extract_dir": "ares-v147",
+    "extract_dir": "ares-v140",
     "post_install": [
         "if (!(Test-Path \"$persist_dir\\settings.bml.bak\")) {",
         "   New-Item -ItemType File \"$dir\\settings.bml\" | Out-Null",
@@ -51,10 +51,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ares-emulator/ares/releases/download/v$cleanVersion/ares-windows-x64.zip"
+                "url": "https://github.com/ares-emulator/ares/releases/download/v$cleanVersion/ares-windows.zip"
             },
             "arm64": {
-                "url": "https://github.com/ares-emulator/ares/releases/download/v$cleanVersion/ares-windows-clang-cl-arm64.zip"
+                "url": "https://github.com/ares-emulator/ares/releases/download/v$cleanVersion/ares-windows-msvc-arm64.zip"
             }
         },
         "extract_dir": "ares-v$cleanVersion"

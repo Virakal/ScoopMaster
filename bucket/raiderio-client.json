@@ -1,36 +1,19 @@
 {
-    "version": "4.10.5",
+    "version": "4.5.0",
     "description": "World of Warcraft addon updater.",
     "homepage": "https://raider.io/addon",
     "license": {
         "identifier": "Freeware",
         "url": "https://raider.io/terms-of-use"
     },
-    "url": "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v4.10.5/RaiderIO_Client_Setup.exe#/dl.7z",
-    "hash": "269d10db9c77b71bba17b981dbee7a5b9e720f96a2c5d4ab781ac568341a7c0c",
+    "url": "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v4.5.0/RaiderIO_Client_Setup.exe#/dl.7z",
+    "hash": "7d8085dd86e1498ebf405f043c5e24b2f21c39bd4f115115e82dd8325d80c14a",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
             "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z'",
             "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
         ]
-    },
-    "post_install": [
-        "ensure \"$persist_dir\" | Out-Null",
-        "$targetPath = \"$env:AppData\\RaiderIO\"",
-        "$linkType = (Get-Item -Path \"$targetPath\" -ErrorAction SilentlyContinue).LinkType",
-        "if (Test-Path \"$targetPath\") {",
-        "    if ($linkType -eq 'Junction') {",
-        "        Remove-Item -Path \"$targetPath\" -Force",
-        "    } else {",
-        "        Get-ChildItem -Path \"$targetPath\" -Force | Move-Item -Destination $persist_dir -Force",
-        "        Remove-Item -Path \"$targetPath\" -Force -Recurse",
-        "    }",
-        "}",
-        "New-Item \"$targetPath\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
-    ],
-    "uninstaller": {
-        "script": "Remove-Item -Path \"$env:AppData\\RaiderIO\" -Force -Recurse -ErrorAction SilentlyContinue"
     },
     "shortcuts": [
         [

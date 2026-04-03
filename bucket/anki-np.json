@@ -1,18 +1,15 @@
 {
-    "version": "25.09",
-    "description": "A smart spaced repetition flashcard program.",
+    "version": "24.06.3",
+    "description": "Powerful and intelligent flash cards",
     "homepage": "https://apps.ankiweb.net",
-    "license": {
-        "identifier": "AGPL-3.0-or-later",
-        "url": "https://github.com/ankitects/anki/blob/HEAD/LICENSE"
-    },
+    "license": "AGPL-3.0-only",
     "suggest": {
         "vcredist": "extras/vcredist2008"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ankitects/anki/releases/download/25.09/anki-launcher-25.09-windows.exe#/installer.exe",
-            "hash": "398f690a8208bd381dc2d4220720a82f6d2249c1fd1b38f46a90db356cb7c69e"
+            "url": "https://github.com/ankitects/anki/releases/download/24.06.3/anki-24.06.3-windows-qt6.exe#/installer.exe",
+            "hash": "e11ade8b94dbb5374102669ea589bc1072ea07b93897f3b36fa045f5192ef0ba"
         }
     },
     "installer": {
@@ -36,18 +33,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repositories/7270538/releases",
-        "jsonpath": "$[?(@.prerelease == false)].assets[?(@.name =~ /windows/i)].browser_download_url",
-        "regex": "(?i)download/([\\d.]+)/anki-launcher-[\\d.]+-windows"
+        "github": "https://github.com/ankitects/anki"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ankitects/anki/releases/download/$version/anki-launcher-$version-windows.exe#/installer.exe"
+                "url": "https://github.com/ankitects/anki/releases/download/$version/anki-$version-windows-qt6.exe#/installer.exe"
             }
         },
         "hash": {
-            "url": "$baseurl/anki-launcher-$version-checksums.txt"
+            "url": "$baseurl/anki-$version-checksums.txt"
         }
     }
 }

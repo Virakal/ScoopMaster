@@ -1,17 +1,17 @@
 {
-    "version": "2.2.0",
+    "version": "2.0.0",
     "description": "Japanese font based on BIZ UD Gothic",
     "homepage": "https://github.com/yuru7/udev-gothic",
     "license": "OFL-1.1-RFN",
     "url": [
-        "https://github.com/yuru7/udev-gothic/releases/download/v2.2.0/UDEVGothic_v2.2.0.zip",
-        "https://github.com/yuru7/udev-gothic/releases/download/v2.2.0/UDEVGothic_NF_v2.2.0.zip",
-        "https://github.com/yuru7/udev-gothic/releases/download/v2.2.0/UDEVGothic_HS_v2.2.0.zip"
+        "https://github.com/yuru7/udev-gothic/releases/download/v2.0.0/UDEVGothic_v2.0.0.zip",
+        "https://github.com/yuru7/udev-gothic/releases/download/v2.0.0/UDEVGothic_NF_v2.0.0.zip",
+        "https://github.com/yuru7/udev-gothic/releases/download/v2.0.0/UDEVGothic_HS_v2.0.0.zip"
     ],
     "hash": [
-        "c104c171f6ed8922ca52d74cd915a271e427f1e884e51431aae71d99e8b3b47b",
-        "45faeef7b5d8bc591bcc5887a2ca0c5fb9028066f18a5a52cd6f10b7d655ba37",
-        "570d03cb98d15834a5f6e1323843dfdc9f79d4b0c4bace123bb12de0806d9545"
+        "50f04adcae9eaa112aa3d68eb06541ab7502ae976221df2f50195ac7696c74be",
+        "551f1e89861f71cdf0c714cea42e503dbec5a6064f07af1711f1731003433039",
+        "7b4334786a9d42d5407fd187befc6c92be291ddf9ea678b5e4c6aee266790384"
     ],
     "depends": "unoun/scoop-helper",
     "pre_install": "if ((Test-Path $(appdir font-udev-gothic-nf))) { error 'Uninstall font-udev-gothic-nf'; exit 1 }",

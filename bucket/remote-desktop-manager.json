@@ -1,42 +1,7 @@
 {
-    "homepage": "https://devolutions.net/remote-desktop-manager",
-    "version": "2026.1.16.0",
-    "description": "The best remote connection manager in the industry.",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://cdn.devolutions.net/documents/legal/eula/software-license-agreement-en.pdf"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-x64.2026.1.16.0.7z",
-            "hash": "d2b46bca3a3f02d82868053def2586309427a8abfbc8cf6f14ea229073b0d85b"
-        },
-        "arm64": {
-            "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-arm64.2026.1.16.0.7z",
-            "hash": "361e5adf21fe2965b9ff2e32a3e0b06dd2794e83f4a56fd1caa101ae84f5bb75"
-        }
-    },
-    "extract_dir": ".",
-    "shortcuts": [
-        [
-            "RemoteDesktopManager.exe",
-            "Remote Desktop Manager"
-        ]
-    ],
-    "bin": "RemoteDesktopManager.exe",
-    "checkver": {
-        "url": "https://devolutions.net/remote-desktop-manager/download/",
-        "regex": "Version\\:\\ ([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-x64.$version.7z"
-            },
-            "arm64": {
-                "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-arm64.$version.7z"
-            }
-        },
-        "extract_dir": "."
-    }
+    "version": "2.7",
+    "url": "https://download.microsoft.com/download/A/F/0/AF0071F3-B198-4A35-AA90-C68D103BDCCF/rdcman.msi",
+    "extract_dir": "",
+    "bin": "program files\\Microsoft\\Remote Desktop Connection Manager\\RDCMan.exe",
+    "hash":"sha256:6e29f25c5e7f5ec587d07642a344b05429472a75b4f73177cd6aac63be61a455" 
 }

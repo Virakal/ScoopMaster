@@ -1,5 +1,5 @@
 {
-    "version": "10.31.0",
+    "version": "10.8.0",
     "description": "Collaborative tool for designs' and styleguides' handoff with specs, assets and code snippets",
     "homepage": "https://zeplin.io",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://pkg.zeplin.io/windows/latestv2/x64/Zeplin-10.31.0-full.nupkg",
-            "hash": "sha1:020a56eea06a42679b53341cac7efdeeadc257b1"
+            "url": "https://pkg.zeplin.io/windows/latestv2/x64/Zeplin-10.8.0-full.nupkg",
+            "hash": "sha1:975db5822b69b99cb66e196975a5d5c946e59dfb"
         },
         "32bit": {
-            "url": "https://pkg.zeplin.io/windows/latestv2/ia32/Zeplin-10.31.0-full.nupkg",
-            "hash": "sha1:df06e9e99eeb5b675ec228b9f8d88ad2587aeb72"
+            "url": "https://pkg.zeplin.io/windows/latestv2/ia32/Zeplin-10.8.0-full.nupkg",
+            "hash": "sha1:0c91fcad85c62bceecc25f2db4077d008b408731"
         }
     },
     "extract_dir": "lib\\net45",

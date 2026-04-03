@@ -1,19 +1,10 @@
 {
-    "version": "2.52.5",
-    "description": "Photo viewer, image resizer & batch converter",
-    "homepage": "https://www.xnview.com/en/xnview-classic/",
-    "license": "Freeware|Proprietary",
-    "url": "https://download.xnview.com/XnView-win-full.zip",
-    "hash": "5df81ce077e649e95fcb85443c298720c4f0684cc265315424cf49a74e13d71d",
+    "homepage": "https://www.xnview.com/en/xnview/",
+    "version": "2.51.7",
+    "license": "freeware",
     "extract_dir": "XnView",
-    "pre_install": [
-        "if (Test-Path \"$persist_dir\\xnview.ini\" -PathType Container) {",
-        "    Remove-Item \"$persist_dir\\xnview.ini\" -Force -Recurse",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\xnview.ini\")) {",
-        "   New-Item \"$dir\\xnview.ini\" -ItemType File | Out-Null",
-        "}"
-    ],
+    "url": "https://download.xnview.com/XnView-win-full.zip",
+    "hash": "d9cbd4b271412567bf4639a2d5fd2d3ca8f8e1e2aa26cc25b62d1b2da80041fc",
     "bin": "xnview.exe",
     "shortcuts": [
         [
@@ -29,7 +20,7 @@
     "autoupdate": {
         "url": "https://download.xnview.com/XnView-win-full.zip",
         "hash": {
-            "url": "https://www.xnview.com/en/xnview-classic/",
+            "url": "https://www.xnview.com/en/xnview/",
             "find": "XnView-win-full.zip: ($sha256)"
         }
     }

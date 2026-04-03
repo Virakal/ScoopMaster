@@ -1,13 +1,13 @@
 {
-    "version": "5.1.0",
+    "version": "4.2.1",
     "description": "Blender. 3D creation suite",
     "homepage": "https://www.blender.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.clarkson.edu/blender/release/Blender5.1/blender-5.1.0-windows-x64.zip",
-            "hash": "bc184226962904e3f26c5809ba7ec86bbeb670060825b046930b0c02a30a4eee",
-            "extract_dir": "blender-5.1.0-windows-x64"
+            "url": "https://mirror.clarkson.edu/blender/release/Blender4.2/blender-4.2.1-windows-x64.zip",
+            "hash": "46b9d27c2406454c68842d1790515732be385719e844f6b283e3c78186f9ffce",
+            "extract_dir": "blender-4.2.1-windows-x64"
         }
     },
     "bin": "blender.exe",

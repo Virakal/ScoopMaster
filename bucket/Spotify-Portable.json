@@ -1,5 +1,5 @@
 {
-    "version": "1.2.53.440.g7b2f582a",
+    "version": "1.2.45.454.gc16ec9f6",
     "description": "Spotify. A digital music service that gives you access to millions of songs.",
     "homepage": "https://www.spotify.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.spotify.com/legal/end-user-agreement/"
     },
     "url": "https://download.scdn.co/SpotifyFullSetup.exe",
-    "hash": "c8f01ea8a1c8fce3bdb2664c2c5047f619ca75fa99e999f1ae81999f4ee01710",
+    "hash": "a1ef014fcffca1ad15159a8b642cd30a9f108546e1ae70b87367911bbd6ee622",
     "installer": {
         "script": [
             "Start-Process -Wait \"$dir\\$fname\" -ArgumentList '/extract', \"`\"$dir`\"\"",
@@ -31,7 +31,7 @@
         "script": [
             "$download_url = 'https://download.scdn.co/SpotifyFullSetup.exe'",
             "$download = cache_path 'spotify' 'unknown' $download_url",
-            "Start-BitsTransfer $download_url $download",
+            "do_dl $download_url $download",
             "$spotify_version = (Get-Item $download).VersionInfo.ProductVersion",
             "Move-Item -Force $download -Destination (cache_path 'spotify' $spotify_version $download_url)",
             "return $spotify_version"

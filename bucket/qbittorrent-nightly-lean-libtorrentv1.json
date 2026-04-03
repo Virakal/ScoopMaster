@@ -1,5 +1,5 @@
 {
-    "version": "23895022335",
+    "version": "10890682964",
     "description": "Free and reliable P2P Bittorent client.",
     "homepage": "https://github.com/qbittorrent/qBittorrent",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-1.2.20.zip",
-            "hash": "999eb8fab07c0b10566b8ef51c6acfe6f51118dbf7a6a5cb2506dc7442ffd0b6",
+            "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-1.2.19.zip",
+            "hash": "3eb85f451d4033a2037c128e950433ab9c9aeb534dea26da21555f3d31fed970",
             "extract_dir": "qBittorrent"
         }
     },
@@ -24,7 +24,7 @@
         "    }",
         "    $null = New-Item \"$persist_dir/profile\" -ItemType Directory",
         "    if (Test-Path \"$env:APPDATA/qBittorrent\") {",
-        "        Write-Host 'Copying non-portable profile''s config and data to Scoop persist directory...' -ForegroundColor Yellow",
+        "        Write-Host 'Copying non-portable profile's config and data to Scoop persist directory...' -ForegroundColor Yellow",
         "        $null = Copy-Item \"$env:APPDATA/qBittorrent\" \"$persist_dir/profile/qBittorrent/config\" -Recurse",
         "        $null = Copy-Item \"$env:LOCALAPPDATA/qBittorrent\" \"$persist_dir/profile/qBittorrent/data\" -Recurse",
         "    } else {",
@@ -47,13 +47,12 @@
     "checkver": {
         "script": [
             "try {",
-            "    $null = (Invoke-WebRequest https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml).Content -cmatch 'libtorrent:\\n\\s+-[^-]+- version: \"([^\"]+)'",
-            "    $Matches[1],",
-            "    (Invoke-RestMethod 'https://api.github.com/repositories/3351871/actions/workflows/ci_windows.yaml/runs?branch=master&status=success&per_page=1' -Headers $(if ($auth = Get-GitHubToken) { @{authorization=\"Bearer $auth\"} })).workflow_runs[0].id -join ' '",
+            "    (Invoke-RestMethod 'https://api.github.com/repositories/3351871/actions/workflows/ci_windows.yaml/runs?branch=master&status=success').workflow_runs[0].id,",
+            "    (Invoke-RestMethod https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml | Select-String 'libt_version: \\[\"[\\d.]+\", \"([\\d.]+)\"\\]').matches.groups[1].value -join ' '",
             "}",
             "catch { '' }"
         ],
-        "regex": "\\A(?<libtorrent>[\\d.]+) (\\d+)\\Z"
+        "regex": "\\A(\\d+) (?<libtorrent>[\\d.]+)\\Z"
     },
     "autoupdate": {
         "architecture": {

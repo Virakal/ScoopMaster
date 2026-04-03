@@ -1,19 +1,19 @@
 {
-    "version": "24.14.1",
+    "version": "20.17.0",
     "description": "JavaScript runtime environment.",
     "homepage": "https://nodejs.org",
     "license": "MIT",
     "notes": "npm global prefix set to: $env:APPDATA\\npm",
     "architecture": {
         "64bit": {
-            "url": "https://nodejs.org/dist/v24.14.1/node-v24.14.1-win-x64.7z",
-            "hash": "05024009bab2fed64b1143c3cc9931441cc1b902acd16f5880404db94beb3543",
-            "extract_dir": "node-v24.14.1-win-x64"
+            "url": "https://nodejs.org/dist/v20.17.0/node-v20.17.0-win-x64.7z",
+            "hash": "d0e84c8afb6e57301904339501d62e4d817575367219f71bf34a5069999ae3c8",
+            "extract_dir": "node-v20.17.0-win-x64"
         },
-        "arm64": {
-            "url": "https://nodejs.org/dist/v24.14.1/node-v24.14.1-win-arm64.7z",
-            "hash": "2aaeb742f6aa924da6fbee5c79d7c602b8bfcec45457eb6b738717c3052a14d6",
-            "extract_dir": "node-v24.14.1-win-arm64"
+        "32bit": {
+            "url": "https://nodejs.org/dist/v20.17.0/node-v20.17.0-win-x86.7z",
+            "hash": "c363fa469754fcf3f387e483df9292994a2335fb4abf2f933249c22b76037245",
+            "extract_dir": "node-v20.17.0-win-x86"
         }
     },
     "installer": {
@@ -31,8 +31,8 @@
     ],
     "checkver": {
         "url": "https://nodejs.org/dist/index.json",
-        "jsonpath": "$[?(@.lts != false)].version",
-        "regex": "v([\\d\\.]+)"
+        "jsonpath": "$..[?(@.lts != false)].version",
+        "regex": "v([\\d\\.]+).*"
     },
     "autoupdate": {
         "architecture": {
@@ -40,9 +40,9 @@
                 "url": "https://nodejs.org/dist/v$version/node-v$version-win-x64.7z",
                 "extract_dir": "node-v$version-win-x64"
             },
-            "arm64": {
-                "url": "https://nodejs.org/dist/v$version/node-v$version-win-arm64.7z",
-                "extract_dir": "node-v$version-win-arm64"
+            "32bit": {
+                "url": "https://nodejs.org/dist/v$version/node-v$version-win-x86.7z",
+                "extract_dir": "node-v$version-win-x86"
             }
         },
         "hash": {

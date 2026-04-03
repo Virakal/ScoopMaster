@@ -1,12 +1,11 @@
 {
-    "version": "9.50.1",
+    "version": "9.41.2",
     "description": "Assistant for people who want to work out a piece of music from a recording",
     "homepage": "https://www.seventhstring.com/xscribe/overview.html",
     "license": "Proprietary",
-    "url": "https://www.seventhstring.com/xscribe/downwo/xscsetup-9.50.1.exe",
-    "hash": "405b4cba0b9afee6d750688a6618825d74f0fcbb94e1c4b386446197b7daec4b",
+    "url": "https://www.seventhstring.com/xscribe/downwo/xscsetup-9.41.2.exe",
+    "hash": "bbd25978d92ddef89025decd02160c2658486d50ad7066b9d1c7b6751a9d7b83",
     "innosetup": true,
-    "depends": "versions/innounp-unicode",
     "shortcuts": [
         [
             "Transcribe.exe",

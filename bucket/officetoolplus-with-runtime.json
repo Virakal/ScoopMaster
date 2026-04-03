@@ -1,16 +1,20 @@
 {
     "homepage": "https://github.com/YerongAI/Office-Tool",
     "description": "Office Tool Plus is a tool for managing, downloading and installing Office.",
-    "version": "11.1.16.0",
+    "version": "10.14.28.0",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_x64.zip",
-            "hash": "a2e3d44d2f7efea8863dd1cdad358cfbae6915ce268a5e27858b3beddc1a0601"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_x64.zip",
+            "hash": "059d1ada9dff0a98b4fc268589c1864436ebc0c682356c1e67b9d7eec30ebe11"
+        },
+        "32bit": {
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_x86.zip",
+            "hash": "b9ff57c919434da4b307b7b1e5f5d4d008fee531fba5d31e1c5fbeb75afc4c67"
         },
         "arm64": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_arm64.zip",
-            "hash": "0d768fe7f73ab30385ef84c133df67c8dde50db3807e772e1a558fa285bb8118"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_arm64.zip",
+            "hash": "3280b9f54225e5c65afb715991af7b33040e3763cd61488c6b101cfbb8a21f15"
         }
     },
     "extract_dir": "Office Tool",
@@ -29,6 +33,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x86.zip"
             },
             "arm64": {
                 "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_arm64.zip"

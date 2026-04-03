@@ -16,7 +16,7 @@
         "Move-Item -Path \"$dir\\Gopherus-master\\*\" -Destination \"$dir\\\"",
         "Remove-Item \"$dir\\Gopherus-master\" -Force -Recurse"
     ],
-    "bin": "",
+    "bin": "gopherus.py",
     "persist": "",
     "checkver": "github",
     "autoupdate": {

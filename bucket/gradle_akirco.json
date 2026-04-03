@@ -1,5 +1,5 @@
 {
-    "version": "9.3.1",
+    "version": "8.10.1",
     "description": "An open-source build automation tool focused on flexibility and performance. (Source code and documentation boundled)",
     "homepage": "https://gradle.org",
     "license": "Apache-2.0",
@@ -9,9 +9,9 @@
             "java/openjdk"
         ]
     },
-    "url": "https://services.gradle.org/distributions/gradle-9.3.1-all.zip",
-    "hash": "17f277867f6914d61b1aa02efab1ba7bb439ad652ca485cd8ca6842fccec6e43",
-    "extract_dir": "gradle-9.3.1",
+    "url": "https://services.gradle.org/distributions/gradle-8.10.1-all.zip",
+    "hash": "fdfca5dbc2834f0ece5020465737538e5ba679deeff5ab6c09621d67f8bb1a15",
+    "extract_dir": "gradle-8.10.1",
     "bin": "bin\\gradle.bat",
     "checkver": {
         "url": "https://gradle.org/install/",

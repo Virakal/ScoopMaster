@@ -1,23 +1,28 @@
 {
-    "version": "3.16.56",
-    "description": "Jenkins X provides automated CI+CD for Kubernetes with Preview Environments on Pull Requests",
-    "homepage": "https://jenkins-x.io/",
+    "version": "3.10.154",
+    "description": "A command line tool for installing and using Jenkins X",
+    "homepage": "https://github.com/jenkins-x/jx",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jenkins-x/jx/releases/download/v3.16.56/jx-windows-amd64.zip",
-            "hash": "139139c4647b88f9c75b86b2937fcfb704a112c6771e0e82be215953d0b9266c"
+            "url": "https://github.com/jenkins-x/jx/releases/download/v3.10.154/jx-windows-amd64.zip",
+            "hash": "def9e834c57500ccaffc601fc7ce34072cb320572bdde1f3f0d09ccedcf25fe6"
+        },
+        "arm64": {
+            "url": "https://github.com/jenkins-x/jx/releases/download/v3.10.154/jx-windows-arm64.zip",
+            "hash": "fa108d4e7d5413092e9bf3c65a4197212c35066c0b8f96d77a890ff4766ecf57"
         }
     },
     "pre_install": "Stop-Process -Name 'jx' -ErrorAction 'Ignore' -Verbose",
     "bin": "jx.exe",
-    "checkver": {
-        "github": "https://github.com/jenkins-x/jx"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/jenkins-x/jx/releases/download/v$version/jx-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/jenkins-x/jx/releases/download/v$version/jx-windows-arm64.zip"
             }
         },
         "hash": {

@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'DaddyTimeMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/DaddyTimeMono.tar.xz",
-    "hash": "854c8cbf59e1fcc48f114408d93f63cad70c6ba8eefad5bf3071bd9dd8ef48f8",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/DaddyTimeMono.tar.xz",
+    "hash": "6e7dd3ebdb82ee4a5b358801c082553692431e246c996dcbb3a737a28c78e4db",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

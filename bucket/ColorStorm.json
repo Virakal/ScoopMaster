@@ -1,10 +1,10 @@
 {
-    "version": "20.27.0.0",
+    "version": "20.23.0.0",
     "descrition": "A high performance and powerful image viewing, processing and editing software, lite edition",
     "homepage": "http://colorstormgarden.com/en/products/",
     "license": "freeware",
     "url": "http://colorstormgarden.com/downloads/ColorStorm.zip",
-    "hash": "a0d0fa74b759093d30a0238473346de3d22fdf98989767bac4338e702c8be485",
+    "hash": "35d9becda6be3e1f093f6efe806cb9517b81c8ee6d4dc2e4ed9b138e07e5c41e",
     "extract_dir": "ColorStorm",
     "pre_install": [
         "$file = 'ColorStorm.xml'",
@@ -22,7 +22,7 @@
     ],
     "checkver": {
         "url": "http://colorstormgarden.com/en/downloads/",
-        "regex": "id=version>([\\d.]+)</div>"
+        "regex": "([\\d.]+)</div>&nbsp;(Lite Edition)"
     },
     "autoupdate": {
         "url": "http://colorstormgarden.com/downloads/ColorStorm.zip"

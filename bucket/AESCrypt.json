@@ -1,16 +1,35 @@
 {
     "homepage": "https://www.aescrypt.com/",
-    "version": "4.5.0",
+    "version": "3.10",
     "license": "unknown",
-    "url": "https://www.aescrypt.com/download/v4/windows/aescrypt_gui-4.5.0-Windows-x86_64.zip",
-    "hash": "305b3dfbd3ea4b5def2955f94a4fba9eda54f82b1837b75bfc79d4420239988f",
-    "pre_install": "Expand-MsiArchive \"$dir\\aescrypt.msi\" -DestinationPath $dir -Removal",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_x64.zip",
+            "hash": "9143dff250196b44df3c5439c2025373b337bace25c19c3ccb1fbb1b1ec008f6",
+            "extract_dir": "AESCrypt_v310_x64"
+        },
+        "32bit": {
+            "url": "https://www.aescrypt.com/download/v3/windows/AESCrypt_v310_win32.zip",
+            "hash": "e15ba9e9fb51830ce8a548088e7a8cc767971fa72b6445bef1b47e794f656d83",
+            "extract_dir": "AESCrypt_v310_x32"
+        }
+    },
     "bin": "aescrypt.exe",
     "checkver": {
         "url": "https://www.aescrypt.com/download/",
-        "regex": "<a href=\"/download/v\\d/windows/aescrypt_gui-([\\d.]+)-Windows-x86_64.zip\">AES Crypt - Desktop"
+        "regex": "<a href=\"/download/v\\d/windows/AESCrypt_v(\\d)(\\d+)_x64.zip\">AES Crypt - GUI \\(Windows",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
-        "url": "https://www.aescrypt.com/download/v$majorVersion/windows/aescrypt_gui-$version-Windows-x86_64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://www.aescrypt.com/download/v$majorVersion/windows/AESCrypt_v$cleanVersion_x64.zip",
+                "extract_dir": "AESCrypt_v$cleanVersion_x64"
+            },
+            "32bit": {
+                "url": "https://www.aescrypt.com/download/v$majorVersion/windows/AESCrypt_v$cleanVersion_win32.zip",
+                "extract_dir": "AESCrypt_v$cleanVersion_x32"
+            }
+        }
     }
 }

@@ -1,12 +1,12 @@
 {
-    "version": "6.7.1-alpha.1.d015.g90accc86d0",
+    "version": "5.6.3-alpha.1.d007.gae77c0731",
     "description": "A one-click tool for the daily tasks of Arknights, supporting all clients.",
     "homepage": "https://maa.plus/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v6.7.1-alpha.1.d015.g90accc86d0/MAA-v6.7.1-alpha.1.d015.g90accc86d0-win-x64.zip",
-            "hash": "4d82f65648fff36f3e80447c80e9c19cc13a0fd17cec47821932e03de66bb255"
+            "url": "https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v5.6.3-alpha.1.d007.gae77c0731/MAA-v5.6.3-alpha.1.d007.gae77c0731-win-x64.zip",
+            "hash": "9f64e1b3963d30b90682d80d2266a16efe58f6de0df5bc39a5098b67b5fdaddf"
         }
     },
     "shortcuts": [
@@ -18,12 +18,7 @@
     "suggest": {
         "adb": "adb"
     },
-    "persist": [
-        "cache",
-        "config",
-        "debug",
-        "data"
-    ],
+    "persist": "config",
     "checkver": {
         "url": "https://api.github.com/repos/MaaAssistantArknights/MaaRelease/releases",
         "regex": "/releases/tag/(?:v)?([\\d.]+(-((alpha|beta|rc)\\.\\d(.\\w+.\\w+)?)?)?)"

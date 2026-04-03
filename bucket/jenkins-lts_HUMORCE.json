@@ -1,27 +1,27 @@
 {
-  "version": "2.541.3",
-  "description": "(Long Term Support) An automation server which enables developers around the world to reliably build, test, and deploy their software",
-  "homepage": "https://www.jenkins.io/",
-  "license": "MIT",
-  "suggest": {
-    "JDK 11": [
-      "java/openjdk11",
-      "java/temurin11-jdk",
-      "java/zulu11-jdk"
-    ]
-  },
-  "url": "https://get.jenkins.io/war-stable/2.541.3/jenkins.war#/jenkins.jar",
-  "hash": "0000addfa8722963164137a4e0e60abc227d9d60710c4deb19481f9a751cf512",
-  "bin": "jenkins.jar",
-  "checkver": {
-    "url": "https://www.jenkins.io/changelog-stable/rss.xml",
-    "xpath": "/rss/channel/item/title",
-    "regex": "Jenkins ([\\d.]+)"
-  },
-  "autoupdate": {
-    "url": "https://get.jenkins.io/war-stable/$version/jenkins.war#/jenkins.jar",
-    "hash": {
-      "url": "$url.sha256"
+    "version": "2.462.2",
+    "description": "(Long Term Support) An automation server which enables developers around the world to reliably build, test, and deploy their software",
+    "homepage": "https://www.jenkins.io/",
+    "license": "MIT",
+    "suggest": {
+        "JDK 11": [
+            "java/openjdk11",
+            "java/temurin11-jdk",
+            "java/zulu11-jdk"
+        ]
+    },
+    "url": "https://get.jenkins.io/war-stable/2.462.2/jenkins.war#/jenkins.jar",
+    "hash": "0e4c94d3a4bd40576d6791c1264cda66e4468e37929e7c5cb3e56cfa50803474",
+    "bin": "jenkins.jar",
+    "checkver": {
+        "url": "https://www.jenkins.io/changelog-stable/rss.xml",
+        "xpath": "/rss/channel/item/title",
+        "regex": "Jenkins ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://get.jenkins.io/war-stable/$version/jenkins.war#/jenkins.jar",
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
-  }
 }

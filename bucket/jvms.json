@@ -1,20 +1,44 @@
 {
-    "version": "2.1.14",
+    "version": "2.1.6",
     "description": "JDK Version Manager (JVMS) for Windows",
     "homepage": "https://github.com/ystyle/jvms",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ystyle/jvms/releases/download/v2.1.14/jvms_v2.1.14_amd64.zip",
-            "hash": "b8a2ab9fcabb5517143d0493f4ad8bbe90838dc41e0ec1af1849c6fa41eb50e2"
+            "url": "https://github.com/ystyle/jvms/releases/download/v2.1.6/jvms_v2.1.6_amd64.zip",
+            "hash": "3821b09d8ba735d6266771db01256fe09a264506c4a42ad92f51e738c6cda13d"
         },
         "32bit": {
-            "url": "https://github.com/ystyle/jvms/releases/download/v2.1.14/jvms_v2.1.14_386.zip",
-            "hash": "9f6bc45e857b8461eff0e947a96baed582433267ba7093f9d901877197a43623"
+            "url": "https://github.com/ystyle/jvms/releases/download/v2.1.6/jvms_v2.1.6_386.zip",
+            "hash": "6807d8fc7eea53e1f0f12d41fd7f4372ccc074fc2d3a72132a3dfcf502393cb4"
         }
     },
     "bin": "jvms.exe",
-    "persist": "store",
+    "env_add_path": "store\\current\\bin",
+    "persist": [
+        "download",
+        "store"
+    ],
+    "post_install": [
+        "jvms init --java_home $dir\\store\\current",
+        "jvms proxy --set http://localhost:7890",
+        "function Create-Junction { param ([string]$runtimeCache, [string]$runtimeCachePersist)",
+        "  if (-not (Test-Path $runtimeCache)) { return }",
+        "  if (Test-Path $runtimeCachePersist) {",
+        "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+        "  } else {",
+        "    mkdir $runtimeCache -ErrorAction SilentlyContinue",
+        "    Move-Item $runtimeCache $runtimeCachePersist -Force",
+        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+        "  }",
+        "}",
+        "foreach ($folder in @('jvms')) {",
+        "  Create-Junction -runtimeCache \"$env:USERPROFILE\\$folder\" -runtimeCachePersist \"$persist_dir\\USERPROFILE\\$folder\"",
+        "  Create-Junction -runtimeCache \"$env:LOCALAPPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\LOCALAPPDATA\\$folder\"",
+        "  Create-Junction -runtimeCache \"$env:APPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\APPDATA\\$folder\"",
+        "}"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

@@ -1,18 +1,13 @@
 {
-    "##": "Not all releases include build artifacts, hence the checkver.jsonpath. See: https://github.com/textbrowser/biblioteq/issues/300.",
-    "version": "2025.12.25",
+    "version": "2024.06.30",
     "description": "Professional archiving, cataloging, and library management suite providing connectivity to PostgreSQL and SQLite.",
     "homepage": "https://textbrowser.github.io/biblioteq/",
     "license": "BSD-3-Clause",
     "suggest": {
         "vcredist": "extras/vcredist2022"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/textbrowser/biblioteq/releases/download/2025.12.25/BiblioteQ-2025.12.25.zip",
-            "hash": "29e415cf2d4632123c75c59a755f66f9f07bd15eb8d128713f170ecc8f39407f"
-        }
-    },
+    "url": "https://github.com/textbrowser/biblioteq/releases/download/2024.06.30/BiblioteQ-2024.06.30.zip",
+    "hash": "f2e3745e6db8d14a851511d92a8d601c66d7313ad1021cd03edf9278af6d113e",
     "extract_dir": "BiblioteQ",
     "pre_install": "Remove-Item \"$dir\\vc_red*\"",
     "shortcuts": [
@@ -23,14 +18,9 @@
     ],
     "persist": ".biblioteq",
     "checkver": {
-        "url": "https://api.github.com/repos/textbrowser/biblioteq/releases",
-        "jsonpath": "$[?(@.assets[0].url)].tag_name"
+        "github": "https://github.com/textbrowser/biblioteq"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/textbrowser/biblioteq/releases/download/$version/BiblioteQ-$version.zip"
-            }
-        }
+        "url": "https://github.com/textbrowser/biblioteq/releases/download/$version/BiblioteQ-$version.zip"
     }
 }

@@ -1,43 +1,37 @@
 {
-    "version": "0.230.1",
-    "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.",
-    "homepage": "https://zed.dev/",
-    "license": "AGPL-3.0, Apache-2.0, GPL-3.0",
-    "notes": "Please manually disable Zed's auto-update feature in the settings to prevent the updater from installing the program in unintended locations.",
+    "version": "0.154.0+7d97855ed7-1.2.1",
+    "description": "A high-performance, multiplayer code editor. (Non-official build by shenjackyuanjie)",
+    "homepage": "https://github.com/zed-industries/zed",
+    "license": {
+        "identifier": "Unknown",
+        "url": "https://github.com/zed-industries/zed/tree/main#licensing"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zed-industries/zed/releases/download/v0.230.1/Zed-x86_64.exe",
-            "hash": "d3f1be1123b66ada29124f755e8320b522f302281402384b1cbf2832d1627a3c"
-        },
-        "arm64": {
-            "url": "https://github.com/zed-industries/zed/releases/download/v0.230.1/Zed-aarch64.exe",
-            "hash": "3a77d199a10a792a1d359568e5f6c1846bd370e6b568469fc2d9b833dddc87c4"
+            "url": "https://github.com/shenjackyuanjie/zed-win-build/releases/download/0.154.0+7d97855ed7-1.2.1/zed-0.154.0-7d97855ed7.zip",
+            "hash": "9cc961b8b7d65996b0c90d6b596203a5c24c9f58683e1f5c68500f3e2188130d"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{app}'",
-            "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{code_GetInstallDir}' -Removal"
-        ]
-    },
-    "bin": "bin\\zed.exe",
-    "shortcuts": [
-        [
-            "zed.exe",
-            "Zed"
-        ]
-    ],
     "checkver": {
-        "github": "https://github.com/zed-industries/zed"
+        "script": [
+            "$rel_info = Invoke-RestMethod -Uri 'https://api.github.com/repos/shenjackyuanjie/zed-win-build/releases'",
+            "$latest = $rel_info | Sort-Object {$_.published_at} | Select-Object -last 1",
+            "Write-Output $latest.tag_name"
+        ],
+        "regex": "(?<version>(?<zedver>[\\d\\.]+)\\+(?<commit>[\\w\\d]+)-[\\d\\.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zed-industries/zed/releases/download/v$version/Zed-x86_64.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/zed-industries/zed/releases/download/v$version/Zed-aarch64.exe"
+                "url": "https://github.com/shenjackyuanjie/zed-win-build/releases/download/$version/zed-$matchZedver-$matchCommit.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "Zed.exe",
+            "Zed"
+        ]
+    ],
+    "bin": "Zed.exe"
 }

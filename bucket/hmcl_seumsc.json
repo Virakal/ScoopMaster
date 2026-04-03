@@ -1,13 +1,16 @@
 {
-    "version": "3.12.2",
+    "version": "3.5.9",
     "description": "A multi-functional, cross-platform Minecraft Launcher.",
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
     "suggest": {
-        "JRE with JFX": "java/zulufx21-jre"
+        "JRE with JFX": [
+            "java/zulufx8-jre",
+            "java/zulufx17-jre"
+        ]
     },
-    "url": "https://github.com/HMCL-dev/HMCL/releases/download/v3.12.2/HMCL-3.12.2.exe#/HMCL.exe",
-    "hash": "47683b5e6de567e990c37b27f874a4211a88cfb2cbd70b73afeb5b45f3c2fe03",
+    "url": "https://maven.aliyun.com/repository/central/org/glavo/hmcl/hmcl-stable/3.5.9/hmcl-stable-3.5.9.exe#/HMCL.exe",
+    "hash": "sha1:1b6f7838e00c35958d657c3570534229871480ff",
     "pre_install": [
         "function ensureFile([String] $name) {",
         "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
@@ -28,9 +31,14 @@
         ".minecraft"
     ],
     "checkver": {
-        "github": "https://github.com/HMCL-dev/HMCL"
+        "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://github.com/HMCL-dev/HMCL/releases/download/v$version/HMCL-$version.exe#/HMCL.exe"
+        "url": "https://maven.aliyun.com/repository/central/org/glavo/hmcl/hmcl-stable/$version/hmcl-stable-$version.exe#/HMCL.exe",
+        "hash": {
+            "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
+            "jsonpath": "$.exesha1"
+        }
     }
 }

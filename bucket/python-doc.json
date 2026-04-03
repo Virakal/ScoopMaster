@@ -1,9 +1,9 @@
 {
-    "version": "3.14.3",
+    "version": "3.12.6",
     "homepage": "https://docs.python.org/",
-    "url": "https://docs.python.org/3/archives/python-3.14-docs-html.zip",
-    "hash": "c90b434cfb98e55889120ef71f49b12d119e710d874fb7afeef91e38be22b8a4",
-    "extract_dir": "python-3.14-docs-html",
+    "url": "https://docs.python.org/3/archives/python-3.12.6-docs-html.zip",
+    "hash": "251d9fa2022b81d415ab5ac76522a61597378885e94131947243a8e0eb5ff55d",
+    "extract_dir": "python-3.12.6-docs-html",
     "shortcuts": [
         [
             "index.html",
@@ -12,10 +12,10 @@
     ],
     "checkver": {
         "url": "https://docs.python.org/3/download.html",
-        "regex": ">([\\d.]+) Documentation<"
+        "regex": "python-([\\d.]+)-docs-html\\.zip"
     },
     "autoupdate": {
-        "url": "https://docs.python.org/3/archives/python-$majorVersion.$minorVersion-docs-html.zip",
-        "extract_dir": "python-$majorVersion.$minorVersion-docs-html"
+        "url": "https://docs.python.org/3/archives/python-$version-docs-html.zip",
+        "extract_dir": "python-$version-docs-html"
     }
 }

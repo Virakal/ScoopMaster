@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'AurulentSansMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/AurulentSansMono.tar.xz",
-    "hash": "a0d642ace8f9d616a9c9cbbe46e188c60ddf7486b0cf2685a3558e06aba2c284",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/AurulentSansMono.tar.xz",
+    "hash": "d71be5a39c772a58d2592e490784298753573ee47836633ade381f1eeee39c72",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

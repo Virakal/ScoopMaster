@@ -1,20 +1,20 @@
 {
-    "version": "148.0.3949.0",
+    "version": "130.0.2836.0",
     "description": "The chromium based Microsoft Edge browser (Canary Channel)",
     "homepage": "https://www.microsoft.com/en-us/edge",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=148.0.3949.0&dl#/MicrosoftEdge-148.0.3949.0-x64.7z",
-            "hash": "53177c2bf824ab0d49acc361d067926d86383ae549cc95cceebddead3c93d3fb"
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=130.0.2836.0&dl#/MicrosoftEdge-130.0.2836.0-x64.7z",
+            "hash": "fe4dca4c9d7edfeaf0c617099f4b55db05fd5ee8c7a6bc580a0044338124b2f7"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=148.0.3949.0&dl#/MicrosoftEdge-148.0.3949.0-x86.7z",
-            "hash": "e19dcbc6e8538d3ab9823e41f10446aceb2676bac684dbe67210d1fd9f706ffb"
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=130.0.2836.0&dl#/MicrosoftEdge-130.0.2836.0-x86.7z",
+            "hash": "276054c5a5af7c513da5915b43d58dbd4732d389fe4d57f594e008019ed0eba7"
         },
         "arm64": {
-            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=canary&version=148.0.3949.0&dl#/MicrosoftEdge-148.0.3949.0-arm64.7z",
-            "hash": "21087a12209325bf49d348f81f15006d7d27a1814361306d6fd11f976a0f7620"
+            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=canary&version=130.0.2836.0&dl#/MicrosoftEdge-130.0.2836.0-arm64.7z",
+            "hash": "99d6946198f3537d3197992fea754af8cc7646a0aa6329c0fcef2a1627383ad5"
         }
     },
     "installer": {
@@ -46,8 +46,8 @@
     ],
     "persist": "User Data",
     "checkver": {
-        "url": "https://edgeupdates.microsoft.com/api/products",
-        "jsonpath": "$[?(@.Product == 'Canary')].Releases[?(@.Platform == 'Windows' && @.Architecture == 'x64')].ProductVersion"
+        "script": "Write-Output $([System.Text.Encoding]::Unicode.GetString((Invoke-WebRequest -URI https://msedgedriver.azureedge.net/LATEST_CANARY).Content))",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

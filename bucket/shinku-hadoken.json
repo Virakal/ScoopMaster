@@ -1,9 +1,9 @@
 {
-    "version": "260101",
+    "version": "240310",
     "description": "CODEC checker.",
     "homepage": "https://kurohane.net/seisanbutu.html",
-    "url": "https://kurohane.net/archive/sinkulite_260101.zip",
-    "hash": "52e942b4c4af72743b2846feb3d4a92c9fc926f2d7403605bdeace6283ceab60",
+    "url": "https://kurohane.net/archive/sinkulite_240310.zip",
+    "hash": "sha512:a98bfff58b7725fda17a04b71ca6e942636151d64c25358bdc41acbd81effdf736a8e498c4de22c382cb06f34271b332e5c161fb77e69518e06bb1002daee9d9",
     "shortcuts": [
         [
             "SinkuLite.exe",
@@ -13,8 +13,5 @@
     "checkver": {
         "url": "https://kurohane.net/seisanbutu.html",
         "regex": "<TH WIDTH=\"58%\" ALIGN=\"left\">真空波動研Lite ([\\d]+)</TH>"
-    },
-    "autoupdate": {
-        "url": "https://kurohane.net/archive/sinkulite_$version.zip"
     }
 }

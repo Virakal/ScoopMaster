@@ -1,10 +1,10 @@
 {
-    "version": "2.0.7",
+    "version": "1.0.2",
     "description": "A comprehensive benchmarking software that supports 64-bit (x64/ARM64), many-core, and multilingual (48+ languages).",
     "homepage": "https://crystalmark.info/en/software/crystalmarkretro/",
     "license": "MIT",
-    "url": "https://zenlayer.dl.sourceforge.net/project/crystalmarkretro/2.0.7/CrystalMarkRetro2_0_7Aoi.zip",
-    "hash": "sha1:6f27772b4864e61f995586f4d88c3f00510a7dbd",
+    "url": "https://zenlayer.dl.sourceforge.net/project/crystalmarkretro/1.0.2/CrystalMarkRetro1_0_2Aoi.zip",
+    "hash": "sha1:3e75bbfaa3af34c7c406e2dff18e9e5bef2a4ce2",
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -31,18 +31,30 @@
             ]
         }
     },
-    "pre_install": [
-        "'CrystalMarkRetro32A.ini', 'CrystalMarkRetro64A.ini', 'CrystalMarkRetroA64A.ini' | ForEach-Object {",
-        "    if (-not (Test-Path \"$persist_dir\\$_\")) {",
-        "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
-        "    }",
-        "}"
-    ],
-    "persist": [
-        "CrystalMarkRetro32A.ini",
-        "CrystalMarkRetro64A.ini",
-        "CrystalMarkRetroA64A.ini"
-    ],
+    "installer": {
+        "script": [
+            "$S4UtilsPath = Find-BucketDirectory -Root -Name $bucket | Join-Path -ChildPath \"scripts\\S4Utils.psm1\"",
+            "if (Test-Path $S4UtilsPath) {",
+            "    Unblock-File $S4UtilsPath",
+            "    Import-Module $S4UtilsPath",
+            "    Mount-ExternalRuntimeData -Source \"$persist_dir\\CrystalMarkRetro\" -AppData",
+            "    Remove-Module -Name S4Utils -ErrorAction SilentlyContinue",
+            "} else {",
+            "    Write-Host \"Missing files, please re-add Scoop4kariiin bucket and re-install this app.\" -ForegroundColor Red",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$S4UtilsPath = Find-BucketDirectory -Root -Name $install.bucket | Join-Path -ChildPath \"scripts\\S4Utils.psm1\"",
+            "if (Test-Path $S4UtilsPath) {",
+            "    Unblock-File $S4UtilsPath",
+            "    Import-Module $S4UtilsPath",
+            "    Dismount-ExternalRuntimeData -Target \"CrystalMarkRetro\" -AppData",
+            "    Remove-Module -Name S4Utils -ErrorAction SilentlyContinue",
+            "}"
+        ]
+    },
     "checkver": {
         "url": "https://crystalmark.info/en/download/",
         "regex": "CrystalMark Retro ([\\w\\.]+) &#8211;"

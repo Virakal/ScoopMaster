@@ -1,22 +1,20 @@
 {
-    "version": "1.31.0",
-    "description": "A POSIX-compliant AWK interpreter written in Go, with CSV support",
-    "homepage": "https://benhoyt.com/writings/goawk/",
+    "version": "1.29.0",
+    "description": "GoAWK: an AWK interpreter written in Go",
+    "homepage": "https://github.com/benhoyt/goawk",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_amd64.zip",
-            "hash": "8c59523cf56d47621a9b84124a9fc15f580048103195caacf4f8964dfe632e78"
+            "url": "https://github.com/benhoyt/goawk/releases/download/v1.29.0/goawk_v1.29.0_windows_amd64.zip",
+            "hash": "c6c06b3a118d6345595327775015fec006bdd3bbf659438e71e50b8b0ca768c8"
         },
         "32bit": {
-            "url": "https://github.com/benhoyt/goawk/releases/download/v1.31.0/goawk_v1.31.0_windows_386.zip",
-            "hash": "83bc8581afb5b829d076a49c5ad14ecaac113ea674f2ffdaffda1bf06b789703"
+            "url": "https://github.com/benhoyt/goawk/releases/download/v1.29.0/goawk_v1.29.0_windows_386.zip",
+            "hash": "0f2ddef18dcd1abc830d1f72cf0d47258038062228103af2b647de762a046592"
         }
     },
     "bin": "goawk.exe",
-    "checkver": {
-        "github": "https://github.com/benhoyt/goawk"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {

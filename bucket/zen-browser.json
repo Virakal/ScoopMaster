@@ -1,52 +1,22 @@
 {
-    "version": "1.19.6b",
-    "description": "A open-source browser based on the Firefox engine. Experience tranquility while browsing the internet with Zen! Our mission is to give you a perfect balance for speed, privacy and productivity",
+    "version": "1.0.1-a",
+    "description": "A open-source browser based on the Firefox engine",
     "homepage": "https://www.zen-browser.app/",
     "license": "MPL-2.0",
-    "url": "https://github.com/zen-browser/desktop/releases/download/1.19.6b/zen.installer.exe#/dl.7z",
-    "hash": "84606292167b4f111c0b291aedba30de71d818230b48bfc7fb781fd92b44b5fc",
-    "bin": [
-        [
-            "zen.exe",
-            "zen"
-        ]
-    ],
+    "url": "https://github.com/zen-browser/desktop/releases/download/1.0.1-a/zen.win-specific.zip",
+    "hash": "57a8ea8e85f9c9199d8996d7e69e4e8eafa4f213ee969121a1ee2682a82c7840",
+    "extract_dir": "zen.win-specific\\zen",
     "shortcuts": [
         [
             "zen.exe",
             "Zen Browser"
         ]
     ],
-    "pre_install": [
-        "$extractDir = \"$dir\"",
-        "if (Test-Path \"$extractDir\\core\") {",
-        "    # 将 core 文件夹中的所有文件移动到解压目录",
-        "    Move-Item -Path \"$extractDir\\core\\*\" -Destination \"$extractDir\" -Force",
-        "    # 删除 core 文件夹",
-        "    Remove-Item -Path \"$extractDir\\core\" -Recurse -Force",
-        "}",
-        "$bucket=(scoop bucket list | where-Object { $_.Source -match 'Scoop-Store'})[0].Name",
-        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
-        "RedirectDirectory \"$env:APPDATA\\zen\" \"$persist_dir\\Roaming\\zen\"",
-        "RedirectDirectory \"$env:LOCALAPPDATA\\zen\" \"$persist_dir\\Local\\zen\"",
-        "Remove-Module -Name AirUtils"
-    ],
-    "uninstaller": {
-        "script": [
-            "if ($cmd -eq 'uninstall') {",
-            "    $bucket=(scoop bucket list | where-Object { $_.Source -match 'Scoop-Store'})[0].Name",
-            "    Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/AirUtils.psm1)",
-            "    RemoveJunction \"$env:APPDATA\\zen\"",
-            "    RemoveJunction \"$env:LOCALAPPDATA\\zen\"",
-            "    Remove-Module -Name AirUtils",
-            "}"
-        ]
-    },
     "checkver": {
-        "url": "https://github.com/zen-browser/desktop/tags",
-        "regex": "releases/tag/([ab\\d.-]+)"
+        "url": "https://www.zen-browser.app/release-notes",
+        "regex": "/release-notes/([ab\\d.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/zen-browser/desktop/releases/download/$version/zen.installer.exe#/dl.7z"
+        "url": "https://github.com/zen-browser/desktop/releases/download/$version/zen.win-specific.zip"
     }
 }

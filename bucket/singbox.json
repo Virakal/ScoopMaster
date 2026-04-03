@@ -1,34 +1,20 @@
 {
-    "version": "1.13.5",
-    "description": "翻墙: Singbox",
+    "version": "1.9.5",
+    "description": "翻墙工具 Singbox",
     "homepage": "https://github.com/SagerNet/sing-box",
-    "license": "Unknown",
-    "url": "https://github.com/SagerNet/sing-box/releases/download/v1.13.5/sing-box-1.13.5-windows-amd64.zip",
-    "hash": "841a46ab1fef823fefd4248229db5220f09535c883b4cfc6d4fbe5903bc3f1d1",
-    "extract_dir": "sing-box-1.13.5-windows-amd64",
-    "pre_install": [
-        "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\run.ps1\" -Destination \"$dir\\run.ps1\"",
-        "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\default.json\" -Destination \"$dir\\default.json\""
-    ],
+    "url": "https://github.com/SagerNet/sing-box/releases/download/v1.9.5/sing-box-1.9.5-windows-386.zip",
+    "hash": "3e3d7e317044c6b3f66b89c1b095cacc63ca004bd6e41916ad1a38b71894e2a4",
+    "extract_dir": "sing-box-1.9.5-windows-386",
+    "pre_install": "Copy-Item -Path \"$bucketsdir\\rainte\\scripts\\singbox\\run.ps1\" -Destination \"$dir\\run.ps1\"",
     "shortcuts": [
         [
             "run.ps1",
             "Singbox"
         ]
     ],
-    "post_install": [
-        "$Action = New-ScheduledTaskAction -Execute \"$dir\\sing-box.exe\" -Argument \"run -c config.json\" -WorkingDirectory $dir",
-        "$Trigger = New-ScheduledTaskTrigger -AtStartup",
-        "$Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable",
-        "$Principal = New-ScheduledTaskPrincipal -UserId \"SYSTEM\" -LogonType ServiceAccount -RunLevel Highest",
-        "Register-ScheduledTask -TaskName \"SingBoxStartup\" -Action $Action -Trigger $Trigger -Settings $Settings -Principal $Principal -Description \"Start sing-box service at startup\""
-    ],
-    "uninstaller": {
-        "script": "Unregister-ScheduledTask -TaskName \"SingBoxStartup\" -Confirm:$false"
-    },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-amd64.zip",
-        "extract_dir": "sing-box-$version-windows-amd64"
+        "url": "https://github.com/SagerNet/sing-box/releases/download/v$version/sing-box-$version-windows-386.zip",
+        "extract_dir": "sing-box-$version-windows-386"
     }
 }

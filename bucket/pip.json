@@ -2,20 +2,28 @@
     "homepage": "https://github.com/pypa/pip",
     "description": "The PyPA recommended tool for installing Python packages",
     "license": "MIT",
-    "version": "26.0.1",
-    "url": "https://bootstrap.pypa.io/pip/zipapp/pip-26.0.1.pyz",
-    "hash": "0b82eb2cd75d2b56878d85471f9e6103d50fcaabdf637460e7addadeaf71e0b5",
-    "installer": {
-        "script": "New-Item -Type SymbolicLink -Path $scoopdir\\shims\\pip.pyz -Target $dir\\pip-$version.pyz"
-    },
-    "uninstaller": {
-        "script": "Remove-Item -ErrorAction 0 -Path $scoopdir\\shims\\pip.pyz"
-    },
+    "version": "24.2",
+    "url": "https://bootstrap.pypa.io/pip/pip.pyz#/pip-24.2.pyz",
+    "hash": "b376f160ac1cf3ffe3434e9b770dd1c9fb019edf028ba7ba3f675a159f30d06c",
+    "bin": [
+        [
+            "py.exe",
+            "pip",
+            "$dir\\pip-24.2.pyz"
+        ]
+    ],
     "checkver": {
         "url": "https://pypi.org/pypi/pip/json",
         "jsonpath": "$.info.version"
     },
     "autoupdate": {
-        "url": "https://bootstrap.pypa.io/pip/zipapp/pip-$version.pyz"
+        "url": "https://bootstrap.pypa.io/pip/pip.pyz#/pip-$version.pyz",
+        "bin": [
+            [
+                "py.exe",
+                "pip",
+                "$dir\\pip-$version.pyz"
+            ]
+        ]
     }
 }

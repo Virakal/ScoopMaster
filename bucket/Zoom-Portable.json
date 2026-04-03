@@ -1,5 +1,5 @@
 {
-    "version": "6.6.11.23272",
+    "version": "6.2.0.46690",
     "description": "Zoom. Video and audio conferencing, chat, and webinars",
     "homepage": "https://zoom.us",
     "license": {
@@ -8,13 +8,13 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.zoom.us/client/6.6.11.23272/ZoomInstallerFull.msi?archType=x64",
-            "hash": "5822dd53a5aea36e9b994ded5385bb9e2d9d40bf162d657ce7103cc1f7db957d",
+            "url": "https://www.zoom.us/client/6.2.0.46690/ZoomInstallerFull.msi?archType=x64",
+            "hash": "69f8bdaedc342f653e36e1fed3d6be966b70a84e2aef043b5777f14b80a28e41",
             "extract_dir": "Program Files (64-bit) Folder\\Zoom\\bin"
         },
         "32bit": {
-            "url": "https://www.zoom.us/client/6.6.11.23272/ZoomInstallerFull.msi",
-            "hash": "95479d9358760ea88fa347a65d635760a67f0ebc2625750bc9eed35a8c229b48",
+            "url": "https://www.zoom.us/client/6.2.0.46690/ZoomInstallerFull.msi",
+            "hash": "dd068642b85b4305c4866959f3ac2a05012ddf3ed51d62c90c7a44baa017b467",
             "extract_dir": "Program Files (32-bit) Folder\\Zoom\\bin"
         }
     },

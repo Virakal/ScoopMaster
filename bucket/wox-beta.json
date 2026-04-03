@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0-beta.8",
+    "version": "1.4.1196",
     "description": "A full-featured launcher, access programs and web contents as you type.",
     "homepage": "http://www.wox.one",
     "license": "MIT",
@@ -7,15 +7,10 @@
         "Python3": "python",
         "Everything": "extras/everything"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Wox-launcher/Wox/releases/download/v2.0.0-beta.8/wox-windows-amd64.exe",
-            "hash": "09fdb95b6ae020af1a13f3ffa8826b970fe7854a55936de768b76112b96c58af"
-        }
-    },
-    "installer": {
-        "script": "Rename-Item \"$dir\\wox-windows-amd64.exe\" 'Wox.exe'"
-    },
+    "url": "https://github.com/Wox-launcher/Wox/releases/download/v1.4.1196/Wox-1.4.1196-full.nupkg",
+    "hash": "sha1:69fcc97e4b7b2702885463793ad617ed2d0c94b6",
+    "extract_dir": "lib\\net462",
+    "bin": "Wox.exe",
     "shortcuts": [
         [
             "Wox.exe",
@@ -24,13 +19,12 @@
     ],
     "checkver": {
         "url": "https://github.com/Wox-launcher/Wox/releases",
-        "regex": "tree/v([\\d.]+-beta\\.\\d+)"
+        "regex": "tree/v([\\d.]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Wox-launcher/Wox/releases/download/v$version/wox-windows-amd64.exe"
-            }
+        "url": "https://github.com/Wox-launcher/Wox/releases/download/v$version/Wox-$version-full.nupkg",
+        "hash": {
+            "url": "$baseurl/RELEASES"
         }
     }
 }

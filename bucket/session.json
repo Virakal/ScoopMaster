@@ -1,12 +1,12 @@
 {
-    "version": "1.17.17",
+    "version": "1.13.2",
     "description": "End-to-end encrypted messenger",
     "homepage": "https://getsession.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/session-foundation/session-desktop/releases/download/v1.17.17/session-desktop-win-x64-1.17.17.exe#/dl.7z",
-            "hash": "sha512:4616bc5bebfb7c3d2fbd92ad45033808b2c0cd8c9a6e23de58acbe4d55c62e8f309b76a24ba5be63f7a0e41f77274923e2a96c24dc62305f0c01a746facb583a",
+            "url": "https://github.com/oxen-io/session-desktop/releases/download/v1.13.2/session-desktop-win-x64-1.13.2.exe#/dl.7z",
+            "hash": "sha512:93f8a0e973f2545a743558ee9ecc3bdfac2031ea52f18aecd05905efb14047d905caa9c0f96f7dfd5c288a35396d993ae03c90488bca703c47c43832eeace509",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -23,12 +23,12 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/session-foundation/session-desktop"
+        "github": "https://github.com/oxen-io/session-desktop"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/session-foundation/session-desktop/releases/download/v$version/session-desktop-win-x64-$version.exe#/dl.7z"
+                "url": "https://github.com/oxen-io/session-desktop/releases/download/v$version/session-desktop-win-x64-$version.exe#/dl.7z"
             }
         },
         "hash": {

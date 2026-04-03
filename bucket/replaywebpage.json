@@ -1,38 +1,41 @@
 {
-    "version": "2.4.4",
-    "description": "The standalone desktop application for ReplayWeb.page, a viewer for web archives.",
+    "version": "2.1.5",
+    "description": "ReplayWeb.page provides a full web archive replay system running directly in the browser.",
     "homepage": "https://github.com/webrecorder/replayweb.page",
     "license": "AGPL-3.0",
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.4.4/ReplayWeb.page-2.4.4.exe#/dl.7z",
-            "hash": "f98f28de853b368b550b48ae491d43c9334e344224993137194feeb41314dec4",
-            "extract_dir": "$PLUGINSDIR",
+        "32bit": {
+            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.1.5/ReplayWeb.page-2.1.5.exe#/dl.7z",
+            "hash": "c3ef3be36bce735ffe62d4a13d206796f51042ccb487f10a1fd961ff046e5874",
             "pre_install": [
-                "Get-ChildItem -Path \"$dir\\*\" -Exclude 'app-64.7z' | Remove-Item -Recurse",
-                "$apparchive = Get-ChildItem -Path $dir -Filter 'app*.7z' -File",
-                "Expand-7zipArchive $apparchive \"$dir\\app\" -Removal | Out-Null"
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$R0\", \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
             ]
         },
-        "32bit": {
-            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.4.4/ReplayWeb.page-2.4.4.exe#/dl.7z",
-            "hash": "f98f28de853b368b550b48ae491d43c9334e344224993137194feeb41314dec4",
-            "extract_dir": "$PLUGINSDIR",
+        "64bit": {
+            "url": "https://github.com/webrecorder/replayweb.page/releases/download/v2.1.5/ReplayWeb.page-2.1.5.exe#/dl.7z",
+            "hash": "c3ef3be36bce735ffe62d4a13d206796f51042ccb487f10a1fd961ff046e5874",
             "pre_install": [
-                "Get-ChildItem -Path \"$dir\\*\" -Exclude 'app-32.7z' | Remove-Item -Recurse",
-                "$apparchive = Get-ChildItem -Path $dir -Filter 'app*.7z' -File",
-                "Expand-7zipArchive $apparchive \"$dir\\app\" -Removal | Out-Null"
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$R0\", \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
             ]
         }
     },
     "shortcuts": [
         [
-            "app\\ReplayWeb.page.exe",
+            "ReplayWeb.page.exe",
             "ReplayWeb.page"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/webrecorder/replayweb.page/releases/download/v$version/ReplayWeb.page-$version.exe#/dl.7z"
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/webrecorder/replayweb.page/releases/download/v$version/ReplayWeb.page-$version.exe#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://github.com/webrecorder/replayweb.page/releases/download/v$version/ReplayWeb.page-$version.exe#/dl.7z"
+            }
+        }
     }
 }

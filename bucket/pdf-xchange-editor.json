@@ -1,5 +1,5 @@
 {
-    "version": "10.8.4.409",
+    "version": "10.4.0.388",
     "description": "A small, fast, and feature-rich PDF viewer/editor.",
     "homepage": "https://www.pdf-xchange.com/product/pdf-xchange-editor",
     "license": {
@@ -8,24 +8,17 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.pdf-xchange.com/10.8.4.409/PDFXEdit10_Portable_x64.zip",
-            "hash": "681cf23b96825e63169f54f024e69ae15b15d9499ab2162e034abcf58b6f0f5d"
+            "url": "https://www.pdf-xchange.com/downloads/PDFXEdit10_Portable_x64.zip",
+            "hash": "bebc78c266059f6f2fb17876ca1cce89a58c27a66473c376f9b4b1d4c1d494a9"
         },
         "32bit": {
-            "url": "https://downloads.pdf-xchange.com/10.8.4.409/PDFXEdit10_Portable_x86.zip",
-            "hash": "9e5bef2348a07fe277ee71a79be3772f63c137b5aeaad95f86987ac389b8d0f5"
+            "url": "https://www.pdf-xchange.com/downloads/PDFXEdit10_Portable_x86.zip",
+            "hash": "98a92461d96e830e1c699f9d06a0a5d85b91bb3b85e901c50572fc2fb678e3ac"
         }
     },
-    "pre_install": [
-        "# Hard links are not applicable here because the application creates a new file instead of modifying the existing one in place.",
-        "'History', 'Settings' | ForEach-Object {",
-        "    if (Test-Path -Path \"$persist_dir\\$_.dat\" -PathType Container) {",
-        "        Remove-Item -Path \"$persist_dir\\$_.dat\" -Recurse -Force -ErrorAction SilentlyContinue",
-        "    }",
-        "    if (Test-Path -Path \"$persist_dir\\$_.dat\" -PathType Leaf) {",
-        "        Copy-Item -Path \"$persist_dir\\$_.dat\" -Destination $dir -Force",
-        "    }",
-        "}"
+    "persist": [
+        "History.dat",
+        "Settings.dat"
     ],
     "bin": "PDFXEdit.exe",
     "shortcuts": [
@@ -34,14 +27,9 @@
             "PDF-XChange Editor"
         ]
     ],
-    "pre_uninstall": [
-        "# Hard links are not applicable here because the application creates a new file instead of modifying the existing one in place.",
-        "ensure $persist_dir | Out-Null",
-        "'History', 'Settings' | ForEach-Object {",
-        "    if (Test-Path -Path \"$dir\\$_.dat\" -PathType Leaf) {",
-        "        Copy-Item -Path \"$dir\\$_.dat\" -Destination $persist_dir -Force",
-        "    }",
-        "}"
+    "pre_install": [
+        "if(!(Test-Path \"$persist_dir\\History.dat\")) { New-Item \"$dir\\History.dat\" | Out-Null }",
+        "if(!(Test-Path \"$persist_dir\\Settings.dat\")) { New-Item \"$dir\\Settings.dat\" | Out-Null }"
     ],
     "checkver": {
         "url": "https://www.pdf-xchange.com/product/pdf-xchange-editor/history/download-text-file",
@@ -50,10 +38,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.pdf-xchange.com/$version/PDFXEdit10_Portable_x64.zip"
+                "url": "https://www.pdf-xchange.com/downloads/PDFXEdit10_Portable_x64.zip"
             },
             "32bit": {
-                "url": "https://downloads.pdf-xchange.com/$version/PDFXEdit10_Portable_x86.zip"
+                "url": "https://www.pdf-xchange.com/downloads/PDFXEdit10_Portable_x86.zip"
             }
         }
     }

@@ -1,23 +1,41 @@
 {
-    "homepage": "https://pixpin.cn/",
-    "license": "unknown",
-    "version": "3.0.8.0",
-    "url": "https://download.pixpin.cn/PixPin_1.9.5.0.zip",
-    "hash": "2743f5e32a9acfd8d5e3b7a5e10c725ea21268b6fbc5c1f1ca167c7618d14007",
-    "extract_dir": "PixPin",
-    "bin": "PixPin.exe",
+    "version": "1.8.27",
+    "description": "截图/贴图/长截图/文字识别/标注",
+    "homepage": "https://pixpinapp.com/",
+    "license": "Unlicense",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.pixpinapp.com/PixPin_1.8.27.0.zip",
+            "hash": "7f989319c561c338d7bcf0e0d3ab7bfc8e9f0140b238bc34670efc425c9d7ae7",
+            "extract_dir": "PixPin"
+        }
+    },
+    "bin": [
+        [
+            "PixPin.exe",
+            "PixPin"
+        ]
+    ],
     "shortcuts": [
         [
             "PixPin.exe",
             "PixPin"
         ]
     ],
-    "persist": "config",
+    "persist": "Config",
     "checkver": {
-        "url": "https://pixpin.cn/download/",
-        "regex": "PixPin_cn_zh-cn_([\\d.]+).zip"
+        "url": "https://pixpinapp.com/change-log/instructions",
+        "regex": "/change-log/([\\d.]+).html"
     },
     "autoupdate": {
-        "url": "https://download.pixpinapp.cn/PixPin_$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.pixpinapp.com/PixPin_$version.0.zip",
+                "hash": {
+                    "url": "https://pixpinapp.com/change-log/$version.html",
+                    "regex": "Windows便携版: $sha1"
+                }
+            }
+        }
     }
 }

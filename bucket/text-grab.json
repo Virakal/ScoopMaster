@@ -1,19 +1,15 @@
 {
-    "version": "4.12.1",
+    "version": "4.5.1",
     "description": "Minimal Windows utility for copying and pasting any visible text, without internet access.",
     "homepage": "https://github.com/TheJoeFin/Text-Grab",
     "license": "MIT",
     "suggest": {
-        ".NET Desktop Runtime 10.0": "versions/windowsdesktop-runtime-10.0"
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.12.1/Text-Grab.exe",
-            "hash": "eabc09f43683123e6b6bd2274d0ca2375c6429df0eb30f07412444b099b9c7f9"
-        },
-        "arm64": {
-            "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.12.1/Text-Grab-arm64.exe#/Text-Grab.exe",
-            "hash": "56bdbc6113975132069c296e13e4efa4051bf02abd0b8ce6dbc4fa77560508de"
+            "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v4.5.1/Text-Grab.exe",
+            "hash": "267d727ac9f024719f55b4b921eea06490ffe192441887557965f3c9f5d101fd"
         }
     },
     "bin": "Text-Grab.exe",
@@ -28,9 +24,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v$version/Text-Grab-arm64.exe#/Text-Grab.exe"
             }
         }
     }

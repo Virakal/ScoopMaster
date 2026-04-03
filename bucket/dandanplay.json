@@ -1,18 +1,10 @@
 {
-    "version": "17.2.0.0",
-    "description": "弹弹play播放器：全功能本地视频+弹幕播放器",
     "homepage": "https://www.dandanplay.com/",
-    "license": {
-        "identifier": "Apache-2.0 license",
-        "url": "https://github.com/kaedei/dandanplay#Apache-2.0-1-ov-file"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/kaedei/dandanplay/releases/download/windows-17.2.0.0/dandanplay-x64_17.2.0.zip",
-            "hash": "ee7bca19347b8f85cfcadaded0f91201bf645b0df908ed939d96824613547501"
-        }
-    },
-    "extract_dir": "dandanplay-x64",
+    "description": "Full-featured \"local video + danmaku\" player",
+    "version": "15.9.2",
+    "license": "Unknown",
+    "url": "https://dandan.sakurateam.top/dandanplay-x64_15.9.2.exe",
+    "hash": "25a3172239d5fa2bc9c7a5419f29a52e1d46565045d10294ad634340c87d7b9a",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\Config\")) {",
         "    New-Item -Path \"$persist_dir\\Config\" -ItemType Directory | Out-Null",
@@ -26,6 +18,14 @@
         "    New-Item -Force -Path \"$persist_dir\\Config\\UserSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><UserSettings><EnableTelemetry>false</EnableTelemetry></UserSettings>' | Out-Null",
         "}"
     ],
+    "installer": {
+        "script": [
+            "Start-Process \"$dir\\$fname\" \"/extract $dir\" -PassThru -NoNewWindow | Wait-Process",
+            "$subdir = (Get-ChildItem -Path \"$dir\" -Exclude \"*NET*\",\"WebView2\" -Directory).Name",
+            "movedir \"$dir\\$subdir\" \"$dir\" | Out-Null",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\decoder.dll\",\"$dir\\$subdir\" -Force -ErrorAction SilentlyContinue"
+        ]
+    },
     "shortcuts": [
         [
             "dandanplay.exe",
@@ -38,10 +38,9 @@
         "Cache"
     ],
     "checkver": {
-        "url": "https://github.com/kaedei/dandanplay/tags",
-        "regex": ">windows-([\\d.]+)"
+        "regex": "dandanplay-x64_([\\d.]+).exe\""
     },
     "autoupdate": {
-        "url": "https://github.com/kaedei/dandanplay/releases/download/windows-$version/dandanplay-x64_$matchHead.zip"
+        "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.exe"
     }
 }

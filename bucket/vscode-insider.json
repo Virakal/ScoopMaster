@@ -1,34 +1,10 @@
 {
-    "version": "1774919420598",
+    "version": "1726463124825",
     "homepage": "https://code.visualstudio.com/",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Portable Edition).",
     "license": {
         "identifier": "Freeware",
         "url": "https://code.visualstudio.com/License/"
-    },
-    "architecture": {
-        "64bit": {
-            "url": [
-                "https://code.visualstudio.com/sha/download?build=insider&os=win32-x64-archive#/dl.7z",
-                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-install-context.reg",
-                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-uninstall-context.reg"
-            ],
-            "hash": [
-                "69c73953c3bf325378800a66e144657cd7b868f1c150925a0df12ca46ac64998",
-                "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
-            ]
-        },
-        "arm64": {
-            "url": [
-                "https://code.visualstudio.com/sha/download?build=insider&os=win32-arm64-archive#/dl.7z",
-                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-install-context.reg",
-                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-uninstall-context.reg"
-            ],
-            "hash": [
-                "63121440be32d2867b0230ceded1e972aa23c8ed551d975e28d88423118aa9e0",
-                "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
-            ]
-        }
     },
     "bin": [
         [
@@ -63,6 +39,32 @@
         "  $content | Set-Content -Path \"$dir\\vscode-uninstall-context.reg\"",
         "}"
     ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://code.visualstudio.com/sha/download?build=insider&os=win32-x64-archive#/dl.7z",
+                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-install-context.reg",
+                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-uninstall-context.reg"
+            ],
+            "hash": [
+                "cde960b278b26545fb11a43797a6b2ac4c618f0398b1e0af939198dfad25a700",
+                "b65d66860d9ccc18bfb05237b03e06db0d6c574be3d4b946c2a5e6865c08cb28",
+                "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
+            ]
+        },
+        "arm64": {
+            "url": [
+                "https://code.visualstudio.com/sha/download?build=insider&os=win32-arm64-archive#/dl.7z",
+                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-install-context.reg",
+                "https://raw.githubusercontent.com/naderi/scoop-bucket/master/scripts/visual-studio-code/vscode-uninstall-context.reg"
+            ],
+            "hash": [
+                "0000e2c3afaccd203e8784cb172a1c09499bd38228aae2aa9940cd523f93ade5",
+                "b65d66860d9ccc18bfb05237b03e06db0d6c574be3d4b946c2a5e6865c08cb28",
+                "df2a5162e72e2518e2b75b4337c8e7b46c136554872af90fa0de1cf6ebef376f"
+            ]
+        }
+    },
     "checkver": {
         "url": "https://code.visualstudio.com/sha?build=insider",
         "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].timestamp"

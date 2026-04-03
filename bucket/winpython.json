@@ -1,14 +1,14 @@
 {
-    "version": "3.13.12.0",
+    "version": "3.12.4.1",
     "description": "Free, open-source and portable Python distribution for Windows",
     "homepage": "https://winpython.github.io",
     "license": "MIT",
     "notes": "For 32bit, please install 'versions/winpython3741'",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/winpython/WinPython_3.13/3.13.12.0/WinPython64-3.13.12.0slim.7z",
-            "hash": "00c5f73ec434bbc7c3450fc18cfd55fba050407153ee43637ac7a00f253b99d2",
-            "extract_dir": "WPy64-313120"
+            "url": "https://downloads.sourceforge.net/project/winpython/WinPython_3.12/3.12.4.1/Winpython64-3.12.4.1.exe#/dl.7z",
+            "hash": "08903f02514f59c891e3d56d3ff0d092a7d8571daf66237a5a2c2698068981ec",
+            "extract_dir": "WPy64-31241"
         }
     },
     "bin": [
@@ -36,7 +36,11 @@
             "jupyter_lab"
         ],
         "scripts\\winpython.bat",
-        "scripts\\winspyder.bat",
+        "scripts\\winqtconsole.bat",
+        [
+            "scripts\\winqtconsole.bat",
+            "qtconsole"
+        ],
         "scripts\\winvscode.bat",
         [
             "scripts\\winvscode.bat",
@@ -82,19 +86,19 @@
             "WinPython\\WinPython Interpreter"
         ],
         [
-            "WinPython Powershell Prompt.exe",
-            "WinPython\\WinPython Powershell Prompt"
+            "WinPython Terminal.exe",
+            "WinPython\\WinPython Terminal"
         ]
     ],
     "persist": "settings",
     "checkver": {
         "url": "https://winpython.github.io/md5_sha1.txt",
-        "regex": "WinPython64-([\\d.]+)slim\\.exe"
+        "regex": "Winpython64-([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://sourceforge.net/projects/winpython/WinPython_$majorVersion.$minorVersion/$version/WinPython64-$versionslim.7z",
+                "url": "https://downloads.sourceforge.net/project/winpython/WinPython_$majorVersion.$minorVersion/$version/Winpython64-$version.exe#/dl.7z",
                 "extract_dir": "WPy64-$cleanVersion"
             }
         },

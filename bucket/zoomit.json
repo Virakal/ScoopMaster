@@ -1,5 +1,5 @@
 {
-    "version": "11.0",
+    "version": "8.01",
     "description": "Presentation utility for zooming and drawing on the screen.",
     "homepage": "https://learn.microsoft.com/sysinternals/downloads/ZoomIt",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://learn.microsoft.com/sysinternals/license-terms"
     },
     "url": "https://download.sysinternals.com/files/ZoomIt.zip",
-    "hash": "65c17859d5b0e540db45ac1d3ae619205ad897bcaae8213834213318ef07aec2",
+    "hash": "145ee57762be20c125ea7fc38d24f1a4511e9151f50fce41708f98693337b8e7",
     "architecture": {
         "64bit": {
             "bin": [
@@ -51,7 +51,7 @@
         }
     },
     "checkver": {
-        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/zoomit.md",
+        "url": "https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/zoomit.md",
         "regex": "#.*?v([\\d.]+)"
     },
     "autoupdate": {

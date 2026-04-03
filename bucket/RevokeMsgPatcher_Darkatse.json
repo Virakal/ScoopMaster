@@ -1,10 +1,10 @@
 {
-    "version": "2.1",
+    "version": "1.8",
     "description": "Revoke Message Patcher for QQ/TIM/WeChat",
     "homepage": "https://github.com/huiyadanli/RevokeMsgPatcher",
     "license": " GPL-3.0 License",
-    "url": "https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/2.1/RevokeMsgPatcher.v2.1.zip",
-    "hash": "9febecbbe2b9973feb7411944a3abe3249b99159b35fdd7b0c42402cc7ac9789",
+    "url": "https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/1.8/RevokeMsgPatcher.v1.8.zip",
+    "hash": "42721e8cec09b10fabcbc8cd92d3ba34afed91653ad74fd5039704643ec244f2",
     "pre_install": "Rename-Item \"$dir\\RevokeMsgPatcher.v$version\" \"RevokeMsgPatcher\"",
     "bin": "RevokeMsgPatcher\\RevokeMsgPatcher.exe",
     "shortcuts": [

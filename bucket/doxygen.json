@@ -1,12 +1,12 @@
 {
-    "version": "1.16.1",
+    "version": "1.12.0",
     "description": "Documentation generator from annotated source code.",
     "homepage": "https://www.doxygen.nl/",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "http://doxygen.nl/files/doxygen-1.16.1.windows.x64.bin.zip",
-            "hash": "ddfa59a4ae9549651330471c2e387ec7a9891080543faed541c859e5ce448653"
+            "url": "http://doxygen.nl/files/doxygen-1.12.0.windows.x64.bin.zip",
+            "hash": "07f1c92cbbb32816689c725539c0951f92c6371d3d7f66dfa3192cbe88dd3138"
         }
     },
     "bin": [

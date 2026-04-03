@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Noto' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Noto.tar.xz",
-    "hash": "e28b31609d17fc50bdf9e6730c947a61b0e474af726c2c044c39bc78fcd9bfde",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Noto.tar.xz",
+    "hash": "4be621219ff5508c4176487b4fdc8cd0f6d8d8fceeb935f83df11a49dca3096f",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

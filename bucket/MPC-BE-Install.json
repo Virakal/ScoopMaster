@@ -1,5 +1,5 @@
 {
-    "version": "1.8.9",
+    "version": "1.7.3",
     "description": "Media Player Classic BE. Fork of Media Player Classic containing additional features and bug fixes.",
     "homepage": "https://mpcbe.sourceforge.io/",
     "license": "GPL-3.0-only",
@@ -18,8 +18,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.8.9/MPC-BE.1.8.9.x64-installer.zip#/setup.zip",
-            "hash": "44cd976570199135d9d94af89d0dc1b7fd19c4fd95b3f8f7c0602e25a7b8dca9",
+            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.7.3/MPC-BE.1.7.3.x64-installer.zip#/setup.zip",
+            "hash": "3c72f3e9eea36c33c58f2c24fd78df7cfb12efb1b5cc377c035a5845289c8517",
             "installer": {
                 "script": [
                     "$programname = \"MPC-BE*\"",
@@ -44,8 +44,8 @@
             ]
         },
         "32bit": {
-            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.8.9/MPC-BE.1.8.9.x86-installer.zip#/setup.zip",
-            "hash": "0c4b77a3e12c8252ddeccdca9a3d86cceb9e44d10d5e6caeb37eaa625707f20e",
+            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.7.3/MPC-BE.1.7.3.x86-installer.zip#/setup.zip",
+            "hash": "8093e87098a71a5cb96761f8ddac950a7cd075977e2529dad947aa6be6db5c8f",
             "installer": {
                 "script": [
                     "$programname = \"MPC-BE*\"",

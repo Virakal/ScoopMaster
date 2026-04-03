@@ -1,12 +1,12 @@
 {
-    "version": "5.8.0",
+    "version": "5.4.1",
     "description": "A tool and editor to create ArchiMate models",
     "homepage": "https://www.archimatetool.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/archimatetool/archi.io/releases/download/5.8.0/Archi-Win64-5.8.0.zip",
-            "hash": "sha1:852dd1563273dbfe9b397af9df974fb8b52f522e"
+            "url": "https://www.archimatetool.com/downloads/archi/5.4.1/Archi-Win64-5.4.1.zip",
+            "hash": "sha1:a0c8d87d90a648fa5279e9b0639bc694de2d2afe"
         }
     },
     "extract_dir": "Archi",
@@ -18,17 +18,17 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/archimatetool/archi.io/releases",
-        "regex": "download/(?<tag>[^/]+)/Archi-Win64-(?<version>[\\d.]+)\\.zip"
+        "url": "https://www.archimatetool.com/download/",
+        "regex": "Archi-Win64-([\\d.]+)\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/archimatetool/archi.io/releases/download/$version/Archi-Win64-$version.zip"
+                "url": "https://www.archimatetool.com/downloads/archi/$version/Archi-Win64-$version.zip"
             }
         },
         "hash": {
-            "url": "$baseurl/Archi-$version-SUMSSHA1"
+            "url": "https://www.archimatetool.com/downloads/archi/$version/Archi-$version-SUMSSHA1"
         }
     }
 }

@@ -1,29 +1,15 @@
 {
-    "description": "Distribute and run LLMs with a single file.",
+    "version": "0.8.13",
+    "description": "Distribute and run LLMs with a single file",
+    "homepage": "https://llamafile.ai/",
     "license": "Apache-2.0",
-    "hash": "0e0376bcf2efe76c74ed5dc27e4f5e29e31a14162ca9e04c4c9e34645c65f6f7",
-    "url": "https://github.com/Mozilla-Ocho/llamafile/releases/download/0.10.0/llamafile-0.10.0.zip",
-    "extract_dir": "llamafile-0.10.0",
-    "version": "0.10.0",
-    "homepage": "https://github.com/Mozilla-Ocho/llamafile",
-    "bin": [
-        "bin\\llamafile.exe",
-        "bin\\llamafile-bench.exe",
-        "bin\\llamafile-imatrix.exe",
-        "bin\\llamafile-perplexity.exe",
-        "bin\\llamafile-quantize.exe",
-        "bin\\llamafile-tokenize.exe",
-        "bin\\llamafiler.exe",
-        "bin\\llava-quantize.exe",
-        "bin\\localscore.exe",
-        "bin\\sdfile.exe",
-        "bin\\whisperfile.exe",
-        "bin\\zipalign.exe"
-    ],
-    "pre_install": "Get-ChildItem -File \"$dir\\bin\" | Where-Object { -not ($_.Name -in @('llamafile-convert', 'llamafile-upgrade-engine')) } | Rename-Item -NewName { $_.Name + \".exe\" }",
-    "checkver": "github",
+    "url": "https://github.com/Mozilla-Ocho/llamafile/releases/download/0.8.13/llamafile-0.8.13#/llamafile.exe",
+    "hash": "d0a2b5c6a665ba34e23ef5107b009a3b0e9c290e317a23cf4d2cc7e9692a181e",
+    "bin": "llamafile.exe",
+    "checkver": {
+        "github": "https://github.com/Mozilla-Ocho/llamafile"
+    },
     "autoupdate": {
-        "url": "https://github.com/Mozilla-Ocho/llamafile/releases/download/$version/llamafile-$version.zip",
-        "extract_dir": "llamafile-$version"
+        "url": "https://github.com/Mozilla-Ocho/llamafile/releases/download/$version/llamafile-$version#/llamafile.exe"
     }
 }

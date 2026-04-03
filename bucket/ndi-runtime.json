@@ -3,18 +3,18 @@
         "url": "https://downloads.ndi.tv/SDK/NDI_SDK/NDI%20$majorVersion%20Runtime.exe"
     },
     "checkver": {
-        "regex": "Version\\s+([0-9.]+)"
+        "regex": "Version Number:\\s+([0-9.]+)"
     },
     "description": "NewTek NDI runtime libraries.",
     "env_set": {
         "NDI_RUNTIME_DIR_V5": "$dir"
     },
-    "hash": "08cbc30da4797bf909f8db4707ee417fe5461ed3950f8f139cee0649f8013427",
+    "hash": "93baed79f27203c61a090093bd4a1bafbb606c6a8e768d9dea650ad23b7bdf71",
     "homepage": "https://ndi.video/tools/ndi-core-suite/",
     "innosetup": true,
     "license": {
         "identifier": "Freeware"
     },
     "url": "https://downloads.ndi.tv/SDK/NDI_SDK/NDI%206%20Runtime.exe",
-    "version": "6.3.1"
+    "version": "6.0.1"
 }

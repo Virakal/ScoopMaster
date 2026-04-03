@@ -1,10 +1,10 @@
 {
-    "homepage": "https://pixpin.cn/",
+    "homepage": "https://pixpinapp.com/",
     "license": "unknown",
-    "version": "3.0.8.0",
-    "url": "https://download.pixpin.cn/PixPin_1.9.5.0.zip",
-    "hash": "2743f5e32a9acfd8d5e3b7a5e10c725ea21268b6fbc5c1f1ca167c7618d14007",
-    "extract_dir": "PixPin",
+    "version": "1.8.22.0",
+    "url": "https://download.pixpinapp.com/PixPin_1.8.22.0.exe",
+    "hash": "e1b3f45b6d3c54266684d0e787af18cc0816a115dbcd63ad4162f256fd6ab979",
+    "innosetup": true,
     "bin": "PixPin.exe",
     "shortcuts": [
         [
@@ -13,11 +13,8 @@
         ]
     ],
     "persist": "config",
-    "checkver": {
-        "url": "https://pixpin.cn/download/",
-        "regex": "PixPin_cn_zh-cn_([\\d.]+).zip"
-    },
+    "checkver": "([\\d.]+).exe",
     "autoupdate": {
-        "url": "https://download.pixpinapp.cn/PixPin_$version.zip"
+        "url": "https://download.pixpinapp.com/PixPin_$version.exe"
     }
 }

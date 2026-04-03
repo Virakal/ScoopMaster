@@ -1,10 +1,10 @@
 {
-    "version": "3.9.5",
+    "version": "2.1.4",
     "description": "Hydra is a game launcher with its own embedded bittorrent client and a self-managed repack scraper.",
     "homepage": "https://github.com/hydralauncher/hydra",
     "license": "MIT",
-    "url": "https://github.com/hydralauncher/hydra/releases/download/v3.9.5/hydralauncher-3.9.5-portable.exe",
-    "hash": "022c4b6b85cd95b9775a7b0cfd0eb118c2f6eca10bbee5367a1b904ecf9f4edf",
+    "url": "https://github.com/hydralauncher/hydra/releases/download/v2.1.4/hydralauncher-2.1.4-portable.exe",
+    "hash": "511d9d632f3be32b14ab98cb7028e8fd2a04e2c6fd0f7d7c0f73580a6ba53f8f",
     "pre_install": "Get-ChildItem $dir\\hydralauncher-*-portable.exe | Select-Object -First 1 | Rename-Item -NewName 'hydralauncher-portable.exe'",
     "shortcuts": [
         [

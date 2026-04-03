@@ -1,18 +1,18 @@
 {
-    "version": "7.6",
+    "version": "7.5.0-7712",
     "description": "Tool for modifying/debugging single player games and applications.",
     "homepage": "https://cheatengine.org/index.php",
     "license": {
         "identifier": "Freeware",
-        "url": "https://www.cheatengine.org/downloads.php"
+        "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
     },
+    "url": "https://github.com/ardittristan/cheat-engine/releases/download/7.5.0-7712/release.zip",
+    "hash": "ed9ebf8952ee04af166f90dd28e49835149f122c699aa85b56e0bee9730a2dac",
     "architecture": {
         "64bit": {
-            "url": "https://d5iv42o50fxks.cloudfront.net/gNzCWKR/76nk.exe",
-            "hash": "f96eca4a678f34c5d6c5e8b3ebb0f086f17ffc869c021e5576f8b906dace0336",
             "shortcuts": [
                 [
-                    "Cheat Engine.exe",
+                    "cheatengine-x86_64.exe",
                     "Cheat Engine"
                 ],
                 [
@@ -26,11 +26,9 @@
             ]
         },
         "32bit": {
-            "url": "https://d5iv42o50fxks.cloudfront.net/gNzCWKR/76nk.exe",
-            "hash": "f96eca4a678f34c5d6c5e8b3ebb0f086f17ffc869c021e5576f8b906dace0336",
             "shortcuts": [
                 [
-                    "Cheat Engine.exe",
+                    "cheatengine-i386.exe",
                     "Cheat Engine"
                 ],
                 [
@@ -44,19 +42,12 @@
             ]
         }
     },
-    "innosetup": true,
     "checkver": {
-        "url": "https://www.cheatengine.org/downloads.php",
-        "regex": "<a class=\"download_link\" href=\"https://[^\"/]+\\.cloudfront\\.net/(?<path>[^/]+)/(?<file>[^\"/]+\\.exe)\"[\\s\\S]*?>[\\s\\S]*?Download Cheat Engine\\s*(?<version>[\\d.]+)</a>"
+        "url": "https://api.github.com/repos/ardittristan/cheat-engine/releases?per_page=1",
+        "jsonpath": "$..tag_name",
+        "regex": "([\\d.-]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://d5iv42o50fxks.cloudfront.net/$matchPath/$matchFile"
-            },
-            "32bit": {
-                "url": "https://d5iv42o50fxks.cloudfront.net/$matchPath/$matchFile"
-            }
-        }
+        "url": "https://github.com/ardittristan/cheat-engine/releases/download/$version/release.zip"
     }
 }

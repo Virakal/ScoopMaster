@@ -1,17 +1,17 @@
 {
-    "version": "3.14.3",
+    "version": "3.12.6",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "homepage": "https://www.python.org/",
     "license": "Python-2.0",
     "notes": "Allow applications and third-party installers to find python by running: \"$dir\\install-pep-514.reg\"",
     "architecture": {
         "64bit": {
-            "url": "https://registry.npmmirror.com/-/binary/python/3.14.3/python-3.14.3-amd64.exe#/setup.exe",
-            "hash": "md5:b68ad91421afbbd1a628105199c8c5f6"
+            "url": "https://registry.npmmirror.com/-/binary/python/3.12.6/python-3.12.6-amd64.exe#/setup.exe",
+            "hash": "md5:d8548aa7609a762ba66f62eeb2ca862d"
         },
         "32bit": {
-            "url": "https://registry.npmmirror.com/-/binary/python/3.14.3/python-3.14.3.exe#/setup.exe",
-            "hash": "md5:f3a8e8499725bdba6ffac39bd822647f"
+            "url": "https://registry.npmmirror.com/-/binary/python/3.12.6/python-3.12.6.exe#/setup.exe",
+            "hash": "md5:9b4c59154c46444e082266d8bd3a6429"
         }
     },
     "pre_install": [
@@ -102,7 +102,7 @@
         },
         "hash": {
             "url": "https://www.python.org/downloads/release/python-$cleanVersion/",
-            "regex": "(?sm)$basename.*?$sha256"
+            "regex": "(?sm)$basename.*?$md5"
         }
     }
 }

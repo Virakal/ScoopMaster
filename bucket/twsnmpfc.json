@@ -1,13 +1,13 @@
 
 {
-    "version":  "v1.68.0",
+    "version":  "v1.43.0",
     "description": "TWSNMP FC",
     "license":  "Apache-2.0 license",
     "homepage":  "https://github.com/twsnmp/twsnmpfc",
     "architecture": {
       "64bit": {
-        "url": "https://github.com/twsnmp/twsnmpfc/releases/download/v1.68.0/twsnmpfc.zip",
-        "hash": "3e204ab24dd024c20ce39c1aeaf7f767f200ffbd3a96cac370e7e18b6eb5f5df"
+        "url": "https://github.com/twsnmp/twsnmpfc/releases/download/v1.43.0/twsnmpfc.zip",
+        "hash": "671ee9f0c83a7ce82f15b31317099f2cab99dbdc61a342d0d45d1ae15580d853"
       }
     },
     "bin":  ["twLauncher.exe",  "twWifiScan.exe", "twWinlog.exe", "twpcap.exe",  "twsnmpfc.exe"],

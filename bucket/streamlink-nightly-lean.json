@@ -1,5 +1,5 @@
 {
-    "version": "8.2.1-1-py314",
+    "version": "6.10.0-24-ge847708",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -16,20 +16,23 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-8.2.1-1-py314-x86_64.zip",
-            "hash": "508a505be607e67c661a3a525f63280a5f267d5addf834a288f4e3279d39a610"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86_64.zip.zip",
+            "hash": "9fb76b11964431398ac2a47074757dec9e1a3b0f60564c417c1cde6631cc2db5"
+        },
+        "32bit": {
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86.zip.zip",
+            "hash": "1e95f63af362cc66276b7bfa62229296020d16327caf0963a90ff57f8406fb9c"
         }
     },
     "pre_install": [
-        "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[0] } catch {}",
-        "$null = $version -cmatch '-py(\\d)(\\d{1,2})\\Z'",
+        "Expand-7zipArchive \"$dir/streamlink-$version-py312-x86*.zip\" \"$dir\" -Removal",
+        "$python = try { (py.exe -0p | Select-Object -First 1 | Select-String \\S+\\Z).Matches.Value } catch {}",
         "$paths = 'bin', 'pkgs'",
-        "if ($python -and ($ver = try { [Version]((py.exe -V) -Replace '[^\\d.]') } catch {}) -lt [Version]\"$($Matches[1]).$([byte]$Matches[2] + 1).0\" -and $ver -ge [Version]\"$($Matches[1]).$($Matches[2]).0\") {",
-        "    $null = New-Item -ItemType Junction -Path \"$dir/Python\" -Target (Split-Path $python)",
-        "}",
-        "else { $paths += 'Python' }",
-        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-*/$_\" \"$dir\" }",
-        "Remove-Item -Recurse \"$dir/streamlink-$version-*\"",
+        "if ($python -and ($ver = [System.Version]((py.exe -V) -Replace '[^\\d.]')) -lt [System.Version]'3.13.0' -and $ver -ge [System.Version]'3.12.0') {",
+        "$null = New-Item -ItemType SymbolicLink -Path \"$dir/Python\" -Target ($python | Split-Path)",
+        "} else { $paths += 'Python' }",
+        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py312-x86*/$_\" \"$dir\" }",
+        "Remove-Item -Recurse \"$dir/streamlink-$version-py312-x86*\"",
         "if (Test-Path \"$persist_dir/config\") { return }",
         "if (Test-Path \"$env:APPDATA/streamlink/config\") {",
         "    info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
@@ -49,19 +52,25 @@
     "checkver": {
         "script": [
             "try {",
-            "    $id = (Invoke-RestMethod 'https://api.github.com/repositories/472790314/actions/workflows/main.yml/runs?branch=master&status=success&per_page=1' -Headers $(if ($auth = Get-GitHubToken) { @{authorization=\"Bearer $auth\"} })).workflow_runs[0].id",
-            "    (Invoke-RestMethod \"https://api.github.com/repositories/472790314/actions/runs/$id/artifacts?per_page=1\" -Headers $(if ($auth = Get-GitHubToken) { @{authorization=\"Bearer $auth\"} })).artifacts[0].name",
+            "    $null = (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name -Match 'streamlink-([\\w.-]+)-py'",
+            "    $verSplit = $matches[1].split('-')",
+            "    if ($verSplit.Length -eq 3 -and $verSplit[2][0] -eq 'g') { $build = 'nightly' }",
+            "    else { $build = 'main' }",
+            "    $build, $matches[1] -join ' '",
             "}",
             "catch {",
             "    ''",
             "}"
         ],
-        "regex": "\\Astreamlink-([^h-z]+-py\\d+)"
+        "regex": "\\A(?<build>\\S+) (\\S+)\\Z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-x86_64.zip"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py312-x86_64.zip.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py312-x86.zip.zip"
             }
         }
     }

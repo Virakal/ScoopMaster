@@ -1,24 +1,22 @@
 {
-    "version": "1.13.1",
+    "version": "1.12.2",
     "description": "A simple GUI wrapper for youtube-dl",
     "homepage": "https://github.com/database64128/youtube-dl-wpf",
     "license": "GPL-3.0-only",
-    "depends": "yt-dlp",
+    "depends": [
+        "yt-dlp",
+        "sushi/dotnet-desktop-runtime"
+    ],
     "suggest": {
         "FFmpeg": [
             "ffmpeg",
             "ffmpeg-nightly"
-        ],
-        ".NET Desktop Runtime": [
-            "sushi/dotnet-desktop-runtime",
-            "extras/windowsdesktop-runtime",
-            "extras/windowsdesktop-runtime-lts"
         ]
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/database64128/youtube-dl-wpf/releases/download/v1.13.1/youtube-dl-wpf-v1.13.1-windows.7z",
-            "hash": "eb73c9931bed366b8e79c0b0bde5daae817169998c91a47997576dd0c9d40a2c"
+            "url": "https://github.com/database64128/youtube-dl-wpf/releases/download/v1.12.2/youtube-dl-wpf-v1.12.2-windows.7z",
+            "hash": "b9f7c889fcc41323b67529a44dd298b3bd58f8ee089136dedef969b59dc99d97"
         }
     },
     "installer": {

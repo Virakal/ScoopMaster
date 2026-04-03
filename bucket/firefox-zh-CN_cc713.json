@@ -1,56 +1,34 @@
 {
-    "version": "149.0",
+    "version": "130.0.1",
     "description": "Popular open source web browser.",
     "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
-    "notes": [
-        "To set profile 'Scoop' as *DEFAULT*, or profiles/settings was lost after update:",
-        "  - Run 'Firefox Profile Manager', choose 'Scoop' then click 'Start Firefox'.",
-        "  - Visit 'about:profiles' page in Firefox to check *DEFAULT* profile.",
-        "For details: https://support.mozilla.org/zh-CN/kb/profile-manager-create-remove-switch-firefox-profiles"
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/149.0/win64/zh-CN/Firefox%20Setup%20149.0.exe#/dl.7z",
-            "hash": "sha512:b81d1d23deaab931b7372b9d2b101ce879aac836cc783eb197da44e604f4fb2aa7bd0d640694e3286c76b641dff875f1fec91188586d0d2c12829a37544f59c5"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/130.0.1/win64/zh-CN/Firefox%20Setup%20130.0.1.exe#/dl.7z",
+            "hash": "sha512:bb89ac8f3a86c9d9b40288c9d24a3a3a2551240d764e548b7a6849e9ef2ec21e19a7cc59293ab7bddd6760af8a12b2e4e766c5b5e71524b398645f0ead26f864"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/149.0/win32/zh-CN/Firefox%20Setup%20149.0.exe#/dl.7z",
-            "hash": "sha512:0d0efcde7221664e14306e2b5d74bc403d282181edc8594b2a48eb4f22730133d38216c57871286a8ffe75ed422b2b69064db2550623d5dadf1854d698ae2dff"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/130.0.1/win32/zh-CN/Firefox%20Setup%20130.0.1.exe#/dl.7z",
+            "hash": "sha512:f8a848e24aae6f4aee1d2362ccd774ce20f9756b177555ce90e3ab2b7d17ed5363987a608f0d63c1b48c3c36ebd11b38073b8798b78bb3668903093794e82010"
         },
         "arm64": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/149.0/win64-aarch64/zh-CN/Firefox%20Setup%20149.0.exe#/dl.7z",
-            "hash": "sha512:dc2fb7ad511205f4ebcf6ab7a8eafcab6100d1e854efaaebb1873029cbbbc0be3cd45429fc3e4f41a57d0f8ca342fcf82bcc1a6ce395bf32585f9a5b5c3a496b"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/130.0.1/win64-aarch64/zh-CN/Firefox%20Setup%20130.0.1.exe#/dl.7z",
+            "hash": "sha512:1c2a4ec0857c77ee8d2306db4af5218b524bce104a85839146e247cf0186029b3217351473446ae70825c0a17b3a85279dac663a7e58ee84684617753253e0a2"
         }
     },
     "extract_dir": "core",
-    "post_install": [
-        "firefox -CreateProfile \"Scoop $persist_dir\\profile\"",
-        "$Addition = \"$persist_dir\\addition\"",
-        "if (Test-Path $Addition) {",
-        "  info 'Copying additional items...'",
-        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
-        "}"
-    ],
     "bin": "firefox.exe",
     "shortcuts": [
         [
             "firefox.exe",
             "Firefox"
-        ],
-        [
-            "firefox.exe",
-            "Firefox Profile Manager",
-            "-P"
         ]
     ],
-    "persist": [
-        "distribution",
-        "profile"
-    ],
+    "persist": "distribution",
     "checkver": {
-        "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
-        "jsonpath": "$.LATEST_FIREFOX_VERSION"
+        "url": "https://www.mozilla.org/zh-CN/firefox/all/",
+        "regex": "data-latest-firefox=\"([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {

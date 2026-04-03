@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Monofur' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monofur.tar.xz",
-    "hash": "539dc64f089b189c5f14ee60df6368742cc63ccc3be753bd3c8bfba7632fe068",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Monofur.tar.xz",
+    "hash": "eb035bfb09043db2278dd6f95ca956a7cc42a3e6cc30910295c51555b2e8ff81",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

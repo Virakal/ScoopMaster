@@ -1,5 +1,5 @@
 {
-    "version": "10.0.201",
+    "version": "8.0.401",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "homepage": "https://www.microsoft.com/net/",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.201/dotnet-sdk-10.0.201-win-x64.zip",
-            "hash": "sha512:15f511296c0ea28a61bafcc2efbc66cd4d22d15a2db44597b9b2254a9eafb57047bbe2feca8106a17ba7ae8af19a3a6847a375b6740e0bf6ab0874ade8af0bca"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-x64.zip",
+            "hash": "sha512:384c473811118f47d50e937e29bb4f03413a07dc859c30486b1129d99ac80a61527c77baceafcf1ce42533ab307d65b476e5d0d7c503f930440456a0f75b92dd"
         },
         "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.201/dotnet-sdk-10.0.201-win-x86.zip",
-            "hash": "sha512:cae1b34b79c30e3934639a64cfb6fa8afb0eec2cb30ada9b73e36741cdb84a28a6e9ed83477d3470f55136b7a640f7297685ac36f26802a77b5951fcc6800d85"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-x86.zip",
+            "hash": "sha512:ee5e467d9285843cf4b68913c1dffc40ee0f828aa39b75e60cd9514d08d7c1a0c809e282ea4d0cd2a18376f80298fc05680f26a96d11247f7abf1347c8fa4671"
         },
         "arm64": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.201/dotnet-sdk-10.0.201-win-arm64.zip",
-            "hash": "sha512:c67ee373177cd428311106f645c590e97e8456b1cb4e9581658264d523f965d19819d5100f46854a7176398fbf88d5e03e8c290b3390f17f2ba84768450bac5f"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-arm64.zip",
+            "hash": "sha512:5e4ab2b0d4623796a5aa9d209084b9bd19a5d5db2c9165b9be0cd8dc2953a73a26e681c7c7f5816e0b96a771f91995d7ee9949ff578da8f43990f3bd9c203195"
         }
     },
     "env_add_path": ".",

@@ -1,25 +1,40 @@
 {
-    "version": "2213",
-    "homepage": "https://y.qq.com/",
-    "license": "Freeware",
-    "url": "https://sw.pcmgr.qq.com/86eb57bcfef447d9d4aa1b910a18c7eb/69b95cad/spcmgr/download/QQMusic_Setup_2213.exe#/dl.7z",
-    "hash": "316d9c19070ec884ec80ad6c42d692e9b7d2822c53685316fbdf37f24fa4a14f",
-    "post_install": "Copy-Item \"$dir\\QQMusic.tpc\" \"$dir\\instok\"",
+    "version": "2039.2821",
+    "description": "音乐播放器 QQMusic",
+    "homepage": "https://y.qq.com",
+    "url": "https://webcdn.m.qq.com/spcmgr/download/QQMusic_Setup_2039.2821_QMgr.exe#/dl.7z",
+    "hash": "8e193a90ee9bace1d2a19792782037a636351ea27a70685e350eea8860a4b8d5",
+    "installer": {
+        "script": [
+            "Import-Module $bucketsdir\\rainte\\scripts\\qqmusic\\AppsUtils.psm1",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "bin": "QQMusic.exe",
     "shortcuts": [
         [
             "QQMusic.exe",
-            "QQMusic"
+            "QQ音乐"
         ]
     ],
+    "post_install": "Copy-Item \"$dir\\QQMusic.tpc\" \"$dir\\instok\"",
+    "uninstaller": {
+        "script": [
+            "Import-Module $bucketsdir\\rainte\\scripts\\qqmusic\\AppsUtils.psm1",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
     "checkver": {
         "script": [
             "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=10' -Method 'POST'",
             "Write-Output $res.Content"
         ],
-        "jsonpath": "$.resp.soft_list[0].download_https_url",
-        "regex": "//(?<url>.+)/QQMusic_Setup_(\\d+)\\.exe"
+        "jsonpath": "$..file_name",
+        "regex": "QQMusic_Setup_(?<version>.*?)_QMgr.exe"
     },
     "autoupdate": {
-        "url": "https://$matchUrl/QQMusic_Setup_$version.exe#/dl.7z"
+        "url": "https://webcdn.m.qq.com/spcmgr/download/QQMusic_Setup_$version_QMgr.exe#/dl.7z"
     }
 }

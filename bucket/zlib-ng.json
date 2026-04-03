@@ -1,20 +1,20 @@
 {
-    "version": "2.3.3",
+    "version": "2.2.1",
     "description": "zlib data compression library for next generation systems.",
     "homepage": "https://github.com/zlib-ng/zlib-ng",
     "license": "Zlib",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.3.3/zlib-ng-win-x86-64-compat.zip",
-            "hash": "bc8b87f8ed5c149785852c20c7c9c58f0ad4270bfd82e2366687d9dfacf86805"
+            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.2.1/zlib-ng-win-x86-64-compat.zip",
+            "hash": "8ebe1d1154eb6a2162f267203ab77b5192a93fa40fc9a0b47d9720a3437949c3"
         },
         "32bit": {
-            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.3.3/zlib-ng-win-x86-compat.zip",
-            "hash": "b16632b6fe4726e28a01cd3f5ccd3b67d9e50e093bfe3fff8c6075747aca0116"
+            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.2.1/zlib-ng-win-x86-compat.zip",
+            "hash": "4317078d7d7ca7eab4fe75760fb98d0c53f08bbdf765158775cdbc358b920ee7"
         },
         "arm64": {
-            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.3.3/zlib-ng-win-arm64-compat.zip",
-            "hash": "8e844859591d27fd1d7ddf6c20ea8eadfc41c48f5abde0de9480d87cc852a859"
+            "url": "https://github.com/zlib-ng/zlib-ng/releases/download/2.2.1/zlib-ng-win-arm64-compat.zip",
+            "hash": "cf3a833fbec2a5a77904f5bddedfc2254975b66ff719c636dba3805cebba0a95"
         }
     },
     "env_set": {

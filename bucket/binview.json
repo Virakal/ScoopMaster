@@ -1,27 +1,29 @@
 {
-    "version": "0.10.1",
-    "description": "Bine - A terminal binary editor",
-    "homepage": "https://github.com/hymkor/bine",
+    "version": "0.6.3",
+    "description": "Binary data view/editor on the terminal",
+    "homepage": "https://github.com/hymkor/binview",
     "license": "MIT License",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/hymkor/bine/releases/download/v0.10.1/bine-v0.10.1-windows-386.zip",
-            "hash": "8b672ad36b0f8c044a354ba21c0ab169fca6b0333331b2ae74f4e2a150855eef"
+            "url": "https://github.com/hymkor/binview/releases/download/v0.6.3/binview-v0.6.3-windows-386.zip",
+            "hash": "5d9426f71b1dcc76d6e8af1e9ad50afc5870c6db5b5720b2195e40444d2a8f55"
         },
         "64bit": {
-            "url": "https://github.com/hymkor/bine/releases/download/v0.10.1/bine-v0.10.1-windows-amd64.zip",
-            "hash": "be5207d0f5ed5150db618cf7ebcf7e2f55d10405a9f815d51518b9fe6ce24d25"
+            "url": "https://github.com/hymkor/binview/releases/download/v0.6.3/binview-v0.6.3-windows-amd64.zip",
+            "hash": "098fa2403fe9f69028e344b9d1e5c8b6a9270e5680f2bbf81fc14fae64edbc67"
         }
     },
-    "bin": "bine.exe",
+    "bin": [
+        "binview.exe"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/hymkor/bine/releases/download/v$version/bine-v$version-windows-386.zip"
+                "url": "https://github.com/hymkor/binview/releases/download/v$version/binview-v$version-windows-386.zip"
             },
             "64bit": {
-                "url": "https://github.com/hymkor/bine/releases/download/v$version/bine-v$version-windows-amd64.zip"
+                "url": "https://github.com/hymkor/binview/releases/download/v$version/binview-v$version-windows-amd64.zip"
             }
         }
     }

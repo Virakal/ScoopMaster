@@ -1,12 +1,12 @@
 {
-    "version": "8.9.0",
+    "version": "8.2.0",
     "description": "Manage Disk Partitions, resize move partition without data loss, and many other more features",
     "homepage": "https://macrorit.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://disk-tool.com/download/mde/mde-free-portable.zip",
-            "hash": "2249a525393789f1d213aa13dbffb20e4e306b74f81d4868d144d644113631f9"
+            "hash": "0e9bb0935671ec9d2822e88df1ff0ef4fdd3f81ed35985bdf85b8c815dc358df"
         }
     },
     "bin": "mde-free-portable/x64/dm.exe",

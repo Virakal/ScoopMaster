@@ -1,16 +1,16 @@
 {
-    "version": "1.8.00.27654",
+    "version": "1.7.00.24670",
     "description": "Office 365's chats, meetings, files and apps together in one place",
     "homepage": "https://teams.microsoft.com/start",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://statics.teams.microsoft.com/production-windows-x64/1.8.00.27654/Teams-1.8.00.27654-full.nupkg",
-            "hash": "sha1:ed09b2966862bf0b909fdcadfbb840323df4b0b8"
+            "url": "https://statics.teams.microsoft.com/production-windows-x64/1.7.00.24670/Teams-1.7.00.24670-full.nupkg",
+            "hash": "sha1:95af60e88fd9f7f07a96315903b1c93864de6dec"
         },
         "32bit": {
-            "url": "https://statics.teams.microsoft.com/production-windows/1.8.00.27654/Teams-1.8.00.27654-full.nupkg",
-            "hash": "sha1:4c03c795187445ea8d1afc186bd77f59788181b8"
+            "url": "https://statics.teams.microsoft.com/production-windows/1.7.00.24670/Teams-1.7.00.24670-full.nupkg",
+            "hash": "sha1:ed07039aade7e0a90b06355bfae5e541a25c0592"
         }
     },
     "extract_dir": "lib\\net45",

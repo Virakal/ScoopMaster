@@ -1,29 +1,19 @@
 {
-    "version": "144.0.7559.189-r1",
+    "version": "126.0.6478.249",
     "description": "Chromium fork for Windows XP/2003 and up",
     "homepage": "https://win32subsystem.live/supermium/",
-    "license": {
-        "identifier": "BSD-3-Clause",
-        "url": "https://github.com/win32ss/supermium/blob/main/LICENSE"
-    },
+    "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/win32ss/supermium/releases/download/v144-r1/supermium_144_64_setup_win10_11.exe#/dl.zip",
-            "hash": "0ec0f2a843c8f0b9481b07078ff0ac93c80c226d4b01682d729c9da59309bef3"
+            "url": "https://win32subsystem.live/supermium/downloads/supermium_126_64_setup.exe#/dl.7z",
+            "hash": "66aac9b69043c4d1562e2eae756340af32749c37ead5d87855753b5bc5834586"
         },
         "32bit": {
-            "url": "https://github.com/win32ss/supermium/releases/download/v144-r1/supermium_144_32_setup.exe#/dl.zip",
-            "hash": "a343faa79ec9ea2edb92ca1539c7f86f11d870b58d94a0de7f24bf61879d8b07"
+            "url": "https://win32subsystem.live/supermium/downloads/supermium_126_32_setup.exe#/dl.7z",
+            "hash": "5380049a2caa4df1d9f1e57d362f215266097686478d11f4789c4c406f559255"
         }
     },
     "extract_dir": "Supermium",
-    "post_install": [
-        "if (-not (Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Supermium\\User Data\")) {",
-        "    info '[Portable Mode]: Copying user data...'",
-        "    Copy-Item -Path \"$env:LocalAppData\\Supermium\\User Data\\*\" -Destination \"$dir\\User Data\" -Force -Recurse",
-        "    Remove-Item -Path \"$env:LocalAppData\\Supermium\" -Recurse -Force -ErrorAction SilentlyContinue",
-        "}"
-    ],
     "bin": [
         [
             "chrome.exe",
@@ -38,23 +28,24 @@
             "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
-    "env_set": {
-        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
-    },
+    "post_install": [
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Supermium\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Supermium\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
     "persist": "User Data",
     "checkver": {
-        "url": "https://api.github.com/repos/win32ss/supermium/releases/latest",
-        "jsonpath": "$..['tag_name', 'name']",
-        "regex": "(?i)\"(?<tag>v?[\\d]+(?<suffix>-[^\"]+)?)\",\"[^\"]+?(?<prefix>[\\d.]+)",
-        "replace": "${prefix}${suffix}"
+        "url": "https://win32subsystem.live/supermium/",
+        "regex": ">Supermium ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/win32ss/supermium/releases/download/$matchTag/supermium_$majorVersion_64_setup_win10_11.exe#/dl.zip"
+                "url": "https://win32subsystem.live/supermium/downloads/supermium_$majorVersion_64_setup.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://github.com/win32ss/supermium/releases/download/$matchTag/supermium_$majorVersion_32_setup.exe#/dl.zip"
+                "url": "https://win32subsystem.live/supermium/downloads/supermium_$majorVersion_32_setup.exe#/dl.7z"
             }
         }
     }

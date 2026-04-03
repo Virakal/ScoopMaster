@@ -1,11 +1,10 @@
 {
-    "version": "2.52.5",
-    "description": "XnView is a powerful, versatile and free image viewer, photo management, and image resizer software.",
     "homepage": "https://www.xnview.com/en/xnview/",
+    "version": "2.51.7",
     "license": "freeware",
     "extract_dir": "XnView",
     "url": "https://download.xnview.com/XnView-win.zip",
-    "hash": "c72d17be88d6f209a0995aa6b09666be9a00ac92697e774bbb30b33040d2529f",
+    "hash": "a7d1b600d1347e36e8621165c4ceb7cd91a8ed0e9d2c03b9b63d1d0ad60eea80",
     "bin": "xnview.exe",
     "shortcuts": [
         [
@@ -17,7 +16,7 @@
         "xnview.ini",
         "category.db"
     ],
-    "checkver": "fa-cloud-download-alt.+?XnView Classic ([\\d.]+)",
+    "checkver": "Download <strong>XnView ([\\d.]+)</strong> for Windows",
     "autoupdate": {
         "url": "https://download.xnview.com/XnView-win.zip",
         "hash": {

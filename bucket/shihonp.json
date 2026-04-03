@@ -1,9 +1,9 @@
 {
-    "version": "12.2.0",
+    "version": "10.0.0",
     "description": "Book manager.",
-    "homepage": "https://ekakin.la.coocan.jp/index.html",
-    "url": "https://ekakin.la.coocan.jp/download/shihonpv1220.zip",
-    "hash": "9dd7c498bbf3920da3f0d8d75b8118ea2afab40920ad699dcee3cb03d2fb4dc0",
+    "homepage": "http://ekakin.la.coocan.jp/shihonp.htm",
+    "url": "http://ekakin.la.coocan.jp/download/shihonpv1000.zip",
+    "hash": "sha512:971cbd8e63869fd7f0a577fb63572fcd52bd90fe58b6838e516b6312d47412bc26ebf71150bc63b63ed322e901779ae58753dc74e112eddf704e3a00c8c0d5c1",
     "shortcuts": [
         [
             "shihon.exe",
@@ -11,10 +11,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://ekakin.la.coocan.jp/index.html",
-        "regex": "私本管理Plus Ver([\\d.]+)（ZIP版）</a>\\s*<br>\\s*</ul>"
-    },
-    "autoupdate": {
-        "url": "https://ekakin.la.coocan.jp/download/shihonpv$cleanVersion.zip"
+        "url": "http://ekakin.la.coocan.jp/shihonp.htm",
+        "regex": "Plus Ver([\\d\\.]+) &gt;&gt; <a href=\"http://awplus.jp/cgi-bin/dl/page\\.cgi\\?symbol"
     }
 }

@@ -1,13 +1,13 @@
 {
-    "version": "3.130.1",
+    "version": "3.78.0",
     "description": "Create, configure, and edit large-scale contextual ad campaigns on Yandex Direct.",
     "homepage": "https://yandex.com/project/commander",
     "license": {
         "url": "https://yandex.com/legal/desktop_software_agreement",
         "identifier": "Proprietary"
     },
-    "url": "https://direct.s3.yandex.net/commander/v3.130.1/Direct%20Commander%20Setup%203.130.1%20SQUIRREL.exe#/dl.7z",
-    "hash": "b4f5740c2efa7b3c4b5af0712b51cf628b24a5659e775500dba1dbdec3528443",
+    "url": "https://direct.s3.yandex.net/commander/v3.78.0/Direct%20Commander%20Setup%203.78.0%20SQUIRREL.exe#/dl.7z",
+    "hash": "c7096d52a7c06332e15d58d97692d93b2eba1a6b5f7b47bdce613c6490885842",
     "extract_to": "setup",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\setup\\direct-commander-$version-full.nupkg\" \"$dir\\setup\\direct-commander-$version-full\"",

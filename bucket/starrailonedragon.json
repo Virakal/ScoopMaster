@@ -1,20 +1,21 @@
 {
-    "version": "3.7.0",
+    "version": "2.5.0",
     "description": "崩坏：星穹铁道 - 一条龙 Honkai Star Rail - One Dragon | 全日常自动 | 星穹铁道锄大地 | 星穹铁道模拟宇宙 | 星穹铁道脚本 | 基于图像识别 | Star Rail Script",
-    "homepage": "https://github.com/OneDragon-Anything/StarRailOneDragon",
+    "homepage": "https://github.com/DoctorReid/StarRailOneDragon",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/OneDragon-Anything/StarRailOneDragon/releases/download/v3.7.0/StarRail-OneDragon-Launcher.zip",
-    "hash": "9e798bb6924f5a02e69e97adc247d59ada5d8c0923872e17d7852cee094d669c",
+    "url": "https://github.com/DoctorReid/StarRailOneDragon/releases/download/2.5.0/StarRailOneDragon-2.5.0.zip#/StarRailOneDragon.zip",
+    "hash": "e3eeb7b1e97408a9672e9ab1c063af8ff82ad20266dd140b02300b04491f2a7e",
     "shortcuts": [
         [
-            "OneDragon-Launcher.exe",
+            "StarRailOneDragon.exe",
             "StarRailOneDragon"
         ]
     ],
+    "extract_dir": "StarRailOneDragon",
     "checkver": {
-        "github": "https://github.com/OneDragon-Anything/StarRailOneDragon"
+        "github": "https://github.com/DoctorReid/StarRailOneDragon"
     },
     "autoupdate": {
-        "url": "https://github.com/OneDragon-Anything/StarRailOneDragon/releases/download/v$version/StarRail-OneDragon-Launcher.zip"
+        "url": "https://github.com/DoctorReid/StarRailOneDragon/releases/download/$version/StarRailOneDragon-$version.zip#/StarRailOneDragon.zip"
     }
 }

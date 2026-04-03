@@ -1,5 +1,5 @@
 {
-    "version": "14.44.35211.0",
+    "version": "14.40.33810.0",
     "description": "Microsoft Visual C++ Redistributable. for Visual Studio 2015-2022",
     "homepage": "https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist",
     "license": {
@@ -12,8 +12,8 @@
         "https://aka.ms/vs/17/release/vc_redist.x86.exe"
     ],
     "hash": [
-        "1cd07842e6e636334190a95e29c672df9b0ede961facfae0593843b42f4a0bbb",
-        "ed1967c2ac27d806806d121601b526f84e497ae1b99ed139c0c4c6b50147df4a"
+        "65c392926f328ca776be3031e533108bbf6dcdacae5c8c84f91bf9339667bc5f",
+        "a32dd41eaab0c5e1eaa78be3c0bb73b48593de8d97a7510b97de3fd993538600"
     ],
     "post_install": [
         "# For error codes, see https://docs.microsoft.com/en-us/windows/win32/msi/error-codes",

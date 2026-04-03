@@ -1,34 +1,31 @@
 {
-    "version": "0.9.6",
+    "version": "0.3.2",
     "description": "A custom protocol, rule based network proxy software.",
     "homepage": "https://github.com/Watfaq/clash-rs",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Watfaq/clash-rs/releases/download/v0.9.6/clash-rs-x86_64-pc-windows-msvc.exe#/clash-rs.exe",
-            "hash": "86402e5ff48063f55202c7802d5eab76b6ebf97a4b1a16473e9d6104533749cc"
+            "url": "https://github.com/Watfaq/clash-rs/releases/download/v0.3.2/clash-x86_64-pc-windows-msvc.exe#/clash.exe",
+            "hash": "2dfa9659c128e4746a5a51c5cb27725d9f21a965066b2d68e003360988cf548c"
         },
         "32bit": {
-            "url": "https://github.com/Watfaq/clash-rs/releases/download/v0.9.6/clash-rs-i686-pc-windows-msvc.exe#/clash-rs.exe",
-            "hash": "6a67852c23e650b54874d7b0853467a583efcee1f8b9be1905c336b9b231ae00"
+            "url": "https://github.com/Watfaq/clash-rs/releases/download/v0.3.2/clash-i686-pc-windows-msvc.exe#/clash.exe",
+            "hash": "dc9b7b91f1ee72ceef94ee473885ff5a3914f24fb5ee6aa24d2a5ed29197655f"
         }
     },
-    "bin": "clash-rs.exe",
+    "bin": "clash.exe",
     "suggest": {
         "wintun-libs": "lemon/wintun-libs"
     },
-    "post_install": "if (installed 'wintun-libs' $global) {Copy-Item \"$(appdir wintun-libs $global)\\current\\wintun.dll\" \"$dir\\\" } else { error 'It is recommended to install `lemon/wintun-libs` first, then reinstall `lemon/clash-rs`.'}",
+    "post_install": "if (installed 'wintun-libs' $global) {Copy-Item \"$(appdir wintun-libs $global)\\current\\wintun.dll\" \"$dir\\\" }",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Watfaq/clash-rs/releases/download/v$version/clash-rs-x86_64-pc-windows-msvc.exe#/clash-rs.exe"
+                "url": "https://github.com/Watfaq/clash-rs/releases/download/v$version/clash-x86_64-pc-windows-msvc.exe#/clash.exe"
             },
             "32bit": {
-                "url": "https://github.com/Watfaq/clash-rs/releases/download/v$version/clash-rs-i686-pc-windows-msvc.exe#/clash-rs.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/Watfaq/clash-rs/releases/download/v$version/clash-rs-aarch64-pc-windows-msvc.exe#/clash-rs.exe"
+                "url": "https://github.com/Watfaq/clash-rs/releases/download/v$version/clash-i686-pc-windows-msvc.exe#/clash.exe"
             }
         }
     }

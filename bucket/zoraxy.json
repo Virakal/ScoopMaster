@@ -1,12 +1,12 @@
 {
-    "version": "3.3.2",
+    "version": "3.1.1",
     "description": "A general purpose HTTP reverse proxy and forwarding tool",
     "homepage": "https://github.com/tobychui/zoraxy",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tobychui/zoraxy/releases/download/v3.3.2/zoraxy_windows_amd64.exe#/zoraxy.exe",
-            "hash": "a57c07eae5f055e73391e23cbaea5f9924bba83da5177953fdb5928b445d412e"
+            "url": "https://github.com/tobychui/zoraxy/releases/download/3.1.1/zoraxy_windows_amd64.exe#/zoraxy.exe",
+            "hash": "4b499a72c072f96b8d64c243885180e674264e5a5eb4fce05308ed564899b658"
         }
     },
     "bin": "zoraxy.exe",
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tobychui/zoraxy/releases/download/v$version/zoraxy_windows_amd64.exe#/zoraxy.exe"
+                "url": "https://github.com/tobychui/zoraxy/releases/download/$version/zoraxy_windows_amd64.exe#/zoraxy.exe"
             }
         }
     }

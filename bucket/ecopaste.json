@@ -1,43 +1,27 @@
 {
-    "version": "0.6.0-beta.3",
-    "description": "跨平台剪切板管理工具",
-    "homepage": "https://github.com/EcoPasteHub/EcoPaste",
-    "license": " Apache-2.0",
+    "version": "0.0.6",
+    "description": "A powerful open-source clipboard manager.",
+    "homepage": "https://github.com/ayangweb/EcoPaste/",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v0.6.0-beta.3/EcoPaste_0.6.0-beta.3_x64-setup.exe#/dl.7z",
-            "hash": "0730d116765dd30fd5dbb6b94874efa478fcc9989e9fd0c26abc3ab9f4804e04"
-        },
-        "32bit": {
-            "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v0.6.0-beta.3/EcoPaste_0.6.0-beta.3_x86-setup.exe#/dl.7z",
-            "hash": "f240770898f1dc7c3e1e39f94200564b57c91083d306d1b20724d956ee228fa8"
-        },
-        "arm64": {
-            "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v0.6.0-beta.3/EcoPaste_0.6.0-beta.3_arm64-setup.exe#/dl.7z",
-            "hash": "3726d7f2cd42791fccc5bd6816de3002a05ff49e2eec9964ce7c9af797b7edc3"
+            "url": "https://github.com/ayangweb/EcoPaste/releases/download/v0.0.6/EcoPaste_0.0.6_x64_zh-CN.msi",
+            "hash": "df4a84b77f5636560988b1d1e51b8ca14882387bdc7170b0a786bd0f0cea1792"
         }
     },
-    "pre_install": "Remove-Item -Path \"$dir\\[NSIS].nsi\",\"$dir\\uninstall.exe\" -Force -Recurse",
+    "extract_dir": "PFiles\\EcoPaste",
     "shortcuts": [
         [
             "EcoPaste.exe",
             "EcoPaste"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/EcoPasteHub/EcoPaste/tags",
-        "regex": "tag\\/v([\\d\\w\\.-]+)"
-    },
+    "notes": "EcoPaste is NOT portable.",
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v$version/EcoPaste_$version_x64-setup.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v$version/EcoPaste_$version_x86-setup.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://github.com/EcoPasteHub/EcoPaste/releases/download/v$version/EcoPaste_$version_arm64-setup.exe#/dl.7z"
+                "url": "https://github.com/ayangweb/EcoPaste/releases/download/v$version/EcoPaste_$version_x64_zh-CN.msi"
             }
         }
     }

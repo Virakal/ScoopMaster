@@ -1,34 +1,32 @@
 {
-    "version": "0.15.0",
-    "description": "PlayStation 4 emulator for Windows, Linux and macOS",
+    "version": "0.2.0",
+    "description": "shadPS4 is an early PlayStation 4 emulator for Windows, Linux and macOS written in C++",
     "homepage": "https://shadps4.net/",
-    "license": {
-        "identifier": "GPL-2.0-only",
-        "url": "https://github.com/shadps4-emu/shadPS4/blob/main/LICENSE"
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.2.0/shadps4-win64-qt.zip",
+            "hash": "5dcec90992b1325868d6bd75ff4506d52f5c969ba235aa9ab336ff6c764ed51e"
+        }
     },
-    "notes": [
-        "ATTENTION: shadPS4 requires a copy of the official PS4 firmware to function.",
-        "See the official quickstart guide for further instructions: https://shadps4.net/quickstart/#3-install-games-and-related-content"
-    ],
-    "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
-    },
-    "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.15.0/shadps4-win64-sdl-0.15.0.zip",
-    "hash": "46b53eb102107b349552854a70a8671c18fe986270cd52fcec44bf41e65c2835",
-    "bin": "shadPS4.exe",
     "shortcuts": [
         [
             "shadPS4.exe",
             "shadPS4"
         ]
     ],
-    "persist": "user",
+    "persist": [
+        "user"
+    ],
     "checkver": {
-        "url": "https://api.github.com/repos/shadps4-emu/shadPS4/releases/latest",
-        "jsonpath": "$.assets[*].browser_download_url",
-        "regex": "/download/(?<tag>[^/]+)/shadps4-(?<platform>[^/]+)-(?<version>[\\d.]+)\\.zip"
+        "github": "https://github.com/shadps4-emu/shadPS4",
+        "regex": "/releases/tag/(?<prefix>v?\\.?)(?<version>[\\w-\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchTag/shadps4-win64-sdl-$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/shadps4-emu/shadPS4/releases/download/$matchPrefix$version/shadps4-win64-qt.zip"
+            }
+        }
     }
 }

@@ -1,21 +1,13 @@
 {
-    "version": "2.2.0",
+    "version": "1.4.0",
     "description": "🥧 The Cross-Platform Pie Menu.",
     "homepage": "https://ko-fi.com/post/Kando-1-0-0-released-G2G5Z1DOS",
     "license": {
         "identifier": "MIT license",
         "url": "https://github.com/kando-menu/kando?tab=readme-ov-file#License-1-ov-file"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/kando-menu/kando/releases/download/v2.2.0/Kando-win32-x64-2.2.0.zip",
-            "hash": "4ecc64e70fb2074d62b81aa9da27188fa497ca466fbcc78bd60b528e25d8136e"
-        },
-        "arm64": {
-            "url": "https://github.com/kando-menu/kando/releases/download/v2.2.0/Kando-win32-arm64-2.2.0.zip",
-            "hash": "ad6008957e2cb1f395031336197951549f85b6eeadbc97ec5d418a47634975e6"
-        }
-    },
+    "url": "https://github.com/kando-menu/kando/releases/download/v1.4.0/Kando-win32-x64-1.4.0.zip",
+    "hash": "9495dc5c57f9ffd1307ac803cc9cc8de1966661c26cebbfb0e9dddf919ecbc55",
     "installer": {
         "script": [
             "# handle runtime cache",
@@ -39,17 +31,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/kando-menu/kando/releases/latest",
+        "url": "https://api.github.com/repos/kando-menu/kando/releases",
         "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/kando-menu/kando/releases/download/v$version/Kando-win32-x64-$version.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/kando-menu/kando/releases/download/v$version/Kando-win32-arm64-$version.zip"
-            }
-        }
+        "url": "https://github.com/kando-menu/kando/releases/download/v$version/Kando-win32-x64-$version.zip"
     }
 }

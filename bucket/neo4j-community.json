@@ -1,11 +1,11 @@
 {
-    "version": "2026.03.1",
+    "version": "5.23.0",
     "description": "Blazing-Fast Graph, Petabyte Scale",
     "homepage": "https://neo4j.com/",
     "license": "Unknown",
-    "url": "https://dist.neo4j.org/neo4j-community-2026.03.1-windows.zip",
-    "hash": "b99fbc92c10dc8fe98079fdb6100161ad0a8047c061d48984022d36085341968",
-    "extract_dir": "neo4j-community-2026.03.1",
+    "url": "https://dist.neo4j.org/neo4j-community-5.23.0-windows.zip",
+    "hash": "d43151ba7104aa38da57426151468b602c32a6119a5089576a02781cd6f8250d",
+    "extract_dir": "neo4j-community-5.23.0",
     "env_add_path": "bin",
     "checkver": {
         "url": "https://neo4j.com/download-center/#community",

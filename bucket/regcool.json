@@ -1,28 +1,30 @@
 {
-    "homepage": "https://kurtzimmermann.com",
-    "version": "3.0.0.5",
-    "license": "freeware",
+    "version": "2.013",
+    "description": "Advanced registry editor for Windows",
+    "homepage": "https://kurtzimmermann.com/",
+    "license": "Freeware",
+    "notes": "RegCool Portable has an updating mechanism included, but it IS disabled by default.",
     "architecture": {
         "64bit": {
             "url": "https://kurtzimmermann.com/files/RegCoolX64.zip",
-            "hash": "4bcec2705eedd1e82071ebfbd41c36afddd8ac300034e3f2d3c93b22dc50f664"
+            "hash": "eb409379d43d50b774494d5edcd66772210a44129388af702c448446c8fc7754"
         },
         "32bit": {
             "url": "https://kurtzimmermann.com/files/RegCoolX32.zip",
-            "hash": "bcc901113c94da4d134e8cb37c1209eb33f0accaffc5dbbb893f6414d1da8319"
+            "hash": "bdcc87e72db27c170837157588e71bc9c065141b9c51f628b5fa4cd50cb0b9d0"
         }
     },
-    "bin": "RegCool.exe",
-    "persist": "Settings",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\Settings\")) { New-Item -ItemType Directory \"$dir\\Settings\" | Out-Null }",
     "shortcuts": [
         [
             "RegCool.exe",
             "RegCool"
         ]
     ],
+    "persist": "Settings",
     "checkver": {
-        "url": "https://kurtzimmermann.com/downrc_en.html",
-        "regex": "Version ([\\d.]+)"
+        "url": "https://www.majorgeeks.com/files/details/regcool.html",
+        "regex": "RegCool ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

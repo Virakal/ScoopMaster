@@ -2,10 +2,7 @@
     "version": "6.5.1",
     "description": ".NET debugger and assembly editor",
     "homepage": "https://github.com/dnSpyEx/dnSpy",
-    "license": {
-        "identifier": "GPL-3.0-only",
-        "url": "https://github.com/dnSpyEx/dnSpy/blob/HEAD/LICENSE.txt"
-    },
+    "license": "GPL-3.0-only",
     "architecture": {
         "32bit": {
             "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v6.5.1/dnSpy-net-win32.zip",
@@ -38,18 +35,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win32.zip",
-                "hash": {
-                    "url": "https://github.com/dnSpyEx/dnSpy/releases/tag/v$version",
-                    "regex": "<code>dnSpy-net-win32.zip</code>: <code>$sha256</code>"
-                }
+                "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win32.zip"
             },
             "64bit": {
-                "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win64.zip",
-                "hash": {
-                    "url": "https://github.com/dnSpyEx/dnSpy/releases/tag/v$version",
-                    "regex": "<code>dnSpy-net-win64.zip</code>: <code>$sha256</code>"
-                }
+                "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win64.zip"
             }
         }
     }

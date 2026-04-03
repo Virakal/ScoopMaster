@@ -1,5 +1,5 @@
 {
-    "version": "4.73",
+    "version": "4.67",
     "description": "IrfanView. A fast, compact and innovative graphic viewer",
     "homepage": "https://www.irfanview.com/",
     "license": {
@@ -9,12 +9,12 @@
     "changelog": "https://www.irfanview.com/main_history.htm",
     "architecture": {
         "64bit": {
-            "url": "https://www.irfanview.info/files/iview473_x64_setup.exe#/setup.exe",
-            "hash": "724e0a7aa97d10ad76843552ddf648521f60f2809398f7ca9ad4ae4726010e08"
+            "url": "https://www.irfanview.info/files/iview467_x64_setup.exe#/setup.exe",
+            "hash": "15306b139ae4713b88095c4f8ecbd3ff7655d77d3d519fd86572ace7ea836520"
         },
         "32bit": {
-            "url": "https://www.irfanview.info/files/iview473_setup.exe#/setup.exe",
-            "hash": "0a43505ce79ae9401324af304f0bde22d1dd4d00f27dff0cccf62cb7022b770d"
+            "url": "https://www.irfanview.info/files/iview467_setup.exe#/setup.exe",
+            "hash": "5aed8ce9f23eb8a1e11307b641186909aa9a4f41680350db524ea975bd585cb6"
         }
     },
     "pre_download": "Assert-Administrator",

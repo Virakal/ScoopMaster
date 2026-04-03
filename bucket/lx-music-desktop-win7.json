@@ -1,16 +1,16 @@
 {
-    "version": "2.12.1",
+    "version": "2.9.0",
     "description": "一个基于 electron 的音乐软件",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": "Apache-2.0 license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.1/lx-music-desktop-v2.12.1-win7_x64-green.7z",
-            "hash": "5cf4677e09f18ff2ef65868889538baaa0226c4ca48784c1ad6db88f4e9c72b3"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.9.0/lx-music-desktop-v2.9.0-win7_x64-green.7z",
+            "hash": "607188c950dd90f44d5b59b5b3ce3bff7fbe4ab10a39f106ce69d7ed96a8b249"
         },
         "32bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.1/lx-music-desktop-v2.12.1-win7_x86-green.7z",
-            "hash": "fa498a8a3eb6a184ad1061ab811f76ce2928ebcb10f3a159ac883d502d2effba"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.9.0/lx-music-desktop-v2.9.0-win7_x86-green.7z",
+            "hash": "9e2594a6dab86c19e4e0d33bcde8b9764e57d1788473f3ccb3f423377b65f30e"
         }
     },
     "shortcuts": [

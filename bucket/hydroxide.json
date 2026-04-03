@@ -2,10 +2,10 @@
     "description": "A third-party, open-source ProtonMail CardDAV, IMAP and SMTP bridge",
     "homepage": "https://github.com/emersion/hydroxide",
     "license": "MIT",
-    "version": "0.2.31",
+    "version": "0.2.28",
     "checkver": "github",
     "depends": "go",
-    "url": "https://github.com/emersion/hydroxide/releases/download/v0.2.31/hydroxide-0.2.31.tar.gz#/download",
+    "url": "https://github.com/emersion/hydroxide/releases/download/v0.2.28/hydroxide-0.2.28.tar.gz#/download",
     "installer": {
         "script": [
             "Push-Location $dir",
@@ -17,14 +17,9 @@
             "Pop-Location"
         ]
     },
-    "shortcuts": [
-        [
-            "hydroxide.exe",
-            "Hydroxide"
-        ]
-    ],
+    "shortcuts": [["hydroxide.exe", "Hydroxide"]],
     "bin": "hydroxide.exe",
-    "hash": "46ba03a7f8c1095f30a2135e5f3adeece30a805e528b4e277a41d9786a9ee4b0",
+    "hash": "2bfcdfb0510c1ad9ca321be20bbe842f3a52397a8e7e96dc05f033ca3523429c",
     "autoupdate": {
         "url": "https://github.com/emersion/hydroxide/releases/download/v$version/hydroxide-$version.tar.gz#/download",
         "hash": {

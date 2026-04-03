@@ -2,15 +2,15 @@
     "homepage": "https://www.python.org/",
     "description": "A programming language that lets you work quickly and integrate systems more effectively.",
     "license": "Python-2.0",
-    "version": "3.14.3",
+    "version": "3.12.6",
     "architecture": {
         "64bit": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-amd64.zip#/python314.zip_",
-            "hash": "md5:ad4961a479dedbeb7c7d113253f8db1b"
+            "url": "https://www.python.org/ftp/python/3.12.6/python-3.12.6-embed-amd64.zip#/python312.zip_",
+            "hash": "md5:ae256f31ee4700eba679802233bff3e9"
         },
         "32bit": {
-            "url": "https://www.python.org/ftp/python/3.14.3/python-3.14.3-embed-win32.zip#/python314.zip_",
-            "hash": "md5:b249a32c4c186fef19b86a3ca8e7a9cd"
+            "url": "https://www.python.org/ftp/python/3.12.6/python-3.12.6-embed-win32.zip#/python312.zip_",
+            "hash": "md5:b6eecbdfd865e4a3ae8bed93b9f2cd95"
         }
     },
     "checkver": {
@@ -32,17 +32,7 @@
         }
     },
     "post_install": [
-        "$parts = $version -split '\\.'",
-        "$versionshort = $parts[0] + $parts[1]",
-        "$pythonDir = \"$dir\\..\\..\\python\\current\"",
-        "if (Test-Path $pythonDir) { cmd /c mklink \"$pythonDir\\python$versionshort.zip\" \"$dir\\python$versionshort.zip_\" }"
-    ],
-    "uninstaller": {
-        "script": [
-            "$parts = $version -split '\\.'",
-            "$versionshort = $parts[0] + $parts[1]",
-            "$symlink = \"$dir\\..\\..\\python\\current\\python$versionshort.zip\"",
-            "if (Test-Path $symlink) { Remove-Item $symlink -Force }"
-        ]
-    }
+        "$versionshort = ($version -replace '\\.','').SubString(0,2)",
+        "if (Test-Path \"$dir\\..\\..\\python\") { cmd /c mklink  \"$dir\\..\\..\\python\\current\\python$versionshort.zip\" \"$dir\\python$versionshort.zip_\"}"
+    ]
 }

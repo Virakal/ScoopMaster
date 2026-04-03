@@ -1,18 +1,18 @@
 {
     "homepage": "http://jacquelin.potier.free.fr/ShortcutsSearchAndReplace/",
-    "version": "2.7.2",
+    "version": "1.13.0",
     "license": "freeware",
     "architecture": {
         "64bit": {
             "url": "http://jacquelin.potier.free.fr/exe/ShortcutsSearchAndReplace_bin64.zip",
-            "hash": "9b409fb48aa3c811d8139fa607e5c653227092f26f6e3e0b589b1dc21db5698d",
+            "hash": "2dfe5ddebe68f829e59b98018efe0fb59dbb4a6589ff05146be0dc45a3b802c0",
             "installer": {
                 "script": "Rename-Item \"$dir\\ShortcutsSearchAndReplace64.exe\" \"ShortcutsSearchAndReplace.exe\""
             }
         },
         "32bit": {
             "url": "http://jacquelin.potier.free.fr/exe/ShortcutsSearchAndReplace_bin.zip",
-            "hash": "bd2fa0f57487ce98c0d926f5dc5bd607fa64b2a8e9b319a6efb028c22931416b"
+            "hash": "d25da6c131076c586c0d725ce47d7c6c0d9db8f000d1e8ac89dbda58f97a76c0"
         }
     },
     "bin": "ShortcutsSearchAndReplace.exe",
@@ -22,7 +22,7 @@
             "Shortcuts Search And Replace"
         ]
     ],
-    "checkver": "Version</td>\\s*<td>&nbsp;([\\d.]+)",
+    "checkver": "Version&nbsp;\\:&nbsp;</td>\\s*<td>&nbsp;([\\d.]+)",
     "autoupdate": {
         "architecture": {
             "64bit": {

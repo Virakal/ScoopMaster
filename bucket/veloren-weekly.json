@@ -1,5 +1,5 @@
 {
-    "version": "2026-04-01T20_20",
+    "version": "2024-09-10T17_36",
     "description": "A multiplayer voxel RPG inspired by games such as Cube World, Legend of Zelda: Breath of the Wild, Dwarf Fortress and Minecraft",
     "homepage": "https://veloren.net/",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/veloren/veloren/releases/download/weekly/weekly-windows-x86_64-2026-04-01T20_20.zip",
-            "hash": "277834bb435fe2992d6e4c6231a90e2a132f07b78c8797a11c82a17c928a5cd1"
+            "url": "https://github.com/veloren/veloren/releases/download/weekly/weekly-windows-x86_64-2024-09-10T17_36.zip",
+            "hash": "6e0ed620672b951cd80e96d935ff86d8fcc457436e3621304554c97a8f70e12e"
         }
     },
     "bin": [
@@ -41,7 +41,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/veloren/veloren/releases/download/weekly/weekly-windows-x86_64-$version.zip"
+                "url": "https://github.com/veloren/veloren/releases/download/weekly/weekly-windows-x86_64-$version.zip"
             }
         }
     }

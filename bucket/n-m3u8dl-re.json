@@ -1,5 +1,5 @@
 {
-    "version": "0.5.1",
+    "version": "0.2.1",
     "description": "Cross-Platform, modern and powerful stream downloader for MPD/M3U8/ISM",
     "homepage": "https://github.com/nilaoda/N_m3u8DL-RE/blob/main/README.md",
     "license": "MIT",
@@ -11,12 +11,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.1-beta/N_m3u8DL-RE_v0.5.1-beta_win-x64_20251029.zip",
-            "hash": "7e2e5e64c2893aef118febc2213cd43706fce8bd0ffd5e8dd94024d79ea365e9"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.1-beta/N_m3u8DL-RE_Beta_win-x64_20240828.zip",
+            "hash": "34d574f29119a9b20f7752a9decf7bb1273ad42cdd7dcea034a48f522e913b94"
         },
         "arm64": {
-            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.5.1-beta/N_m3u8DL-RE_v0.5.1-beta_win-arm64_20251029.zip",
-            "hash": "eb7f645399ae4b67101070d14f05c8af905ce94bc4d83cb4323456c8f267d53e"
+            "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.1-beta/N_m3u8DL-RE_Beta_win-arm64_20240828.zip",
+            "hash": "3125c2034241c9c7bb49dec19ffc9009f4f8a15d02cdddad90a8581708b3ca78"
         }
     },
     "bin": [
@@ -28,15 +28,15 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/nilaoda/N_m3u8DL-RE/releases/latest",
-        "regex": "/releases/download/v(?<version>[\\d.]+)-beta/N_m3u8DL-RE_v(?<version>[\\d.]+)-beta_win-x64_(?<build>\\d{8})"
+        "regex": "/releases/download/v(?<version>[\\d.]+)-beta/N_m3u8DL-RE_Beta_win-x64_(?<build>\\d{8})"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$version-beta/N_m3u8DL-RE_v$version-beta_win-x64_$matchBuild.zip"
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$version-beta/N_m3u8DL-RE_Beta_win-x64_$matchBuild.zip"
             },
             "arm64": {
-                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$version-beta/N_m3u8DL-RE_v$version-beta_win-arm64_$matchBuild.zip"
+                "url": "https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v$version-beta/N_m3u8DL-RE_Beta_win-arm64_$matchBuild.zip"
             }
         }
     }

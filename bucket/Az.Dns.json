@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:9de54cb97b3113eec1b1487a348e599f86204b3009f4174037fc1751ec9e68f92960ce861ba9d1a88c7c28947a638d2998d81984b695d2e0c3fc9ed6a9e8395d",
+    "hash": "sha512:6db535896887d4d95a1917c02b1846bdff820521d6cddda9be1fac1d525567b38c55a3ed65893db6ad9967e16190d7a61ea6d75ee597e0b31ea54bf7dfddf4fc",
     "description": "Microsoft Azure PowerShell - DNS service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on DNS, please visit the following: https://docs.microsoft.com/azure/dns/",
     "psmodule": {
         "name": "Az.Dns"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Dns/2.0.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Dns/1.2.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.0.0"
+    "version": "1.2.1"
 }

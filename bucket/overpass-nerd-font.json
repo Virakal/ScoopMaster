@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Overpass' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Overpass.tar.xz",
-    "hash": "4d6d7e8b91840bb2b18bc7ac427f979183e68b6b061db58b4139ad5679bdc36f",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Overpass.tar.xz",
+    "hash": "fcb796892b105c98ad05a29f184f09a02038970ff6a95f8cda082cd1b1b08cde",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

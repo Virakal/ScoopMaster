@@ -1,16 +1,16 @@
 {
-    "version": "7.5.2.6400",
+    "version": "7.2.2.4600",
     "description": "A state-of-the-art,multi-platform web browser that offers users a seamless browsing and sharing experience.",
     "homepage": "https://www.maxthon.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://pub.mxfast.net/file/mx-pub/inst/win/7.5.2.6400/maxthon_portable_7.5.2.6400_beta_x64.zip",
-            "hash": "e9645796a1165ec78bfc81c946cf28de57f18287ad72c4b98e51ac959f8284f1"
+            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x64.zip",
+            "hash": "f8a6668f0dc4fb0476b8bd04bf0bc3680782aa4e0313baf4a1f4cd6fc986360b"
         },
         "32bit": {
-            "url": "https://pub.mxfast.net/file/mx-pub/inst/win/7.5.2.6400/maxthon_portable_7.5.2.6400_beta_x86.zip",
-            "hash": "64d221b677e402560c3a077e0725dcfbcb91c501707a8dc849e20e3232bb1232"
+            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x86.zip",
+            "hash": "64aa756b9e692fe74a9947f9a0b2c5804ad5face7b7f2c17c8cec3403ebfa7fd"
         }
     },
     "shortcuts": [
@@ -26,15 +26,15 @@
     "persist": "User Data",
     "checkver": {
         "url": "https://api.github.com/repos/maxthon/Maxthon/releases/latest",
-        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64(?<anothersuffix>(_[^_]+)?).zip"
+        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://pub.mxfast.net/file/mx-pub/inst/win/$version/maxthon_portable_$version$matchSuffix_x64$matchAnothersuffix.zip"
+                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x64.zip"
             },
             "32bit": {
-                "url": "https://pub.mxfast.net/file/mx-pub/inst/win/$version/maxthon_portable_$version$matchSuffix_x86$matchAnothersuffix.zip"
+                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x86.zip"
             }
         }
     }

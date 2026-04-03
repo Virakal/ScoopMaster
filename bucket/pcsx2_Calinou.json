@@ -1,5 +1,5 @@
 {
-    "version": "2.6.3",
+    "version": "1.6.0",
     "description": "A feature rich FOSS PlayStation 2 emulator",
     "homepage": "https://pcsx2.net/",
     "license": {
@@ -14,8 +14,9 @@
     "suggest": {
         "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.6.3/pcsx2-v2.6.3-windows-x64-Qt.7z",
-    "hash": "963ae6c82bc858a09115c2455247feb76b453862c04f60d41ef80739d802ae60",
+    "url": "https://github.com/PCSX2/pcsx2/releases/download/v1.6.0/pcsx2-1.6.0-binaries.7z",
+    "hash": "f3401d6f74a4306797d9aab298d58c3b3898eb563495c463993f378c9f4801cb",
+    "extract_dir": "PCSX2 1.6.0",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
@@ -26,10 +27,10 @@
         "   }",
         "}"
     ],
-    "post_install": "Set-Content -Value $null -Path \"$dir\\portable.ini\"",
+    "bin": "pcsx2.exe",
     "shortcuts": [
         [
-            "pcsx2-qt.exe",
+            "pcsx2.exe",
             "PCSX2"
         ]
     ],
@@ -38,9 +39,9 @@
         "cheats_ws",
         "cheats",
         "inis",
-        "inputprofiles",
         "logs",
         "memcards",
+        "portable.ini",
         "shaders\\GSdx_FX_Settings.ini",
         "snaps",
         "sstates"
@@ -49,7 +50,7 @@
         "github": "https://github.com/PCSX2/pcsx2/"
     },
     "autoupdate": {
-        "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z",
+        "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-$version-binaries.7z",
         "extract_dir": "PCSX2 $version"
     }
 }

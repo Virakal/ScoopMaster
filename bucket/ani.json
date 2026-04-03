@@ -1,12 +1,12 @@
 {
-    "version": "5.4.0-beta05",
+    "version": "3.10.0-alpha01",
     "description": "One-stop online barrage drama tracking platform",
     "homepage": "https://github.com/open-ani/ani",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/open-ani/ani/releases/download/v5.4.0-beta05/ani-5.4.0-beta05-windows-x86_64.zip",
-            "hash": "e4fed3311b40ca55c7e94857d65e4c54f9eed99ce10c2d545a731fe02ed5c868",
+            "url": "https://github.com/open-ani/ani/releases/download/v3.10.0-alpha01/ani-3.10.0-alpha01-windows-x86_64.zip",
+            "hash": "48e16949528a9ddb614c7334c34cea00bd377e6ba0dddbe3d503f470fe863122",
             "extract_dir": "Ani"
         }
     },
@@ -19,16 +19,16 @@
     ],
     "installer": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name mqbucket) scripts/AppsUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name muggle) scripts/DoradoUtils.psm1)",
             "Mount-ExternalRuntimeData -Source \"$persist_dir\\data\" -Target \"$env:APPDATA\\Him188\"",
-            "Remove-Module -Name AppsUtils"
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name mqbucket) scripts/AppsUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name muggle) scripts/DoradoUtils.psm1)",
             "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Him188\"",
-            "Remove-Module -Name AppsUtils"
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "checkver": {

@@ -2,15 +2,15 @@
     "homepage": "https://helio.fm/",
     "description": "Libre music composition software",
     "license": "GPL-3.0-only",
-    "version": "3.17",
+    "version": "3.14",
     "architecture": {
         "64bit": {
-            "url": "https://ci.helio.fm/helio-3.17-x64.zip",
-            "hash": "8b5a21dbdc1509e0bd5c0df2d1bfef056edbe7bfb10853c15213975ebfa43ad3"
+            "url": "https://ci.helio.fm/helio-3.14-x64.zip",
+            "hash": "d77cae12a891a0ced7cc0bb5672054b6fcef20258a6af111fdd8df6c93ef6dcf"
         },
         "32bit": {
-            "url": "https://ci.helio.fm/helio-3.17-x32.zip",
-            "hash": "ceb6a72de076ce402850e9b7666abe940d6ed7d5b50d99e6206a88094334d221"
+            "url": "https://ci.helio.fm/helio-3.14-x32.zip",
+            "hash": "7906704b40c15cd45f1276afe07ae779ec51a8fb306274c26514232facbf4465"
         }
     },
     "shortcuts": [

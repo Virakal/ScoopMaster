@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
-    "version": "1.0.37",
+    "version": "1.0.20",
     "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
     "license": "OFL-1.1",
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/Sarasa-SuperTTC-1.0.37.7z",
-    "hash": "bda22d32a7cb6585fadd412bb68c008e75e88375a533347bc659c53a478ff0d2",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/be5invis/Sarasa-Gothic/LatestRelease/Sarasa-SuperTTC-1.0.20.7z",
+    "hash": "f4b9ecfa81ca802881ff95003911095354c6799ea55abc94c0bfd68cf45ddea1",
     "checkver": "github",
     "installer": {
         "script": [
@@ -38,7 +38,7 @@
             "}",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
@@ -47,7 +47,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -77,7 +77,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",

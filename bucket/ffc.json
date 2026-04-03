@@ -1,16 +1,18 @@
 {
     "homepage": "https://www.uwe-sieber.de/filetools_e.html",
     "description": "is optimized for large files. It reads and writes directly from and to disk, written data can be verified.",
-    "version": "1.9.2",
+    "version": "1.8.3",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.uwe-sieber.de/files/FFC_x64.zip",
-            "hash": "6e22159bb1d5bada719dcd154270b21c437ab3c6aeb0960b315a9ab6c5fbdd4d"
+            "url": "https://www.uwe-sieber.de/files/ffc.zip",
+            "hash": "b31c99573d561468ee316e374b1a62c8325f7736d36351a3c1eb05ae39d4a46a",
+            "extract_dir": "x64"
         },
         "32bit": {
-            "url": "https://www.uwe-sieber.de/files/FFC_Win32.zip",
-            "hash": "a683d4b298df5e4887184d315911702780891e341f3adaa812f9c1f41d40fd12"
+            "url": "https://www.uwe-sieber.de/files/ffc.zip",
+            "hash": "b31c99573d561468ee316e374b1a62c8325f7736d36351a3c1eb05ae39d4a46a",
+            "extract_dir": "Win32"
         }
     },
     "bin": "FFC.exe",
@@ -21,12 +23,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.uwe-sieber.de/files/FFC_x64.zip"
+                "url": "https://www.uwe-sieber.de/files/ffc.zip"
             },
             "32bit": {
-                "url": "https://www.uwe-sieber.de/files/FFC_Win32.zip"
+                "url": "https://www.uwe-sieber.de/files/ffc.zip"
             }
         }
-    },
-    "notes": "Version is taken from FFC.txt file inside the archive, which may differ from the homepage version."
+    }
 }

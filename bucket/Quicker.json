@@ -1,36 +1,36 @@
 {
     "homepage": "https://getquicker.net/",
-    "description": "Toolbox on your fingertips",
-    "version": "1.45.0",
-    "license": "Unknown",
+    "version": "1.43.21.0",
+    "license": "freeware",
     "architecture": {
         "64bit": {
-            "url": "https://download.getquicker.net/_productfiles/202601/Quicker.x64.1.45.0.0.msi",
-            "hash": "67bd85fc1c975385bc75fa17f3acc2dd3e82c06ec6e00272432f0e8a2b6f98eb"
+            "url": "https://files.getquicker.net/_productfiles/202409/Quicker.x64.1.43.21.0.msi",
+            "hash": "f85317ec91e6ec7075e8045d9534dc0611981e5b3b5bf61659a21a497652bdc2"
         },
         "32bit": {
-            "url": "https://download.getquicker.net/_productfiles/202601/Quicker.x86.1.45.0.0.msi",
-            "hash": "ff10cd4f720a647d17bcdb4ede030e705f23c181e8b5161428dfc6f1d862d285"
+            "url": "https://files.getquicker.net/_productfiles/202409/Quicker.x86.1.43.21.0.msi",
+            "hash": "f37dd3cf78ae5428dad46aa080c0be123f88c5000c5bfd72c7d8ca18b4bcf32d"
         }
     },
+    "extract_dir": "Quicker",
+    "checkver": {
+        "url": "https://getquicker.net/Download",
+        "regex": "快速通道[\\w\\W]*?(\\d.[\\d.]+)"
+    },
+    "bin": "Quicker.exe",
     "shortcuts": [
         [
-            "Quicker/Quicker.exe",
+            "Quicker.exe",
             "Quicker"
         ]
     ],
-    "bin": "Quicker/Quicker.exe",
-    "checkver": {
-        "url": "https://getquicker.net/Help/Versions",
-        "regex": "Version\\?version\\=(?<version>\\d*\\.\\d*\\.\\d*)\\.0[\\s\\S]*?(?<year>\\d{4})-(?<month>\\d{2})-\\d{2}"
-    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.getquicker.net/_productfiles/$matchYear$matchMonth/Quicker.x64.$version.0.msi"
+                "url": "https://files.getquicker.net/_productfiles/202409/Quicker.x64.$version.msi"
             },
             "32bit": {
-                "url": "https://download.getquicker.net/_productfiles/$matchYear$matchMonth/Quicker.x86.$version.0.msi"
+                "url": "https://files.getquicker.net/_productfiles/202409/Quicker.x86.$version.msi"
             }
         }
     }

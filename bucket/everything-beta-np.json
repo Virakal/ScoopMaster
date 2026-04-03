@@ -1,16 +1,16 @@
 {
-    "version": "1.4.1.1032",
+    "version": "1.4.1.1025",
     "description": "Locate files and folders by name instantly.",
     "homepage": "https://www.voidtools.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "http://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe",
-            "hash": "c42efad041d4c0bb4d4ac97ae7cbe89f153ec1fe078772392e749c7f5d5282d3"
+            "url": "http://www.voidtools.com/Everything-1.4.1.1025.x64-Setup.exe",
+            "hash": "9720302072d10d05ac21ffaf47c2b06a988124f2f1dda07c0b1632cf65a5d010"
         },
         "32bit": {
-            "url": "http://www.voidtools.com/Everything-1.4.1.1032.x86-Setup.exe",
-            "hash": "781a31b440045219752a1bb40fbd204b1d96964d4bf56af01b18e3d549b037aa"
+            "url": "http://www.voidtools.com/Everything-1.4.1.1025.x86-Setup.exe",
+            "hash": "096c9774f22b1a61d0349c9c49f62d6c417925dd719533a536a0495b2f526d20"
         }
     },
     "installer": {

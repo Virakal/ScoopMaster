@@ -1,23 +1,15 @@
 {
-    "version": "2026-04",
+    "version": "2024-09",
     "description": "General-purpose programming language with distinct typing, built for high performance, modern systems, and built-in data-oriented data types.",
     "homepage": "https://odin-lang.org/",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/odin-lang/Odin/releases/download/dev-2026-04/odin-windows-amd64-dev-2026-04.zip",
-            "hash": "a7497ea0dc412ec7202cd7933d17b051edb8f5ac34b9f6af88cf7285e7199b8c"
+            "url": "https://github.com/odin-lang/Odin/releases/download/dev-2024-09/odin-windows-amd64-dev-2024-09.zip",
+            "hash": "f1caafcbc327e50b71f980e74683488c3b99570e40e1642355e2cf7a8fde4781"
         }
     },
-    "pre_install": [
-        "$binDir = Get-ChildItem -Path \"$dir\" -Filter 'odin.exe' -Recurse | Select-Object -ExpandProperty DirectoryName",
-        "if ($binDir -ne $dir) {",
-        "  Move-Item -Path \"$binDir\\*\" -Destination \"$dir\"",
-        "  Remove-Item -Path \"$binDir\"",
-        "}"
-    ],
     "bin": "odin.exe",
-    "persist": "shared",
     "checkver": {
         "url": "https://github.com/odin-lang/Odin/releases/latest",
         "regex": "/releases/tag/dev-([\\d-]+)"

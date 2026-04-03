@@ -1,23 +1,30 @@
 {
-    "suggest": {
-        ".NET Desktop Runtime 10": "versions/windowsdesktop-runtime-10.0"
-    },
-    "version": "dec-2025",
-    "description": "Unreal Engine Archives Explorer",
+    "version": "4.4.3.6",
+    "description": "Software for exploring Unreal Engine games. It allows viewing most assets serialized as JSON, as well as playing back audio and viewing textures and models.",
     "homepage": "https://fmodel.app",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/4sval/FModel/blob/master/LICENSE"
     },
-    "url": "https://github.com/4sval/FModel/releases/download/dec-2025/FModel.zip",
-    "hash": "sha256:1BE47F969C716C9ED3AF5D1F941404202DC0A98760BDFC7D8E2B9AE08BE86624",
+    "url": "https://github.com/4sval/FModel/releases/download/4.4.3.6/FModel.zip",
+    "hash": "a37acecba66e9ec5866a07c034dcfe57c8b4d33d32e18fc3b8b0758f7f1df19d",
+    "pre_install": "If (!(Test-Path \"$persist_dir\\imgui.ini\")) { New-Item \"$dir\\imgui.ini\" -ItemType File -Force | Out-Null }",
     "shortcuts": [
         [
             "FModel.exe",
             "FModel"
         ]
     ],
-    "persist": "Output",
+    "persist": [
+        "imgui.ini",
+        "output"
+    ],
+    "post_uninstall": [
+        "If ($cmd -eq 'uninstall') {",
+        "  Remove-Item ${env:APPDATA}\\FModel\\* -Force -Recurse",
+        "  Remove-Item ${env:TEMP}\\.net\\FModel\\* -Force -Recurse",
+        "}"
+    ],
     "checkver": {
         "github": "https://github.com/4sval/FModel"
     },

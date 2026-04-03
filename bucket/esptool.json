@@ -1,22 +1,16 @@
 {
-    "version": "5.2.0",
-    "description": "Serial utility for flashing, provisioning, and interacting with Espressif SoCs",
+    "version": "4.8.0",
     "homepage": "https://github.com/espressif/esptool",
-    "license": "GPL-2.0-or-later",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/espressif/esptool/releases/download/v5.2.0/esptool-v5.2.0-windows-amd64.zip",
-            "hash": "ef0522120afb5e8e673d68726c32e0de416990fc62dc313191721edeb0a74fc6",
-            "extract_dir": "esptool-windows-amd64"
-        }
-    },
+    "description": "A Python-based, open-source, platform-independent utility to communicate with the ROM bootloader in Espressif chips.",
+    "license": "GPL-2.0 License",
+    "url": "https://github.com/espressif/esptool/releases/download/v4.8.0/esptool-v4.8.0-win64.zip",
+    "hash": "5575beabfe8c1c1ea7c1a0f1bd42ee97ac3f4c4dae5fc74cda58be0e23016da3",
+    "extract_dir": "esptool-v4.8.0-win64",
     "env_add_path": ".",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/espressif/esptool/releases/download/v$version/esptool-v$version-windows-amd64.zip"
-            }
-        }
-    }
+        "url": "https://github.com/espressif/esptool/releases/download/v$version/esptool-v$version-win64.zip",
+        "extract_dir": "esptool-v$version-win64"
+    },
+    "depends": "python"
 }

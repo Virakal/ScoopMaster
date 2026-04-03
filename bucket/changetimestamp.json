@@ -1,9 +1,9 @@
 {
-    "version": "1.06",
+    "version": "1.02",
     "description": "Change Timestamp.",
     "homepage": "https://dns-plus.net/ctime.html",
-    "url": "https://dns-plus.net/download/ctime106.zip",
-    "hash": "55265f072c0913a8508bdb570a480dc4122c14f0f3d2f040c9743ad819124b4c",
+    "url": "https://dns-plus.net/download/ctime102.zip",
+    "hash": "sha512:b087f7830f68d7fcbc36daa1b08a4e93cc4994c1ccea86a9ed9c1f09fca4f3a967ebde39440458fd55ee1cec219e43595c8c274495c160c76c47348a491952c9",
     "shortcuts": [
         [
             "ctime.exe",
@@ -12,9 +12,6 @@
     ],
     "checkver": {
         "url": "https://dns-plus.net/ctime.html",
-        "regex": "<b class=\"new\">Ver([\\d\\.]+)</b> \\[ <a href=\"\\./download/ctime([\\d]+)\\.zip\">ctime[\\d]+\\.zip</a> \\]<br>"
-    },
-    "autoupdate": {
-        "url": "https://dns-plus.net/download/ctime$match2.zip"
+        "regex": "<b class=\"new\">Ver([\\d\\.]+)</b> \\[ <a href=\"\\./download/ctime[\\d]+\\.zip\">ctime[\\d]+\\.zip</a> \\]<br>"
     }
 }

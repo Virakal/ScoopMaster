@@ -1,20 +1,20 @@
 {
-    "version": "2026-03-18",
+    "version": "2024-08-16",
     "description": "CONTEXT LMTX is a self contained installation of the CONTEXT macro package. It is the follow up on MKII and MKIV and uses the LUAMETATEX engine.",
     "homepage": "https://www.pragma-ade.nl/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "http://lmtx.pragma-ade.nl/install-lmtx/context-win64.zip",
-            "hash": "760c48c26c1d44360515ab23dc2f29b81cefabc0d3fdb05dae53dcc5be021226"
+            "hash": "5db2e713a51423a4b6a27dc9d213b84b8dfc900ae2e69725135dcc08e24b5183"
         },
         "32bit": {
             "url": "http://lmtx.pragma-ade.nl/install-lmtx/context-mswin.zip",
-            "hash": "a77683e3bf093e80c56cef8aac4515162b0447b668e651aee7c8e8e8456321e2"
+            "hash": "f433b3ebd301992992750c836c85e959304f9b1442c0e3c64ed77324863ca1c2"
         },
         "arm64": {
             "url": "http://lmtx.pragma-ade.nl/install-lmtx/context-windows-arm64.zip",
-            "hash": "d786d5530fcf043572f83ba946f1ad53071d52623749b6b119f6632557d309e7"
+            "hash": "0de01f8aee55200f12e2973ddaf203ef05d4df7579a4efd045837be0916fa970"
         }
     },
     "pre_install": [

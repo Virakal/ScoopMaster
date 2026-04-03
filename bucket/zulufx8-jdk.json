@@ -1,21 +1,21 @@
 {
     "description": "Open Source Builds of Zulu 8 With OpenJFX",
     "homepage": "https://www.azul.com/products/zulu-community/zulufx/",
-    "version": "8.92.0.21",
+    "version": "8.80.0.17",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-fx-jdk8.0.482-win_x64.zip",
-            "hash": "d3742c5ff212861f46aa41df26de70a61424cb7751f5b3a286a0105b7733f76d",
-            "extract_dir": "zulu8.92.0.21-ca-fx-jdk8.0.482-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.80.0.17-ca-fx-jdk8.0.422-win_x64.zip",
+            "hash": "929ca57ffe5c75282776c87dd789b33ceb74f334de234abcad0b138b7ed33325",
+            "extract_dir": "zulu8.80.0.17-ca-fx-jdk8.0.422-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu8.92.0.21-ca-fx-jdk8.0.482-win_i686.zip",
-            "hash": "4da56fcb10bf1f6be5574bf57c28b1cbed7d0db03a2f6b05c378c0ccf9cb8d58",
-            "extract_dir": "zulu8.92.0.21-ca-fx-jdk8.0.482-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu8.80.0.17-ca-fx-jdk8.0.422-win_i686.zip",
+            "hash": "302e2e1d3a936748836fd5e3b8d79db1c5b1fbaa887c8aee9e42fdc23cfbf6e8",
+            "extract_dir": "zulu8.80.0.17-ca-fx-jdk8.0.422-win_i686"
         }
     },
     "env_add_path": "bin",

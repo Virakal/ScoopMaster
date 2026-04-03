@@ -1,16 +1,16 @@
 {
-    "version": "1.3.0",
-    "description": "はてなブログ コマンドライン クライアント",
-    "homepage": "https://github.com/hymkor/htnblog-go",
+    "version": "1.1.0",
+    "description": "はてなブログ-クライアント",
+    "homepage": "https://github.com/hymkor/go-htnblog",
     "license": "MIT License",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/hymkor/htnblog-go/releases/download/v1.3.0/htnblog-v1.3.0-windows-386.zip",
-            "hash": "a40f2c5f600e5dd4ead3eb68a14ac81dcbb0eb510c4f122bd703b9d09facb9ad"
+            "url": "https://github.com/hymkor/go-htnblog/releases/download/v1.1.0/htnblog-v1.1.0-windows-386.zip",
+            "hash": "d17c2bb1d58be282437b00788a140596a54f2ab70f4e728407f6d0e0cfa28d83"
         },
         "64bit": {
-            "url": "https://github.com/hymkor/htnblog-go/releases/download/v1.3.0/htnblog-v1.3.0-windows-amd64.zip",
-            "hash": "649cabd1e1c9de2dbfaf33c35b80f194a7875b7d875a984b02511c0929b36212"
+            "url": "https://github.com/hymkor/go-htnblog/releases/download/v1.1.0/htnblog-v1.1.0-windows-amd64.zip",
+            "hash": "677f4a889f07d26db2139182a657113f32881aa1fe26319363675e4e2f46dd9e"
         }
     },
     "bin": "htnblog.exe",
@@ -18,10 +18,10 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/hymkor/htnblog-go/releases/download/v$version/htnblog-v$version-windows-386.zip"
+                "url": "https://github.com/hymkor/go-htnblog/releases/download/v$version/htnblog-v$version-windows-386.zip"
             },
             "64bit": {
-                "url": "https://github.com/hymkor/htnblog-go/releases/download/v$version/htnblog-v$version-windows-amd64.zip"
+                "url": "https://github.com/hymkor/go-htnblog/releases/download/v$version/htnblog-v$version-windows-amd64.zip"
             }
         }
     }

@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:6597ccdedd598dace0942ceaa5fcbce8e5efa11d657ad090e1f86b057ba941321aacf3ca38e51cb9ddfb0524f4eb7fa88c5eb0ee8f7d423ca79c9a1dc6ba757b",
+    "hash": "sha512:cf17b26dbe42b1d5a99c903d870c0553d71b4d1c449e8de6feb06f8bbc9f20d73299f1728bb3f98b204b8a0ba945ec7c87bff0c54896879ea20e9128670a1247",
     "description": "Microsoft Azure PowerShell: CloudService cmdlets",
     "psmodule": {
         "name": "Az.CloudService"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.CloudService/2.1.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.CloudService/2.0.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.1.1"
+    "version": "2.0.1"
 }

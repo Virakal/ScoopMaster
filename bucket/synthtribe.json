@@ -1,35 +1,35 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "##": "checkver: Returned quoted columns are title,url,subGroup",
-    "version": "3.0.1",
+    "version": "2.8.1",
     "description": "Control Behringer's synthesizers and do firmware updates.",
     "homepage": "https://www.behringer.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://community.musictribe.com/terms-of-use"
     },
-    "url": "https://cdn.mediavalet.com/aunsw/musictribe/MtVIv8hJOU6VUtceoG2oXg/zrsKmTO_9k6ZX9fWsKVjkw/Original/SYNTHTRIBE_V3.0.1.zip",
-    "hash": "b77950734fe0edd67de5ee712ee02b1c77acd2934f3d60e6da5823ae4317db2a",
+    "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V2.8.1-Windows.zip",
+    "hash": "7da174602426acd377186ba1585110b360f33044ef20910108a5d19ce3aa4609",
+    "extract_dir": "SYNTHTRIBE_V2.8.1-Windows",
     "shortcuts": [
         [
-            "SYNTHTRIBE_V3.0.1.exe",
+            "SYNTHTRIBE_2.8.1.exe",
             "SYNTHTRIBE"
         ]
     ],
     "checkver": {
         "script": [
-            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0704-AAC'",
+            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0722-ABR'",
             "$json = $(Invoke-WebRequest -Headers $head $url).Content | ConvertFrom-Json",
             "$list = ($json | Where-Object title -eq 'Software').list",
-            "$list | Where-Object subGroup -eq 'Windows' | ConvertTo-Csv -NoHeader"
+            "$list | ForEach-Object { if ($_.title -match 'Behringer SYNTHTRIBE for Windows V([\\d.]+)') { $matches[1] } }"
         ],
-        "regex": "\\\"https://(?<url>.+/SYNTHTRIBE_V(?<version>\\d+\\.\\d+\\.\\d+).+)\\\","
+        "regex": "(.+)"
     },
     "autoupdate": {
-        "url": "https://$matchUrl",
+        "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V$version-Windows.zip",
+        "extract_dir": "SYNTHTRIBE_V$version-Windows",
         "shortcuts": [
             [
-                "SYNTHTRIBE_V$version.exe",
+                "SYNTHTRIBE_$version.exe",
                 "SYNTHTRIBE"
             ]
         ]

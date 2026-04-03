@@ -1,13 +1,13 @@
 {
-    "version": "2.23.2",
+    "version": "2.19.3",
     "description": "A modern personal independent blog system.",
     "homepage": "https://halo.run",
     "license": "GPL-3.0-or-later",
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://github.com/halo-dev/halo/releases/download/v2.23.2/halo-2.23.2.jar#/halo.jar",
-    "hash": "1968f5377aa4c64776d850951909331479fff5baf9e11cd78ef077cfbabead0f",
+    "url": "https://github.com/halo-dev/halo/releases/download/v2.19.3/halo-2.19.3.jar#/halo.jar",
+    "hash": "45ed0bfb63ff4b1ce3f9f9ee662e6e2b61e4ef677c12f4067638609556ede353",
     "bin": "halo.jar",
     "checkver": {
         "github": "https://github.com/halo-dev/halo"

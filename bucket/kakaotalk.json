@@ -1,18 +1,10 @@
 {
-    "version": "26.2.0.4990",
+    "version": "4.1.6.4065",
     "description": "An easy, no-cost messenger that transcends standard chat.",
     "homepage": "https://www.kakaocorp.com/service/KakaoTalk",
     "license": "Unknown",
-    "architecture": {
-        "64bit": {
-            "url": "https://lk.kakaocdn.net/talkpc/talk/win32/x64/KakaoTalk_Setup.exe#/dl.7z",
-            "hash": "165e03160d9a1adb9a97f880219db361b9734088d248d3c0cea3f55b1c2117f7"
-        },
-        "32bit": {
-            "url": "https://lk.kakaocdn.net/talkpc/talk/win32/KakaoTalk_Setup.exe#/dl.7z",
-            "hash": "df09fbcc0b075b75f583093a97bb384e951c9ad02c245bd1d79f7608ae9a6b63"
-        }
-    },
+    "url": "http://app.pc.kakao.com/talk/win32/KakaoTalk_Setup.exe#/dl.7z",
+    "hash": "749e2f2d5142790a7c5b063f78083d0464145f5254864181597f952d49fce95d",
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\unisntall*\" -Recurse",
     "shortcuts": [
         [
@@ -25,13 +17,6 @@
         "regex": "kakaotalk_([\\d.]+)_full\\.pak"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://lk.kakaocdn.net/talkpc/talk/win32/x64/KakaoTalk_Setup.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://lk.kakaocdn.net/talkpc/talk/win32/KakaoTalk_Setup.exe#/dl.7z"
-            }
-        }
+        "url": "http://app.pc.kakao.com/talk/win32/KakaoTalk_Setup.exe#/dl.7z"
     }
 }

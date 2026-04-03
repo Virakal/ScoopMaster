@@ -1,15 +1,15 @@
 {
-    "version": "5.9.2",
+    "version": "1.8.9",
     "license": "LGPL-3.0-only",
     "homepage": "https://github.com/MaaXYZ/MaaFramework",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaXYZ/MaaFramework/releases/download/v5.9.2/MAA-win-x86_64-v5.9.2.zip",
-            "hash": "f740ab4e62a7f112720e32f9fdf3873dff9941f98424e1a2735abdf5cc174ca7"
+            "url": "https://github.com/MaaXYZ/MaaFramework/releases/download/v1.8.9/MAA-win-x86_64-v1.8.9.zip",
+            "hash": "c6adf3faad5c80ba4eacd87b7923ae216c9cabf1f6a8396a306d1fbe66c7f52b"
         },
         "arm64": {
-            "url": "https://github.com/MaaXYZ/MaaFramework/releases/download/v5.9.2/MAA-win-aarch64-v5.9.2.zip",
-            "hash": "3575e9314309d6128afd880b35988c52d9c3dad67eb8f21e1609a25369f36d18"
+            "url": "https://github.com/MaaXYZ/MaaFramework/releases/download/v1.8.9/MAA-win-aarch64-v1.8.9.zip",
+            "hash": "f1352a34f6e596fd4fe354abde805171281b86e57123894acfcf90811e7b117e"
         }
     },
     "checkver": "github",

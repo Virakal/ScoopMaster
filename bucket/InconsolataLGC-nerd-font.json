@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'InconsolataLGC' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/InconsolataLGC.tar.xz",
-    "hash": "59b5961b83f0fd64ef579099ca0209dd706d5025feac813c80fcc2d0648d717f",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/InconsolataLGC.tar.xz",
+    "hash": "7a96f8cc30e57a426ffce3b844deb10d6325181b28df9b76735308f2d787dc2d",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

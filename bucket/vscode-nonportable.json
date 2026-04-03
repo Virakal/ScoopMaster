@@ -1,5 +1,5 @@
 {
-    "version": "1.114.0",
+    "version": "1.93.1",
     "description": "Lightweight but powerful source code editor (settings stored in %USERPROFILE%)",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -14,12 +14,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://update.code.visualstudio.com/1.114.0/win32-x64-archive/stable#/dl.7z",
-            "hash": "1fdc03d3ad7e8312b214af293ccac8ea522fd24b6f6e8d23b09c0c21956ad1e4"
+            "url": "https://update.code.visualstudio.com/1.93.1/win32-x64-archive/stable#/dl.7z",
+            "hash": "d74a51590e4d1c9c7ad63488c2aafb83f9b665d67f6982c8249281c21c640977"
         },
         "arm64": {
-            "url": "https://update.code.visualstudio.com/1.114.0/win32-arm64-archive/stable#/dl.7z",
-            "hash": "ac72c416c295df7a4b1be7da1089f47bc8d5710d4b474b9d70c73aaffc02d7d7"
+            "url": "https://update.code.visualstudio.com/1.93.1/win32-arm64-archive/stable#/dl.7z",
+            "hash": "beace0327bbe1431735944d94b24d18f7fa69bfca09c55475f48a458439a7fcd"
         }
     },
     "env_add_path": "bin",
@@ -48,24 +48,23 @@
         "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
     },
     "checkver": {
-        "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/stable/latest",
-        "jsonpath": "$.name",
-        "regex": "^(?!.*-insider$)([\\d.]+)"
+        "url": "https://code.visualstudio.com/sha?build=stable",
+        "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].name"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://update.code.visualstudio.com/$version/win32-x64-archive/stable#/dl.7z",
                 "hash": {
-                    "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/stable/latest",
-                    "jsonpath": "$.sha256hash"
+                    "url": "https://code.visualstudio.com/sha?build=stable",
+                    "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].sha256hash"
                 }
             },
             "arm64": {
                 "url": "https://update.code.visualstudio.com/$version/win32-arm64-archive/stable#/dl.7z",
                 "hash": {
-                    "url": "https://update.code.visualstudio.com/api/update/win32-arm64-archive/stable/latest",
-                    "jsonpath": "$.sha256hash"
+                    "url": "https://code.visualstudio.com/sha?build=stable",
+                    "jsonpath": "$.products[?(@.platform.os == 'win32-arm64-archive')].sha256hash"
                 }
             }
         }

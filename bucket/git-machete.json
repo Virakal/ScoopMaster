@@ -1,11 +1,11 @@
 {
-    "version": "3.40.0",
+    "version": "3.29.3",
     "description": "Probably the sharpest git repository organizer & rebase/merge workflow automation tool you've ever seen",
     "homepage": "https://github.com/VirtusLab/git-machete",
     "license": "MIT",
     "depends": "python",
-    "url": "https://files.pythonhosted.org/packages/py3/g/git-machete/git_machete-3.40.0-py3-none-any.whl",
-    "hash": "38a49887bdc465b3c41f86ef2671b01c9e8322da57dd23b51f56cfb773225c69",
+    "url": "https://files.pythonhosted.org/packages/py3/g/git-machete/git_machete-3.29.3-py3-none-any.whl",
+    "hash": "3819b50a58aee458c4cad78c0bfdb9c605adcbf22d7e3badc3bdd294667e48b3",
     "installer": {
         "script": [
             "Push-Location \"$dir\"",

@@ -1,5 +1,5 @@
 {
-    "version": "3.11.4",
+    "version": "3.5.3",
     "description": "SDK for the Dart programming language",
     "homepage": "https://dart.dev/",
     "license": "BSD-3-Clause",
@@ -7,8 +7,12 @@
     "env_add_path": "bin",
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.11.4/sdk/dartsdk-windows-x64-release.zip",
-            "hash": "c7ba740dd776a18a492b7ef8691e389665f34076f91ede818b864dbc2ef517c3"
+            "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.3/sdk/dartsdk-windows-x64-release.zip",
+            "hash": "fbd503c56789d97a1e74d46e7a549d4ab7abcda68f3a5325f17732471685b22a"
+        },
+        "32bit": {
+            "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/3.5.3/sdk/dartsdk-windows-ia32-release.zip",
+            "hash": "f8505781fbacb12c07e6739e8172e41fff5c8ecdc55ea8b4805e522a01d85ecb"
         }
     },
     "checkver": {
@@ -19,6 +23,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/$version/sdk/dartsdk-windows-x64-release.zip"
+            },
+            "32bit": {
+                "url": "https://storage.googleapis.com/dart-archive/channels/stable/release/$version/sdk/dartsdk-windows-ia32-release.zip"
             }
         },
         "hash": {

@@ -1,27 +1,22 @@
 {
-    "version": "1.0.2",
-    "description": "Lune Open Source Music Player",
-    "homepage": "https://github.com/saraansx/Lune",
-    "license": "GPL-3.0",
+    "version": "0.8.8",
+    "description": "A standalone Luau runtime",
+    "homepage": "https://lune.gitbook.io/lune/",
+    "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/saraansx/Lune/releases/download/v1.0.2/Lune-Setup-1.0.2.exe#/dl.7z",
-            "hash": "F7A6D7B9DD620FF27A03C1B2062CE046181AE6493100A7EA4ED90C81B76B71FC"
+            "url": "https://github.com/lune-org/lune/releases/download/v0.8.8/lune-0.8.8-windows-x86_64.zip",
+            "hash": "f1b4a4bad531c20885a3556444767b66637cb40b9b6ddaa5f779f5f7eab1c84e"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
-    "bin": "Lune.exe",
-    "shortcuts": [
-        ["Lune.exe", "Lune"]
-    ],
-    "checkver": "github",
+    "bin": "lune.exe",
+    "checkver": {
+        "github": "https://github.com/lune-org/lune"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/saraansx/Lune/releases/download/v$version/Lune-Setup-$version.exe#/dl.7z"
+                "url": "https://github.com/lune-org/lune/releases/download/v$version/lune-$version-windows-x86_64.zip"
             }
         }
     }

@@ -1,20 +1,16 @@
 {
-    "version": "0.11.3",
+    "version": "0.4.11",
     "description": "An extremely fast Python package installer and resolver, written in Rust.",
-    "homepage": "https://docs.astral.sh/uv/",
+    "homepage": "https://github.com/astral-sh/uv",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.3/uv-x86_64-pc-windows-msvc.zip",
-            "hash": "ae681c0aaec7cc96af184648cb88d73f8393ed60fa5880abdd6bdb910f9b227c"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.4.11/uv-x86_64-pc-windows-msvc.zip",
+            "hash": "b9d43ddca9affbf03c048e34112c470a37af8d8e04c3ff2b79933a073f48e34d"
         },
         "32bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.3/uv-i686-pc-windows-msvc.zip",
-            "hash": "036fa39fa5ea3cb86c127324924b913b5858e8d91c4cb413edacfc3123001696"
-        },
-        "arm64": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.3/uv-aarch64-pc-windows-msvc.zip",
-            "hash": "e99c56f9ab5e1e1ddcaea3e2389990c94baf38e0d7cb2148de08baf2d3261d49"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.4.11/uv-i686-pc-windows-msvc.zip",
+            "hash": "f1c0c12a40097949aa793f870f811ac8ffcc349228f0d3cae246bd93108e62da"
         }
     },
     "bin": [
@@ -23,17 +19,14 @@
     ],
     "persist": "data",
     "env_set": {
-        "UV_DEFAULT_INDEX": "https://mirrors.cernet.edu.cn/pypi/web/simple",
+        "UV_INDEX_URL": "https://pypi.tuna.tsinghua.edu.cn/simple",
         "UV_CACHE_DIR": "$dir\\data\\cache",
-        "UV_PYTHON_INSTALL_DIR": "$dir\\data\\python",
-        "UV_PYTHON_BIN_DIR": "$dir\\data\\bin",
         "UV_TOOL_DIR": "$dir\\data\\tool",
-        "UV_TOOL_BIN_DIR": "$dir\\data\\bin"
+        "UV_TOOL_BIN_DIR": "$dir\\data\\bin",
+        "UV_PYTHON_INSTALL_DIR": "$dir\\data\\python"
     },
     "env_add_path": "data\\bin",
-    "checkver": {
-        "github": "https://github.com/astral-sh/uv"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -41,9 +34,6 @@
             },
             "32bit": {
                 "url": "https://github.com/astral-sh/uv/releases/download/$version/uv-i686-pc-windows-msvc.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/astral-sh/uv/releases/download/$version/uv-aarch64-pc-windows-msvc.zip"
             }
         },
         "hash": {

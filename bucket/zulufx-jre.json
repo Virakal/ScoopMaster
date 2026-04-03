@@ -1,16 +1,16 @@
 {
     "description": "Open Source Builds of Zulu With OpenJFX",
     "homepage": "https://www.azul.com/products/zulu-community/zulufx/",
-    "version": "26.28.63",
+    "version": "23.28.85",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu26.28.63-ca-fx-jre26.0.0-win_x64.zip",
-            "hash": "ce804f03bebecdc119dde240b7cf533821c815fd5a43edf72edda4e8e63e6e60",
-            "extract_dir": "zulu26.28.63-ca-fx-jre26.0.0-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu23.28.85-ca-fx-jre23.0.0-win_x64.zip",
+            "hash": "1ea9207ed6f30df34631067c23a49d2f80e5013d942f01d79046f95b51a2af63",
+            "extract_dir": "zulu23.28.85-ca-fx-jre23.0.0-win_x64"
         }
     },
     "env_add_path": "bin",

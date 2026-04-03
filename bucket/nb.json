@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/xwmx/nb",
     "license": "AGPL-3.0",
-    "version": "7.25.3",
+    "version": "7.14.0",
     "depends": "main/unzip",
     "suggest": {
         "git": "git"
     },
-    "url": "https://github.com/xwmx/nb/archive/refs/tags/7.25.3.zip",
-    "hash": "d5bc097783ecada1381dad61068492bb4ca403505d6c34eba83aafd48519aeee",
+    "url": "https://github.com/xwmx/nb/archive/refs/tags/7.14.0.zip",
+    "hash": "8720e9fee693c8ef59019f6932b109321f7cced6d57c35f0a6f1b615f4331ae6",
     "installer": {
         "script": [
             "$zipfile = (Get-ChildItem \"$dir\" '*.zip#' | Select-Object -First 1).FullName",

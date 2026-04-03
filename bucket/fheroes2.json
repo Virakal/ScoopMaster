@@ -1,5 +1,5 @@
 {
-    "version": "1.1.14",
+    "version": "1.1.2",
     "description": "Recreation of the Heroes of Might and Magic II game engine",
     "homepage": "https://github.com/ihhub/fheroes2",
     "license": "GPL-2.0-only",
@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/1.1.14/fheroes2_windows_x64_SDL2.zip",
-            "hash": "a021efb1c6ab547bd6456d9bf5d5784a2117cd3c3e9980abc0bb7cf42b47d070"
+            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.2/fheroes2_windows_x64_SDL2.zip",
+            "hash": "b1c6220f93ba19f3cfd90973e00879f8cef0d4b2b22a3ce9b297f36c3870e837"
         },
         "32bit": {
-            "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/1.1.14/fheroes2_windows_x86_SDL2.zip",
-            "hash": "a1ec5824b4e5fc4da1aff1dc6e36b1989bc531685f4b7456b4f8caa52b6549c7"
+            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.2/fheroes2_windows_x86_SDL2.zip",
+            "hash": "e350aa48215ce96dfa363fe848bf3ff73dd9a1ac69902ad3c55923653c7899c2"
         }
     },
     "shortcuts": [
@@ -36,10 +36,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x64_SDL2.zip"
+                "url": "https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x64_SDL2.zip"
             },
             "32bit": {
-                "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x86_SDL2.zip"
+                "url": "https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x86_SDL2.zip"
             }
         }
     }

@@ -1,13 +1,16 @@
 {
-    "version": "3.13.0.337",
+    "version": "3.5.9.252",
     "description": "A multi-functional, cross-platform Minecraft Launcher.",
     "homepage": "https://hmcl.huangyuhui.net/",
     "license": "GPL-3.0-only",
     "suggest": {
-        "JRE with JFX": "java/zulufx21-jre"
+        "JRE with JFX": [
+            "java/zulufx8-jre",
+            "java/zulufx17-jre"
+        ]
     },
-    "url": "https://github.com/HMCL-dev/HMCL/releases/download/v3.13.0.337/HMCL-3.13.0.337.exe#/HMCL.exe",
-    "hash": "75eeec2964e593b8e2c41ad3be32d52441f986c8399afe00adef55ba178c6892",
+    "url": "https://ci.huangyuhui.net/job/HMCL/252/artifact/HMCL/build/libs/HMCL-3.5.9.252.exe#/HMCL.exe",
+    "hash": "sha1:eaa5ca5d76c390116de724c2b30051496e78db50",
     "pre_install": [
         "function ensureFile([String] $name) {",
         "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
@@ -32,6 +35,10 @@
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://github.com/HMCL-dev/HMCL/releases/download/v$version/HMCL-$version.exe#/HMCL.exe"
+        "url": "https://ci.huangyuhui.net/job/HMCL/$buildVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/HMCL.exe",
+        "hash": {
+            "url": "https://hmcl.huangyuhui.net/api/update_link?channel=dev&download_link=true",
+            "jsonpath": "$.exesha1"
+        }
     }
 }

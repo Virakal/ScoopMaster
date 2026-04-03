@@ -1,6 +1,5 @@
 {
-    "##": "ZIP releases are no longer created for new versions: <https://www.jetbrains.com/help/youtrack/server/youtrack-zip.html>.",
-    "version": "2025.1.82518",
+    "version": "2024.3.44799",
     "description": "Web-based issue tracking and agile project management tool by JetBrains.",
     "homepage": "https://jetbrains.com/youtrack/",
     "license": {
@@ -8,9 +7,9 @@
         "url": "https://jetbrains.com/youtrack/buy/license.html"
     },
     "notes": "YouTrack can be started from anywhere using 'youtrack' command.",
-    "url": "https://download.jetbrains.com/charisma/youtrack-2025.1.82518.zip",
-    "hash": "26639a4cfa42c23228f60ca332c6366b05864fcf649cae0cc31e05b231745f74",
-    "extract_dir": "youtrack-2025.1.82518",
+    "url": "https://download.jetbrains.com/charisma/youtrack-2024.3.44799.zip",
+    "hash": "c03b710f6dded50f24d4d1270fee2fee6165dedcc25e4c77c4fa4a5f1841b6e6",
+    "extract_dir": "youtrack-2024.3.44799",
     "installer": {
         "script": [
             "$ver_path = \"$dir\\bin\"",
@@ -29,6 +28,11 @@
         "data",
         "logs"
     ],
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=YTD&platform=zip&latest=true&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d]+)\"",
+        "replace": "${ver}.${build}"
+    },
     "autoupdate": {
         "url": "https://download.jetbrains.com/charisma/youtrack-$version.zip",
         "hash": {

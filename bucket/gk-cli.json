@@ -1,30 +1,15 @@
 {
-    "version": "3.1.54",
-    "description": "GitKraken CLI - A premium CLI experience for managing multiple repositories with familiar GIT CLI commands",
-    "homepage": "https://github.com/gitkraken/gk-cli",
-    "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/gitkraken/gk-cli/releases/download/v3.1.54/gk_3.1.54_windows_amd64.zip",
-            "hash": "0ff07e69de15668b4b27d23957b63dec0b958e10aaf8c19cc1fedf817e66bc2b"
-        },
-        "32bit": {
-            "url": "https://github.com/gitkraken/gk-cli/releases/download/v3.1.54/gk_3.1.54_windows_386.zip",
-            "hash": "d942d0bcc14a26a6d85a59f2f954a023cc9fbbae98010f5a41b0345f0b5586ef"
-        }
-    },
+    "version": "2.1.1",
+    "description": "The GitKraken CLI",
+    "homepage": "https://www.gitkraken.com/cli",
+    "license": "https://raw.githubusercontent.com/gitkraken/gk-cli/main/LICENSE",
+    "url": "https://github.com/gitkraken/gk-cli/releases/download/v2.1.1/gk_2.1.1_Windows_x86_64.zip",
+    "hash": "3beeb91602a96e838e3ea34bdb6517b7247815184a03233311d2932baf7cc745",
     "bin": "gk.exe",
     "checkver": {
         "github": "https://github.com/gitkraken/gk-cli"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/gitkraken/gk-cli/releases/download/v$version/gk_$version_windows_amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/gitkraken/gk-cli/releases/download/v$version/gk_$version_windows_386.zip"
-            }
-        }
+        "url": "https://github.com/gitkraken/gk-cli/releases/download/v$version/gk_$version_Windows_x86_64.zip"
     }
 }

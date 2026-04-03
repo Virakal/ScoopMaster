@@ -1,17 +1,13 @@
 {
-    "version": "26.3.27",
+    "version": "24.9.16",
     "description": "Project X originates from XTLS protocol, providing a set of network tools such as Xray-core and REALITY.",
     "homepage": "https://github.com/XTLS/Xray-core",
     "license": "MPL-2.0",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/XTLS/Xray-core/releases/download/v26.3.27/Xray-windows-64.zip",
-            "hash": "d004c39288ce9ada487c6f398c7c545f7d749e44bdfdd59dbc9f865afba4e1ad"
-        },
-        "arm64": {
-            "url": "https://github.com/XTLS/Xray-core/releases/download/v26.3.27/Xray-windows-arm64-v8a.zip",
-            "hash": "35d4ed6ec21224fb22b07c2c3f672e2350cd536f2c74d309150175a76365ea88"
+            "url": "https://github.com/XTLS/Xray-core/releases/download/v24.9.16/Xray-windows-64.zip",
+            "hash": "58e453b3ccedda2e33732020fc46a8782cfb0588e3b35ee5b41048ed7499b17b"
         }
     },
     "checkver": {
@@ -23,9 +19,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/XTLS/Xray-core/releases/download/v$version/Xray-windows-64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/XTLS/Xray-core/releases/download/v$version/Xray-windows-arm64-v8a.zip"
             }
         }
     },

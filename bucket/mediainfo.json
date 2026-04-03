@@ -1,16 +1,16 @@
 {
-    "version": "26.01",
+    "version": "24.06",
     "description": "A convenient unified display of the most relevant technical and tag data for video and audio files.",
     "homepage": "https://mediaarea.net/en/MediaInfo",
     "license": "BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://mediaarea.net/download/binary/mediainfo/26.01/MediaInfo_CLI_26.01_Windows_x64.zip",
-            "hash": "c42a8f5c8acadc9c26470a8bbb976ecc9623d57a90a332999220a73c37a9bae3"
+            "url": "https://mediaarea.net/download/binary/mediainfo/24.06/MediaInfo_CLI_24.06_Windows_x64.zip",
+            "hash": "daf7dba50ed3acb8f97e6156e7c63d0f3e9afeb7a118a8d27e97edc1067859a4"
         },
         "32bit": {
-            "url": "https://mediaarea.net/download/binary/mediainfo/26.01/MediaInfo_CLI_26.01_Windows_i386.zip",
-            "hash": "050c73259e1bcc93fd5f4267b42e285548749b41b022f8a99a0c763e3d60566a"
+            "url": "https://mediaarea.net/download/binary/mediainfo/24.06/MediaInfo_CLI_24.06_Windows_i386.zip",
+            "hash": "3f6894f5af1c12157c8d77de31989e1a27da80f3177cd2e8b699e102849f6a80"
         }
     },
     "bin": "mediainfo.exe",

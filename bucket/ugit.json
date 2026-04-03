@@ -1,9 +1,9 @@
 {
-    "version": "5.46.0",
+    "version": "5.22.2",
     "homepage": "https://ugit.qq.com/",
     "license": "unknown",
     "url": "https://ugit.qq.com/downloads/ugit_public/UGitSetup.exe#/dl.7z",
-    "hash": "6e93ac8340489b48628c1a3e8b09e5afec248e0001eb859deb0133fa574d1812",
+    "hash": "85d357971a681852cc85da7e870cc268b68180286ece7c5074bb42eb012d98b8",
     "installer": {
         "script": [
             "$nupkg = (Get-ChildItem \"$dir\" 'UGit-*-full.nupkg' | Select-Object -First 1).FullName",
@@ -23,7 +23,7 @@
         "url": "https://ugit.qq.com/changelog.json",
         "regex": "\"version\": \"v([\\d.]+)\""
     },
-    "autoupdate": {
+    "checkver": {
         "url": "https://ugit.qq.com/downloads/ugit_public/UGitSetup.exe#/dl.7z"
     }
 }

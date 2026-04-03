@@ -1,23 +1,20 @@
 {
-    "version": "1.12.0",
-    "description": "The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, and more.",
-    "homepage": "https://anythingllm.com",
+    "version": "1.5.7",
+    "description": "A all-in-one Desktop & Docker AI application with full RAG and AI Agent capabilities.",
+    "homepage": "https://useanything.com/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.anythingllm.com/latest/AnythingLLMDesktop.exe#/dl.7z",
-            "hash": "1cd33433ec9f7c3c6bd76dfe436842e92ccf3928077b434eb4ec0ef2daa8d7bf"
-        },
-        "arm64": {
-            "url": "https://cdn.anythingllm.com/latest/AnythingLLMDesktop-Arm64.exe#/dl.7z",
-            "hash": "ed4138a6b6ac3dca80c027de62e006e25f5c008b870ab26ae3b53ce714e65b52"
+            "url": "https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop.exe",
+            "hash": "345b1e59e021a7dcc3897c63bf3608453668c23edddd26834cd64f024269e41d"
         }
     },
     "installer": {
         "script": [
-            "Get-Item -Path \"$dir\\`$PLUGINSDIR\\app*.7z\" | Expand-7zipArchive -DestinationPath \"$dir\" -Removal",
-            "Expand-7zipArchive -Path \"$dir\\resources\\backend.7z\" -DestinationPath \"$dir\\resources\\backend\" -Removal",
-            "Remove-Item -Path \"$dir\\`$*\", \"$dir\\Unintall*\" -Recurse"
+            "$file = (Get-ChildItem \"$dir\" 'AnythingLLM*.exe' | Select-Object -First 1).FullName",
+            "Expand-7ZipArchive \"$file\" \"$dir\\\" -Removal",
+            "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
         ]
     },
     "shortcuts": [
@@ -26,16 +23,10 @@
             "AnythingLLM"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/Mintplex-Labs/anything-llm"
-    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.anythingllm.com/latest/AnythingLLMDesktop.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://cdn.anythingllm.com/latest/AnythingLLMDesktop-Arm64.exe#/dl.7z"
+                "url": "https://s3.us-west-1.amazonaws.com/public.useanything.com/latest/AnythingLLMDesktop.exe"
             }
         }
     }

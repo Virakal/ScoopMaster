@@ -1,13 +1,13 @@
 {
-    "version": "0.98.1",
+    "version": "0.84.1",
     "description": "PowerToys. A set of utilities for power users to tune and streamline their Windows experience for greater productivity.",
     "homepage": "https://github.com/microsoft/PowerToys",
     "license": "MIT",
     "notes": "To run this application, you must install .Net Core: https://dotnet.microsoft.com/download",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.98.1/PowerToysSetup-0.98.1-x64.exe",
-            "hash": "43b25c7927d43b9b8ae0b4b7116a7a4ffca66fae031bcf4b30fe38ac382c6f35"
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.84.1/PowerToysSetup-0.84.1-x64.exe",
+            "hash": "10df9774de1857051e135b9790a18a92c5c7f42587c733dee991186e67231ee0"
         }
     },
     "installer": {

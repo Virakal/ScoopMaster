@@ -1,12 +1,12 @@
 {
-    "version": "9.0.2",
+    "version": "8.0.5",
     "description": "A HDD/SSD utility software which supports a part of USB, RAID and NVMe",
     "homepage": "https://crystalmark.info/en/software/crystaldiskmark/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/CrystalDiskMark/files/9.0.2/CrystalDiskMark9_0_2Aoi.zip",
-            "hash": "sha1:24e80c45f62c605f41cd8581243a65d70ee18a9a",
+            "url": "https://sourceforge.net/projects/crystaldiskmark/files/8.0.5/CrystalDiskMark8_0_5Aoi.zip",
+            "hash": "E1C4C6A50EB1953AB086FDD18216E58C1BCFCC418FFBE3986D891A02786EAEAD",
             "bin": [
                 [
                     "DiskMark64A.exe",

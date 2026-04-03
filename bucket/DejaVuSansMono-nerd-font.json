@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'DejaVuSansMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/DejaVuSansMono.tar.xz",
-    "hash": "0e58ff9c1f9378922b7f324fdba953929d88d61b36aedd80ee43964567b226cc",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/DejaVuSansMono.tar.xz",
+    "hash": "b94bde4d2e9ceb1f2c19b2846c1a9892797e4e15e9594303eb7088534244a18b",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

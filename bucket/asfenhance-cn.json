@@ -1,17 +1,17 @@
 {
-    "version": "2.3.20.3",
-    "description": "Extend the function of ASF (ArchiSteamFarm), add several practical commands",
+    "version": "2.2.3.3",
+    "description": "扩展ASF的功能, 增加几条实用命令",
     "homepage": "https://github.com/chr233/ASFEnhance",
     "license": "AGPL-3.0-only",
     "depends": "lemon/archisteamfarm",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chr233/ASFEnhance/releases/download/2.3.20.3/ASFEnhance.zip",
-            "hash": "51b71043bb847b334c8445951d0bf90b2aced10acd0a3279f010b969f8040a5b"
+            "url": "https://github.com/chr233/ASFEnhance/releases/download/2.2.3.3/ASFEnhance-zh-Hans.zip",
+            "hash": "4666132690486e1e5e47b5da80f50b82a14c5e4e885a4a1bc469cb809b6c20fa"
         }
     },
     "installer": {
-        "script": "if (installed 'archisteamfarm' $global) {Copy-Item \"$dir\\ASFEnhance.dll\" \"$(appdir archisteamfarm $global)\\current\\plugins\"} else { error 'Please install `archisteamfarm` first, then reinstall `asfenhance`.'}"
+        "script": "if (installed 'archisteamfarm' $global) {Copy-Item \"$dir\\ASFEnhance.dll\" \"$(appdir archisteamfarm $global)\\current\\plugins\"} else { error 'Please install `archisteamfarm` first, then reinstall `asfenhance-cn`.'}"
     },
     "uninstaller": {
         "script": "if (installed 'archisteamfarm' $global) {Remove-Item \"$(appdir archisteamfarm $global)\\current\\plugins\\ASFEnhance.dll\"}"
@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/chr233/ASFEnhance/releases/download/$version/ASFEnhance.zip"
+                "url": "https://github.com/chr233/ASFEnhance/releases/download/$version/ASFEnhance-zh-Hans.zip"
             }
         }
     }

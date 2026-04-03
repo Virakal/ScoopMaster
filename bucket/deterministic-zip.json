@@ -1,5 +1,5 @@
 {
-    "version": "6.0.3",
+    "version": "3.0.1",
     "description": "Simple (almost drop-in) replacement for zip that produces deterministic files",
     "homepage": "https://github.com/timo-reymann/deterministic-zip",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/6.0.3/deterministic-zip_windows-amd64.exe#/deterministic-zip.exe",
-            "hash": "263644594e49b075fe4076c52c820b8ec18fde8f584d2e606a12df6dcef801d3"
+            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/3.0.1/deterministic-zip_windows-amd64.exe#/deterministic-zip.exe",
+            "hash": "e0e60675a73903e96e894850d1f98956fdef6d46fcebb6ce1a077d918b723ec9"
         },
         "32bit": {
-            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/6.0.3/deterministic-zip_windows-i386.exe#/deterministic-zip.exe",
-            "hash": "ae665c2dc51178e115b1aac414a692120b117267a7c183fccac35f3191b977e7"
+            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/3.0.1/deterministic-zip_windows-i386.exe#/deterministic-zip.exe",
+            "hash": "21407064e7611f45e5d35bcbd2010d2ddf83eda7b03b5b8c2163aa747a99f23b"
         },
         "arm64": {
-            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/6.0.3/deterministic-zip_windows-arm.exe#/deterministic-zip.exe",
-            "hash": "0ffccf6af1688560b3965ea36ca6a4e112a8af8b6b46342aa955ff51f0183b38"
+            "url": "https://github.com/timo-reymann/deterministic-zip/releases/download/3.0.1/deterministic-zip_windows-arm.exe#/deterministic-zip.exe",
+            "hash": "09217f551bd9d44402127d56c488d0cb7eaecaf7789a3c3c04e62b7e41e0118c"
         }
     },
     "bin": "deterministic-zip.exe",

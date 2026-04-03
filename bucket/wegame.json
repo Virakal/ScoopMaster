@@ -1,28 +1,35 @@
 {
-    "version": "7.6.27",
-    "description": "WeGame",
-    "homepage": "https://github.com/gendloop/WeGame",
-    "license": "LGPL-2.1-or-later",
-    "notes": "<Installer>",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/gendloop/WeGame/releases/download/v7.6.27/WeGame-7.6.27-win64.7z",
-            "hash": "bc3d13586b4cea84d1f624595d953dc244d9b626657e6c421e89fbc962712795"
-        }
-    },
-    "installer": {
-        "script": [
-            "Push-Location \"$dir\"",
-            "Start-Process WeGame-$version-win64.exe",
-            "Pop-Location"
+    "version": "5.7.5.8271",
+    "description": "游戏平台 WeGame",
+    "homepage": "https://www.wegame.com.cn",
+    "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup5.7.5.8271_gjwegame_0_0.exe#/dl.7z",
+    "hash": "2d2dc91bf404f55af941e627c86c660a0f14b21ada81a1f438d343e61ed7b3e0",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\WeGameSetup.exe\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$SYSDIR\",\"$dir\\WeGameSetup.exe\" -Force -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "wegame.exe",
+            "WeGame"
         ]
+    ],
+    "persist": [
+        "downloads",
+        "games",
+        "data",
+        "config",
+        "client_config"
+    ],
+    "checkver": {
+        "script": [
+            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=23761' -Method 'POST'",
+            "Write-Output $res.Content"
+        ],
+        "jsonpath": "$..file_name",
+        "regex": "WeGameSetup(?<version>.*?)_gjwegame_0_0.exe"
     },
-    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/gendloop/WeGame/releases/download/v$version/WeGame-$version-win64.7z"
-            }
-        }
+        "url": "https://webcdn.m.qq.com/spcmgr/download/WeGameSetup$version_gjwegame_0_0.exe#/dl.7z"
     }
 }

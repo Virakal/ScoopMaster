@@ -1,17 +1,37 @@
 {
-    "version": "3.1.1",
-    "description": "OpenHashTab is a shell extension for conveniently calculating and checking file hashes from file properties.",
+    "version": "3.0.4",
+    "description": "OpenHashTab 是一个 shell 扩展，用于在文件属性处计算和检查文件哈希",
     "homepage": "https://github.com/namazso/OpenHashTab",
-    "license": "GPL-3.0-or-later",
-    "url": "https://github.com/namazso/OpenHashTab/releases/download/3.1.1/OpenHashTab_User_x64.msi",
-    "hash": "bf7cf26ab12428bdf3f4b7a130f73c34d7f20e586b5673b604281c0f80ada30f",
-    "innosetup": true,
-    "checkver": {
-        "github": "https://github.com/namazso/OpenHashTab",
-        "regex": "/releases/tag/([\\d.]+)"
+    "license": "Microsoft",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/namazso/OpenHashTab/releases/download/v3.0.4/OpenHashTab_setup.exe",
+            "hash": "9966e3ed6693dfc42904a2aaa1b294a2cd1edd059ef795729a76956cc21cd239"
+        }
     },
+    "installer": {
+        "file": "OpenHashTab_setup.exe",
+        "args": [
+            "/dir=\"$dir\"",
+            "/verysilent",
+            "/norestart"
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/verysilent",
+            "/suppressmsgboxes",
+            "/norestart"
+        ]
+    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/namazso/OpenHashTab/releases/download/$version/OpenHashTab_User_x64.msi",
-        "source": "github"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/namazso/OpenHashTab/releases/download/v$version/OpenHashTab_setup.exe"
+            }
+        }
     }
 }

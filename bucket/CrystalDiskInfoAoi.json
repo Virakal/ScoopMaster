@@ -1,5 +1,5 @@
 {
-    "version": "9.8.0",
+    "version": "9.4.4",
     "description": "A HDD/SSD utility software which supports a part of USB, RAID and NVMe",
     "homepage": "https://crystalmark.info/en/software/crystaldiskinfo/",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.8.0/CrystalDiskInfo9_8_0Aoi.zip/download",
-            "hash": "c3519dc599249f398a9f8846491f19dd960ac2d95082d4c539d68e02bf18038b",
+            "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.4.4/CrystalDiskInfo9_4_4Aoi.zip",
+            "hash": "sha1:e94681b2a9c9f337f7c985c93f837f93f7bab4e9",
             "bin": [
                 [
                     "DiskInfo64A.exe",
@@ -33,9 +33,9 @@
     "pre_uninstall": "if (Test-Path \"$dir\\AMD_RC2t7*.dll\") { Copy-Item \"$dir\\AMD_RC2t7*.dll\" \"$persist_dir\\\" }",
     "checkver": {
         "sourceforge": "crystaldiskinfo",
-        "regex": "([\\d.a-zA-Z]+)/CrystalDiskInfo.*Aoi.zip"
+        "regex": "([\\d.a-zA-Z]+)/CrystalDiskInfo.*.zip"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/crystaldiskinfo/files/$version/CrystalDiskInfo$underscoreVersionAoi.zip/download"
+        "url": "https://sourceforge.net/projects/crystaldiskinfo/files/$version/CrystalDiskInfo$underscoreVersionAoi.zip"
     }
 }

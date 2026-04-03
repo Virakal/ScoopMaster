@@ -1,9 +1,9 @@
 {
     "architecture": {
         "64bit": {
-            "extract_dir": "cargo-update-v19.0.1",
-            "hash": "ac5d84cc1b27c43e0039e5118c9294a4f36b36b5114701141803558308c59ffc",
-            "url": "https://github.com/nabijaczleweli/cargo-update/releases/download/v19.0.1/cargo-update-v19.0.1.zip"
+            "extract_dir": "cargo-update-v14.1.1",
+            "hash": "cdf2af50166ccb26f2798de78481d82ab11a287f1b4a7e128eb4d1ee7305173a",
+            "url": "https://github.com/nabijaczleweli/cargo-update/releases/download/v14.1.1/cargo-update-v14.1.1.zip"
         }
     },
     "autoupdate": {
@@ -22,5 +22,5 @@
     "description": "A cargo subcommand for checking and applying updates to installed executables",
     "homepage": "https://github.com/nabijaczleweli/cargo-update",
     "license": "MIT",
-    "version": "19.0.1"
+    "version": "14.1.1"
 }

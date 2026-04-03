@@ -1,16 +1,16 @@
 {
     "##": "Based on https://github.com/lzwme/scoop-proxy-cn/blob/main/bucket/uosc-main.json",
-    "version": "1772392255",
+    "version": "1721459282",
     "description": "Simple WebM maker for mpv, with no external dependencies.",
     "homepage": "https://github.com/ekisu/mpv-webm",
     "license": "MIT",
     "url": [
-        "https://github.com/ekisu/mpv-webm/releases/download/latest/webm.lua",
-        "https://github.com/ekisu/mpv-webm/releases/download/latest/webm.conf"
+        "https://ghproxy.net/https://github.com/ekisu/mpv-webm/releases/download/latest/webm.lua",
+        "https://ghproxy.net/https://github.com/ekisu/mpv-webm/releases/download/latest/webm.conf"
     ],
     "hash": [
-        "fb2da49e4b080a1a6aae16bae83b106d1058a7e5fc59fa6d3749df9eb4b137c8",
-        "44b39b866a98f549b1ad9f3b15dc35b429f2bee22bf74fab17cf5bfef420c177"
+        "692f36da46ad4f609392b91365f721110c32ff0eab839ef76a0a1440b05003b6",
+        "bd621b95137ed67f9c9155ecd554c6aa33fbefadab6d781b54b40da34a2519db"
     ],
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/98124368/commits/latest).commit.committer.date -UFormat %s } catch { '' }",
@@ -18,8 +18,8 @@
     },
     "autoupdate": {
         "url": [
-            "https://github.com/ekisu/mpv-webm/releases/download/latest/webm.lua",
-            "https://github.com/ekisu/mpv-webm/releases/download/latest/webm.conf"
+            "https://ghproxy.net/https://github.com/ekisu/mpv-webm/releases/download/latest/webm.lua",
+            "https://ghproxy.net/https://github.com/ekisu/mpv-webm/releases/download/latest/webm.conf"
         ]
     }
 }

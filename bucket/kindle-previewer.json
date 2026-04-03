@@ -1,12 +1,12 @@
 {
-    "version": "3.103.0",
+    "version": "3.87.0",
     "description": "A free desktop application that enables authors, publishers and eBook service providers to preview how their books will appear when delivered to Kindle customers.",
     "homepage": "https://www.amazon.com/Kindle-Previewer/b?node=21381691011",
     "license": "Unknown",
     "architecture": {
         "64bit": {
             "url": "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.exe#/dl.7z",
-            "hash": "47ee9dd9150c9ddd8076bda3aa9e176a253925c9c6c2114110adbab6f2880ad6"
+            "hash": "2d779523f0f0d23795f9405bc2e74c8efb5df7923699c7c9c064dbbc74106845"
         }
     },
     "shortcuts": [

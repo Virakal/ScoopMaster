@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:c296f37143f177cc2164c4d240f8f561642a90981ce8ea4826b29b585ec25d6c40b7deb1455d1fb73c72761c37a1d1ba2a6a1ec12a9343956e5b082d197286b0",
+    "hash": "sha512:609536514fa99b4243522647ce91f96dae6cc1a94f4953a521bf6c494b3036d3ac6abf4f409edcb9cd90ce2bc2814a87fa08784aa02c88aaa80c1d6fb3e554d7",
     "description": "Microsoft Azure PowerShell - Attestation service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Attestation, please visit the following: https://docs.microsoft.com/azure/attestation/",
     "psmodule": {
         "name": "Az.Attestation"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Attestation/3.0.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Attestation/2.0.2#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "3.0.0"
+    "version": "2.0.2"
 }

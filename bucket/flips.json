@@ -1,32 +1,45 @@
 {
-    "version": "198",
-    "description": "Floating IPS (or Flips) is a patcher for IPS and BPS files, aiming for a simple interface yet plenty of power under the hood.",
-    "homepage": "https://git.disroot.org/Sir_Walrus/Flips",
+    "version": "07162cac69114bdb4b8a2302d131604c29df853b",
+    "description": "Flips is a program for applying patches to ROM files",
+    "homepage": "https://github.com/Alcaro/Flips",
     "license": "GPL-3.0-only",
-    "url": "https://git.disroot.org/Sir_Walrus/Flips/releases/download/v198/flips-windows.zip",
-    "hash": "802bfb315dca08a2f765dd6864472ecbb2b482681045c573d5e4b657b8e5295d",
-    "pre_install": [
-        "$batContent = '@echo off', \"`\"%~dp0flips.exe`\" %*\"",
-        "Set-Content \"$dir\\flips.cmd\" -Value ($batContent -join \"`r`n\") -Encoding Ascii"
+    "notes": "App is built on the fly, which is why gcc and make are required.",
+    "depends": [
+        "main/gcc",
+        "main/make"
     ],
-    "bin": [
-        [
-            "flips.cmd",
-            "flips"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Alcaro/Flips/archive/refs/heads/master.zip",
+            "hash": "5a9c161c89d04b6f99947747446e2b0445148eee17fd350ed1c03cb2446e4814"
+        }
+    },
+    "extract_dir": "Flips-master",
+    "installer": {
+        "script": [
+            "mkdir $dir\\obj",
+            "make -C $dir TARGET=windows CFLAGS=-O3"
         ]
+    },
+    "post_install": [
+        "# Remove source code",
+        "Remove-Item $dir\\* -Exclude flips.exe -Recurse -Force"
     ],
     "shortcuts": [
         [
             "flips.exe",
-            "Floating IPS"
+            "Flips"
         ]
     ],
     "checkver": {
-        "url": "https://git.disroot.org/api/v1/repos/Sir_Walrus/Flips/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "v([\\d.]+[a-z]?)"
+        "url": "https://api.github.com/repos/Alcaro/Flips/commits/HEAD",
+        "jsonpath": "$.sha"
     },
     "autoupdate": {
-        "url": "https://git.disroot.org/Sir_Walrus/Flips/releases/download/v$version/flips-windows.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Alcaro/Flips/archive/refs/heads/master.zip"
+            }
+        }
     }
 }

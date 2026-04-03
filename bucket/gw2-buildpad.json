@@ -1,20 +1,20 @@
 {
-    "version": "2025-08-24",
+    "version": "2023",
     "homepage": "https://buildpad.gw2archive.eu/",
     "architecture": {
         "64bit": {
-            "url": "https://buildpad.gw2archive.eu/versions/latest/arcdps_buildpad.dll",
-            "hash": "2aadc61e3a797e3bc8e213773b270eec61f2230ce924594468aaac983a4a8dfa"
+            "url": "https://buildpad.gw2archive.eu/versions/latest/d3d9_arcdps_buildpad_2023.dll",
+            "hash": "54dadd5e1be78073cc386582554e9d53f33d5cc1cbdf583094ed3eea72870410"
         }
     },
     "checkver": {
         "url": "https://buildpad.gw2archive.eu/",
-        "regex": "Version ([\\d-]+)"
+        "regex": "Version ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://buildpad.gw2archive.eu/versions/latest/arcdps_buildpad.dll"
+                "url": "https://buildpad.gw2archive.eu/versions/latest/d3d9_arcdps_buildpad_$version.dll"
             }
         }
     }

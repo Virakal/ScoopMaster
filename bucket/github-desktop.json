@@ -1,12 +1,12 @@
 {
-    "version": "3.5.7",
+    "version": "3.4.5",
     "description": "GitHub Desktop. Extend your GitHub workflow beyond your browser.",
     "homepage": "https://desktop.github.com/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://central.github.com/deployments/desktop/desktop/latest/win32?format=msi#/setup.msi_",
-            "hash": "cb4c566b9c77e51df13f2469e4554f36c2164f47fde2525e0fbc0498806be7c9"
+            "hash": "f2de3308dd4fb3236eef6088f5460be9f5910d1ea5f8c3f0c3df7f87402e0c88"
         }
     },
     "pre_install": [

@@ -1,26 +1,31 @@
 {
-    "version": "3.9.0",
+    "version": "2.7.10",
     "description": "Scalable datastore for metrics, events, and real-time analytics.",
     "homepage": "https://www.influxdata.com/",
     "license": "MIT",
-    "notes": "InfluxDB v2 has been moved to 'Versions' bucket, use 'scoop install versions/influxdb2' to install it.",
+    "notes": [
+        "InfluxDB v1 has been moved to 'Versions' bucket, use 'scoop install versions/influxdb1' to install it.",
+        "For CLI, please install 'influx'."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://dl.influxdata.com/influxdb/releases/influxdb3-core-3.7.0-windows_amd64.zip",
-            "hash": "7782fafaa6da7de7b40c35117a3706eea5c40f107dc89e936cb90a1217887144"
+            "url": "https://dl.influxdata.com/influxdb/releases/influxdb2-2.7.10-windows.zip",
+            "hash": "009f9c2015dffec8db5674cb5a942fd6f34f74e5461a80d44a306e76d917d304"
         }
     },
-    "bin": "influxdb3.exe",
+    "bin": "influxd.exe",
     "checkver": {
-        "url": "https://docs.influxdata.com/influxdb3/core/release-notes/",
-        "regex": ">v([\\d.]+)<"
+        "url": "https://portal.influxdata.com/versions.json",
+        "jsonpath": "$.influxdb2.version",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.influxdata.com/influxdb/releases/influxdb3-core-3.7.0-windows_amd64.zip",
+                "url": "https://dl.influxdata.com/influxdb/releases/influxdb2-$version-windows.zip",
                 "hash": {
-                    "url": "$url.sha256"
+                    "url": "https://portal.influxdata.com/versions.json",
+                    "jsonpath": "$.influxdb2.downloads[?(@.platform =~ /^Windows/)].sha256"
                 }
             }
         }

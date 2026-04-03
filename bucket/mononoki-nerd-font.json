@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Mononoki' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Mononoki.tar.xz",
-    "hash": "5c9b3035d45aabfe1fb3ce5e3028130043398cecc1409b20fe8273692192726e",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Mononoki.tar.xz",
+    "hash": "eb3697dd13c5e50951023c0768538a2f70e1e4f22d94800a45779a6d1b49f7a3",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

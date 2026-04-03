@@ -1,34 +1,33 @@
 {
-    "version": "2.9.0",
-    "description": "#1 Locally hosted web application that allows you to perform various operations on PDF files",
-    "homepage": "https://stirlingpdf.com",
-    "license": "MIT",
-    "suggest": {
-        "Python": "python",
-        "QPDF": "qpdf",
-        "LibreOffice": "extras/libreoffice",
-        "Tesseract OCR": "tesseract",
-        "Weasyprint": "weasyprint"
+    "version": "0.29.0",
+    "description": "locally hosted web application that allows you to perform various operations on PDF files",
+    "homepage": "https://github.com/Stirling-Tools/Stirling-PDF/",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/Stirling-Tools/Stirling-PDF/blob/main/LICENSE"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v2.9.0/Stirling-PDF.jar",
-            "hash": "c1ba6e35cef41e866733066995120dc7a3cd38d4aa7924b00385165ea834885b"
+            "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v0.29.0/Stirling-PDF.exe",
+            "hash": "5e6fd3665577923fc57baf4d405cb589041fd7bcc625c18da96510c9d2e0df6a"
         }
     },
-    "bin": "Stirling-PDF.jar",
+    "shortcuts": [
+        [
+            "Stirling-PDF.exe",
+            "Stirling-PDF"
+        ]
+    ],
     "persist": [
         "configs",
         "customFiles",
         "logs"
     ],
-    "checkver": {
-        "github": "https://github.com/Stirling-Tools/Stirling-PDF"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v$version/Stirling-PDF.jar"
+                "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v$version/Stirling-PDF.exe"
             }
         }
     }

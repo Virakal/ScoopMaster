@@ -1,19 +1,19 @@
 {
-    "version": "1.0.0",
+    "version": "0.1.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v1.0.0/ghomfc_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_windows_amd64.zip",
             "bin": [
                 "ghomfc.exe"
             ],
-            "hash": "c02c51b4b5ed1521135fb2ef55224f4972728a6767c1dfcf58152f8e6d6f408c"
+            "hash": "e2adde248fd1c1df749cad799d45985579f3c144cbecab5d25165198ff8dceaa"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v1.0.0/ghomfc_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_windows_arm64.zip",
             "bin": [
                 "ghomfc.exe"
             ],
-            "hash": "30fd78f81e856f332beb43f241b6d3c38dd9870f08c9cf67eea652e82646132c"
+            "hash": "ee0bbfc04e52a0a8eebb9dce2a75bb8b46d0baced2611c3d4f42f111d19bbd02"
         }
     },
     "license": "MIT",

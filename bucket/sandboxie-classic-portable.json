@@ -1,5 +1,5 @@
 {
-    "version": "5.72.3",
+    "version": "5.69.8",
     "description": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems.",
     "homepage": "https://sandboxie-plus.com/",
     "license": {
@@ -9,8 +9,12 @@
     "notes": "Get Sandboxie Plus if you are a first-time user or want the latest features.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.3/Sandboxie-Classic-x64-v5.72.3.exe#/dl.7z",
-            "hash": "a715afc3feb8d38642a8f62989ebfb1aee2b0570d86aa4fd08ff41dfdda6bfb5"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.14.8/Sandboxie-Classic-x64-v5.69.8.exe#/dl.7z",
+            "hash": "22e7bcca423dd57974dc82d9e90dbfff76ca18d077c85c1ddc125c5aaf872937"
+        },
+        "32bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.14.8/Sandboxie-Classic-x86-v5.69.8.exe#/dl.7z",
+            "hash": "3bdcdefd1e03864b050c0c702f09a597d30871d2224319bbe492461388d88328"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
@@ -49,6 +53,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Classic-x64-v$version.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Classic-x86-v$version.exe#/dl.7z"
             }
         }
     }

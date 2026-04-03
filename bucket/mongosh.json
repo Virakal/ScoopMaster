@@ -1,13 +1,13 @@
 {
-    "version": "2.8.2",
+    "version": "2.3.1",
     "description": "JavaScript and Node.js 14.x REPL environment for interacting with MongoDB",
     "homepage": "https://docs.mongodb.com/mongodb-shell",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.mongodb.com/compass/mongosh-2.8.2-win32-x64.zip",
-            "hash": "881cb950f190f8e3d930c0062e79f836af5392c39ccf68c965eaf6967027b964",
-            "extract_dir": "mongosh-2.8.2-win32-x64"
+            "url": "https://downloads.mongodb.com/compass/mongosh-2.3.1-win32-x64.zip",
+            "hash": "24cd7e62c5f1d9aed95e0c0da25c15872d3b582452bfcd66b89daadf2fb9a532",
+            "extract_dir": "mongosh-2.3.1-win32-x64"
         }
     },
     "bin": "bin\\mongosh.exe",

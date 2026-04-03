@@ -1,13 +1,13 @@
 {
-    "version": "5.3.1",
+    "version": "5.2.7",
     "description": "Provide the missing link between Wago and the WeakAuras World of Warcraft addon.",
     "homepage": "https://weakauras.wtf",
     "license": {
         "identifier": "GPL-2.0-or-later",
         "url": "https://github.com/WeakAuras/WeakAuras-Companion/blob/main/LICENSE"
     },
-    "url": "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v5.3.1/WeakAuras-Companion-Setup-5.3.1.exe#/dl.7z",
-    "hash": "sha512:a0bccdcaf6546c7bfcd5357389a0bb04df9c19cecb4f96ccbe4de3136cedc08890b5f018028fb1795187ef8c5c7b24d18ffadca5fa0f1e6f6b976fa2474b44aa",
+    "url": "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v5.2.7/WeakAuras-Companion-Setup-5.2.7.exe#/dl.7z",
+    "hash": "sha512:d4cdd480b788c34fcc221cd38b26e27864954eea548b453a462a4bbfae819ca0c912dcd1256e436203a66555b60eb05a0d24b1bd543dd977a4262cd9ec92d602",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [

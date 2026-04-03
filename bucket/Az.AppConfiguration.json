@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:1181cc42a8cd2fc69f4b8121ea83dae9b92074567ea5fa1c59920fccf6fbfd04cf4a45ad9021fe7ee89f7193f18e75975c3910da38ef0771f414576a18c6e4ce",
+    "hash": "sha512:01fd9410866100410f49cf0ed619b95cdecfea5ef4c994a3dde978005fdb30fdaa98be7ebadb87950a1e8b7a543a64bb13ba6b672464a9eb5e6931461702af4c",
     "description": "Microsoft Azure PowerShell: AppConfiguration cmdlets",
     "psmodule": {
         "name": "Az.AppConfiguration"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.AppConfiguration/2.0.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.AppConfiguration/1.3.2#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.0.1"
+    "version": "1.3.2"
 }

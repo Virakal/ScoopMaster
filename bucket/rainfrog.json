@@ -1,15 +1,12 @@
 {
-    "version": "0.3.17",
-    "description": "Database tool for the terminal",
+    "version": "0.2.1",
+    "description": "A database management TUI for Postgres",
     "homepage": "https://github.com/achristmascarl/rainfrog",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/achristmascarl/rainfrog/blob/main/LICENSE"
-    },
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/achristmascarl/rainfrog/releases/download/v0.3.17/rainfrog-v0.3.17-x86_64-pc-windows-msvc.tar.gz",
-            "hash": "eb4bef081df78e49fe4ad9e54002ad6c217b3da2d3b538bf95422ba8e1e1e6ad"
+            "url": "https://github.com/achristmascarl/rainfrog/releases/download/v0.2.1/rainfrog-v0.2.1-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "e8976f8e9fd877354bb4e51b1858817be6887afedd96ef7608ceba2f9d33cdc1"
         }
     },
     "bin": "rainfrog.exe",
@@ -19,6 +16,9 @@
             "64bit": {
                 "url": "https://github.com/achristmascarl/rainfrog/releases/download/v$version/rainfrog-v$version-x86_64-pc-windows-msvc.tar.gz"
             }
+        },
+        "hash": {
+            "url": "$baseurl/rainfrog-v$version-x86_64-pc-windows-msvc.sha256"
         }
     }
 }

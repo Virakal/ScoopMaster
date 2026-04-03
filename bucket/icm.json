@@ -1,29 +1,29 @@
 {
-    "version": "3.2.11",
+    "version": "3.2.7",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/mrclmr/icm/releases/download/v3.2.11/icm_Windows_i386.zip",
+            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.7/icm_Windows_i386.zip",
             "bin": [
                 "icm.exe"
             ],
-            "hash": "b66f212b573c6b04f0ea6bfc9a5124daf39886e8d702143d442d5be248f10c8a"
+            "hash": "c54362300c9d098968ddcfbfdc6e8a5ef7a3d089576b1bfa00e56796934c6204"
         },
         "64bit": {
-            "url": "https://github.com/mrclmr/icm/releases/download/v3.2.11/icm_Windows_x86_64.zip",
+            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.7/icm_Windows_x86_64.zip",
             "bin": [
                 "icm.exe"
             ],
-            "hash": "6576a2edaf7022901639f355ff4d6107d2ddf1ed2b348aa89a1f82466e30d8ea"
+            "hash": "01e707e3ae4bcf570af4391699832f756f901e8b7d82b5df62ca8dcb2ec1bbe6"
         },
         "arm64": {
-            "url": "https://github.com/mrclmr/icm/releases/download/v3.2.11/icm_Windows_arm64.zip",
+            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.7/icm_Windows_arm64.zip",
             "bin": [
                 "icm.exe"
             ],
-            "hash": "560a63ff7972e184a8a8972e34837a5ff15a3a1f72d6bfd6cf90de3ba167ad60"
+            "hash": "3e9b0c81acfbf6b1831cf98783ccc0cff908786d3d87954cf058a69e3f4a88af"
         }
     },
-    "homepage": "https://github.com/mrclmr/icm",
+    "homepage": "https://github.com/meyermarcel/icm",
     "license": "MIT",
     "description": "Generate or validate intermodal container markings."
 }

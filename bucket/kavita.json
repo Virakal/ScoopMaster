@@ -1,17 +1,17 @@
 {
-    "version": "0.8.9",
+    "version": "0.8.3",
     "description": "Kavita is a fast, feature rich, cross platform reading server. Built with a focus for manga and the goal of being a full solution for all your reading needs.",
     "homepage": "https://github.com/Kareadita/Kavita/",
     "license": "GPL-3.0",
     "notes": "Default URL is http://localhost:5000/login",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Kareadita/Kavita/releases/download/v0.8.9/kavita-win-x64.tar.gz",
-            "hash": "bdb72aceb7575742dd682f8027153eb33dac250286e85dca5daafa8c38d163fc"
+            "url": "https://github.com/Kareadita/Kavita/releases/download/v0.8.3/kavita-win-x64.tar.gz",
+            "hash": "406464617346adceec5a5063e4b41e49468c288b77e54a3b105233cdb313ac8d"
         },
         "32bit": {
-            "url": "https://github.com/Kareadita/Kavita/releases/download/v0.8.9/kavita-win-x86.tar.gz",
-            "hash": "fa29a94dcd84aaed13e0ff94deb484ed8587d64e42f44a317623693c429093ee"
+            "url": "https://github.com/Kareadita/Kavita/releases/download/v0.8.3/kavita-win-x86.tar.gz",
+            "hash": "f11b8078c61d801aceabd62e7188fb7429334f10d57be2a49b0c0328c1339151"
         }
     },
     "extract_dir": "Kavita",

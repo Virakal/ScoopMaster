@@ -1,23 +1,16 @@
 {
-    "version": "4.7.10.0",
+    "version": "4.2.84.0",
     "description": "Graphical GREP tool to search across text files, Word and Excel documents, PDFs and archives",
-    "homepage": "https://dngrep.github.io/",
+    "homepage": "http://dngrep.github.io/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.7.10.0/dnGREP.4.7.10.x64.msi",
-            "hash": "e19c8eaedb21b2a0fe1c7245e31b9727aad50f89ef1bd47792b2934a40470b47",
-            "extract_dir": "PFiles64\\dnGrep"
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.2.84.0/dnGREP.4.2.84.x64.msi",
+            "hash": "a079dbdd547e5ff344d88576ecfbf2b4370634619d3b8c5cfb7774bea8c0cadb"
         },
         "32bit": {
-            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.7.10.0/dnGREP.4.7.10.x86.msi",
-            "hash": "e7aa89df02c0baae10f02fd0dc5c0d7debe53e7c633479366240f0ceda6c9d47",
-            "extract_dir": "PFiles\\dnGrep"
-        },
-        "arm64": {
-            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.7.10.0/dnGREP.4.7.10.ARM64.msi",
-            "hash": "21d91242efd13760a1b0e6fcf90328d748b25b7a6b1774001fb2b27c96bc32da",
-            "extract_dir": "PFiles64\\dnGrep"
+            "url": "https://github.com/dnGrep/dnGrep/releases/download/v4.2.84.0/dnGREP.4.2.84.x86.msi",
+            "hash": "8d9f713a02125d93afaed2cd7ebbf38463b78a00966b8de6deda4f37159e13c1"
         }
     },
     "pre_install": [
@@ -25,6 +18,7 @@
         "if (!(Test-Path \"$persist_dir\\dnGREP.Settings.dat\")) { Set-Content \"$dir\\dnGREP.Settings.dat\" $cont -Encoding 'ascii' }",
         "Copy-Item \"$persist_dir\\Themes\\*\" \"$dir\\Themes\" -ErrorAction 'SilentlyContinue' -Recurse"
     ],
+    "extract_dir": "dnGREP",
     "bin": "dnGREP.exe",
     "shortcuts": [
         [
@@ -40,13 +34,18 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x64.msi"
+                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x64.msi",
+                "hash": {
+                    "url": "https://github.com/dnGrep/dnGrep/releases/v$version",
+                    "regex": "x64.msi[<>/\\w\\n: \\(\\)]+SHA256: ($sha256)"
+                }
             },
             "32bit": {
-                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x86.msi"
-            },
-            "arm64": {
-                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.ARM64.msi"
+                "url": "https://github.com/dnGrep/dnGrep/releases/download/v$version/dnGREP.$matchHead.x86.msi",
+                "hash": {
+                    "url": "https://github.com/dnGrep/dnGrep/releases/v$version",
+                    "find": "x86.msi[<>/\\w\\n: \\(\\)]+SHA256: ($sha256)"
+                }
             }
         }
     }

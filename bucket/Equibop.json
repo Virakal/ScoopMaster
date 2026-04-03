@@ -1,45 +1,35 @@
 {
-    "version": "3.1.9",
-    "description": "A custom Discord client offering enhanced performance and Linux support.",
+    "version": "2.0.9",
+    "description": "Equibop is a fork of Vesktop with Equicord pre-installed",
     "homepage": "https://github.com/Equicord/Equibop",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Equicord/Equibop/releases/download/v3.1.9/Equibop-3.1.9-win.zip",
-            "hash": "508288ff368e108756a0a88701c0d6083e2327c3d619b99f9825d3c5be5dec22"
+            "url": "https://github.com/Equicord/Equibop/releases/download/v2.0.9/Equibop-win-x64.zip",
+            "hash": "add7bcb6aac11f40f887d22dc0de06ca1d5348f427261a306591a7c36fb96973"
         },
         "arm64": {
-            "url": "https://github.com/Equicord/Equibop/releases/download/v3.1.9/Equibop-3.1.9-arm64-win.zip",
-            "hash": "19c2b44a2eccd95b0493fffb12c602f608c79eafa6a96694c4db3413a8600456"
+            "url": "https://github.com/Equicord/Equibop/releases/download/v2.0.9/Equibop-win-arm64.zip",
+            "hash": "c7962cf7995fbc57f4296c82d4850ada12642244c7eb986c62a36f14ab9937a4"
         }
     },
-    "bin": "equibop.exe",
+    "bin": "Equibop.exe",
     "shortcuts": [
         [
-            "equibop.exe",
-            "Equibop"
+            "Equibop.exe",
+            "Equibop",
+            "Equicord Desktop"
         ]
     ],
     "persist": "Data",
-    "post_uninstall": "if (Test-Path \"$env:APPDATA\\equibop\") { Remove-Item -Recurse -Force \"$env:APPDATA\\equibop\" -ErrorAction SilentlyContinue }",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Equicord/Equibop/releases/download/v$version/Equibop-$version-win.zip",
-                "hash": {
-                    "mode": "json",
-                    "url": "https://api.github.com/repos/Equicord/Equibop/releases/tags/v$version",
-                    "jsonpath": "$.assets[?(@.name == 'Equibop-$version-win.zip')].digest"
-                }
+                "url": "https://github.com/Equicord/Equibop/releases/download/v$version/Equibop-win-x64.zip"
             },
             "arm64": {
-                "url": "https://github.com/Equicord/Equibop/releases/download/v$version/Equibop-$version-arm64-win.zip",
-                "hash": {
-                    "mode": "json",
-                    "url": "https://api.github.com/repos/Equicord/Equibop/releases/tags/v$version",
-                    "jsonpath": "$.assets[?(@.name == 'Equibop-$version-arm64-win.zip')].digest"
-                }
+                "url": "https://github.com/Equicord/Equibop/releases/download/v$version/Equibop-win-arm64.zip"
             }
         }
     }

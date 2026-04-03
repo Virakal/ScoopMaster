@@ -1,5 +1,5 @@
 {
-    "version": "2026.1",
+    "version": "2024.2.4",
     "description": "Free .NET Decompiler and Assembly Browser",
     "homepage": "https://www.jetbrains.com/decompiler/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/resharper/dotUltimate.2026.1/dotPeek64.2026.1.exe#/dotpeek.exe",
-            "hash": "156b1c8c079dcf69d90cc812b86bc3970eb545eadb64e1fc4f1bdc4beb383bf3"
+            "url": "https://download.jetbrains.com/resharper/dotUltimate.2024.2.4/dotPeek64.2024.2.4.exe#/dotpeek.exe",
+            "hash": "141a6295c284368b52aef345ef1c03eb6692450707e7d9cbd4ae146c0d02a6f0"
         },
         "32bit": {
-            "url": "https://download.jetbrains.com/resharper/dotUltimate.2026.1/dotPeek32.2026.1.exe#/dotpeek.exe",
-            "hash": "275b8495e7cb4167e0655196edb98bb58b6be06b8201d4964c64487e6eadb69d"
+            "url": "https://download.jetbrains.com/resharper/dotUltimate.2024.2.4/dotPeek32.2024.2.4.exe#/dotpeek.exe",
+            "hash": "967347bcf98eb867df42a63b0336970ecd38504e174bedb7765f31ef440b5537"
         }
     },
     "shortcuts": [

@@ -1,17 +1,17 @@
 {
-    "version": "0.12.3",
+    "version": "0.10.2",
     "description": "Graphical process/system monitor",
     "homepage": "https://clementtsang.github.io/bottom/",
     "license": "MIT",
     "notes": "Add 'Import-Module bottom/_btm.ps1' to $profile to enable completion",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_x86_64-pc-windows-msvc.zip",
-            "hash": "567879fd7210f8a692cd2657b41eda43c7713bef74dd025b240247accdda14fb"
+            "url": "https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom_x86_64-pc-windows-msvc.zip",
+            "hash": "1a6baa8e635efddbfd8a6fefb6dd65fe1731ac77e1064e24c8106f48e2abcd3d"
         },
         "32bit": {
-            "url": "https://github.com/ClementTsang/bottom/releases/download/0.12.3/bottom_i686-pc-windows-msvc.zip",
-            "hash": "08cc5d92bf1a6ff41b7d67c3c31405822386b0bc97699a2058c2d549e13b3b37"
+            "url": "https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom_i686-pc-windows-msvc.zip",
+            "hash": "d741c2b10a5fbbee0b3a968c6c5aebed839e854fcd8ca22d7f1096d6057d148c"
         }
     },
     "post_install": [

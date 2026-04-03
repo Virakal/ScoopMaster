@@ -1,5 +1,5 @@
 {
-    "version": "2026.1-261.22158.332",
+    "version": "2024.2.1-242.21829.112",
     "description": "Cross-Platform IDE for Data Scientists by JetBrains.",
     "homepage": "https://www.jetbrains.com/dataspell/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/python/dataspell-2026.1.exe#/dl.7z",
-            "hash": "b786c8ee7281b8bf526237f72cb0eecdbfda18e6667ecb89f00449512af14d63"
+            "url": "https://download.jetbrains.com/python/dataspell-2024.2.1.exe#/dl.7z",
+            "hash": "3afea5489ec75a5f0bf7bed47ecce0b99d373cd22d1ed780064a610896b0e558"
         },
         "arm64": {
-            "url": "https://download.jetbrains.com/python/dataspell-2026.1-aarch64.exe#/dl.7z",
-            "hash": "72abfcd4a6cca2ae40190a44dfb0bf0878e905107bf5b273dfac9b3c0f702e9c"
+            "url": "https://download.jetbrains.com/python/dataspell-2024.2.1-aarch64.exe#/dl.7z",
+            "hash": "04cfc6db40eaaafe36c199f4ec380e21b076e56d2b6538e424fd3f02283cc537"
         }
     },
     "extract_to": "IDE",

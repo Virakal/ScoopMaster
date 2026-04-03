@@ -1,5 +1,5 @@
 {
-    "version": "148.0.7766.3",
+    "version": "130.0.6710.0",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/dev",
     "license": {
@@ -8,19 +8,17 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/acpza3zl6xnoz5wsgboggpaukc3a_148.0.7766.3/148.0.7766.3_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "246bbe305e9b1646cd5d85f8dc5e05f8e667c23eefeb598a9f7de7cf831a2dc0"
+            "url": "https://dl.google.com/release2/chrome/adlyhsl6qhd4nzu2k6vp5elid5pa_130.0.6710.0/130.0.6710.0_chrome_installer.exe#/dl.7z",
+            "hash": "0d2afe5cbd612feea8e28fabc52feab4a48f43082435f0ba69a163f9ce000c26"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/adnnap5svn76m3i4tbrnbfyeotda_148.0.7766.3/148.0.7766.3_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "091a1f79d5b7251277f26bbd54165e31bf936abd8c37da7f510cecf2ca82b78e"
-        },
-        "arm64": {
-            "url": "https://dl.google.com/release2/chrome/gf2tvzsvy2rhzikvwh6bd2gg6m_148.0.7766.3/148.0.7766.3_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "bab3535bab93444c6be3351698be280e061e8899c2f795efaf7d00a0b9bb7832"
+            "url": "https://dl.google.com/release2/chrome/n3g76jbwblvjhjwhsnyaqw4hae_130.0.6710.0/130.0.6710.0_chrome_installer.exe#/dl.7z",
+            "hash": "30443f4259ac51e7f813af39f8f6993f7076c9340fbbde92f8afb19c3bb02a67"
         }
     },
-    "extract_dir": "Chrome-bin",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal"
+    },
     "bin": [
         [
             "chrome.exe",
@@ -34,49 +32,24 @@
         ]
     ],
     "checkver": {
-        "script": [
-            "$AppID = '{8A69D345-D564-463C-AFF1-A69D9E530F96}'",
-            "$ArchParams  = @{",
-            "    'x64'   ='2.0-dev-arch_x64'",
-            "    'x86'   ='2.0-dev-arch_x86'",
-            "    'arm64' ='2.0-dev-arch_arm64'",
-            "}",
-            "$BodyTemplate = @(",
-            "    '<?xml version=\"1.0\" encoding=\"UTF-8\"?>',",
-            "    '<request protocol=\"3.0\">',",
-            "    '  <os platform=\"win\" version=\"10.0.22000.0\" arch=\"{0}\"/>',",
-            "    '  <app appid=\"{1}\" ap=\"{2}\" version=\"\">',",
-            "    '    <updatecheck/>',",
-            "    '  </app>',",
-            "    '</request>'",
-            ") -join \"`n\"",
-            "$ArchURLs = @{}",
-            "$Version = $null",
-            "forEach ($Arch in $ArchParams.Keys) {",
-            "    $Body = $BodyTemplate -f $Arch, $AppID, $ArchParams[$Arch]",
-            "    $Response = Invoke-RestMethod -Uri 'https://update.googleapis.com/service/update2' -Method Post -Body $Body",
-            "    if ($Arch -eq 'x64') {",
-            "        $Version = $Response.response.app.updatecheck.manifest.version",
-            "    }",
-            "    $BaseURL = $Response.SelectSingleNode(\"//url[starts-with(@codebase, 'https://dl.google.com/release2/chrome/')]\")",
-            "    $BaseURL.GetAttribute('codebase') -match '^https://dl\\.google\\.com/release2/chrome/(?<URL>[^/]+)/'",
-            "    $FileName = $Response.SelectSingleNode('//package').GetAttribute('name')",
-            "    $ArchURLs[$Arch] = \"$($Matches['URL'])/$FileName\"",
-            "}",
-            "Write-Output \"$Version,$($ArchURLs['x64']),$($ArchURLs['x86']),$($ArchURLs['arm64'])\""
-        ],
-        "regex": "(?<version>[\\d.]+),(?<archx64>[^,]+),(?<archx86>[^,]+),(?<archarm64>[^,]+)"
+        "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
+        "regex": "(?sm)<dev32><version>(?<version>[\\d.]+)</version>.+release2/chrome/(?<32>[\\w-]+)_.+<dev64>.+release2/chrome/(?<64>[\\w-]+)_.+</dev64>"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.google.com/release2/chrome/$matchArchx64#/dl.7z"
+                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
+                    "xpath": "/chromechecker/dev64[version='$version']/sha256"
+                }
             },
             "32bit": {
-                "url": "https://dl.google.com/release2/chrome/$matchArchx86#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://dl.google.com/release2/chrome/$matchArcharm64#/dl.7z"
+                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
+                    "xpath": "/chromechecker/dev32[version='$version']/sha256"
+                }
             }
         }
     }

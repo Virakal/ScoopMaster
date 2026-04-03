@@ -1,15 +1,16 @@
 {
-    "version": "2.0.1.19",
-    "description": "An universal 2D editor",
-    "homepage": "https://pixieditor.net/",
-    "license": "LGPL-3.0",
-    "suggest": {
-        ".NET Desktop Runtime 8.0": "versions/windowsdesktop-runtime-8.0"
-    },
+    "homepage": "https://github.com/PixiEditor/PixiEditor",
+    "description": "Pixel art editor",
+    "license": "MIT",
+    "version": "1.0.0.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PixiEditor/PixiEditor/releases/download/2.0.1.19/PixiEditor.2.0.1.19.x64-win.zip",
-            "hash": "96e7ce4f96e9e1474f4b7712763e49d290c71176be15f33d498c08ea6f482791"
+            "url": "https://github.com/PixiEditor/PixiEditor/releases/download/1.0.0.1/PixiEditor-x64.1.0.0.1-setup64.zip",
+            "hash": "4fc0f93a93982f5fa1d6bfb7cec83a815bbd61f5cd30354f3188ec07bc7e8a4f"
+        },
+        "32bit": {
+            "url": "https://github.com/PixiEditor/PixiEditor/releases/download/1.0.0.1/PixiEditor-x86.1.0.0.1-setup86.zip",
+            "hash": "46a13e2bdd0c826f4c3f140120ca77853900d458dcf4b8c54ce7b09099b98b24"
         }
     },
     "extract_dir": "PixiEditor",
@@ -25,7 +26,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor.$version.x64-win.zip"
+                "url": "https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor-x64.$version-setup64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor-x86.$version-setup86.zip"
             }
         }
     }

@@ -1,14 +1,15 @@
 {
-    "version": "4.9.3",
-    "description": "Integrated writing environment for creating LaTeX documents",
-    "homepage": "https://texstudio.org",
+    "version": "4.8.2",
+    "description": "An integrated writing environment for creating LaTeX documents.",
+    "homepage": "https://www.texstudio.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.9.3-win-portable-qt6.zip",
-            "hash": "e3b8847c94625317358701260fc6052eb3ff127151289dfdf5b8e9a8d4a2281a"
+            "url": "https://mirrors.bfsu.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-4.8.2-win-portable-qt6.zip",
+            "hash": "9a35c58e9f99918f5c5b3e0bba4c5c9c7d54506afa0acf2fe9126226c0e841c6"
         }
     },
+    "bin": "texstudio.exe",
     "shortcuts": [
         [
             "texstudio.exe",
@@ -20,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-$version-win-portable-qt6.zip"
+                "url": "https://mirrors.bfsu.edu.cn/github-release/texstudio-org/texstudio/LatestRelease/texstudio-$version-win-portable-qt6.zip"
             }
         }
     }

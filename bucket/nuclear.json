@@ -1,29 +1,32 @@
 {
-    "version": "1.32.1",
+    "version": "0.6.39",
     "description": "Modern music player focused on streaming from free sources",
-    "homepage": "https://nuclearplayer.com",
+    "homepage": "https://nuclear.js.org",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nukeop/nuclear/releases/download/player%401.32.1/Nuclear_1.32.1_x64-setup.exe#/dl.7z",
-            "hash": "c86dcb83609f47f36b7f77afd40e13fae6b06f7b3eb50707d6548d8502978748"
+            "url": "https://github.com/nukeop/nuclear/releases/download/v0.6.39/nuclear.Setup.0.6.39.exe#/dl.7z",
+            "hash": "37b1f8c24e7caf88a4e5ca8381bf4a014240aa7e94b347de9a81b08a54dbca81",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -ErrorAction Ignore",
     "shortcuts": [
         [
-            "nuclear-music-player.exe",
+            "Nuclear.exe",
             "Nuclear"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/nukeop/nuclear",
-        "regex": "Nuclear_([\\d.]+)_x64-setup.exe"
+        "url": "https://api.github.com/repositories/68968979/releases",
+        "regex": "/nuclear\\.Setup\\.([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/nukeop/nuclear/releases/download/player%40$version/Nuclear_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/nukeop/nuclear/releases/download/v$version/nuclear.Setup.$version.exe#/dl.7z"
             }
         }
     }
