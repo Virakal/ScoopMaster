@@ -15,7 +15,7 @@ on:
         description: 'Debug session enabled'
         required: false
         default: false
-        type: boolean  
+        type: boolean
       release:
         description: 'Delivery Channel'
         required: false
@@ -23,7 +23,7 @@ on:
         type: choice
         options:
           - "Artifact"
-          - "Release"        
+          - "Release"
 
 jobs:
   build:
@@ -108,7 +108,7 @@ jobs:
         # EXTRACT MANIFESTS
         7z e -y 'zips/*.zip' '-ojsons/*' '*/bucket/*.json' '*/*.json'
         # PREPARE OUTPUT
-        Remove-Item -Force -Recurse "jsons/*/.*.json","jsons/*/_*.json" 
+        Remove-Item -Force -Recurse "jsons/*/.*.json","jsons/*/_*.json"
         # $nManifests = (cmd.exe /c dir /s /b /a-d jsons).count
         $nZips = (gc .\Zip_list.txt).count
         Write-Host "PROCESS COMPLETED. $nZips downloaded buckets."
@@ -169,7 +169,7 @@ jobs:
         Write-host "##"
         foreach ( $file in $files ) {
             $name = $file.BaseName
-            $bucket = $file.FullName.split( [char[]] ('/', '\') )[-2].replace('~', "/") 
+            $bucket = $file.FullName.split( [char[]] ('/', '\') )[-2].replace('~', "/")
             $progress++
             $percent = [math]::round(100 * $progress / $nManifests)
             if ($percent -ne $oldpercent){

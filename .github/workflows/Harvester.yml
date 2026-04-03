@@ -15,7 +15,7 @@ on:
         description: 'Debug session enabled'
         required: false
         default: false
-        type: boolean  
+        type: boolean
       release:
         description: 'Delivery Channel'
         required: false
@@ -23,7 +23,7 @@ on:
         type: choice
         options:
           - "Artifact"
-          - "Release"        
+          - "Release"
 
 jobs:
   build:
@@ -116,7 +116,7 @@ jobs:
             if( -not ($_ -match 'https:\/\/github.com\/(.+)')){
               $_ >> ERROR_badrepos.txt
               return}
-            if(($_ -match 'okibcn\/ScoopMaster')){
+            if(($_ -match 'Virakal\/ScoopMaster')){
               return}
             $owner_repo=$matches[1].replace('/','~')
             return "$_/archive/refs/heads/master.zip`n    out=$owner_repo.zip"
@@ -300,7 +300,7 @@ jobs:
                 }
             }
         }
-        $hash = $hash | select   | Sort-Object Name 
+        $hash = $hash | select   | Sort-Object Name
         $scoopDBfile = "./LastAppsDB.csv"
         $hash | ConvertTo-csv > $scoopDBfile
 
@@ -389,7 +389,7 @@ jobs:
         if ( "${{github.event.inputs.release}}" -eq 'Artifact') {7z a '-x!*.7z' ScoopMaster.7z *}
 
         $downloads=((( gh api repos/okibcn/ScoopMaster/releases | jq . ) -match  "download_count" | sls '\d+' ).matches | Measure-Object Value -Sum ).Sum
-        
+
         $stats=@{}
         $stats.Add('date',"$($env:UPDATE)")
         $stats.Add('prevDate',"$((gc stats.json | ConvertFrom-Json).date.ToString("yyyy-MM-ddTHH:mm:ssZ"))")
