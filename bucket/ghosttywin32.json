@@ -1,18 +1,15 @@
 {
-    "version": "0.1.0",
-    "description": "Windows host for Ghostty terminal emulator (OpenGL via Mesa Zink)",
+    "version": "0.2.0",
+    "description": "Windows host for Ghostty terminal emulator (DirectX 11)",
     "homepage": "https://github.com/i999rri/GhosttyWin32",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/i999rri/GhosttyWin32/releases/download/v0.1.0/GhosttyWin32-v0.1.0-x64.zip",
-            "hash": "8cbbe4fc25f367117e1d145a2a578a320962bcbede0166eb233fd68a2818d5f9"
+            "url": "https://github.com/i999rri/GhosttyWin32/releases/download/v0.2.0/GhosttyWin32-v0.2.0-x64.zip",
+            "hash": "5cbc9b87aa3f0a76c5333c3f6b504b9943987f4da9d0fb167a5c7d17aee3cee0"
         }
     },
     "bin": "GhosttyWin32\\GhosttyWin32.exe",
-    "env_set": {
-        "GALLIUM_DRIVER": "zink"
-    },
     "shortcuts": [
         ["GhosttyWin32\\GhosttyWin32.exe", "Ghostty"]
     ],
