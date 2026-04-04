@@ -412,7 +412,7 @@ jobs:
 
 
     - name: "🎉 Release updated databases"
-      uses: softprops/action-gh-release@v0.1.15
+      uses: softprops/action-gh-release@v2.6.1
       # go to https://github.com/OWNER/REPO/settings/actions and
       # in "**"Workflow Permissions" section give actions **Read and Write permissions**.
       if: github.event_name != 'workflow_dispatch' || github.event.inputs.release == 'Release'
