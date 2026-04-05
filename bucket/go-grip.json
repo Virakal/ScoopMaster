@@ -1,20 +1,20 @@
 {
-    "version": "0.9.0",
+    "version": "0.5.6",
     "description": "Preview Markdown files locally before committing them.",
     "homepage": "https://github.com/chrishrb/go-grip",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.9.0/go-grip-v0.9.0-windows-amd64.zip",
-            "hash": "md5:579d7f171b8fb92bb5fdf19096f83993"
+            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.5.6/go-grip-v0.5.6-windows-amd64.zip",
+            "hash": "md5:8d980dbca9b0b5aeea0cbee5e0107748"
         },
         "32bit": {
-            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.9.0/go-grip-v0.9.0-windows-386.zip",
-            "hash": "md5:588ad878bf88f8fefb8fcca9727c8dee"
+            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.5.6/go-grip-v0.5.6-windows-386.zip",
+            "hash": "md5:54a820c597745679ed38cbeb7c32cab6"
         },
         "arm64": {
-            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.9.0/go-grip-v0.9.0-windows-arm64.zip",
-            "hash": "md5:a44b88afc6e28d76e5cc4c75c28c0942"
+            "url": "https://github.com/chrishrb/go-grip/releases/download/v0.5.6/go-grip-v0.5.6-windows-arm64.zip",
+            "hash": "md5:6ef7eadf1018a884e2281b75fc6f9662"
         }
     },
     "bin": "go-grip.exe",
