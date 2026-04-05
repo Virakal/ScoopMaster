@@ -1,26 +1,28 @@
 {
-  "version": "3.9.7",
-  "description": "A tool that allows you to conveniently update all the DLSS/XeSS/FSR DLLs for the games detected on your system",
-  "homepage": "https://github.com/Recol/DLSS-Updater",
-  "license": "AGPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Recol/DLSS-Updater/releases/download/V3.9.7/DLSS.Updater.3.9.7.zip",
-      "hash": "03e30e48c77d8e5fe6d5fd79faeedfc6c719e91743eb6877288e3d812f266b61"
-    }
-  },
-  "shortcuts": [
-    [
-      "DLSS_Updater.exe",
-      "DLSS Updater"
-    ]
-  ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "4.0.0",
+    "description": "Update all the DLSS/XeSS DLLs for the games detected on your system.",
+    "homepage": "https://github.com/Recol/DLSS-Updater",
+    "license": "AGPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Recol/DLSS-Updater/releases/download/V$version/DLSS.Updater.$version.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/Recol/DLSS-Updater/releases/download/V4.0.0/DLSS.Updater.4.0.0.msi",
+            "extract_dir": "PFiles64\\DLSS Updater",
+            "hash": "8056db182731415af2d371403d4127c518ef5991d2e9cf5577efcd69288be0eb"
+        }
+    },
+    "shortcuts": [
+        [
+            "DLSS_Updater.exe",
+            "DLSS Updater"
+        ]
+    ],
+    "notes": "DLSS Updater is NOT portable.",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Recol/DLSS-Updater/releases/download/V$version/DLSS.Updater.$version.msi"
+            }
+        }
     }
-  }
 }

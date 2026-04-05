@@ -1,0 +1,59 @@
+{
+    "version": "1.0.31",
+    "description": "Command-line client for TrustTunnel, a modern, fast and obfuscated VPN protocol.",
+    "homepage": "https://trusttunnel.org/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v1.0.31/trusttunnel_client-v1.0.31-windows-x86_64.zip",
+            "hash": "1bbf552e4856a4d41ac65839fb90be3b5db46fa735868899064d9a9d33e952c6"
+        },
+        "32bit": {
+            "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v1.0.31/trusttunnel_client-v1.0.31-windows-i686.zip",
+            "hash": "082f8992ae26d93190b35121ca4e538815f918568bc3a245e06a3b249b668817"
+        },
+        "arm64": {
+            "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v1.0.31/trusttunnel_client-v1.0.31-windows-aarch64.zip",
+            "hash": "6923da6178db6740b0e1d4ac6c5ee521960ff3d367116e58b53ada00e11b5041"
+        }
+    },
+    "bin": [
+        "trusttunnel_client.exe",
+        [
+            "setup_wizard.exe",
+            "trusttunnel_setup_wizard"
+        ]
+    ],
+    "post_install": [
+        "if ($cmd -eq 'install') { ",
+        "   Write-Host \"\"",
+        "   Write-Host \"---\"",
+        "   Write-Host \"Client configuration wizard - Interactive mode (guided setup):\"",
+        "   Write-Host \"  trusttunnel_setup_wizard --settings `\"$dir\\config\\trusttunnel_client.toml`\"\"",
+        "   Write-Host \"\"",
+        "   Write-Host \"Client configuration wizard - Non-interactive with endpoint config (recommended):\"",
+        "   Write-Host \"  trusttunnel_setup_wizard --mode non-interactive --endpoint_config <endpoint_config.toml> --settings `\"$dir\\config\\trusttunnel_client.toml`\"\"",
+        "   Write-Host \"\"",
+        "   Write-Host \"Running client:\"",
+        "   Write-Host \"  trusttunnel_client -c `\"$dir\\config\\trusttunnel_client.toml`\"\"",
+        "   Write-Host \"---\"",
+        "}"
+    ],
+    "persist": "config",
+    "checkver": {
+        "github": "https://github.com/TrustTunnel/TrustTunnelClient"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v$version/trusttunnel_client-v$version-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v$version/trusttunnel_client-v$version-windows-i686.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/TrustTunnel/TrustTunnelClient/releases/download/v$version/trusttunnel_client-v$version-windows-aarch64.zip"
+            }
+        }
+    }
+}

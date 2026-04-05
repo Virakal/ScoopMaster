@@ -1,0 +1,42 @@
+{
+    "version": "26.04",
+    "description": "Monitors a number of web pages and tracks changes based on the content of the web pages.",
+    "homepage": "https://sourceforge.net/projects/webchangemon/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/webchangemon/files/Windows/WebChangeMonitor_26_04-64bit.zip",
+            "hash": "sha1:c893613f8ca1bcdb362f2c3f636916811aae17cc"
+        },
+        "32bit": {
+            "url": "https://sourceforge.net/projects/webchangemon/files/Windows/WebChangeMonitor_26_04-32bit.zip",
+            "hash": "sha1:fdaf5ae3cd8bd0cb8a6bb0f27467236dfe9262e0"
+        }
+    },
+    "shortcuts": [
+        [
+            "WebChangeMonitor.exe",
+            "WebChangeMonitor"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\WebChangeMonitor\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "WebChangeMonitor is NOT portable.",
+        "Settings are stored in '%LOCALAPPDATA%\\WebChangeMonitor', and can be purged using 'scoop uninstall --purge webchangemonitor'."
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/webchangemon/rss?path=/Windows",
+        "regex": "WebChangeMonitor_(?<year>\\d+)_(?<month>\\d+)-64bit",
+        "replace": "${year}.${month}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/webchangemon/files/Windows/WebChangeMonitor_$matchYear_$matchMonth-64bit.zip"
+            },
+            "32bit": {
+                "url": "https://sourceforge.net/projects/webchangemon/files/Windows/WebChangeMonitor_$matchYear_$matchMonth-32bit.zip"
+            }
+        }
+    }
+}

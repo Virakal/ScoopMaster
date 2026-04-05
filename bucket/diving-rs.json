@@ -1,12 +1,12 @@
 {
-    "version": "0.7.2",
+    "version": "0.7.4",
     "description": "Exploring each layer in a docker image.",
     "homepage": "https://github.com/vicanso/diving-rs",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vicanso/diving-rs/releases/download/v0.7.2/diving-windows.exe#/diving.exe",
-            "hash": "0d39e8d69e0836fbade690cefb8d213c9f09e6ed8a18db6aa7507524cc74f982"
+            "url": "https://github.com/vicanso/diving-rs/releases/download/v0.7.4/diving-windows.exe#/diving.exe",
+            "hash": "b7da1ffaa04777b98c9fb4fdfa7f0598ecf76d66eeb7194997c304a8e6cd300a"
         }
     },
     "bin": "diving.exe",
