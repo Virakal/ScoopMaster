@@ -16,7 +16,10 @@
             "hash": "7ccfa44907e43339952e5c902c9796f796f59738a8b9dcfe63d1afa36ce62306"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ],
     "bin": "Netcatty.exe",
     "shortcuts": [
         [
