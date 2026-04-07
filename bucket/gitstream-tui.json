@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/moneycaringcoder/gitstream-tui/releases/download/v0.1.0/gitstream-tui_0.1.0_windows_amd64.zip",
+            "bin": [
+                "gitstream.exe"
+            ],
+            "hash": "75d4a8473e4f36c2c13c262c675f26a0c3c887eff513828738fc36613a00104a"
+        },
+        "arm64": {
+            "url": "https://github.com/moneycaringcoder/gitstream-tui/releases/download/v0.1.0/gitstream-tui_0.1.0_windows_arm64.zip",
+            "bin": [
+                "gitstream.exe"
+            ],
+            "hash": "205f1f561c859335c006cca9864d8fd76ffef0d47d499434365a120f051e2031"
+        }
+    },
+    "homepage": "https://github.com/moneycaringcoder/gitstream-tui",
+    "license": "MIT",
+    "description": "Live GitHub activity feed TUI — watch repo events in your terminal"
+}
