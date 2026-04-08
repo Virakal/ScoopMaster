@@ -6,7 +6,7 @@
         "identifier": "MIT",
         "url": "https://github.com/zevnda/steam-game-idler/blob/main/LICENSE"
     },
-    "url": "https://github.com/zevnda/steam-game-idler/releases/download/5.0.2/Steam.Game.Idler_5.0.2_x64-portable.zip",
+    "url": "https://gh-proxy.org/https://github.com/zevnda/steam-game-idler/releases/download/5.0.2/Steam.Game.Idler_5.0.2_x64-portable.zip",
     "hash": "9eb638ff812f10789e940221aca0350a11b92f565f6382cfd6c850f7c0f3fce7",
     "bin": [
         [
@@ -24,6 +24,6 @@
         "github": "https://github.com/zevnda/steam-game-idler"
     },
     "autoupdate": {
-        "url": "https://github.com/zevnda/steam-game-idler/releases/download/$version/Steam.Game.Idler_$version_x64-portable.zip"
+        "url": "https://gh-proxy.org/https://github.com/zevnda/steam-game-idler/releases/download/$version/Steam.Game.Idler_$version_x64-portable.zip"
     }
 }
