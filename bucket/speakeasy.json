@@ -1,40 +1,20 @@
 {
-    "version": "1.761.1",
-    "description": "Generate client SDKs in popular languages from your OpenAPI spec with Speakeasy.",
-    "homepage": "https://speakeasy.com/",
-    "license": "Elastic-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.761.1/speakeasy_windows_amd64.zip",
-            "hash": "d390342111d46d07de777c5122b7175cbc5bb361a91176596e35f6d9ac6c8f22"
-        },
-        "32bit": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.761.1/speakeasy_windows_386.zip",
-            "hash": "80f8e9cdf6614215d6c0f82020491590d454ee53029aead041e42a107d4f7f22"
-        },
-        "arm64": {
-            "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v1.761.1/speakeasy_windows_arm64.zip",
-            "hash": "4671397e8f02a059554978aada7a53793f60364c939a63bb1cb92026a647bcd7"
-        }
-    },
-    "bin": "speakeasy.exe",
+    "version": "2.0.0",
+    "homepage": "https://github.com/mandiant/speakeasy",
+    "description": "Speakeasy Windows sandbox for malware analysis.",
+    "license": "https://github.com/mandiant/speakeasy/blob/master/LICENSE.txt",
+    "depends": "python311",
+    "url": "https://github.com/mandiant/speakeasy/archive/refs/heads/master.zip",
+    "hash": "95e1e850e4c912e90121c1f76d84629487cbdf6bac90ababb79b47ff822a65a2",
+    "extract_dir": "speakeasy-master",
+    "pre_install": "python.exe -m pip install -r \"$dir\\requirements.txt\";cd $dir;python.exe \"$dir\\setup.py\" install;$env:Path += \";$env:USERPROFILE\\scoop\\apps\\python311\\current\\Scripts\"",
     "checkver": {
-        "github": "https://github.com/speakeasy-api/speakeasy"
+        "github": "https://github.com/mandiant/speakeasy"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v$version/speakeasy_windows_amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v$version/speakeasy_windows_386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/speakeasy-api/speakeasy/releases/download/v$version/speakeasy_windows_arm64.zip"
-            }
-        },
+        "url": "https://github.com/mandiant/speakeasy/archive/refs/heads/master.zip",
         "hash": {
-            "url": "$baseurl/checksums.txt"
+            "url": "$baseurl/$matchHead.zip"
         }
     }
 }
