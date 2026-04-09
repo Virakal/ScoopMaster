@@ -1,24 +1,23 @@
 {
-    "version": "1.0.11",
+    "version": "1.0.16",
     "description": "A Markdown editor built with Milkup core and Vue.js",
-    "homepage": "https://github.com/Auto-Plugin/milkup",
+    "homepage": "https://github.com/maqibg/milkup",
     "license": "MIT",
     "notes": [
-        "milkup 是一个基于 Milkup core 和 Vue.js 的 Markdown 编辑器",
-        "上游主进程将更新缓存、无文件场景下的本地图片资源等写入 Electron 的 userData 目录",
-        "结合 package.json 中 name=milkup 与 build.productName=milkup，可确认用户数据目录为 %APPDATA%\\milkup\\",
-        "本包会将该目录持久化到 Scoop 的 persist，并在原路径创建 Junction 指向 persist"
+        "fork 源码确认应用自管理数据通过 Electron userData 和前端 localStorage 持久化",
+        "  - userData 下会写入 updates\\ 更新缓存，以及无当前文件场景下的本地图片目录（默认 /assets 相对 userData）",
+        "  - 前端配置项如 milkup-config、milkup-ai-config、custom-themes、theme-name 等通过 localStorage 持久化，实际也落在 Electron userData 下",
+        "结合 package.json 中 name=milkup、build.productName=milkup，且源码未覆盖 app.setPath('userData', ...)，可由 Scoop 接管的个人数据根目录为 %APPDATA%\\milkup\\",
+        "用户自己选择的 Markdown 文件、工作区目录，以及相对当前文件保存的图片资源属于用户文档，不纳入 Scoop persist",
+        "应用内更新逻辑仍请求 auto-plugin/milkup 的 release API；建议在应用设置中关闭自动检查更新/自动更新，避免与 Scoop 更新及 fork 版本源冲突",
+        "本包使用 fork 官方发布的 milkup-win-x64.zip，并将 %APPDATA%\\milkup 持久化到 Scoop 的 persist，在原路径创建 Junction"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Auto-Plugin/milkup/releases/download/v1.0.11/milkup.Setup.1.0.11.exe#/dl.7z",
-            "hash": "456f972a4a328981ff5cecf43d9feb4d84f7b98e070e47d3ac3ec17ce2503d0b"
+            "url": "https://github.com/maqibg/milkup/releases/download/v1.0.16/milkup-win-x64.zip",
+            "hash": "25d80860d5bacf6162d6f8d6db795c7f4efaff78715f54d81300bebd274acf37"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction SilentlyContinue"
-    ],
     "bin": "milkup.exe",
     "shortcuts": [
         [
@@ -59,14 +58,23 @@
         "",
         "New-Item -Path $source -ItemType Junction -Value $target | Out-Null"
     ],
+    "post_uninstall": [
+        "$source = Join-Path $env:APPDATA 'milkup'",
+        "if (Test-Path $source) {",
+        "    $item = Get-Item -LiteralPath $source -Force",
+        "    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {",
+        "        Remove-Item -LiteralPath $source -Force",
+        "    }",
+        "}"
+    ],
     "persist": "data",
     "checkver": {
-        "github": "https://github.com/Auto-Plugin/milkup"
+        "github": "https://github.com/maqibg/milkup"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Auto-Plugin/milkup/releases/download/v$version/milkup.Setup.$version.exe#/dl.7z"
+                "url": "https://github.com/maqibg/milkup/releases/download/v$version/milkup-win-x64.zip"
             }
         },
         "hash": {
