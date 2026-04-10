@@ -1,32 +1,40 @@
 {
     "version": "1.9.11",
-    "description": "Free, local, open-source 24/7 AI Cowork workspace for Gemini, Claude, Codex, OpenCode, Qwen Code, and more",
-    "homepage": "https://github.com/iOfficeAI/AionUi",
+    "description": "Free, local, open-source GUI app for LLMs �� Chat UI, Multi-agent, Multi-LLMs & apikey polling, Workspace, MCP, Remote WebUi Mode",
+    "homepage": "https://www.aionui.com/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.9.11/AionUi-1.9.11-win-x64.exe#/dl.7z",
             "hash": "0383f313526c718332d9e59b8fd1ed9f4eff32582eb5cd3d479e9f16377c23eb",
             "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+                "script": [
+                    "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
+                ]
             }
         },
         "arm64": {
             "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.9.11/AionUi-1.9.11-win-arm64.exe#/dl.7z",
             "hash": "3dc8fb1e6102a4568c21b9cebee5dd869702863c225228061444a62a9a473d34",
             "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-arm64.7z\" \"$dir\""
+                "script": [
+                    "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
+                ]
             }
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "bin": "AionUi.exe",
     "shortcuts": [
         [
             "AionUi.exe",
             "AionUi"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/iOfficeAI/AionUi"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
