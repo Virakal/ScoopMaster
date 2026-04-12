@@ -1,22 +1,22 @@
 {
-  "version": "3.1.374",
-  "architecture": {
-    "32bit": {
-      "url": "https://ghproxy.com/https://github.com/blacktop/ipsw/releases/download/v3.1.374/ipswd_3.1.374_windows_i386.zip",
-      "bin": [
-        "ipswd_3.1.374_windows_i386/ipswd.exe"
-      ],
-      "hash": "36f137e920a5a0df95492ce6c0b43da96dc83262f4913dc8eb7539f2e80476cf"
+    "version": "3.1.670",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.670/ipswd_3.1.670_windows_x86_64.zip",
+            "bin": [
+                "ipswd.exe"
+            ],
+            "hash": "b9cd3060cc04029548fab12e90423a29cde416db21d554a20a8941fbe5512966"
+        },
+        "arm64": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.670/ipswd_3.1.670_windows_arm64.zip",
+            "bin": [
+                "ipswd.exe"
+            ],
+            "hash": "b762a2797f3add0eecf869f064e9356ace57d292651431fc6fb828eb6083fe52"
+        }
     },
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/blacktop/ipsw/releases/download/v3.1.374/ipswd_3.1.374_windows_x86_64.zip",
-      "bin": [
-        "ipswd_3.1.374_windows_x86_64/ipswd.exe"
-      ],
-      "hash": "bef3c7ec51e8763c8ec399ae9cbb62650a48d6da96d5c244cb2201fb0b8fd4cb"
-    }
-  },
-  "homepage": "https://blacktop.github.io/ipsw",
-  "license": "MIT",
-  "description": "ipsw - Daemon"
+    "homepage": "https://blacktop.github.io/ipsw",
+    "license": "MIT",
+    "description": "ipsw - Daemon"
 }
