@@ -1,19 +1,19 @@
 {
-    "version": "0.4.0",
+    "version": "0.5.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.4.0/tscli_0.4.0_windows_amd64.zip",
+            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.5.2/tscli_0.5.2_windows_amd64.zip",
             "bin": [
                 "tscli.exe"
             ],
-            "hash": "c7c59c0cbc0e4745c0cad4b669046db1f7bf3e87d471c9b75c3f57b185c385c4"
+            "hash": "5de03b50a8439521ab03da85a48dd5386726f96e2087ffff896dc818c07bde04"
         },
         "arm64": {
-            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.4.0/tscli_0.4.0_windows_arm64.zip",
+            "url": "https://github.com/jaxxstorm/tscli/releases/download/v0.5.2/tscli_0.5.2_windows_arm64.zip",
             "bin": [
                 "tscli.exe"
             ],
-            "hash": "0795f79a4259757302c2642480f36052c146683ef0cb2e372ce2b9a2231a839d"
+            "hash": "f3cabe671e44df5391c815f52c288c524c9abc44cce3530957b85d6667dd2ba6"
         }
     },
     "homepage": "https://github.com/jaxxstorm/tscli",
