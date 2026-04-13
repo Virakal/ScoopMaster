@@ -1,0 +1,22 @@
+{
+    "version": "0.6.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/somaz94/bash-pilot/releases/download/v0.6.1/bash-pilot_0.6.1_windows_amd64.zip",
+            "bin": [
+                "bash-pilot.exe"
+            ],
+            "hash": "3b525a9ee8d3f51e3083d73d4fa95be7ab34930cb094a94af82d57307efdf304"
+        },
+        "arm64": {
+            "url": "https://github.com/somaz94/bash-pilot/releases/download/v0.6.1/bash-pilot_0.6.1_windows_arm64.zip",
+            "bin": [
+                "bash-pilot.exe"
+            ],
+            "hash": "8748f396c0b80dddaed18c050b1add82d444b0e916297afa1224889c289308f1"
+        }
+    },
+    "homepage": "https://github.com/somaz94/bash-pilot",
+    "license": "Apache-2.0",
+    "description": "A powerful CLI toolkit for bash power users — SSH, Git, Env, Prompt"
+}
