@@ -1,28 +1,20 @@
 {
-    "version": "2.11.0",
-    "description": "(Scoop bucket by arch3rpro)🌙🦊 Dalfox is a powerful open-source XSS scanner and utility focused on automation.",
+    "version": "2.12.0",
+    "description": "Dalfox 是一款功能强大的开源工具，专注于自动化，非常适合快速扫描 XSS 缺陷和分析参数。",
     "homepage": "https://github.com/hahwul/dalfox",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/hahwul/dalfox/releases/download/v2.11.0/dalfox_2.11.0_windows_amd64.tar.gz",
-            "hash": "0f4545331f7058f708e5928d6e1a494dceb05e310d891ecc9b476dba55e1c686"
-        },
-        "arm64": {
-            "url": "https://github.com/hahwul/dalfox/releases/download/v2.11.0/dalfox_2.11.0_windows_arm64.tar.gz",
-            "hash": "ef05804e819a9b1e4890dd70186a4644d6c1f5701da8bcc5bbe1df01941df897"
-        }
-    },
+    "url": "https://github.com/hahwul/dalfox/releases/download/v2.12.0/dalfox-windows-amd64.zip",
+    "hash": "sha256:823338b58b15a799475c801fb45744606ba635a845458ea1cf7332f068cc805e",
     "bin": "dalfox.exe",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/hahwul/dalfox/releases/download/v$version/dalfox_$version_windows_amd64.tar.gz"
-            },
-            "arm64": {
-                "url": "https://github.com/hahwul/dalfox/releases/download/v$version/dalfox_$version_windows_arm64.tar.gz"
-            }
-        }
-    }
+        "url": "https://github.com/hahwul/dalfox/releases/download/v$version/dalfox-windows-amd64.zip"
+    },
+    "notes": [
+        "【工具类型】: 安全测试",
+        "【主要功能】: 自动化 XSS 漏洞扫描与参数分析",
+        "【适用场景】: Web 应用安全测试、渗透测试",
+        "【技术特点】: 基于 Go 语言开发，支持多种 XSS 检测技术"
+    ]
 }
+

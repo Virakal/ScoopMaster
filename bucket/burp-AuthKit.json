@@ -1,0 +1,25 @@
+{
+    "version": "2026-03-30T07.11.47",
+    "description": "多维度，UI/UX友好的burpsuite鉴权漏洞检测插件",
+    "homepage": "https://github.com/youmulijiang/AuthKit",
+    "license": "unknown",
+    "url": "https://github.com/youmulijiang/AuthKit/archive/refs/heads/main.zip#/AuthKit.zip",
+    "hash": "706fb44a63f1917a5e61aa61cc92d8a6a2c282a0b75626bd471800840c315045",
+    "checkver": {
+        "url": "https://api.github.com/repos/youmulijiang/AuthKit/commits",
+        "regex": "([\\d-]+T)(\\d+):(\\d+):(\\d+)",
+        "replace": "$1$2.$3.$4"
+    },
+    "autoupdate": {
+        "url": "https://github.com/youmulijiang/AuthKit/archive/refs/heads/main.zip#/AuthKit.zip"
+    },
+    "notes": [
+        "【工具类型】: BurpSuite 扩展",
+        "【主要功能】: 多维度鉴权漏洞检测",
+        "【适用场景】: Web 应用安全测试",
+        "【技术特点】: UI/UX 友好，专注于鉴权漏洞",
+        "【注意事项】: 需在 BurpSuite 中安装使用"
+    ]
+}
+
+

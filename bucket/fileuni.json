@@ -1,0 +1,26 @@
+{
+  "version": "0.1.8-alpha.2.20260413065435",
+  "description": "FileUni CLI",
+  "homepage": "https://fileuni.com",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://github.com/FileUni/FileUni-Project/blob/main/LICENSE"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/FileUni/FileUni-Project/releases/download/FileUni-v0.1.8-alpha.2_20260413065435/FileUni-cli-x86_64-windows-msvc.exe.zip",
+      "hash": "88b1c070f2d0b1bf1ca6482d9a7b9b6f952778e9254f1036a22e64baa4a3ef33"
+    },
+    "32bit": {
+      "url": "https://github.com/FileUni/FileUni-Project/releases/download/FileUni-v0.1.8-alpha.2_20260413065435/FileUni-cli-x86_32-windows-msvc.exe.zip",
+      "hash": "8b65e95b05da409604b92f0ec130afb6e1cff7bb0ab1b71dbbaa524ea68843eb"
+    }
+  },
+  "bin": "fileuni.exe",
+  "checkver": {
+    "github": "https://github.com/FileUni/FileUni-Project"
+  },
+  "notes": [
+    "This manifest is auto-generated from FileUni release artifacts."
+  ]
+}

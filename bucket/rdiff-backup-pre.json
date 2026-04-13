@@ -1,0 +1,36 @@
+{
+    "version": "2.6.1.dev70+g222941406",
+    "description": "(Pre-release Version) Reverse differential backup tool, over a network or locally.",
+    "homepage": "https://github.com/rdiff-backup/rdiff-backup",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rdiff-backup/rdiff-backup/releases/download/weekly/rdiff-backup-2.6.1.dev70+unreleased.g222941406.win64exe.zip",
+            "extract_dir": "rdiff-backup-2.6.1.dev70+unreleased.g222941406-64",
+            "hash": "723454d13047fd688a22a0314e619fb39a826c0cdbf4181f633796f56e6b8af4"
+        },
+        "32bit": {
+            "url": "https://github.com/rdiff-backup/rdiff-backup/releases/download/weekly/rdiff-backup-2.6.1.dev70+unreleased.g222941406.win32exe.zip",
+            "extract_dir": "rdiff-backup-2.6.1.dev70+unreleased.g222941406-32",
+            "hash": "bb4a1ab1f6a9ffc28abef97028063f7418e906e28090b72810e0481b8e70ece4"
+        }
+    },
+    "bin": "rdiff-backup.exe",
+    "checkver": {
+        "url": "https://github.com/rdiff-backup/rdiff-backup/releases/expanded_assets/weekly",
+        "regex": "rdiff-backup-(?<devversion>[\\d\\w.]+?)\\+unreleased.(?<commit>[\\d\\w]+).win64exe",
+        "replace": "${devversion}+${commit}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rdiff-backup/rdiff-backup/releases/download/weekly/rdiff-backup-$matchDevversion+unreleased.$matchCommit.win64exe.zip",
+                "extract_dir": "rdiff-backup-$matchDevversion+unreleased.$matchCommit-64"
+            },
+            "32bit": {
+                "url": "https://github.com/rdiff-backup/rdiff-backup/releases/download/weekly/rdiff-backup-$matchDevversion+unreleased.$matchCommit.win32exe.zip",
+                "extract_dir": "rdiff-backup-$matchDevversion+unreleased.$matchCommit-32"
+            }
+        }
+    }
+}

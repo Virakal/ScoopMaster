@@ -1,0 +1,51 @@
+{
+    "version": "3.15.0",
+    "description": "Mirror GitHub repositories to self-hosted Gitea instance",
+    "homepage": "https://github.com/RayLabsHQ/gitea-mirror",
+    "license": "GPL-3.0-only",
+    "notes": [
+        "Run 'gitea-mirror' to start the server.",
+        "First user signup becomes admin. Configure via web UI."
+    ],
+    "suggest": {
+        "bun": "bun"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RayLabsHQ/gitea-mirror/archive/refs/tags/v3.15.0.zip",
+            "hash": "5b80a41e87146c1a3292d1bc9354018d184aedc0d552f75613997ddde5939d0f",
+            "extract_dir": "gitea-mirror-3.15.0"
+        }
+    },
+    "persist": [
+        "data",
+        "node_modules",
+        ".env",
+        ".runtime"
+    ],
+    "installer": {
+        "script": [
+            "$src = Join-Path $bucketsdir 'gdm257' 'scripts' 'gitea-mirror'",
+            "Copy-Item \"$src\\*\" $dir -Recurse",
+            "& \"$dir\\install.ps1\" -dir $dir -persist_dir $persist_dir"
+        ]
+    },
+    "bin": [
+        [
+            "run.ps1",
+            "gitea-mirror"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/RayLabsHQ/gitea-mirror",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RayLabsHQ/gitea-mirror/archive/refs/tags/v$version.zip",
+                "extract_dir": "gitea-mirror-$version"
+            }
+        }
+    }
+}

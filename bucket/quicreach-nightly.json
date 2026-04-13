@@ -1,0 +1,42 @@
+{
+    "version": "b924",
+    "description": "(Nightly Build) A 'ping' equivalent tool for QUIC.",
+    "homepage": "https://github.com/microsoft/quicreach",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/microsoft/quicreach/actions/runs/24144933831/bin-windows-x64-quictls-static.zip",
+            "extract_dir": "x64fre",
+            "hash": "3e60b1697a2d42bdd2da492d11142b3d800cfb962d56595cc08bc62af028e93c"
+        },
+        "32bit": {
+            "url": "https://nightly.link/microsoft/quicreach/actions/runs/24144933831/bin-windows-x86-quictls-static.zip",
+            "extract_dir": "x86fre",
+            "hash": "cf92711512d47c3e9217779d0b5159b7b1c2c8e67113be1666087b3f20fa5a25"
+        },
+        "arm64": {
+            "url": "https://nightly.link/microsoft/quicreach/actions/runs/24144933831/bin-windows-arm64-quictls-static.zip",
+            "extract_dir": "arm64fre",
+            "hash": "0cd1b0b03ff4de14fe054cb6a68bf9a113402a3a545774ff9b2245ae8a41d8e6"
+        }
+    },
+    "bin": "quicreach.exe",
+    "checkver": {
+        "url": "https://github.com/microsoft/quicreach/actions/workflows/build.yml?query=branch%3Amain+is%3Asuccess+event%3Apush",
+        "regex": "(?sm)/actions/runs/(?<run>\\d+)\".*?#(?<build>\\d+):",
+        "replace": "b${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/microsoft/quicreach/actions/runs/$matchRun/bin-windows-x64-quictls-static.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/microsoft/quicreach/actions/runs/$matchRun/bin-windows-x86-quictls-static.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/microsoft/quicreach/actions/runs/$matchRun/bin-windows-arm64-quictls-static.zip"
+            }
+        }
+    }
+}

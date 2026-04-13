@@ -1,22 +1,22 @@
 {
-    "version": "0.2.1",
+    "version": "1.0.1",
+    "description": "Codefresh CLI v2",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/codefresh-io/cli-v2",
+    "changelog": "https://github.com/codefresh-io/cli-v2/releases/latest",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sofq/confluence-cli/releases/download/v0.2.1/confluence-cli_0.2.1_windows_amd64.zip",
-            "bin": [
-                "cf.exe"
-            ],
-            "hash": "6f854786a16559c4ca010e30a4a2dcd0fe95e2eaf172f42963add093a12ca04c"
-        },
-        "arm64": {
-            "url": "https://github.com/sofq/confluence-cli/releases/download/v0.2.1/confluence-cli_0.2.1_windows_arm64.zip",
-            "bin": [
-                "cf.exe"
-            ],
-            "hash": "9a97874a87c78f588d9169fbb7e00d2e3a3ef814a2442df555a6d421980e31f4"
+            "url": "https://ghproxy.com/https://github.com/codefresh-io/cli-v2/releases/download/v1.0.1/cf-windows-amd64.tar.gz",
+            "pre_install": "Get-ChildItem \"$dir\" \"cf-windows-amd64*\" | Rename-Item -NewName 'cf.exe'",
+            "bin": "cf.exe",
+            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
         }
     },
-    "homepage": "https://github.com/sofq/confluence-cli",
-    "license": "Apache-2.0",
-    "description": "Agent-friendly Confluence CLI with structured JSON output and jq filtering"
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://ghproxy.com/https://github.com/codefresh-io/cli-v2/releases/download/v$version/cf-windows-amd64.tar.gz",
+        "hash": {
+            "url": "$baseurl/cf-windows-amd64.sha256"
+        }
+    }
 }

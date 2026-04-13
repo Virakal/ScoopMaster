@@ -1,0 +1,28 @@
+{
+    "version": "1.2.3",
+    "description": "A powerful MCP Slack Server with no permission requirements, Apps support, multiple transports Stdio and SSE, DMs, Group DMs and smart history fetch logic.",
+    "homepage": "https://github.com/korotovsky/slack-mcp-server",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/korotovsky/slack-mcp-server/releases/download/v1.2.3/slack-mcp-server-windows-amd64.exe#/slack-mcp-server.exe",
+            "hash": "d5c59e65ba18221b1a4849f655a45152549dfea78f5f9de90b52550b88214b9d"
+        },
+        "arm64": {
+            "url": "https://github.com/korotovsky/slack-mcp-server/releases/download/v1.2.3/slack-mcp-server-windows-arm64.exe#/slack-mcp-server.exe",
+            "hash": "34857143295f33387beef7b20a1ee83cfbbb65b79fcf6fb44428bbe60fc30618"
+        }
+    },
+    "bin": "slack-mcp-server.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/korotovsky/slack-mcp-server/releases/download/v$version/slack-mcp-server-windows-amd64.exe#/slack-mcp-server.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/korotovsky/slack-mcp-server/releases/download/v$version/slack-mcp-server-windows-arm64.exe#/slack-mcp-server.exe"
+            }
+        }
+    }
+}

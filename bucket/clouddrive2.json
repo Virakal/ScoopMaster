@@ -1,0 +1,36 @@
+{
+    "version": "1.0.5",
+    "description": "CloudDrive是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案",
+    "homepage": "https://www.clouddrive2.com",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v1.0.5/CloudDrive2Setup-X64-1.0.5.exe",
+            "hash": "30ab17753c16371343bf13d339efc6e2b64ae6e466607a0ffdb914d323346806"
+        },
+        "arm64": {
+            "url": "https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v1.0.5/CloudDrive2Setup-Arm64-1.0.5.exe",
+            "hash": "8db35c7d4a9120f3bd17be582cf6d90948730dca91181355bef6e3c3af8811a8"
+        }
+    },
+    "innosetup": true,
+    "bin": [
+        [
+            "clouddrive.exe",
+            "clouddrive"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/cloud-fs/cloud-fs.github.io"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v$version/CloudDrive2Setup-X64-$version.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v$version/CloudDrive2Setup-Arm64-$version.exe"
+            }
+        }
+    }
+}

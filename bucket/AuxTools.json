@@ -1,13 +1,22 @@
 {
-    "version": "5.8.3",
-    "description": "(Scoop bucket by arch3rpro) AuxTools - 图形化渗透测试辅助工具",
+    "version": "5.11.0",
+    "description": "图形化渗透测试辅助工具，包含数据收集、信息收集、站点扫描、端口扫描、漏洞利用等多种功能",
     "homepage": "https://github.com/doimet/AuxTools",
-    "notes": "注意：图形化版本工具，命令行不生效",
-    "license": "Unknown",
-    "url": "https://github.com/doimet/AuxTools/releases/download/5.8.3/AuxTools-Windows.zip",
-    "hash": "5c38265ae51d95e0f568dca13869c6856feaa0bc6c775c278d40b854c60b4b04",
+    "license": "unknown",
+    "url": "https://github.com/doimet/AuxTools/releases/download/5.11.0/AuxTools-Setup.exe#/AuxTools-Setup.exe",
+    "hash": "3aa94eadaf616ca2435ce8321191d58a58318c466ce2e856e5a4f0b694a783ab",
+    "installer": {
+        "script": "Start-Process $dir\\AuxTools-Setup.exe -ArgumentList '/S' -Wait"
+    },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/doimet/AuxTools/releases/download/$version/AuxTools-Windows.zip"
-    }
+        "url": "https://github.com/doimet/AuxTools/releases/download/$version/AuxTools-Setup.exe#/AuxTools-Setup.exe"
+    },
+    "notes": [
+        "【工具类型】: 安全测试",
+        "【主要功能】: 数据收集、信息收集、站点扫描、端口扫描、漏洞利用、命令生成、编码解码等",
+        "【适用场景】: 渗透测试、安全评估、网络安全分析",
+        "【技术特点】: 跨平台支持，图形化界面，模块化设计",
+        "【注意事项】: 部分功能可能需要管理员权限运行"
+    ]
 }

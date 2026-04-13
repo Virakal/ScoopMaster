@@ -1,0 +1,21 @@
+{
+    "version": "1.1.0",
+    "description": "Detects web meetings by monitoring microphone and camera usage",
+    "homepage": "https://github.com/aviscaerulea/tally",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/aviscaerulea/tally/releases/download/v1.1.0/tally-1.1.0-x64.zip",
+            "hash": "4dd46086b827734bd832b5bc8fa702f4caad5205e19ef0867619c2c43d53f52d"
+        }
+    },
+    "bin": "tally.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/aviscaerulea/tally/releases/download/v$version/tally-$version-x64.zip"
+            }
+        }
+    }
+}

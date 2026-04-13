@@ -1,0 +1,28 @@
+{
+    "version": "1.6.6",
+    "description": "A comic reader that support reading local and network comics.",
+    "homepage": "https://github.com/haukuen/venera",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/haukuen/venera/releases/download/v1.6.6/Venera-1.6.6-windows.zip",
+            "hash": "136bfa49cd6543d9e1aae59a1fffc8c2069e9e2715e815397ffde380bfac1de3"
+        }
+    },
+    "shortcuts": [
+        [
+            "venera.exe",
+            "Venera"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\io.github.haukuen\\venera\", \"$env:LOCALAPPDATA\\io.github.haukuen\\venera\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": "Settings are stored in '%APPDATA%\\io.github.haukuen\\venera', and will be purged during uninstallation.",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/haukuen/venera/releases/download/v$version/Venera-$version-windows.zip"
+            }
+        }
+    }
+}

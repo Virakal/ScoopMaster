@@ -1,13 +1,13 @@
 {
-    "version": "4.4.5.505",
-    "description": "夸克浏览器学习、工作、生活的高效拍档",
+    "version": "6.6.8.796",
+    "description": "夸克浏览器，学习、工作、生活的高效拍档。",
     "homepage": "https://www.quark.cn/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://broccoli.uc.cn/apps/quark_icloud_pay/routes/service_help"
     },
-    "url": "https://umcdn.quark.cn/download/37212/quarkpc/pcquark@homepage_oficial/QuarkPC_V4.4.5.505_pc_pf30002_(zh-cn)_release_(Build2425487-1000-x64).exe",
-    "hash": "1929d485d7565c8093a864257e9eac030629d15a35e58ad64efa2f5f685507d6",
+    "url": "https://umcdn.quark.cn/download/37212/quarkpc/pcquark@homepage_oficial/QuarkPC_V6.6.8.796_pc_pf30002_(zh-cn)_release_(Build2899176-1000-x64).exe",
+    "hash": "bef65fba7e28d24e86218448ccf6baf631a17496e5d3c5aee30ec8b3213ac5a3",
     "innosetup": true,
     "shortcuts": [
         [
@@ -20,27 +20,39 @@
             "Move-Item -Path \"$dir\\{code_GetAppExeDestName}\" -Destination \"$dir\\quark.exe\" -Force",
             "Move-Item -Path \"$dir\\{code_GetAppProxyExeDestName}\" -Destination \"$dir\\quark_proxy.exe\" -Force",
             ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "Write-Host \"`nPersisting $env:LOCALAPPDATA\\Quark ... \" -NoNewline",
             "New-PersistDirectory \"$env:LOCALAPPDATA\\Quark\" \"$persist_dir\\LocalAppData\" -Migrate"
         ]
     },
-    "pre_uninstall": [
+    "post_uninstall": [
         "$bucket = $install.bucket",
         ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App"
+        "Write-Host (\"`nDeleting $env:LOCALAPPDATA\\QuarkUpdater ... \") -f DarkGray -NoNewline",
+        "Remove-Item \"$env:LOCALAPPDATA\\QuarkUpdater\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
+        "Write-Host (\"`nDeleting $env:LOCALAPPDATA\\QuarkCloudDrive ... \") -f DarkGray -NoNewline",
+        "Remove-Item \"$env:LOCALAPPDATA\\QuarkCloudDrive\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
+        "Write-Host (\"`nDeleting $env:WINDIR\\system32\\Tasks\\QuarkUpdaterUser ... \") -f DarkGray -NoNewline",
+        "Remove-Item \"$env:WINDIR\\system32\\Tasks\\QuarkUpdaterUser\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
+        "Write-Host (\"`nDeleting $env:APPDATA\\The Quark Authors ... \") -f DarkGray -NoNewline",
+        "Remove-Item \"$env:APPDATA\\The Quark Authors\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
+        "Write-Host (\"`nDeleting $env:APPDATA\\Quark ... \") -f DarkGray -NoNewline",
+        "Remove-Item \"$env:APPDATA\\Quark\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
+        "Write-Host (\"`nDeleting $env:LOCALAPPDATA\\Quark ... \") -f DarkGray -NoNewline",
+        "Remove-Junction \"$env:LOCALAPPDATA\\Quark\" -ErrorAction SilentlyContinue | Out-Null"
     ],
-    "uninstaller": {
-        "script": [
-            "$bucket = $install.bucket",
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "Remove-Junction \"$env:LOCALAPPDATA\\Quark\""
-        ]
-    },
     "checkver": {
-        "url": "https://coral2.uc.cn/aggregation/quarkPcDownloadPackage?req_services=%5B%7B%22module%22%3A%22diamond%22%2C%22key%22%3A%22quark-pc-download-package%22%7D%5D&sceneCode=quark-pc-download-package&uc_param_str=dnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicckp",
-        "jsonpath": "$.data[0].data.homePageDefaultLink",
-        "regex": "(?<url>^https?://.*QuarkPC_V([\\d.]+).*\\.exe$)"
+        "script": [
+            "$api = 'https://coral2.uc.cn/aggregation/quarkPcDownloadPackage?req_services=%5B%7B%22module%22%3A%22diamond%22%2C%22key%22%3A%22quark-pc-download-package%22%7D%5D&sceneCode=quark-pc-download-package&uc_param_str=dnfrpfbivessbtbmnilauputogpintnwmtsvcppcprsnnnchmicckp'",
+            "$entry = 'https://download.quark.cn/download/quarkpc?platform=pc&ch=pcquark@homepage_oficial'",
+            "$resolved = (Invoke-WebRequest -Uri $entry -Method Head -MaximumRedirection 5 -UseBasicParsing).BaseResponse.RequestMessage.RequestUri.AbsoluteUri",
+            "return $resolved"
+        ],
+        "regex": "(?<url>https?://.*?/QuarkPC_V([\\d.]+)_pc_pf30002_\\(zh-cn\\)_.*?\\.exe)"
     },
     "autoupdate": {
-        "url": "$matchUrl"
+        "url": "$matchUrl",
+        "hash": {
+            "mode": "download"
+        }
     }
 }
