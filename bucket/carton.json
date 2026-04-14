@@ -16,15 +16,15 @@
     "shortcuts": [
         [
             "carton.exe",
-            "carton"
+            "Carton"
         ]
     ],
-    "installer": {
-        "script": "New-Item -Path \"\\.carton_portable_data\" -ItemType File -Force"
-    },
-    "uninstaller": {
-        "script": "Remove-Item -Path \"\\.carton_portable_data\" -Force"
-    },
+    "pre_install": [
+        "$portableFlag = \"$dir\\.carton_portable_data\"",
+        "if (!(Test-Path \"$portableFlag\")) {",
+        "    Add-Content -Path \"$portableFlag\" -Value \"true\" -NoNewline",
+        "}"
+    ],
     "bin": [
         "carton.exe"
     ],
@@ -32,6 +32,7 @@
         "bin"
     ],
     "persist": [
+        ".carton_portable_data",
         "data",
         "bin"
     ],
