@@ -1,12 +1,12 @@
 {
-  "version": "2.7.6",
+  "version": "2.8.0",
   "description": "Type-safe TypeScript SDK and CLI for Servarr APIs",
   "homepage": "https://github.com/robbeverhelst/tsarr",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/robbeverhelst/tsarr/releases/download/v2.7.6/tsarr-windows-x64.exe",
-      "hash": "29d07b84c5ce62817ab0da3b3b223b7fb8184c46df268a36f87a7243bd986a56"
+      "url": "https://github.com/robbeverhelst/tsarr/releases/download/v2.8.0/tsarr-windows-x64.exe",
+      "hash": "f2d4c3c0b16ae689daa06238118be32d79fe5122002073e6a7aed23d363dc475"
     }
   },
   "bin": [
