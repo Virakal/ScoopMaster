@@ -1,16 +1,16 @@
 {
-    "version": "12.7.14",
+    "version": "11.1.28",
     "description": "A system and performance monitoring utility",
     "homepage": "https://www.sysgauge.com",
     "license": "Shareware",
     "architecture": {
         "64bit": {
-            "url": "https://www.sysgauge.com/setups_x64/sysgauge_setup_v12.7.14_x64.exe#/dl.7z",
-            "hash": "053d75ea607c4b894160b0658637f0d5303db74ba6f6001450aff3b92f3e6ed2"
+            "url": "http://www.sysgauge.com/setups_x64/sysgauge_setup_v11.1.28_x64.exe#/dl.7z",
+            "hash": "2bded6ef33ac9a2a06ed534f749ff0ec3d4b5d9cd3bf71088b3922a4a7148528"
         },
         "32bit": {
-            "url": "https://www.sysgauge.com/setups/sysgauge_setup_v12.7.14.exe#/dl.7z",
-            "hash": "07cf480f24fac88bbaa5b9752ef943a1d44f4c9f32ef91e29703bdc09f7ae107"
+            "url": "http://www.sysgauge.com/setups/sysgauge_setup_v11.1.28.exe#/dl.7z",
+            "hash": "7ac18886da28b30045cc0b9b68d74a92fe89f04c867f494938161f9f364f3621"
         }
     },
     "installer": {
@@ -28,15 +28,23 @@
     ],
     "checkver": {
         "url": "https://www.sysgauge.com/downloads.html",
-        "regex": "(?sm)>SysGauge.*?>([\\d.]+)<"
+        "regex": "<b>SysGauge</b><br>v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.sysgauge.com/setups_x64/sysgauge_setup_v$version_x64.exe#/dl.7z"
+                "url": "http://www.sysgauge.com/setups_x64/sysgauge_setup_v$version_x64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://www.sysgauge.com/downloads.html",
+                    "regex": "<b>64-Bit SHA256:</b> $sha256"
+                }
             },
             "32bit": {
-                "url": "https://www.sysgauge.com/setups/sysgauge_setup_v$version.exe#/dl.7z"
+                "url": "http://www.sysgauge.com/setups/sysgauge_setup_v$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://www.sysgauge.com/downloads.html",
+                    "regex": "<b>32-Bit SHA256:</b> $sha256"
+                }
             }
         }
     }

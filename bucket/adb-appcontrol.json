@@ -1,13 +1,13 @@
 {
-    "version": "2020",
+    "version": "1.8.5",
     "homepage": "https://adbappcontrol.com/",
-    "description": "A handy desktop program that will allow you to easily manage applications on your android device.",
+    "description": "A handy desktop program that allows for easy management of apps on your android device.",
     "license": {
         "identifier": "Freeware",
         "url": "https://adbappcontrol.com/en/terms/"
     },
     "url": "https://adbappcontrol.com/download/?lang=en&t=zip#/dl.zip",
-    "hash": "9982b14d126e1c38a2f533c3c7afdcd8f86185fd6fe7a4560a674e66fd7fc810",
+    "hash": "md5:31040837fd71adb4b0bd716391d923fd",
     "pre_install": "if (!(Test-Path \"$persist_dir\\console.log\")) { New-Item \"$dir\\console.log\" | Out-Null }",
     "shortcuts": [
         [

@@ -1,5 +1,5 @@
 {
-    "version": "1.6.9.11",
+    "version": "1.6.7.10",
     "description": "Peace Equalizer, an user interface for Equalizer APO",
     "homepage": "https://sourceforge.net/projects/peace-equalizer-apo-extension/",
     "license": "GPL-2.0-only",
@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://sourceforge.net/projects/peace-equalizer-apo-extension/files/64%20bits%20version/Peace64.exe/download",
-            "hash": "f001387a597fc7cee845cfbf49dc44519d81708e3cf42915814f9fa57f59e0de",
+            "hash": "fbe199c85bf40615cbbf73d559b670d79d8969170740f36182b9db84478eedd6",
             "shortcuts": [
                 [
                     "Peace64.exe",
@@ -17,7 +17,7 @@
         },
         "32bit": {
             "url": "https://sourceforge.net/projects/peace-equalizer-apo-extension/files/Peace.exe/download",
-            "hash": "7b52db74575e7cb59a2fa03d2d79b86f0a5c3ca04178bd216095bee74cf28021",
+            "hash": "c2b8b31df8772716e2515dc8df79487389c5ddee67927fd69b6092c45c882b33",
             "shortcuts": [
                 [
                     "Peace.exe",

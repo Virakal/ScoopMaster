@@ -1,17 +1,18 @@
 {
-    "version": "7.3",
+    "version": "6.3",
     "description": "Windows 云音乐歌词获取【网易云、QQ音乐】",
     "homepage": "https://github.com/jitwxs/163MusicLyrics",
     "license": "Apache License 2.0",
-    "url": "https://github.com/jitwxs/163MusicLyrics/releases/download/v7.3/MusicLyricApp-v7.3-win-x64.zip",
-    "hash": "266af56b6d46f1caab6b5b6050a3295df8ed179a1eb447b0c47e8f173051edf2",
-    "installer": {
-        "script": [
-            "Get-ChildItem -Path \"$dir\\MusicLyricApp*.exe\" | ForEach-Object {",
-            "    Rename-Item -Path $_.FullName -NewName \"MusicLyricApp.exe\"",
-            "}"
-        ]
-    },
+    "url": [
+        "https://github.com/jitwxs/163MusicLyrics/releases/download/v6.3/v6.3-green.zip",
+        "https://github.com/jitwxs/163MusicLyrics/releases/download/v4.2/IpaDic.zip",
+        "https://github.com/jitwxs/163MusicLyrics/releases/download/v5.2/Verbatim.zip"
+    ],
+    "hash": [
+        "23f706d08d650775b6c925be23949604f87c9145b2b0b7d052f07f6e4d6641f4",
+        "c88ca6b0f964e3e83d1cd4af80bed5bce45a4083d9b1eedc2e25f36adabb0a52",
+        "81ceae9ece4c6b7bb637b1fcf08db247618df0b29db26adffdbe0f1b1ecef74f"
+    ],
     "shortcuts": [
         [
             "MusicLyricApp.exe",
@@ -20,6 +21,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/jitwxs/163MusicLyrics/releases/download/v$version/MusicLyricApp-v$version-win-x64.zip"
+        "url": "https://github.com/jitwxs/163MusicLyrics/releases/download/v$version/v$version-green.zip"
     }
 }

@@ -1,18 +1,13 @@
 {
-    "version": "2.9.0",
+    "version": "1.13.4",
     "description": "Cross-platform gist snippets management desktop application to share code snippets fast and easily",
-    "homepage": "https://gisto.org/",
+    "homepage": "https://www.gistoapp.com/",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Gisto/Gisto/releases/download/v2.9.0/Gisto_2.9.0_x64_en-US.msi",
-            "hash": "d4c6abab554f6fc71b2d452eb1976e45791765fc29e1ab78601802ce358fa4de"
-        }
-    },
-    "extract_dir": "PFiles\\Gisto",
+    "url": "https://github.com/Gisto/Gisto/releases/download/v1.13.4/Gisto-1.13.4-Portable.exe#/gisto.exe",
+    "hash": "2ad00f8a7672e3e97b64f9eda628383967b116e5c8716de4c0a840cf7fdb9b3d",
     "shortcuts": [
         [
-            "Gisto.exe",
+            "gisto.exe",
             "Gisto"
         ]
     ],
@@ -20,10 +15,6 @@
         "github": "https://github.com/Gisto/Gisto"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Gisto/Gisto/releases/download/v$version/Gisto_$version_x64_en-US.msi"
-            }
-        }
+        "url": "https://github.com/Gisto/Gisto/releases/download/v$version/Gisto-$version-Portable.exe#/gisto.exe"
     }
 }

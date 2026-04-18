@@ -1,10 +1,10 @@
 {
-    "version": "15.0",
+    "version": "14.0",
     "description": "A screen magnifier for a detailed view or for the visually impaired.",
     "homepage": "https://www.blacksunsoftware.com/screenmagnifier.html",
     "license": "Freeware",
     "url": "https://www.blacksunsoftware.com/downloads/MagnifixerPortable.zip",
-    "hash": "bbc3198b6039fc10c654de133d2e3df4176567cf87bfeb2eeac4c3fb5af0678d",
+    "hash": "046401f44eea1a7ab674bbfa1c499cced99e867bafff4f217028941056c9ff48",
     "shortcuts": [
         [
             "MagnifixerPortable.exe",
@@ -14,7 +14,7 @@
     "pre_install": "if (!(Test-Path \"$persist_dir\\Magnifixer.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\Magnifixer.ini\" -Value $null }",
     "persist": "Magnifixer.ini",
     "checkver": {
-        "regex": "\"softwareVersion\":\\s+\"([\\d.]+)\""
+        "regex": "version ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://www.blacksunsoftware.com/downloads/MagnifixerPortable.zip"

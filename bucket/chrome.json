@@ -1,52 +1,66 @@
 {
-    "version": "149.0.7798.2",
+    "version": "129.0.6668.59",
     "description": "Fast, secure, and free web browser, built for the modern web.",
-    "homepage": "https://www.google.com/chrome/canary",
+    "homepage": "https://www.google.com/chrome/",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.google.com/chrome/privacy/eula_text.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/aclejqh5oeqorsgvfoc3vlbn3nxa_149.0.7798.2/149.0.7798.2_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "eaeeef5da3d54c7bd1bf299d63cee04ec2605f011501fdc3d86af706b84b0261"
+            "url": "https://dl.google.com/release2/chrome/gkjbxl7dmfzadbbqlmb6vzen2e_129.0.6668.59/129.0.6668.59_chrome_installer.exe#/dl.7z",
+            "hash": "c3c2f17c672ec5bac219226d8c4e946a5cd1c25f9165d90c2feea01bc99ef4ba"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/ac27w6qmrvuxluvimefw6m5c3umq_149.0.7798.2/149.0.7798.2_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "05645e1c9fe30f8696bee96f7adf1b0e6d82e7b5522a9847ebf6134642758938"
+            "url": "https://dl.google.com/release2/chrome/k4qrch3fys3zdyhbhkvdnyzmtq_129.0.6668.59/129.0.6668.59_chrome_installer.exe#/dl.7z",
+            "hash": "b8f59aabe6d91152b9dcd02734128a55a9d65de1681877be33357f4c311f1b56"
         }
     },
-    "extract_dir": "Chrome-bin",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal"
+    },
     "bin": [
         [
             "chrome.exe",
-            "chrome"
+            "chrome",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
     "shortcuts": [
         [
             "chrome.exe",
-            "Google Chrome"
+            "Google Chrome",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "post_install": [
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
+    "env_set": {
+        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
+    },
+    "persist": "User Data",
     "checkver": {
         "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
-        "regex": "(?sm)<canary32><version>(?<version>[\\d.]+)</version>.+release2/chrome/(?<32>[\\w-]+)_.+<canary64>.+release2/chrome/(?<64>[\\w-]+)_.+</canary64>"
+        "regex": "(?sm)<stable32><version>(?<version>[\\d.]+)</version>.+release2/chrome/(?<32>[\\w-]+)_.+<stable64>.+release2/chrome/(?<64>[\\w-]+)_.+</stable64>"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer_uncompressed.exe#/dl.7z",
+                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer.exe#/dl.7z",
                 "hash": {
                     "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
-                    "xpath": "/chromechecker/canary64[version='$version']/sha256"
+                    "xpath": "/chromechecker/stable64[version='$version']/sha256"
                 }
             },
             "32bit": {
-                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer_uncompressed.exe#/dl.7z",
+                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer.exe#/dl.7z",
                 "hash": {
                     "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
-                    "xpath": "/chromechecker/canary32[version='$version']/sha256"
+                    "xpath": "/chromechecker/stable32[version='$version']/sha256"
                 }
             }
         }

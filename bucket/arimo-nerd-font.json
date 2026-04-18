@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Arimo' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Arimo.tar.xz",
-    "hash": "006464de19502bd49a72265058811665b62b823509bbbd2e7181ba87046b6b08",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Arimo.tar.xz",
+    "hash": "20f3bc015e46e4fe9f57cfe495eaa167b796e047df4f98676fe16649aba4ffb8",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

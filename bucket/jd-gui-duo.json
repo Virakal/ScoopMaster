@@ -1,12 +1,15 @@
 {
-    "version": "2.0.109",
-    "description": "A Java Decompiler based on JD-CORE v0 and v1, supporting 3rd party decompilers",
+    "version": "2.0.75",
+    "description": "A 2-in-1 JAVA decompiler based on JD-CORE v0 and v1",
     "homepage": "https://github.com/nbauma109/jd-gui-duo",
-    "license": "GPL-3.0-only",
-    "url": "https://github.com/nbauma109/jd-gui-duo/releases/download/2.0.109/jd-gui-duo-windows-2.0.109.tar.xz",
-    "hash": "f0b5d1211303d7f9f8ecb1bd9881ddb84a838194287790a2d0f51db700333983",
-    "pre_install": "Move-Item \"$dir\\jd-gui-duo-$version.exe\" \"$dir\\jd-gui-duo.exe\"",
-    "bin": "jd-gui-duo.bat",
+    "license": "GPL-3.0",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://github.com/nbauma109/jd-gui-duo/releases/download/2.0.75/jd-gui-duo-2.0.75.zip",
+    "hash": "736df2128b7ab1c851b4b3da1fe9acd9a8401bf2634febe89d8cc27d5ec184f0",
+    "pre_install": "Copy-Item \"$dir\\jd-gui-duo-$version.exe\" \"$dir\\jd-gui-duo.exe\"",
+    "bin": "jd-gui-duo.exe",
     "shortcuts": [
         [
             "jd-gui-duo.exe",
@@ -15,6 +18,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/nbauma109/jd-gui-duo/releases/download/$version/jd-gui-duo-windows-$version.tar.xz"
+        "url": "https://github.com/nbauma109/jd-gui-duo/releases/download/$version/jd-gui-duo-$version.zip"
     }
 }

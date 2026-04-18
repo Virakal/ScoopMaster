@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'MartianMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/MartianMono.tar.xz",
-    "hash": "e12f5ca02756268e794d06d9cb2ada93d021ec915f5a43ec2cd77355022f3624",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/MartianMono.tar.xz",
+    "hash": "62484ea8f66ae3b75610b89c5d3258f8610844fec6d8402239c27a5042dccc7d",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

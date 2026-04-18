@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Hermit' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hermit.tar.xz",
-    "hash": "206ae23c386dcb84a2dfaca678af36123fbaff1fb402326021973485018467f3",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hermit.tar.xz",
+    "hash": "23552caf1b6075858756de2e8f3a3fbb9799b478882f3f7afeefa8ca7f4601ae",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

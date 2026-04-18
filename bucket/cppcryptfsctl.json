@@ -1,30 +1,26 @@
 {
-    "version": "1.4.4.9",
+    "version": "1.4.4.4",
+    "license": "MIT",
     "description": "cppcryptfs is an implementation of the gocryptfs encrypted overlay filesystem in C++ for Windows.",
-    "homepage": "https://github.com/bailey27/cppcryptfs",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/bailey27/cppcryptfs/blob/HEAD/LICENSE.txt"
-    },
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/bailey27/cppcryptfs/releases/download/v1.4.4.9/cppcryptfsctl.exe",
-                "https://github.com/bailey27/cppcryptfs/releases/download/v1.4.4.9/cppcryptfs.exe"
+                "https://github.com/bailey27/cppcryptfs/releases/download/1.4.4.4/cppcryptfsctl.exe",
+                "https://github.com/bailey27/cppcryptfs/releases/download/1.4.4.4/cppcryptfs.exe"
             ],
             "hash": [
-                "f47de68f211d14f411a2a395633caff882bb3b9b77ce4464e596c595968c0656",
-                "04250a951cf2f67b670c2f096454be00fa9c117cebcaef56c0374e2b81e7c85f"
+                "74a1fc8c4b0c42375a1f3380b330d3db1f4c2dada2c78d25f51fbc4e12da43b7",
+                "be7db02df851bec90ea866fa97e20782f2a310396d02df975abf48756d0f4ec6"
             ]
         },
         "32bit": {
             "url": [
-                "https://github.com/bailey27/cppcryptfs/releases/download/v1.4.4.9/cppcryptfsctl32.exe#/cppcryptfsctl.exe",
-                "https://github.com/bailey27/cppcryptfs/releases/download/v1.4.4.9/cppcryptfs32.exe#/cppcryptfs.exe"
+                "https://github.com/bailey27/cppcryptfs/releases/download/1.4.4.4/cppcryptfsctl32.exe#/cppcryptfsctl.exe",
+                "https://github.com/bailey27/cppcryptfs/releases/download/1.4.4.4/cppcryptfs32.exe#/cppcryptfs.exe"
             ],
             "hash": [
-                "a4ea64b789aae14c5406bb05a551c23469accf9fc7866d837e51568c899414cf",
-                "935281b4e6e3047f6365774fcc6859f94b3e516be9f20fd329bee9de0d65d0fb"
+                "38695bf926c88233831ab2f0732932cbc896259ec7040ae4aaca8cb6af35392a",
+                "09b9798a4123437f856bfe72ea2a78e6449399b2584e8434836fa379d9c63805"
             ]
         }
     },
@@ -32,19 +28,20 @@
         "cppcryptfsctl.exe",
         "cppcryptfs.exe"
     ],
+    "homepage": "https://github.com/bailey27/cppcryptfs",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/bailey27/cppcryptfs/releases/download/v$version/cppcryptfsctl.exe",
-                    "https://github.com/bailey27/cppcryptfs/releases/download/v$version/cppcryptfs.exe"
+                    "https://github.com/bailey27/cppcryptfs/releases/download/$version/cppcryptfsctl.exe",
+                    "https://github.com/bailey27/cppcryptfs/releases/download/$version/cppcryptfs.exe"
                 ]
             },
             "32bit": {
                 "url": [
-                    "https://github.com/bailey27/cppcryptfs/releases/download/v$version/cppcryptfsctl32.exe#/cppcryptfsctl.exe",
-                    "https://github.com/bailey27/cppcryptfs/releases/download/v$version/cppcryptfs32.exe#/cppcryptfs.exe"
+                    "https://github.com/bailey27/cppcryptfs/releases/download/$version/cppcryptfsctl32.exe#/cppcryptfsctl.exe",
+                    "https://github.com/bailey27/cppcryptfs/releases/download/$version/cppcryptfs32.exe#/cppcryptfs.exe"
                 ]
             }
         }

@@ -1,30 +1,23 @@
 {
-    "version": "6.7.1",
+    "version": "5.6.2",
     "description": "An Arknights game assissant",
     "homepage": "https://maa.plus/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.7.1/MAA-v6.7.1-win-x64.zip",
-            "hash": "1a378dc103cc3a38022b5923dacdf4363dd4847c3a68ae276626628c2dad203f"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-x64.zip",
+            "hash": "eee98fae48d000cc8a28d4b115ec2812f322b3dafa5cc7f53a887c755c04013a"
         },
         "arm64": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.7.1/MAA-v6.7.1-win-arm64.zip",
-            "hash": "5a0ccfe1c27dc8d10445c5dfe525291b3eeab1095f28152c5c252461f7ad4881"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-arm64.zip",
+            "hash": "a21aa363606d003cd3f4b9d9694317108fd5723846a12f749e8fbf11fd7b858f"
         }
     },
-    "bin": "MAA.exe",
     "shortcuts": [
         [
             "MAA.exe",
             "MaaAssistantArknights"
         ]
-    ],
-    "persist": [
-        "adb",
-        "cache",
-        "config",
-        "debug"
     ],
     "suggest": {
         "emulators": [
@@ -33,6 +26,7 @@
         ],
         "adb": "adb"
     },
+    "persist": "config",
     "checkver": {
         "github": "https://github.com/MaaAssistantArknights/MaaAssistantArknights"
     },

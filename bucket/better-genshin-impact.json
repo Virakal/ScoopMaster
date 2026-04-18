@@ -1,5 +1,5 @@
 {
-    "version": "0.60.1",
+    "version": "0.34.1",
     "description": "BetterGI is a project that aims to make Genshin Impact better using computer vision technology.",
     "homepage": "https://github.com/babalae/better-genshin-impact",
     "license": {
@@ -8,15 +8,24 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.60.1/BetterGI_v0.60.1.7z",
-            "hash": "82787ed94a6564c39c418a9cdd2f7990b45820e570b2f6bf589a7aa7b48af0ec"
+            "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.34/BetterGI_v0.34.1.7z",
+            "hash": "b97a3065ef00ac1aa6ed87009839ba096b55e831333ec25dcc10e04bc50d9e64"
         }
     },
-    "checkver": "github",
+    "checkver": {
+        "script": [
+            "$rel_info = Invoke-RestMethod -Uri 'https://api.github.com/repos/babalae/better-genshin-impact/releases'",
+            "$main = $rel_info | Where-Object { $_.target_commitish -eq 'main'} | Select-Object -first 1",
+            "$asset = ($main.assets | Where-Object { $_.name -match '^BetterGI_v((?:\\d+\\.?)+)\\.7z'} | Select-Object -first 1)",
+            "$stable_version = $asset.name.TrimStart('BetterGI_v').TrimEnd('.7z')",
+            "Write-Output $stable_version $asset.browser_download_url"
+        ],
+        "regex": "(?<version>[\\d.]+)\\s(?<dlurl>.+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/babalae/better-genshin-impact/releases/download/$version/BetterGI_v$version.7z"
+                "url": "$matchDlurl"
             }
         }
     },

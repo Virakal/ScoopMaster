@@ -1,12 +1,12 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "d9f8683602c8698955d1bf51c30d50be52b4f979e4cb63f6188adc28e7cf900f",
-            "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.23.3-0/Alpine.zip"
+            "hash": "beb08b0a34f4e88b4b6aab6e38c186c21b849a01cf8ce9aed38f6f24bbd4da8d",
+            "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.18.4-0/Alpine.zip"
         },
         "arm64": {
-            "hash": "337f0f599fbc9fa751c4319488fda561e92606dc8a902b8c8c4b75f3c18f5e1f",
-            "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.23.3-0/Alpine_arm64.zip"
+            "hash": "f8b87897d7fcf83ac077b481cfdc68b1e61d7c0e8e0bce1472a85ba51f6a5dd3",
+            "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.18.4-0/Alpine_arm64.zip"
         }
     },
     "autoupdate": {
@@ -32,5 +32,5 @@
     "uninstaller": {
         "script": "\"$dir\\Alpine.exe\" clean"
     },
-    "version": "3.23.3-0"
+    "version": "3.18.4-0"
 }

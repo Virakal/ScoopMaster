@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:c4089115f825c27be9d21c57ae9c43acc9a0e61a73dc98b3f4d16854158e9743952c6889c83af9603ef97f2f213ea21d617187735c997c8831cd58c062ad35fb",
+    "hash": "sha512:65601112fd3225f87b848797639b0f6d51673a781e29d2279648921f7c3b0926be198513a1813f3ec41f04e6cc83f6712e27d4341494dc360c46019c7482ec52",
     "description": "Microsoft Azure PowerShell: ManagedServices cmdlets",
     "psmodule": {
         "name": "Az.ManagedServices"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ManagedServices/3.1.3#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ManagedServices/3.0.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "3.1.3"
+    "version": "3.0.1"
 }

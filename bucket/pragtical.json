@@ -1,12 +1,16 @@
 {
-    "version": "3.8.5",
+    "version": "3.5.0",
     "description": "The practical and pragmatic code editor.",
     "homepage": "https://pragtical.dev/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pragtical/pragtical/releases/download/v3.8.5/pragtical-v3.8.5-windows-x86_64.zip",
-            "hash": "1e16d842a5469024f7884e0c3128f72f483582ee682849329705ec76c38d7bea"
+            "url": "https://github.com/pragtical/pragtical/releases/download/v3.5.0/pragtical-v3.5.0-windows-x86_64.zip",
+            "hash": "690cfbd4b0f46c8517ee77d1431a4e29ae720ab4310b072ad7ec6814cb989dbf"
+        },
+        "32bit": {
+            "url": "https://github.com/pragtical/pragtical/releases/download/v3.5.0/pragtical-v3.5.0-windows-i686.zip",
+            "hash": "b7444fdc80ec20abd214ec26119f96b956f1b6ea4464548a78a34fa69595c76c"
         }
     },
     "extract_dir": "pragtical",
@@ -24,6 +28,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/pragtical/pragtical/releases/download/v$version/pragtical-v$version-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/pragtical/pragtical/releases/download/v$version/pragtical-v$version-windows-i686.zip"
             }
         }
     }

@@ -1,19 +1,19 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "25.0.2-12",
+    "version": "21.0.4-9",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/25.0.2%2B12/bellsoft-jdk25.0.2%2B12-windows-amd64-lite.zip",
-            "hash": "sha1:42c638389b9cab6ca6d0c3e64b442c73659930d0"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.4%2B9/bellsoft-jdk21.0.4%2B9-windows-amd64-lite.zip",
+            "hash": "76efe98558e02689b4ad1ada6cf25e66f2279bf723dc86f42e0827f71f7cd485"
         },
-        "arm64": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/25.0.2%2B12/bellsoft-jdk25.0.2%2B12-windows-aarch64-lite.zip",
-            "hash": "sha1:47da13e315d93225aa7689f9b975a5b3db88cf11"
+        "32bit": {
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.4%2B9/bellsoft-jdk21.0.4%2B9-windows-i586-lite.zip",
+            "hash": "b84200ac5c633ef502b239d7592632fd12286fabe4850b45f5f283356d043ead"
         }
     },
-    "extract_dir": "jdk-25.0.2-lite",
+    "extract_dir": "jdk-21.0.4-lite",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
@@ -22,16 +22,15 @@
         "url": "https://api.bell-sw.com/v1/liberica/releases?bundle-type=jdk-lite&version-modifier=latest&release-type=lts&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
         "jsonpath": "$.version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
-        "replace": "${major}-${build}",
-        "reverse": true
+        "replace": "${major}-${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-amd64-lite.zip"
             },
-            "arm64": {
-                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-aarch64-lite.zip"
+            "32bit": {
+                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-i586-lite.zip"
             }
         },
         "hash": {

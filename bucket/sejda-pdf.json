@@ -1,5 +1,5 @@
 {
-    "version": "7.9.3",
+    "version": "7.7.2",
     "description": "PDF Editor",
     "homepage": "https://www.sejda.com/desktop",
     "license": {
@@ -8,10 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sejda-cdn.com/sejda-desktop_7.9.3_x64_portable.zip",
-            "hash": "2d4e06ad849e43b18deedfaaa26977c77d2e4607914d211cd5685e547a96d10a"
+            "url": "https://downloads.sejda-cdn.com/sejda-desktop_7.7.2_x64_portable.zip",
+            "hash": "2e3b26bfff0b2f30d3383ebdbe5eee0e80fbb24d8c802f44f8a58d92da5ea7c9"
         }
     },
+    "extract_dir": "Sejda PDF Desktop",
     "shortcuts": [
         [
             "Sejda PDF Desktop.exe",

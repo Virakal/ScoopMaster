@@ -1,20 +1,20 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser",
-    "version": "144.0.3719.82",
+    "version": "128.0.2739.79",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://beerpsi-scoop.deno.dev/edge?arch=x64&channel=stable&version=144.0.3719.82&dl#/MicrosoftEdge-144.0.3719.82-x64.7z",
-            "hash": "37c3743a1b466c63d348d298d871a0daa49387ddfa058d09a7909166faaf641b"
+            "url": "https://beerpsi-scoop.deno.dev/edge?arch=x64&channel=stable&version=128.0.2739.79&dl#/MicrosoftEdge-128.0.2739.79-x64.7z",
+            "hash": "717ac251286e2b43aa4ee4b224dc0b6afd7f32ceb5394382499f03164b57930f"
         },
         "32bit": {
-            "url": "https://beerpsi-scoop.deno.dev/edge?arch=x86&channel=stable&version=144.0.3719.82&dl#/MicrosoftEdge-144.0.3719.82-x86.7z",
-            "hash": "e805d2d3413d57cf01df0448272f8afb489253f69db12362550d1e4a36f84f66"
+            "url": "https://beerpsi-scoop.deno.dev/edge?arch=x86&channel=stable&version=128.0.2739.79&dl#/MicrosoftEdge-128.0.2739.79-x86.7z",
+            "hash": "47efc8e868fcb05b08273603a8885108dac7e4dceb2a47751a1a6e7a2b708b2e"
         },
         "arm64": {
-            "url": "https://beerpsi-scoop.deno.dev/edge?arch=arm64&channel=stable&version=144.0.3719.82&dl#/MicrosoftEdge-144.0.3719.82-arm64.7z",
-            "hash": "b49d08dd71c77fdfa6f0d45c63158e8dca4e9379b93ea2f94cfe0b6ae1b950db"
+            "url": "https://beerpsi-scoop.deno.dev/edge?arch=arm64&channel=stable&version=128.0.2739.79&dl#/MicrosoftEdge-128.0.2739.79-arm64.7z",
+            "hash": "d1b5b0364f49a5bd033dc7f7567a4eacc9a9bf7c51f0cbfffbc3f0cadffd2d49"
         }
     },
     "installer": {

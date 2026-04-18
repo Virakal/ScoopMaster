@@ -6,8 +6,8 @@
         "identifier": "Freeware",
         "url": "https://www.sordum.org/eula/"
     },
-    "url": "https://www.sordum.org/files/download/firewall-app-blocker/fab.zip",
-    "hash": "a3ba4fd717e892eea3ca627ffe84056eb392f3541aa85e43a57b83436e752803",
+    "url": "https://www.sordum.org/files/firewall-app-blocker/fab.zip",
+    "hash": "b2522f29da8976aee190cd57b4a1c355eed8ee92bd2aef6a13363a7320336825",
     "extract_dir": "fab",
     "architecture": {
         "64bit": {
@@ -38,6 +38,6 @@
     "persist": "Fab.ini",
     "checkver": "Firewall App Blocker v([\\d.]+)",
     "autoupdate": {
-        "url": "https://www.sordum.org/files/download/firewall-app-blocker/fab.zip"
+        "url": "https://www.sordum.org/files/firewall-app-blocker/fab.zip"
     }
 }

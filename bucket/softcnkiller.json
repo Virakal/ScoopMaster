@@ -1,10 +1,10 @@
 {
-    "version": "2.85",
+    "version": "2.82",
     "description": "流氓软件专杀",
     "homepage": "https://blog.csdn.net/hfhbutn/article/details/104799162",
     "license": "Free",
-    "url": "https://cdn.winapps.cc/software/win/SoftCnKiller2.85.exe#/dl.7z",
-    "hash": "d7f2830568138edbd2a04985280ce2bf058b3761c72ae7650556317e3f9f7ea7",
+    "url": "https://gitcode.net/hfhbutn/SoftCnKiller/-/raw/master/SoftCnKiller2.82.exe#/dl.7z",
+    "hash": "fa747f76581f7d9b4e1c0a1929029299376964977c36b232d9ed03b47799c2b0",
     "pre_install": "Move-Item \"$dir\\SoftCnKiller$version\\*\" \"$dir\\\"",
     "shortcuts": [
         [
@@ -13,7 +13,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://gitee.com/softcnkiller/data/releases/latest",
-        "regex": "SoftCnKiller([\\d.]+)\\.exe"
+        "url": "https://gitcode.net/hfhbutn/SoftCnKiller/-/tags",
+        "regex": "SoftCnKiller([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://gitcode.net/hfhbutn/SoftCnKiller/-/raw/master/SoftCnKiller$version.exe#/dl.7z"
     }
 }

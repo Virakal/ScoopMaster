@@ -1,10 +1,10 @@
 {
-    "version": "7.9",
+    "version": "6.4",
     "description": "An open source monospace font with round corner and ligatures for IDE and command line. (Nerd Fonts patched)",
     "homepage": "https://github.com/subframe7536/Maple-font",
     "license": "OFL-1.1",
-    "url": "https://github.com/subframe7536/Maple-font/releases/download/v7.9/MapleMono-NF.zip",
-    "hash": "59098b87c895d871635d37680e88000ae2b2b25b55428195b228ec589e35fb89",
+    "url": "https://github.com/subframe7536/Maple-font/releases/download/v6.4/MapleMono-NF.zip",
+    "hash": "7f2fa17546190d6e6790c562ae1926cacded22459eccf0eb9693719d1325e165",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

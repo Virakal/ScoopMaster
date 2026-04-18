@@ -1,16 +1,16 @@
 {
-    "version": "3.0.5",
+    "version": "2.13.0",
     "description": "A command-line tool that operators and tenants can use to execute a number of common tasks that involve Grafana Mimir or Grafana Cloud Metrics.",
     "homepage": "https://github.com/grafana/mimir",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/grafana/mimir/releases/download/mimir-3.0.5/mimirtool-windows-amd64.exe#/mimirtool.exe",
-            "hash": "6f8b2a5d3496f449680261d7bcd98c7f310efbcb16c1221e87596162c03c6590"
+            "url": "https://github.com/grafana/mimir/releases/download/mimir-2.13.0/mimirtool-windows-amd64.exe#/mimirtool.exe",
+            "hash": "43e28c096dcfec285521d801470c98ce199ddbba1408d0d3c61e81819efe1deb"
         },
         "32bit": {
-            "url": "https://github.com/grafana/mimir/releases/download/mimir-3.0.5/mimirtool-windows-arm64.exe#/mimirtool.exe",
-            "hash": "86d5890c09a57e8773cd2b1a10bb8a805e347ae1556fc306eb9277ad3a160fa3"
+            "url": "https://github.com/grafana/mimir/releases/download/mimir-2.13.0/mimirtool-windows-arm64.exe#/mimirtool.exe",
+            "hash": "f022b3279be69d1af7ecad8d0c0ba96f048440737fec10bfb6e7341ae57b56e5"
         }
     },
     "bin": "mimirtool.exe",

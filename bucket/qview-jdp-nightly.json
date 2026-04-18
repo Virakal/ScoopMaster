@@ -1,16 +1,20 @@
 {
-    "version": "24310936165",
+    "version": "9803087573",
     "description": "Practical and minimal image viewer",
     "homepage": "https://github.com/jdpurcell/qView",
     "license": "GPL-3.0-only",
     "architecture": {
         "arm64": {
-            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2026-04-12.aa0b99c-Windows_arm64.zip",
-            "hash": "7787b3e41c076e80818a0159404f7d6bec60f795b30355e54a50d1cffcad7eb5"
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2024-07-05.2882ec0-Windows_arm64.zip",
+            "hash": "60b2fa1cc4e10d0cc80562ff28c26e63968619c9ac681e3bca75b8e3bb73c4cc"
         },
         "64bit": {
-            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2026-04-12.aa0b99c-Windows_64.zip",
-            "hash": "45e9b9cc03f47d4f714025ae5e8515a064de4844a0ebe4ec3d00ac08281736d1"
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2024-07-05.2882ec0-Windows_64.zip",
+            "hash": "8cb074c0bab7b098cb3927281c9d826b8609c66dec99c91dddf5f71f1a0e3cc1"
+        },
+        "32bit": {
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2024-07-05.2882ec0-Windows_32.zip",
+            "hash": "d662a93e95229da19ee29d0c9b7ff084a2a873db44f64936b650ec5875a95b2b"
         }
     },
     "pre_install": [
@@ -27,8 +31,8 @@
     "checkver": {
         "script": [
             "try {",
-            "    $api = (Invoke-RestMethod 'https://api.github.com/repositories/554598108/actions/workflows/build.yml/runs?branch=master&status=success&per_page=1' -Headers $(if ($auth = Get-GitHubToken) { @{authorization=\"Bearer $auth\"} })).workflow_runs[0]",
-            "    ($api.id, (Get-Date $api.updated_at -Format 'yyyy-MM-dd'), $api.head_sha.Substring(0, 7)) -join ' '",
+            "    $api = (Invoke-RestMethod 'https://api.github.com/repositories/554598108/actions/workflows/build.yml/runs?branch=master&status=success').workflow_runs[0]",
+            "    ($api.id, $api.updated_at.ToString('yyyy-MM-dd'), $api.head_sha.Substring(0, 7)) -join ' '",
             "}",
             "catch { '' }"
         ],
@@ -37,20 +41,13 @@
     "autoupdate": {
         "architecture": {
             "arm64": {
-                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_arm64.zip",
-                "hash": {
-                    "url": "https://api.github.com/repositories/554598108/actions/runs/$version/artifacts",
-                    "jsonpath": "$.artifacts[?(@.name == 'qView-JDP-$matchDate.$matchSha-Windows_arm64')].digest",
-                    "regex": "\\Asha256:$sha256\\Z"
-                }
+                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_arm64.zip"
             },
             "64bit": {
-                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_64.zip",
-                "hash": {
-                    "url": "https://api.github.com/repositories/554598108/actions/runs/$version/artifacts",
-                    "jsonpath": "$.artifacts[?(@.name == 'qView-JDP-$matchDate.$matchSha-Windows_64')].digest",
-                    "regex": "\\Asha256:$sha256\\Z"
-                }
+                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_64.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_32.zip"
             }
         }
     }

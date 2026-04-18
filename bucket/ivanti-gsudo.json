@@ -10,6 +10,8 @@
         "github": "https://github.com/nicerloop/ivanti-self-elevate"
     },
     "autoupdate": {
-        "url": "https://github.com/nicerloop/ivanti-self-elevate/releases/download/v$version/gsudo.exe"
+        "url": [
+            "https://github.com/nicerloop/ivanti-self-elevate/releases/download/v$version/gsudo.exe"
+        ]
     }
 }

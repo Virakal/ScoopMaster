@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:b49bd899efbb2fd709918c74446fd6008f41fa7500fe6ebb66b7069123fc7feb88ce59a0411c7934b4670b01bcc7cf49413a975f8ef65a93fc1cb092d6f84345",
+    "hash": "sha512:e102d26657a4541a6ffa19b90e569415c7c7b4a882ac63cbae1688c9728e1c2cb6c9085a66838d23ae4c10d499bbf76e9e8979735a1ebc340e0c403f9fda3b6d",
     "description": "Microsoft Azure PowerShell - Relay service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Relay, please visit the following: https://learn.microsoft.com/azure/service-bus-relay/relay-what-is-it",
     "psmodule": {
         "name": "Az.Relay"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Relay/3.0.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Relay/2.0.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "3.0.0"
+    "version": "2.0.1"
 }

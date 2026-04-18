@@ -1,5 +1,5 @@
 {
-    "version": "6.6.7-32",
+    "version": "6.0.7-29",
     "description": "An open-source web browser intended to be speedy, ethical and maintain support for legacy extensions.",
     "homepage": "https://www.waterfox.net",
     "license": {
@@ -12,8 +12,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/portapps/waterfox-portable/releases/download/6.6.7-32/waterfox-portable-win64-6.6.7-32.7z#/dl.7z",
-            "hash": "b899944e7b8906767bd0c748509ff183f96e1b1a7fda3c8b3e1a82a18fba81db"
+            "url": "https://github.com/portapps/waterfox-portable/releases/download/6.0.7-29/waterfox-portable-win64-6.0.7-29.7z#/dl.7z",
+            "hash": "ed4db19a68be4fb5decc3b303f2cdba155c163f8819b0806011f07a6b70f1554"
         }
     },
     "bin": "waterfox-portable.exe",

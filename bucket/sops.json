@@ -1,17 +1,13 @@
 {
-    "version": "3.12.2",
+    "version": "3.9.0",
     "description": "Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP",
     "homepage": "https://github.com/getsops/sops",
     "license": "MPL-2.0",
     "depends": "gpg",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/getsops/sops/releases/download/v3.12.2/sops-v3.12.2.amd64.exe#/sops.exe",
-            "hash": "5e777b1854ab2a6271d8f66375970e1fe3eea838251c309de151d16a2bdf13a2"
-        },
-        "arm64": {
-            "url": "https://github.com/getsops/sops/releases/download/v3.12.2/sops-v3.12.2.arm64.exe#/sops.exe",
-            "hash": "bfc95ce0426e78a9dd13a8ef32db61b0587f45660530cb00adcdd374ba84fd9e"
+            "url": "https://github.com/getsops/sops/releases/download/v3.9.0/sops-v3.9.0.exe#/sops.exe",
+            "hash": "2b45084e9e6308fa465eeac2419d497b5b16b66d332af18c03feb3d68e51f52f"
         }
     },
     "bin": "sops.exe",
@@ -19,10 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/getsops/sops/releases/download/v$version/sops-v$version.amd64.exe#/sops.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/getsops/sops/releases/download/v$version/sops-v$version.arm64.exe#/sops.exe"
+                "url": "https://github.com/getsops/sops/releases/download/v$version/sops-v$version.exe#/sops.exe"
             }
         }
     }

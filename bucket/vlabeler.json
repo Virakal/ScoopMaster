@@ -1,12 +1,12 @@
 {
-    "version": "1.5.0",
+    "version": "1.3.1",
     "description": "Open source voice labeling application for utau, hts label and textgrid",
     "homepage": "https://github.com/sdercolin/vlabeler/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sdercolin/vlabeler/releases/download/1.5.0/vlabeler-1.5.0-win64.zip",
-            "hash": "8385ebe0c820fb3330eb6fa3555346e108a20fb60055dfce8210ccf334ce93f8"
+            "url": "https://github.com/sdercolin/vlabeler/releases/download/1.3.1/vlabeler-1.3.1-win64.zip",
+            "hash": "a33639ca692def04bd8e4d0d35b8bbb62a3d2e52743b7f07b2cb37809430144e"
         }
     },
     "bin": "vLabeler.exe",

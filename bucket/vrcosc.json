@@ -1,15 +1,15 @@
 {
-    "version": "2026.418.1",
+    "version": "2024.220.1",
     "description": "Modular OSC program creator, toolkit, and router made for VRChat",
     "homepage": "https://github.com/VolcanicArts/VRCOSC",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/VolcanicArts/VRCOSC/releases/download/2026.418.1/VRCOSC-2026.418.1-live-full.nupkg",
-            "hash": "sha1:59159c464574b63f315847a05f3941cf5d396f1f"
+            "url": "https://github.com/VolcanicArts/VRCOSC/releases/download/2024.220.1/VRCOSC-2024.220.1-full.nupkg",
+            "hash": "sha1:a3866289f5369a643c1ba43b44373dd293a8b753"
         }
     },
-    "extract_dir": "lib\\app",
+    "extract_dir": "lib\\native",
     "shortcuts": [
         [
             "VRCOSC.exe",
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/VolcanicArts/VRCOSC/releases/download/$version/VRCOSC-$version-live-full.nupkg",
+                "url": "https://github.com/VolcanicArts/VRCOSC/releases/download/$version/VRCOSC-$version-full.nupkg",
                 "hash": {
                     "url": "https://github.com/VolcanicArts/VRCOSC/releases/download/$version/RELEASES"
                 }

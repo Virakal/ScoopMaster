@@ -1,16 +1,16 @@
 {
-    "version": "3.1.1",
+    "version": "2.2.1",
     "description": "go-box - interactive item selector for the terminal",
     "homepage": "https://github.com/nyaosorg/go-box",
     "license": "BSD 3-Clause \"New\" or \"Revised\" License",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/nyaosorg/go-box/releases/download/v3.1.1/box-v3.1.1-windows-386.zip",
-            "hash": "f0b0657aa218ce112c4e471715c623fb2b374575ceefe1d4415d5bccbb84393d"
+            "url": "https://github.com/nyaosorg/go-box/releases/download/v2.2.1/box-v2.2.1-windows-386.zip",
+            "hash": "f4aae9c77ed737b1bf3a582ccbc8543676f9862cd65385c87736f363aece76d4"
         },
         "64bit": {
-            "url": "https://github.com/nyaosorg/go-box/releases/download/v3.1.1/box-v3.1.1-windows-amd64.zip",
-            "hash": "0ab1e809bef510d2bbd0d57c5aa6d4a67f3076362282e7ccc781d3a96148fadc"
+            "url": "https://github.com/nyaosorg/go-box/releases/download/v2.2.1/box-v2.2.1-windows-amd64.zip",
+            "hash": "fcc75e124029b02877e1313ba0f7dd1d40327d2d9c16f1c98bebd33cda4f45cc"
         }
     },
     "bin": "box.exe",

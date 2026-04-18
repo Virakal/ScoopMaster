@@ -1,16 +1,16 @@
 {
-  "version": "0.6.16",
+  "version": "0.6.9",
   "description": "Simple changelog parser, written in Rust",
   "homepage": "https://github.com/taiki-e/parse-changelog",
   "license": "Apache-2.0|MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.16/parse-changelog-x86_64-pc-windows-msvc.zip",
-      "hash": "926927bb46fc1867de4128c4e3f3f9b1b96b21f9999e30f51da8b1dd0eae948b"
+      "url": "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-x86_64-pc-windows-msvc.zip",
+      "hash": "34ca754256b4758f75e33bc19646cc398fadda33baa2f716f799df43f83dc902"
     },
     "arm64": {
-      "url": "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.16/parse-changelog-aarch64-pc-windows-msvc.zip",
-      "hash": "02a251f43718ae6551ffdbb5243ad466a1fcdc8a2d1cffd654deb3ccbfefcc0e"
+      "url": "https://github.com/taiki-e/parse-changelog/releases/download/v0.6.9/parse-changelog-aarch64-pc-windows-msvc.zip",
+      "hash": "1dfbac50cad4230273be5a9558c430255cb172ad464294d975a59a2bd4ac890a"
     }
   },
   "bin": "parse-changelog.exe"

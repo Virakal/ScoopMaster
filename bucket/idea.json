@@ -1,74 +1,38 @@
 {
-    "version": "2026.1-261.22158.277",
-    "description": "Cross-Platform IDE for Java by JetBrains.",
+    "version": "2024.2.2",
+    "description": "IntelliJ IDEA Community Edition for JVM and Android development.",
     "homepage": "https://www.jetbrains.com/idea/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.jetbrains.com/legal/docs/toolbox/license/"
-    },
-    "notes": [
-        "IDEA Community Edition and Ultimate Edition have now been merged into a unified product.",
-        "IDEA Community 2025.2 is the last standalone version available to existing users only.",
-        "For more information, see: https://blog.jetbrains.com/idea/2025/12/intellij-idea-unified-release/"
-    ],
+    "license": "Apache-2.0",
+    "notes": "Please restart your command line for changes to take effect.",
+    "url": "https://download.jetbrains.com/idea/ideaIC-2024.2.2.win.zip",
+    "hash": "d07a651699cacb08fbdda6232d10d19f5ec3407439a75353e2a76a6bb753d280",
+    "env_add_path": "bin",
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/idea/idea-2026.1.win.zip",
-            "hash": "391ba3e676b03bbdf111c7f0d6e847b92d1b9d583c4d77e1594fa1114c0175bb",
-            "bin": [
-                [
-                    "IDE\\bin\\idea64.exe",
-                    "idea"
-                ]
-            ],
+            "bin": "bin\\idea64.exe",
             "shortcuts": [
                 [
-                    "IDE\\bin\\idea64.exe",
-                    "JetBrains\\IDEA"
+                    "bin/idea64.exe",
+                    "IntelliJ IDEA Community Edition"
                 ]
             ]
         },
-        "arm64": {
-            "url": "https://download.jetbrains.com/idea/idea-2026.1-aarch64.win.zip",
-            "hash": "a3c3e0904b2bc0e9caeec97a5019b8f52066c2360c141a611250a2e9dd3c064b",
-            "bin": [
-                [
-                    "IDE\\bin\\idea64.exe",
-                    "idea"
-                ]
-            ],
+        "32bit": {
+            "bin": "bin\\idea.exe",
             "shortcuts": [
                 [
-                    "IDE\\bin\\idea64.exe",
-                    "JetBrains\\IDEA"
+                    "bin/idea.exe",
+                    "IntelliJ IDEA Community Edition"
                 ]
             ]
         }
     },
-    "extract_to": "IDE",
-    "installer": {
-        "script": "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" \"$dir\" \"$persist_dir\""
-    },
-    "persist": [
-        "IDE\\bin\\idea.properties",
-        "IDE\\bin\\idea64.exe.vmoptions",
-        "IDE\\bin\\jetbrains_client64.exe.vmoptions",
-        "profile"
-    ],
     "checkver": {
-        "url": "https://data.services.jetbrains.com/products/releases?code=II&latest=true&platform=zip&type=release",
-        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
-        "replace": "${ver}-${build}"
+        "url": "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release",
+        "jsonpath": "$..version"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.jetbrains.com/idea/idea-$matchVer.win.zip"
-            },
-            "arm64": {
-                "url": "https://download.jetbrains.com/idea/idea-$matchVer-aarch64.win.zip"
-            }
-        },
+        "url": "https://download.jetbrains.com/idea/ideaIC-$version.win.zip",
         "hash": {
             "url": "$url.sha256"
         }

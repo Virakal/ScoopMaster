@@ -1,15 +1,15 @@
 {
     "homepage": "http://www.tuxpaint.org/",
     "license": "GPL-2.0-only",
-    "version": "0.9.35",
+    "version": "0.9.33",
     "architecture": {
         "64bit": {
-            "url": "https://master.dl.sourceforge.net/project/tuxpaint/tuxpaint/0.9.35/tuxpaint-0.9.35-windows-x86_64.zip",
-            "hash": "sha1:baa58b35f216990278a117b09ab0eec549fb732a"
+            "url": "https://master.dl.sourceforge.net/project/tuxpaint/tuxpaint/0.9.33/tuxpaint-0.9.33-windows-x86_64.zip",
+            "hash": "sha1:9c9e2a264b1e2fe47f9d35e4e89bf0a503cbcdb6"
         },
         "32bit": {
-            "url": "https://master.dl.sourceforge.net/project/tuxpaint/tuxpaint/0.9.35/tuxpaint-0.9.35-windows-i686.zip",
-            "hash": "sha1:677e05f5af81a0287e2265074b720f9cdd2b1025"
+            "url": "https://master.dl.sourceforge.net/project/tuxpaint/tuxpaint/0.9.33/tuxpaint-0.9.33-windows-i686.zip",
+            "hash": "sha1:3d84da0f928f6a9003135c10fbcf4b6c68edf1d0"
         }
     },
     "extract_dir": "TuxPaint",
@@ -22,7 +22,7 @@
     ],
     "checkver": {
         "url": "http://www.tuxpaint.org/download/",
-        "regex": "The Windows build of Tux Paint ([\\d.]+)"
+        "regex": "Tux Paint ([\\d.]+) is now available"
     },
     "autoupdate": {
         "architecture": {

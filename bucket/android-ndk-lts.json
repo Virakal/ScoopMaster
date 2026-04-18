@@ -1,11 +1,11 @@
 {
-    "version": "27d",
+    "version": "27b",
     "homepage": "https://developer.android.com/ndk",
     "license": "https://android.googlesource.com/platform/prebuilts/ndk/+/master/NOTICE",
     "description": "A toolset that lets you implement parts of your app in native code, using languages such as C and C++.",
-    "url": "https://mirrors.cloud.tencent.com/AndroidSDK/android-ndk-r27d-windows.zip",
-    "hash": "82094f53e66a76b6a9ec4fc35a5076091a92de3b91d13c5d4a7cfdb226304c59",
-    "extract_dir": "android-ndk-r27d",
+    "url": "https://mirrors.cloud.tencent.com/AndroidSDK/android-ndk-r27b-windows.zip",
+    "hash": "6fa1fa6e95191eb374d389018b6bbdc9adb835f62f1d2b717001f65e0df8e351",
+    "extract_dir": "android-ndk-r27b",
     "env_add_path": "$dir",
     "env_set": {
         "NDK_HOME": "$dir",

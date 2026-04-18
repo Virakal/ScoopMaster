@@ -1,18 +1,18 @@
 {
-    "version": "3.18.2",
+    "version": "3.14.0",
     "description": "A status monitor for the desktop, which connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja, Checkmk and Thruk monitoring servers.",
-    "homepage": "https://nagstamon.de/",
+    "homepage": "https://github.com/HenriWahl/Nagstamon",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HenriWahl/Nagstamon/releases/download/v3.18.2/Nagstamon-3.18.2-win64.zip",
-            "hash": "96c6a68a9345bdbf93e9f8d7cf6b49f0da57f39dfabae39c75d5d2a55a0e6388",
-            "extract_dir": "Nagstamon-3.18.2-win64"
+            "url": "https://github.com/HenriWahl/Nagstamon/releases/download/v3.14.0/Nagstamon-3.14.0-win64.zip",
+            "hash": "8058ece4b4d419c55cc4e650509d812f1551142667114251993a0972094579b2",
+            "extract_dir": "Nagstamon-3.14.0-win64"
         },
         "32bit": {
-            "url": "https://github.com/HenriWahl/Nagstamon/releases/download/v3.18.2/Nagstamon-3.18.2-win32.zip",
-            "hash": "951bf399fe2318f4d34bbb92de97cd8208e7c98eb60de92964f0a18391de0970",
-            "extract_dir": "Nagstamon-3.18.2-win32"
+            "url": "https://github.com/HenriWahl/Nagstamon/releases/download/v3.14.0/Nagstamon-3.14.0-win32.zip",
+            "hash": "38889b10561b9c99e52aa2d846cb6dd62b71d65621c13cbacc9a5632bee78995",
+            "extract_dir": "Nagstamon-3.14.0-win32"
         }
     },
     "bin": "Nagstamon.exe",
@@ -23,9 +23,7 @@
         ]
     ],
     "notes": "The default configuration directory of Nagstamon is %HOME%\\.nagstamon\\",
-    "checkver": {
-        "github": "https://github.com/HenriWahl/Nagstamon"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -36,9 +34,6 @@
                 "url": "https://github.com/HenriWahl/Nagstamon/releases/download/v$version/Nagstamon-$version-win32.zip",
                 "extract_dir": "Nagstamon-$version-win32"
             }
-        },
-        "hash": {
-            "url": "$baseurl/sha256sums.txt"
         }
     }
 }

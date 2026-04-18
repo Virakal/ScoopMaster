@@ -1,26 +1,29 @@
 {
-    "version": "1.2.6",
-    "description": "Open-source, free HTTP(S) traffic capture tool.",
-    "homepage": "https://github.com/wanghongenpin/proxypin",
+    "version": "V1.1.2",
+    "description": "开源免费的跨平台抓包软件，支持手机扫码连接",
+    "homepage": "https://github.com/wanghongenpin/network_proxy_flutter",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wanghongenpin/proxypin/releases/download/v1.2.6/proxypin-windows-setup.exe",
-            "hash": "7763aee4ecfa3c2b5ac6abf2c6dcc1187b388f84eec303f6f3c9a2bea44295e1"
+            "url": "https://github.com/wanghongenpin/network_proxy_flutter/releases/download/V1.1.2/ProxyPin-Windows.zip",
+            "hash": "373f5c9410cbb4b99a36f6bf2e5d0c06c538f12d6703c21e9eec0a54c36b2ab9"
         }
     },
-    "innosetup": true,
+    "extract_dir": "ProxyPin",
     "shortcuts": [
         [
             "ProxyPin.exe",
             "ProxyPin"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/wanghongenpin/network_proxy_flutter/releases/latest",
+        "regex": "/network_proxy_flutter/tree/v?([^/]+?)\""
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/wanghongenpin/proxypin/releases/download/v$version/proxypin-windows-setup.exe"
+                "url": "https://github.com/wanghongenpin/network_proxy_flutter/releases/download/$version/ProxyPin-Windows.zip"
             }
         }
     }

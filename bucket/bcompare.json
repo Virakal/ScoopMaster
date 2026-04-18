@@ -1,10 +1,10 @@
 {
-    "version": "5.2.1.32035",
-    "description": "Beyond Compare 5",
+    "version": "5.0.2.30045",
+    "description": "Beyond Compare 4",
     "homepage": "https://www.scootersoftware.com",
     "license": "Proprietary",
-    "url": "https://www.scootersoftware.com/files/BCompare-5.2.1.32035.exe",
-    "hash": "da9309beafdc8c91f6432e028d8b539a0f881f1401cc9caeb60cc017babd015a",
+    "url": "https://www.scootersoftware.com/files/BCompare-5.0.2.30045.exe",
+    "hash": "365c1e0564e1cf451f8caef515ea671b5f981d6530ef2fd07efe133c6eee0855",
     "depends": "innounp",
     "pre_install": [
         "function New-PersistFile([String] $path) {",
@@ -12,8 +12,6 @@
         "    New-Item $path -ItemType File -Force | Out-Null",
         "  }",
         "}",
-        "New-PersistFile \"$persist_dir\\BCColors.xml\"",
-        "New-PersistFile \"$persist_dir\\BCColors.xml.bak\"",
         "New-PersistFile \"$persist_dir\\BCFileFormats.xml\"",
         "New-PersistFile \"$persist_dir\\BCFileFormats.xml.bak\"",
         "New-PersistFile \"$persist_dir\\BCPreferences.xml\"",
@@ -45,7 +43,7 @@
     "shortcuts": [
         [
             "BCompare.exe",
-            "Beyond Compare 5"
+            "Beyond Compare 4"
         ],
         [
             "BCClipboard.exe",
@@ -53,8 +51,6 @@
         ]
     ],
     "persist": [
-        "BCColors.xml",
-        "BCColors.xml.bak",
         "BCFileFormats.xml",
         "BCFileFormats.xml.bak",
         "BCPreferences.xml",

@@ -1,39 +1,45 @@
 {
-    "version": "0.25.1",
-    "description": "VOICEVOX is an open-source text-to-speech software editor",
-    "homepage": "https://github.com/VOICEVOX/voicevox",
-    "license": {
-        "identifier": "LGPL-3.0",
-        "url": "https://github.com/VOICEVOX/voicevox/blob/main/LICENSE"
-    },
-    "notes": "VOICEVOX is dual-licensed under LGPL v3 and an alternative license",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/VOICEVOX/voicevox/releases/download/0.25.1/voicevox-windows-directml-0.25.1.zip",
-            "hash": "f5915a2f141f182a6de07a8ae0c2f8750c61a5364011fed15ddecfdaa43f171e",
-            "extract_dir": "VOICEVOX"
-        }
-    },
-    "bin": [
-        [
-            "VOICEVOX.exe",
-            "voicevox"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "VOICEVOX.exe",
-            "VOICEVOX"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/VOICEVOX/voicevox"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/VOICEVOX/voicevox/releases/download/$version/voicevox-windows-directml-$version.zip"
-            }
-        }
+  "version": "0.19.1",
+  "description": "VOICEVOX GPU/CPU",
+  "homepage": "https://voicevox.hiroshiba.jp/",
+  "notes": "インストーラーの利用が公式により推奨されています。",
+  "license": [
+    {
+      "identifier": "Proprietary",
+      "url": "https://voicevox.hiroshiba.jp/term/"
     }
+  ],
+  "url": [
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/VOICEVOX.Web.Setup.0.19.1.exe",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-0.19.1-x64.nsis.7z.0",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-0.19.1-x64.nsis.7z.1"
+  ],
+  "hash": [
+    "d06ab63688be7cbf5bcffc1f075d61cef25435231d73394fb49c7aebbcac09b4",
+    "a4e1da9bc98e0524c82ce6e7efdc68be9b6704e8d962457a3029c80c2aaf512e",
+    "f18cb03d6939908cf41e5042c4d7c0fd75f6005f5936627cd983b9845f501cfc"
+  ],
+  "installer": {
+    "file": "VOICEVOX.Web.Setup.0.19.1.exe"
+  },
+  "uninstaller": {
+    "script": [
+      "$regkey = \"92713bbc-5c5b-5df6-b6d1-5b09e302bf58\"",
+      "$uninstaller=(Get-ItemProperty -Path \"Registry::HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${regkey}\" | Select-Object -ExpandProperty UninstallString)",
+      "if([string]::IsNullOrEmpty($uninstaller)){",
+      " $uninstaller=(Get-ItemProperty -Path \"Registry::HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${regkey}\" | Select-Object -ExpandProperty UninstallString)",
+      "}",
+      "cmd /c \"${uninstaller}\""
+    ]
+  },
+  "checkver": {
+    "github": "https://github.com/VOICEVOX/voicevox"
+  },
+  "autoupdate": {
+    "url": [
+      "https://github.com/VOICEVOX/voicevox/releases/download/$version/VOICEVOX.Web.Setup.$version.exe",
+      "https://github.com/VOICEVOX/voicevox/releases/download/$version/voicevox-$version-x64.nsis.7z.0",
+      "https://github.com/VOICEVOX/voicevox/releases/download/$version/voicevox-$version-x64.nsis.7z.1"
+    ]
+  }
 }

@@ -1,16 +1,12 @@
 {
-    "version": "26.2.26",
+    "version": "24.09.13",
     "description": "Video editor",
     "homepage": "https://www.shotcut.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mltframework/shotcut/releases/download/v26.2.26/shotcut-win64-26.2.26.zip",
-            "hash": "7cd25655e8c23439beb81c75a7cbb6e2a209d2224faf24d19f28caed7df44fcf"
-        },
-        "arm64": {
-            "url": "https://github.com/mltframework/shotcut/releases/download/v26.2.26/shotcut-win_ARM-26.2.26.zip",
-            "hash": "c3d918c89f736fd50a46c534c24c507b0859918fbb09401b4004ee84dc6ed2bd"
+            "url": "https://github.com/mltframework/shotcut/releases/download/v24.09.13/shotcut-win64-240913.zip",
+            "hash": "9c65fde8bce5031d3cca75ae27bcdb3a87f52bba3d64ba2b438391315949e8d2"
         }
     },
     "extract_dir": "Shotcut",
@@ -27,10 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mltframework/shotcut/releases/download/v$version/shotcut-win64-$version.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/mltframework/shotcut/releases/download/v$version/shotcut-win_ARM-$version.zip"
+                "url": "https://github.com/mltframework/shotcut/releases/download/v$version/shotcut-win64-$cleanVersion.zip"
             }
         },
         "hash": {

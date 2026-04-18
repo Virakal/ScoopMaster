@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'MPlus' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/MPlus.tar.xz",
-    "hash": "9c03e388d0ff2e0bc28be9bf6ab95f1e0260c5828b3159b18867a9e7a1f17f7b",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/MPlus.tar.xz",
+    "hash": "5c60700788b093e0bfb30b2f59b52397f3fdc2cdf2b6fb9307a58b61e7ddfe74",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

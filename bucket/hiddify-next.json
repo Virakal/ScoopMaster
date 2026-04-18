@@ -1,25 +1,15 @@
 {
-    "version": "4.1.1",
-    "description": "A multi-platform proxy client based on Sing-box universal proxy tool-chain.",
+    "version": "2.3.1",
+    "description": "Multi-platform proxy client made with Flutter.",
     "homepage": "https://github.com/hiddify/hiddify-next",
-    "license": {
-        "identifier": "CC-BY-NC-SA-4.0",
-        "url": "https://github.com/hiddify/hiddify-next/blob/main/LICENSE.md"
-    },
+    "license": "",
+    "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hiddify/hiddify-next/releases/download/v4.1.1/Hiddify-Windows-Portable-x64.zip",
-            "hash": "5099b3df2d21f1bb0c1cbf28dfa9fc6fa817e7eea77a0efe4daf93f571aae418"
+            "url": "https://github.com/hiddify/hiddify-next/releases/download/v2.3.1/Hiddify-Windows-Portable-x64.zip",
+            "hash": "8150d3bae8b5eac91a3496ff46624454fbd3c41dfd06e6bc71d5273f474519bf"
         }
     },
-    "extract_dir": "hiddify-next",
-    "bin": "Hiddify.exe",
-    "shortcuts": [
-        [
-            "Hiddify.exe",
-            "Hiddify"
-        ]
-    ],
     "checkver": {
         "url": "https://api.github.com/repos/hiddify/hiddify-next/releases",
         "jsonpath": "$.[0].tag_name",
@@ -31,5 +21,13 @@
                 "url": "https://github.com/hiddify/hiddify-next/releases/download/v$version/Hiddify-Windows-Portable-x64.zip"
             }
         }
-    }
+    },
+    "extract_dir": "hiddify-next",
+    "bin": "Hiddify.exe",
+    "shortcuts": [
+        [
+            "Hiddify.exe",
+            "Hiddify"
+        ]
+    ]
 }

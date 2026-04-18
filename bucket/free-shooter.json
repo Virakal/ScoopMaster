@@ -1,19 +1,16 @@
 {
-    "version": "2.2.1",
+    "version": "2.1.1",
     "description": "Taking screenshots without bloatware features",
-    "homepage": "https://github.com/henrypp/freeshooter",
+    "homepage": "https://www.henrypp.org/product/freeshooter",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/henrypp/freeshooter/releases/download/v.2.2.1/freeshooter-2.2-bin.7z",
-    "hash": "561c44c6f949b1265109561ff30bd2f6c9cf07ca1e6758e0edaba04e6e77d9d1",
+    "url": "https://github.com/henrypp/freeshooter/releases/download/v.2.1.1/freeshooter-2.1.1-bin.zip",
+    "hash": "0b6526289a3d6dad5676a1eb9bd87c9e47b07817aa892bedc9c824f5a68c0693",
     "architecture": {
         "64bit": {
             "extract_dir": "freeshooter\\64"
         },
         "32bit": {
             "extract_dir": "freeshooter\\32"
-        },
-        "arm64": {
-            "extract_dir": "freeshooter\\arm64"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\freeshooter.ini\")) { New-Item \"$dir\\freeshooter.ini\" | Out-Null }",
@@ -26,14 +23,13 @@
     ],
     "persist": "freeshooter.ini",
     "checkver": {
-        "url": "https://api.github.com/repos/henrypp/freeshooter/releases/latest",
-        "jsonpath": "$..browser_download_url",
-        "regex": "download/v.([\\d.]+)\\/freeshooter-(?<short>[\\d.]+)-bin\\.7z"
+        "github": "https://github.com/henrypp/freeshooter",
+        "regex": "releases/tag/v\\.([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/henrypp/freeshooter/releases/download/v.$version/freeshooter-$matchShort-bin.7z",
+        "url": "https://github.com/henrypp/freeshooter/releases/download/v.$version/freeshooter-$version-bin.zip",
         "hash": {
-            "url": "$baseurl/freeshooter-$matchShort.sha256"
+            "url": "$baseurl/freeshooter-$version.sha256"
         }
     }
 }

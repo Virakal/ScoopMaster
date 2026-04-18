@@ -1,12 +1,12 @@
 {
-    "version": "1.11.0",
-    "description": "创新的文件传输工具",
+    "version": "0.5.3",
+    "description": "Flix 快传，像聊天一样传文件",
     "homepage": "https://flix.center/",
-    "license": "Freeware",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://api.xrgzs.top/sdlp/lanzou/?url=https://www.lanzoui.com/ip65e3ivpayh&type=down#/dl.7z",
-            "hash": "a2a33a1c50b051b3c1d391ec9bc785fd3851d07317ea11a986ca72a162961eb1"
+            "url": "https://verification.ifreedomer.com/flix/flix_win.beta.v0.5.3.zip",
+            "hash": "4ec4e117332237caa5cdadd9c91ea2e4e372dce5880ca7e30725d22c7ca2e097"
         }
     },
     "extract_dir": "flix",
@@ -16,27 +16,14 @@
             "Flix"
         ]
     ],
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:APPDATA\\com.ifreedomer\\flix\" \"$persist_dir\\AppData\" -Migrate"
-        ]
-    },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\com.ifreedomer\\flix\"",
-        "Remove-EmptyDirectory \"$env:APPDATA\\com.ifreedomer\""
-    ],
     "checkver": {
-        "url": "https://www.puresys.net/9554.html",
-        "regex": "v([\\d.]+) 绿色版[\\s\\S]*lanzou.\\.com/(?<sharekey>\\w+)"
+        "url": "https://fl1x.mashiro.asia/assets/download.js",
+        "regex": "flix_win.(?<prefix>.*?)v([\\d.]+).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://api.xrgzs.top/sdlp/lanzou/?url=https://www.lanzoui.com/$matchSharekey&type=down#/dl.7z"
+                "url": "https://verification.ifreedomer.com/flix/flix_win.$matchPrefixv$version.zip"
             }
         }
     }

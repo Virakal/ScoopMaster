@@ -1,27 +1,34 @@
 {
-    "version": "1.3.5",
-    "description": "Simple cli wrapper for ChatGPT API",
+    "version": "1.2.1",
+    "description": "A simple cli wrapper for ChatGPT API, powered by GPT-3.5-turbo model.",
     "homepage": "https://github.com/j178/chatgpt",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/j178/chatgpt/releases/download/v1.3.5/chatgpt_Windows_x86_64.zip",
-            "hash": "590ac40945eb0e95df8fbda40c4fc2b119a5f9db92a26c2ed2c9591923fe2171"
+            "url": "https://github.com/j178/chatgpt/releases/download/v1.2.1/chatgpt_Windows_x86_64.zip",
+            "bin": [
+                "chatgpt.exe"
+            ],
+            "hash": "02d1646e2a3ab1b33eea1b4686cb475fca23883948cd7a7e0281827e1556c4e0"
         },
         "arm64": {
-            "url": "https://github.com/j178/chatgpt/releases/download/v1.3.5/chatgpt_Windows_arm64.zip",
-            "hash": "3e4a33d1a1e90d0f8233d6f51f7059209308f872c5aa003597b88ab0a75f5a0e"
+            "url": "https://github.com/j178/chatgpt/releases/download/v1.2.1/chatgpt_Windows_arm64.zip",
+            "bin": [
+                "chatgpt.exe"
+            ],
+            "hash": "02d1646e2a3ab1b33eea1b4686cb475fca23883948cd7a7e0281827e1556c4e0"
         }
     },
-    "bin": "chatgpt.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/j178/chatgpt"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/j178/chatgpt/releases/download/v$version/chatgpt_Windows_x86_64.zip"
+                "url": "https://github.com/j178/chatgpt/releases/download/$version/chatgpt_Windows_x86_64.zip"
             },
             "arm64": {
-                "url": "https://github.com/j178/chatgpt/releases/download/v$version/chatgpt_Windows_arm64.zip"
+                "url": "https://github.com/j178/chatgpt/releases/download/$version/chatgpt_Windows_arm64.zip"
             }
         }
     }

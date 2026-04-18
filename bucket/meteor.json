@@ -1,38 +1,22 @@
 {
-    "version": "0.31.0",
-    "description": "A highly configurable CLI tool for writing conventional commits",
-    "homepage": "https://github.com/stefanlogue/meteor",
-    "license": "MIT",
+    "version": "0.10.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.31.0/meteor-windows-amd64.zip",
-            "hash": "688a1e39da57377ddddc005d5c1fa6d8b712467ccba73aa2df09757147bd246b"
-        },
-        "32bit": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.31.0/meteor-windows-386.zip",
-            "hash": "7dd1b75d8fab88d8c8f4f9412743f3edfa009d9deb952ed49684402512955a1d"
+            "url": "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_windows_amd64.zip",
+            "bin": [
+                "meteor.exe"
+            ],
+            "hash": "7e06c8c69e49c5b94e00e140f484baaf6310d683193d9897c81ef58c11481c76"
         },
         "arm64": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.31.0/meteor-windows-arm64.zip",
-            "hash": "7c7d92e626498e403e39fc9797524589f289fb3e9bf80508ba8f0c504435ca60"
+            "url": "https://github.com/raystack/meteor/releases/download/v0.10.1/meteor_0.10.1_windows_arm64.zip",
+            "bin": [
+                "meteor.exe"
+            ],
+            "hash": "8dfd13ec5de421e4777c52cefcf1f6f41158b7e94354f1126a6c0ac1d5f79c59"
         }
     },
-    "bin": "meteor.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/meteor_$version_checksums.txt"
-        }
-    }
+    "homepage": "https://github.com/raystack/meteor",
+    "license": "Apache 2.0",
+    "description": "Metadata collection tool."
 }

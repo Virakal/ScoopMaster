@@ -1,5 +1,5 @@
 {
-    "version": "4.1.8.107",
+    "version": "3.9.11.25",
     "description": "Free messaging and calling app by Tencent",
     "homepage": "https://pc.weixin.qq.com/",
     "license": {
@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-            "hash": "c29fc05630cfc95ef6483f6b5b52aabfe74265bb260e210e78ae437d305d8990"
+            "hash": "04a668ea0d36cd8963acc2b9c0f0aff0c0a7c73f46127863ea1f90e942664171"
         },
         "32bit": {
             "url": "https://dldir1v6.qq.com/weixin/Windows/WeChatSetup_x86.exe#/dl.7z",
-            "hash": "96e1623a1c84902cbf33138a962576c4e8ccc6babf92659c7a263f7039a8efa9"
+            "hash": "cb602bb5c82c00cb1572100366352c72a6442aef498be1ca30a611c34b36818c"
         }
     },
     "installer": {

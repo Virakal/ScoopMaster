@@ -1,17 +1,17 @@
 {
-    "version": "3.7.7",
+    "version": "3.6.3",
     "description": "Audacity. An easy-to-use, multi-track audio editor and recorder",
     "homepage": "https://www.audacityteam.org",
     "license": "GPL-2.0-or-later",
     "changelog": "https://wiki.audacityteam.org/wiki/Audacity_Versions",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-64bit.exe#/setup.exe",
-            "hash": "a96f41f21efcdfec1d2f7f332544f8a8fb00a6c411e3bee2aa0031b691dd91a7"
+            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.6.3/audacity-win-3.6.3-64bit.exe#/setup.exe",
+            "hash": "3753bdef30d8c7d12820e1af091c010737e45289c65ac82a8d4d154ddb6eb4a7"
         },
         "32bit": {
-            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.7.7/audacity-win-3.7.7-32bit.exe#/setup.exe",
-            "hash": "2248a8c272e5b4b1ad86ab8455555535e63ee87e0ef4261c75e15d14e0dd6eca"
+            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.6.3/audacity-win-3.6.3-32bit.exe#/setup.exe",
+            "hash": "2f9d888f5c7ba5b651e4485c624835eadc45c88dd47c03ed72d48b41d9f5e7b3"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -60,10 +60,6 @@
             "32bit": {
                 "url": "https://github.com/audacity/audacity/releases/download/Audacity-$version/audacity-win-$version-32bit.exe#/setup.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/CHECKSUMS.txt",
-            "regex": "$basename.*?$sha256"
         }
     }
 }

@@ -1,15 +1,15 @@
 {
     "homepage": "http://aimp.ru",
-    "version": "5.40.2715",
+    "version": "5.30",
     "description": "AIMP is a music player and library manager",
     "architecture": {
         "32bit": {
-            "url": "https://www.aimp.ru/?do=download.file&id=8#/aimp_5.40.2715_32bit_no-installer.zip",
-            "hash": "fc53fa4d5b50b92ebd6b73679521c7b26d422978cac17ecba04c2e734dc0ab79"
+            "url": "https://www.aimp.ru/?do=download.file&id=8#/aimp_5.30_32bit_no-installer.zip",
+            "hash": "71bebac9358d027e18fd9488b4500adcf0b132e4fc8d30e3d420fbeca9bab369"
         },
         "64bit": {
-            "url": "https://www.aimp.ru/?do=download.file&id=31#/aimp_5.40.2715_64bit_no-installer.zip",
-            "hash": "fc53fa4d5b50b92ebd6b73679521c7b26d422978cac17ecba04c2e734dc0ab79"
+            "url": "https://www.aimp.ru/?do=download.file&id=31#/aimp_5.30_64bit_no-installer.zip",
+            "hash": "71bebac9358d027e18fd9488b4500adcf0b132e4fc8d30e3d420fbeca9bab369"
         }
     },
     "extract_dir": "AIMP",
@@ -35,7 +35,7 @@
     ],
     "checkver": {
         "url": "http://aimp.su/update.php?id=1234&b=2169&p=aimp&lng=english&u=1",
-        "regex": "aimp_([\\d\\.]+)_"
+        "regex": "aimp_([\\d.]+)\\."
     },
     "autoupdate": {
         "architecture": {

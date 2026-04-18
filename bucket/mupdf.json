@@ -1,17 +1,11 @@
 {
-    "version": "1.27.0",
-    "description": "A lightweight PDF, XPS, and E-book viewer",
-    "homepage": "https://mupdf.com",
+    "homepage": "https://mupdf.com/",
+    "description": "A lightweight PDF, XPS, and E-book viewer.",
+    "version": "1.24.0",
     "license": "AGPL-3.0-only",
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://casper.mupdf.com/downloads/archive/mupdf-1.27.0-windows.zip",
-            "hash": "f3e60b630453301914e52fb8ec001f6ab56cdb90daf39e533deae3ff214fcff8"
-        }
-    },
+    "url": "https://mupdf.com/downloads/archive/mupdf-1.24.0-windows.zip",
+    "hash": "6d36d29bbbca6a4d3c16f857727dc266aa9c1eca6c5e1fbe822ec24b3fc1b157",
+    "extract_dir": "mupdf-1.24.0-windows",
     "bin": [
         "mupdf.exe",
         "mupdf-gl.exe",
@@ -21,25 +15,18 @@
         [
             "mupdf.exe",
             "MuPDF"
-        ],
-        [
-            "mupdf-gl.exe",
-            "MuPDF GL"
         ]
     ],
     "checkver": {
-        "url": "https://mupdf.com/releases?product=MuPDF",
+        "url": "https://mupdf.com/releases/index.html",
         "regex": "mupdf-([\\d.]+)-windows\\.zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://casper.mupdf.com/downloads/archive/mupdf-$version-windows.zip"
-            }
-        },
+        "url": "https://mupdf.com/downloads/archive/mupdf-$version-windows.zip",
+        "extract_dir": "mupdf-$version-windows",
         "hash": {
-            "url": "https://mupdf.com/releases?product=MuPDF",
-            "regex": "$basename.*?$sha256"
+            "url": "https://mupdf.com/downloads/",
+            "regex": "$basename<.*?sha'>$sha1<"
         }
     }
 }

@@ -1,32 +1,40 @@
 {
-    "version": "v1.14.0",
-    "description": "Rime backend",
-    "homepage": "https://github.com/rime/librime",
-    "license": "BSD-3-Clause license",
-    "notes": "If you have any issues, please report them on the GitHub page.",
+    "version": "1.11.2",
+    "description": "Rime Input Method Engine",
+    "homepage": "https://rime.im/",
+    "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rime/librime/releases/download/1.14.0/rime-e053fb2-Windows-msvc-x64.7z",
-            "hash": "a224cc11a52b66f97f53167f9ca4210fbd5db5eea1afa2d0a9dda5123c807ea6"
+            "url": "https://github.com/rime/librime/releases/download/1.11.2/rime-5b09f35-Windows-msvc-x64.7z",
+            "hash": "34f6d1c9d387ac21b7308632e9c6691a726d1f4dbc5e7ea04358a70dddd0a371"
         },
         "32bit": {
-            "url": "https://github.com/rime/librime/releases/download/1.14.0/rime-e053fb2-Windows-msvc-x86.7z",
-            "hash": "790c4248e7c80f6594c834d2c41aff4a88cdde980d8f2633a5550a0f42aacd16"
+            "url": "https://github.com/rime/librime/releases/download/1.11.2/rime-5b09f35-Windows-msvc-x86.7z",
+            "hash": "cb5b19173e4e9bea4b79a07aa351d4fbf1cfa4da25d999cb83defc12bc795bae"
         }
     },
+    "extract_dir": "dist",
     "bin": [
-        "dist/bin/rime_dict_manager.exe",
-        "dist/bin/rime_patch.exe",
-        "dist/bin/rime_deployer.exe"
+        "bin\\rime_deployer.exe",
+        "bin\\rime_dict_manager.exe",
+        "bin\\rime_patch.exe"
     ],
-    "checkver": "github",
+    "env_set": {
+        "LIBRIME_INCLUDE_DIR": "$dir\\include",
+        "LIBRIME_LIB_DIR": "$dir\\lib"
+    },
+    "checkver": {
+        "url": "https://api.github.com/repositories/3776878/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/([\\d.]+)/rime-(?<hash>[\\d\\w]+)-"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/rime/librime/releases/download/$version/rime-$commit-Windows-msvc-x64.7z"
+                "url": "https://github.com/rime/librime/releases/download/$version/rime-$matchHash-Windows-msvc-x64.7z"
             },
             "32bit": {
-                "url": "https://github.com/rime/librime/releases/download/$version/rime-$commit-Windows-msvc-x86.7z"
+                "url": "https://github.com/rime/librime/releases/download/$version/rime-$matchHash-Windows-msvc-x86.7z"
             }
         }
     }

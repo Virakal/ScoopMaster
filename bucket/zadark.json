@@ -1,22 +1,23 @@
 {
-  "version": "26.1",
-  "description": "ZaDark is an extension that helps you enable Dark Mode for Zalo PC.",
-  "homepage": "https://github.com/quaric/zadark",
-  "license": "MPL-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://storage.zadark.com/zadark26.1-windows.zip",
-      "hash": "0e50f972d8c1104def20cf705e5e0a9a5eef4054355abac419ccef29aa95bc2c"
+    "version": "15.0",
+    "description": "Open-source dark mode for Zalo",
+    "homepage": "https://zadark.com",
+    "license": "MPL-2.0",
+    "url": "https://storage.zadark.com/ZaDark%2015.0.zip",
+    "hash": "33f6e0117666875a4bbd2c89f0383e3b6cfa5367dc82bbeb678fa876751b497f",
+    "pre_install": "Rename-Item -Path \"$dir\\ZaDark $version.exe\" -NewName \"ZaDark.exe\"",
+    "bin": "ZaDark.exe",
+    "shortcuts": [
+        [
+            "ZaDark.exe",
+            "ZaDark"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/quaric/zadark/main/CHANGELOG.md",
+        "regex": "PC (([0-9]+\\.)+[0-9]+)"
+    },
+    "autoupdate": {
+        "url": "https://storage.zadark.com/ZaDark%20$version.zip"
     }
-  },
-  "pre_install": "Rename-Item \"$dir\\zadark$version-windows.exe\" \"zadark.exe\"",
-  "bin": "zadark.exe",
-  "checkver": "github",
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://storage.zadark.com/zadark$version-windows.zip"
-      }
-    }
-  }
 }

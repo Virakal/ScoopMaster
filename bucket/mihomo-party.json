@@ -1,43 +1,63 @@
 {
-    "version": "1.9.4",
+    "version": "1.2.21",
     "description": "Another Mihomo GUI.",
-    "homepage": "https://mihomo.party",
-    "license": "GPL-3.0",
+    "homepage": "https://mihomo.party/",
+    "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v1.9.4/mihomo-party-windows-1.9.4-x64-portable.7z",
-            "hash": "bc18cef5764bf659056d580ffe2159fab0d6c7b786d76d61d96f4a66daf576f3"
+            "url": "https://github.com/pompurin404/mihomo-party/releases/download/v1.2.21/mihomo-party-windows-1.2.21-x64-portable.7z",
+            "hash": "e2f84b358c8fa6e865355798e786e55e710b767b1fc18871c1ed8a8e0905e879"
         },
         "32bit": {
-            "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v1.9.4/mihomo-party-windows-1.9.4-ia32-portable.7z",
-            "hash": "f0156c68a5a748c9ea59f3ff98713b04dd65ebe21c1952b592904c3f8c56e75b"
+            "url": "https://github.com/pompurin404/mihomo-party/releases/download/v1.2.21/mihomo-party-windows-1.2.21-ia32-portable.7z",
+            "hash": "d1fa52a95840c6d59b3d309c1e50868ef00b002c3a9cdec16d50c39c685f9da8"
         },
         "arm64": {
-            "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v1.9.4/mihomo-party-windows-1.9.4-arm64-portable.7z",
-            "hash": "ec1343a970ecb955808f7ceee667cdd13ab0837bac8f5f6e0106c2db89325223"
+            "url": "https://github.com/pompurin404/mihomo-party/releases/download/v1.2.21/mihomo-party-windows-1.2.21-arm64-portable.7z",
+            "hash": "027263ce73534716a6de1add1a8e59afc5ecb72b2004de341e0d9ffa053e4ea9"
         }
     },
-    "persist": "data",
+    "bin": "mihomo-party.exe",
     "shortcuts": [
         [
-            "Clash Party.exe",
-            "Clash Party",
-            "noadmin"
+            "mihomo-party.exe",
+            "mihomo-party"
         ]
     ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",
+        " ni \"$dir\\config.yaml\" -ItemType File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\mihomo.yaml\")) {",
+        " ni \"$dir\\mihomo.yaml\" -ItemType File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\override.yaml\")) {",
+        " ni \"$dir\\override.yaml\" -ItemType File | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\profile.yaml\")) {",
+        " ni \"$dir\\profile.yaml\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "persist": [
+        "data",
+        "config.yaml",
+        "mihomo.yaml",
+        "override.yaml",
+        "profile.yaml"
+    ],
     "checkver": {
-        "github": "https://github.com/mihomo-party-org/mihomo-party"
+        "github": "https://github.com/pompurin404/mihomo-party"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-x64-portable.7z"
+                "url": "https://github.com/pompurin404/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-x64-portable.7z"
             },
             "32bit": {
-                "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-ia32-portable.7z"
+                "url": "https://github.com/pompurin404/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-ia32-portable.7z"
             },
             "arm64": {
-                "url": "https://github.com/mihomo-party-org/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-arm64-portable.7z"
+                "url": "https://github.com/pompurin404/mihomo-party/releases/download/v$version/mihomo-party-windows-$version-arm64-portable.7z"
             }
         },
         "hash": {

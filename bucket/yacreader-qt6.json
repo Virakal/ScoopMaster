@@ -1,12 +1,12 @@
 {
-    "version": "9.16.3.26010361",
+    "version": "9.14.2.2402143",
     "description": "A comic reader and manager (Qt6)",
     "homepage": "https://www.yacreader.com",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/YACReader/yacreader/releases/download/9.16.3/YACReader-v9.16.3.26010361-winx64-7z-qt6.exe",
-            "hash": "1dfdf2999c1daef18f59f09f26b0dccea9911a9b518e81ae4d12ec297708022e"
+            "url": "https://github.com/YACReader/yacreader/releases/download/9.14.2/YACReader-v9.14.2.2402143-winx64-7z-qt6.exe",
+            "hash": "094166a5b4a164c1a7e1ee594870ef9a4e22fc8774024d32a6772b0ca927fe72"
         }
     },
     "innosetup": true,

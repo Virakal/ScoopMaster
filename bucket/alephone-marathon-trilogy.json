@@ -1,5 +1,5 @@
 {
-    "version": "20250829",
+    "version": "20240822",
     "description": "Free, enhanced port of the classic FPS Marathon trilogy by Bungie Software",
     "homepage": "https://alephone.lhowon.org/",
     "license": {
@@ -7,19 +7,19 @@
         "url": "https://github.com/Aleph-One-Marathon/alephone/blob/master/COPYING"
     },
     "url": [
-        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20250829/Marathon-20250829-Win.zip",
-        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20250829/Marathon2-20250829-Win.zip",
-        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20250829/MarathonInfinity-20250829-Win.zip"
+        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20240822/Marathon-20240822-Win.zip",
+        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20240822/Marathon2-20240822-Win.zip",
+        "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-20240822/MarathonInfinity-20240822-Win.zip"
     ],
     "hash": [
-        "bc59e4058f0a56e2ba6e67a00bbc2ed7d53d392ed8a3b9706c2e2940b7612798",
-        "b2ed5a78e01cbcf13e5c1607b6a0d9f6b3ffd6446d354d5660d96b8b7e3064e6",
-        "0f7476e7e07aed8021884e7488a9a6fd5d1a1378bb1887c28715b7bf84d7ddc3"
+        "23ff590d6503ce8ec410629b193fd588e986ed39cad1589c96308c894bcfe1f3",
+        "4e76de1774eca3d8834c73485c6870cfe913996b100a508fc724596e501c9fb9",
+        "0d54cd1d64f8c5cc7ab79c4c96c20205bacbc2503727fd75d3fd9bc6500eccc2"
     ],
     "extract_dir": [
-        "Marathon-20250829",
-        "Marathon2-20250829",
-        "MarathonInfinity-20250829"
+        "Marathon-20240822",
+        "Marathon2-20240822",
+        "MarathonInfinity-20240822"
     ],
     "extract_to": [
         "Marathon 1",

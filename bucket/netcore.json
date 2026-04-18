@@ -19,15 +19,11 @@
     },
     "pre_install": "if (!(is_admin)) { error 'Admin privileges are required.'; break }",
     "installer": {
-        "script": [
-            "$args = @('/install', '/quiet', '/norestart')",
-            "Start-Process \"$dir\\$fname\" -ArgumentList $args -Wait -Verb RunAs | Out-Null",
-            "Remove-Item \"$dir\\$fname\""
-        ]
+        "script": "Invoke-ExternalCommand \"$dir\\$fname\" -ArgumentList '/install', '/quiet', '/norestart' -RunAs | Out-Null"
     },
     "checkver": {
         "url": "https://raw.githubusercontent.com/dotnet/core/main/release-notes/3.1/releases.json",
-        "jp": "$.latest-release"
+        "jsonpath": "$.latest-release"
     },
     "autoupdate": {
         "architecture": {

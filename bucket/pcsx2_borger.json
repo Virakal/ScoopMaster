@@ -1,5 +1,5 @@
 {
-    "version": "2.6.3",
+    "version": "2.0.2",
     "description": "Sony PlayStation 2 emulator",
     "homepage": "https://pcsx2.net/",
     "license": {
@@ -14,8 +14,8 @@
     "suggest": {
         "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
-    "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.6.3/pcsx2-v2.6.3-windows-x64-Qt.7z",
-    "hash": "963ae6c82bc858a09115c2455247feb76b453862c04f60d41ef80739d802ae60",
+    "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.0.2/pcsx2-v2.0.2-windows-x64-Qt.7z",
+    "hash": "daf7a4025a90b8ff646f50469ad35765a6b4cee183c78fb08a9eb5343cbf6938",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\")) {",
         "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
@@ -38,7 +38,6 @@
         "cheats_ws",
         "cheats",
         "inis",
-        "inputprofiles",
         "logs",
         "memcards",
         "shaders\\GSdx_FX_Settings.ini",
@@ -49,7 +48,6 @@
         "github": "https://github.com/PCSX2/pcsx2/"
     },
     "autoupdate": {
-        "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-v$version-windows-x64-Qt.7z",
-        "extract_dir": "PCSX2 $version"
+        "url": "https://github.com/PCSX2/pcsx2/releases/download/v$version/pcsx2-$version-windows-x64-Qt.7z"
     }
 }

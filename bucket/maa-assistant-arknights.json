@@ -1,16 +1,16 @@
 {
-    "version": "v6.8.0-beta.1",
+    "version": "v5.6.2",
     "description": "《明日方舟》小助手，全日常一键长草！| A one-click tool for the daily tasks of Arknights, supporting all clients.",
     "homepage": "https://maa.plus/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.8.0-beta.1/MAA-v6.8.0-beta.1-win-x64.zip",
-            "hash": "0fa83b750194d10b5cbbaba5059f8537fab5ca5c46ca4bf4c4cf49d86607e3b9"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-x64.zip",
+            "hash": "eee98fae48d000cc8a28d4b115ec2812f322b3dafa5cc7f53a887c755c04013a"
         },
         "arm64": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.8.0-beta.1/MAA-v6.8.0-beta.1-win-arm64.zip",
-            "hash": "d9d71f9169e52e7d9baf2eb65ee0f485dd8e5160ba4a0a0ff5bb54f51976d6ff"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-arm64.zip",
+            "hash": "a21aa363606d003cd3f4b9d9694317108fd5723846a12f749e8fbf11fd7b858f"
         }
     },
     "bin": "MAA.exe",

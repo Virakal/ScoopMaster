@@ -1,94 +1,22 @@
 {
     "homepage": "https://github.com/be5invis/Iosevka",
-    "version": "34.3.0",
+    "version": "31.6.1",
     "description": "Slender typeface for code, from code.",
-    "license": "OFL-1.1",
     "checkver": {
         "url": "https://github.com/be5invis/Iosevka/releases/latest",
         "re": "href=\"/be5invis/Iosevka/tree/v((\\d+\\.)+\\d+)\""
     },
-    "url": [
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-Iosevka-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaAile-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaCurly-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaCurlySlab-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaEtoile-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSlab-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS01-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS02-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS03-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS04-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS05-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS06-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS07-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS08-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS09-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS10-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS11-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS12-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS13-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS14-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS15-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS16-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS17-34.3.0.zip",
-        "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS18-34.3.0.zip"
-    ],
-    "hash": [
-        "8a67fdd28e3d915fca793b650eef46964c87a6ceb0cbb4387e331d84464b3fbc",
-        "e3973b94a86d6c1ae8596238827d2f450cc796939590e441c5d72a98081506c6",
-        "11abf8cd80fd712eac6af436b474475107f6060627acd197caa40a426e39f000",
-        "bfaea80e12445ab79af146617cbab7fd54ed95bd1f0285609acc4067e6f91423",
-        "61d9380eeb3f9dd0b9d6d149b5ff24102d6b70c6215e439fc30c6901387d1839",
-        "a61178d261d6e943d1288625c35b8910d2abc10468c6a45c5c512394d0a5bba7",
-        "cf1627e4ffce8121589acacd8d42e5f6a6b56cc674ca22b2985445c49d39277c",
-        "ead23184a33a598de487ca39996703f63e40ee1234ce4310d4ad3f747e364f8f",
-        "680b5c468da9b492641f2166167aa028a89bba2a74bf79cd204d3989c60493cc",
-        "2432c59aa293cf1b428809eb331429056ee2dbf58c17556e20fcb4d0706422c0",
-        "e87f51877ea5ae1412e263f16b2404383046978b5a4d45089910fe7e6291e07b",
-        "58ab8693af08f154cf62a852b6017bbf33105a141ac8e17f308c1908fc969390",
-        "f4ed91bf5fc8dacd6774a79480c2704c5bc994a02013d30446cf603dca05d61e",
-        "32a0978f027add77132c18e1dc4c8d1515a26836a452c1eb1e352e58c8494490",
-        "623e6417c9c4111d7fd23bdba03778351bf0ed970fdc7949caebe5c73a9196db",
-        "646b6ed18d08780af9866da46629d6d71d6572f4755775eb59f731924a33cefc",
-        "ce8b10c45b1aff81f749a1f52d94d95ab5958205c9a5226ab4b881823fee5ede",
-        "2ed009532a010380c3d22989e28d0a15e678693c1d278b4f2db5542fa029a9c7",
-        "9e8d0f2faf027e30caa87b0d960b479516813f24209118541657b4ef0ead3723",
-        "3c7e52ab7af0590e4af4b711152382dc64bb41acc18bb431301b101f93602843",
-        "35ae2d4730dc90c3b20149c5b2853966e0367744fdcc07ced51c0d668464a1c6",
-        "7cff9e9a3160dcbdb0e58b85463c679dab163cad20cbc16f6d5f7f20f89a399f",
-        "52d1c957f834290180c69125653aa9079776d63208375b268bb6d1201d77af99",
-        "4c81d1d0217306745d869db97fc2a570339dbd80b20a8c73264dfabe313c1777"
-    ],
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v31.6.1/SuperTTC-Iosevka-31.6.1.zip",
+    "hash": "6ba820a01f0dd5fe282f3132cb5474042a5a75cb21a876c0c4d96996bd8118ad",
     "autoupdate": {
-        "url": [
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-Iosevka-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaAile-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaCurly-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaCurlySlab-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaEtoile-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSlab-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS01-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS02-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS03-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS04-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS05-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS06-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS07-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS08-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS09-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS10-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS11-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS12-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS13-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS14-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS15-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS16-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS17-$version.zip",
-            "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS18-$version.zip"
-        ],
-        "hash": {
-            "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/SHA-256.txt",
-            "regex": "([a-fA-F0-9]{64})\\s+SuperTTC-$basename"
-        }
+        "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-Iosevka-$version.zip"
+    },
+    "installer": {
+        "keep": "false",
+        "script": [
+            "Write-Output \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-Iosevka-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaAile-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaCurly-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaCurlySlab-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaEtoile-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSlab-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS01-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS02-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS03-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS04-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS05-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS06-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS07-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS08-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS09-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS10-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS11-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS12-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS13-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS14-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS15-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS16-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS17-$version.zip\" \"https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS18-$version.zip\" | %{wget.exe -nv --directory-prefix \"$dir\" \"$_\"}",
+            "Get-ChildItem \"$dir\" -Recurse -Include \"*.zip\" | %{7z e -o\"$dir\" -aoa \"$_\"}",
+            "Remove-Item \"$dir\" -Recurse -Include \"*.zip\""
+        ]
     }
 }

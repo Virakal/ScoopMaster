@@ -1,9 +1,18 @@
 {
     "version": "2.00",
     "description": "Archiver.",
-    "homepage": "https://micco.blog/mysoft/lhmelt.htm",
-    "url": "https://micco.blog/dlfile/LMEL200.EXE#/LMEL200.lzh",
+    "homepage": "https://micco.mars.jp/mysoft/lhmelt.htm",
+    "url": "https://micco.mars.jp/dlfile/LMEL200.EXE#/LMEL200.lzh",
     "hash": "8ad2c21ac671942cc27bb7a1703519429958bd3911f466efd4f05a04e4715f85",
+    "depends": [
+        "7zip32dll",
+        "cab32dll",
+        "tar32dll",
+        "unarj32dll",
+        "unlha32dll",
+        "unzip32dll",
+        "zip32jdll"
+    ],
     "post_install": [
         "New-Item -Value \"$dir\\..\\..\\cab32dll\\current\\cab32.dll\" -Path \"$dir\\cab32.dll\" -ItemType HardLink",
         "New-Item -Value \"$dir\\..\\..\\7zip32dll\\current\\7-zip32.dll\" -Path \"$dir\\7-zip32.dll\" -ItemType HardLink",
@@ -20,21 +29,8 @@
             "LHMelt"
         ]
     ],
-    "depends": [
-        "7zip32dll",
-        "cab32dll",
-        "tar32dll",
-        "unarj32dll",
-        "unlha32dll",
-        "unzip32dll",
-        "zip32jdll"
-    ],
     "checkver": {
-        "url": "https://micco.blog/mysoft/lhmelt.htm",
-        "regex": "<strong>Ver ([\\d]+)\\.([\\d]{2})</strong>",
-        "replace": "${1}.${2}"
-    },
-    "autoupdate": {
-        "url": "https://micco.blog/dlfile/LMEL$match1$match2.EXE#/LMEL$match1$match2.lzh"
+        "url": "https://micco.mars.jp/mysoft/lhmelt.htm",
+        "regex": "<strong>Ver ([\\d\\.]+)</strong>"
     }
 }

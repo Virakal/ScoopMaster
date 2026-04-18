@@ -1,23 +1,42 @@
 {
-    "version": "639",
-    "description": "Freeware system optimization tool that removes unused and temporary files",
+    "version": "6.27.11214",
+    "description": "Number-one tool for cleaning PC",
     "homepage": "https://www.ccleaner.com/ccleaner",
     "license": "Freeware",
-    "url": "https://download.ccleaner.com/portable/ccsetup639.zip",
-    "hash": "1a76f7d0d3eb7a0f1ed25e92d14a78d0dd431a85ba4a88022b7125d618da2afa",
+    "url": "https://download.ccleaner.com/portable/ccsetup627.zip",
+    "hash": "b4655722664a4c9ff51a848807470b2437c94865a1ca94eaefa234d15e67bef6",
     "pre_install": [
-        "if (!(Test-Path $persist_dir\\ccleaner.ini)) {",
-        "  Set-Content $dir\\ccleaner.ini @('[Options]', 'UpdateAuto=0', 'UpdateNotify=0', 'UpdateCheck=0', 'HelpImproveCCleaner=0') -Encoding ASCII }",
+        "if (!(Test-Path \"$persist_dir\\ccleaner.ini\")) {",
+        "   Set-Content \"$dir\\ccleaner.ini\" @('[Options]', 'UpdateAuto=0', 'UpdateNotify=0', 'UpdateCheck=0', 'HelpImproveCCleaner=0') -Encoding ASCII",
+        "}",
         "'winapp.ini', 'winreg.ini', 'winsys.ini' | ForEach-Object {",
-        "  if (!(Test-Path $persist_dir\\$_)) { New-Item $dir\\$_ | Out-Null } }",
-        "Remove-Item $dir\\Lang -Recurse"
+        "   if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
+        "}",
+        "Copy-Item \"$persist_dir\\*\" \"$dir\" -Include 'branding.dll', 'CCleaner.dat' -ErrorAction SilentlyContinue"
     ],
+    "uninstaller": {
+        "script": "Copy-Item \"$dir\\*\" \"$persist_dir\" -Include 'branding.dll', 'CCleaner.dat' -ErrorAction SilentlyContinue -Force"
+    },
     "architecture": {
         "64bit": {
-            "post_install": "Remove-Item $dir\\CCleaner.exe, $dir\\x86 -Recurse",
+            "bin": [
+                [
+                    "CCleaner64.exe",
+                    "CCleaner"
+                ]
+            ],
             "shortcuts": [
                 [
                     "CCleaner64.exe",
+                    "CCleaner"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": "CCleaner.exe",
+            "shortcuts": [
+                [
+                    "CCleaner.exe",
                     "CCleaner"
                 ]
             ]
@@ -31,9 +50,9 @@
     ],
     "checkver": {
         "url": "https://www.ccleaner.com/ccleaner/builds",
-        "regex": "https://download.ccleaner.com/portable/ccsetup([\\d.]+).zip"
+        "regex": "CCleaner Free \\(v([\\d.]+)\\) - Latest official release"
     },
     "autoupdate": {
-        "url": "https://download.ccleaner.com/portable/ccsetup$version.zip"
+        "url": "https://download.ccleaner.com/portable/ccsetup$majorVersion$minorVersion.zip"
     }
 }

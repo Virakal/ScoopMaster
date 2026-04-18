@@ -1,16 +1,12 @@
 {
-    "version": "0.68.0",
+    "version": "0.60.0",
     "description": "A structural diff that understands syntax",
     "homepage": "https://difftastic.wilfred.me.uk",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Wilfred/difftastic/releases/download/0.68.0/difft-x86_64-pc-windows-msvc.zip",
-            "hash": "a87429ebc75343c9731debfd083b954bbd1e87011f962078b9ade92e33440348"
-        },
-        "arm64": {
-            "url": "https://github.com/Wilfred/difftastic/releases/download/0.68.0/difft-aarch64-pc-windows-msvc.zip",
-            "hash": "ca0e6070f7997c92bdab03c882104f84a4c6df27e8464afba37e5096872b2762"
+            "url": "https://github.com/Wilfred/difftastic/releases/download/0.60.0/difft-x86_64-pc-windows-msvc.zip",
+            "hash": "a31068e3d1719dce1a1abc16191bc2df4a515926cd27c93b8a13393e7cb3acb4"
         }
     },
     "bin": "difft.exe",
@@ -21,9 +17,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Wilfred/difftastic/releases/download/$version/difft-x86_64-pc-windows-msvc.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Wilfred/difftastic/releases/download/$version/difft-aarch64-pc-windows-msvc.zip"
             }
         }
     }

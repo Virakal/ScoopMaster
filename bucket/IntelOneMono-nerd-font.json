@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'IntelOneMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/IntelOneMono.tar.xz",
-    "hash": "9d55174210a512c6c9d0601532033d05d9e8817c760cb9ccca3c6c9c4ff6d7c1",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/IntelOneMono.tar.xz",
+    "hash": "a016b61e49c395c5b1e5bd2c919ae668724a33f2ef14da3becf932da401a080d",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

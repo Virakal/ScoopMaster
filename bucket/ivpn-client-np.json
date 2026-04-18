@@ -1,12 +1,12 @@
 {
-    "version": "3.15.0",
+    "version": "3.14.16",
     "description": "Open-source VPN software",
     "homepage": "https://www.ivpn.net/apps-windows/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://repo.ivpn.net/windows/bin/IVPN-Client-v3.15.0.exe#/setup.exe",
-            "hash": "5c67b18845c6faa3de5256d7a4fecb3c23f8a8250f71c6d018bddf127780867f"
+            "url": "https://repo.ivpn.net/windows/bin/IVPN-Client-v3.14.16.exe#/setup.exe",
+            "hash": "89bf718ff97a8df2fd9e2784af98480db9f77f5a43f902dd397d46f9ab2ac09e"
         }
     },
     "pre_install": [

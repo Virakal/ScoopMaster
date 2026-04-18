@@ -1,13 +1,23 @@
 {
-    "version": "2.20",
-    "description": "A masm compatible assembler.",
-    "homepage": "https://github.com/Baron-von-Riedesel/JWasm",
-    "license": "Freeware",
-    "url": "https://github.com/Baron-von-Riedesel/JWasm/releases/download/v2.20/JWasm_v220_win32.zip",
-    "hash": "d04a2a4d7075cabf12e1aef820b27dcf50d878a9581b1ee456b0c7de8216cbe2",
-    "bin": "JWasm.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/Baron-von-Riedesel/JWasm/releases/download/v$version/JWasm_v$cleanVersion_win32.zip"
+  "description": "JWasm is a free MASM-compatible assembler",
+  "homepage": "https://www.japheth.de/JWasm.html",
+  "version": "2.11a",
+  "license": [
+    {
+      "identifier": "JWasm License"
+    },
+    {
+      "identifier": "Sybase Open Watcom Public License version 1.0"
     }
+  ],
+  "url": [
+    "https://www.japheth.de/Download/JWasm/JWasm211bw.zip"
+  ],
+  "hash": [
+    "f8f9e24a1e4f4960067e00e172d5a8f8e147dc034f8eef0b4557d95d7168a55b"
+  ],
+  "bin": [
+    "JWASM.EXE",
+    "res2inc.exe"
+  ]
 }

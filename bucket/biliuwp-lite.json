@@ -1,33 +1,33 @@
 {
     "##": "The shortcut will be created when adding the Appx package",
-    "version": "4.8.13",
+    "version": "4.7.3",
     "description": "第三方哔哩哔哩UWP客户端",
     "homepage": "https://github.com/ywmoyue/biliuwp-lite",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.13/BiliLite.Packages_4.8.13.0_x64.zip",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0",
-            "extract_dir": "BiliLite.Packages_4.8.13.0_x64_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_x64.zip",
+            "hash": "526fa6145ba7014df6062a079408a52e431ed04a978194222289961787bc1d50",
+            "extract_dir": "BiliLite.Packages_4.7.3.0_x64_Test"
         },
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.13/BiliLite.Packages_4.8.13.0_x86.zip",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0",
-            "extract_dir": "BiliLite.Packages_4.8.13.0_x86_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_x86.zip",
+            "hash": "d92b229a7f0ec67dd9e9342353e9d417a619bb0df55751cbb70e3a5f4adaf2dc",
+            "extract_dir": "BiliLite.Packages_4.7.3.0_x86_Test"
         },
         "arm64": {
-            "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.8.13/BiliLite.Packages_4.8.13.0_ARM64.zip",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0",
-            "extract_dir": "BiliLite.Packages_4.8.13.0_ARM64_Test"
+            "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v4.7.3/BiliLite.Packages_4.7.3.0_ARM64.zip",
+            "hash": "aa3d2048b7e40282c282eec981d4d0dd7e1df1b2bbf523ff1709eb90666d16e1",
+            "extract_dir": "BiliLite.Packages_4.7.3.0_ARM64_Test"
         }
     },
     "pre_install": [
-        "if ($env:CI -eq \"true\") { Exit }",
+        "if ($env:CI -eq \"true\") { Return }",
         "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
         "Get-ChildItem \"$dir\\*.msix\" | Add-AppxPackage -ForceTargetApplicationShutdown -AllowUnsigned"
     ],
     "pre_uninstall": [
-        "if ($env:CI -eq \"true\") { Exit }",
+        "if ($env:CI -eq \"true\") { Return }",
         "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
         "$package = Get-AppxPackage '5422.502643927C6AD'",
         "if (!$package) { warn \"$app is already uninstalled out of scoop.\" ; return }",
@@ -41,15 +41,15 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_x64.zip",
+                "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_x64.zip",
                 "extract_dir": "BiliLite.Packages_$version.0_x64_Test"
             },
             "32bit": {
-                "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_x86.zip",
+                "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_x86.zip",
                 "extract_dir": "BiliLite.Packages_$version.0_x86_Test"
             },
             "arm64": {
-                "url": "https://ghproxy.com/https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_ARM64.zip",
+                "url": "https://github.com/ywmoyue/biliuwp-lite/releases/download/v$version/BiliLite.Packages_$version.0_ARM64.zip",
                 "extract_dir": "BiliLite.Packages_$version.0_ARM64_Test"
             }
         }

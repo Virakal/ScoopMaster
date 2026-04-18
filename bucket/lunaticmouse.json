@@ -1,24 +1,24 @@
 {
-    "version": "3.0.0",
+    "version": "2.5.0",
     "description": "To mash the mouse button automatically.",
     "homepage": "https://cosmic-voyager.com/luna.html",
-    "url": "https://cosmic-voyager.com/wp-content/uploads/2023/10/Luna300.zip",
-    "hash": "dc037848d2155d797cbd3d3430fd8481509398a59bb91e2be4214bee1876c191",
-    "extract_dir": "Luna300",
-    "pre_install": "New-Item -Path \"$dir\\\" -Name \"Luna.ini\" -ItemType \"file\"",
+    "url": "https://cosmic-voyager.com/wp-content/uploads/2023/10/Luna250.zip",
+    "hash": "sha512:35fd4f3faafc3eb9b21aaf780e1edc7b83d1ffee0a072fff17dadee65afa22a1182c52cea50965a7d09ea28f6c0599bb4a3a9cfd298e81820d723439dd1cf898",
+    "extract_dir": "Luna250",
+    "pre_install": [
+        "New-Item -Path \"$dir\\\" -Name \"Luna.ini\" -ItemType \"file\""
+    ],
+    "persist": [
+        "Luna.ini"
+    ],
     "shortcuts": [
         [
             "Luna.exe",
             "Lunatic Mouse"
         ]
     ],
-    "persist": "Luna.ini",
     "checkver": {
         "url": "https://cosmic-voyager.com/lunamouse/",
-        "regex": "ver ([\\d\\.]+) \\([\\d/]+\\)"
-    },
-    "autoupdate": {
-        "url": "https://cosmic-voyager.com/wp-content/uploads/2023/10/Luna$cleanVersion.zip",
-        "extract_dir": "Luna$cleanVersion"
+        "regex": "<p>ver ([\\d\\.]+) \\([\\d/]+\\)</p>"
     }
 }

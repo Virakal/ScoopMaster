@@ -1,5 +1,5 @@
 {
-    "version": "147.0.7727.102",
+    "version": "128.0.6613.138",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
@@ -8,15 +8,17 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/acvgrsrei7jvzxd7zat65etfjdxa_147.0.7727.102/147.0.7727.102_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "55809b1cdd008f1b1b8e9d39706a3d2883f7d1232393597e65fd186cca96e072"
+            "url": "https://dl.google.com/release2/chrome/ac5y5ywemnpwdpv3qi7ovmviuwxa_128.0.6613.138/128.0.6613.138_chrome_installer.exe#/dl.7z",
+            "hash": "6fc1883a87390c0f3ef9ed5e98d75bce665d3dd3a38c5ebf20d5762e3b1dc0aa"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/addjpydafj2wwzes7324a3vdiz5q_147.0.7727.102/147.0.7727.102_chrome_installer_uncompressed.exe#/dl.7z",
-            "hash": "b6d1de5e08e1274e7a529eb85cea98260134996c72f88558fe1fbfc820c9bfea"
+            "url": "https://dl.google.com/release2/chrome/owb42ynnsjeyjygxlo2pjjtufm_128.0.6613.138/128.0.6613.138_chrome_installer.exe#/dl.7z",
+            "hash": "d713338b42b1da3389428ca7ac58518e21ae97b29d25622f5f5256c3b3cb5611"
         }
     },
-    "extract_dir": "Chrome-bin",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal"
+    },
     "bin": [
         [
             "chrome.exe",
@@ -44,14 +46,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer_uncompressed.exe#/dl.7z",
+                "url": "https://dl.google.com/release2/chrome/$match64_$version/$version_chrome_installer.exe#/dl.7z",
                 "hash": {
                     "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
                     "xpath": "/chromechecker/stable64[version='$version']/sha256"
                 }
             },
             "32bit": {
-                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer_uncompressed.exe#/dl.7z",
+                "url": "https://dl.google.com/release2/chrome/$match32_$version/$version_chrome_installer.exe#/dl.7z",
                 "hash": {
                     "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
                     "xpath": "/chromechecker/stable32[version='$version']/sha256"

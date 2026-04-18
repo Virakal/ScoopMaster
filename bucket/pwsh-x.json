@@ -2,20 +2,20 @@
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://github.com/PowerShell/PowerShell",
     "description": "PowerShell for every system! https://Microsoft.com/PowerShell",
-    "version": "7.5.5",
+    "version": "7.4.5",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-x64.zip",
-            "hash": "9d4c9247fa5d8b090470b5c676b1ce6e22029eeab8a5cb1d11480e3840172c99"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.5/PowerShell-7.4.5-win-x64.zip",
+            "hash": "c735653083d4bc725687c005a4e6d4f0fb11c94b0cf86850467688796ac00342"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-x86.zip",
-            "hash": "2106bffb6c42b2ab8b23a0e10573d0770cbf0b3731eb1cd108e59b64f9ceb17c"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.5/PowerShell-7.4.5-win-x86.zip",
+            "hash": "1729e62b201f79a98422a087defd8a9e42282cc1791934d1c1e6a9ef24fb704b"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.5/PowerShell-7.5.5-win-arm64.zip",
-            "hash": "e36b5a5f9b1511beebe1b7589e5a5adff955349f635e411021c03aef4432c505"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.5/PowerShell-7.4.5-win-arm64.zip",
+            "hash": "b85ee560e8e5cb83bd34596864fd3aae4f2f472d3b31fce31ed6f351c6f26e96"
         }
     },
     "bin": [

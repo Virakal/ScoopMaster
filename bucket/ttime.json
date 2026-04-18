@@ -1,33 +1,13 @@
 {
-    "version": "0.9.15",
-    "description": "Screenshots, word marking, OCR, AI, translation software || 截图、划词、文字识别、AI、翻译软件",
-    "homepage": "https://ttime.timerecord.cn/",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/InkTimeRecord/TTime/blob/main/LICENSE.txt"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/InkTimeRecord/TTime/releases/download/v0.9.15/TTime.0.9.15.exe#/dl.7z",
-            "hash": "eadb3d1df384034732b0b6c227799211d5ab25b238653a43febd676e9272e055"
-        }
-    },
+    "version": "0.9.14",
+    "description": "🚀 一款简洁高效的输入、截图、划词翻译软件",
+    "homepage": "https://github.com/InkTimeRecord/TTime",
+    "license": "MIT",
+    "url": "https://github.com/InkTimeRecord/TTime/releases/download/v0.9.14/TTime.0.9.14.exe",
+    "hash": "b40e064d6d120e10b5f02fcfda301448529fe4cba1f252a4da91bb989af25441",
     "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-            "# Remove-Item \"$dir\\uninstall.exe\" -Force",
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:AppData\\time-translate\" \"$persist_dir\\AppData\" -Migrate"
-        ]
+        "script": "Rename-Item \"$dir\\TTime.$version.exe\" \"TTime.exe\""
     },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:AppData\\time-translate\"",
-        "Remove-ItemProperty 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run' -Name 'TTime' -Force -ErrorAction SilentlyContinue | Out-Null"
-    ],
     "shortcuts": [
         [
             "TTime.exe",
@@ -35,13 +15,11 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/InkTimeRecord/TTime"
+        "url": "https://api.github.com/repos/InkTimeRecord/TTime/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "(?<tag>v([\\w.-]+))"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/InkTimeRecord/TTime/releases/download/v$version/TTime.$version.exe#/dl.7z"
-            }
-        }
+        "url": "https://github.com/InkTimeRecord/TTime/releases/download/v$version/TTime.$version.exe"
     }
 }

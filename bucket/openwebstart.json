@@ -1,16 +1,16 @@
 {
-    "version": "1.13.0",
+    "version": "1.10.1",
     "description": "Run JNLP files with the latest Java version",
     "license": "GNU General Public License, version 2",
     "homepage": "https://openwebstart.com/",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.13.0/OpenWebStart_windows-x64_1_13_0.exe",
-            "hash": "8bcfb8583d67e163858271a833284c98200e8f412160ff9c3c8ff5d17956ac00"
+            "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.10.1/OpenWebStart_windows-x64_1_10_1.exe",
+            "hash": "1c8fcff487a686297f61dab156ae42c89c082e91457911ae52f443f119472214"
         },
         "32bit": {
-            "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.13.0/OpenWebStart_windows-x32_1_13_0.exe",
-            "hash": "2ac7cbd25682a4a44457f22f4f23c5a2d606d590983771a1bf74271344ad5e4b"
+            "url": "https://github.com/karakun/OpenWebStart/releases/download/v1.10.1/OpenWebStart_windows-x32_1_10_1.exe",
+            "hash": "31e88d6939a237d09e62230f36237523800455c516bfac76a44c8225d2b453d0"
         }
     },
     "installer": {

@@ -1,18 +1,18 @@
 {
-    "version": "6.35.7",
-    "description": "The open source high performance ELT framework powered by Apache Arrow.",
+    "version": "2.0.21",
+    "description": "The open-source cloud asset inventory powered by SQL.",
     "homepage": "https://cloudquery.io/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cloudquery/cloudquery/releases/download/cli-v6.35.7/cloudquery_windows_amd64.zip",
-            "hash": "a0f93b789eb0d31d3b97281148be88588369e59fd437460c01e8b6753f50d305"
+            "url": "https://github.com/cloudquery/cloudquery/releases/download/cli-v2.0.21/cloudquery_windows_amd64.zip",
+            "hash": "385a21eba5137afb9b278888b428ee5ca5495a931c55e14ba5a86873b2b1cf7f"
         }
     },
     "bin": "cloudquery.exe",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/cloudquery/cloudquery/refs/heads/main/.release-please-manifest.json",
-        "jsonpath": "$.cli"
+        "url": "https://versions.cloudquery.io/v2/cli.json",
+        "regex": "cli-v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

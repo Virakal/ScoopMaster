@@ -1,8 +1,8 @@
 {
-    "version": "0.6.26",
+    "version": "0.6.21",
     "license": "Freeware",
-    "url": "https://ghproxy.com/https://github.com/janeczku/calibre-web/releases/download/0.6.26/Calibre-Web-06-26-Setup.exe",
-    "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0",
+    "url": "https://github.com/janeczku/calibre-web/releases/download/0.6.21/Calibre-Web-06-21-Setup.exe",
+    "hash": "4c7b607444591f5350554809bcb31893b7f1558a6dec1a03af9642c3b8d46ad1",
     "homepage": "https://github.com/janeczku/calibre-web",
     "innosetup": true,
     "bin": "calibreweb.exe",
@@ -22,6 +22,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://ghproxy.com/https://github.com/janeczku/calibre-web/releases/download/$version/Calibre-Web-$majorVersion$minorVersion-$patchVersion-Setup.exe"
+        "url": "https://github.com/janeczku/calibre-web/releases/download/$version/Calibre-Web-$majorVersion$minorVersion-$patchVersion-Setup.exe"
     }
 }

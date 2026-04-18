@@ -1,7 +1,7 @@
 {
-    "version": "150.0b10",
+    "version": "131.0b8",
     "description": "Developer builds of Firefox: the popular open source web browser",
-    "homepage": "https://www.firefox.com/en-US/channel/desktop/developer",
+    "homepage": "https://www.mozilla.org/en-US/firefox/developer/",
     "license": "MPL-2.0",
     "notes": [
         "To set profile 'Scoop-Dev' as *DEFAULT*, or profiles/settings was lost after update:",
@@ -11,12 +11,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/150.0b10/win64/en-US/Firefox%20Setup%20150.0b10.exe#/dl.7z",
-            "hash": "sha512:6a2fca6887a87f1730af204bccb648f0bd2dc8d90000b95a8d2bdd904e87ac8bb0597851909c3aba8f7448f6108a593568030b185c689c23b8ed75dd92e56c7c"
+            "url": "https://archive.mozilla.org/pub/devedition/releases/131.0b8/win64/en-US/Firefox%20Setup%20131.0b8.exe#/dl.7z",
+            "hash": "sha512:d78e4b228cb14f91b8a5c694cf8bed7d7935a93df59c649ce15737e5d5c98071f5cdf771c834d4a6ca2cd15acebff94d18ae0a9c866f5af8bd95882530b4dda0"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/150.0b10/win32/en-US/Firefox%20Setup%20150.0b10.exe#/dl.7z",
-            "hash": "sha512:10bec36374230514e980bc6417b1154f73e44ebf27a5eb869c1d1d9c208a12427bdb25afe3a918ef3b5b0731bb78656cec4d8f09d39b57cd426d8a17273dc6f2"
+            "url": "https://archive.mozilla.org/pub/devedition/releases/131.0b8/win32/en-US/Firefox%20Setup%20131.0b8.exe#/dl.7z",
+            "hash": "sha512:97fe3724a7c8319c497759151f1d8dce28f4d213405e68624f34147ddad0e8424a40282a9e2e3d747f69b811754cd0c12884e83545c926b9de378eaeb2e6d735"
         }
     },
     "extract_dir": "core",
@@ -54,8 +54,9 @@
         "profile"
     ],
     "checkver": {
-        "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
-        "jsonpath": "$.FIREFOX_DEVEDITION"
+        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/en-US/aurora/_/_/_/_/update.xml",
+        "xpath": "/updates/update/patch/@URL",
+        "regex": "devedition-([\\db.]+)-"
     },
     "autoupdate": {
         "architecture": {

@@ -1,19 +1,19 @@
 {
-    "version": "0.7.4",
+    "version": "0.6.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/goreleaser/chglog/releases/download/v0.7.4/chglog_Windows_x86_64.tar.gz",
+            "url": "https://github.com/goreleaser/chglog/releases/download/v0.6.1/chglog_Windows_x86_64.tar.gz",
             "bin": [
                 "chglog.exe"
             ],
-            "hash": "f64b6d264504932130ccc9035b5d4fb63c70e5c80a84407509beac10bf4468e2"
+            "hash": "570bdef1212194b667f1444371a4c19ec71eb1eee42b843ccf9b7fbaa15d5219"
         },
         "arm64": {
-            "url": "https://github.com/goreleaser/chglog/releases/download/v0.7.4/chglog_Windows_arm64.tar.gz",
+            "url": "https://github.com/goreleaser/chglog/releases/download/v0.6.1/chglog_Windows_arm64.tar.gz",
             "bin": [
                 "chglog.exe"
             ],
-            "hash": "1cc24e07c247acf968acff93769920f4a707d3eaedb1531acd2ef3634a3ded29"
+            "hash": "dc5a3d185adc46e8f25682b68b0c5a1ffb514e43301281d6dc7ff0eb89329527"
         }
     },
     "homepage": "https://goreleaser.com",

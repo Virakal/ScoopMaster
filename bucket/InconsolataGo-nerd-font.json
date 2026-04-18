@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'InconsolataGo' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/InconsolataGo.tar.xz",
-    "hash": "0407ab5ddd9f6a9af5f178d5fa1732cbf8275c4fe6e03793adbe48bfd6c04884",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/InconsolataGo.tar.xz",
+    "hash": "69e0a42a6e8072b2a084f09a5056e857e9b620afd57d7d07c8d1da2cf4809b41",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

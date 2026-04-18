@@ -1,5 +1,5 @@
 {
-    "version": "3.2.1",
+    "version": "3.1",
     "description": "Modern multiplayer-oriented source port for Doom",
     "homepage": "https://zandronum.com/",
     "license": "BSD-3-Clause|Sleepycat",
@@ -10,12 +10,12 @@
     ],
     "architecture": {
         "32bit": {
-            "url": "https://zandronum.com/downloads/zandronum3.2.1-win32-base.zip",
-            "hash": "b470016155f6534789bb1cc33df0ad9ea3729c3e5ec70e9174133336ee5cf408"
+            "url": "https://zandronum.com/downloads/zandronum3.1-win32-base.zip",
+            "hash": "104875bce0c57b30b78c2500bbb532418877495ac0236ec23b8ba5f1da80125e"
         },
         "64bit": {
-            "url": "https://zandronum.com/downloads/zandronum3.2.1-win64-base.zip",
-            "hash": "4f367e7c0e0af02d0a7d88fd4bf1d401787d093444fcfb766bf01c20ece5ed78"
+            "url": "https://zandronum.com/downloads/zandronum3.1-win64-base.zip",
+            "hash": "d96a2b5ea2efad65aa96de7677e3dc451a1d2a852e6660034f676c632f058251"
         }
     },
     "pre_install": [

@@ -1,20 +1,17 @@
 {
-    "version": "3.0",
+    "version": "2.5",
     "description": "A fast, lightweight and accurate way to uninstall software in Windows.",
     "homepage": "https://uninstalr.com/",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://uninstalr.com/terms/"
-    },
+    "license": "Unknown",
     "url": "https://uninstalr.com/Uninstalr_Portable.exe#/Uninstalr.exe",
-    "hash": "2eb88a7c5396c486e4d2bb81490a02d62dddf2e3273b5a805a9629aaad82bf7c",
+    "hash": "60814f455b04e8bf9b5c19aada40fe6838c1ca5b2b6c1f1e5ece8f5479b2b84f",
     "shortcuts": [
         [
             "Uninstalr.exe",
             "Uninstalr"
         ]
     ],
-    "checkver": "Latest version: ([\\d.]+)",
+    "checkver": "New version: ([\\d\\.]+)",
     "autoupdate": {
         "url": "https://uninstalr.com/Uninstalr_Portable.exe#/Uninstalr.exe"
     }

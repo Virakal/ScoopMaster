@@ -1,17 +1,17 @@
 {
-    "version": "10.0.6",
+    "version": "7.0.15",
     "description": "Microsoft .NET Desktop Runtime. The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
     "homepage": "https://dotnet.microsoft.com/",
     "license": "MIT",
     "changelog": "https://github.com/dotnet/core/tree/main/release-notes",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/WindowsDesktop/10.0.6/windowsdesktop-runtime-10.0.6-win-x64.exe#/setup.exe",
-            "hash": "5f3f75833f97e5bbcb701a664d09eb872a6dbccdd5b474c66fa2cccde2fc51cb"
+            "url": "https://dotnetcli.azureedge.net/dotnet/WindowsDesktop/7.0.15/windowsdesktop-runtime-7.0.15-win-x64.exe#/setup.exe",
+            "hash": "ab0386de0da19ee6988c1a51f88c3b92752d3800ca01433c3811ccec89f003a7"
         },
         "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/WindowsDesktop/10.0.6/windowsdesktop-runtime-10.0.6-win-x86.exe#/setup.exe",
-            "hash": "b2b180e7e996b38107292ac32d7c72897b6cd740a1ab805414b199f23c6456f4"
+            "url": "https://dotnetcli.azureedge.net/dotnet/WindowsDesktop/7.0.15/windowsdesktop-runtime-7.0.15-win-x86.exe#/setup.exe",
+            "hash": "845801383f1bda16357dda21472afb77a2c40287b0336ecb5a03354273a2e96e"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -34,7 +34,7 @@
     },
     "checkver": {
         "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
-        "regex": "\"latest-runtime\": \"([\\d.]+)\""
+        "regex": "(?s)([\\d.]+)[^\\d]*?(?<sdkversion>[\\d.]+)[^\\d]*?(?:current|sts)"
     },
     "autoupdate": {
         "architecture": {

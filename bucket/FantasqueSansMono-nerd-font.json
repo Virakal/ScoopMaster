@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'FantasqueSansMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FantasqueSansMono.tar.xz",
-    "hash": "462b5490475fb8560dded4eb6cdd9cfd0049b800acee329094def095557d0ffd",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FantasqueSansMono.tar.xz",
+    "hash": "2d6db874195ac7ec4d9b396a9612e1e342b060d8aef0304b0b99c49c3b9a351d",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

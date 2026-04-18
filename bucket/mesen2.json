@@ -1,12 +1,11 @@
 {
-    "version": "2.1.1",
-    "description": "A multi-system emulator supporting NES, SNES, and others",
+    "version": "nightly",
+    "description": "A multi-system emulator supporting NES, SNES, Game Boy, Game Boy Advance, PC Engine, & Master System.",
     "homepage": "https://mesen.ca",
-    "license": "GPL-3.0-or-later",
+    "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SourMesen/Mesen2/releases/download/2.1.1/Mesen_2.1.1_Windows.zip",
-            "hash": "23ccc2bc060b663c68dad3a8c5d6da7d23a50f872d04f135bafa2b04ff7d5cbe"
+            "url": "https://nightly.link/SourMesen/Mesen2/workflows/build/master/Mesen%20%28Windows%20-%20net8.0%20-%20AoT%29.zip"
         }
     },
     "pre_install": [
@@ -23,18 +22,8 @@
     "shortcuts": [
         [
             "Mesen.exe",
-            "Mesen 2"
+            "Mesen2"
         ]
     ],
-    "persist": "settings.json",
-    "checkver": {
-        "github": "https://github.com/SourMesen/Mesen2"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/SourMesen/Mesen2/releases/download/$version/Mesen_$version_Windows.zip"
-            }
-        }
-    }
+    "persist": "settings.json"
 }

@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "9.9.29.47354",
+    "version": "9.9.15.27597",
     "description": "An instant messaging software built with Electron and developed by Tencent.",
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "license": {
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.29_260401_x64_01.exe#/dl.7z",
-            "hash": "d52601a3224d29364f03f4948a487ecd2710db1921383730801d795397e0a808"
+            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x64_01.exe#/dl.7z",
+            "hash": "4911e1e5cc0cb51e9d78395d95be1b5cf900e7d413d0870907310e8e0d14c18b"
         },
         "32bit": {
-            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.29_260401_x86_01.exe#/dl.7z",
-            "hash": "7b36370844a6f449389eab73953269d3dd9314d67f078d48987bfcfefee13887"
+            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x86_01.exe#/dl.7z",
+            "hash": "757312daf31d98f4eaf95537af9bce030684cd8617f6f573ca1510bf37fdb070"
         }
     },
     "extract_dir": "Files",

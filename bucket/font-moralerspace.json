@@ -1,19 +1,23 @@
 {
-    "version": "2.0.0",
+    "version": "1.0.2",
     "description": "Moralerspace font based on Monaspace, IBM Plex Sans JP, Kiwi-Maru and Stick",
     "homepage": "https://github.com/yuru7/moralerspace",
     "license": "OFL-1.1-RFN",
     "url": [
-        "https://github.com/yuru7/moralerspace/releases/download/v2.0.0/Moralerspace_v2.0.0.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v2.0.0/MoralerspaceHW_v2.0.0.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v2.0.0/MoralerspaceJPDOC_v2.0.0.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v2.0.0/MoralerspaceHWJPDOC_v2.0.0.zip"
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/Moralerspace_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHW_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceJPDOC_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWJPDOC_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWNF_v1.0.2.zip"
     ],
     "hash": [
-        "56175ee16373ba1a3d2fd5ec46f3b0b6bf0412be7db1481ec7dee757f2e3d557",
-        "500a7774297c829265ebd472b6d8c1159cfb3e9daa4ca0570170af541b991b7d",
-        "5abe6465910b1253a5de57bf32e79d2d268f5efea6c9ec9a668c6ea610a16f73",
-        "3598729cb4693ff74fe32695fac167991d6bee55fc1649281aab64f311624907"
+        "edafef240510a47f8fd34bfcb78fb05badf795cd0cef03766c9e58c3faf6ef83",
+        "d3c7288f071288e5edadb049211b76b42b7214b5c1a3d43e49848dad9c319b78",
+        "0c22320b9466d5cfb9e66c9ecba1bef6a71afe2a5890e81927efd78ba721261e",
+        "f2e7a6ea84135157fadebba74120350903308a84b4fa53a6193ad3c4282b9596",
+        "06dbd8f2bdd5259d07e43e9fd5601f6a62f80a69813cab1801c9e9dc499c71ce",
+        "dcdccaf2620422e63f00f39589afc5b5052fe62d8fa6ec1a8c244da3e6982868"
     ],
     "depends": "unoun/scoop-helper",
     "installer": {
@@ -38,7 +42,9 @@
             "https://github.com/yuru7/moralerspace/releases/download/v$version/Moralerspace_v$version.zip",
             "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceHW_v$version.zip",
             "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceJPDOC_v$version.zip",
-            "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceHWJPDOC_v$version.zip"
+            "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceHWJPDOC_v$version.zip",
+            "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceNF_v$version.zip",
+            "https://github.com/yuru7/moralerspace/releases/download/v$version/MoralerspaceHWNF_v$version.zip"
         ]
     }
 }

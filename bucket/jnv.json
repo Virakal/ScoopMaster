@@ -1,12 +1,12 @@
 {
-    "version": "0.7.1",
+    "version": "0.4.0",
     "description": "Interactive JSON filter using jq",
     "homepage": "https://github.com/ynqa/jnv",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ynqa/jnv/releases/download/v0.7.1/jnv-x86_64-pc-windows-msvc.zip",
-            "hash": "f76a635add18586c9473329fb37d2dca831b80d8062dccb4683f69a3bb3de5e6"
+            "url": "https://github.com/ynqa/jnv/releases/download/v0.4.0/jnv-x86_64-pc-windows-msvc.zip",
+            "hash": "85fdf833526300ff254d8da26b6a8d835e5d28dc4d10a7e5a3fe4c3ee16cb7a9"
         }
     },
     "bin": "jnv.exe",
@@ -14,11 +14,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ynqa/jnv/releases/download/v$version/jnv-x86_64-pc-windows-msvc.zip",
-                "hash": {
-                    "url": "$baseurl/jnv-x86_64-pc-windows-msvc.zip.sha256"
-                }
+                "url": "https://github.com/ynqa/jnv/releases/download/v$version/jnv-x86_64-pc-windows-msvc.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

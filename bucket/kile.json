@@ -15,6 +15,7 @@
         "Remove-Item \"$dir\\kile-*.7z\""
     ],
     "depends": [
+        "miktex",
         "biber",
         "imagemagick"
     ],

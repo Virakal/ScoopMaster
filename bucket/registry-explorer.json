@@ -1,17 +1,10 @@
 {
-    "version": "2.1.0",
-    "description": "A registry viewer with advanced search capabilities, multi-hive support, and the ability to access locked registry files.",
+    "version": "2.0.0.0",
+    "description": "Windows registry viewer",
     "homepage": "https://ericzimmerman.github.io",
     "license": "MIT",
-    "suggest": {
-        ".NET Desktop Runtime 9.0": "versions/windowsdesktop-runtime-9.0"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://download.ericzimmermanstools.com/net9/RegistryExplorer.zip",
-            "hash": "5d0569fcf18adaf50dc7f8294204cf0335c4f81e78e5587bacd57f2685cab1a4"
-        }
-    },
+    "url": "https://download.mikestammer.com/net6/RegistryExplorer.zip",
+    "hash": "50a11bd0a5e44dcea6469b8564eb3f010b9a8faf323ff6481222d391da26887e",
     "extract_dir": "RegistryExplorer",
     "shortcuts": [
         [
@@ -19,19 +12,12 @@
             "Registry Explorer"
         ]
     ],
-    "persist": [
-        "Settings",
-        "Bookmarks\\User"
-    ],
+    "persist": "Settings",
     "checkver": {
-        "url": "https://raw.githubusercontent.com/EricZimmerman/ericzimmerman.github.io/HEAD/index.md",
-        "regex": "Registry Explorer[^[]+\\[([\\d.]+)[^)]+/(?<path>[^/]+)/RegistryExplorer"
+        "url": "https://raw.githubusercontent.com/EricZimmerman/ericzimmerman.github.io/master/index.md",
+        "regex": "Registry Explorer \\| - &vert; \\[([\\d.]+)\\]"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.ericzimmermanstools.com/$matchPath/RegistryExplorer.zip"
-            }
-        }
+        "url": "https://download.mikestammer.com/net6/RegistryExplorer.zip"
     }
 }

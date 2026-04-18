@@ -1,12 +1,12 @@
 {
-    "version": "1.0.1365",
-    "description": "ServerBox - server status & toolbox",
-    "homepage": "https://serverbox.lpkt.cn/",
-    "license": "AGPL-3.0",
+    "version": "1.0.1070",
+    "description": "A Flutter project which provide charts to display Linux server status and tools to manage server.",
+    "homepage": "https://github.com/lollipopkit/flutter_server_box",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1365/ServerBox_v1.0.1365_windows_amd64.zip",
-            "hash": "1b64ae613de1abd04b37364f6df6a0f57b0c7dcb460902ef4d26f135cf9edad0"
+            "url": "https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1070/ServerBox_1070_windows_amd64.zip",
+            "hash": "95288c6764acaef5e2f636599e863c96f2107513d99f9124d17d3ba44ef1a0e2"
         }
     },
     "shortcuts": [
@@ -15,10 +15,13 @@
             "ServerBox"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/lollipopkit/flutter_server_box"
-    },
+    "notes": "ServerBox is NOT portable.",
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/lollipopkit/flutter_server_box/releases/download/v$version/ServerBox_v$version_windows_amd64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lollipopkit/flutter_server_box/releases/download/v$version/ServerBox_$patchVersion_windows_amd64.zip"
+            }
+        }
     }
 }

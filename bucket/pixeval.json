@@ -1,20 +1,20 @@
 {
-    "version": "4.3.18",
+    "version": "4.2.2",
     "description": "Wow. Yet another Pixiv client!",
     "homepage": "https://github.com/Pixeval/Pixeval",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_x64.msix#/dl.7z",
-            "hash": "4f96e0f06e3eea1e3911be116735c09c03dc7e8de2df71fe77b2e35d5d7d752f"
+            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.2.2/Pixeval_4.2.2.0_x64.msix#/dl.7z",
+            "hash": "a722aec0cc8f1ba0a98c1ae7711058d5a46fe561b3448f5cd92cd1c1253efb3c"
         },
         "32bit": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_x86.msix#/dl.7z",
-            "hash": "d90e65c88e2b422093463f00761630421c08cb7101471b0641ba1ddb5d7c63c4"
+            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.2.2/Pixeval_4.2.2.0_x86.msix#/dl.7z",
+            "hash": "4f507e54811994c34e484831ee68e82ec9041754ae8a2a4987dbdf65310cbe0b"
         },
         "arm64": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_arm64.msix#/dl.7z",
-            "hash": "7b53015289d4337fd199ce42cde7e2391471a9c038cde7e2be656bd8a20f318c"
+            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.2.2/Pixeval_4.2.2.0_arm64.msix#/dl.7z",
+            "hash": "f8e7af5afb410a64058e3d1716697a9689f3df5aeab6d45bec7a3daa5849b9ff"
         }
     },
     "bin": "Pixeval.exe",

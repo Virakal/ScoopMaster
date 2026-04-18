@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "71b76a7d446df41e46c8004021d3c4fdd77fe81fbcbb3a874fe8a03aa7d42331",
-            "url": "https://github.com/sileshn/EndeavourOSWSL2/releases/download/20260404/EndeavourOSWSL2.zip"
+            "hash": "ce9cc3fbf5d88765b64cc3e2e5befb6b1d178b48aded95e5d063da533298c217",
+            "url": "https://github.com/sileshn/EndeavourOSWSL2/releases/download/20240901/EndeavourOSWSL2.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Endeavour.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20260404"
+    "version": "20240901"
 }

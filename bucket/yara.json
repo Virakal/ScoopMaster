@@ -1,15 +1,12 @@
 {
-    "version": "4.5.5",
+    "version": "4.5.2-2326",
     "description": "A malware samples pattern matching tool.",
     "homepage": "https://virustotal.github.io/yara/",
     "license": "BSD-3-Clause",
-    "suggest": {
-        "vcredist": "extras/vcredist"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/VirusTotal/yara/releases/download/v4.5.5/yara-4.5.5-2368-win64.zip",
-            "hash": "352396c8a3d9b31b157a4820abd3b9347fc934a2314cdda8a4f566a5570163e4",
+            "url": "https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win64.zip",
+            "hash": "9f934cc4c5de653324a5714736077f57667a06009bee7984d960634ae0662dc6",
             "bin": [
                 [
                     "yara64.exe",
@@ -22,8 +19,8 @@
             ]
         },
         "32bit": {
-            "url": "https://github.com/VirusTotal/yara/releases/download/v4.5.5/yara-4.5.5-2368-win32.zip",
-            "hash": "2cc0b3388039629653b2ef581ab2553670f021a88c9b0fe1d0e35151317399f3",
+            "url": "https://github.com/VirusTotal/yara/releases/download/v4.5.2/yara-v4.5.2-2326-win32.zip",
+            "hash": "c7a8584133f4438764b8f247489c0c121b16422fd65b76d7a1a754da79fe5f25",
             "bin": [
                 [
                     "yara32.exe",
@@ -38,15 +35,15 @@
     },
     "checkver": {
         "github": "https://github.com/VirusTotal/yara",
-        "regex": "yara-(?<version>\\d+(?:\\.\\d+)+)-(?<build>\\d+)-win(?:32|64)\\.zip"
+        "regex": "yara-v([\\d.-]+)-win64"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/VirusTotal/yara/releases/download/v$version/yara-$version-$matchBuild-win64.zip"
+                "url": "https://github.com/VirusTotal/yara/releases/download/v$matchHead/yara-v$version-win64.zip"
             },
             "32bit": {
-                "url": "https://github.com/VirusTotal/yara/releases/download/v$version/yara-$version-$matchBuild-win32.zip"
+                "url": "https://github.com/VirusTotal/yara/releases/download/v$matchHead/yara-v$version-win32.zip"
             }
         }
     }

@@ -1,15 +1,15 @@
 {
     "homepage": "http://www.bookxnote.com/",
     "license": "Proprietary",
-    "version": "3.0.0.2023",
+    "version": "2.0.0.1124",
     "architecture": {
         "64bit": {
-            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x64-3.0.0.2023-20251124.zip",
-            "hash": "894af376f698048f559b96d6a082cde830a580c5ffa95588c4ecf0da16cfce5a"
+            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x64-2.0.0.1124-20240619.zip",
+            "hash": "68269d71e812455cba35c2eb24eb631dd716a621094dd80115e89a21566ac33d"
         },
         "32bit": {
-            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x86-3.0.0.2023-20251124.zip",
-            "hash": "f2626a5181562aaf7fdde9d2e08dc6f0311e2de24adac8078ba18879052dbfb8"
+            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x86-2.0.0.1124-20240619.zip",
+            "hash": "49af48ceb410aaf0f2a3444b2c895d8ded636de759609fb8d3643b0adf61ef4d"
         }
     },
     "installer": {

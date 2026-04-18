@@ -1,5 +1,5 @@
 {
-    "version": "1.59",
+    "version": "1.34",
     "description": "show the key and heatmap that pressed by keyboard or mouse",
     "homepage": "https://github.com/pattazl/showKeyBoard",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pattazl/showKeyBoard/releases/download/1.59/ShowKeyBoard_Setup_v1.59_260415.node.exe#/dl.7z",
-            "hash": "49a2a1541bd60871b64a2fbf71df56fda7a8d15c56004057e66458a8be74be5e"
+            "url": "https://github.com/pattazl/showKeyBoard/releases/download/1.34/ShowKeyBoard_Setup_v1.34_240331.node.exe#/dl.7z",
+            "hash": "bce529d18903416046f8a26016b0c383c1ab91a8fec0c08c71b85d99be6f709a"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\" -Force -Recurse",

@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Hasklig' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hasklig.tar.xz",
-    "hash": "e82418895a7036158baf9a425faea7de1fe332267b218341eec44c6b5071d1ad",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hasklig.tar.xz",
+    "hash": "4fb0ff16a5e587e65f59e55d08283729de700f0c0bf682ec1bef18ab51264ada",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

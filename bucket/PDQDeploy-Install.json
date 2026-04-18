@@ -1,13 +1,13 @@
 {
-    "version": "19.7.6.0",
+    "version": "19.3.611.0",
     "description": "PDQ Deploy. Update third-party software, deploy custom scripts, and make impactful configuration changes in minutes.",
     "homepage": "https://www.pdq.com/pdq-deploy/",
     "license": "Proprietary",
     "changelog": "https://www.pdq.com/releases/",
     "architecture": {
         "64bit": {
-            "url": "https://services.pdq.com/download/deploy-inventory/Deploy_19.7.6.0.exe#/setup.exe",
-            "hash": "ed0c2eee348278a92f47c4fe4c08ef51044727269ff27a77b903a38a82e2c8b1"
+            "url": "https://download.pdq.com/release/19/Deploy_19.3.611.0.exe#/setup.exe",
+            "hash": "21aba730ebcbab54d67bf1140a15eeb4d3468bb56a2144d68a6bf8f257379cb5"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -39,7 +39,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://services.pdq.com/download/deploy-inventory/Deploy_$version.exe#/setup.exe"
+                "url": "https://download.pdq.com/release/$majorVersion/Deploy_$version.exe#/setup.exe"
             }
         }
     }

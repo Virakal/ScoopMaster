@@ -1,18 +1,18 @@
 {
-    "version": "424",
+    "version": "408",
     "architecture": {
         "64bit": {
-            "url": "https://code73.mydns.jp/a_ogawa/osqledit/osqledit_64_10424.zip",
-            "hash": "19ba03db688dad02320a7987f58047d9f3e6fa7cfe1de28e7529137c12b8fb04",
+            "url": "http://www.hi-ho.ne.jp/a_ogawa/osqledit/osqledit_64_10408.zip",
+            "hash": "c15ef00959c40a36d42411c2083a22b0248f39e13fa6301d761517733cb5e479",
             "extract_dir": "osqledit_10_64"
         },
         "32bit": {
-            "url": "https://code73.mydns.jp/a_ogawa/osqledit/osqledit_32_10424.zip",
-            "hash": "1b80b34d57eec57870607f848c354319bff9b238125f9b19a07de56db4012aea",
+            "url": "http://www.hi-ho.ne.jp/a_ogawa/osqledit/osqledit_32_10408.zip",
+            "hash": "6630bdb904fdcad84b168a96cb0c74c0e19b5c74013af53de637b73e71f01c81",
             "extract_dir": "osqledit_10_32"
         }
     },
-    "homepage": "https://code73.mydns.jp/a_ogawa/osqledit/index.htm",
+    "homepage": "http://www.hi-ho.ne.jp/a_ogawa/osqledit/",
     "bin": "osqledit.exe",
     "pre_install": [
         "if((Test-Path(\"$env:TEMP\\__scoop__preserved\"))) { Write-Output \"[pre_install] Removing temporary preserved folder\"; Remove-Item \"$env:TEMP\\__scoop__preserved\" -Recurse -Force }",
@@ -50,10 +50,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://code73.mydns.jp/a_ogawa/osqledit/osqledit_64_10$version.zip"
+                "url": "http://www.hi-ho.ne.jp/a_ogawa/osqledit/osqledit_64_10$version.zip"
             },
             "32bit": {
-                "url": "https://code73.mydns.jp/a_ogawa/osqledit/osqledit_32_10$version.zip"
+                "url": "http://www.hi-ho.ne.jp/a_ogawa/osqledit/osqledit_32_10$version.zip"
             }
         }
     }

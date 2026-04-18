@@ -1,21 +1,14 @@
 {
-    "version": "4.0.1",
-    "description": "Clone a git repository into a standard location organised by domain and path.",
     "homepage": "https://github.com/wezm/git-grab",
-    "license": "Apache-2.0,MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/wezm/git-grab/releases/download/4.0.1/git-grab-4.0.1-x86_64-pc-windows-msvc.zip",
-            "hash": "a44c99d218a32234f1ec727e0aaa04b7e76f35ef6cb2b582243d08cf51a15d03"
-        }
-    },
+    "version": "3.0.0",
+    "license": "Apache-2.0",
+    "url": "https://releases.wezm.net/git-grab/3.0.0/git-grab-3.0.0-x86_64-pc-windows-msvc.zip",
+    "hash": "f801cb8a1e8e6c5962a8a6271d95e6e87932be593fd162d3b4005c868ee6e609",
     "bin": "git-grab.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/wezm/git-grab"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/wezm/git-grab/releases/download/$version/git-grab-$version-x86_64-pc-windows-msvc.zip"
-            }
-        }
+        "url": "https://releases.wezm.net/git-grab/$version/git-grab-$version-x86_64-pc-windows-msvc.zip"
     }
 }

@@ -1,54 +1,54 @@
 {
-  "version": "150.0b10",
-  "description": "Beta builds of Firefox: the popular open source web browser.",
-  "homepage": "https://www.mozilla.org/zh-CN/firefox/beta/",
-  "license": "MPL-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/150.0b10/win64/zh-CN/Firefox%20Setup%20150.0b10.exe#/firefox-beta.7z",
-      "hash": "sha512:a8baf38cc1d63d8fe6a30baf440cd5b5f77043382c57a83c687f19ccf5d1241a3b1ce8c25ab0cacd66600dd876c13f3bb140a59ce609697b04025cdb22d5f264"
-    },
-    "32bit": {
-      "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/150.0b10/win32/zh-CN/Firefox%20Setup%20150.0b10.exe#/firefox-beta.7z",
-      "hash": "sha512:fb7c4b9b4fb80c54c29f47528a43493be9bbc1fc68675150ab453b9198a7a41a0f0e882cdbb0a4f2ab5ef1fa161a6a522598cf93434a4e73fd68d911a9f53760"
-    }
-  },
-  "extract_dir": "core",
-  "bin": [
-    [
-      "firefox.exe",
-      "firefox-beta"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "firefox.exe",
-      "Firefox Beta"
-    ]
-  ],
-  "persist": "profile-portable",
-  "checkver": {
-    "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/en-US/beta/_/_/_/_/update.xml",
-    "xpath": "/updates/update/patch/@URL",
-    "regex": "firefox-([\\db.]+)-"
-  },
-  "autoupdate": {
+    "version": "131.0b7",
+    "description": "Beta builds of Firefox: the popular open source web browser.",
+    "homepage": "https://www.mozilla.org/zh-CN/firefox/beta/",
+    "license": "MPL-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/firefox-beta.7z",
-        "hash": {
-          "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/SHA512SUMS",
-          "regex": "$sha512\\s+win64/zh-CN/$basename"
+        "64bit": {
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/131.0b7/win64/zh-CN/Firefox%20Setup%20131.0b7.exe#/firefox-beta.7z",
+            "hash": "sha512:09263012bdf50071746a0aee7f9be0dbced9ef6cc71e9eefe9ec089cfcb8cf6a8d4882849f1ccfc22aee7a60d2b698be54bb57b4e3db502d695151269d89cd99"
+        },
+        "32bit": {
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/131.0b7/win32/zh-CN/Firefox%20Setup%20131.0b7.exe#/firefox-beta.7z",
+            "hash": "sha512:587ab15ebb24afe05d54d30917678671d43b27d1f4a856186e164b02ed4e41ff2901b53b32bc60ee92db3d07fb19947a1ff4f1243c4d191628ac93338ba77571"
         }
-      },
-      "32bit": {
-        "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/firefox-beta.7z",
-        "hash": {
-          "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/SHA512SUMS",
-          "regex": "$sha512\\s+win32/zh-CN/$basename"
+    },
+    "extract_dir": "core",
+    "bin": [
+        [
+            "firefox.exe",
+            "firefox-beta"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "firefox.exe",
+            "Firefox Beta"
+        ]
+    ],
+    "persist": "profile-portable",
+    "checkver": {
+        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/en-US/beta/_/_/_/_/update.xml",
+        "xpath": "/updates/update/patch/@URL",
+        "regex": "firefox-([\\db.]+)-"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/firefox-beta.7z",
+                "hash": {
+                    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win64/zh-CN/$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/firefox-beta.7z",
+                "hash": {
+                    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win32/zh-CN/$basename"
+                }
+            }
         }
-      }
-    }
-  },
-  "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox-beta -P` and create by selecting the portable profile directory."
+    },
+    "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox-beta -P` and create by selecting the portable profile directory."
 }

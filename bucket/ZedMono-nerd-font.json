@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'ZedMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/ZedMono.tar.xz",
-    "hash": "7dfff6bb0e45143c33703c3fdf3ff77b00f3617fef29671c7ff6af166dcf31a0",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/ZedMono.tar.xz",
+    "hash": "2df9c9e54e5a2bc19c2ffd1df7ee283e02ba2e9a5fda1067b4884375ae4b0b7a",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,5 +1,5 @@
 {
-    "version": "7.13",
+    "version": "6.02",
     "description": "Powerful archive manager",
     "homepage": "https://rarlab.com/",
     "license": {
@@ -9,16 +9,15 @@
     "notes": "Set up context menu within settings window.",
     "architecture": {
         "64bit": {
-            "url": "https://www.win-rar.com/fileadmin/winrar-versions/partners/hua/winrar-x64-713sc.exe#/dl.7z",
-            "hash": "87b6de896ffab21cd054878cba64b651c85fc7562ceed8c8d039981f24897327"
+            "url": "https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20210616/wrr/winrar-x64-602sc.exe#/dl.7z",
+            "hash": "8c93718c17e5b35040ee93b0dbc1549fc016f0786be6dbebe88265e7beba9207"
         },
         "32bit": {
-            "url": "https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe#/dl.7z",
-            "hash": "8a14b6d6c32aec52bef81cf597bd0768582fe9ecfc93b85f91ab6c41c7efb6c2"
+            "url": "https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20210616/wrr/winrar602sc.exe#/dl.7z",
+            "hash": "6cd558c0986412043fcd79be308a1262b152f66d0a921c5147e80603af2800a3"
         }
     },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\rarreg.key\")) { \"RAR registration data
+    "pre_install": "if (!(Test-Path \"$persist_dir\\rarreg.key\")) { \"RAR registration data
 WinRAR
 Unlimited Company License
 UID=4b914fb772c8376bf571
@@ -29,8 +28,6 @@ b41bcf56929486b8bcdac33d50ecf773996052598f1f556defffbd
 982fbe71e93df6b6346c37a3890f3c7edc65d7f5455470d13d1190
 6e6fb824bcf25f155547b5fc41901ad58c0992f570be1cf5608ba9
 aef69d48c864bcd72d15163897773d314187f6a9af350808719796\"| Out-File \"$dir\\rarreg.key\" }",
-        "if (!(Test-Path \"$persist_dir\\WinRar.ini\")) { New-Item \"$dir\\WinRar.ini\" | Out-Null }"
-    ],
     "bin": [
         "Rar.exe",
         "UnRAR.exe",
@@ -42,19 +39,15 @@ aef69d48c864bcd72d15163897773d314187f6a9af350808719796\"| Out-File \"$dir\\rarre
             "WinRAR"
         ]
     ],
-    "persist": [
-        "rarreg.key",
-        "WinRar.ini",
-        "Themes"
-    ],
+    "persist": "rarreg.key",
     "checkver": "WinRAR and RAR ([\\d.]+) release",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.win-rar.com/fileadmin/winrar-versions/partners/hua/winrar-x64-$cleanVersionsc.exe#/dl.7z"
+                "url": "https://www.rarlab.com/rar/winrar-x64-$cleanVersion.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://www.win-rar.com/fileadmin/winrar-versions/sc/sc20240528/wrr/winrar-x32-701sc.exe#/dl.7z"
+                "url": "https://www.rarlab.com/rar/wrar$cleanVersion.exe#/dl.7z"
             }
         }
     }

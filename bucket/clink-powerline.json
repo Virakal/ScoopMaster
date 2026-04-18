@@ -1,37 +1,13 @@
 {
-    "version": "1.0.3",
-    "description": "An extendable powerline plugin for clink",
-    "homepage": "https://github.com/HelloWorld017/clink-powerline",
-    "license": "unknown",
-    "suggest": {
-        "Clink": "clink"
-    },
-    "url": "https://github.com/HelloWorld017/clink-powerline/archive/1.0.3.zip",
-    "hash": "66aae9215a76eece2c32e0d81667524b6a2c00aa87a12f47e54328e238d0cb9c",
-    "installer": {
-        "script": [
-            "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
-            "if (Get-Command clink -ErrorAction SilentlyContinue) {",
-            "   clink installscripts \"$luapath\"",
-            "} elseif ($Env:CMDER_ROOT) {",
-            "   & \"$Env:CMDER_ROOT\\vendor\\clink\\clink.bat\" installscripts \"$luapath\"",
-            "} else {",
-            "   warn 'Clink or Cmder installation not found. Please manually install these scripts.'",
-            "}"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
-            "if (Get-Command clink -ErrorAction SilentlyContinue) {",
-            "   clink uninstallscripts \"$luapath\"",
-            "} elseif ($Env:CMDER_ROOT) {",
-            "   & \"$Env:CMDER_ROOT\\vendor\\clink\\clink.bat\" uninstallscripts \"$luapath\"",
-            "}"
-        ]
-    },
+    "homepage": "https://github.com/rashil2000/clink-powerline",
+    "version": "0.5.1",
+    "license": "",
+    "url": "https://github.com/rashil2000/clink-powerline/archive/0.5.1.zip",
+    "hash": "c1b205ddf34a14bcd5c88b2484c4370a03f14435d6a5fbe85f84b6d34a980e82",
+    "extract_dir": "clink-powerline-0.5.1",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/HelloWorld017/clink-powerline/archive/$version.zip"
+        "url": "https://github.com/rashil2000/clink-powerline/archive/$version.zip",
+        "extract_dir": "clink-powerline-$version"
     }
 }

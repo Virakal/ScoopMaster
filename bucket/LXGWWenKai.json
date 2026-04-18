@@ -1,17 +1,17 @@
 {
-    "version": "1.522",
+    "version": "1.330",
     "description": "An open-source Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源中文字体。",
     "homepage": "https://github.com/lxgw/LxgwWenKai",
     "license": "OFL-1.1",
     "url": [
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.522/LXGWWenKai-Light.ttf",
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.522/LXGWWenKai-Regular.ttf",
-        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.522/LXGWWenKai-Medium.ttf"
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Bold.ttf",
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Light.ttf",
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Regular.ttf"
     ],
     "hash": [
-        "526ec70cbb0118e871d481f8179e03ff045f0e4d72d080dcca87950c4ab27cca",
-        "39ad71264b588165b469e35e6afb162a378dacd1f95348160240ba9038ac3009",
-        "d4bdeb38a39151d74d084cba5090f8cb7d20bf83eedb78c35939ae70b9f4e3f6"
+        "7a356605eb36c92e29cc64090e2856e4675694572a2ae4da84adbadffecae907",
+        "e19a02b60b146acf3de631775e8d92b940c16fb7def234cb657671147259cc7b",
+        "0819604ad9357afbc6e7cc097328a16ed85143ee0848ffda09fda35a30da6506"
     ],
     "installer": {
         "script": [
@@ -96,9 +96,9 @@
     "checkver": "github",
     "autoupdate": {
         "url": [
+            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKai-Bold.ttf",
             "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKai-Light.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKai-Regular.ttf",
-            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKai-Medium.ttf"
+            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKai-Regular.ttf"
         ]
     }
 }

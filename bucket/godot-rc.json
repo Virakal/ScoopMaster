@@ -1,32 +1,23 @@
 {
-    "version": "4.6.2-rc2",
+    "version": "4.3-rc3",
     "description": "A feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.",
     "homepage": "https://godotengine.org/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/godotengine/godot-builds/releases/download/4.6.2-rc2/Godot_v4.6.2-rc2_win64.exe.zip",
-            "hash": "sha512:3b155026b51dd57cd03449fc649e4e85833065f98e275d2a1a053b016aae060d230c3bbab338c947bc3888166d94bc94f89e68bf71515819ec1b68ae7f9c4b00"
+            "url": "https://downloads.tuxfamily.org/godotengine/4.3/rc3/Godot_v4.3-rc3_win64.exe.zip",
+            "hash": "sha512:bfd90728d9730273c3b236a92901ceb413bfb790342cace9892e75a3fc1fe93ec6b3a6eea6e02500af4f1177ec6d6bf0a9512213e3db72eb93c04ec6e6387bf6"
         },
         "32bit": {
-            "url": "https://github.com/godotengine/godot-builds/releases/download/4.6.2-rc2/Godot_v4.6.2-rc2_win32.exe.zip",
-            "hash": "sha512:0647603566acf38b7e97071e2c279414b8a8a5ae579583bba09fc5c10d98baa5f77e00cd8c1ca18031b4651b80f36f62febb3af8f98dc33137349b1f1dcd16f5"
-        },
-        "arm64": {
-            "url": "https://github.com/godotengine/godot-builds/releases/download/4.6.2-rc2/Godot_v4.6.2-rc2_windows_arm64.exe.zip",
-            "hash": "sha512:edaa6fd64c2ffef78915d49cf005a5910734c666fff2f9583e31ec678910dfe42f896a987860190c856607c32ff4f9605c1be23166fe591014c73d9a479cdb5b"
+            "url": "https://downloads.tuxfamily.org/godotengine/4.3/rc3/Godot_v4.3-rc3_win32.exe.zip",
+            "hash": "sha512:1b5c3b68adfbe37e24e1696b6de14c983454a3efef11f44082ccad7d0f5c8d2817f41ba1d55f7cb3dd5bfc15809f7705b493f4a84c3c6385afed2a3c545af2e0"
         }
     },
     "pre_install": [
-        "Get-Item \"$dir\\Godot_*_console.exe\" | Rename-Item -NewName 'godot.console.exe'",
+        "Remove-Item \"$dir\\Godot_*_console.*\"",
         "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot.exe'"
     ],
-    "bin": [
-        [
-            "godot.console.exe",
-            "godot"
-        ]
-    ],
+    "bin": "godot.exe",
     "shortcuts": [
         [
             "godot.exe",
@@ -34,19 +25,17 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/godotengine/godot-builds/tags",
-        "jsonpath": "$[?(@.name =~ /^[\\d.]+-rc\\d+$/)].name"
+        "url": "https://godotengine.org/blog/pre-release/",
+        "regex": "Release candidate: Godot (?<ver>[\\d.]+) RC (?<rc>[\\d.]+)",
+        "replace": "${1}-rc${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_win64.exe.zip"
+                "url": "https://downloads.tuxfamily.org/godotengine/$matchVer/rc$matchRc/Godot_v$version_win64.exe.zip"
             },
             "32bit": {
-                "url": "https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_win32.exe.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_windows_arm64.exe.zip"
+                "url": "https://downloads.tuxfamily.org/godotengine/$matchVer/rc$matchRc/Godot_v$version_win32.exe.zip"
             }
         },
         "hash": {
