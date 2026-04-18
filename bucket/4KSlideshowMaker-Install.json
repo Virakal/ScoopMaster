@@ -1,5 +1,5 @@
 {
-    "version": "2.0.1.1055",
+    "version": "2.0.1",
     "description": "4K Slideshow Maker. Create impressive slideshows, save your memories.",
     "homepage": "https://www.4kdownload.com/products/product-slideshowmaker",
     "notes": "This manifest only installs and updates 4K Slideshow Maker",
@@ -51,8 +51,8 @@
         "if (Test-Path \"$CommonDesktopDirectory\\4K Slideshow Maker.lnk\") {Remove-Item \"$CommonDesktopDirectory\\4K Slideshow Maker.lnk\" -Force}"
     ],
     "checkver": {
-        "url": "https://www.4kdownload.com/products/product-slideshowmaker",
-        "regex": "\"slideshowmaker_([\\d.]+)"
+        "url": "https://www.4kdownload.com/downloads/34#",
+        "regex": "4kslideshowmaker_([\\d.]+)_x64.msi"
     },
     "autoupdate": {
         "architecture": {

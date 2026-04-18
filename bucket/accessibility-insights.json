@@ -5,9 +5,9 @@
         "identifier": "MIT",
         "url": "https://github.com/microsoft/accessibility-insights-windows/blob/main/license.txt"
     },
-    "url": "https://github.com/microsoft/accessibility-insights-windows/releases/download/v1.1.2703.01/AccessibilityInsights.msi",
-    "version": "1.1.2703.01",
-    "hash": "5be1a82a85d0690ad1f1d20738249cc0c3dd51215691988517265a5bdc6d6be9",
+    "url": "https://github.com/microsoft/accessibility-insights-windows/releases/download/v1.1.2924.01/AccessibilityInsights.msi",
+    "version": "1.1.2924.01",
+    "hash": "bf4de9ac631bdac8a6cd5f5e7963bc6f9c1bc6261371ae7cd7170531ca6ba9a5",
     "pre_install": [
         "Move-Item \"$dir\\PFiles\\AccessibilityInsights\\1.*\\*\" \"$dir\" -Force",
         "Remove-Item \"$dir\\PFiles\" -Recurse -Force"

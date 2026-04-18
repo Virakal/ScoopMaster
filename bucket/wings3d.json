@@ -1,5 +1,5 @@
 {
-    "version": "2.3",
+    "version": "2.4.1",
     "description": "Wings3D is an advanced sub-division 3D modeller.",
     "homepage": "http://www.wings3d.com",
     "license": "BSD-3-Clause",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/projects/wings/wings/2.3/wings-x64-2.3.exe#/dl.7z",
-            "hash": "sha1:b63fd0646437cb7a6c3e9ab6f4401a49fc669b05"
+            "url": "https://downloads.sourceforge.net/projects/wings/wings/2.4.1/wings-x64-2.4.1.exe#/dl.7z",
+            "hash": "sha1:1fdbcbe667df4f65e4c5faeab48564762ac43d49"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/projects/wings/wings/2.3/wings-2.3.exe#/dl.7z",
-            "hash": "sha1:5b9290a43d1c88cbd65e07f992ca4d79e092680a"
+            "url": "https://downloads.sourceforge.net/projects/wings/wings/2.4.1/wings-2.4.1.exe#/dl.7z",
+            "hash": "sha1:5c09739e26d1c745110817b44dfe30795ed83314"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Unins*\", \"$dir\\vcredist_*\" -Force -Recurse",

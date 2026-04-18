@@ -2,15 +2,15 @@
     "homepage": "http://softwareok.com/?seite=Microsoft/DesktopOK",
     "description": "Save and restore the positions of the Windows Desktop Icons and many helpful Windows Desktop-Tools",
     "license": "freeware",
-    "version": "11.41",
+    "version": "12.46",
     "architecture": {
         "64bit": {
             "url": "http://softwareok.com/Download/DesktopOK_x64.zip",
-            "hash": "d3adb8e4a5be1393e09d7f23a7f69caca0ca91e3665b15dee994e20ad9458f62"
+            "hash": "c69a89578a59eab7960853c735064f9cabd2f562a03c78c373cff42fecad0faa"
         },
         "32bit": {
             "url": "http://softwareok.com/Download/DesktopOK_Unicode.zip",
-            "hash": "740a01850352d6cc6cd37d16135279d668d9dac2a1187722ea064091b9d7f6a1"
+            "hash": "95f1aea7e6006429ad5a339a7cd7a8184d4e75c0e82b75b44de931c0c3ca9276"
         }
     },
     "pre_install": [

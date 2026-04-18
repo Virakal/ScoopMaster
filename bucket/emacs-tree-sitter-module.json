@@ -1,23 +1,26 @@
 {
-    "homepage": "https://github.com/iquiw/emacs-tree-sitter-module-dll",
-    "description": "tree-sitter module DLLs for Emacs",
-    "license": "MIT",
-    "version": "20240912",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/iquiw/emacs-tree-sitter-module-dll/releases/download/20240912/emacs-tree-sitter-module-20240912.zip",
-            "hash": "01a2d384a7e0fb7a489fa3d64e152e6a7378b48a6e885730b811b587c38aeec5"
-        }
-    },
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/iquiw/emacs-tree-sitter-module-dll/releases/download/$version/emacs-tree-sitter-module-$version.zip"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
+  "homepage": "https://github.com/iquiw/emacs-tree-sitter-module",
+  "description": "tree-sitter module libraries for Emacs",
+  "license": "MIT",
+  "version": "20260415",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/iquiw/emacs-tree-sitter-module/releases/download/20260415/emacs-tree-sitter-module-20260415.zip",
+      "hash": "d1122f6d345c77854a95802f5084a2c4f19b00056a863a66c332c7c4658851c5"
     }
+  },
+  "checkver": {
+    "url": "https://github.com/iquiw/emacs-tree-sitter-module/releases",
+    "regex": "/releases/tag/(?:v|V)?([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/iquiw/emacs-tree-sitter-module/releases/download/$version/emacs-tree-sitter-module-$version.zip"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
 }

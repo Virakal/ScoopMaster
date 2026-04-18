@@ -1,5 +1,5 @@
 {
-    "version": "2.0.4",
+    "version": "2.1.1",
     "description": "An automatic subtitle shifter from a video to another based on audio spectrum (AVX2 build)",
     "license": "MIT",
     "suggest": {
@@ -10,9 +10,9 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Thomasyse/BDMatch/releases/download/v2.0.4/BDMatch_v2.0.4_AVX2_appsdk_dotnet.zip",
-            "hash": "f804f9b8f6373f2fe6f526721663fd2955fa2aca4f0118d8554227322b0e6e1f",
-            "extract_dir": "BDMatch_v2.0.4_AVX2_appsdk_dotnet"
+            "url": "https://github.com/Thomasyse/BDMatch/releases/download/v2.1.1/BDMatch_v2.1.1_AVX2_appsdk_dotnet.zip",
+            "hash": "93b8b6aaebb23edf3d69b8834babcbee3268e7a646b5cf121730c65c9792655e",
+            "extract_dir": "win-x64-indep"
         }
     },
     "shortcuts": [
@@ -27,8 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Thomasyse/BDMatch/releases/download/v$version/BDMatch_v$version_AVX2_appsdk_dotnet.zip",
-                "extract_dir": "BDMatch_v$version_AVX2_appsdk_dotnet"
+                "url": "https://github.com/Thomasyse/BDMatch/releases/download/v$version/BDMatch_v$version_AVX2_appsdk_dotnet.zip"
             }
         }
     }

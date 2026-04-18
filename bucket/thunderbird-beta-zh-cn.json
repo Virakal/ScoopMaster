@@ -1,16 +1,16 @@
 {
     "description": "Thunderbird is a free email application that's easy to set up and customize (Beta)",
     "homepage": "https://www.thunderbird.net/zh-CN/",
-    "version": "127.0b1",
+    "version": "140.9.1esr",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/127.0b1/win64/zh-CN/Thunderbird%20Setup%20127.0b1.exe#/dl.7z",
-            "hash": "d93ced20f88feb3340ad28c669da2c1ab45410f6f4d3148472cd0a07d8583984"
+            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/140.9.1esr/win64/zh-CN/Thunderbird%20Setup%20140.9.1esr.exe#/dl.7z",
+            "hash": "cfbba62503fc7b180d2f4698d5dd18e9238b7acc2d41efb7120246c205ee66e8"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/127.0b1/win32/zh-CN/Thunderbird%20Setup%20127.0b1.exe#/dl.7z",
-            "hash": "99b0aa0a9c3d1c760a0a7a68f1e027c049404821059f92b314fc7aaf2fd22c41"
+            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/140.9.1esr/win32/zh-CN/Thunderbird%20Setup%20140.9.1esr.exe#/dl.7z",
+            "hash": "d7385601083bef58bdb1a00cf4a9b14973972c6fe900cc3c27bde6add43bf7c3"
         }
     },
     "extract_dir": "core",

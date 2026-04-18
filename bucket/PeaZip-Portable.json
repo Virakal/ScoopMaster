@@ -1,19 +1,19 @@
 {
-    "version": "9.3.0",
+    "version": "11.0.0",
     "description": "PeaZip. A free file archiver utility, based on Open Source technologies",
     "homepage": "https://peazip.github.io/",
     "license": "LGPL-3.0-only",
     "changelog": "https://peazip.github.io/changelog.html",
     "architecture": {
         "64bit": {
-            "url": "https://dotsrc.dl.osdn.net/osdn/peazip/78913/peazip_portable-9.3.0.WIN64.zip",
-            "hash": "7216a157f4521235a29ee91213cb9411a17c6c7a59cde037767b67bcf69289a7",
-            "extract_dir": "peazip_portable-9.3.0.WIN64"
+            "url": "https://github.com/peazip/PeaZip/releases/download/11.0.0/peazip_portable-11.0.0.WIN64.zip",
+            "hash": "4e3ef7bbfc6607bbb08c29ce0178feb7845444c7d019fa6cfea8fc9081c103da",
+            "extract_dir": "peazip_portable-11.0.0.WIN64"
         },
         "32bit": {
-            "url": "https://dotsrc.dl.osdn.net/osdn/peazip/78913/peazip_portable-9.3.0.WINDOWS.zip",
-            "hash": "eb5e778b9b6e2373e1fc52b27bb66dec894069ebd9666e70a24c0ca4855b2e49",
-            "extract_dir": "peazip_portable-9.3.0.WINDOWS"
+            "url": "https://github.com/peazip/PeaZip/releases/download/11.0.0/peazip_portable-11.0.0.WINDOWS.zip",
+            "hash": "72716995cc3df142a0d2cbd9b3ebd3b305984d66e2680345941a30541c781103",
+            "extract_dir": "peazip_portable-11.0.0.WINDOWS"
         }
     },
     "pre_install": [
@@ -41,11 +41,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dotsrc.dl.osdn.net/osdn/peazip/$matchRelease/peazip_portable-$version.WIN64.zip",
+                "url": "https://github.com/peazip/PeaZip/releases/download/$version/peazip_portable-$version.WIN64.zip",
                 "extract_dir": "peazip_portable-$version.WIN64"
             },
             "32bit": {
-                "url": "https://dotsrc.dl.osdn.net/osdn/peazip/$matchRelease/peazip_portable-$version.WINDOWS.zip",
+                "url": "https://github.com/peazip/PeaZip/releases/download/$version/peazip_portable-$version.WINDOWS.zip",
                 "extract_dir": "peazip_portable-$version.WINDOWS"
             }
         },

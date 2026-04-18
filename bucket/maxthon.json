@@ -1,16 +1,16 @@
 {
-    "version": "7.2.2.4600",
+    "version": "7.5.2.6800",
     "description": "A state-of-the-art,multi-platform web browser that offers users a seamless browsing and sharing experience.",
     "homepage": "https://www.maxthon.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x64.zip",
-            "hash": "f8a6668f0dc4fb0476b8bd04bf0bc3680782aa4e0313baf4a1f4cd6fc986360b"
+            "url": "https://pub.mxfast.net/file/mx-pub/inst/win/7.5.2.6800/maxthon_portable_7.5.2.6800_beta_x64.zip",
+            "hash": "e80c1368a548b21b51f8dcf34b0879fb9a5f33aec34faf8ea860e693429eedf0"
         },
         "32bit": {
-            "url": "https://dl.mxfast.com/7.2.2.4600/maxthon_portable_7.2.2.4600_x86.zip",
-            "hash": "64aa756b9e692fe74a9947f9a0b2c5804ad5face7b7f2c17c8cec3403ebfa7fd"
+            "url": "https://pub.mxfast.net/file/mx-pub/inst/win/7.5.2.6800/maxthon_portable_7.5.2.6800_beta_x86.zip",
+            "hash": "16ac6c1ba9cbba8d0b074e257d0d8fee1848f951b0c2a0e61204c43ad7012394"
         }
     },
     "shortcuts": [
@@ -26,15 +26,15 @@
     "persist": "User Data",
     "checkver": {
         "url": "https://api.github.com/repos/maxthon/Maxthon/releases/latest",
-        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64.zip"
+        "regex": "maxthon_portable_([^_]+)(?<suffix>(_[^_]+)?)_x64(?<anothersuffix>(_[^_]+)?).zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x64.zip"
+                "url": "https://pub.mxfast.net/file/mx-pub/inst/win/$version/maxthon_portable_$version$matchSuffix_x64$matchAnothersuffix.zip"
             },
             "32bit": {
-                "url": "https://dl.mxfast.com/$version/maxthon_portable_$version$matchSuffix_x86.zip"
+                "url": "https://pub.mxfast.net/file/mx-pub/inst/win/$version/maxthon_portable_$version$matchSuffix_x86$matchAnothersuffix.zip"
             }
         }
     }

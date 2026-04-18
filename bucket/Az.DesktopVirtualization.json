@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:1e0a4bba70c83fa2d96ab88822009486165d2df163a48095c10ccc5d74a68068c7f831d00097234753ec3585e126be49afc0c91a1c0938b88892c1470f11d1fc",
+    "hash": "sha512:8948ed603c95d678d77edcfb364b1a5a13c006d1aaea63bb9c43350773db51e2a7d8b4da3913ab1157c1b69da36bc7c97671d225416cdbba32553b715b54b9c4",
     "description": "Microsoft Azure PowerShell: DesktopVirtualization cmdlets",
     "psmodule": {
         "name": "Az.DesktopVirtualization"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.DesktopVirtualization/4.3.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.DesktopVirtualization/5.4.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "4.3.1"
+    "version": "5.4.1"
 }

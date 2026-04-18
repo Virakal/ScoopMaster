@@ -1,22 +1,38 @@
 {
-    "homepage": "http://www.rejetto.com/hfs/",
-    "description": "HFS is a free, one single executable file Http File Server software.",
-    "license": "GPL-2.0-only",
-    "version": "2.3m",
-    "url": "http://www.rejetto.com/hfs/hfs.exe",
-    "hash": "e678899d7ea9702184167b56655f91a69f8a0bdc9df65612762252c053c2cd7c",
-    "bin": "hfs.exe",
+    "version": "3.0.10",
+    "description": "A web file server to run on your computer",
+    "homepage": "https://rejetto.com/hfs",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rejetto/hfs/releases/download/v3.0.10/hfs-windows-x64-3.0.10.zip",
+            "hash": "db2439cf96d70a795026e1b859ec823fc31968674d6c90f894c76523838baec5"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.yaml\")) { New-Item \"$dir\\config.yaml\" | Out-Null }",
+    "bin": [
+        [
+            "hfs.exe",
+            "hfs",
+            "--cwd $dir"
+        ]
+    ],
     "shortcuts": [
         [
             "hfs.exe",
-            "HFS"
+            "HFS",
+            "--cwd $dir"
         ]
     ],
+    "persist": [
+        "config.yaml",
+        "logs",
+        "plugins"
+    ],
     "checkver": {
-        "url": "http://www.rejetto.com/hfs/?f=dl",
-        "re": "Latest version: \\<b\\>([\\w\\d.]+)\\<\\/b\\>"
+        "github": "https://github.com/rejetto/hfs"
     },
     "autoupdate": {
-        "url": "http://www.rejetto.com/hfs/hfs.exe"
+        "url": "https://github.com/rejetto/hfs/releases/download/v$version/hfs-windows-x64-$version.zip"
     }
 }

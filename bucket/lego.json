@@ -1,20 +1,20 @@
 {
-    "version": "4.18.0",
+    "version": "4.34.0",
     "description": "Let's Encrypt/ACME client and library written in Go",
     "homepage": "https://github.com/go-acme/lego",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/go-acme/lego/releases/download/v4.18.0/lego_v4.18.0_windows_amd64.zip",
-            "hash": "7e9bd488b39908efaba7092eeb4d1c5b793eb7d1b0d29ef23eff5bcc805dcad2"
+            "url": "https://github.com/go-acme/lego/releases/download/v4.34.0/lego_v4.34.0_windows_amd64.zip",
+            "hash": "d0239fbb0e2d94219087bc5a3245a37099bbcd184f918869924eeaf1d6188eef"
         },
         "32bit": {
-            "url": "https://github.com/go-acme/lego/releases/download/v4.18.0/lego_v4.18.0_windows_386.zip",
-            "hash": "3f7ffbd2756f03719e6e039ce15d2830830d8e85e3ba2fac057412804a8dcbf7"
+            "url": "https://github.com/go-acme/lego/releases/download/v4.34.0/lego_v4.34.0_windows_386.zip",
+            "hash": "4983d7ff86028456a3378f3bbbdc324655434900327b456e6d2d7654fdefe877"
         },
         "arm64": {
-            "url": "https://github.com/go-acme/lego/releases/download/v4.18.0/lego_v4.18.0_windows_arm64.zip",
-            "hash": "2c24f3c2f00423ae036df5dd124e7737f19a4b5f89bc23bc84715c15ca1ba7fe"
+            "url": "https://github.com/go-acme/lego/releases/download/v4.34.0/lego_v4.34.0_windows_arm64.zip",
+            "hash": "e56e3c2e0b29fdfa30c324b278d61a0983e5104d0bf6f469906763fe07a77c5e"
         }
     },
     "bin": "lego.exe",

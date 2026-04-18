@@ -1,9 +1,10 @@
 {
-    "homepage": "https://c.139.com/",
+    "homepage": "https://yun.139.com/",
     "description": "The official client for China Mobile 139 Cloud and 139 Email",
     "license": "Unknown",
-    "version": "nightly",
-    "url": "https://img.zone139.com/m2012/controlupdate/current/mCloud_Setup-002.exe#/mcloud-setup.7z",
+    "version": "v811",
+    "url": "https://yun.mcloud.139.com/mCloudPc/v811/mCloud_Setup-001.exe#/mcloud-setup.7z",
+    "hash": "3D1CE4F830E21489CE5545FDCEF93FEDE25FECD7EC8BB9654CE7FEAAD55E1FCA",
     "installer": {
         "script": [
             "Remove-Item -Force -Recurse \"$dir\\*\" -Exclude \"app.7z\"",
@@ -13,8 +14,15 @@
     },
     "shortcuts": [
         [
-            "139Mail.exe",
-            "和彩云"
+            "mcloud.exe",
+            "移动云盘"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://yun.mcloud.139.com/mCloudPc/v811/mCloud_Setup-001.exe#/mcloud-setup.7z",
+        "regex": "mCloudPc/v(\\d+)/mCloud"
+    },
+    "autoupdate": {
+        "url": "https://yun.mcloud.139.com/mCloudPc/v$version/mCloud_Setup-001.exe#/mcloud-setup.7z"
+    }
 }

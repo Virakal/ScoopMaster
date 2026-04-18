@@ -1,5 +1,5 @@
 {
-    "version": "5.23.31969",
+    "version": "5.23.32027",
     "homepage": "https://aws.amazon.com/chime/",
     "description": "A communications service that lets you meet, chat, and place business calls inside and outside your organization, all using a single application.",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://clients.chime.aws/win-nme/AmazonChime-5.23.31969-full.nupkg",
-            "hash": "sha1:b9e5541683828fab5fddda186343a605a1477226"
+            "url": "https://clients.chime.aws/win-nme/AmazonChime-5.23.32027-full.nupkg",
+            "hash": "sha1:d63ff1a1e67b531fe24c99cb50c4ebb49ca6d7b2"
         }
     },
     "extract_dir": "lib\\net45",

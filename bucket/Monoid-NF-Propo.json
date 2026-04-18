@@ -1,10 +1,10 @@
 {
-    "version": "3.2.1",
+    "version": "3.4.0",
     "description": "Nerd Fonts patched 'Monoid' Font family. (Proportional version, for GUI usecases)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Monoid.zip",
-    "hash": "a1e2d15630018b6921a8a79f585865979b8a3a2d7dd2d7c0e6bceb6f5e99e943",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Monoid.zip",
+    "hash": "9a1bd33d43c784a7954505fd308d0b54869ce963095de841efce501188ea575b",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

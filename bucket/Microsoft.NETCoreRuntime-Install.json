@@ -1,18 +1,18 @@
 {
     "##": "Download URL https://dotnet.microsoft.com/en-us/download/dotnet/7.0",
-    "version": "7.0.15",
+    "version": "10.0.6",
     "description": "Microsoft .NET Core Runtime. The .NET Runtime contains just the components needed to run a console app.",
     "homepage": "https://dotnet.microsoft.com/",
     "license": "Freeware",
     "changelog": "https://github.com/dotnet/core/tree/main/release-notes",
     "architecture": {
         "64bit": {
-            "url": "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.15-windows-x64-installer#/setup.exe",
-            "hash": "6c12fb54a75b08eeb2c52350191bd9155ab4bf83af72f7ca2d3e8dbcedfdbc21"
+            "url": "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.6-windows-x64-installer#/setup.exe",
+            "hash": "c91bfae42f085076a5039ef10e676fb00d42ac001b2afd8b284eca2cda6f239b"
         },
         "32bit": {
-            "url": "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-7.0.15-windows-x86-installer#/setup.exe",
-            "hash": "71ec5a7cb0a0cf06d27677f4609e6624da4863385b6f5e53c5c78b6b71d6c641"
+            "url": "https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-10.0.6-windows-x86-installer#/setup.exe",
+            "hash": "1e2ad733be9a3702401803b9b29ae112bc7a831173374707bdd5993359a6c2d2"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -35,7 +35,7 @@
     },
     "checkver": {
         "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
-        "regex": "(?s)([\\d.]+)[^\\d]*?(?<sdkversion>[\\d.]+)[^\\d]*?(?:current|sts)"
+        "regex": "\"latest-runtime\": \"([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {

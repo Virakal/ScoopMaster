@@ -1,17 +1,57 @@
 {
-    "version": "0.12.0-dev.416+7c733a6",
-    "description": "A Zig language server supporting Zig developers with features like autocomplete and goto definition.",
-    "homepage": "https://install.zigtools.org/",
+    "version": "0.17.0-dev.1+295cedd8",
+    "description": "Zig language LSP server",
+    "homepage": "https://github.com/zigtools/zls",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://zigtools-releases.nyc3.digitaloceanspaces.com/zls/0.12.0-dev.416+7c733a6/x86_64-windows/zls.exe#/zls-dev.exe",
-            "hash": "6B5D6F2074EB0C2BDA91D669E7AC24D4D43AB608EAE05511243314A2D0117978"
+            "url": "https://builds.zigtools.org/zls-x86_64-windows-0.17.0-dev.1+295cedd8.zip",
+            "hash": "77bcccd37464ae48455e057caa9a2f37954439e2c7e776a462025d1557c3fef8"
         },
         "32bit": {
-            "url": "https://zigtools-releases.nyc3.digitaloceanspaces.com/zls/0.12.0-dev.416+7c733a6/x86-windows/zls.exe#/zls-dev.exe",
-            "hash": "37C5F2B3DF3FD86C799C84A7B9F8E5D54C9180A3B3DEA86ACCD7166309AFE5F1"
+            "url": "https://builds.zigtools.org/zls-x86-windows-0.17.0-dev.1+295cedd8.zip",
+            "hash": "39770d8d2ba932561f9f9de0bf72cf926cee33aa57e955e7c1522427740de522"
+        },
+        "arm64": {
+            "url": "https://builds.zigtools.org/zls-aarch64-windows-0.17.0-dev.1+295cedd8.zip",
+            "hash": "338f4baa92c2b72c675063c51430e0a97161e712dd1f3741f471a16b6e0b1428"
         }
     },
-    "bin": "zls-dev.exe"
+    "bin": "zls.exe",
+    "checkver": {
+        "script": [
+            "$zig_version_api = 'https://ziglang.org/download/index.json'",
+            "$zig_version_api_response = Invoke-RestMethod -Uri $zig_version_api",
+            "$zig_version = $zig_version_api_response.master.version.replace('+','%2B')",
+            "$zls_version_api = \"https://releases.zigtools.org/v1/zls/select-version?zig_version=$zig_version&compatibility=only-runtime\"",
+            "$zls_version_api_response = Invoke-RestMethod -Uri $zls_version_api",
+            "$zls_version_api_response.version + ',' + $zig_version"
+        ],
+        "regex": "^(?<version>.*),(?<zig>.*)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://builds.zigtools.org/zls-x86_64-windows-$version.zip",
+                "hash": {
+                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
+                    "jsonpath": "$.x86_64-windows.shasum"
+                }
+            },
+            "32bit": {
+                "url": "https://builds.zigtools.org/zls-x86-windows-$version.zip",
+                "hash": {
+                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
+                    "jsonpath": "$.x86-windows.shasum"
+                }
+            },
+            "arm64": {
+                "url": "https://builds.zigtools.org/zls-aarch64-windows-$version.zip",
+                "hash": {
+                    "url": "https://releases.zigtools.org/v1/zls/select-version?zig_version=$matchZig&compatibility=only-runtime",
+                    "jsonpath": "$.aarch64-windows.shasum"
+                }
+            }
+        }
+    }
 }

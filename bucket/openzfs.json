@@ -1,14 +1,14 @@
 {
-    "version": "2.2.6rc4",
+    "version": "2.4.1rc9",
     "description": "ZFS filesystem driver for Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
     "license": "CDDL",
-    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.2.6rc4/OpenZFSOnWindows-debug-2.2.6rc4.exe",
-    "hash": "22d6158d3b2266cb10b721b8ec60df2314c6101725046277e9c6ab0db4ecfe52",
+    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.1rc9/OpenZFSOnWindows-debug-2.4.1rc9.exe",
+    "hash": "1afcae2b1680e390e611c9e533df3b3d2420cde5c12c9ca0cebbf1bcaeb6ca9c",
     "innosetup": true,
     "pre_install": [
         "if (!$global) { Write-Host -Foreground Red \"$app should be installed globally.\"; break }",
-        "'symbols', 'CODE_OF_CONDUCT.md', 'HowToDebug.txt', 'README,*.md' | ForEach-Object { Remove-Item -Recurse \"$dir/$_\" }"
+        "'symbols', 'CODE_OF_CONDUCT.md', 'HowToDebug.txt', 'README,*.md' | ForEach-Object { \"$dir/$_\" } | Remove-Item -Recurse"
     ],
     "installer": {
         "script": [

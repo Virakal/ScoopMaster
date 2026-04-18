@@ -1,40 +1,44 @@
 {
-    "version": "2.24.9",
-    "description": "BrickLink Studio. Studio is a desktop application that allows users to build LEGO models using virtual parts.",
-    "homepage": "https://www.bricklink.com/v2/build/studio.page",
-    "license": "Unknown",
-    "changelog": "https://www.bricklink.com/v2/build/studio.page",
-    "innosetup": true,
-    "architecture": {
-        "64bit": {
-            "url": "https://s3.amazonaws.com/blstudio/Studio2.0/Studio+2.0.exe#/dl.7z",
-            "hash": "5c9a89d818082bcf3e2f3a4e53c84a8d166aa5ebeeea22c3c5270ace965f9d18"
-        },
-        "32bit": {
-            "url": "https://s3.amazonaws.com/blstudio/Studio2.0/Studio+2.0_32.exe#/dl.7z",
-            "hash": "79195893cb6d8b099d0ceb1da4d2454dc2c02dd7daea151a2e66dce14abe5183"
-        }
+  "version": "2.26.3_1",
+  "description": "BrickLink Studio. Studio is a desktop application that allows users to build LEGO models using virtual parts.",
+  "homepage": "https://www.bricklink.com/v3/studio/download.page",
+  "license": "Unknown",
+  "innosetup": true,
+  "architecture": {
+    "64bit": {
+      "url": "https://studio.download.bricklink.info/Studio2.0/Archive/2.26.3_1/Studio+2.0.exe",
+      "hash": "f81e990910d09888b1710ebcf8264cae2a6327850aa21aac1d357bed48a51eb5"
     },
-    "bin": "Studio.exe",
-    "shortcuts": [
-        [
-            "Studio.exe",
-            "BrickLink Studio"
-        ]
-    ],
-    "checkver": {
-        "url": "https://www.bricklink.com/v2/build/studio.page",
-        "regex": "\"strVersion\":\"([\\d.]+)",
-        "reverse": true
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://s3.amazonaws.com/blstudio/Studio$majorVersion.0/Studio+$majorVersion.0.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://s3.amazonaws.com/blstudio/Studio$majorVersion.0/Studio+$majorVersion.0_32.exe#/dl.7z"
-            }
-        }
+    "32bit": {
+      "url": "https://studio.download.bricklink.info/Studio2.0/Archive/2.26.3_1/Studio+2.0_32.exe",
+      "hash": "74602da392214d7afa0569102d54fb6b687d119a3135c6ae1864048aaf807bf5"
     }
+  },
+  "bin": "Studio.exe",
+  "shortcuts": [
+    [
+      "Studio.exe",
+      "BrickLink Studio"
+    ]
+  ],
+  "checkver": {
+    "script": [
+      "$cont = $(Invoke-WebRequest('https://www.bricklink.com/v3/studio/download.page')).Content",
+      "if(!($cont -match 'blapp\\.models\\.set\\( (.*) \\);')) { continue }",
+      "Write-Output $matches[1]"
+    ],
+    "jsonpath": "$.[?(@.name == 'changeLog')].data[*].strVersion",
+    "regex": "([\\d._]+)",
+    "reverse": true
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://studio.download.bricklink.info/Studio$majorVersion.0/Archive/$version/Studio+$majorVersion.0.exe"
+      },
+      "32bit": {
+        "url": "https://studio.download.bricklink.info/Studio$majorVersion.0/Archive/$version/Studio+$majorVersion.0_32.exe"
+      }
+    }
+  }
 }

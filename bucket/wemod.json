@@ -1,5 +1,5 @@
 {
-    "version": "9.10.0",
+    "version": "12.20.0",
     "description": "Thousands of free mods and trainers for your favorite single-player PC games — all in one place",
     "license": {
         "identifier": "Freeware",
@@ -8,12 +8,12 @@
     "homepage": "https://www.wemod.com",
     "architecture": {
         "64bit": {
-            "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-9.10.0-full.nupkg",
-            "hash": "cab7679dbd2e41cb3f65f9c837549fee0a0785e4fd7f292faa939ce45bb1b420",
+            "url": "https://storage-cdn.wemod.com/app/releases/stable/Wand-12.20.0-full.nupkg",
+            "hash": "4b3ce0596787be63f894444dd2397eed848aa5a7dd38b2c7620adea2e2e3a86a",
             "shortcuts": [
                 [
-                    "WeMod.exe",
-                    "WeMod"
+                    "Wand.exe",
+                    "Wand"
                 ]
             ]
         }
@@ -37,7 +37,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage-cdn.wemod.com/app/releases/stable/WeMod-$version-full.nupkg"
+                "url": "https://storage-cdn.wemod.com/app/releases/stable/Wand-$version-full.nupkg"
             }
         }
     }

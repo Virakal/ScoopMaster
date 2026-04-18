@@ -1,22 +1,29 @@
 {
-    "version": "2.3.2-pro",
+    "version": "2.15.3",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.2-pro/goreleaser-pro_Windows_i386.zip",
+            "url": "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.15.3/goreleaser-pro_Windows_i386.zip",
             "bin": [
                 "goreleaser.exe"
             ],
-            "hash": "0b4e9f4ed94d582211a42fbed436e866029e22d74aa2dcf78acacd2838cadfe1"
+            "hash": "9842f30d2d391afe84fd30a4ac70e8f4765dd36f558bd7dbe4699e80c0fa2eb9"
         },
         "64bit": {
-            "url": "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.3.2-pro/goreleaser-pro_Windows_x86_64.zip",
+            "url": "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.15.3/goreleaser-pro_Windows_x86_64.zip",
             "bin": [
                 "goreleaser.exe"
             ],
-            "hash": "331cee8f705d9b814e780ee67341e69c8d8bbd5e2b0bb6bca511c98991ed6ef2"
+            "hash": "08b76e32fed67c20e27810da4c0ae839ea78c5b217072b2a8907820487b236e1"
+        },
+        "arm64": {
+            "url": "https://github.com/goreleaser/goreleaser-pro/releases/download/v2.15.3/goreleaser-pro_Windows_arm64.zip",
+            "bin": [
+                "goreleaser.exe"
+            ],
+            "hash": "97cdaa3e93cbe36edc4c4d64827395bd23d712229e67cf3498cc08e7cd7990fc"
         }
     },
     "homepage": "https://goreleaser.com",
     "license": "Copyright Becker Software LTDA",
-    "description": "Deliver Go binaries as fast and easily as possible."
+    "description": "Release engineering, simplified."
 }

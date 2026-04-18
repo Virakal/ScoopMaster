@@ -1,19 +1,19 @@
 {
-    "version": "6.0.6.0",
-    "description": "让你的 Windows 电脑成为高效办公平台",
-    "license": "Unknown",
+    "homepage": "https://www.dida365.com/",
+    "version": "8.0.5.0",
+    "description": "Stay Organized, Stay Creative.",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://www.dida365.com/down/getApp/download?type=win64#/dl.exe",
-            "hash": "339ea172272b7462e80844a3c2d45cee7f0e0c3b000ae9dbee399cdf9c647662"
+            "hash": "31eaec949a0c0ef4b4aaebfc92f271fcf8b6cbc8b6268df3048ad5b72e129eaf"
         },
         "32bit": {
             "url": "https://www.dida365.com/down/getApp/download?type=win#/dl.exe",
-            "hash": "f0b7d65f5a64d1d0c1d8420c201ba0cca51d9438fc99ad5f7f88ec82b2a528c2"
+            "hash": "c197001a3c896d1c4c8e1e41aaec5c362ad0853ea54a21d0df4917300ce91fd1"
         }
     },
     "innosetup": true,
-    "homepage": "https://www.dida365.com/",
     "shortcuts": [
         [
             "TickTick.exe",

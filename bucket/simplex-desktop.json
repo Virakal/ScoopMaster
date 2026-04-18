@@ -1,25 +1,25 @@
 {
-    "version": "v6.0.4",
+    "version": "6.4.11",
     "description": "Private and secure chat and applications platform. Desktop GUI app.",
-    "homepage": "https://simplex.chat",
+    "homepage": "https://github.com/simplex-chat/simplex-chat",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/simplex-chat/simplex-chat/releases/download/v6.0.4/simplex-desktop-windows-x86_64.msi",
-            "hash": "b84e4ef9f5124980ef70074e22bbe6fa31b9c11417618129f06c5cd008b09c52"
+            "url": "https://github.com/simplex-chat/simplex-chat/releases/download/v6.4.11/simplex-desktop-windows-x86_64.msi",
+            "hash": "9f64fc03c8f8756805dd25699d7b7ec364259495aa6f4f623035b85163ac9750"
         }
     },
     "shortcuts": [
         [
             "SimpleX\\SimpleX.exe",
-            "SimpleX Desktop"
+            "SimpleX"
         ]
     ],
     "post_install": [
         "if (-not (Test-Path \"$Env:AppData\\SimpleX\\*\")) {",
         "    Remove-Item \"$Env:AppData\\SimpleX\" 2>$null",
         "    if (-not (Test-Path \"$persist_dir\")) {",
-        "        New-Item -ItemType \"directory\" -Path \"$persist_dir\" >$null",
+        "        New-Item -ItemType Directory -Path \"$persist_dir\" >$null",
         "    }",
         "    New-DirectoryJunction \"$Env:AppData\\SimpleX\" \"$persist_dir\" >$null",
         "}"
@@ -28,14 +28,11 @@
         "$SimpleX_data = Get-Item \"$Env:AppData\\SimpleX\"",
         "if (\"$($SimpleX_data.Target)\" -eq \"$persist_dir\") { $SimpleX_data.Delete() }"
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/simplex-chat/simplex-chat/releases/latest",
-        "jsonpath": "$.tag_name"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/simplex-chat/simplex-chat/releases/download/$version/simplex-desktop-windows-x86_64.msi"
+                "url": "https://github.com/simplex-chat/simplex-chat/releases/download/v$version/simplex-desktop-windows-x86_64.msi"
             }
         }
     }

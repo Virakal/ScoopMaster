@@ -1,17 +1,17 @@
 {
-    "version": "3.2.3",
+    "version": "3.4.0",
     "description": "Android Logs Events And Protobuf Parser",
     "homepage": "https://github.com/abrignoni/ALEAPP",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/abrignoni/ALEAPP/releases/download/v3.2.3/aleapp_Windows.exe#/aleapp.exe",
-                "https://github.com/abrignoni/ALEAPP/releases/download/v3.2.3/aleappGUI_Windows.exe#/aleappGUI.exe"
+                "https://github.com/abrignoni/ALEAPP/releases/download/v3.4.0/aleapp-v3.4.0-Windows.zip",
+                "https://github.com/abrignoni/ALEAPP/releases/download/v3.4.0/aleappGUI-v3.4.0-Windows.zip"
             ],
             "hash": [
-                "edba1a7f60c0402305752afc1831fad5ca8c7d44eac9e277adda16cc3ad50bf4",
-                "766f97381a63caec6ad70ee7672d7275ae191e3621259e12ee58e2649fe7e21b"
+                "9133ef3e7d628339c37696037886417b3852777c208e6c47202c68426c951b56",
+                "67e00719a53f74a69dc577fc3266ccc52df3d4afc2cedddcc5d99ca703115582"
             ]
         }
     },
@@ -27,8 +27,8 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/abrignoni/ALEAPP/releases/download/v$version/aleapp_Windows.exe#/aleapp.exe",
-                    "https://github.com/abrignoni/ALEAPP/releases/download/v$version/aleappGUI_Windows.exe#/aleappGUI.exe"
+                    "https://github.com/abrignoni/ALEAPP/releases/download/v$version/aleapp-v$version-Windows.zip",
+                    "https://github.com/abrignoni/ALEAPP/releases/download/v$version/aleappGUI-v$version-Windows.zip"
                 ]
             }
         }

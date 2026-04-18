@@ -1,13 +1,11 @@
 {
-    "version": "31.6.1",
-    "description": "Slender typeface for code, from code. SS07 version (Monaco style).",
-    "homepage": "https://typeof.net/Iosevka/",
+    "version": "34.3.0",
+    "description": "Versatile typeface for code, from code.",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v31.6.1/SuperTTC-IosevkaSS07-31.6.1.zip",
-    "hash": "3c5d988b796e8a875505440734bcc154d80865b4bb39a520a31462821419efb3",
-    "checkver": {
-        "github": "https://github.com/be5invis/Iosevka"
-    },
+    "homepage": "https://github.com/be5invis/Iosevka",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v34.3.0/SuperTTC-IosevkaSS07-34.3.0.zip",
+    "hash": "f4ed91bf5fc8dacd6774a79480c2704c5bc994a02013d30446cf603dca05d61e",
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-IosevkaSS07-$version.zip"
     },
@@ -52,7 +50,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*NerdFont-*' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",

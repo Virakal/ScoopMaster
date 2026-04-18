@@ -14,11 +14,17 @@
         }
     },
     "depends": "winfsp-np-beta",
-    "pre_install":[
-        "$null = Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs",
+    "pre_install": [
+        "Invoke-ExternalCommand msiexec.exe \"/i $([char][byte]34)$dir\\setup.msi_$([char][byte]34) /qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$([char][byte]34)$dir$([char][byte]34)\" -RunAs",
         "$null = if (!(Test-Path \"$persist_dir$($cfg = '/etc/ssh_config')\")) { New-Item \"$dir$cfg\" }"
     ],
-    "post_install": "'', '.k', '.kr', '.r' | ForEach-Object { Set-ItemProperty \"HKLM:/SOFTWARE/WOW6432Node/WinFsp/Services/sshfs$_\" CommandLine \"svc %1 %2 %U -ofollow_symlinks -odirect_io -ocreate_umask=0000 -oThreadCount=$env:NUMBER_OF_PROCESSORS\" }",
+    "post_install": [
+        "'', '.k', '.kr', '.r' | ForEach-Object {",
+        "    $_ = \"HKLM:/SOFTWARE/WOW6432Node/WinFsp/Services/sshfs$_\"",
+        "    Set-ItemProperty $_ CommandLine \"svc %1 %2 %U -ofollow_symlinks -odirect_io -ocreate_umask=0000 -oThreadCount=$env:NUMBER_OF_PROCESSORS\"",
+        "    Set-ItemProperty $_ Recovery 1",
+        "}"
+    ],
     "persist": "etc/ssh_config",
     "bin": [
         "bin/sshfs.exe",
@@ -29,10 +35,10 @@
         "'sshfs*', 'ssh' | ForEach-Object { Stop-Process -Force -Name $_ -ErrorAction SilentlyContinue }"
     ],
     "uninstaller": {
-        "script": "$null = Invoke-ExternalCommand msiexec.exe -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs"
+        "script": "Invoke-ExternalCommand msiexec.exe \"/x $([char][byte]34)$dir\\setup.msi_$([char][byte]34) /qn /norestart\" -RunAs"
     },
     "checkver": {
-        "url": "https://api.github.com/repositories/61451917/releases",
+        "url": "https://api.github.com/repositories/61451917/releases?per_page=1",
         "jsonpath": "$[0].assets[0].browser_download_url",
         "regex": "v(?<tag>[\\w.]+)/sshfs-win-([\\d.]+)-x(?:64|32)\\.msi"
     },

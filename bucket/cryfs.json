@@ -1,19 +1,10 @@
 {
-    "version": "0.11.4",
+    "version": "1.0.3",
     "description": "CryFS encrypts your files, so you can safely store them anywhere.",
     "homepage": "https://www.cryfs.org/",
-    "license": "LGPL-3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/cryfs/cryfs/releases/download/0.11.4/cryfs-0.11.4-win64.msi",
-            "hash": "bbbb28a9ee0745aa784d9c4e63f2beca4363504d2ced1ecd4a2a31f83284ee47"
-        },
-        "32bit": {
-            "url": "https://github.com/cryfs/cryfs/releases/download/0.11.4/cryfs-0.11.4-win32.msi",
-            "hash": "27a78289def796d6d42f6629b334c2720552bcb02c8564aa00374f89430ed85f"
-        }
-    },
-    "extract_dir": "CryFS\\0.11.4\\bin",
+    "url": "https://github.com/cryfs/cryfs/releases/download/1.0.3/cryfs-1.0.3.msi",
+    "hash": "5ee7ff720edab69c82bcc6316199072f494cc0197ada9656975264cd68b14563",
+    "extract_dir": "CryFS\\1.0.3\\bin",
     "bin": [
         "cryfs.exe",
         "cryfs-unmount.exe"
@@ -22,14 +13,7 @@
         "github": "https://github.com/cryfs/cryfs"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/cryfs/cryfs/releases/download/$version/cryfs-$version-win64.msi"
-            },
-            "32bit": {
-                "url": "https://github.com/cryfs/cryfs/releases/download/$version/cryfs-$version-win32.msi"
-            }
-        },
+        "url": "https://github.com/cryfs/cryfs/releases/download/$version/cryfs-$version.msi",
         "extract_dir": "CryFS\\$version\\bin"
     }
 }

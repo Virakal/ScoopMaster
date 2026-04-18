@@ -1,15 +1,15 @@
 {
     "homepage": "https://kurtzimmermann.com/tweakpowerext_en.html",
-    "version": "2.080",
+    "version": "2.088",
     "license": "freeware",
     "architecture": {
         "64bit": {
             "url": "https://kurtzimmermann.com/files/TweakPowerX64.zip",
-            "hash": "31b208dc3365b6ccdc8f124e73f824a549d4d78d4df79d4bc9817cde7f740d9a"
+            "hash": "03d6b6365f7d8e5a9909427d77b8af4195509ab810c3e59ab8f1f0eb5cd6401a"
         },
         "32bit": {
             "url": "https://kurtzimmermann.com/files/TweakPowerX32.zip",
-            "hash": "0445be2e29fa376c5a457cfd9eac2f5755942e00aeb6ee29f4fb11ac47ac8dbd"
+            "hash": "8d724ec7b7f7d961a4218e8fc7ee924566cf91d607ad612879ff18e353d516e6"
         }
     },
     "bin": "TweakPower.exe",

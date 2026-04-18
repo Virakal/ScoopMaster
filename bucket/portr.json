@@ -1,30 +1,30 @@
 {
-    "version": "0.0.20-beta",
+    "version": "1.0.5",
     "description": "A tunnel solution that allows you to expose local http, tcp or websocket connections to the public internet.",
     "homepage": "https://portr.dev/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/amalshaji/portr/releases/download/0.0.20-beta/portr_0.0.20-beta_Windows_x86_64.zip",
-            "hash": "77a46ed5143e25158e02baf119126a8668735daaf83ea80cf8ce29f2d769df3a"
+            "url": "https://github.com/amalshaji/portr/releases/download/v1.0.5/portr_1.0.5_Windows_x86_64.zip",
+            "hash": "3300c41784ffeb4d89e1d8ab4a9db0efc6ba99cd7f33a4803aa7aceeb0d351f6"
         },
         "arm64": {
-            "url": "https://github.com/amalshaji/portr/releases/download/0.0.20-beta/portr_0.0.20-beta_Windows_arm64.zip",
-            "hash": "52e8ba71785de58b266ec1e1bc85841d5200110065e1e2776d0c3c16ef9d4b89"
+            "url": "https://github.com/amalshaji/portr/releases/download/v1.0.5/portr_1.0.5_Windows_arm64.zip",
+            "hash": "0a8d29e554e94bb172278c304b31bbff05fad319bde71543bbde1a105f602072"
         }
     },
     "bin": "portr.exe",
     "checkver": {
-        "url": "https://github.com/amalshaji/portr/releases/latest",
-        "regex": "/portr/tree/(.*?)\""
+        "url": "https://github.com/amalshaji/portr/releases.atom",
+        "regex": "Repository/\\d+/v(.+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/amalshaji/portr/releases/download/$version/portr_$version_Windows_x86_64.zip"
+                "url": "https://github.com/amalshaji/portr/releases/download/v$version/portr_$version_Windows_x86_64.zip"
             },
             "arm64": {
-                "url": "https://github.com/amalshaji/portr/releases/download/$version/portr_$version_Windows_arm64.zip"
+                "url": "https://github.com/amalshaji/portr/releases/download/v$version/portr_$version_Windows_arm64.zip"
             }
         },
         "hash": {

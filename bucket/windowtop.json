@@ -1,13 +1,13 @@
 {
-    "version": "5.23.0",
+    "version": "5.31.7",
     "description": "Set window on top, make it dark, transparent and more",
-    "homepage": "https://github.com/BiGilSoft/WindowTop",
+    "homepage": "https://github.com/WindowTop/WindowTop-App",
     "license": {
         "identifier": "Unknown",
-        "url": "https://github.com/BiGilSoft/WindowTop/blob/master/LICENSE"
+        "url": "https://github.com/WindowTop/WindowTop-App/blob/master/LICENSE"
     },
-    "url": "https://github.com/BiGilSoft/WindowTop/releases/download/v5.23.0/WindowTop.v5.23.0.Portable.zip",
-    "hash": "40544724b62104e761ab235220d4d889c8ff5c6f8d02a096f9dc39aa82642a58",
+    "url": "https://github.com/WindowTop/WindowTop-App/releases/download/5.31/WindowTop.v5.31.7.Portable.zip",
+    "hash": "e59eaea0e163c045a9fdbb6523c6850856224fc6f7a5cffb221d1946d2d5cd6c",
     "shortcuts": [
         [
             "WindowTop.exe",
@@ -15,10 +15,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/BiGilSoft/WindowTop/releases",
-        "regex": "WindowTop v([\\d.]+) Portable"
+        "url": "https://github.com/WindowTop/WindowTop-App/releases",
+        "regex": "href=\"https://(?<url>.*?)\">WindowTop v(?<version>[\\d.]+) Portable"
     },
     "autoupdate": {
-        "url": "https://github.com/BiGilSoft/WindowTop/releases/download/v$matchHead/WindowTop.v$version.Portable.zip"
+        "url": "https://$matchUrl"
     }
 }

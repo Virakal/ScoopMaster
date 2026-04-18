@@ -1,15 +1,20 @@
 {
-    "version": "4.2.3",
+    "version": "4.4.4",
     "description": "A handy utility to make decrypted PS3 disc dumps.",
     "homepage": "https://github.com/13xforever/ps3-disc-dumper",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/13xforever/ps3-disc-dumper/releases/download/v4.2.3/ps3-disc-dumper_windows_v4.2.3.zip",
-            "hash": "70b5f6116e6049d88d284440c13457342bbdc5c408adda26c816e71e33e82531"
+            "url": "https://github.com/13xforever/ps3-disc-dumper/releases/download/v4.4.4/ps3-disc-dumper_windows_v4.4.4.zip",
+            "hash": "dc32c5be777f80cca56f62d5dc519bf35d65210fc9666f4f5249a1765e3c10e1"
         }
     },
-    "bin": "ps3-disc-dumper.exe",
+    "shortcuts": [
+        [
+            "ps3-disc-dumper.exe",
+            "PS3 Disc Dumper"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

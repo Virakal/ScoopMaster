@@ -1,23 +1,23 @@
 {
     "homepage": "https://github.com/mstorsjo/llvm-mingw",
     "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
-    "version": "19.1.0-20240917",
+    "version": "22.1.3-20260407",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-x86_64.zip",
-            "hash": "7e11dfc9c576046dd2eb37187b6f2fd1ace8f2e2259ee6434174262d62ecaee2",
-            "extract_dir": "llvm-mingw-20240917-ucrt-x86_64"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20260407/llvm-mingw-20260407-ucrt-x86_64.zip",
+            "hash": "3fc6e54b5f1102089d4d37095ba49f7b24e22290da78178b514a86b3126c6d9e",
+            "extract_dir": "llvm-mingw-20260407-ucrt-x86_64"
         },
         "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-i686.zip",
-            "hash": "ea45344a082098bb57623a6e1fa9b461a6c51e415770ea696d3527e0c0deb6ec",
-            "extract_dir": "llvm-mingw-20240917-ucrt-i686"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20260407/llvm-mingw-20260407-ucrt-i686.zip",
+            "hash": "0bb3d4f40e6d5aeee04e91f4ab57dfd33ca970a9f76ef5d28b65ef4825a6c17b",
+            "extract_dir": "llvm-mingw-20260407-ucrt-i686"
         },
         "arm64": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-aarch64.zip",
-            "hash": "14d662fc8d7b40f0cfd062ef5f3e8cbbc1b643004d9a20d1eb9b1e212e1782ef",
-            "extract_dir": "llvm-mingw-20240917-ucrt-aarch64"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20260407/llvm-mingw-20260407-ucrt-aarch64.zip",
+            "hash": "0d2839944f1e0538502cb2d2dbf89e344c6a0af2a444a62bb066ca0cfb5ea01c",
+            "extract_dir": "llvm-mingw-20260407-ucrt-aarch64"
         }
     },
     "env_add_path": "bin",

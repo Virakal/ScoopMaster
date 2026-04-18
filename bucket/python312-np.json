@@ -1,16 +1,16 @@
 {
     "##": ":Python 3.12",
-    "version": "3.12.4",
+    "version": "3.12.10",
     "homepage": "https://www.python.org",
     "license": "Python-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe#/py3.exe",
-            "hash": "da5809df5cb05200b3a528a186f39b7d6186376ce051b0a393f1ddf67c995258"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe#/py3.exe",
+            "hash": "67b5635e80ea51072b87941312d00ec8927c4db9ba18938f7ad2d27b328b95fb"
         },
         "32bit": {
-            "url": "https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe#/py3.exe",
-            "hash": "a8b4c07237446364dc8d74288a5e33c04c4554b7be1f8d81100d219f6e9bba10"
+            "url": "https://www.python.org/ftp/python/3.12.10/python-3.12.10.exe#/py3.exe",
+            "hash": "fdfe385b94f5b8785a0226a886979527fd26eb65defdbf29992fd22cc4b0e31e"
         }
     },
     "installer": {
@@ -34,13 +34,13 @@
             "   if ($global) {",
             "       $menuPath = Join-Path $env:ProgramData $menuPath",
             "       $registryPath = Join-Path \"HKLM:\" $registryPath",
-            "       Remove-Item -Recurse -Force -Path \"$env:ProgramFiles\\Python311\" -ErrorAction Ignore",
+            "       Remove-Item -Recurse -Force -Path \"$env:ProgramFiles\\Python312\" -ErrorAction Ignore",
             "   } else {",
             "       $menuPath = Join-Path $env:APPDATA $menuPath",
             "       $registryPath = Join-Path \"HKCU:\" $registryPath",
             "   }",
             "   Remove-Item -Recurse -Force -Path $menuPath, $registryPath",
-            "   Remove-Item -Recurse -Force -Path \"$env:APPDATA\\Python\\Python311\" -ErrorAction Ignore",
+            "   Remove-Item -Recurse -Force -Path \"$env:APPDATA\\Python\\Python312\" -ErrorAction Ignore",
             "}"
         ]
     },

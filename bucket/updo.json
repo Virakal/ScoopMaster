@@ -1,20 +1,16 @@
 {
-    "version": "0.1.2",
+    "version": "0.4.6",
     "description": "Uptime monitoring CLI tool with alerting and advanced settings",
     "homepage": "https://github.com/Owloops/updo",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Owloops/updo/releases/download/v0.1.2/updo_Windows_x86_64.zip",
-            "hash": "c97a46c4e05fbee55aeb89752535cb275feed9f287a0a11f9cedb4f589b7adb4"
-        },
-        "32bit": {
-            "url": "https://github.com/Owloops/updo/releases/download/v0.1.2/updo_Windows_i386.zip",
-            "hash": "01f4f94b63a6cef6a113f6e8976a12037456973c2df89a4b3112059f62996e80"
+            "url": "https://github.com/Owloops/updo/releases/download/v0.4.6/updo_Windows_x86_64.exe#/updo.exe",
+            "hash": "bcd8c373c3bdfe2f09712c44846638d88f0657f7e4d6e3b09666c1b65dc3dbf5"
         },
         "arm64": {
-            "url": "https://github.com/Owloops/updo/releases/download/v0.1.2/updo_Windows_arm64.zip",
-            "hash": "28882bb96589882a7b1e5f1b91012077cad6584bf02f345abb19572b06a0674c"
+            "url": "https://github.com/Owloops/updo/releases/download/v0.4.6/updo_Windows_arm64.exe#/updo.exe",
+            "hash": "850fa370beccb94e486f1c33c31195ce22628452844be2790b44caf33206ec6f"
         }
     },
     "bin": "updo.exe",
@@ -22,17 +18,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Owloops/updo/releases/download/v$version/updo_Windows_x86_64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/Owloops/updo/releases/download/v$version/updo_Windows_i386.zip"
+                "url": "https://github.com/Owloops/updo/releases/download/v$version/updo_Windows_x86_64.exe#/updo.exe"
             },
             "arm64": {
-                "url": "https://github.com/Owloops/updo/releases/download/v$version/updo_Windows_arm64.zip"
+                "url": "https://github.com/Owloops/updo/releases/download/v$version/updo_Windows_arm64.exe#/updo.exe"
             }
         },
         "hash": {
-            "url": "$baseurl/updo_$version_checksums.txt"
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

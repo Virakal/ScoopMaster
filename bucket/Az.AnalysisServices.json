@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:bfe762e26aec58cf8cff717878f7f33c7c65f365790df2c7aef9de626955dba1accaeb9b7ab2ef08e0ebdf00a613f88ad96c5c3549960c30eaf49358910da282",
+    "hash": "sha512:4c712287ff4e1b0b084711004f1e2dd1716f2625fbbbce31e59e9762f087ecf7cc760e29f9f53d96a1d435dff63fef688f8b70039faadd8322b8d2a3d37eb73b",
     "description": "Microsoft Azure PowerShell - Analysis Services cmdlets for Windows PowerShell and PowerShell Core.  For more information on Analysis Services, please visit the following: https://docs.microsoft.com/azure/analysis-services/",
     "psmodule": {
         "name": "Az.AnalysisServices"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.AnalysisServices/1.1.5#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.AnalysisServices/1.2.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.1.5"
+    "version": "1.2.0"
 }
