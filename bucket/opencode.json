@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anomalyco/opencode/releases/download/v1.14.18/opencode-windows-x64.zip",
+            "url": "https://github.com/sst/opencode/releases/download/v1.14.18/opencode-windows-x64.zip",
             "hash": "d437842027730f6b27105e1cd308aeaf3e2ef121ff79458e4c1117432c6239f3"
         }
     },
@@ -17,12 +17,12 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/anomalyco/opencode"
+        "github": "https://github.com/sst/opencode"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-windows-x64.zip"
+                "url": "https://github.com/sst/opencode/releases/download/v$version/opencode-windows-x64.zip"
             }
         }
     }
