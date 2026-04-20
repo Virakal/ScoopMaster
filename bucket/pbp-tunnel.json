@@ -13,15 +13,12 @@
             "hash": "78d787f3306c6e6a00fbfc3c50bb3becdaf1066c62a86703c21eb98249f9d5de"
         }
     },
-    "installer": {
-        "script": [
-            "Push-Location \"$dir\"",
-            "$exe = Get-ChildItem -Path . -Filter 'pbp-tunnel-*.exe' | Select-Object -First 1",
-            "if (-not $exe) { throw 'pbp-tunnel executable not found!' }",
-            "Rename-Item -Path $exe.FullName -NewName 'pbp-tunnel.exe' -Force",
-            "Pop-Location"
-        ]
-    },
+    "pre_install": [
+        "$exe = Get-ChildItem -LiteralPath $dir -File | Where-Object Name -like 'pbp-tunnel-*.exe' | Select-Object -First 1",
+        "if (-not $exe) { throw \"pbp-tunnel executable not found in $dir\" }",
+        "Rename-Item -LiteralPath $exe.FullName -NewName 'pbp-tunnel.exe' -Force",
+        "if (-not (Test-Path -LiteralPath \"$dir\\pbp-tunnel.exe\")) { throw 'Rename failed: pbp-tunnel.exe not found after rename' }"
+    ],
     "bin": "pbp-tunnel.exe",
     "checkver": {
         "url": "https://api.github.com/repos/PoweredByPumP/pbp-tunnel/releases/latest",
