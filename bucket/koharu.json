@@ -1,32 +1,37 @@
 {
     "version": "0.46.0",
     "description": "ML-powered manga translator, written in Rust.",
-    "homepage": "https://github.com/mayocream/koharu",
-    "license": "GPL-3.0-only|Apache-2.0",
+    "homepage": "https://koharu.rs/",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mayocream/koharu/releases/download/0.46.0/koharu_0.46.0_x64-setup.exe#/dl.7z",
-            "hash": "4bfc37d21d615dbdaa2f036b4715bb40ed3f7144f510216826feeaf6621a2576"
+            "url": "https://github.com/mayocream/koharu/releases/download/0.46.0/koharu_windows_x64.exe#/koharu.exe",
+            "hash": "7e768990d23e4d942ea546a53c32ce8b24220034474e6e32679d722e4080468d"
         }
     },
-    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
-    "bin": "Koharu.exe",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" -ItemType File | Out-Null }",
+    "bin": "koharu.exe",
     "shortcuts": [
         [
-            "Koharu.exe",
+            "koharu.exe",
             "Koharu"
         ]
     ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\Koharu\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "notes": [
-        "Koharu is NOT portable.",
-        "Settings are stored in '%LOCALAPPDATA%\\Koharu', and can be purged using 'scoop uninstall --purge koharu'."
+    "persist": [
+        "blobs",
+        "fonts",
+        "models",
+        "projects",
+        "runtime",
+        "config.toml"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/mayocream/koharu"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mayocream/koharu/releases/download/$version/koharu_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/mayocream/koharu/releases/download/$version/koharu_windows_x64.exe#/koharu.exe"
             }
         }
     }
