@@ -1,52 +1,47 @@
 {
     "version": "1.9.3",
-    "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers. Support deepseek-r1",
-    "homepage": "https://cherry-ai.com/",
-    "license": {
-        "identifier": "Cherry Studio 用户协议",
-        "url": "https://github.com/CherryHQ/cherry-studio/blob/main/LICENSE"
+    "description": "A desktop client that supports for multiple LLM providers.",
+    "homepage": "https://cherry-ai.com",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.3/Cherry-Studio-1.9.3-x64-setup.exe#/dl.7z",
-            "hash": "sha512:a3adbc00d7c37e67f5e4edab78439cc2381689a8d8120bce030bc3ba8b7815f7903119032382ce3140809948936b6d1364db63b4860678e81af881b96dfdbb01",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\" -Recurse"
-            ]
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.3/Cherry-Studio-1.9.3-x64-portable.exe#/cherry-studio.exe",
+            "hash": "cdf3288022c881c3ebdfdcf068fc7543dbfeaa1919244967567e62c596d76b1f"
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.3/Cherry-Studio-1.9.3-arm64-setup.exe#/dl.7z",
-            "hash": "sha512:ab09e9565f9f401713513e3a57ae3a792bf7a9fffd1029b6ad51abf5235d159abebc1093aafcb858b20b9b1c268f7c3a3239324dd0aa37f6268df3af7ee84d7c",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\" -Recurse"
-            ]
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.3/Cherry-Studio-1.9.3-arm64-portable.exe#/cherry-studio.exe",
+            "hash": "485c5f502e50cef36d53252c45dbebbdd197a6abbfac4342139f5ee10bc09653"
         }
     },
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\data\") -and (Test-Path \"$env:APPDATA\\CherryStudio\")) {",
+        "    ensure \"$persist_dir\\data\" | Out-Null",
+        "    info '[Portable Mode] Copying user data...'",
+        "    Move-Item \"$env:APPDATA\\CherryStudio\\*\" \"$persist_dir\\data\"",
+        "    Remove-Item \"$env:APPDATA\\CherryStudio\" -Recurse -Force",
+        "}"
+    ],
     "shortcuts": [
         [
-            "Cherry Studio.exe",
-            "Cherry Studio",
-            "--user-data-dir=\"$dir\\User Data\""
+            "cherry-studio.exe",
+            "Cherry Studio"
         ]
     ],
-    "persist": "User Data",
+    "persist": "data",
     "checkver": {
         "github": "https://github.com/CherryHQ/cherry-studio"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-portable.exe#/cherry-studio.exe"
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-setup.exe#/dl.7z"
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-portable.exe#/cherry-studio.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "$basename\\s+sha512:\\s+$base64"
         }
     }
 }
