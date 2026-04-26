@@ -1,0 +1,26 @@
+{
+  "version": "1.32.1",
+  "description": "AI-augmented personal knowledge base built from semantically connected markdown notes.",
+  "homepage": "https://github.com/kenforthewin/atomic",
+  "license": "MIT",
+  "changelog": "https://github.com/kenforthewin/atomic/releases",
+  "url": "https://github.com/kenforthewin/atomic/releases/download/v1.32.1/Atomic_1.32.1_x64-setup.exe#/setup.exe",
+  "hash": "sha256:e6f1cfec7e523dd099a7d8bd80884895b6f89b8a950e50e311484a6cf658b3b3",
+  "installer": {
+    "script": "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList '/S', \"/D=$dir\""
+  },
+  "post_install": "if (Test-Path -Path \"$dir\\setup.exe\") { Remove-Item \"$dir\\setup.exe\" -Force }",
+  "bin": "Atomic.exe",
+  "shortcuts": [
+    [
+      "Atomic.exe",
+      "Atomic"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/kenforthewin/atomic"
+  },
+  "autoupdate": {
+    "url": "https://github.com/kenforthewin/atomic/releases/download/v$version/Atomic_$version_x64-setup.exe#/setup.exe"
+  }
+}
