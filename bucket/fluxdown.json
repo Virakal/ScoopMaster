@@ -1,5 +1,5 @@
 {
-    "version": "0.1.40",
+    "version": "0.1.41",
     "description": "多协议下载管理器",
     "homepage": "https://fluxdown.zerx.dev/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://fluxdown.zerx.dev/api/download/FluxDown-0.1.40-windows-x64-portable.zip",
-            "hash": "1a186c076ac2c0d08ffb5c7d4c4ffca222b533d554e113023a481b0fb9ab42fd"
+            "url": "https://fluxdown.zerx.dev/api/download/FluxDown-0.1.41-windows-x64-portable.zip",
+            "hash": "afacd490e1942a7d1dc87268601f460803c64130602f8aeafb0fa2bbb409d25d"
         }
     },
     "bin": "flux_down.exe",
