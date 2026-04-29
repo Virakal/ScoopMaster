@@ -1,11 +1,11 @@
 {
-    "version": "0.94.4",
+    "version": "0.94.5",
     "description": "Tiny, embeddable Lisp in pure ANSI C",
     "homepage": "https://mino-lang.org",
     "license": "MIT",
-    "url": "https://github.com/leifericf/mino/releases/download/v0.94.4/mino_windows_amd64_v0.94.4.zip",
-    "hash": "0dbb84f04cd497e77a6d0469697605808215d957c1c2c74ec5b0eb86adc002ab",
-    "extract_dir": "mino_windows_amd64_v0.94.4",
+    "url": "https://github.com/leifericf/mino/releases/download/v0.94.5/mino_windows_amd64_v0.94.5.zip",
+    "hash": "fa97428eaadfe0fce5e6391fecd4d918fe03f7357ed72d7c4f35cdf2abba017a",
+    "extract_dir": "mino_windows_amd64_v0.94.5",
     "bin": "mino.exe",
     "checkver": {
         "github": "https://github.com/leifericf/mino"
