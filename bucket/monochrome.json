@@ -1,10 +1,10 @@
 {
-    "version": "1.4.5",
+    "version": "1.4.4",
     "description": "An IRC client intended for long-time IRC users.",
-    "homepage": "https://www.foobar2000.org/other/monochrome?realm=main&path=software/monochrome",
+    "homepage": "https://perkele.cc/software/monochrome",
     "license": "GPL-2.0-only",
-    "url": "https://www.foobar2000.org/downloads/monochrome-1.4.5.zip",
-    "hash": "dc46640fe8647286ce149e72fffd72dd1045781d4fc78bfbc3c3af46137d441c",
+    "url": "https://perkele.cc/download/monochrome.zip",
+    "hash": "656bcfcbc6d583af9420ecbd0a5686c2db7002d730270349e29bff41d91a7818",
     "shortcuts": [
         [
             "monochrome.exe",
@@ -17,9 +17,9 @@
         "script": "if(Test-Path \"$dir\\MonochromeConfig.xml\") { Copy-Item \"$dir\\MonochromeConfig.xml\" \"$persist_dir\\\" | Out-Null }"
     },
     "checkver": {
-        "regex": "monochrome-([\\d.]+).zip"
+        "regex": "Current version:\\s+([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.foobar2000.org/downloads/monochrome-$version.zip"
+        "url": "https://perkele.cc/download/monochrome.zip"
     }
 }

@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "ec52b9701712690e6f2579eae2b2fd5164dfa543d44e4c4941f2dcca7171adae",
-            "url": "https://github.com/sorayuki/obs-multi-rtmp/releases/download/0.7.4/obs-multi-rtmp-0.7.4.0-windows-x64.zip"
+            "hash": "d995644eed02dcdb555481caf25ee67a635370725e3c205ab8c9898113751506",
+            "url": "https://github.com/sorayuki/obs-multi-rtmp/releases/download/0.6.0.1/obs-multi-rtmp-0.6.0.0-windows-x64.zip"
         }
     },
     "autoupdate": {
@@ -12,7 +12,7 @@
                     "regex": "$basename: ([0-9a-f]{64})",
                     "url": "https://github.com/sorayuki/obs-multi-rtmp/releases/tag/$version"
                 },
-                "url": "https://github.com/sorayuki/obs-multi-rtmp/releases/download/$version/obs-multi-rtmp-$version.0-windows-x64.zip"
+                "url": "https://github.com/sorayuki/obs-multi-rtmp/releases/download/$version/obs-multi-rtmp-$version-windows-x64.zip"
             }
         }
     },
@@ -54,5 +54,5 @@
             "}"
         ]
     },
-    "version": "0.7.4"
+    "version": "0.6.0.1"
 }

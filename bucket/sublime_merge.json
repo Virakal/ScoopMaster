@@ -1,5 +1,5 @@
 {
-    "version": "2125",
+    "version": "2101",
     "description": "A Git client with snappy UI, three-way merge tool, side-by-side diffs, syntax highlighting, and more.",
     "homepage": "https://www.sublimemerge.com/",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://download.sublimetext.com/sublime_merge_build_2125_x64.zip",
-            "hash": "aa73f08c624f7df604181156d090d912748a814eaa0f2f871bf49048e7cfb27b"
+            "url": "https://download.sublimetext.com/sublime_merge_build_2101_x64.zip",
+            "hash": "27cb1bf6131c1450a2f3ecb025973d48dcd136a35a83a1476018b97b2b643559"
         }
     },
     "post_install": [

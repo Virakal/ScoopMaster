@@ -1,16 +1,16 @@
 {
-    "version": "0.4.4.3",
+    "version": "0.3.4",
     "homepage": "https://t-sp.in/cambridge",
     "description": "Open source arcade stacker",
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/cambridge-stacker/cambridge/releases/download/v0.4.4.3/cambridge_windows_x86.zip",
-            "hash": "8cf5acb876ad099a2d6c7f726a73ed443a7cc0463502555185c44e7802534801"
+            "url": "https://github.com/MillaBasset/cambridge/releases/download/v0.3.4/cambridge-win32.zip",
+            "hash": "69eade4d797d5a643b309377406b3e7f6f611f5b27e7b215dd9fb10564f0af6d"
         },
         "64bit": {
-            "url": "https://github.com/cambridge-stacker/cambridge/releases/download/v0.4.4.3/cambridge_windows_x64.zip",
-            "hash": "07961a97d404bda0cd89df086be290f283cb313f776c67074dd8d2a480af6659"
+            "url": "https://github.com/MillaBasset/cambridge/releases/download/v0.3.4/cambridge-windows.zip",
+            "hash": "64bbf1e22eb5495fc6668cd401201cd666bf149ef931f1ddd93faa17e85e46e9"
         }
     },
     "shortcuts": [
@@ -20,15 +20,15 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/cambridge-stacker/cambridge"
+        "github": "https://github.com/MillaBasset/cambridge"
     },
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/cambridge-stacker/cambridge/releases/download/v$version/cambridge_windows_x86.zip"
+                "url": "https://github.com/MillaBasset/cambridge/releases/download/v$version/cambridge-win32.zip"
             },
             "64bit": {
-                "url": "https://github.com/cambridge-stacker/cambridge/releases/download/v$version/cambridge_windows_x64.zip"
+                "url": "https://github.com/MillaBasset/cambridge/releases/download/v$version/cambridge-windows.zip"
             }
         }
     }

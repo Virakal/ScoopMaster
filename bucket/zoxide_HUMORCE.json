@@ -1,16 +1,16 @@
 {
-    "version": "0.9.9",
+    "version": "0.9.5",
     "description": "A faster way to navigate your filesystem",
     "homepage": "https://github.com/ajeetdsouza/zoxide",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.9/zoxide-0.9.9-x86_64-pc-windows-msvc.zip",
-            "hash": "5af00d0916f05631e3030537289eac56605e7c1733318c4d525c8e847f12496d"
+            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.5/zoxide-0.9.5-x86_64-pc-windows-msvc.zip",
+            "hash": "57397eb20e0a3348ddba2631764b10e4248e160212522e9bbbba95f09fcc8124"
         },
         "arm64": {
-            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.9/zoxide-0.9.9-aarch64-pc-windows-msvc.zip",
-            "hash": "58c55ef6f0ead099fbb31ed69566118d7c7c7a4e16c858bbdb4f7def40cd534b"
+            "url": "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.5/zoxide-0.9.5-aarch64-pc-windows-msvc.zip",
+            "hash": "897c956b18df29e0ecbc6c8b97eb61bff3f4600a068d893247bb0d11b90ef1d3"
         }
     },
     "bin": "zoxide.exe",

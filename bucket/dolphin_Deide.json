@@ -1,13 +1,13 @@
 {
     "homepage": "https://dolphin-emu.org/",
-    "version": "2603",
+    "version": "2407",
     "description": "Gamecube & Wii emulator",
     "license": {
         "identifier": "GPL-2.0",
         "url": "https://github.com/dolphin-emu/dolphin/blob/master/license.txt"
     },
-    "url": "https://dl.dolphin-emu.org/releases/2603/dolphin-2603-x64.7z",
-    "hash": "f918f60f38524f957cfbb89203632ff32067989400acc00040567c7a1e2b82a5",
+    "url": "https://dl.dolphin-emu.org/releases/2407/dolphin-2407-x64.7z",
+    "hash": "9283423bc40048ee4fd3531c3fc4ca0799e99d9a2d9295f703683c62a3bc280b",
     "extract_dir": "Dolphin-x64",
     "pre_install": [
         "function create($path, $type, $content) {",

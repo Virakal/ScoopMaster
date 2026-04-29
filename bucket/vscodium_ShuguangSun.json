@@ -1,5 +1,5 @@
 {
-    "version": "1.116.02821",
+    "version": "1.93.1.24256",
     "description": "A community-driven, freely-licensed binary distribution of Microsoft’s editor VS Code.",
     "homepage": "https://vscodium.com/",
     "license": "MIT",
@@ -9,12 +9,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://mirror.nju.edu.cn/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-x64-1.116.02821.zip",
-            "hash": "76949a39754f3bef265e40dafe45f336db8491f7604b8c17aeb711e7362c2ee3"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/VSCodium/vscodium/LatestRelease//VSCodium-win32-x64-1.93.1.24256.zip",
+            "hash": "74bd647bacee04a38409aeb28685e911e6d65a4dc69c5634f7e6d19d09f1c319"
         },
         "arm64": {
-            "url": "https://mirror.nju.edu.cn/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-arm64-1.116.02821.zip",
-            "hash": "4e8a629353a07974545d6342df2cde6720836878507858e8a2fc137a12b2b874"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/VSCodium/vscodium/LatestRelease//VSCodium-win32-arm64-1.93.1.24256.zip",
+            "hash": "92369ae5f2dabd24f815ba44dda333ed17ab47cdf86f7b33356792079c9cf670"
         }
     },
     "pre_install": [
@@ -76,10 +76,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirror.nju.edu.cn/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-x64-$version.zip"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/VSCodium/vscodium/LatestRelease//VSCodium-win32-x64-$version.zip"
             },
             "arm64": {
-                "url": "https://mirror.nju.edu.cn/github-release/VSCodium/vscodium/LatestRelease/VSCodium-win32-arm64-$version.zip"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/VSCodium/vscodium/LatestRelease//VSCodium-win32-arm64-$version.zip"
             }
         },
         "hash": {

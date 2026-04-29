@@ -1,18 +1,17 @@
 {
-    "version": "0.33.13",
+    "version": "0.32.26",
     "description": "An open-source authorization service providing fine-grained, real-time, policy-based access control for applications and APIs.",
     "homepage": "https://www.topaz.sh",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/aserto-dev/topaz/releases/download/v0.33.13/topaz_windows_amd64.zip",
-            "hash": "570687b093e404f0ca9e6845592a30e798fb3f1c89efd68732bca9c9969c95b8"
+            "url": "https://github.com/aserto-dev/topaz/releases/download/v0.32.26/topaz_windows_x86_64.zip",
+            "hash": "01f7bfc0b30214ffb3a6977a421bdc7efb61c2f5ede635588d73c1665bdcf542"
         }
     },
     "bin": [
         "topaz.exe",
-        "topazd.exe",
-        "topaz-backup.exe"
+        "topazd.exe"
     ],
     "checkver": {
         "github": "https://github.com/aserto-dev/topaz"
@@ -20,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/aserto-dev/topaz/releases/download/v$version/topaz_windows_amd64.zip"
+                "url": "https://github.com/aserto-dev/topaz/releases/download/v$version/topaz_windows_x86_64.zip"
             }
         }
     }

@@ -1,21 +1,13 @@
 {
-    "version": "0.7.0",
+    "version": "0.1.0",
     "description": "VBAN-TEXT CLI utility (send Voicemeeter commands over a network)",
-    "homepage": "https://github.com/onyx-and-iris/vbantxt",
+    "homepage": "https://github.com/onyx-and-iris/vbantxt-cli",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/onyx-and-iris/vbantxt/releases/download/v0.7.0/vbantxt_Windows_x86_64.zip",
-            "hash": "6187035c29dae8f9a24f428c58e5137adbacf89a579b26f32f2a144349ffa4b8",
-            "bin": "vbantxt.exe"
-        }
-    },
+    "url": "https://github.com/onyx-and-iris/vbantxt-cli/releases/download/v0.1.0/vbantxt-cli.exe",
+    "hash": "4c50a932141491f3721826304ee38cbc771bfcc909007e12b93552be65bd970c",
+    "bin": "vbantxt-cli.exe",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/onyx-and-iris/vbantxt/releases/download/v$version/vbantxt_Windows_x86_64.zip"
-            }
-        }
+        "url": "https://github.com/onyx-and-iris/vbantxt-cli/releases/download/v$version/vbantxt-cli.exe"
     }
 }

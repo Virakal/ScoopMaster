@@ -1,5 +1,5 @@
 {
-    "version": "3.8.44.340",
+    "version": "3.8.34.330",
     "description": "Cleans malware, viruses, trojans, worms, keyloggers, rootkits, trackers, spyware, and more.",
     "homepage": "https://www.hitmanpro.com/",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "http://dl.surfright.nl/HitmanPro_x64.exe",
-            "hash": "221ede5696634b6f2be0bfa6a5ea531bf93d78b7113facf34185ce305891d66c",
+            "hash": "cfeea4ea5121d1e6b1edbd5ca6e575830a0a4cbaf63120bc36639c44e1b89781",
             "bin": [
                 [
                     "HitmanPro_x64.exe",
@@ -25,7 +25,7 @@
         },
         "32bit": {
             "url": "http://dl.surfright.nl/HitmanPro.exe",
-            "hash": "dee4e8a590842ff714db6ee04099d26874850b2e59af2d88caff29aafc7acb07",
+            "hash": "ff5d3a2b3202490937fdcc6ff8a645fcb4e7a0ebe87bb4638bf1fa602bfef7ba",
             "bin": "HitmanPro.exe",
             "shortcuts": [
                 [

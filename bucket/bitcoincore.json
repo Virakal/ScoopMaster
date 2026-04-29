@@ -1,13 +1,13 @@
 {
     "homepage": "https://bitcoincore.org/en/about/",
     "description": "The Bitcoin client software called Bitcoin Core",
-    "version": "31.0",
+    "version": "27.1",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://bitcoincore.org/bin/bitcoin-core-31.0/bitcoin-31.0-win64.zip",
-            "hash": "82fd2c504a0f20a31d4d13bd407783d6fc7bf17622d0ce85228a9b92694e03f0",
-            "extract_dir": "bitcoin-31.0"
+            "url": "https://bitcoincore.org/bin/bitcoin-core-27.1/bitcoin-27.1-win64.zip",
+            "hash": "9719871a2c9a45c741e33d670d2319dcd3f8f52a6059e9c435a9a2841188b932",
+            "extract_dir": "bitcoin-27.1"
         }
     },
     "shortcuts": [
@@ -30,7 +30,7 @@
             }
         },
         "hash": {
-            "url": "https://raw.githubusercontent.com/bitcoin-core/guix.sigs/main/$version/fanquake/all.SHA256SUMS",
+            "url": "https://bitcoincore.org/bin/bitcoin-core-$version/SHA256SUMS.asc",
             "mode": "extract"
         }
     },

@@ -1,0 +1,27 @@
+{
+    "version": "1.5.6",
+    "description": "a lightweight singing voice synthesis editor that supports multiple synthesis engines",
+    "homepage": "https://github.com/LiuYunPlayer/TuneLab",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LiuYunPlayer/TuneLab/releases/download/v1.5.6/TuneLab-win-x64-v1.5.6.zip",
+            "hash": "d51e234f8ceba08ab1807aa6be525cfa89b0f532b393b9c4a7081ffadfa6c5c5"
+        }
+    },
+    "bin": "TuneLab.exe",
+    "shortcuts": [
+        [
+            "TuneLab.exe",
+            "TuneLab"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LiuYunPlayer/TuneLab/releases/download/v$version/TuneLab-win-x64-v$version.zip"
+            }
+        }
+    }
+}

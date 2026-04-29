@@ -1,24 +1,16 @@
 {
-    "version": "4.0.17.2952",
-    "description": "Smart PVR for newsgroup and bittorrent users.",
+    "version": "3.0.10.1567",
+    "description": "Sonarr is an internet PVR for Usenet and Torrents.",
     "homepage": "https://sonarr.tv/",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Sonarr/Sonarr/releases/download/v4.0.17.2952/Sonarr.main.4.0.17.2952.win-x64.zip",
-            "hash": "19a81e69dedd8d317b5fa8a1a9c48d63bc3b3f3ba87b84c94ff6d75b1803e419"
-        },
-        "32bit": {
-            "url": "https://github.com/Sonarr/Sonarr/releases/download/v4.0.17.2952/Sonarr.main.4.0.17.2952.win-x86.zip",
-            "hash": "b222d841321fe31f6b98d9c0bed0525bf1fa8e571373e35dc3c9df68b4c6a68b"
-        }
-    },
+    "url": "https://download.sonarr.tv/v3/main/3.0.10.1567/Sonarr.main.3.0.10.1567.windows.zip",
+    "hash": "a5307e2b0fcdd1540dd61414ee74b7242fcc34c46bb36fd19886058f3d3d619b",
     "extract_dir": "Sonarr",
-    "post_install": [
-        "$WSshell = New-Object -ComObject WScript.Shell",
-        "$shortcut = $WSshell.CreateShortcut(\"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Sonarr.lnk\")",
-        "$shortcut.TargetPath = \"$dir\\Sonarr.exe\"",
-        "$shortcut.Save()"
+    "bin": [
+        [
+            "Sonarr.Console.exe",
+            "sonarr"
+        ]
     ],
     "shortcuts": [
         [
@@ -26,22 +18,11 @@
             "Sonarr"
         ]
     ],
-    "post_uninstall": [
-        "Remove-Item -Recurse -Force \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Sonarr.lnk\"",
-        "echo \"`nTo remove persistent data, remove the folder C:\\ProgramData\\Sonarr\""
-    ],
     "checkver": {
-        "github": "https://github.com/Sonarr/Sonarr",
-        "regex": "/releases/tag/v([\\d.]+)"
+        "url": "https://siku-api.deno.dev/sonarr",
+        "regex": "\"ver\"\\s?:\\s?\"([\\d\\.]+)\""
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Sonarr/Sonarr/releases/download/v$version/Sonarr.main.$version.win-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/Sonarr/Sonarr/releases/download/v$version/Sonarr.main.$version.win-x86.zip"
-            }
-        }
+        "url": "https://download.sonarr.tv/v3/main/$version/Sonarr.main.$version.windows.zip"
     }
 }

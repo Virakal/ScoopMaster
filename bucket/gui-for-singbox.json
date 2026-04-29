@@ -1,20 +1,23 @@
 {
-    "version": "1.23.2",
-    "description": "A GUI program for SingBox developed by vue3 + wails.",
-    "homepage": "https://github.com/GUI-for-Cores/GUI.for.SingBox",
-    "license": "GPL-3.0-or-later",
+    "version": "1.8.5",
+    "description": "GUI for SingBox",
+    "homepage": "https://gui-for-cores.github.io/",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox#GPL-3.0-1-ov-file"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.23.2/GUI.for.SingBox-windows-amd64.zip",
-            "hash": "91696cabeae2ce9d64b2cd39e8bed31d0ec98077d725a4d692ef6be47d5d3edd"
+            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.8.5/GUI.for.SingBox-windows-amd64.zip",
+            "hash": "6dc65c7c4969bf085611d763c4bee8f56e780b44497c25868435d29a5af068e1"
         },
         "32bit": {
-            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.23.2/GUI.for.SingBox-windows-386.zip",
-            "hash": "150bb551f92713bd1b2030c7720b6253f1e50329f198cd0f38005d896fb3884c"
+            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.8.5/GUI.for.SingBox-windows-386.zip",
+            "hash": "74af39203e82c0caf502fa52622a013737d3c4f2a9a1042a4b547e9af1247fb8"
         },
         "arm64": {
-            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.23.2/GUI.for.SingBox-windows-arm64.zip",
-            "hash": "4f3e295531127796cf93fc68da332fa98e1ceb337edb0ea447147b332e309310"
+            "url": "https://github.com/GUI-for-Cores/GUI.for.SingBox/releases/download/v1.8.5/GUI.for.SingBox-windows-arm64.zip",
+            "hash": "d65538471b96239478b0a1008cdb5135b6ac9cc3b84390f3edf4c102ce90bf9d"
         }
     },
     "shortcuts": [
@@ -24,7 +27,10 @@
         ]
     ],
     "persist": "data",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/GUI-for-Cores/GUI.for.SingBox/releases",
+        "regex": "/releases/tag/v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

@@ -18,7 +18,8 @@
             "EnergyStar"
         ]
     ],
-    "notes":[
-        "EnergyStar hasn't been updated for a long time, so automatic updates are not configured. If a new version appears, please open an issue."
-    ]
+    "checkver": {
+        "url": "https://github.com/imbushuo/EnergyStar/releases",
+        "regex": "EnergyStar/releases/download/([\\w\\d.-]+)/Release"
+    }
 }

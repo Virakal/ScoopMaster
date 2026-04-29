@@ -1,21 +1,34 @@
 {
-    "version": "10.0.28000.1839",
+    "version": "10.0.22621.2428",
     "description": "Microsoft Windows 11 Software Developement Kit",
     "homepage": "https://developer.microsoft.com/en-us/windows/downloads/sdk-archive",
     "license": "https://www.microsoft.com/en-ca/legal/terms-of-use",
-    "url": "https://go.microsoft.com/fwlink/?linkid=2361309#/winsdksetup.exe",
-    "hash": "d1a79958227b05fd0c554db022fd718048b33b9eb79fae70ca918a7a6f172627",
-    "env_set": {
-        "WIN11SDK_ROOT": "$dir\\sdk"
-    },
+    "url": "https://go.microsoft.com/fwlink/?linkid=2250105#/winsdksetup.exe",
+    "hash": "3f73f59566b0cf3eddddaf61ad72bb0c6e4588a5d9e004abf68115b752ebbbd8",
     "installer": {
         "args": [
             "/quiet",
             "/norestart",
             "/ceip",
             "off",
+            "/features",
+            "OptionId.WindowsPerformanceToolkit",
+            "OptionId.WindowsDesktopDebuggers",
+            "OptionId.AvrfExternal",
+            "OptionId.NetFxSoftwareDevelopmentKit",
+            "OptionId.WindowsSoftwareLogoToolkit",
+            "OptionId.IpOverUsb",
+            "OptionId.MSIInstallTools",
+            "OptionId.SigningTools",
+            "OptionId.UWPManaged",
+            "OptionId.UWPCPP",
+            "OptionId.UWPLocalized",
+            "OptionId.DesktopCPPx86",
+            "OptionId.DesktopCPPx64",
+            "OptionId.DesktopCPParm",
+            "OptionId.DesktopCPParm64",
             "/installpath",
-            "$dir/sdk"
+            "$dir\\sdk\\"
         ]
     },
     "uninstaller": {

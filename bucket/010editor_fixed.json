@@ -1,5 +1,5 @@
 {
-    "version": "16.0",
+    "version": "15.0",
     "description": "Professional text and hex editor with Binary Templates technology.",
     "homepage": "https://www.sweetscape.com/010editor/",
     "license": {
@@ -21,13 +21,13 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://download.sweetscape.com/010EditorWin64Portable16.0.zip",
-            "hash": "f767f9fd02730d1bc373373d9d10e11d629c58a530ac774a8b5d61ba16eb0ef7",
+            "url": "https://download.sweetscape.com/010EditorWin64Portable15.0.zip",
+            "hash": "f172374bb64129ceb92f205f6ecb4d82f7f163001a3a8ae39b971b8701184bad",
             "extract_dir": "010EditorWin64Portable"
         },
         "32bit": {
-            "url": "https://download.sweetscape.com/010EditorWin32Portable16.0.zip",
-            "hash": "7148067ae97495319ffa83367ea12818c709bbe1e27f6ea83aed1332be7adb17",
+            "url": "https://download.sweetscape.com/010EditorWin32Portable15.0.zip",
+            "hash": "685d36e9e2cf37d8845a09e85ca2d826aff319362f979dfbb664b3d230cb0540",
             "extract_dir": "010EditorWin32Portable"
         }
     },
@@ -47,7 +47,7 @@
         "AppData\\Temp"
     ],
     "post_install": [
-        "Remove-Item \"$dir\\010EditorPortable.exe\"; $scriptsDir = \"$bucketsdir\\$bucket\\scripts\"",
+        "Remove-Item \"$dir\\010EditorPortable.exe\"; $scriptsDir = \"$bucketsdir\\MyScoop\\scripts\"",
         "$appDir = $dir.Replace('\\', '\\\\')",
         "Get-ChildItem \"$scriptsDir\\010editor\\*.reg\" | ForEach-Object {",
         "    $content = Get-Content $_",

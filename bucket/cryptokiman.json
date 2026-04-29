@@ -1,12 +1,12 @@
 {
-    "version": "2.2.8",
+    "version": "1.8.6",
     "description": "This tool is for testing and managing PKCS#11 library.",
     "homepage": "https://jykim74.tistory.com/38",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://jykim74.github.io/msi/CryptokiMan-enV228.msi",
-            "hash": "48504c7ed72a17d9944f51f24ca0a3186c2bcc6f4466d38c47e72bd4d24841e4"
+            "url": "https://jykim74.github.io/msi/CryptokiMan-enV186.msi",
+            "hash": "93797b9203c5ae34f429f751dcc620ec7892487a5fe8e1ecfd12684a79565677"
         }
     },
     "extract_dir": "PFiles\\JS Inc\\CryptokiMan",

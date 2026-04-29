@@ -1,23 +1,13 @@
 {
-    "version": "21.0.10-b1163.110",
+    "version": "21.0.4-b598.4",
     "homepage": "https://github.com/JetBrains/JetBrainsRuntime",
     "description": "A fork of OpenJDK that includes a number enhancements in font rendering, HiDPI support, ligatures, performance improvements, and bugfixes. These are mainly for running IntelliJ Platform-based products",
     "license": "GPL-2.0",
     "architecture": {
-        "32bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.10-windows-x86-b1163.110.tar.gz",
-            "hash": "sha512:72decbfe8c806a2298a10e314df31511b4d82b30cd60da008d948e7e8965e8b7a3052a1420f50f83268c20a635a6e1edaeea8cc4d9dce3ce32c4b43c225062e2",
-            "extract_dir": "jbrsdk-21.0.10-windows-x86-b1163.110"
-        },
         "64bit": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.10-windows-x64-b1163.110.tar.gz",
-            "hash": "sha512:357167c155043774e778c463671617b96fdc32491f0255d439b9afb953249cea9a53f05d0c194b543c23d6a2d0397c9a48b3b7ec67faeacd8bf0ba24734da9ef",
-            "extract_dir": "jbrsdk-21.0.10-windows-x64-b1163.110"
-        },
-        "arm64": {
-            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.10-windows-aarch64-b1163.110.tar.gz",
-            "hash": "sha512:55e2e5ef956a36f5d2bf5e7da499b9043b19047e9405311373d0d69e298cb1d339c73757d77835f0ec443a05eb2ecebaf3555e61ca29059b493929ba53140155",
-            "extract_dir": "jbrsdk-21.0.10-windows-aarch64-b1163.110"
+            "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.0.4-windows-x64-b598.4.tar.gz",
+            "hash": "sha512:607bebf5242104ba0c491c340a83673b6a7a57db67a7b61cd8d2a3d634d45a49ba14cdd59fe7580c45cca876547be88e3a34d94d6718bbfcbd064e6a5d331829",
+            "extract_dir": "jbrsdk-21.0.4-windows-x64-b598.4"
         }
     },
     "env_set": {
@@ -25,40 +15,12 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "script": [
-            "$url = 'https://api.github.com/repos/JetBrains/JetBrainsRuntime/releases'",
-            "$releases = Invoke-RestMethod $url",
-            "$tags = $releases | ForEach-Object { $_.tag_name }",
-            "# `$Script:expected_ver` is current version for fallback",
-            "$tags += 'jbr-release-' + ($Script:expected_ver -replace '-', '')",
-            "$pattern = 'jbr-release-21\\.(?<Version>[\\d.]+)b(?<BuildNum>[\\d]+)\\.(?<Patch>\\d+)'",
-            "$matches = foreach ($t in $tags) { if ($t -match $pattern) {",
-            "    [PSCustomObject]@{",
-            "      Tag = $t",
-            "      VersionParts = ($Matches.Version -split '\\.') | ForEach-Object { [int]$_ }",
-            "      BuildNum = [int]$Matches.BuildNum",
-            "      Patch = [int]$Matches.Patch",
-            "    }",
-            "  } }",
-            "$latest = $matches | Sort-Object @{Expression={$_.VersionParts[0]}},",
-            "                                 @{Expression={$_.VersionParts[1]}},",
-            "                                 @{Expression={$_.BuildNum}},",
-            "                                 @{Expression={$_.Patch}} | Select-Object -Last 1",
-            "Write-Output $latest.Tag"
-        ],
-        "regex": "jbr-release-21\\.(?<Version>[\\d.]+)(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)",
+        "url": "https://github.com/JetBrains/JetBrainsRuntime/raw/main/.github/README.md",
+        "regex": "\\[21\\.(?<Version>[\\d.]+)-(?<Build>[\\w]+)\\.(?<Patch>[\\d]+)]",
         "replace": "21.${Version}-${Build}.${Patch}"
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-x86-$matchBuild.$matchPatch.tar.gz",
-                "hash": {
-                    "url": "$url.checksum",
-                    "regex": "$sha512\\s"
-                },
-                "extract_dir": "jbrsdk-21.$matchVersion-windows-x86-$matchBuild.$matchPatch"
-            },
             "64bit": {
                 "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-x64-$matchBuild.$matchPatch.tar.gz",
                 "hash": {
@@ -66,14 +28,6 @@
                     "regex": "$sha512\\s"
                 },
                 "extract_dir": "jbrsdk-21.$matchVersion-windows-x64-$matchBuild.$matchPatch"
-            },
-            "arm64": {
-                "url": "https://cache-redirector.jetbrains.com/intellij-jbr/jbrsdk-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch.tar.gz",
-                "hash": {
-                    "url": "$url.checksum",
-                    "regex": "$sha512\\s"
-                },
-                "extract_dir": "jbrsdk-21.$matchVersion-windows-aarch64-$matchBuild.$matchPatch"
             }
         }
     }

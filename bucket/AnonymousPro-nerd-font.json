@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'AnonymousPro' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/AnonymousPro.tar.xz",
-    "hash": "7ebace54eda35943062eaad9dd4f16de24390b672f31bff45475b82acb1955c0",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/AnonymousPro.tar.xz",
+    "hash": "1e4b7f7c8528c9d43760eacdb5d423ad272f028cad5958e594a30486dce409d3",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

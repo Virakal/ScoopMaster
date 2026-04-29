@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Lekton' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Lekton.tar.xz",
-    "hash": "2a7fa12bf2b376307c9ca2501227b0d91dcae25c453ec095e5f768a2ca5b6fe9",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Lekton.tar.xz",
+    "hash": "2282cb16651a377d5b084486a268189fdafd9067775f1f24ffaf5a36a2459501",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

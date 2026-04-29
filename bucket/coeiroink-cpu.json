@@ -1,31 +1,28 @@
 {
-    "version": "0.2.0",
-    "description": "無料で使えるAIトークソフト。",
-    "homepage": "https://coeiroink.com/",
-    "license": "https://coeiroink.com/terms",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.dropbox.com/s/2h3b1oslno1g0nq/COEIROINK-CPU-v.0.2.0.zip?dl=1",
-            "hash": "a571d1527b45fa7ee3855b11713443e226f850758ff579126f626ff92963b18b",
-            "extract_dir": "COEIROINK-CPU-v.0.2.0"
-        }
-    },
-    "shortcuts": [
-        [
-            "COEIROINK.exe",
-            "COEIROINK (CPU)"
-        ]
-    ],
-    "checkver": {
-        "url": "https://coeiroink.com/download",
-        "regex": "https://www\\.dropbox\\.com/s/(?<id>[a-z0-9]+)/COEIROINK-CPU-v\\.(?<version>[\\d.]+)\\.zip"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.dropbox.com/s/$matchId/COEIROINK-CPU-v.$version.zip?dl=1",
-                "extract_dir": "COEIROINK-CPU-v.$version"
-            }
-        }
+  "version": "1.6.0",
+  "description": "COEIROINK CPU",
+  "homepage": "https://coeiroink.com/",
+  "license": [
+    {
+      "identifier": "Proprietary",
+      "url": "https://coeiroink.com/terms"
     }
+  ],
+  "notes": "ダウンロード・インストールに長時間かかります。",
+  "url": "https://www.dropbox.com/s/9rvyotmv377e050/COEIROINK-CPU-v.1.6.0.zip?dl=1",
+  "hash": "2772617df3ec0d1950a2e6f39e5d456e8d11f61764364849e2f22e35141823a7",
+  "extract_dir": "COEIROINK-CPU-v.1.6.0",
+  "persist": [
+    "speaker_info"
+  ],
+  "shortcuts": [
+    [
+      "COEIROINKonVOICEVOX.exe",
+      "COEIROINK on VOICEVOX (CPU)"
+    ]
+  ],
+  "checkver": {
+    "url": "https://coeiroink.com/download",
+    "regex": "<p class=\"download-link\">COEIROINK-CPU-v.([\\d\\.]+)\\(Windows\\)</p>"
+  }
 }

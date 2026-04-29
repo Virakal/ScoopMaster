@@ -1,20 +1,20 @@
 {
-    "version": "0.1.10",
+    "version": "0.1.6",
     "description": "This is a terminal UI for learning for the UKW-Sprechfunkzeugnis für den Binnenschiffahrtsfunk.",
     "homepage": "https://github.com/WyvernIXTL/ubilerntui",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.10/ubilerntui-x86_64-pc-windows-msvc.7z",
-            "hash": "d16975c2c1968ace0125066c3cdd6658cb9a6eb3bd63c271ddf7fc233d886f1f"
+            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.6/ubilerntui-v0.1.6-x86_64-pc-windows-msvc.zip",
+            "hash": "1bcd735298aa4bc93b06dc68b66d33cfa2dbf710bc441bc3d49dac37e07903af"
         },
         "32bit": {
-            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.10/ubilerntui-i686-pc-windows-msvc.7z",
-            "hash": "50e63ee6a6d5b26e3006e33d37dd73e1883a6da2b45cb4438058539dbfe46d38"
+            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.6/ubilerntui-v0.1.6-i686-pc-windows-msvc.zip",
+            "hash": "bb8d12e1ea8baf969e13b9e3251e9315f8869bdf3b5a322f1f96ebffcc59f670"
         },
         "arm64": {
-            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.10/ubilerntui-aarch64-pc-windows-msvc.7z",
-            "hash": "b73a7668cae7eecb977251d67c5e7f2ee52e28c6c104fdac1b95c624749e4309"
+            "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v0.1.6/ubilerntui-v0.1.6-aarch64-pc-windows-msvc.zip",
+            "hash": "76eae50fed97462265416292f0ed54bf20c23a661190bfe0912bb0279bf1025f"
         }
     },
     "bin": "ubilerntui.exe",
@@ -22,13 +22,22 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-x86_64-pc-windows-msvc.7z"
+                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-v$version-x86_64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$urlNoExt.sha256"
+                }
             },
             "32bit": {
-                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-i686-pc-windows-msvc.7z"
+                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-v$version-i686-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$urlNoExt.sha256"
+                }
             },
             "arm64": {
-                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-aarch64-pc-windows-msvc.7z"
+                "url": "https://github.com/WyvernIXTL/ubilerntui/releases/download/v$version/ubilerntui-v$version-aarch64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$urlNoExt.sha256"
+                }
             }
         }
     }

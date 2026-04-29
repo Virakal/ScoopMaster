@@ -1,21 +1,11 @@
 {
-    "version": "1.18.3",
+    "version": "1.17.7",
     "description": "One-click solution to convert video that you own into a set of MKV files.",
     "homepage": "https://www.makemkv.com/",
     "license": "Shareware",
-    "url": "https://www.makemkv.com/download/Setup_MakeMKV_v1.18.3.exe#/dl.7z",
-    "hash": "b0c329506e5128d1711b4edac5bee19c1b1b9e9e04d2f8aa94670d38dece5bce",
-    "architecture": {
-        "32bit": {
-            "bin": "makemkvcon.exe"
-        },
-        "64bit": {
-            "bin": [
-                "makemkvcon.exe",
-                "makemkvcon64.exe"
-            ]
-        }
-    },
+    "url": "https://www.makemkv.com/download/Setup_MakeMKV_v1.17.7.exe#/dl.7z",
+    "hash": "98268f1ca22130ec95d27c872d7802b74a14de7b52b45ae54d9af10631330e8c",
+    "bin": "makemkvcon.exe",
     "shortcuts": [
         [
             "makemkv.exe",
@@ -23,7 +13,8 @@
         ]
     ],
     "checkver": {
-        "regex": "Setup_MakeMKV_v([\\d.]+)\\.exe"
+        "url": "https://www.makemkv.com/download/",
+        "regex": "MakeMKV ([\\d.]+)\\s"
     },
     "autoupdate": {
         "url": "https://www.makemkv.com/download/Setup_MakeMKV_v$version.exe#/dl.7z",

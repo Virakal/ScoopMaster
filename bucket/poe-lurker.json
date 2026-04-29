@@ -1,16 +1,16 @@
 {
-    "version": "2.2.2",
-    "url": "https://github.com/C1rdec/Poe-Lurker/releases/download/V2.2.2/PoeLurker-win-Portable.zip",
-    "bin": "poe lurker.exe",
+    "version": "1.24.0",
+    "url": "https://github.com/C1rdec/Poe-Lurker/releases/download/v1.24.0/PoeLurkerSetup.exe",
+    "bin": "PoeLurkerSetup.exe",
     "homepage": "https://github.com/C1rdec/Poe-Lurker",
     "shortcuts": [
         [
-            "poe lurker.exe",
+            "PoeLurkerSetup.exe",
             "PoeLurker"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/C1rdec/Poe-Lurker/releases/download/V$version/PoeLurker-win-Portable.zip"
+        "url": "https://github.com/C1rdec/Poe-Lurker/releases/download/v$version/PoeLurkerSetup.exe"
     }
 }

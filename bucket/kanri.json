@@ -1,5 +1,5 @@
 {
-    "version": "0.8.2",
+    "version": "0.7.1",
     "description": "Modern offline Kanban board app built with simplicity and user experience in mind.",
     "homepage": "https://www.kanriapp.com",
     "license": "GPL-3.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trobonox/kanri/releases/download/app-v0.8.2/kanri_0.8.2_x64_en-US.msi",
-            "hash": "61aa3d12418c09afd75736f4b0cb665373b61782142f037ee309cd586f7d43c9"
+            "url": "https://github.com/trobonox/kanri/releases/download/app-v0.7.1/kanri_0.7.1_x64_en-US.msi",
+            "hash": "1628a118eafe099e39a0a85d0ac008e97a72ec1fedc5812f5f9e2a4b71e79fb0"
         }
     },
     "extract_dir": "PFiles\\kanri",

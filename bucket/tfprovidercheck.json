@@ -1,19 +1,19 @@
 {
-    "version": "1.0.7",
+    "version": "1.0.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/tfprovidercheck/releases/download/v1.0.7/tfprovidercheck_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/tfprovidercheck/releases/download/v1.0.0/tfprovidercheck_windows_amd64.zip",
             "bin": [
                 "tfprovidercheck.exe"
             ],
-            "hash": "25669f68fc1741176ef2d1f4a4eafe71da72e3e93f4a1850bae969e642348bef"
+            "hash": "df55a7467b81dffa373cf36083ff1c1408f46911b1fa0cf98445b9c6467e4c4c"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/tfprovidercheck/releases/download/v1.0.7/tfprovidercheck_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/tfprovidercheck/releases/download/v1.0.0/tfprovidercheck_windows_arm64.zip",
             "bin": [
                 "tfprovidercheck.exe"
             ],
-            "hash": "b42850199f3e5d4087a77928326f24c75d74370bbe771ae03ceae178805e80e5"
+            "hash": "02c85c95284ec46222e720bcb0d958302c03f1cb9d9e0ba9656af497054e181e"
         }
     },
     "license": "MIT",

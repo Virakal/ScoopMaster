@@ -1,21 +1,21 @@
 {
     "description": "Zulu 11 is a build of OpenJDK 11",
     "homepage": "https://www.azul.com/products/zulu-community/",
-    "version": "11.88.17",
+    "version": "11.74.15",
     "license": {
         "identifier": "GPL-2.0-only WITH Classpath-exception-2.0",
         "url": "https://www.azulsystems.com/license/zulu_third_party_licenses.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu11.88.17-ca-jdk11.0.31-win_x64.zip",
-            "hash": "76c6592dc7ae74db7b8bf4612a13a000209277c1da670dc1d0bcc1d3460e4425",
-            "extract_dir": "zulu11.88.17-ca-jdk11.0.31-win_x64"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.74.15-ca-jdk11.0.24-win_x64.zip",
+            "hash": "1b1870eb161076dcadf2c6f85855969484d907f44f11c1483d86e964dc946323",
+            "extract_dir": "zulu11.74.15-ca-jdk11.0.24-win_x64"
         },
         "32bit": {
-            "url": "https://cdn.azul.com/zulu/bin/zulu11.88.17-ca-jdk11.0.31-win_i686.zip",
-            "hash": "44df545e39140b3e822207830a5bad6e6447914765cd44592838b66b6e1a9162",
-            "extract_dir": "zulu11.88.17-ca-jdk11.0.31-win_i686"
+            "url": "https://cdn.azul.com/zulu/bin/zulu11.74.15-ca-jdk11.0.24-win_i686.zip",
+            "hash": "bae034bc5075e31123f76980f3f3234150f68cbe96e48d288291b8ea6c5124f4",
+            "extract_dir": "zulu11.74.15-ca-jdk11.0.24-win_i686"
         }
     },
     "env_add_path": "bin",

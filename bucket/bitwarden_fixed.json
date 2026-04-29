@@ -1,20 +1,20 @@
 {
-    "version": "2026.1.1",
+    "version": "2024.8.2",
     "description": "Password management solutions for individuals, teams, and business organizations",
     "homepage": "https://bitwarden.com",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "32bit": {
-            "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v2026.1.1/bitwarden-2026.1.1-ia32.nsis.7z",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2024.8.2/bitwarden-2024.8.2-ia32.nsis.7z",
+            "hash": "d44a004944b9ebfb72590f8bba31f90117325ed14f66eff4ca86c4d0487ebd4f"
         },
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v2026.1.1/bitwarden-2026.1.1-x64.nsis.7z",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2024.8.2/bitwarden-2024.8.2-x64.nsis.7z",
+            "hash": "93f27db53460febcf7c099024df86abb15ddd9c0be6a09185ff71228dc795f61"
         },
         "arm64": {
-            "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v2026.1.1/bitwarden-2026.1.1-arm64.nsis.7z",
-            "hash": "b114ff7611b7f96828bc15848cb0c7bf54655021e289c17ab7d6e5246ecb2fd0"
+            "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2024.8.2/bitwarden-2024.8.2-arm64.nsis.7z",
+            "hash": "8b2906a875667a274fdd245e91e5c08c09e482cac4b9b900df4c87a3e63810f7"
         }
     },
     "pre_install": [
@@ -39,13 +39,13 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-ia32.nsis.7z"
+                "url": "https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-ia32.nsis.7z"
             },
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-x64.nsis.7z"
+                "url": "https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-x64.nsis.7z"
             },
             "arm64": {
-                "url": "https://ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-arm64.nsis.7z"
+                "url": "https://github.com/bitwarden/clients/releases/download/desktop-v$version/bitwarden-$version-arm64.nsis.7z"
             }
         },
         "hash": {

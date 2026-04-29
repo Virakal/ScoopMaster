@@ -1,9 +1,9 @@
 {
     "homepage": "https://www.natfrp.com/",
     "description": "免费穿，轻松透",
-    "url": "https://nya.globalslb.net/natfrp/client/launcher-windows/3.2.0.0/SakuraLauncher.exe",
-    "version": "3.2.0.0",
-    "hash": "5f554134bfaaf71f9f4fe86f2de8bd6bef12966b9e3fc3cc5046668383718987",
+    "url": "https://getfrp.sh/l/SakuraLauncher.exe",
+    "version": "2.0.6.0",
+    "hash": "19f95084ba141c2e605a9bf4abf0529273d4445fc651c635ccbc5e66d8b5c3d4",
     "shortcuts": [
         [
             "SakuraLauncher.exe",
@@ -24,10 +24,10 @@
         "Echo \"$dir\\LegacyLauncher.exe*\" | Remove-Item"
     ],
     "checkver": {
-        "url": "https://nya.globalslb.net/natfrp/client/launcher-windows/",
-        "regex": "href=\"([\\d.]+\\d+)"
+        "url": "https://www.natfrp.com/cgi/system/download",
+        "regex": "version\":\"([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://nya.globalslb.net/natfrp/client/launcher-windows/$version/SakuraLauncher.exe"
+        "url": "https://getfrp.sh/l/SakuraLauncher.exe"
     }
 }

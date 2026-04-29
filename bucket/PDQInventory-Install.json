@@ -1,13 +1,13 @@
 {
-    "version": "20.0.5.0",
+    "version": "19.3.611.0",
     "description": "PDQ Inventory. Scan, collect, and organize your machines so deployments go exactly where you need them to.",
     "homepage": "https://www.pdq.com/pdq-inventory/",
     "license": "Proprietary",
     "changelog": "https://www.pdq.com/releases/",
     "architecture": {
         "64bit": {
-            "url": "https://services.pdq.com/download/deploy-inventory/Inventory_20.0.5.0.exe#/setup.exe",
-            "hash": "bfd4415acc3a57643d231748b70c37ef433b46e93c1a8af4840fa12a6f7cd45f"
+            "url": "https://download.pdq.com/release/19/Inventory_19.3.611.0.exe#/setup.exe",
+            "hash": "cd3f8a13574b9a45e7c0727d68008f98b1bbb30e78e4e74113ebd5b56d53166c"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -39,7 +39,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://services.pdq.com/download/deploy-inventory/Inventory_$version.exe#/setup.exe"
+                "url": "https://download.pdq.com/release/$majorVersion/Inventory_$version.exe#/setup.exe"
             }
         }
     }

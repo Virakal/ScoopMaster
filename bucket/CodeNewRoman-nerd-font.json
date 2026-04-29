@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'CodeNewRoman' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CodeNewRoman.tar.xz",
-    "hash": "2db8def7863ea49b6ef69f353988d7e0f73a8646722e5946932740d76eb46b25",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CodeNewRoman.tar.xz",
+    "hash": "45d29f5be8add78ae271550d542387f4c98bbbe62e395a3646bc67f66f9d3c5c",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

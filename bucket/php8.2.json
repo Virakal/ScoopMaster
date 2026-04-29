@@ -1,18 +1,18 @@
 {
     "homepage": "https://windows.php.net/downloads/releases/",
-    "version": "8.2.30",
+    "version": "8.2.23",
     "license": {
         "identifier": "PHP-3.01",
-        "url": "https://www.php.net/license/"
+        "url": "https://secure.php.net/license/"
     },
     "architecture": {
         "64bit": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.30-Win32-vs16-x64.zip",
-            "hash": "6ae212e3aa01aea2db597169b60b0fbce46a6d9b75415a48cf8b9166bf67b93b"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.23-Win32-vs16-x64.zip",
+            "hash": "7bd783fe993d9e4076d16d800782562c0be1a62f570ecc70317a829d94ab0806"
         },
         "32bit": {
-            "url": "https://windows.php.net/downloads/releases/php-8.2.30-Win32-vs16-x86.zip",
-            "hash": "b1d59e8042c7211bb28d8e1fa4a7c04c30f155818349744b7f5d3accf3ebc2f0"
+            "url": "https://windows.php.net/downloads/releases/php-8.2.23-Win32-vs16-x86.zip",
+            "hash": "2e2cfc72fa08a76debc549f0edc76e30e3013ce2d07479cd3298328014963b67"
         }
     },
     "bin": [
@@ -42,6 +42,6 @@
         }
     },
     "suggest": {
-        "vcredist": "extras/vcredist2022"
+        "vcredist": "extras/vcredist2019"
     }
 }

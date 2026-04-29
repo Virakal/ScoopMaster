@@ -1,62 +1,22 @@
 {
-  "version": "1.5.2",
-  "description": "A lightweight video player / 轻量级视频播放器",
-  "homepage": "https://github.com/nini22P/iris",
-  "license": {
-    "identifier": "AGPL-3.0 license",
-    "url": "https://github.com/nini22P/iris#AGPL-3.0-1-ov-file"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/nini22P/iris/releases/download/v1.5.2/IRIS-windows.zip",
-      "hash": "6f8841ad2ffd83375fd4351b7d3b53b12a627af7520675a69bbf776a13819b14"
-    }
-  },
-  "extract_dir": "IRIS",
-  "installer": {
-    "script": [
-      "# handle runtime cache",
-      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-      "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\nini22p.iris\"",
-      "Remove-Module -Name AppsUtils"
-    ]
-  },
-  "uninstaller": {
-    "script": [
-      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-      "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\nini22p.iris\"",
-      "Remove-Module -Name AppsUtils"
-    ]
-  },
-  "bin": [
-    [
-      "iris.exe",
-      "iris"
+    "version": "0.2.2",
+    "description": "Decentralized messenger",
+    "homepage": "https://iris.to/",
+    "license": "MIT",
+    "url": "https://github.com/irislib/iris-messenger/releases/download/app-v0.2.2/iris_0.2.2_x64_en-US.msi",
+    "hash": "18d1b74612ae6200a29e1ae80d130dd2a3527a6d125926a6784b9f1f6aa8badf",
+    "extract_dir": "PFiles/iris",
+    "shortcuts": [
+        [
+            "iris.exe",
+            "Iris"
+        ]
     ],
-    [
-      "iris-updater.bat",
-      "iris-updater"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "iris.exe",
-      "iris"
-    ],
-    [
-      "iris-updater.bat",
-      "iris-updater"
-    ]
-  ],
-  "checkver": {
-    "url": "https://api.github.com/repos/nini22P/iris/releases/latest",
-    "regex": "/releases/tag/v([\\d.]+)"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://github.com/nini22P/iris/releases/download/v$version/IRIS-windows.zip"
-      }
+    "checkver": {
+        "url": "https://api.github.com/repos/irislib/iris-messenger/releases/latest",
+        "regex": "/iris_(?<version>[\\d.]+)_x64_en-US.msi"
+    },
+    "autoupdate": {
+        "url": "https://github.com/irislib/iris-messenger/releases/download/app-v$version/iris_$version_x64_en-US.msi"
     }
-  }
 }

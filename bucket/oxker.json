@@ -1,12 +1,12 @@
 {
-    "version": "0.13.1",
+    "version": "0.7.2",
     "description": "A simple tui to view & control docker containers",
     "homepage": "https://github.com/mrjackwills/oxker",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mrjackwills/oxker/releases/download/v0.13.1/oxker_windows_x86_64.zip",
-            "hash": "16d51c728bb3e43ea2e92394d2ab429bf8fb09d0f73b23c8400882e419f1f431"
+            "url": "https://github.com/mrjackwills/oxker/releases/download/v0.7.2/oxker_windows_x86_64.zip",
+            "hash": "24d43abbbe55c88f263b5f2845442ebb94188c5fb1bcf5ec30a8b4c2769efb5a"
         }
     },
     "bin": "oxker.exe",

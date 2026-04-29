@@ -1,18 +1,16 @@
 {
-    "version": "1.75.1",
-    "description": "A microservices (http, grpc) load testing tool.",
-    "homepage": "https://fortio.org/",
+    "version": "1.66.4",
+    "description": "A load testing library, command line tool, advanced echo server and web UI written in Go",
+    "homepage": "https://github.com/fortio/fortio",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/fortio/fortio/releases/download/v1.75.1/fortio_win_1.75.1.zip",
-            "hash": "3a59fee7e63996dcab42708a487693ee5fe1e0669a0527367c1badb794902b36"
+            "url": "https://github.com/fortio/fortio/releases/download/v1.66.4/fortio_win_1.66.4.zip",
+            "hash": "a9e1a31e9512183a39a4bed27cb384a94d5c25290326cba97e9f6221bb2928d8"
         }
     },
     "bin": "fortio.exe",
-    "checkver": {
-        "github": "https://github.com/fortio/fortio"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {

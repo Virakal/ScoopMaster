@@ -1,18 +1,18 @@
 {
-    "version": "1.1.5",
+    "version": "0.11.12",
     "description": "Build tool aiming for Java and Scala.",
-    "homepage": "https://mill-build.org",
+    "homepage": "https://mill-build.com/",
     "license": "MIT",
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://repo1.maven.org/maven2/com/lihaoyi/mill-dist/1.1.5/mill-dist-1.1.5-mill.bat#/mill.bat",
-    "hash": "4e34a8d5a7c30b492ede5475aa354a9a7ffb4e4073ad578f865cac8c353a78fa",
+    "url": "https://github.com/com-lihaoyi/mill/releases/download/0.11.12/0.11.12-assembly#/mill.bat",
+    "hash": "938fe8307bedab961763c851957e2058dd7a0a57e35c4027ea6448a04047349a",
     "bin": "mill.bat",
     "checkver": {
         "github": "https://github.com/com-lihaoyi/mill"
     },
     "autoupdate": {
-        "url": "https://repo1.maven.org/maven2/com/lihaoyi/mill-dist/$version/mill-dist-$version-mill.bat#/mill.bat"
+        "url": "https://github.com/com-lihaoyi/mill/releases/download/$matchHead/$version-assembly#/mill.bat"
     }
 }

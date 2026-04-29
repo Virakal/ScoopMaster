@@ -1,16 +1,16 @@
 {
-    "version": "0.8.1.1",
+    "version": "0.8",
     "description": "Program that allows to play games created with RPG Maker 2000 and 2003",
     "homepage": "https://easyrpg.org/player/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://easyrpg.org/downloads/player/0.8.1.1/easyrpg-player-0.8.1.1-windows-x64.zip",
-            "hash": "49590bd595f60cd3a2833f9bea7dcb4b2f90b9a0d86ebf57423378fcdd50cd88"
+            "url": "https://easyrpg.org/downloads/player/0.8/easyrpg-player-0.8-windows-x64.zip",
+            "hash": "3f328bdc60d213fca32252f152321e8a3fb6b28862486c0f18dcab7b4832a7f8"
         },
         "32bit": {
-            "url": "https://easyrpg.org/downloads/player/0.8.1.1/easyrpg-player-0.8.1.1-windows.zip",
-            "hash": "ce38bacb365a576b6109da922c3e4754abcb72d397a765304d28f24edb0959ec"
+            "url": "https://easyrpg.org/downloads/player/0.8/easyrpg-player-0.8-windows.zip",
+            "hash": "985fceed5e2c6146a70f844fd02577e59270cc9b63ea59fc0a59a187c0456146"
         }
     },
     "bin": "Player.exe",

@@ -1,17 +1,18 @@
 {
-    "version": "11.0.1",
-    "description": "Krokiet is the Slint frontend for Czkawka, helping you remove unnecessary files from your computer.",
+    "version": "7.0.0",
+    "description": "GUI tool to find duplicates, similar images and music.",
     "homepage": "https://github.com/qarmin/czkawka",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qarmin/czkawka/releases/download/11.0.1/windows_krokiet_on_linux.exe",
-            "hash": "1cb1dd30c0b4141b9d6f916da2a51374b2760be97569c9be64c75792a452b60b"
+            "url": "https://github.com/qarmin/czkawka/releases/download/7.0.0/windows_krokiet.exe#/krokiet.exe",
+            "hash": "c98191d420f3c66f56fab9e232e604c354ecae30513b79497f8430f6111be42c"
         }
     },
-    "shortcuts": [
+    "shortcuts": 
+    [
         [
-            "windows_krokiet_on_linux.exe",
+            "krokiet.exe",
             "Krokiet"
         ]
     ],
@@ -19,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/qarmin/czkawka/releases/download/$version/windows_krokiet_on_linux.exe"
+                "url": "https://github.com/qarmin/czkawka/releases/download/$version/windows_krokiet.exe#/krokiet.exe"
             }
         }
     }

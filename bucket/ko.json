@@ -1,20 +1,20 @@
 {
-    "version": "0.18.1",
+    "version": "0.16.0",
     "description": "A simple, fast container image builder for Go applications",
     "homepage": "https://ko.build/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ko-build/ko/releases/download/v0.18.1/ko_0.18.1_Windows_x86_64.tar.gz",
-            "hash": "d15c5e391279a2222d4d659ac53047e08d70e21fea54b2133f0a5c25a1f1f694"
+            "url": "https://github.com/ko-build/ko/releases/download/v0.16.0/ko_0.16.0_Windows_x86_64.tar.gz",
+            "hash": "d81922fa068ec52e02818368b3594b557970d3cf2ddb3abf4189ddd15df9e710"
         },
         "32bit": {
-            "url": "https://github.com/ko-build/ko/releases/download/v0.18.1/ko_0.18.1_Windows_i386.tar.gz",
-            "hash": "871dc1440c44177cde66c9af1e3bc7fa27f3f2a70bda172cdae4cfcbb5f43d73"
+            "url": "https://github.com/ko-build/ko/releases/download/v0.16.0/ko_0.16.0_Windows_i386.tar.gz",
+            "hash": "1966a104604e63bcbd5dab4c7a0c5e56e6ce815d114c352f4032496fd6627cef"
         },
         "arm64": {
-            "url": "https://github.com/ko-build/ko/releases/download/v0.18.1/ko_0.18.1_Windows_arm64.tar.gz",
-            "hash": "bca8d4bfce66988c55bcd93f2bee798a9d1fab283d4e28faa8033d97aaa8aa8b"
+            "url": "https://github.com/ko-build/ko/releases/download/v0.16.0/ko_0.16.0_Windows_arm64.tar.gz",
+            "hash": "fb482ce417b1f5bf255eea0fd4249250fce9ed246bb9a0604da5d4fdade8bf6f"
         }
     },
     "bin": "ko.exe",

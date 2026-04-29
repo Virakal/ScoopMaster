@@ -1,10 +1,10 @@
 {
     "homepage": "https://sourceforge.net/projects/controlremote/",
-    "description": "A program for managing IR remotes and creating device upgrade files for JP1 programmable remotes.",
-    "version": "3.2.11",
+    "description": "",
+    "version": "3.1.2",
     "license": "Fair License",
-    "url": "https://downloads.sourceforge.net/project/controlremote/RemoteMaster/v3.2.11/RMIR.v3.2.11-bin.zip",
-    "hash": "139c738475a9b37fed56cd7ff13bbf5a97c7f264f9f8d095830fcf6bc7b4763d",
+    "url": "https://downloads.sourceforge.net/project/controlremote/RemoteMaster/v3.1.2/RMIR.v3.1.2-bin.zip",
+    "hash": "c9c3e3aa2c76acc559edc1644c974e6d1a10716b62370baad52025b07b08dcfa",
     "persist": "RemoteMaster.properties",
     "pre_install": [
         "if (!(Test-Path $persist_dir\\RemoteMaster.properties)) {",

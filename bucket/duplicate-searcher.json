@@ -1,18 +1,18 @@
 {
-    "version": "10.8.1",
+    "version": "10.5.0",
     "description": "Find duplicate files and link them using hard links to save a lot of disk space without deleting!",
     "homepage": "https://malich.org/duplicate_searcher",
     "license": "Unknown",
-    "url": "https://malich.org/download_duplicate_searcher?id=zip&sid=87c89cb8afec49359e79a84cc12122be&version=10.8.1#/dl.zip",
-    "hash": "9bd80980167e3ccad1e60d56698e10bddf8ee78da8b0fd9459c85619e622fad0",
+    "url": "https://software.233366.xyz/api/raw/?path=/DupFilesSearchAndLink_10.5.0.zip#/dl.7z",
+    "hash": "9c519ea9ef11e563153ae8d6c481db2cf871c6d604557ee3a5aa887dbac0cbca",
     "shortcuts": [
         [
             "DuplicateSearcher.Launcher.exe",
             "Duplicate Searcher"
         ]
     ],
-    "checkver": "download_duplicate_searcher\\?id=zip&amp;sid=(?<sid>.*)&amp;version=(?<version>[\\d.]+)",
+    "checkver": "version=([\\d.]+)",
     "autoupdate": {
-        "url": "https://malich.org/download_duplicate_searcher?id=zip&sid=$matchSid&version=$version#/dl.zip"
+        "url": "https://software.233366.xyz/api/raw/?path=/DupFilesSearchAndLink_$version.zip#/dl.7z"
     }
 }

@@ -1,21 +1,23 @@
 {
-    "version": "0.1.2",
+    "version": "0.0.13",
     "description": "command-line twitter client written in golang",
     "homepage": "https://github.com/mattn/twty",
     "license": "MIT License",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mattn/twty/releases/download/v0.1.2/twty_v0.1.2_windows_amd64.zip",
-            "hash": "8a08457b15554369c4832f6cc7ba286e21be38431dab73d36f3e4e705f75546a",
+            "url": "https://github.com/mattn/twty/releases/download/v0.0.13/twty_v0.0.13_windows_amd64.zip",
+            "hash": "5395efeab11b1189b64ea4367ed970e8834b5f265af483ea3574b801d604ef5d",
             "extract_dir": "twty_v0.0.13_windows_amd64"
         },
         "arm64": {
-            "url": "https://github.com/mattn/twty/releases/download/v0.1.2/twty_v0.1.2_windows_arm64.zip",
-            "hash": "001aaa107b66392be11ec9647956b9987239579645398fd9e80c5a21b52a4d51",
+            "url": "https://github.com/mattn/twty/releases/download/v0.0.13/twty_v0.0.13_windows_arm64.zip",
+            "hash": "8b47eb49d7e59eb89f324ac8bea23018be54b100943a6f3de2cfcb4a23eae2e5",
             "extract_dir": "twty_v0.0.13_windows_arm64"
         }
     },
-    "bin": "twty.exe",
+    "bin": [
+        "twty.exe"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

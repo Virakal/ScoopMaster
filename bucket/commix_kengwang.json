@@ -1,5 +1,5 @@
 {
-    "version": "4.1",
+    "version": "3.9",
     "description": "Automated All-in-One OS Command Injection Exploitation Tool.",
     "homepage": "https://github.com/commixproject/commix",
     "license": "https://github.com/commixproject/commix/blob/master/LICENSE.txt",
@@ -8,12 +8,28 @@
     "suggest": {
         "python": "python311"
     },
-    "url": "https://github.com/commixproject/commix/archive/refs/tags/v4.1.zip",
-    "hash": "4b8cc36bf1d773378ebd1c1d1294e13056071c1007764398868c6af4061e3f7f",
-    "extract_dir": "commix-4.1",
-    "autoupdate": {
-        "url": "https://github.com/commixproject/commix/archive/refs/tags/v$version.zip",
-        "extract_dir": "commix-$version"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/commixproject/commix/archive/refs/tags/v3.9.zip",
+            "hash": "74ba82d4b17231c91f49d306843e5e4fc68c17ee4e53c9df58471e48d7e43e98"
+        },
+        "32bit": {
+            "url": "https://github.com/commixproject/commix/archive/refs/tags/v3.9.zip",
+            "hash": "74ba82d4b17231c91f49d306843e5e4fc68c17ee4e53c9df58471e48d7e43e98"
+        },
+        "arm64": {
+            "url": "https://github.com/commixproject/commix/archive/refs/tags/v3.9.zip",
+            "hash": "74ba82d4b17231c91f49d306843e5e4fc68c17ee4e53c9df58471e48d7e43e98"
+        }
     },
-    "bin": "commix.py"
+    "pre_install": [
+        "Move-Item -Path $dir\\commix-*\\* -Destination $dir -Force -ErrorAction Stop",
+        "Remove-Item -Path $dir\\commix-* -Recurse -Force -ErrorAction Stop",
+        "$content = (Get-Content -Path $(Join-Path $(Find-BucketDirectory -Root -Name ctftools) starters/commix.cmd)) -replace '%%HOME%%', $dir",
+        "Set-Content -Path $(Join-Path $dir commix.cmd) -Value $content -Encoding UTF8"
+    ],
+    "autoupdate": {
+        "url": "https://github.com/commixproject/commix/archive/refs/tags/v$version.zip"
+    },
+    "bin": "commix.cmd"
 }

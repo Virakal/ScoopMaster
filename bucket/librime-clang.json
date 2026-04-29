@@ -1,12 +1,12 @@
 {
-    "version": "1.16.1",
+    "version": "1.11.2",
     "description": "librime clang compiled",
     "homepage": "https://github.com/rime/librime",
     "license": "BSD",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rime/librime/releases/download/1.16.1/rime-de4700e-Windows-clang-x64.7z",
-            "hash": "f12ba484b57a60fc4ceaac123302c96f0c7f37d29b9a68fd09dbd564d2d539ea"
+            "url": "https://github.com/rime/librime/releases/download/1.9.0/rime-a608767-Windows-clang-x64.7z",
+            "hash": "FC9BD42285F52E2A2442AE30E3478671FC8F5E7F727477650A798450CFCC70DD"
         }
     },
     "checkver": {

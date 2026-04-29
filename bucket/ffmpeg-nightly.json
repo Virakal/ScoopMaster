@@ -1,18 +1,13 @@
 {
-    "version": "20260429-124254-g397c7c7524",
+    "version": "1726666809",
     "description": "A complete, cross-platform solution to record, convert and stream audio and video.",
     "homepage": "https://ffmpeg.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-04-29-13-28/ffmpeg-N-124254-g397c7c7524-win64-gpl.zip",
-            "hash": "d17b46fb35947d4d51cf90c1b11e26ec51619b5382db4a6ba75e2fdc3650bca6",
-            "extract_dir": "ffmpeg-N-124254-g397c7c7524-win64-gpl"
-        },
-        "arm64": {
-            "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-04-29-13-28/ffmpeg-N-124254-g397c7c7524-winarm64-gpl.zip",
-            "hash": "a6ebf1161fb778ecad8720c7a8614e0922e62f3242073935a1ad9f8ba76fb52e",
-            "extract_dir": "ffmpeg-N-124254-g397c7c7524-winarm64-gpl"
+            "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip",
+            "hash": "48f8280935fb151be293877fa765d7d50ea53faa464595adc513a576391505a1",
+            "extract_dir": "ffmpeg-master-latest-win64-gpl"
         }
     },
     "bin": [
@@ -21,24 +16,14 @@
         "bin\\ffprobe.exe"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/BtbN/FFmpeg-Builds/releases",
-        "jsonpath": "$..assets[?(@.browser_download_url =~ /ffmpeg-N-\\d+-g[0-9a-f]+-win64-gpl\\.zip/i)].browser_download_url",
-        "regex": "autobuild-(?<buildtime>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[\\d-]+)/ffmpeg-N-(?<commitnum>\\d+)-g(?<commithash>[0-9a-f]+)-win64-gpl\\.zip",
-        "replace": "${year}${month}${day}-${commitnum}-g${commithash}"
+        "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/292087234/releases/latest).published_at -UFormat %s } catch { '' }",
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/ffmpeg-N-$matchCommitnum-g$matchCommithash-win64-gpl.zip",
-                "extract_dir": "ffmpeg-N-$matchCommitnum-g$matchCommithash-win64-gpl"
-            },
-            "arm64": {
-                "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-$matchBuildtime/ffmpeg-N-$matchCommitnum-g$matchCommithash-winarm64-gpl.zip",
-                "extract_dir": "ffmpeg-N-$matchCommitnum-g$matchCommithash-winarm64-gpl"
+                "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.sha256"
         }
     }
 }

@@ -1,15 +1,22 @@
 {
-    "version": "1.0.16",
+    "version": "0.7.103",
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/meshery/meshery/releases/download/v1.0.16/mesheryctl_1.0.16_Windows_x86_64.zip",
+        "32bit": {
+            "url": "https://github.com/meshery/meshery/releases/download/v0.7.103/mesheryctl_0.7.103_Windows_i386.zip",
             "bin": [
                 "mesheryctl.exe"
             ],
-            "hash": "0748ebbe78ec2e841a3c6f047b83b5c0eaa1468d24ba02fc15625b4794db3fea"
+            "hash": "8618679701fd8efe1cb20a0f861f9b320e492d76987509ce55876c9be4da4031"
+        },
+        "64bit": {
+            "url": "https://github.com/meshery/meshery/releases/download/v0.7.103/mesheryctl_0.7.103_Windows_x86_64.zip",
+            "bin": [
+                "mesheryctl.exe"
+            ],
+            "hash": "61b0b25441a4171ff7ed0e016e82dc4c769d04712dff6698bc053844b26c866a"
         }
     },
     "homepage": "https://meshery.io",
     "license": "Apache 2.0",
-    "description": "The Collaborative Cloud Native Manager."
+    "description": "The Cloud Native Management Plane."
 }

@@ -1,10 +1,10 @@
 {
-    "version": "1.4.9",
+    "version": "1.4.7",
     "description": "DirectShow filters that put AviSynth and VapourSynth into video playing",
     "homepage": "https://github.com/CrendKing/avisynth_filter",
     "license": "MIT",
-    "url": "https://github.com/CrendKing/avisynth_filter/releases/download/v1.4.9/SynthFilters.zip",
-    "hash": "8d647abf4f13d33b9ac5e3b7e0978aa627b70bf7b0784ef25ed98fa59df02dfd",
+    "url": "https://github.com/CrendKing/avisynth_filter/releases/download/v1.4.7/SynthFilters.zip",
+    "hash": "082db652513a931ffc81c173d266f87c39afbdb00eb8b6d2e66e25c50acf3fa0",
     "installer": {
         "script": [
             "if ($architecture -eq \"64bit\") {",

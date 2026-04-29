@@ -1,30 +1,20 @@
 {
+    "version": "7.67",
     "homepage": "https://github.com/rigaya/NVEnc",
     "description": "Transcoding software using NVENC of NVIDIA.",
-    "version": "9.15",
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/rigaya/NVEnc/releases/download/9.15/NVEncC_9.15_Win32.7z",
-            "hash": "1f5e33104726956b2d511368a1ff1e586988995423b174cf23932b3303f4d5cf",
-            "bin": [
-                [
-                    "NVEncC.exe",
-                    "nvencc"
-                ]
-            ]
+            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_Win32.7z",
+            "hash": "643d447707b0a2cd024f6a694b01f7a762f353a6b9c746ea3d41674050dd3fec"
         },
         "64bit": {
-            "url": "https://github.com/rigaya/NVEnc/releases/download/9.15/NVEncC_9.15_x64.7z",
-            "hash": "dfabeedb6cc1cf9616a1469b60163b2c4b00e6abc5cceafed3d0ff3ef65f934a",
-            "bin": [
-                [
-                    "NVEncC64.exe",
-                    "nvencc"
-                ]
-            ]
+            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_x64.7z",
+            "hash": "26278ec1c081c8342666aeffe86f6f1cc0e665999b75b6e55b51e486902deb57",
+            "pre_install": "Rename-Item \"$dir\\NVEncC64.exe\" 'NVEncC.exe'"
         }
     },
+    "bin": "NVEncC.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

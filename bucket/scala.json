@@ -1,5 +1,5 @@
 {
-    "version": "3.8.3",
+    "version": "3.5.0",
     "description": "A modern multi-paradigm programming language designed to express common programming patterns in a concise, elegant, and type-safe way.",
     "homepage": "https://www.scala-lang.org/",
     "license": "BSD-3-Clause",
@@ -10,9 +10,9 @@
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://github.com/scala/scala3/releases/download/3.8.3/scala3-3.8.3.msi",
-    "hash": "837e252df39148d1590813b94045549e9a80cd1e4e0ee793fc78dfdbee5f7e66",
-    "extract_dir": "PFiles\\Scala",
+    "url": "https://github.com/scala/scala3/releases/download/3.5.0/scala3-3.5.0.zip",
+    "hash": "b167ef264fb09d29e38bff67f9c043c2d8353346dff2ca05c94ebc7cd628a60a",
+    "extract_dir": "scala3-3.5.0",
     "bin": [
         "bin\\scala.bat",
         "bin\\scalac.bat",
@@ -25,9 +25,10 @@
         "github": "https://github.com/scala/scala3/"
     },
     "autoupdate": {
-        "url": "https://github.com/scala/scala3/releases/download/$version/scala3-$version.msi",
+        "url": "https://github.com/scala/scala3/releases/download/$version/scala3-$version.zip",
         "hash": {
-            "url": "$url.sha256"
-        }
+            "url": "$baseurl/sha256sum.txt"
+        },
+        "extract_dir": "scala3-$version"
     }
 }

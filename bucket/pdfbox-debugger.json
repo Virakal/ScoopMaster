@@ -1,30 +1,21 @@
 {
-    "version": "3.0.7",
+    "version": "3.0.3",
     "description": "Apache PDFBox PDF Debugger App",
     "homepage": "https://pdfbox.apache.org/",
     "license": "Apache-2.0",
     "suggest": {
         "JDK": [
-            "java/temurin-lts-jdk",
-            "java/temurin-jdk"
+            "java/oraclejdk",
+            "java/openjdk"
         ]
     },
-    "url": "https://archive.apache.org/dist/pdfbox/3.0.7/debugger-app-3.0.7.jar",
-    "hash": "sha512:483b833c459b7adf3710d18552a0cd0300457965ab1a7479fac1b2ec989778ff618438777f495fe230a6a19dfac64b145e185f15772f664b29784bfdce0ca01d",
+    "url": "https://archive.apache.org/dist/pdfbox/3.0.3/debugger-app-3.0.3.jar",
+    "hash": "sha512:efa49f3c08dbdbd534d0fd90cb6020b319932c6c387ee810b53f3cd3a708e521ac03455510a9ac2627893309f46c32f14f1bdf83130f1a6d6583507ba76db08d",
     "pre_install": [
-        "Rename-Item \"$dir\\debugger-app-$version.jar\" \"$dir\\debugger-app.jar\"",
-        "@(
-            '@echo off',
-            'start javaw -jar \"%~dp0debugger-app.jar\" %*'
-        ) | Out-File -FilePath \"$dir\\pdfbox-debugger.bat\" -Encoding ascii"
+        "Rename-Item \"$dir\\debugger-app*.jar\" 'debugger-app.jar'",
+        "Set-Content \"$dir\\pdfbox-debugger.bat\" '@start javaw.exe -jar \"%~dp0debugger-app.jar\" %*' -Encoding Ascii"
     ],
-    "bin": [
-        [
-            "pdfbox-debugger.bat",
-            "pdfbox-debugger",
-            "gui"
-        ]
-    ],
+    "bin": "debugger-app.jar",
     "shortcuts": [
         [
             "pdfbox-debugger.bat",

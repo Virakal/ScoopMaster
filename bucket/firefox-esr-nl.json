@@ -1,22 +1,21 @@
 {
-    "##": "ltguillaume/schep",
-    "version": "140.10.1",
+    "version": "115.15.0",
     "description": "Extended Support Release of Firefox: the popular open source web browser. This variant makes sure the Scoop-ESR profile is used. Dutch version.",
     "homepage": "https://www.mozilla.org/nl/firefox/organizations/",
     "license": "MPL-2.0",
     "notes": "After installation, the profile manager will be run to choose the right default profile.",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.10.1esr/win64/nl/Firefox%20Setup%20140.10.1esr.exe#/dl.7z",
-            "hash": "sha512:ebac29bf4a57485258ff4fb56a82569ca8824cc2da62dbeebec45b38c5e1e362450f53ad097669f630ee9469900620d71307ab83919307bc6357bac69dd19df0"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/115.15.0esr/win64/nl/Firefox%20Setup%20115.15.0esr.exe#/dl.7z",
+            "hash": "sha512:2f8286be03cb6c9e89f61180fe654d334f44e1f12fe6d7ad34238554dbcf76a67646eecc691fd3273906c8cf5bcd32fe13380dd0a98659cdfb2e728abaab6a15"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.10.1esr/win32/nl/Firefox%20Setup%20140.10.1esr.exe#/dl.7z",
-            "hash": "sha512:77e05adb3344e0109ed9ce280eec9ec9ae7009f49264d2d6097fc001744c09f8f397fe3f3e89e2aaef83bdeed9ce8e10c6ec361af5cde22fcf55838392848ed4"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/115.15.0esr/win32/nl/Firefox%20Setup%20115.15.0esr.exe#/dl.7z",
+            "hash": "sha512:bb17a3a793e800c22951b7c6bb0dff996d0c683a0fb1544497705d95b27ec80943dd0fb4f3bc68ef4919f48dc3d296a8c17f6afd65438be0975eb9a91f78ca95"
         },
         "arm64": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.10.1esr/win64-aarch64/nl/Firefox%20Setup%20140.10.1esr.exe#/dl.7z",
-            "hash": "sha512:e906d80b5de5e91c3b13f1af32283f1e367c506e3c48f18ac4455390381c4e84b7db650991953dbba0ad60ba48d3db92396442b425cb39b9e150dfbf3a16f068"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/115.15.0esr/win64-aarch64/nl/Firefox%20Setup%20115.15.0esr.exe#/dl.7z",
+            "hash": "sha512:6dc14d6267159920c3e26569a54ebda2be7b0911063a207c9c0d7ab03a28513ea8d4eb4f224f8c8a8b8f22f2493b7495924c3f438e4eea3f9f46c564b9ebd74b"
         }
     },
     "extract_dir": "core",
@@ -27,7 +26,7 @@
         "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
         "}",
         "if (!(Test-Path \"$persist_dir\\profile\\times.json\")) {",
-        "    firefox-esr.exe -CreateProfile \"Scoop-ESR $persist_dir\\profile\"",
+        "	firefox-esr.exe -CreateProfile \"Scoop-ESR $persist_dir\\profile\"",
         "}",
         "Start-Process -WorkingDirectory $dir -FilePath firefox.exe -ArgumentList '-P'"
     ],

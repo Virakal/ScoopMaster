@@ -1,13 +1,12 @@
 {
-    "version": "2025-09-09",
+    "version": "2024-01-21",
     "description": "易有云提供全平台的数据互通，带你享受P2P的极速体验。随时随地备份你的照片、文件，轻松打造属于你的私有云服务。",
     "homepage": "https://www.linkease.com",
     "license": "Unknown",
-    "url": "https://fw.koolcenter.com/binary/LinkEase/Client/LinkEaseSetup.exe#/dl.7z",
-    "hash": "395002bd28ae633efd9e48cf44d8198909e2d95b42fc755b753f52ce3e9bb670",
+    "url": "https://fw.koolcenter.com/binary/LinkEase/Client/LinkEaseWin.zip",
+    "hash": "1fff3ebe8ec80758539bd2be5a66211378172462b4233d8b838ab9e71e4e8363",
     "installer": {
         "script": [
-            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
             "# handle runtime cache",
             "if (!(Test-Path $persist_dir)) {",
             "    New-Item $persist_dir -Type Directory -Force | Out-Null",
@@ -59,9 +58,12 @@
     ],
     "checkver": {
         "url": "https://fw.koolcenter.com/binary/LinkEase/Client",
-        "regex": "LinkEaseSetup.exe[\\s\\S]*?([\\d]{4}-[\\d]{2}-[\\d]{2})"
+        "regex": "LinkEaseWin.zip[\\s\\S]*?([\\d]{4}-[\\d]{2}-[\\d]{2})"
     },
     "autoupdate": {
-        "url": "https://fw.koolcenter.com/binary/LinkEase/Client/LinkEaseSetup.exe#/dl.7z"
+        "url": "https://fw.koolcenter.com/binary/LinkEase/Client/LinkEaseWin.zip",
+        "hash": {
+            "url": "https://fw.koolcenter.com/binary/LinkEase/Client/?hash=/binary/LinkEase/Client/LinkEaseWin.zip"
+        }
     }
 }

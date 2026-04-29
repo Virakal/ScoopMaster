@@ -1,5 +1,5 @@
 {
-    "version": "4.73",
+    "version": "4.67",
     "description": "IrfanView Plugins. PlugIns will be installed into IrfanView \"PlugIns\" directory",
     "homepage": "https://www.irfanview.com/plugins.htm",
     "license": {
@@ -9,12 +9,12 @@
     "depends": "scoop-apps/irfanview-install",
     "architecture": {
         "64bit": {
-            "url": "https://www.irfanview.info/files/iview473_plugins_x64_setup.exe#/setup.exe",
-            "hash": "79979c55958f473209e9b7bddaf1410f0bf4c48be6d2d02ae3badeadccf74da3"
+            "url": "https://www.irfanview.info/files/iview467_plugins_x64_setup.exe#/setup.exe",
+            "hash": "57344b9da73db8bffa4436b34af146bd781cdd8768cb5535d484e2704bedd7f3"
         },
         "32bit": {
-            "url": "https://www.irfanview.info/files/iview473_plugins_setup.exe#/setup.exe",
-            "hash": "8c3c30ab27150cd11df574192346779a55ccaaa7a602901137fd8f059fa20519"
+            "url": "https://www.irfanview.info/files/iview467_plugins_setup.exe#/setup.exe",
+            "hash": "4a8b77f88c5e4680f17071228314dd90bdf8f529aa2a7a8cbce0a76e728c1ec7"
         }
     },
     "pre_download": "Assert-Administrator",

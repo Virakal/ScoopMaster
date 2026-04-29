@@ -1,12 +1,19 @@
 {
     "architecture": {
+        "32bit": {
+            "hash": "b6e9e2a5326380f361f7aff08549b50f836f18aabb0a151e4a9cb1937351c195",
+            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_1.0.35_100035_303303_x32.exe#/dl.7z"
+        },
         "64bit": {
-            "hash": "1c8edc326e6f58d8c46c499e107e52f4e81f7aeef8588cc82d4f87c5312720e0",
-            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_100110_312643_x64.exe?key1=39f48f3aa2c7f96bfab5f76c690612a9&key2=69d92a18#/dl.7z"
+            "hash": "9c7825915482234c89caefeeae4476429fd76ff0fbb5220116ab24aed0a78b53",
+            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_1.0.35_100035_303304_x64.exe#/dl.7z"
         }
     },
     "autoupdate": {
         "architecture": {
+            "32bit": {
+                "url": "$matchUrl32#/dl.7z"
+            },
             "64bit": {
                 "url": "$matchUrl64#/dl.7z"
             }
@@ -17,6 +24,7 @@
             "$script:ver = json_path $page '$.data.version' -single $true",
             "$script:matchesHashtable = @{",
             "   'url64' = (json_path $page '$.data.downloadUrlFor64' -single $true)",
+            "   'url32' = (json_path $page '$.data.downloadUrl' -single $true)",
             "}",
             "$script:regexp = $null"
         ],
@@ -28,39 +36,12 @@
         "identifier": "Freeware",
         "url": "https://dd.163.com/policy/privacy"
     },
-    "pre_install": [
-        "$targetPath = \"$env:LocalAppData\\NeteaseDD\"",
-        "if (Test-Path \"$targetPath\") {",
-        "    Remove-Item -Path \"$targetPath\" -Force -Recurse",
-        "}",
-        "New-Item \"$targetPath\" -ItemType Junction -Target \"$dir\" | Out-Null"
-    ],
-    "post_install": [
-        "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
-        "ensure \"$persist_dir\" | Out-Null",
-        "$targetPath = \"$env:AppData\\CCVoiceHub\"",
-        "$linkType = (Get-Item -Path \"$targetPath\" -ErrorAction SilentlyContinue).LinkType",
-        "if (Test-Path \"$targetPath\") {",
-        "    if ($linkType -eq 'Junction') {",
-        "        Remove-Item -Path \"$targetPath\" -Force",
-        "    } else {",
-        "        Get-ChildItem -Path \"$targetPath\" -Force | Move-Item -Destination $persist_dir -Force",
-        "        Remove-Item -Path \"$targetPath\" -Force -Recurse",
-        "    }",
-        "}",
-        "New-Item \"$targetPath\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
-    ],
-    "uninstaller": {
-        "script": [
-            "Remove-Item -Path \"$env:LocalAppData\\NeteaseDD\" -Force -Recurse -ErrorAction SilentlyContinue",
-            "Remove-Item -Path \"$env:AppData\\CCVoiceHub\" -Force -Recurse -ErrorAction SilentlyContinue"
-        ]
-    },
+    "post_install": "Remove-Item \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "Start.exe",
             "网易DD"
         ]
     ],
-    "version": "1.1.10"
+    "version": "1.0.35"
 }

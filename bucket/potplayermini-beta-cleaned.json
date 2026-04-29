@@ -1,5 +1,5 @@
 {
-    "version": "26.03.30",
+    "version": "24.08.19",
     "description": "Highly customizable media player",
     "homepage": "https://potplayer.daum.net",
     "license": {
@@ -13,8 +13,8 @@
                 "https://raw.githubusercontent.com/yurical/scoop-mint/master/scripts/remove-potplayermini-beta-ads.ps1"
             ],
             "hash": [
-                "65ba4a9ad9b925b5616625362209e0c29c6580aa82aacb1ddff5ed7baf67b61f",
-                "4a4ea012a047dd82f4d56c6b58f05c5c04f3b887d1244cbcdb353c7ff3a5ba20"
+                "e8844ed34fd21f1c6d69d624ded75d736d546097442efcdfbc095248150b42bd",
+                "1383e7bd9ea3e6f51d7c412bc7f01f8ff6a601144bdeb0e51eff7e382b2dccb2"
             ],
             "shortcuts": [
                 [
@@ -55,13 +55,9 @@
     "post_install": "& \"$dir\\remove-potplayermini-beta-ads.ps1\" -Path $dir",
     "persist": [
         "Capture",
-        "Extension",
-        "Extention",
         "IconPack",
         "Logos",
-        "Module",
         "Playlist",
-        "PxShader",
         "Skins",
         "UrlList",
         "PotPlayerMini64.ini"

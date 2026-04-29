@@ -1,21 +1,21 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "11.0.100-preview.3.26207.106",
+    "version": "9.0.100-rc.1.24452.12",
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/11.0.100-preview.3.26207.106/dotnet-sdk-11.0.100-preview.3.26207.106-win-x64.zip",
-            "hash": "sha512:6c8e71848cdcc91f25d2dce2f5f953225e1ac913af3aab0e926373215b75c662fbb23b09469b5f70e39ae9c03851c0998330bafbe75007f45985f9368346a500"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-x64.zip",
+            "hash": "sha512:88b4e63017663e807a26b6e3775cb67644f205a03e865f2b67c327e17120e46e0bf6aeb6f4c098cacb9822987d9f167a890c69d733e83dd998041d24c09ceb84"
         },
         "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/11.0.100-preview.3.26207.106/dotnet-sdk-11.0.100-preview.3.26207.106-win-x86.zip",
-            "hash": "sha512:5e06cae867c4ba45ad03315bfe6d1bfaf643f3b57b4b752847660c64e07767834051b59897994f58e6d7c216dcc38ab1b6a6af42eb10ddfb95395395263d6b91"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-x86.zip",
+            "hash": "sha512:376ab68351566f8eebb837959d2e5c441e33081ca67fe1aa1223bc9bb7f0e86b626da01be9f5fb7e5a8601e61b48bd5a73955a0911633951c68aedbff4b53a57"
         },
         "arm64": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/11.0.100-preview.3.26207.106/dotnet-sdk-11.0.100-preview.3.26207.106-win-arm64.zip",
-            "hash": "sha512:c201f2ddd778b95f41a8d8d02873643638e3c1a58fdcd71c3234b6f97bcbf122fdd914451d962e6a4b760d94efcd786a3930b506b2dacab8b07f40f542eba580"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.100-rc.1.24452.12/dotnet-sdk-9.0.100-rc.1.24452.12-win-arm64.zip",
+            "hash": "sha512:d8ed11c6490cb532cdadd9f36b75e11643cc4ce771d8d68efece94fa3be438c2304eabd890dff7363c7fdb18214bb7ef1534fe28a7a9d5672c4ede81a70ade0e"
         }
     },
     "bin": "dotnet.exe",

@@ -1,21 +1,24 @@
 {
-    "version": "0.27.13",
-    "description": "A console application for NVIDIA GPUs for high-performance JPEG image encoding and decoding.",
+    "version": "142",
+    "description": "A console application for NVIDIA GPUs for high-performance image encoding and decoding.",
     "homepage": "https://github.com/CESNET/GPUJPEG",
     "license": "BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CESNET/GPUJPEG/releases/download/v0.27.13/GPUJPEG-Windows-all.zip",
-            "hash": "38ae4ef75f3a8879aa14219b49e78301919f42a6c10acf31f815f933b8c457e6"
+            "url": "https://github.com/CESNET/GPUJPEG/releases/download/continuous/GPUJPEG.zip",
+            "hash": "8688992189bfc93f58c9e0a1bf9ddc04351cae80be5d4f5832d6f39b447d8781"
         }
     },
     "extract_dir": "GPUJPEG",
     "bin": "bin\\gpujpegtool.exe",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/CESNET/GPUJPEG/actions/workflows/ccpp.yml?query=branch%3Amaster+is%3Asuccess",
+        "regex": "#(\\d+):"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CESNET/GPUJPEG/releases/download/v$version/GPUJPEG-Windows-all.zip"
+                "url": "https://github.com/CESNET/GPUJPEG/releases/download/continuous/GPUJPEG.zip"
             }
         }
     }

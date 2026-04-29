@@ -1,10 +1,10 @@
 {
-    "version": "26.2.3.2",
+    "version": "24.8.1.2",
     "description": "LibreOffice SDK.",
     "homepage": "https://libreoffice.org/",
     "license": "MPL-2.0",
-    "url": "https://downloadarchive.documentfoundation.org/libreoffice/old/26.2.3.2/win/x86_64/LibreOffice_26.2.3.2_Win_x86-64_sdk.msi#/setup.msi_",
-    "hash": "a86a01edd7e7ff578fe03c1e2cc72ca08582cdb5bb9104c08215c30b02097d1a",
+    "url": "https://downloadarchive.documentfoundation.org/libreoffice/old/24.8.1.2/win/x86_64/LibreOffice_24.8.1.2_Win_x86-64_sdk.msi#/setup.msi_",
+    "hash": "d1f49a4b8298b3ed74b1e70b3427c702b62eeaa5191b6976b8e4254924f64b60",
     "installer": {
         "script": [
             "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",

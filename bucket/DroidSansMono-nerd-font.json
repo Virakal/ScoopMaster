@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'DroidSansMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/DroidSansMono.tar.xz",
-    "hash": "43ad0a4e238ad078300d0aa2ebca5f7aaf6ff2cdb25c5cfe8191b79aab7d0af2",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/DroidSansMono.tar.xz",
+    "hash": "d3910065466618646baf9a621d385f8122c310e29d449462e5bd25bd300e0dd7",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,12 +1,12 @@
 {
-    "version": "2026.2.1",
+    "version": "2024.8.2",
     "description": "A GUI inspector for mobile apps and more, powered by a (separately installed) Appium server.",
     "homepage": "http://appium.io/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/appium/appium-inspector/releases/download/v2026.2.1/Appium-Inspector-2026.2.1-win-x64.zip",
-            "hash": "sha512:059bf4837f8cf5b3622069705c8ab63d33945dec516c5f531b63e4acbc5697c83a2656735d45d91f068fb71e81109d0813fe356e830eb86c8050b3edb2724424"
+            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.8.2/Appium-Inspector-2024.8.2-win-x64.zip",
+            "hash": "bbd33bf6215bfd1d210f04a7012489f7468b03aaca92933b8ee1326f1c2de639"
         }
     },
     "shortcuts": [
@@ -21,11 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-x64.zip",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
-                }
+                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-x64.zip"
             }
         }
     }

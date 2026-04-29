@@ -1,12 +1,12 @@
 {
-    "version": "2026-03",
+    "version": "2024-09",
     "description": "Eclipse IDE for Eclipse Committers",
     "homepage": "https://www.eclipse.org",
     "license": "EPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "http://download.eclipse.org/technology/epp/downloads/release/2026-03/R/eclipse-committers-2026-03-R-win32-x86_64.zip",
-            "hash": "sha512:7f5ddfe4366680c6526c2f770329e38ca0c94239651d857d02c769abf8b7346657806200045bb2c9e47c9ef9e901896356ffa4eccf45e472baad275c3fe8906d"
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2024-09/R/eclipse-committers-2024-09-R-win32-x86_64.zip",
+            "hash": "sha512:c70107049c36ed3497f2c471a5770324ccbdb6da11ba0577f3cb4c079e878483b50e303c07cb0641ab3b42c749710a660114ef6b4e0523287026416d5262c01e"
         }
     },
     "extract_dir": "eclipse",

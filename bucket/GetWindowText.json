@@ -2,15 +2,15 @@
     "homepage": "http://softwareok.com/?seite=Microsoft/GetWindowText",
     "description": "read window texts and contents",
     "license": "freeware",
-    "version": "5.31",
+    "version": "4.99",
     "architecture": {
         "64bit": {
             "url": "http://softwareok.com/Download/GetWindowText_x64.zip",
-            "hash": "4fe46327914160680d439ef8362d5f9fe9e2e8c1f1eacf91fcc9ef811fa4dc42"
+            "hash": "b8bf6aaa450b94d1d278b7f6b295ecaec4ff48f1b1517fa42cb087bf517bfaa6"
         },
         "32bit": {
             "url": "http://softwareok.com/Download/GetWindowText.zip",
-            "hash": "c0b48a8a263544fdb0ef305ab5097bac67952e937e8ab613cd1f8373efbef30e"
+            "hash": "547edc4b3b1e85963b4d623d65356895b2bd2af57b3f32db6e6b553c7d44bc94"
         }
     },
     "pre_install": [

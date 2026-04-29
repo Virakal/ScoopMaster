@@ -1,48 +1,30 @@
 {
-    "version": "20260423-0417",
+    "version": "20240614-2117",
     "description": "ImageJ distribution with many plugins which facilitating scientific image analysis.",
     "homepage": "https://fiji.sc/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.imagej.net/fiji/archive/latest/20260423-0417/fiji-latest-win64-jdk.zip",
-            "hash": "35c7ae26e3119de06dcecb93289130cce2f47a70690ae11019bebdcabc6d7453",
-            "shortcuts": [
-                [
-                    "fiji-windows-x64.exe",
-                    "Fiji"
-                ]
-            ]
-        },
-        "arm64": {
-            "url": "https://downloads.imagej.net/fiji/archive/latest/20260423-0417/fiji-latest-win-arm64-jdk.zip",
-            "hash": "9bcb680c88e760891b668ef14410fb41d9cd1420ae1092802aebab7eb7cf7fe9",
-            "shortcuts": [
-                [
-                    "fiji-windows-arm64.exe",
-                    "Fiji"
-                ]
-            ]
+            "url": "https://downloads.imagej.net/fiji/archive/20240614-2117/fiji-win64.zip",
+            "hash": "ffd771ea1edd54bc538e0d39d108cf80e040c87a98e8401c36600b1fe7df2a51"
         }
     },
-    "extract_dir": "Fiji",
+    "extract_dir": "Fiji.app",
+    "shortcuts": [
+        [
+            "ImageJ-win64.exe",
+            "(Fiji Is Just) ImageJ"
+        ]
+    ],
     "checkver": {
-        "url": "https://downloads.imagej.net/fiji/archive/latest/?C=M;O=D",
-        "regex": "(\\d{8}-\\d{4})/"
+        "url": "https://downloads.imagej.net/fiji/archive/",
+        "regex": "href=\"(\\d{8}-\\d{4})",
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.imagej.net/fiji/archive/latest/$version/fiji-latest-win64-jdk.zip",
-                "hash": {
-                    "url": "$url.sha256"
-                }
-            },
-            "arm64": {
-                "url": "https://downloads.imagej.net/fiji/archive/latest/$version/fiji-latest-win-arm64-jdk.zip",
-                "hash": {
-                    "url": "$url.sha256"
-                }
+                "url": "https://downloads.imagej.net/fiji/archive/$version/fiji-win64.zip"
             }
         }
     }

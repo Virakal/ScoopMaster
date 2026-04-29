@@ -1,5 +1,5 @@
 {
-    "version": "2.5.5",
+    "version": "1.6.0",
     "description": "(1MB Tiny) Freeware Image & Animation Viewer for Windows",
     "homepage": "https://www.nyam.pe.kr/dev/imagine/",
     "license": {
@@ -9,8 +9,8 @@
     "pre_install": "if (!(Test-Path \"$persist_dir\\Imagine.ini\")) { New-Item \"$dir\\Imagine.ini\" | Out-Null }",
     "architecture": {
         "64bit": {
-            "url": "https://www.nyam.pe.kr/dev/imagine/download.php?arch=x64&unicode=1&full=0&setup=0&version=2.5.5#/dl.7z",
-            "hash": "ec7c64108c9ab5f0aaed62903ef90c0ceecf372258abaf8a5ce07b3fa7b410ed",
+            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_1.6.0_x64_Unicode.zip",
+            "hash": "1b87ba77fd34e5a40e7dc83197f0842e49494a587960c0d29b75f2ca894f0144",
             "bin": [
                 "Imagine64.exe",
                 [
@@ -26,8 +26,8 @@
             ]
         },
         "32bit": {
-            "url": "https://www.nyam.pe.kr/dev/imagine/download.php?arch=x86&unicode=1&full=0&setup=0&version=2.5.5#/dl.7z",
-            "hash": "89dcfee2369d27587b4edef24bef6448fb65176462dbba68d9c2251f1d94da13",
+            "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_1.6.0_Unicode.zip",
+            "hash": "4ffb00955dbb881c9586b6c26a3a819d22af2486047f6e5c286d7f9576dc2bfc",
             "bin": "Imagine.exe",
             "shortcuts": [
                 [
@@ -46,10 +46,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.nyam.pe.kr/dev/imagine/download.php?arch=x64&unicode=1&full=0&setup=0&version=$version#/dl.7z"
+                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/x64/Imagine_$version_x64_Unicode.zip"
             },
             "32bit": {
-                "url": "https://www.nyam.pe.kr/dev/imagine/download.php?arch=x86&unicode=1&full=0&setup=0&version=$version#/dl.7z"
+                "url": "https://raw.githubusercontent.com/nyam1003/imagine/main/Imagine_$version_Unicode.zip"
             }
         }
     }

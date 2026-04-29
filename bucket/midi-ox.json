@@ -1,7 +1,7 @@
 {
     "version": "7.0.2",
     "description": "All-purpose MIDI Utility.",
-    "homepage": "http://midiox.com",
+    "homepage": "http://www.midiox.com/app.htm",
     "url": "http://www.midiox.com/zip/midioxse.exe#/dl.zip",
     "license": "Freeware",
     "hash": "16469593531764aeeda2fde8819b894b76243e233fd009d732193daa9db72385",
@@ -26,10 +26,7 @@
             "MIDI-OX MIDIBar Player"
         ]
     ],
-    "checkver": {
-        "url": "http://midiox.com/app.htm",
-        "regex": "Download: MIDI-OX (\\d[\\d\\.]+)"
-    },
+    "checkver": "Download: MIDI-OX ([\\d.]+)</a>",
     "autoupdate": {
         "url": "http://www.midiox.com/zip/midioxse.exe#/dl.zip"
     }

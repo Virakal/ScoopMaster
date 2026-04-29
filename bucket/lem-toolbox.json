@@ -1,26 +1,15 @@
 {
-    "version": "2.3.2",
+    "version": "2.0.0",
     "description": "lem-toolbox: Legacy Edition Minigames ToolBox 2.0 For Java",
     "homepage": "https://github.com/Legacy-Edition-Minigames/ToolBox",
     "license": "PolyForm-Perimeter-1.0.0",
     "suggest": {
-        "JDK": [
-            "extras/oraclejdk",
-            "openjdk"
-        ]
+        "JDK": ["extras/oraclejdk", "openjdk"]
     },
-    "persist": [
-        "installs",
-        "packaged"
-    ],
-    "url": "https://github.com/Legacy-Edition-Minigames/ToolBox/releases/download/2.3.2/Toolbox2.0_noupdater.jar",
-    "hash": "0af3aed9c0b38e7ede87ae5e623b180515689e9a4a11a5f627def40657331a7a",
-    "bin": [
-        [
-            "Toolbox2.0_noupdater.jar",
-            "lem-toolbox"
-        ]
-    ],
+    "persist": ["installs", "packaged"],
+    "url": "https://github.com/Legacy-Edition-Minigames/ToolBox/releases/download/2.0.0/Toolbox2.0_noupdater.jar",
+    "hash": "1f079c4ebf5e86a27a208487446615eafac57961631ed839d53f25d54eba2871",
+    "bin": [["Toolbox2.0_noupdater.jar", "lem-toolbox"]],
     "checkver": {
         "url": "https://api.github.com/repos/Legacy-Edition-Minigames/ToolBox/releases/latest",
         "regex": "/releases/tag/([\\d.]+)"

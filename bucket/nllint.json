@@ -1,19 +1,19 @@
 {
-    "version": "1.1.0",
+    "version": "0.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/nllint/releases/download/v1.1.0/nllint_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/nllint/releases/download/v0.1.0/nllint_windows_amd64.zip",
             "bin": [
                 "nllint.exe"
             ],
-            "hash": "79f84ab841b7f990480d9e2920f1f78a256dce9f15e6f5f66612e747a6283c8d"
+            "hash": "f603d6edd76ab44c1c710a2b1e50905d444c9effa848bfb537ca4a1abd93a20d"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/nllint/releases/download/v1.1.0/nllint_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/nllint/releases/download/v0.1.0/nllint_windows_arm64.zip",
             "bin": [
                 "nllint.exe"
             ],
-            "hash": "f2be3cc16a4684d4dd511a1339554fc85b3e5ffc74061801ba18f680527e29de"
+            "hash": "4aeb83825367044c345128d34e38470ab53bed2d76491fb6f8a6737ec619db90"
         }
     },
     "license": "MIT",

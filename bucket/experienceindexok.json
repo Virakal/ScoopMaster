@@ -1,16 +1,16 @@
 {
-    "version": "4.77",
+    "version": "4.39.1",
     "description": "A small program and an effective solution to read and show your Windows Experience Index or to start a new calculation of the performance index.",
-    "homepage": "https://www.softwareok.eu/?seite=Microsoft/ExperienceIndexOK",
+    "homepage": "http://www.softwareok.eu/?seite=Microsoft/ExperienceIndexOK",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.softwareok.eu/Download/ExperienceIndexOK_x64_Portable.zip",
-            "hash": "51be650e19a7e66678fc144458839b2d385a81640090fb5bcbc7fc1119d7d4d2"
+            "url": "http://www.softwareok.eu/Download/ExperienceIndexOK_x64_Portable.zip",
+            "hash": "17f68aa73445d2a2c067ab531505d0455163e5fa6b8549c0772c2090a2a816ad"
         },
         "32bit": {
-            "url": "https://www.softwareok.eu/Download/ExperienceIndexOK_Portable.zip",
-            "hash": "10728c56a0e37d3b4faf6aa7900b97d0c9333251c58cbd5195512ee60d3f2c7c"
+            "url": "http://www.softwareok.eu/Download/ExperienceIndexOK_Portable.zip",
+            "hash": "80b1e114424cc2461a13dc59a43e6c40da629d40c139887cabd5eccb5303d59c"
         }
     },
     "shortcuts": [
@@ -30,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.softwareok.eu/Download/ExperienceIndexOK_x64_Portable.zip"
+                "url": "http://www.softwareok.eu/Download/ExperienceIndexOK_x64_Portable.zip"
             },
             "32bit": {
-                "url": "https://www.softwareok.eu/Download/ExperienceIndexOK_Portable.zip"
+                "url": "http://www.softwareok.eu/Download/ExperienceIndexOK_Portable.zip"
             }
         }
     }

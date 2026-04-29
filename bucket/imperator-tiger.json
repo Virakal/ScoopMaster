@@ -1,12 +1,12 @@
 {
-    "version": "1.18.0",
+    "version": "1.1.0",
     "description": "Imperator Tiger",
-    "homepage": "https://github.com/amtep/tiger",
+    "homepage": "https://github.com/amtep/ck3-tiger",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/amtep/tiger/releases/download/v1.18.0/imperator-tiger-windows-v1.18.0.zip",
-            "hash": "a5a9e42b1c5a9402e6a43869b52c137fbcbd28e3402160c2bd51b0b8bb009fc4"
+            "url": "https://github.com/amtep/ck3-tiger/releases/download/v1.1.0/imperator-tiger-windows-v1.1.0.zip",
+            "hash": "7fc7f61a8cb61ea7e356e1e0e746ea96fcc523eed4c05c7c1bae2fe83a0d9805"
         }
     },
     "bin": "imperator-tiger.exe",
@@ -15,14 +15,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/amtep/tiger/releases/download/v$version/imperator-tiger-windows-v$version.zip"
+                "url": "https://github.com/amtep/ck3-tiger/releases/download/v$version/imperator-tiger-windows-v$version.zip"
             }
         }
-    },
-    "shortcuts": [
-        [
-            "imperator-tiger.exe",
-            "Imperator Tiger"
-        ]
-    ]
+    }
 }

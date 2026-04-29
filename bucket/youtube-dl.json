@@ -1,5 +1,5 @@
 {
-    "version": "2025.11.26",
+    "version": "2024.08.07",
     "description": "Download videos from YouTube.com (and a few more sites) using command line.",
     "homepage": "https://github.com/ytdl-org/youtube-dl",
     "license": "Unlicense",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ytdl-org/ytdl-nightly/releases/download/2025.11.26/youtube-dl.exe",
-            "hash": "sha512:6934bee48b41486532e1e507bae7a1832da798d67f618e325685e7e90b443416c4946bb6300116393bc82cb9be17b98c123b103b4294830956857bb8392650a8"
+            "url": "https://github.com/ytdl-org/ytdl-nightly/releases/download/2024.08.07/youtube-dl.exe",
+            "hash": "sha512:095c5f7cda84fbd89df5a17683df8408f82b57756c42c4342c7a0def06c51e6aef68d0a79a09f977e8d5ecf0389284ae804973e03931139aff3dee3f40d145cf"
         }
     },
     "bin": "youtube-dl.exe",

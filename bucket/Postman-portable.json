@@ -1,12 +1,12 @@
 {
-    "version": "11.62.7-64",
+    "version": "11.6.1-60",
     "description": "Postman™ portable app made with Portapps. A complete toolchain for API developers.",
     "homepage": "https://github.com/portapps/postman-portable",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/portapps/postman-portable/releases/download/11.62.7-64/postman-portable-win64-11.62.7-64.7z",
-            "hash": "da889638902138fd364b6059d3f005e3719ad018b3bf71b01ae150d981739b47"
+            "url": "https://github.com/portapps/postman-portable/releases/download/11.6.1-60/postman-portable-win64-11.6.1-60.7z",
+            "hash": "0ce061a562e27faf6fc2e3b6c5e8d83923d4204c301c086a74e10643c8babc44"
         }
     },
     "bin": [

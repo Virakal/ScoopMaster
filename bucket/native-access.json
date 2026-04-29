@@ -1,18 +1,24 @@
 {
-    "version": "3.23.0",
-    "description": "Native Instruments software manager",
-    "homepage": "https://www.native-instruments.com/en/specials/native-access/",
-    "license": {
-        "identifier": "Proprietary"
-    },
-    "url": "https://www.native-instruments.com/fileadmin/downloads/Native-Access_2.exe#/dl.7z",
-    "hash": "6658438ecf4cdd93c6bff3a237b0942db75ff8eaedce5c4bfb485aca171d566f",
-    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-    "bin": "Native Access.exe",
-    "shortcuts": [
-        [
-            "Native Access.exe",
-            "Native Access"
-        ]
+  "description": "Native Access",
+  "homepage": "https://www.native-instruments.com/jp/specials/native-access/",
+  "version": "1.13.5",
+  "license": [
+    {
+      "identifier": "Proprietary"
+    }
+  ],
+  "url": "https://www.native-instruments.com/fileadmin/downloads/Native_Access_Installer.zip",
+  "hash": "176887b581ed85d53289ff26b4d25ab93e316c4bb15b4b3908fc29c923295455",
+  "installer": {
+    "script": [
+      "Start-Process -Wait -Verb runAs -FilePath ($dir + '\\Native Access 1.13.5 Setup PC.exe') -ArgumentList \"/s\""
     ]
+  },
+  "uninstaller": {
+    "script": [
+      "$productKey=\"Native Instruments Native Access\"",
+      "$uninstaller=(Get-ItemProperty -Path \"Registry::HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${productKey}\" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty UninstallString)",
+      "Start-Process -Wait -Verb runAs -WindowStyle Hidden -FilePath \"cmd\" -ArgumentList \"/c ${uninstaller} /s\""
+    ]
+  }
 }

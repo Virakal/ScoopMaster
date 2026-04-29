@@ -1,18 +1,18 @@
 {
-    "version": "1.9.100",
-    "description": "An easy to use on-screen annotation software (fork of gInk).",
+    "version": "nightly",
+    "description": "On-screen annotation software under Windows, forked from gInk",
     "homepage": "https://github.com/pubpub-zz/ppInk",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/pubpub-zz/ppInk/blob/master/license.txt"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/pubpub-zz/ppInk/releases/download/v1.9.100/ppInk.1.9.100.zip",
-            "hash": "3d7317bee4dd396b3b088bd116008b605938902512d1246a5dcb9df7a735b2ff"
-        }
-    },
-    "extract_dir": "ppInk",
+    "license": "MIT",
+    "url": "https://github.com/pubpub-zz/ppInk/releases/download/pp1.2-RC2/ppink.zip",
+    "hash": "97597E7FC3153BD8D622304A5AE5DA0802D77B7C65882CC23641BE302449E168",
+    "extract_dir": "ppink",
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\config.ini\")) {",
+        "    $cur = \"$persist_dir\\Snapshots\\\" -replace '\\\\', '/'",
+        "    $c = (Get-Content \"$dir\\config_defaut.ini\") -replace '^(Snapshot_Path =).*$', \"`$1 $cur\"",
+        "    Set-Content  \"$dir\\config.ini\" $c -Encoding Ascii -Force",
+        "}"
+    ],
     "bin": "ppInk.exe",
     "shortcuts": [
         [
@@ -21,16 +21,12 @@
         ]
     ],
     "persist": [
+        "Snapshots",
         "config.ini",
         "hotkeys.ini",
         "pens.ini"
     ],
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/pubpub-zz/ppInk/releases/download/v$version/ppInk.$version.zip"
-            }
-        }
     }
 }

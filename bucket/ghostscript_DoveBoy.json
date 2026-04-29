@@ -1,5 +1,5 @@
 {
-    "version": "10.07.0",
+    "version": "10.03.1",
     "description": "An interpreter for the PostScript language and for PDF",
     "homepage": "https://www.ghostscript.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/gs10070w64.exe#/dl.7z",
-            "hash": "sha512:ccee91cc0a7ae7b9413e7d3b4354a49530eae2ebb8e968d8af9115aaa02f6cea2efb10a86d6fc43597b50a18d0ba4c7bfa49a551ea485cab5f8ca26009be3f8b",
+            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10031/gs10031w64.exe#/dl.7z",
+            "hash": "sha512:3280e834d17b5a331d7a389ce3de5df046c125907885b358dd44805b2067c554f05990232183c19a1620b5093ec2df29b97d446ee074867dfb7f3aee4d121662",
             "bin": [
                 "bin\\gswin64.exe",
                 "bin\\gswin64c.exe",
@@ -20,8 +20,8 @@
             ]
         },
         "32bit": {
-            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/gs10070w32.exe#/dl.7z",
-            "hash": "sha512:8472a405b7ffad52a470e44003c8fcb43b36cced1d385048b6849f6f6b6f802e0a645ebb353fcb908d19cf75c0c4de31de5189c48c101ba030f2fd1ba31f0d64",
+            "url": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10031/gs10031w32.exe#/dl.7z",
+            "hash": "sha512:73513607e9e17cbabfee33ed246a33f8f018cd16de42153002944d91ebdee5520e68dc90735144396fc98ec9e20efe05eb88965f6574e942504d6ad5d2bdeb46",
             "bin": [
                 "bin\\gswin32.exe",
                 "bin\\gswin32c.exe",
@@ -33,6 +33,7 @@
         }
     },
     "post_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
         "$reg_app = \"HKCU:\\SOFTWARE\\Artifex\\GPL Ghostscript\\$version\"",
         "$reg_lib = \"HKCU:\\SOFTWARE\\GPL Ghostscript\\$version\"",
         "if ($global) { $reg_app = $reg_app.Replace('HKCU:','HKLM:'); $reg_lib = $reg_lib.Replace('HKCU:','HKLM:') }",
@@ -45,15 +46,15 @@
     ],
     "env_add_path": "lib",
     "post_uninstall": [
-        "$reg_app = \"HKCU:\\SOFTWARE\\Artifex\\GPL Ghostscript\"",
-        "$reg_lib = \"HKCU:\\SOFTWARE\\GPL Ghostscript\"",
+        "$reg_app = \"HKCU:\\SOFTWARE\\Artifex\\GPL Ghostscript\\$version\"",
+        "$reg_lib = \"HKCU:\\SOFTWARE\\GPL Ghostscript\\$version\"",
         "if ($global) { $reg_app = $reg_app.Replace('HKCU:','HKLM:'); $reg_lib = $reg_lib.Replace('HKCU:','HKLM:') }",
         "Remove-Item -Path $reg_app -Force -Recurse",
         "Remove-Item -Path $reg_lib -Force -Recurse"
     ],
     "checkver": {
         "github": "https://github.com/ArtifexSoftware/ghostpdl-downloads/",
-        "regex": "ghostscript-([\\d.]+)\\.tar"
+        "regex": "Ghostscript/GhostPDL ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

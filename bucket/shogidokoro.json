@@ -1,9 +1,9 @@
 {
-    "version": "5.7.0",
+    "version": "5.5.0",
     "description": "Shogi GUI.",
-    "homepage": "https://shogidokoro2.stars.ne.jp/index.html",
-    "url": "https://shogidokoro2.stars.ne.jp/download/Shogidokoro.zip",
-    "hash": "dc392baf311d101d1baaf8d52733a5713a2ee76a233bf663511f2b8c2952cc8c",
+    "homepage": "http://shogidokoro.starfree.jp/",
+    "url": "http://shogidokoro.starfree.jp/download/Shogidokoro.zip",
+    "hash": "sha512:96307b48a69659534ba08a9a4e43a8a4da263a5e1c5c529717c374668265d3b68d3f76342ac53e18d3a0ef5c61c24c8547e71d7153457e62fabcc42212ee4634",
     "extract_dir": "Shogidokoro",
     "shortcuts": [
         [
@@ -12,10 +12,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://shogidokoro2.stars.ne.jp/download.html",
+        "url": "http://shogidokoro.starfree.jp/download.html",
         "regex": "<p>将棋所([\\d\\.]+)を<a href=\"download/Shogidokoro.zip\">ダウンロード</a></p>"
-    },
-    "autoupdate": {
-        "url": "https://shogidokoro2.stars.ne.jp/download/Shogidokoro.zip"
     }
 }

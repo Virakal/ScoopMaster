@@ -1,10 +1,10 @@
 {
-    "version": "3.4.0",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Recursive' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Recursive.tar.xz",
-    "hash": "a047ac2e724c1614ef4350af83f35cd1d044d8d20e6477c319172b860b19329a",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Recursive.tar.xz",
+    "hash": "e5f7db6999bf6dd6501d8933575caab49827486ce774c6c35a6e411da8c6cfba",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,19 +1,19 @@
 {
-    "version": "146.0.7680.205",
+    "version": "128.0.6613.137",
     "description": "Chromium with support of GOST algorithms.",
     "homepage": "https://github.com/deemru/Chromium-Gost",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/deemru/Chromium-Gost/releases/download/146.0.7680.205/chromium-gost-146.0.7680.205-windows-amd64.zip",
-            "hash": "61b085dcee1ca37aaff24a9b89074a1978bdbdbb74a186d4300d619847433a57"
+            "url": "https://github.com/deemru/Chromium-Gost/releases/download/128.0.6613.137/chromium-gost-128.0.6613.137-windows-amd64.zip",
+            "hash": "145f619bc5f5df226a0226792f8d6143d49ee81c4d3357bcb232527bd53a337e"
         },
         "32bit": {
-            "url": "https://github.com/deemru/Chromium-Gost/releases/download/146.0.7680.205/chromium-gost-146.0.7680.205-windows-386.zip",
-            "hash": "d7fc5c86b040c3aebacb295d0d9904f6308b789ea9625240976b0016bddf45c0"
+            "url": "https://github.com/deemru/Chromium-Gost/releases/download/128.0.6613.137/chromium-gost-128.0.6613.137-windows-386.zip",
+            "hash": "76b58911ecc6d9c79342bfffe27124933153c963645c27603c547b1012c946d3"
         }
     },
-    "extract_dir": "chromium-gost-146.0.7680.205",
+    "extract_dir": "chromium-gost-128.0.6613.137",
     "bin": [
         [
             "chrome.exe",

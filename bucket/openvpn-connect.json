@@ -1,16 +1,16 @@
 {
-    "version": "3.6.0.4074",
+    "version": "3.2.3.1851",
     "description": "A flexible virtual private network (VPN) solution to secure data communications.",
     "homepage": "https://openvpn.net",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.6.0.4074_signed.msi",
-            "hash": "4969b48b8c04477980fc59180802c17f04cf21e1e52083456555417fc83076df"
+            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.2.3.1851_signed.msi",
+            "hash": "58973ceba1dfb77ac98977f264b5aebe4ca094c17ada72c4d2767d2a2c7607c5"
         },
         "32bit": {
-            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.6.0.4074_signed_x86.msi",
-            "hash": "a615148b348d4ff881e636ea320c5d5a44f411f3ee0ac898c4f0f74504408665"
+            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.2.3.1851_signed_x86.msi",
+            "hash": "bfd176271cca8c1e7fae446621a985388bf55d023668af8e5dcec9ec4560dd85"
         }
     },
     "extract_dir": "OpenVPN Connect",
@@ -32,21 +32,26 @@
     },
     "bin": "ovpnconnector.exe",
     "checkver": {
-        "url": "https://openvpn.net/connect-docs/windows-release-notes.html",
-        "regex": "openvpn-connect-([\\d.]+)_signed.msi"
+        "url": "https://openvpn.net/vpn-server-resources/openvpn-connect-for-windows-change-log/",
+        "regex": "Release notes for ([\\d.]+) \\((\\d+)\\)",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed.msi"
+                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed.msi",
+                "hash": {
+                    "url": "https://openvpn.net/client-connect-vpn-for-windows/",
+                    "regex": "(?sm)v3-windows\\.msi.*?$sha256"
+                }
             },
             "32bit": {
-                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed_x86.msi"
+                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed_x86.msi",
+                "hash": {
+                    "url": "https://openvpn.net/client-connect-vpn-for-windows/",
+                    "regex": "(?sm)v3-windows-x86\\.msi.*?$sha256"
+                }
             }
-        },
-        "hash": {
-            "url": "https://openvpn.net/connect-docs/windows-release-notes.html",
-            "regex": "$basename[^(</span>)]$sha256</span>"
         }
     }
 }

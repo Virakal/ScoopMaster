@@ -1,14 +1,14 @@
 {
-    "version": "5.4.920.0",
+    "version": "5.2.857.0",
     "description": "A dynamic mathematics software for education that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus.",
     "homepage": "https://www.geogebra.org/",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.geogebra.org/license"
     },
-    "url": "https://download.geogebra.org/installers/5.4/GeoGebra-Windows-Portable-5-4-920-0.zip",
-    "hash": "d95d8a3229747d4adc45055c6d02755e5007a0935a7933910142f198b3834ce4",
-    "extract_dir": "GeoGebra 5.4.920.0",
+    "url": "https://download.geogebra.org/installers/5.2/GeoGebra-Windows-Portable-5-2-857-0.zip",
+    "hash": "9ca55bf2eaaca58e6f0a8698cd8efc91eb078f53bd9ed306ede8e0ebcdb4c65b",
+    "extract_dir": "GeoGebra 5.2.857.0",
     "bin": [
         [
             "GeoGebra.exe",
@@ -22,7 +22,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://download.geogebra.org/installers/5.4/version.txt",
+        "url": "https://download.geogebra.org/installers/5.2/version.txt",
         "regex": "\\d-(\\d+)-(\\d+)-(\\d+)",
         "replace": "5.${1}.${2}.${3}"
     },

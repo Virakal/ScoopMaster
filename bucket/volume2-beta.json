@@ -1,17 +1,13 @@
 {
-    "version": "1.1.9.470",
+    "version": "1.1.9.466",
     "description": "Advanced Windows volume control.",
     "homepage": "https://irzyxa.blogspot.com",
     "license": {
         "identifier": "Freeware",
         "url": "https://github.com/irzyxa/Volume2/blob/master/License.txt"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/irzyxa/Volume2/releases/download/v1.1.9.470/Volume2_1_1_9_x64.zip",
-            "hash": "2ab046db320eec44ec3a484290884e7c636d17c3722d3aeb9751953ab9beec03"
-        }
-    },
+    "url": "https://github.com/irzyxa/Volume2/releases/download/v1.1.9.466/Volume2_1_1_9.zip",
+    "hash": "f1b87f2ad8efe64cc0bdac57d619d362181e68a2e048f39e8b830776a71ae2af",
     "extract_dir": "Volume2",
     "shortcuts": [
         [
@@ -36,11 +32,7 @@
         "regex": "/releases/tag/(?:v|V)?([\\d.]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/irzyxa/Volume2/releases/download/v$version/Volume2_$majorVersion_$minorVersion_$patchVersion_x64.zip",
-                "extract_dir": "Volume2"
-            }
-        }
+        "url": "https://github.com/irzyxa/Volume2/releases/download/v$version/Volume2_$majorVersion_$minorVersion_$patchVersion.zip",
+        "extract_dir": "Volume2"
     }
 }

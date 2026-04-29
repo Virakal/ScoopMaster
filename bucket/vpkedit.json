@@ -1,14 +1,14 @@
 {
-    "version": "5.0.0.4",
-    "description": "A GUI/CLI tool to create, read, and write VPK and many other pack file formats for Source engine games. A superset of GCFScape.",
-    "homepage": "https://developer.valvesoftware.com/wiki/VPKEdit",
+    "version": "4.2.3",
+    "description": "VPKEdit is a A library and CLI/GUI tool to create, read, and write several pack file formats ",
+    "homepage": "https://github.com/craftablescience/VPKEdit",
     "license": "MIT",
-    "url": "https://github.com/craftablescience/VPKEdit/releases/download/v5.0.0.4/VPKEdit-Windows-Standalone-msvc-Release.zip",
-    "hash": "sha256:d9ceaf3f16aea17c06e3be79da93c55a597af1487eed8a1b42dada1ea8d54503",
-    "bin": [
-        "vpkedit.exe",
-        "vpkeditcli.exe"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/craftablescience/VPKEdit/releases/download/v4.2.3/VPKEdit-Windows-Standalone-GUI-msvc-Release.zip",
+            "hash": "20a77028766da50c7306e39ba547b484f8aed60023f1482d20eabedc8f808a53"
+        }
+    },
     "shortcuts": [
         [
             "vpkedit.exe",
@@ -16,13 +16,13 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/craftablescience/VPKEdit",
-        "regex": "/releases/tag/v?([\\d.]+)"
+        "github": "https://github.com/craftablescience/VPKEdit/"
     },
     "autoupdate": {
-        "url": "https://github.com/craftablescience/VPKEdit/releases/download/v$version/VPKEdit-Windows-Standalone-msvc-Release.zip",
-        "hash": {
-            "mode": "download"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/craftablescience/VPKEdit/releases/download/v$version/VPKEdit-Windows-Standalone-GUI-msvc-Release.zip"
+            }
         }
     }
 }

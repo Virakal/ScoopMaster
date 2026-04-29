@@ -1,5 +1,5 @@
 {
-    "version": "5.2.1.32035",
+    "version": "5.0.2.30045",
     "description": "Directory and file compare functions in one package",
     "homepage": "https://www.scootersoftware.com",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "Add Beyond Compare as a context menu option by running: '$dir\\install-context.reg'",
     "architecture": {
         "64bit": {
-            "url": "https://www.scootersoftware.com/files/BCompare-zh-5.2.1.32035.exe",
-            "hash": "6c3cc8fc45565fade00fdd9409cd6290ff00fafc384a47bfcc2484250b3c5abc"
+            "url": "https://www.scootersoftware.com/files/BCompare-zh-5.0.2.30045.exe",
+            "hash": "f975875299a6a264fee2eb5e185f02d4513dcbd826cf995b66ad0d992048aa2a"
         }
     },
     "innosetup": true,

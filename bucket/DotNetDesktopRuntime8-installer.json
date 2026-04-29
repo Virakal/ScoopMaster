@@ -1,5 +1,5 @@
 {
-  "version": "8.0.20",
+  "version": "8.0.2",
   "description": "The .NET Desktop Runtime enables you to run existing Windows desktop applications.",
   "homepage": "https://dotnet.microsoft.com/download/dotnet/8.0",
   "license": {
@@ -8,42 +8,29 @@
   },
   "architecture": {
     "64bit": {
-      "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.20/windowsdesktop-runtime-8.0.20-win-x64.exe#/windowsdesktop-runtime-win-x64.exe",
-      "hash": "sha512:df02b7570252b00d12d31753abf922abf6b176480fbfb68c8ff3c7fd3d09248ddfb223ba228926b3520e6619c02905bb5483ad5a557c90df3ec0d214b91e006f",
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.2/windowsdesktop-runtime-8.0.2-win-x64.exe#/windowsdesktop8-runtime-win-x64.exe",
+      "hash": "sha512:62cd6be9ea5c397b607c75a3a9da332476b456482e20a3e786e964eae352965678c979792f3e0577d76205761b9c53da86c3aea6ae122934e4be7cf38648e950",
       "shortcuts": [
         [
-          "windowsdesktop-runtime-win-x64.exe",
+          "windowsdesktop8-runtime-win-x64.exe",
           "Install .NET 8.0 Desktop Runtime (x64)"
         ]
       ],
       "post_install": [
-        "&\"$dir\\windowsdesktop-runtime-win-x64.exe\""
+        "&\"$dir\\windowsdesktop8-runtime-win-x64.exe\""
       ]
     },
     "32bit": {
-      "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.20/windowsdesktop-runtime-8.0.20-win-x86.exe#/windowsdesktop-runtime-win-x86.exe",
-      "hash": "sha512:5858242d690dc41cc8ffe186e002de6f23fbe8d650618ad96bcec3ba751baf3373d485736f1bad60fae20d2c7cada9681899f61d9022c4c0110bce31a97102cc",
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.2/windowsdesktop-runtime-8.0.2-win-x86.exe#/windowsdesktop8-runtime-win-x86.exe",
+      "hash": "sha512:3700642786b3f9a67218b6a834a8472c31d8e5ae6c2436c752e2ade37d9cb0ff808e35bb9fc3207ecbdb6e4e934c1dc77796d47ed0b2d228755f9876d4e0af0a",
       "shortcuts": [
         [
-          "windowsdesktop-runtime-win-x86.exe",
+          "windowsdesktop-runtime8-win-x86.exe",
           "Install .NET 8.0 Desktop Runtime (x86)"
         ]
       ],
       "post_install": [
-        "&\"$dir\\windowsdesktop-runtime-win-x86.exe\""
-      ]
-    },
-    "arm64": {
-      "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.20/windowsdesktop-runtime-8.0.20-win-arm64.exe#/windowsdesktop-runtime-win-arm64.exe",
-      "hash": "sha512:9d38782d667b24e2ca89cfd9df972195bf885b2190de814ba401237b183867f8e4f6a27511ab9bf95b621aa79ba2c738cef39fcf4c62f6abe37668f062ae0bff",
-      "shortcuts": [
-        [
-          "windowsdesktop-runtime-win-arm64.exe",
-          "Install .NET 8.0 Desktop Runtime (arm64)"
-        ]
-      ],
-      "post_install": [
-        "&\"$dir\\windowsdesktop-runtime-win-arm64.exe\""
+        "&\"$dir\\windowsdesktop8-runtime-win-x86.exe\""
       ]
     }
   }

@@ -1,12 +1,12 @@
 {
-    "version": "0.50.2",
-    "description": "A command line tool that provides jq-style access to structured data sources: SQL databases, or document formats like CSV or Excel",
+    "version": "0.48.3",
     "homepage": "https://sq.io",
+    "description": "sq is a swiss army knife for data",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/neilotoole/sq/releases/download/v0.50.2/sq-0.50.2-windows-amd64.zip",
-            "hash": "5223a29997530994dd1000a0f7edd9f413e11f01321577a3e57a51a34ed4c266"
+            "url": "https://github.com/neilotoole/sq/releases/download/v0.48.3/sq-0.48.3-amd64-amd64.zip",
+            "hash": "752f9db5242280e5d7b08d80f24ae69c5afe09d7494f2441008dbac295c2cb95"
         }
     },
     "bin": "sq.exe",
@@ -16,11 +16,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/neilotoole/sq/releases/download/v$version/sq-$version-windows-amd64.zip"
+                "url": "https://github.com/neilotoole/sq/releases/download/v$version/sq-$version-amd64-amd64.zip"
             }
         },
         "hash": {
-            "url": "$baseurl/checksums.txt"
+            "url": "https://github.com/neilotoole/sq/releases/download/v$version/checksums.txt",
+            "mode": "extract"
         }
     }
 }

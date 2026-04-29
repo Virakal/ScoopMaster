@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "390b0b156b9ae20db58cb3d228a1fb0ec594ef90627b2746ed11702e10068cde",
-            "url": "https://github.com/sileshn/ElementaryWSL2/releases/download/20250501/ElementaryWSL2_Next.zip"
+            "hash": "7908ce91e36859015fe2d15ee68c4153e1fb453c3ea9c57b16024e403b7bd1d4",
+            "url": "https://github.com/sileshn/ElementaryWSL2/releases/download/20240901/ElementaryWSL2_Next.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Elementary.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20250501"
+    "version": "20240901"
 }
