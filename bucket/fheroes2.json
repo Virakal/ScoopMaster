@@ -1,5 +1,5 @@
 {
-    "version": "1.1.2",
+    "version": "1.1.15",
     "description": "Recreation of the Heroes of Might and Magic II game engine",
     "homepage": "https://github.com/ihhub/fheroes2",
     "license": "GPL-2.0-only",
@@ -12,12 +12,12 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.2/fheroes2_windows_x64_SDL2.zip",
-            "hash": "b1c6220f93ba19f3cfd90973e00879f8cef0d4b2b22a3ce9b297f36c3870e837"
+            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.15/fheroes2_windows_x64_SDL2.zip",
+            "hash": "7ecc1836a3f89c193cffd1823d63135713c1b935d01d6092c9f8bd1b515421d6"
         },
         "32bit": {
-            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.2/fheroes2_windows_x86_SDL2.zip",
-            "hash": "e350aa48215ce96dfa363fe848bf3ff73dd9a1ac69902ad3c55923653c7899c2"
+            "url": "https://github.com/ihhub/fheroes2/releases/download/1.1.15/fheroes2_windows_x86_SDL2.zip",
+            "hash": "1fecc025735a986dc4edd1de1fc99353ea503f6f402ff9294cc274cd18ec288c"
         }
     },
     "shortcuts": [

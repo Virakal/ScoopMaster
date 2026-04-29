@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:18f69901899b284f4fd690875e6a5e7125c1fa470977df2f64b2f1b9ee3c45703e1f615556196a2a265b4e2a91fe01b476be77bebe698399e3a33933506fb3a9",
+    "hash": "sha512:0fb7b4a57bcb0b748906f08498f01219c418b3e01fa13a96ebb73f621db32d08fc9566c7d4cfafb859a85a9b652d43b85ce9d0e789ced40dffc4b1af59ea1d89",
     "description": "Microsoft Azure PowerShell: DataProtection cmdlets",
     "psmodule": {
         "name": "Az.DataProtection"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.DataProtection/2.4.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.DataProtection/2.9.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.4.0"
+    "version": "2.9.1"
 }

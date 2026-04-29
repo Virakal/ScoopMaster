@@ -1,35 +1,40 @@
 {
-    "version": "0.7.1",
-    "description": "Docker and OCI Registry Client in Go and tooling using those libraries.",
-    "homepage": "https://github.com/regclient/regclient",
-    "license": "Apache-2.0",
+    "version": "0.11.3",
+    "description": "Command line interface and tools for the regclient Go library (regctl, regbot, regsync).",
+    "homepage": "https://regclient.org/",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/regclient/regclient/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/regclient/regclient/releases/download/v0.7.1/regctl-windows-amd64.exe#/regctl.exe",
-                "https://github.com/regclient/regclient/releases/download/v0.7.1/regsync-windows-amd64.exe#/regsync.exe",
-                "https://github.com/regclient/regclient/releases/download/v0.7.1/regbot-windows-amd64.exe#/regbot.exe"
+                "https://github.com/regclient/regclient/releases/download/v0.11.3/regctl-windows-amd64.exe#/regctl.exe",
+                "https://github.com/regclient/regclient/releases/download/v0.11.3/regbot-windows-amd64.exe#/regbot.exe",
+                "https://github.com/regclient/regclient/releases/download/v0.11.3/regsync-windows-amd64.exe#/regsync.exe"
             ],
             "hash": [
-                "346a29aedcf5dc7b66c34cae6b3cde5187ac0407c18ab1f3c200b7d1a244b4e8",
-                "7e9e7aaae7a0a271cbefc1dd8804dff85c7a7e2cd87565bd3becba618b37d99a",
-                "a1e6e91a2885cd0daa3e5bc3616295ac8d2553aff979c5538ec2ce9e1e05ebbc"
+                "6b5dbf3f920d5ec1b2379592a25680e56dafd86795b73f7f52a3543848dc8e6a",
+                "5b10ae30247dd1d48239ae65054680b53b5ebd5e8f2e68a377e5490a8651de00",
+                "5b05287f413314fa8594befcc3ff0ba8727c7e4498701ed2acf175b4ddb8a226"
             ]
         }
     },
     "bin": [
         "regctl.exe",
-        "regsync.exe",
-        "regbot.exe"
+        "regbot.exe",
+        "regsync.exe"
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/regclient/regclient"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": [
                     "https://github.com/regclient/regclient/releases/download/v$version/regctl-windows-amd64.exe#/regctl.exe",
-                    "https://github.com/regclient/regclient/releases/download/v$version/regsync-windows-amd64.exe#/regsync.exe",
-                    "https://github.com/regclient/regclient/releases/download/v$version/regbot-windows-amd64.exe#/regbot.exe"
+                    "https://github.com/regclient/regclient/releases/download/v$version/regbot-windows-amd64.exe#/regbot.exe",
+                    "https://github.com/regclient/regclient/releases/download/v$version/regsync-windows-amd64.exe#/regsync.exe"
                 ]
             }
         }

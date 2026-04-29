@@ -1,5 +1,5 @@
 {
-    "version": "24.3.1",
+    "version": "26.1.1",
     "description": "A circuit simulation program with Qt-based GUI",
     "homepage": "https://ra3xdh.github.io/",
     "license": "GPL-2.0-only",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ra3xdh/qucs_s/releases/download/24.3.1/Qucs-S-24.3.1-win64.zip",
-            "hash": "bb97a083054524e34c14acefbba6332129e3d7ef65d8f9a51d1828afabaa0cdb"
+            "url": "https://github.com/ra3xdh/qucs_s/releases/download/26.1.1/Qucs-S-26.1.1-win64.zip",
+            "hash": "80025a24128df6652e9c6349b4aa9b6771ababd4a0fbfd939349cc4dcfb3ef1c"
         }
     },
     "bin": "bin\\qucs-s.exe",

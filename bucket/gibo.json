@@ -1,20 +1,20 @@
 {
-    "version": "3.0.12",
+    "version": "3.0.21",
     "description": "gibo (short for .gitignore boilerplates) is a shell script to help you easily access .gitignore boilerplates from github.com/github/gitignore",
     "homepage": "https://github.com/simonwhitaker/gibo",
     "license": "Unlicense",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Windows_x86_64.zip",
-            "hash": "fa03f0c7e5eba9332886795ae6cae560f8e2d3687fbd815ccb5c808f93c46bd8"
+            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.21/gibo_Windows_x86_64.zip",
+            "hash": "6a4261450d2284e31d1e51dfa23f2b36b294e339d1b03c8a5e8132d5fced0560"
         },
         "32bit": {
-            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Windows_i386.zip",
-            "hash": "f97bc194d58b0e281b45dd05d9ed415aea50e916d12a273b4396d09baae0dd55"
+            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.21/gibo_Windows_i386.zip",
+            "hash": "839b2d89eb56bb2b6322ae9ffc467d1400b910a93a623739c1c22e2c227a047a"
         },
         "arm64": {
-            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.12/gibo_Windows_arm64.zip",
-            "hash": "09a7b2e256a82a9f8c1b208f4cbb5d6682bb96ca75e6f7fbeba595382e5627d8"
+            "url": "https://github.com/simonwhitaker/gibo/releases/download/v3.0.21/gibo_Windows_arm64.zip",
+            "hash": "82b3e74f087b1221adcc6b8954374cbbe5ee518d58e90a2c931969aeed5c43d1"
         }
     },
     "bin": "gibo.exe",

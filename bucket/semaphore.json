@@ -1,13 +1,13 @@
 {
-    "version": "2.10.22",
+    "version": "2.17.38",
     "description": "Modern UI for Ansible",
     "homepage": "https://github.com/semaphoreui/semaphore",
     "license": "MIT",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/semaphoreui/semaphore/releases/download/v2.10.22/semaphore_2.10.22_windows_amd64.zip",
-            "hash": "b5c159f40467df428b74aef09cb854301a7e60faf77179236f09df54347ecede"
+            "url": "https://github.com/semaphoreui/semaphore/releases/download/v2.17.38/semaphore_2.17.38_windows_amd64.zip",
+            "hash": "c9eb5e60707d0cca977b173fac0ac417384c9b2300fa9a1ca874d287d9c835a0"
         }
     },
     "bin": "semaphore.exe",

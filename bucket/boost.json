@@ -1,16 +1,16 @@
 {
-    "version": "1.86.0",
+    "version": "1.91.0",
     "description": "Boost C++ Libraries",
     "homepage": "https://www.boost.org/",
     "license": "BSL-1.0",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/boost/boost-binaries/1.86.0/boost_1_86_0-msvc-14.3-64.exe",
-            "hash": "sha1:8bc24e0d887dc126f3babf6b8d091e52cd675f53"
+            "url": "https://downloads.sourceforge.net/project/boost/boost-binaries/1.91.0/boost_1_91_0-msvc-14.5-64.exe",
+            "hash": "sha1:0d80627afe5f92b391ffb60b5b28b0e226ca28ee"
         },
         "32bit": {
-            "url": "https://downloads.sourceforge.net/project/boost/boost-binaries/1.86.0/boost_1_86_0-msvc-14.3-32.exe",
-            "hash": "sha1:43cf4575648376de84856a4beb3bef795e819946"
+            "url": "https://downloads.sourceforge.net/project/boost/boost-binaries/1.91.0/boost_1_91_0-msvc-14.5-32.exe",
+            "hash": "sha1:cac1bcc18a4b4d0288f8e1d0856d8b8bfda9d083"
         }
     },
     "innosetup": true,

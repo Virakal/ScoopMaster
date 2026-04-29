@@ -1,12 +1,12 @@
 {
-    "version": "0.38.0",
+    "version": "0.49.0",
     "description": "A desktop client for IPFS",
     "homepage": "https://ipfs.tech/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v0.38.0/ipfs-desktop-setup-0.38.0.exe#/dl.7z",
-            "hash": "sha512:b413eaa8878100540296ae17a5b89e26fbe870acc17553e752c6be664a523aef319592b042812e1ba3487ee20c86cb925c470034389e6db2e2666b98a1e04030",
+            "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v0.49.0/ipfs-desktop-setup-0.49.0-win-x64.exe#/dl.7z",
+            "hash": "sha512:3a55cf5d5706557d734f10b00a608685b862668f71b0b29d4602fe7b47d406a9073677749b1f49ebc81c8ac0979ee288f855f573f9b1fa3adc389231d8cadc65",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v$version/ipfs-desktop-setup-$version.exe#/dl.7z"
+                "url": "https://github.com/ipfs/ipfs-desktop/releases/download/v$version/ipfs-desktop-setup-$version-win-x64.exe#/dl.7z"
             }
         },
         "hash": {

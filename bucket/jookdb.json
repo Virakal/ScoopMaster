@@ -1,12 +1,12 @@
 {
-    "version": "6.10",
+    "version": "7.2",
     "homepage": "https://jookdb.com/",
     "description": "A free Multi-platform database tool. Supports every popular database.",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/jookdb/files/jookdb_v6.10/jookdb_6.10_win_x64_portable.zip",
-            "hash": "sha1:30c730ea0ed6104c7d887d90d6eb9762b01b7d46"
+            "url": "https://sourceforge.net/projects/jookdb/files/jookdb_v7.2/jookdb_7.2_win_x64_portable.zip",
+            "hash": "sha1:63c17a14c336bec4e47e346d7f7764aa43736989"
         }
     },
     "extract_dir": "jookdb",

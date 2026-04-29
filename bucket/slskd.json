@@ -1,12 +1,16 @@
 {
-    "version": "0.21.4",
+    "version": "0.25.1",
     "description": "A modern client-server application for the Soulseek file sharing network.",
     "homepage": "https://github.com/slskd/slskd",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/slskd/slskd/releases/download/0.21.4/slskd-0.21.4-win-x64.zip",
-            "hash": "e2f3af5b4f7213647714a3dfc4a564e0676da01644d04f60d379d2b2a143b99e"
+            "url": "https://github.com/slskd/slskd/releases/download/0.25.1/slskd-0.25.1-win-x64.zip",
+            "hash": "5435531bd256a13c026180e30f3123a5d9f61e5653eca149cd93f1acfdbc2b99"
+        },
+        "arm64": {
+            "url": "https://github.com/slskd/slskd/releases/download/0.25.1/slskd-0.25.1-win-arm64.zip",
+            "hash": "6c2cb4df735eb9b09397f1d1b98467f65828460dc3cf66393e2712c84db90732"
         }
     },
     "bin": "slskd.exe",
@@ -16,6 +20,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/slskd/slskd/releases/download/$version/slskd-$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/slskd/slskd/releases/download/$version/slskd-$version-win-arm64.zip"
             }
         }
     }

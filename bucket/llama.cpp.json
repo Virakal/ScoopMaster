@@ -1,31 +1,31 @@
 {
-    "version": "b3777",
-    "description": "LLM inference in C/C++",
-    "homepage": "https://github.com/ggerganov/llama.cpp",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ggerganov/llama.cpp/releases/download/b3777/llama-b3777-bin-win-noavx-x64.zip",
-            "hash": "4686c6c3c7a941c4795f7df05d032e44196f83e8cb61fd4471e45f2e3fa7bc7a"
-        },
-        "arm64": {
-            "url": "https://github.com/ggerganov/llama.cpp/releases/download/b3777/llama-b3777-bin-win-msvc-arm64.zip",
-            "hash": "dfd713e2c70a3610cfb98d13fcd23896f048b0c963604e63760b738a77cf08ce"
-        }
+  "version": "b4927",
+  "description": "LLM inference in C/C++",
+  "homepage": "https://github.com/ggerganov/llama.cpp",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ggerganov/llama.cpp/releases/download/b4927/llama-b4927-bin-win-noavx-x64.zip",
+      "hash": "6fc1e5d8b7749fcb968ed3f9f82526f7f67c387e9bb6a1df24daa2be0ad52ae5"
     },
-    "bin": "llama-cli.exe",
-    "checkver": {
-        "url": "https://github.com/ggerganov/llama.cpp/releases/latest",
-        "regex": "/releases/tag/(b[\\d]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ggerganov/llama.cpp/releases/download/$version/llama-$version-bin-win-noavx-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/ggerganov/llama.cpp/releases/download/$version/llama-$version-bin-win-msvc-arm64.zip"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/ggerganov/llama.cpp/releases/download/b4927/llama-b4927-bin-win-msvc-arm64.zip",
+      "hash": "c3fdb9ca4fbb349107270f578a1d1cf2d3aebb79eb90060187351d7694e3f4d6"
     }
+  },
+  "bin": "llama-cli.exe",
+  "checkver": {
+    "url": "https://github.com/ggerganov/llama.cpp/releases/latest",
+    "regex": "/releases/tag/(b[\\d]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ggerganov/llama.cpp/releases/download/$version/llama-$version-bin-win-noavx-x64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/ggerganov/llama.cpp/releases/download/$version/llama-$version-bin-win-msvc-arm64.zip"
+      }
+    }
+  }
 }

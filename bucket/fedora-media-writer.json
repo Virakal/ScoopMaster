@@ -1,17 +1,33 @@
 {
-    "version": "5.0.6",
-    "license": "GPL-2.0",
-    "url": "https://github.com/FedoraQt/MediaWriter/releases/download/5.0.6/FedoraMediaWriter-win32-5.0.6.exe#/dl.7z",
-    "hash": "496a5944ec00467992e735259b6504f7b363c43b2801dffa575cf44fcf5b4adf",
+    "version": "5.3.1",
+    "description": "Write Fedora Images to Portable Media",
     "homepage": "https://github.com/FedoraQt/MediaWriter",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/FedoraQt/MediaWriter/releases/download/5.3.1/FedoraMediaWriter-win64-5.3.1.exe#/dl.7z",
+            "hash": "4b1b57ef06a2ea28d57968f26d55d5d752ab1944088794b6a513bfc49e737f8b"
+        }
+    },
+    "post_install": [
+        "@('$PLUGINSDIR', 'uninstall.exe', 'uninstall.log') | ForEach-Object {",
+        "    Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
     "shortcuts": [
         [
             "mediawriter.exe",
-            "Fedora Media Writer"
+            "Fedora Media Writer",
+            "",
+            "mediawriter.ico"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/FedoraQt/MediaWriter/releases/download/$version/FedoraMediaWriter-win32-$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/FedoraQt/MediaWriter/releases/download/$version/FedoraMediaWriter-win64-$version.exe#/dl.7z"
+            }
+        }
     }
 }

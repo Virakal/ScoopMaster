@@ -1,16 +1,16 @@
 {
-    "version": "6.41",
+    "version": "7.11",
     "description": "PointerStick is a portable tool that presents on the Windows Desktop a virtual pointer stick, for example for Presentations.",
-    "homepage": "http://www.softwareok.eu/?seite=Freeware/PointerStick",
+    "homepage": "https://www.softwareok.eu/?seite=Freeware/PointerStick",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://www.softwareok.eu/Download/PointerStick_x64.zip",
-            "hash": "0b19b57b2114db541e6237860ed339ee46920d6ca8ebe98ce4da359c80339140"
+            "url": "https://www.softwareok.eu/Download/PointerStick_x64.zip",
+            "hash": "b0c44ff2bb268e57f4f02f2d6b2878c57cbb79fe786d7ad94baf75015d79324b"
         },
         "32bit": {
-            "url": "http://www.softwareok.eu/Download/PointerStick.zip",
-            "hash": "a6a1dabb2ec48f64ebe9f2794bfbc3d3a6bfe8081e484a93075daf5b5d2a1906"
+            "url": "https://www.softwareok.eu/Download/PointerStick.zip",
+            "hash": "c423ca26fb70b1b972149c865873e7f2c922958eeb4a3c4ea8591937dcb5a6df"
         }
     },
     "shortcuts": [
@@ -30,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://www.softwareok.eu/Download/PointerStick_x64.zip"
+                "url": "https://www.softwareok.eu/Download/PointerStick_x64.zip"
             },
             "32bit": {
-                "url": "http://www.softwareok.eu/Download/PointerStick.zip"
+                "url": "https://www.softwareok.eu/Download/PointerStick.zip"
             }
         }
     }

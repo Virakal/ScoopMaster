@@ -1,36 +1,37 @@
 {
     "description": "BellSoft Liberica is a 100% open-source Java implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "21.0.4-9",
+    "version": "26.0.1-10",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.4%2B9/bellsoft-jdk21.0.4%2B9-windows-amd64-full.zip",
-            "hash": "296578d43fd7a8c2c014bcd2f8b27184890037d6b6bdcff2810cfef1e8c4c627"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/26.0.1%2B10/bellsoft-jdk26.0.1%2B10-windows-amd64-full.zip",
+            "hash": "sha1:5bbd80cd72d2657df10ea2f1c7ed0b622e1f0cd1"
         },
-        "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.4%2B9/bellsoft-jdk21.0.4%2B9-windows-i586-full.zip",
-            "hash": "4a538f9584911e6832998ca384abb8ebaefe1eed4af6477c8848d4ae7433e69f"
+        "arm64": {
+            "url": "https://github.com/bell-sw/Liberica/releases/download/26.0.1%2B10/bellsoft-jdk26.0.1%2B10-windows-aarch64-full.zip",
+            "hash": "sha1:9cf18d12544e4d4337eef96f5917bcb1fd72936a"
         }
     },
-    "extract_dir": "jdk-21.0.4-full",
+    "extract_dir": "jdk-26.0.1-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
         "url": "https://api.bell-sw.com/v1/liberica/releases?bundle-type=jdk-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
-        "jsonpath": "$.version",
+        "jsonpath": "$[*].version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
-        "replace": "${major}-${build}"
+        "replace": "${major}-${build}",
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-amd64-full.zip"
             },
-            "32bit": {
-                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-i586-full.zip"
+            "arm64": {
+                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
             }
         },
         "hash": {

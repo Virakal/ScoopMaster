@@ -1,5 +1,5 @@
 {
-  "version": "0.19.1",
+  "version": "0.23.0",
   "description": "VOICEVOX CPU",
   "homepage": "https://voicevox.hiroshiba.jp/",
   "notes": "インストーラーの利用が公式により推奨されています。",
@@ -10,17 +10,17 @@
     }
   ],
   "url": [
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/VOICEVOX-CPU.Web.Setup.0.19.1.exe",
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-cpu-0.19.1-x64.nsis.7z.0",
-    "https://github.com/VOICEVOX/voicevox/releases/download/0.19.1/voicevox-cpu-0.19.1-x64.nsis.7z.1"
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/VOICEVOX-CPU.Web.Setup.0.23.0.exe",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/voicevox-cpu-0.23.0-x64.nsis.7z.0",
+    "https://github.com/VOICEVOX/voicevox/releases/download/0.23.0/voicevox-cpu-0.23.0-x64.nsis.7z.1"
   ],
   "hash": [
-    "2eaf9632049fbd21826880583665a75eb2bf999345352ecde5c5780fc66c7fde",
-    "07e3fed6df2cecbea61ff6396ae148ca303f033e3069a8eb6495885fb6423d61",
-    "5502721cdbc13078b660e0097ac42d8463cf00cf602a727d9976b2d4483619f5"
+    "3abefefb5216a774c9351af6b2ccc899f8e977c199850dd89c87506c84fde310",
+    "77b85e861034bbf8784deaaff732fe6eb2aff80611288f7f992519b6b8ef57c1",
+    "09b8e35f3db117e79712bd5bee408d9c0bf07fc15e382587294e4dba5313bb58"
   ],
   "installer": {
-    "file": "VOICEVOX-CPU.Web.Setup.0.19.1.exe"
+    "file": "VOICEVOX-CPU.Web.Setup.0.23.0.exe"
   },
   "uninstaller": {
     "script": [

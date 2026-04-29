@@ -1,16 +1,16 @@
 {
-    "version": "2.5.0",
+    "version": "2.5.3",
     "description": "iMonitor (冰镜) is a endpoint behavior monitoring and analysis software based on iMonitorSDK.",
-    "homepage": "https://imonitorsdk.com/imonitor",
+    "homepage": "https://trustsing.com/imonitor/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://imonitorsdk.com/publish/iMonitor64.exe#/dl.7z",
-            "hash": "de07fd79537a251f500f12eb48842e2c8789ee1a692adc02f3af7a377e27fa29"
+            "url": "https://trustsing.com/publish/iMonitor64.exe#/dl.7z",
+            "hash": "3a404d2ec63fcf88966f82adf69e71e110b93ecbde765957b4aa7a22adde32e9"
         },
         "32bit": {
-            "url": "https://imonitorsdk.com/publish/iMonitor32.exe#/dl.7z",
-            "hash": "6c4b8ce66cfd5c439ad535e125c8d6b855ac73f52c7e6ce9298b538e8c104292"
+            "url": "https://trustsing.com/publish/iMonitor32.exe#/dl.7z",
+            "hash": "8e560ce8e03e29b735d46d4d06a2cf0e27e7a82ada98fe9c20b4323eef8973f3"
         }
     },
     "bin": "iMonitor.exe",
@@ -22,15 +22,15 @@
     ],
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\" -Force -Recurse",
     "checkver": {
-        "github": "https://github.com/wecooperate/iMonitor"
+        "regex": "(?sm)更新说明.*?href=\"#[^\"]+\"><span>([\\d.]+)</span>"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://imonitorsdk.com/publish/iMonitor64.exe#/dl.7z"
+                "url": "https://trustsing.com/publish/iMonitor64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://imonitorsdk.com/publish/iMonitor32.exe#/dl.7z"
+                "url": "https://trustsing.com/publish/iMonitor32.exe#/dl.7z"
             }
         }
     }

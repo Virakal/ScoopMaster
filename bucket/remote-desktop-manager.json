@@ -1,7 +1,43 @@
 {
-    "version": "2.7",
-    "url": "https://download.microsoft.com/download/A/F/0/AF0071F3-B198-4A35-AA90-C68D103BDCCF/rdcman.msi",
-    "extract_dir": "",
-    "bin": "program files\\Microsoft\\Remote Desktop Connection Manager\\RDCMan.exe",
-    "hash":"sha256:6e29f25c5e7f5ec587d07642a344b05429472a75b4f73177cd6aac63be61a455" 
+    "version": "2026.1.19.0",
+    "description": "A remote connection management software for individual, MSPs, and IT professionals.",
+    "homepage": "https://devolutions.net/remote-desktop-manager/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-x64.2026.1.19.0.7z",
+            "hash": "c7863f3a797c58b1548de661a5e4d16f7a6d4ea88c037ddc1fd4946b87d5a1aa"
+        },
+        "arm64": {
+            "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-arm64.2026.1.19.0.7z",
+            "hash": "167ffc5a2e6b3214a688ccd23953987fefee01997ab72a423bb6eccf3357e483"
+        }
+    },
+    "shortcuts": [
+        [
+            "RemoteDesktopManager.exe",
+            "Remote Desktop Manager"
+        ]
+    ],
+    "persist": "config",
+    "post_install": [
+        "if (!(Test-Path \"$dir\\override.cfg\")) {",
+        "    New-Item \"$dir\\override.cfg\" -Value '.\\config' | Out-Null",
+        "}",
+        "Remove-Item \"$dir\\Devolutions.Updater*\" -Force"
+    ],
+    "checkver": {
+        "url": "https://devolutions.net/products.htm",
+        "regex": "RDMFree.Version=([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-x64.$version.7z"
+            },
+            "arm64": {
+                "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.win-arm64.$version.7z"
+            }
+        }
+    }
 }

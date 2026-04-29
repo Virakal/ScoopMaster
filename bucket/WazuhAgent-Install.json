@@ -1,11 +1,11 @@
 {
-    "version": "4.9.0",
+    "version": "4.14.5",
     "description": "Wazuh Agent. It communicates with the Wazuh server, sending data in near real-time through an encrypted and authenticated channel.",
     "homepage": "https://wazuh.com/",
     "license": "GPL-2.0-only",
     "changelog": "https://documentation.wazuh.com/current/release-notes/index.html",
-    "url": "https://packages.wazuh.com/4.x/windows/wazuh-agent-4.9.0-1.msi#/setup.msi_",
-    "hash": "3c2902fa2bd3bccd7c4001a9b01219b82df347f5f6e0a96760ad42259fbb3829",
+    "url": "https://packages.wazuh.com/4.x/windows/wazuh-agent-4.14.5-1.msi#/setup.msi_",
+    "hash": "bf35197fee30092d78aad648299e8fd3aba8a0f9bc7d5edebce483a0b2c8e38e",
     "pre_download": "Assert-Administrator",
     "installer": {
         "script": [

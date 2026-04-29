@@ -1,76 +1,78 @@
 {
-    "version": "131.0b8",
-    "description": "(LibPortable patched) Developer builds of Firefox: the popular open source web browser",
-    "homepage": "https://www.mozilla.org/firefox/developer/",
+    "version": "150.0",
+    "description": "Popular open source web browser.",
+    "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
-    "depends": "LibPortable",
+    "notes": [
+        "To set profile 'Scoop' as *DEFAULT*, or profiles/settings was lost after update:",
+        "  - Run 'Firefox Profile Manager', choose 'Scoop' then click 'Start Firefox'.",
+        "  - Visit 'about:profiles' page in Firefox to check *DEFAULT* profile.",
+        "For details: https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles"
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/131.0b8/win64/zh-CN/Firefox%20Setup%20131.0b8.exe#/dl.7z",
-            "hash": "sha512:1e03567c750d73dcd6f2371ab5009b3e46ad346ce5410b2a8b3c37937cd580dfa49ea25ab4c20644dd27114955712eca3eebda3b4bfadea66a4d22b078c8ecf3"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/150.0/win64/en-US/Firefox%20Setup%20150.0.exe#/dl.7z",
+            "hash": "sha512:3dd7908eb8c137d497f77ef58038b92cde1311bc41b4a04d8998f42ebda7c82f8a47920f9ffa8356dfeee3594002498c9cb4b00e4ab7469498b48956b83f290c"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/devedition/releases/131.0b8/win32/zh-CN/Firefox%20Setup%20131.0b8.exe#/dl.7z",
-            "hash": "sha512:34f9f232835f8d067eb78a1c9cbe0936eb9f9f4f149a94165614ac22d9b78deb09a7b7615110c701a4db66bc39118a422193b7b052a5337f1484125ccbeca0a5"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/150.0/win32/en-US/Firefox%20Setup%20150.0.exe#/dl.7z",
+            "hash": "sha512:8a1aa69f97006154d40f8f48316743b63a514c956d87618fc18df1c3a52bee977475575caeb4c17853f4b4fdfe4ab00ea8a2743992b806faa465df1c8d866023"
+        },
+        "arm64": {
+            "url": "https://archive.mozilla.org/pub/firefox/releases/150.0/win64-aarch64/en-US/Firefox%20Setup%20150.0.exe#/dl.7z",
+            "hash": "sha512:bb0f42245c0b792e0b965408e22b33df42a819d468d01b519be5c10e3409a320a1c85c88d9ba6d9b7f463ecd2c442be7e8f75f26387caac43cabd633f533476f"
         }
     },
     "extract_dir": "core",
+    "post_install": [
+        "firefox -CreateProfile \"Scoop $persist_dir\\profile\"",
+        "$Addition = \"$persist_dir\\addition\"",
+        "if (Test-Path $Addition) {",
+        "  info 'Copying additional items...'",
+        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
+        "}"
+    ],
     "bin": "firefox.exe",
     "shortcuts": [
         [
             "firefox.exe",
             "Firefox"
+        ],
+        [
+            "firefox.exe",
+            "Firefox Profile Manager",
+            "-P"
         ]
     ],
-    "pre_install": [
-        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name air) scripts/AirUtils.psm1)",
-        "EnsureFile \"$persist_dir\\config.js\"",
-        "$lib_dir = scoop prefix 'LibPortable'",
-        "$portable_ini = \"$persist_dir\\portable.ini\"",
-        "if (!(Test-Path $portable_ini)) {",
-        "    $example_ini = \"$lib_dir\\portable(example).ini\"",
-        "    $content = (Get-Content $example_ini -Raw) -replace 'Update=1', 'Update=0' -replace 'PortableDataPath=../Profiles', 'PortableDataPath=./data'",
-        "    EnsureSetContent $portable_ini $content",
-        "}",
-        "Remove-Module -Name AirUtils"
-    ],
     "persist": [
-        "data",
-        "defaults",
         "distribution",
-        "config.js",
-        "portable.ini"
-    ],
-    "post_install": [
-        "Remove-Item \"$dir\\updater.exe\" -Force -ErrorAction Ignore",
-        "$lib_dir = scoop prefix 'LibPortable'",
-        "$arch = if ($architecture -eq '64bit') { '64' } else { '32' }",
-        "$portable_dll = \"portable$arch.dll\"",
-        "if (!(Test-Path \"$dir\\$portable_dll\")) {",
-        "    Copy-Item \"$lib_dir\\$portable_dll\" \"$dir\" -Force",
-        "}",
-        "$setdll_exe = \"setdll$arch.exe\"",
-        "Invoke-ExternalCommand \"$lib_dir\\$setdll_exe\" -ArgumentList @(\"/d:$dir\\$portable_dll\", \"$dir\\mozglue.dll\") -Activity \"`nApplying LibPortable patch`n\" -Quiet"
+        "profile"
     ],
     "checkver": {
-        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/en-US/aurora/_/_/_/_/update.xml",
-        "xpath": "/updates/update/patch/@URL",
-        "regex": "devedition-([\\db.]+)-"
+        "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+        "jsonpath": "$.LATEST_FIREFOX_VERSION"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://archive.mozilla.org/pub/devedition/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
                 "hash": {
-                    "url": "https://archive.mozilla.org/pub/devedition/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64/zh-CN/$basename"
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win64/en-US/$basename"
                 }
             },
             "32bit": {
-                "url": "https://archive.mozilla.org/pub/devedition/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win32/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
                 "hash": {
-                    "url": "https://archive.mozilla.org/pub/devedition/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win32/zh-CN/$basename"
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win32/en-US/$basename"
+                }
+            },
+            "arm64": {
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64-aarch64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
+                    "regex": "$sha512\\s+win64-aarch64/en-US/$basename"
                 }
             }
         }

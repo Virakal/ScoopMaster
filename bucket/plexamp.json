@@ -1,30 +1,26 @@
 {
     "##": "App creates its own shortcuts, App info found in this thread: https://forums.plex.tv/t/anyway-to-stop-auto-update-of-plexamp/861906/10",
-    "version": "4.11.1",
+    "version": "4.12.3",
     "description": "Explore, discover, and have fun with your music using our beautiful, custom-built music player",
     "homepage": "https://www.plex.tv/plexamp/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp%20Setup%204.11.1.exe#/dl.7z",
-            "hash": "sha512:ff78fe2a4be0895abe682b81e7bb5c1e6759d33594aea66141a2bc085ddc1b3c16d551505bc4554de7f185209bf447c03120e8dc95fa1e68500ed7674b75593f"
+            "url": "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp%20Setup%204.12.3.exe#/dl.7z",
+            "hash": "sha512:1baa3b1cb85db4de444a246b95e6d4e109caec29b212321a456121ab53988ab347b2513b8ac4f87f036eacd9dc3f725aa13be4697682e2aca9d47cd821dffe88"
         }
     },
     "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
         "# Disable auto-update",
         "Remove-Item -ErrorAction Ignore -Recurse \"$env:LOCALAPPDATA\\plexamp-updater\" | Out-Null",
-        "$updateFile = New-Item -ItemType File -Path \"$env:LOCALAPPDATA\\plexamp-updater\" -Name \"installer.exe\" -Value \"Disabled by Scoop\" -Force",
-        "$updateFile.Attributes = 'ReadOnly', 'System'",
-        "Remove-Item \"$env:UserProfile\\Desktop\\Plexamp.lnk\" -ErrorAction Ignore",
-        "Remove-Item \"$dir\\$fname\" -ErrorAction Ignore",
-        "# Extract app",
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal"
+        "$updateFile = New-Item -ItemType File -Path \"$env:LOCALAPPDATA\" -Name \"plexamp-updater\" -Value \"Disabled by Scoop\" -Force",
+        "$updateFile.Attributes = 'ReadOnly'"
     ],
     "post_install": [
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "Remove-Item \"$dir\\Uninstall Plexamp.exe\" -Force"
+        "Remove-Item \"$dir\\`$R0\" -Force -Recurse"
     ],
-    "bin": "Plexamp.exe",
     "shortcuts": [
         [
             "Plexamp.exe",

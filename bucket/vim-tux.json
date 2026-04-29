@@ -1,5 +1,5 @@
 {
-    "version": "9.1.0736_20240918",
+    "version": "9.2.0407_20260428",
     "description": "A highly configurable text editor for efficiently creating and changing any kind of text. (tux build)",
     "homepage": "https://tuxproject.de/projects/vim",
     "license": "Vim",
@@ -10,11 +10,11 @@
     "architecture": {
         "64bit": {
             "url": "https://tuxproject.de/projects/vim/complete-x64.7z",
-            "hash": "4a83be5acb8e2243dd0200c5f57c43d20965760cdce58e80b6067b8b5be6cc13"
+            "hash": "c338a031287741c055e8e3dd6b24e5e95a8a716c1742b194e9cc9777f60fe47b"
         },
         "32bit": {
             "url": "https://tuxproject.de/projects/vim/complete-x86.7z",
-            "hash": "7a6a64c86701a6cdc37afb0e7f7f92056c8af60de25fdcf893653c1cba4a7370"
+            "hash": "6fc55e005f273349b3a5875fef589211c58ecfb3aa8d133ff334aa285b985661"
         }
     },
     "post_install": [
@@ -96,7 +96,7 @@
         ]
     ],
     "checkver": {
-        "regex": "Latest compiled update:</b>\\s(?<y>\\d+)&#45;(?<m>\\d+)&#45;(?<d>\\d+)\\s.*<b>Vim version:</b>\\s+(?<version>[\\d.]+)",
+        "regex": "Latest compiled update:</b>\\s*(?<y>\\d+)-(?<m>\\d+)-(?<d>\\d+).*<b>Vim version:</b>\\s+(?<version>[\\d.]+)",
         "replace": "${version}_${y}${m}${d}"
     },
     "autoupdate": {

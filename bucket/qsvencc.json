@@ -1,12 +1,12 @@
 {
     "homepage": "https://github.com/rigaya/QSVEnc",
     "description": "Transcoding software using Intel Quick Sync Video.",
-    "version": "7.69",
+    "version": "8.10",
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/rigaya/QSVEnc/releases/download/7.69/QSVEncC_7.69_Win32.7z",
-            "hash": "eb2f67d4b3be346e811a6082043b12790363e2c31baee939c315f146930f6dd2",
+            "url": "https://github.com/rigaya/QSVEnc/releases/download/8.10/QSVEncC_8.10_Win32.7z",
+            "hash": "74a9c59e91f1124dd727e752539e7ef4b3d091e5e9eaa0e7af8571de0c51677d",
             "bin": [
                 [
                     "QSVEncC.exe",
@@ -15,8 +15,8 @@
             ]
         },
         "64bit": {
-            "url": "https://github.com/rigaya/QSVEnc/releases/download/7.69/QSVEncC_7.69_x64.7z",
-            "hash": "320ff92ce5601e929a2d68a2450b6a68536b946bea9be1e7b02dc8010440fd85",
+            "url": "https://github.com/rigaya/QSVEnc/releases/download/8.10/QSVEncC_8.10_x64.7z",
+            "hash": "abb23f67e6cc75704172cbb2e9e504d69378cf9056a5ef886528f47d95b9b44c",
             "bin": [
                 [
                     "QSVEncC64.exe",

@@ -1,16 +1,16 @@
 {
-    "version": "3.5.0.3818",
+    "version": "3.6.0.4074",
     "description": "The official OpenVPN Connect client software developed and maintained by OpenVPN Inc.",
     "homepage": "https://openvpn.net",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.5.0.3818_signed.msi#/setup.msi_",
-            "hash": "14a16e257eaf1da9003a9202be33ba9833c5a12fc774e05c0b31509b54073187"
+            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.6.0.4074_signed.msi#/setup.msi_",
+            "hash": "4969b48b8c04477980fc59180802c17f04cf21e1e52083456555417fc83076df"
         },
         "32bit": {
-            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.5.0.3818_signed_x86.msi#/setup.msi_",
-            "hash": "457e45e09ce9c7f1266956a83e108f64611ec852e1715dd1d4bc0f592e271bca"
+            "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-3.6.0.4074_signed_x86.msi#/setup.msi_",
+            "hash": "a615148b348d4ff881e636ea320c5d5a44f411f3ee0ac898c4f0f74504408665"
         }
     },
     "installer": {
@@ -34,14 +34,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed.msi",
+                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed.msi#/setup.msi_",
                 "hash": {
                     "url": "https://openvpn.net/client-connect-vpn-for-windows/",
                     "regex": "(?sm)v3-windows\\.msi.*?$sha256"
                 }
             },
             "32bit": {
-                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed_x86.msi",
+                "url": "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-$version_signed_x86.msi#/setup.msi_",
                 "hash": {
                     "url": "https://openvpn.net/client-connect-vpn-for-windows/",
                     "regex": "(?sm)v3-windows-x86\\.msi.*?$sha256"

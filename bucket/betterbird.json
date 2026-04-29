@@ -1,12 +1,12 @@
 {
-    "version": "115.15.0-bb32",
-    "description": "A free email application that’s easy to set up and customize.",
+    "version": "140.10.0esr-bb21",
+    "description": "A fine-tuned version of Mozilla Thunderbird with new features, bug fixes and telemetry turned off",
     "homepage": "https://www.betterbird.eu",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-115.15.0-bb32.en-US.win64.zip",
-            "hash": "f7399bed9961f0e0416f8b15b8beffd1ff96e51df64ee42158308cd5bd935240"
+            "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-140.10.0esr-bb21.en-US.win64.zip",
+            "hash": "cddfc18a07e55c950422767599549a511c50e48ce7d7145147324cb37c2082b1"
         }
     },
     "bin": [
@@ -23,15 +23,19 @@
     ],
     "persist": "profile",
     "checkver": {
-        "url": "https://www.betterbird.eu/downloads/index.php",
-        "regex": "Betterbird (([\\d.]+)-([a-z\\d]){4})"
+        "script": [
+            "$url = 'https://www.betterbird.eu/downloads/get.php?os=win&lang=en-US&version=release&portable=true'",
+            "$location = (Invoke-WebRequest -Uri $url -MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction SilentlyContinue).Headers.Location",
+            "Write-Output $location"
+        ],
+        "regex": "BetterbirdPortable-([\\d.]+.+).en-US.win64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-$version.en-US.win64.zip",
                 "hash": {
-                    "url": "https://www.betterbird.eu/downloads/sha256-115.txt",
+                    "url": "https://www.betterbird.eu/downloads/sha256-$majorVersion.txt",
                     "regex": "^$sha256\\s+\\*$basename$"
                 }
             }

@@ -1,20 +1,20 @@
 {
-    "version": "3.0.15",
+    "version": "3.0.20",
     "description": "TLS/SSL toolkit (3.0.X LTS)",
     "homepage": "https://slproweb.com/products/Win32OpenSSL.html",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://slproweb.com/download/Win64OpenSSL-3_0_15.exe",
-            "hash": "bbe6c041eff670da6ec7781c205bfa22e56ddea3d810bbe98e6322985883b89a"
+            "url": "https://slproweb.com/download/Win64OpenSSL-3_0_20.exe",
+            "hash": "17a582ffbe9a1994d5dcb6b6486f1d564225c7c48829cf87caf3225b5b87def1"
         },
         "32bit": {
-            "url": "https://slproweb.com/download/Win32OpenSSL-3_0_15.exe",
-            "hash": "7d6359ecca5ea600ad741f717315e398d70d0171fe4d5afb7159948adfbf7334"
+            "url": "https://slproweb.com/download/Win32OpenSSL-3_0_20.exe",
+            "hash": "cc3fe9aab2a972e96268839080fc5e4ef9141d9e7eddec0a19cd7eed4633c6e1"
         },
         "arm64": {
-            "url": "https://slproweb.com/download/Win64ARMOpenSSL-3_0_15.exe",
-            "hash": "95c106023793db3de6418815b13ebf750e435b117e9819b50c23c35fb567bef4"
+            "url": "https://slproweb.com/download/Win64ARMOpenSSL-3_0_20.exe",
+            "hash": "eede45888ab9a4beb3f3c3fa70e4044fef5cdbdf878058b3d7c7a0cd7aeab1f8"
         }
     },
     "innosetup": true,

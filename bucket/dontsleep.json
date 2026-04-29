@@ -1,12 +1,12 @@
 {
     "description": "A small program to prevent system Shutdown, Stand By, Turn Off , Restart, Hibernate.",
-    "version": "9.56.1",
+    "version": "10.11",
     "license": "https://www.softwareok.com/?seite=Microsoft/DontSleep/Eula",
     "homepage": "https://www.softwareok.com/?seite=Microsoft/DontSleep",
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/DontSleep_x64_Portable.zip",
-            "hash": "987bb3cde6240b2c0b501a670d38528ccd5446704bdebfdea71edad9f8db627b",
+            "hash": "dd4c79d1b6b5cc755619394d1215cc7cade12849c21d2a368f229b751b4253b6",
             "shortcuts": [
                 [
                     "DontSleep_x64_p.exe",
@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/DontSleep_Portable.zip",
-            "hash": "9c9c4bcfe0f1bad056d68c072cd578cde9138bd8e3817172db17888bbe98ad2b",
+            "hash": "a165ea59d946051ef1e6424513c53ad1f6bc26fb347600c5bf995122c84cc5a1",
             "shortcuts": [
                 [
                     "DontSleep_p.exe",

@@ -1,9 +1,10 @@
 {
-    "version": "0.0.8.3",
+    "version": "0.0.8.5",
     "description": "Shogi GUI.",
     "homepage": "http://shogigui.siganus.com/",
-    "url": "http://shogigui.siganus.com/shogigui/ShogiGUIv0.0.8.3.zip",
-    "hash": "4179740b26f4541d724409a2871c0c04490a35ab768719f629459ed543d5e786",
+    "license": "Unknown",
+    "url": "http://shogigui.siganus.com/shogigui/ShogiGUIv0.0.8.5.zip",
+    "hash": "3fae163015b2075c341a15d37a53fddda90149c3dd7fe3cd78082be66955956c",
     "extract_dir": "ShogiGUI",
     "persist": "settings.xml",
     "shortcuts": [
@@ -15,5 +16,8 @@
     "checkver": {
         "url": "http://shogigui.siganus.com/download.html",
         "regex": "<td style=\"width: 232px\">[\\d/]+ ver ([\\d\\.]+)</td>"
+    },
+    "autoupdate": {
+        "url": "http://shogigui.siganus.com/shogigui/ShogiGUIv$version.zip"
     }
 }

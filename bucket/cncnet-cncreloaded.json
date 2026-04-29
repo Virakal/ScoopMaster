@@ -1,9 +1,9 @@
 {
-    "version": "2.6.0",
+    "version": "2.6.6",
     "description": "CNCNET-enabled mod for Yuri's Revenge that combines and enhances Tiberian Sun and Red Alert 2",
     "homepage": "https://www.moddb.com/mods/cncreloaded",
     "license": "Freeware",
-    "url": "https://www.moddb.com/downloads/start/276859#/dl.html",
+    "url": "https://www.moddb.com/downloads/start/282062#/dl.html",
     "notes": [
         "Recommended renderer: CNC-DDRAW",
         "Recommended in-game resolution: 1280x720",
@@ -44,6 +44,7 @@
     ],
     "checkver": {
         "url": "https://www.moddb.com/mods/cncreloaded/downloads",
-        "regex": "C&#038;C: Reloaded v(?<version>[\\d.]+)"
+        "regex": "C&#038;C: Reloaded v(?<version>[\\d.]+)",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
     }
 }

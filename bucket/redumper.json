@@ -1,34 +1,43 @@
 {
-    "version": "403",
+    "version": "717",
     "description": "A low level CD dumper utility.",
     "homepage": "https://github.com/superg/redumper",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/superg/redumper/releases/download/build_403/redumper-2024.08.18_build403-win64.zip",
-            "extract_dir": "redumper-2024.08.18_build403-win64\\bin",
-            "hash": "8c9345ea5031929be847feb6934d6d3c4758914179c8237e7a982735ccd6573b"
+            "url": "https://github.com/superg/redumper/releases/download/b717/redumper-b717-windows-x64.zip",
+            "extract_dir": "redumper-b717-windows-x64\\bin",
+            "hash": "b291f03accf8cb8b24e1e4cc31120d9a1bda9c98ff6a0897114cece62d1a5711"
         },
         "32bit": {
-            "url": "https://github.com/superg/redumper/releases/download/build_403/redumper-2024.08.18_build403-win32.zip",
-            "extract_dir": "redumper-2024.08.18_build403-win32\\bin",
-            "hash": "c431c95cb64451efe96483fe73f0c05e36e7650964519e24928f58dd8be89b3b"
+            "url": "https://github.com/superg/redumper/releases/download/b717/redumper-b717-windows-x86.zip",
+            "extract_dir": "redumper-b717-windows-x86\\bin",
+            "hash": "f952686dab30dcae725abd277c6c61aeda21ca6c32024e917d4c4404f6f1762e"
+        },
+        "arm64": {
+            "url": "https://github.com/superg/redumper/releases/download/b717/redumper-b717-windows-arm64.zip",
+            "extract_dir": "redumper-b717-windows-arm64\\bin",
+            "hash": "f0db3e743caa0968112f8b8db3aaf1257d2fae23ca6a78a8e8a3d97eeaf25f56"
         }
     },
     "bin": "redumper.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/superg/redumper/releases/latest",
-        "regex": "redumper-(?<date>\\d{4}.\\d{2}.\\d{2})_build(\\d+)-win64.zip"
+        "url": "https://github.com/superg/redumper/releases.atom",
+        "regex": "Repository/\\d+/b(\\d+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/superg/redumper/releases/download/build_$version/redumper-$matchDate_build$version-win64.zip",
-                "extract_dir": "redumper-$matchDate_build$version-win64\\bin"
+                "url": "https://github.com/superg/redumper/releases/download/b$version/redumper-b$version-windows-x64.zip",
+                "extract_dir": "redumper-b$version-windows-x64\\bin"
             },
             "32bit": {
-                "url": "https://github.com/superg/redumper/releases/download/build_$version/redumper-$matchDate_build$version-win32.zip",
-                "extract_dir": "redumper-$matchDate_build$version-win32\\bin"
+                "url": "https://github.com/superg/redumper/releases/download/b$version/redumper-b$version-windows-x86.zip",
+                "extract_dir": "redumper-b$version-windows-x86\\bin"
+            },
+            "arm64": {
+                "url": "https://github.com/superg/redumper/releases/download/b$version/redumper-b$version-windows-arm64.zip",
+                "extract_dir": "redumper-b$version-windows-arm64\\bin"
             }
         }
     }

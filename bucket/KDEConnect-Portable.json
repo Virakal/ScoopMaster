@@ -1,11 +1,15 @@
 {
-    "version": "23.08.4-1615",
+    "version": "26.04-6148",
     "description": "KDE Connect. Enabling communication between all your devices. Made for people like you.",
     "homepage": "https://kdeconnect.kde.org",
     "license": "GPL-2.0-or-later",
     "changelog": "",
-    "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/1615/artifact/kdeconnect-kde-23.08.4-1615-windows-cl-msvc2019-x86_64.7z",
-    "hash": "9e4d70c6acb290060be50de9edabdfad371752f12e811f24b3353eeddd6d34c3",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-26.04/windows/kdeconnect-kde-release_26.04-6148-windows-cl-msvc2022-x86_64.7z",
+            "hash": "498f086409cd348bf5e65018b3e19724af16f22d201ecab183fc12bc553b075f"
+        }
+    },
     "pre_install": [
         "Remove-Item \"$dir\\*\" -Exclude kdeconnect-*.7z -Recurse",
         "Expand-7zipArchive \"$dir\\kdeconnect-*.7z\" \"$dir\" -Removal"
@@ -32,7 +36,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-$matchRelease/windows/kdeconnect-kde-release_$version-windows-cl-msvc2022-x86_64.exe#/dl.7z"
+                "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-$matchHead/windows/kdeconnect-kde-release_$version-windows-cl-msvc2022-x86_64.7z"
             }
         },
         "hash": {

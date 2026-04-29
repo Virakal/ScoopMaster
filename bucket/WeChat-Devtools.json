@@ -1,21 +1,31 @@
 {
-    "version": "1.06.2407120",
+    "version": "2.01.2510290",
     "description": "To help developers develop and debug Weixin Mini Programs more simply and efficiently.",
-    "homepage": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html",
-    "license": {
-        "identifier": "Freeware"
-    },
+    "homepage": "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&download_version=1062407120&version_type=1#/dl.7z",
-            "hash": "9b9e2b5660e148df5203ec7c41f6646f69a045e478405cea48b5e76b09ac31e5"
+            "url": "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_2.01.2510290_win32_x64.exe#/dl.7z",
+            "hash": "f817db8dd71c9a9b27583c18a17c300144314162ca7b7f944b6262c458b127f7"
         },
         "32bit": {
-            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&download_version=1062407120&version_type=1#/dl.7z",
-            "hash": "7327707550ebe29d31c98faa8355c43191b4afbd8485e3c8247231467b35bc97"
+            "url": "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_2.01.2510290_win32_ia32.exe#/dl.7z",
+            "hash": "b221ca766c951bd195944517039b829ca2c98df784addc05b89201f9c6f96eac"
         }
     },
-    "pre_install": "Remove-Item -R -Path \"$dir\\`$PLUGINSDIR\"",
+    "pre_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Remove-Item -R -Path \"$dir\\`$PLUGINSDIR\" -ErrorAction SilentlyContinue | Out-Null",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Write-Host \"`nPersisting $env:APPDATA\\微信开发者工具 ... \" -NoNewline",
+        "New-PersistDirectory \"$env:LOCALAPPDATA\\微信开发者工具\" \"$persist_dir\\微信开发者工具\" -Migrate"
+    ],
+    "post_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Write-Host (\"`nDeleting $env:APPDATA\\微信开发者工具 ... \") -f DarkGray -NoNewline",
+        "Remove-Junction \"$env:APPDATA\\微信开发者工具\" -ErrorAction SilentlyContinue | Out-Null"
+    ],
     "shortcuts": [
         [
             "微信开发者工具.exe",
@@ -23,17 +33,23 @@
         ]
     ],
     "checkver": {
-        "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html",
-        "regex": "\\> (?<maj>\\d+)\\.(?<min>\\d+)\\.(?<patch>\\d+) \\<",
+        "script": [
+            "$req = [System.Net.HttpWebRequest]::Create('https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki')",
+            "$req.Method = 'HEAD'",
+            "$req.AllowAutoRedirect = $false",
+            "try { $res = $req.GetResponse() } catch { $res = $_.Exception.Response }",
+            "if ($res) { $res.Headers['Location'] } else { '' }"
+        ],
+        "regex": "/(?<hash>[\\w]+)/wechat_devtools_(?<maj>\\d+)\\.(?<min>\\d+)\\.(?<patch>\\d+)_",
         "replace": "${maj}.${min}.${patch}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&download_version=$matchMaj$matchMin$matchPatch&version_type=1#/dl.7z"
+                "url": "https://dldir1.qq.com/WechatWebDev/release/$matchHash/wechat_devtools_$matchMaj.$matchMin.$matchPatch_win32_x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&download_version=$matchMaj$matchMin$matchPatch&version_type=1#/dl.7z"
+                "url": "https://dldir1.qq.com/WechatWebDev/release/$matchHash/wechat_devtools_$matchMaj.$matchMin.$matchPatch_win32_ia32.exe#/dl.7z"
             }
         }
     }

@@ -1,26 +1,27 @@
 {
-    "version": "7.67",
+    "version": "8.04",
     "description": "Investigate performance and image quality of HW encoder (NVENC) of NVIDIA.",
     "homepage": "https://github.com/rigaya/NVEnc",
-    "license": "MIT",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/rigaya/NVEnc/raw/refs/heads/master/NVEnc_license.txt"
+    },
     "architecture": {
         "64bit": {
-            "bin": [
-                [
-                    "NVEncC64.exe",
-                    "NVEncC"
-                ]
-            ],
-            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_x64.7z",
-            "hash": "26278ec1c081c8342666aeffe86f6f1cc0e665999b75b6e55b51e486902deb57"
+            "pre_install": "Get-ChildItem \"$dir\" 'NVEncC64.exe' | Select-Object -First 1 | Rename-Item -NewName 'NVEncC.exe'",
+            "url": "https://github.com/rigaya/NVEnc/releases/download/8.04/NVEncC_8.04_x64.7z",
+            "hash": "0a814a07f9753c006d1dc1419783885e85cb89efeb3548e26f9eb206758bdfd7"
         },
         "32bit": {
-            "bin": "NVEncC.exe",
-            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_Win32.7z",
-            "hash": "643d447707b0a2cd024f6a694b01f7a762f353a6b9c746ea3d41674050dd3fec"
+            "url": "https://github.com/rigaya/NVEnc/releases/download/8.04/NVEncC_8.04_Win32.7z",
+            "hash": "f249c799ad5d38b48d9da9fc3289abd06fdd798094fe09b58283400114d26f42"
         }
     },
-    "checkver": "github",
+    "bin": "NVEncC.exe",
+    "checkver": {
+        "url": "https://github.com/rigaya/NVEnc/releases.atom",
+        "regex": "Repository/\\d+/v?(.+?)<"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

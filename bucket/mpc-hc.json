@@ -1,16 +1,16 @@
 {
-    "version": "2.3.5",
+    "version": "2.7.1",
     "description": "An extremely light-weight, open source media player for Windows.",
     "homepage": "https://github.com/clsid2/mpc-hc",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/clsid2/mpc-hc/releases/download/2.3.5/MPC-HC.2.3.5.x64.zip",
-            "hash": "f4bc5f84dfebb4cdad6414fa2bc71f6343009dbb84122722904e6f7a71cd51f3"
+            "url": "https://github.com/clsid2/mpc-hc/releases/download/2.7.1/MPC-HC.2.7.1.x64.zip",
+            "hash": "495a0c67d620dd64f1dbcce4f3675072e21c5dfeb3fbeaa680e15794e5f9f7e7"
         }
     },
     "pre_install": [
-        "Remove-Item \"$dir\\CrashReporter\", \"$dir\\LAVFilters64\", \"$dir\\MPCVR\" -Recurse -Force",
+        "Remove-Item \"$dir\\CrashReporter\" -Recurse -Force",
         "if (!(Test-Path \"$persist_dir\\mpc-hc64.ini\")) {",
         "    New-Item \"$dir\\mpc-hc64.ini\" -ItemType File | Out-Null",
         "}"

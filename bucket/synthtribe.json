@@ -1,35 +1,35 @@
 {
-    "version": "2.8.1",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "##": "checkver: Returned quoted columns are title,url,subGroup",
+    "version": "7.0c",
     "description": "Control Behringer's synthesizers and do firmware updates.",
     "homepage": "https://www.behringer.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://community.musictribe.com/terms-of-use"
     },
-    "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V2.8.1-Windows.zip",
-    "hash": "7da174602426acd377186ba1585110b360f33044ef20910108a5d19ce3aa4609",
-    "extract_dir": "SYNTHTRIBE_V2.8.1-Windows",
+    "url": "https://github.com/stella-emu/stella/releases/download/7.0/Stella-7.0c-windows.zip",
+    "hash": "44102ccf8af74b021cf143db346e561c5d6ed2a2e91d79ee6d3c99d7c42f4653",
     "shortcuts": [
         [
-            "SYNTHTRIBE_2.8.1.exe",
+            "SYNTHTRIBE_V7.0c.exe",
             "SYNTHTRIBE"
         ]
     ],
     "checkver": {
         "script": [
-            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0722-ABR'",
+            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0704-AAC'",
             "$json = $(Invoke-WebRequest -Headers $head $url).Content | ConvertFrom-Json",
             "$list = ($json | Where-Object title -eq 'Software').list",
-            "$list | ForEach-Object { if ($_.title -match 'Behringer SYNTHTRIBE for Windows V([\\d.]+)') { $matches[1] } }"
+            "$list | Where-Object subGroup -eq 'Windows' | ConvertTo-Csv -NoHeader"
         ],
-        "regex": "(.+)"
+        "regex": "\\\"https://(?<url>.+/SYNTHTRIBE_V(?<version>\\d+\\.\\d+\\.\\d+).+)\\\","
     },
     "autoupdate": {
-        "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V$version-Windows.zip",
-        "extract_dir": "SYNTHTRIBE_V$version-Windows",
+        "url": "https://$matchUrl",
         "shortcuts": [
             [
-                "SYNTHTRIBE_$version.exe",
+                "SYNTHTRIBE_V$version.exe",
                 "SYNTHTRIBE"
             ]
         ]

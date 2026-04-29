@@ -1,18 +1,18 @@
 {
-    "version": "18.5.1",
+    "version": "19.8.2",
     "description": "DDraceNetwork, a free cooperative platformer game",
     "homepage": "https://ddnet.org/",
     "license": "Zlib",
     "architecture": {
         "64bit": {
-            "url": "https://ddnet.org/downloads/DDNet-18.5.1-win64.zip",
-            "hash": "4fcfec97bbe41ba7f04b2a4bf0b7c20fa103128c8ce38bd80beefb4fcbe31c9b",
-            "extract_dir": "DDNet-18.5.1-win64"
+            "url": "https://ddnet.org/downloads/DDNet-19.8.2-win64.zip",
+            "hash": "2b49b9fc305d698bb5d53be43b09fda902d0009b51a3aaaf9fbd8563480fd22d",
+            "extract_dir": "DDNet-19.8.2-win64"
         },
         "32bit": {
-            "url": "https://ddnet.org/downloads/DDNet-18.5.1-win32.zip",
-            "hash": "82ac62dd0d5fb8f170dff36239f724128ecebd70aea9ec588b3514b6fd1c9981",
-            "extract_dir": "DDNet-18.5.1-win32"
+            "url": "https://ddnet.org/downloads/DDNet-19.8.2-win32.zip",
+            "hash": "df2ea1e01be5813b76d335fef91266e4078ff728599204d2d162c69453b35f57",
+            "extract_dir": "DDNet-19.8.2-win32"
         }
     },
     "checkver": {

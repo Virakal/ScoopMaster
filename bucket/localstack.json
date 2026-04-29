@@ -1,30 +1,23 @@
 {
-    "version": "3.7.2",
+    "version": "2026.4.0",
     "description": "A fully functional local AWS cloud stack. Develop and test your cloud & Serverless apps offline.",
-    "homepage": "https://localstack.cloud/",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/localstack/localstack/blob/master/LICENSE.txt"
-    },
+    "homepage": "https://localstack.cloud",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/localstack/localstack-cli/releases/download/v3.7.2/localstack-cli-3.7.2-windows-amd64-onefile.zip",
-            "hash": "c87ff743077ac9a9642202418f25419c5681498595cdf6593877fbf7da073ba8"
+            "url": "https://github.com/localstack/localstack-cli/releases/download/v2026.4.0/localstack-cli-2026.4.0-windows-amd64-onefile.zip",
+            "hash": "4f78a20912d3d3c3d1ad6407660478a656b68d7ca58fd4690afdaf0543cab6e2"
         }
     },
     "bin": "localstack.exe",
     "checkver": {
-        "url": "https://github.com/localstack/localstack-cli/releases",
-        "regex": "/localstack/localstack-cli/tree/v([^/]+?)\""
+        "github": "https://github.com/localstack/localstack-cli"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/localstack/localstack-cli/releases/download/v$version/localstack-cli-$matchHead-windows-amd64-onefile.zip"
+                "url": "https://github.com/localstack/localstack-cli/releases/download/v$version/localstack-cli-$version-windows-amd64-onefile.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/localstack-cli-$matchHead-checksums.txt"
         }
     }
 }
