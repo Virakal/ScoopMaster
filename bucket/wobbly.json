@@ -3,8 +3,12 @@
     "description": "IVTC assistant for VapourSynth, similar to Yatta.",
     "homepage": "https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly",
     "license": "ISC",
-    "url": "https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/releases/download/v10/Wobbly-win64.zip",
-    "hash": "e96e68fef5bfe5a78f6725cc1c08c55d82b5ac5bca5d3a0c2aa87a0686e11c0c",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/releases/download/v10/Wobbly-win64.zip",
+            "hash": "e96e68fef5bfe5a78f6725cc1c08c55d82b5ac5bca5d3a0c2aa87a0686e11c0c"
+        }
+    },
     "pre_install": [
         "# Hardlinks won't work properly here to persist files, because this app creates a new file instead of writing to the existing one.",
         "'wibbly.ini', 'wobbly.ini' | ForEach-Object {",
@@ -34,6 +38,10 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/releases/download/v$version/Wobbly-win64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jaded-Encoding-Thaumaturgy/Wobbly/releases/download/v$version/Wobbly-win64.zip"
+            }
+        }
     }
 }
