@@ -1,47 +1,47 @@
 {
-  "version": "2.4.1",
-  "homepage": "https://www.cube-soft.jp/cubepdfutility",
-  "architecture": {
-    "64bit": {
-      "url": "https://www.cube-soft.jp/archive/cubepdf-utility-2.4.1-x64.exe",
-      "hash": "0b49c13a555515619e99d276e95005814412bd4d032705de13b2b8298ed0a1d6"
-    },
-    "32bit": {
-      "url": "https://www.cube-soft.jp/archive/cubepdf-utility-2.4.1.exe",
-      "hash": "0be020695335063359786171489739a18d341c97c7259401087b3d5da18278cf"
-    }
-  },
-  "installer": {
-    "args": [
-      "/Silent",
-      "/Lang=ja",
-      "/Dir=\"$dir\"",
-      "/NoIcons=0",
-      "/Tasks="
-    ]
-  },
-  "shortcuts": [
-    [
-      "CubePdfUtilitySplash.exe",
-      "CubePDF Utility"
-    ]
-  ],
-  "uninstaller": {
-    "file": "unins000.exe",
-    "args": "/Silent"
-  },
-  "checkver": {
-    "url": "https://www.cube-soft.jp/cubepdfutility",
-    "re": "CubePDF Utility ([\\d.]+)"
-  },
-  "autoupdate": {
+    "version": "4.5.1",
+    "homepage": "https://www.cube-soft.jp/cubepdfutility",
     "architecture": {
-      "64bit": {
-        "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version-x64.exe"
-      },
-      "32bit": {
-        "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version.exe"
-      }
+        "64bit": {
+            "url": "https://www.cube-soft.jp/archive/cubepdf-utility-4.5.1-x64.exe",
+            "hash": "7ba100965706ec05247999ea9735291b5c6c9c2d00c8eac58a85033f5898e7b6"
+        },
+        "32bit": {
+            "url": "https://www.cube-soft.jp/archive/cubepdf-utility-4.5.1.exe",
+            "hash": "1424042edcf41de015b4eb125d1f700cc031f0d73e4642c368f739e212ae52f6"
+        }
+    },
+    "installer": {
+        "args": [
+            "/Silent",
+            "/Lang=ja",
+            "/Dir=\"$dir\"",
+            "/NoIcons=0",
+            "/Tasks="
+        ]
+    },
+    "shortcuts": [
+        [
+            "CubePdfUtilitySplash.exe",
+            "CubePDF Utility"
+        ]
+    ],
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": "/Silent"
+    },
+    "checkver": {
+        "url": "https://www.cube-soft.jp/cubepdfutility",
+        "re": "CubePDF Utility ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version-x64.exe"
+            },
+            "32bit": {
+                "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version.exe"
+            }
+        }
     }
-  }
 }
