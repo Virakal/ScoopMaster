@@ -1,0 +1,18 @@
+{
+    "version": "1.6.3",
+    "description": "New Club Penguin desktop client",
+    "homepage": "https://github.com/New-Club-Penguin/NewCP-App/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TheRealOwenJ/cdn/releases/download/1.0/NewCP.7z",
+            "hash": "f5f73d876c75796416ef61952387e51f78e102128720ce96cdb6835832f31926"
+        }
+    },
+    "bin": [
+        ["NewCP.exe", "newcp"]
+    ],
+    "shortcuts": [
+        ["NewCP.exe", "New Club Penguin"]
+    ]
+}
