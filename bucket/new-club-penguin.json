@@ -1,12 +1,12 @@
 {
     "version": "1.6.3",
-    "description": "New Club Penguin desktop client",
+    "description": "New Club Penguin is a recreation of Disney's Club Penguin.",
     "homepage": "https://github.com/New-Club-Penguin/NewCP-App/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/TheRealOwenJ/cdn/releases/download/1.0/NewCP.7z",
-            "hash": "f5f73d876c75796416ef61952387e51f78e102128720ce96cdb6835832f31926"
+            "hash": "b044bed113546593763c20e3a148050e2de1993a292a3760b4113f2e6ce6f1a5"
         }
     },
     "bin": [
