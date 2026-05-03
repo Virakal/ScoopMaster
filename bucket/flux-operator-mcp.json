@@ -1,16 +1,16 @@
 {
-    "version": "0.48.0",
+    "version": "0.38.1",
     "description": "Flux MCP Server connects AI assistants directly to your Kubernetes clusters running Flux Operator, enabling seamless interaction through natural language.",
     "homepage": "https://fluxcd.control-plane.io/mcp/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/controlplaneio-fluxcd/flux-operator/releases/download/v0.48.0/flux-operator-mcp_0.48.0_windows_amd64.zip",
-            "hash": "d026a917b18bae1fc5405582698e5bd7748611743d8764b2f09edaaf1672aec9"
+            "url": "https://github.com/controlplaneio-fluxcd/flux-operator/releases/download/v0.38.1/flux-operator-mcp_0.38.1_windows_amd64.zip",
+            "hash": "c4f260534a1a0a9cd3c904645a7c0bcaf765fc1a90a9443c4b71a9f790ac35b9"
         },
         "arm64": {
-            "url": "https://github.com/controlplaneio-fluxcd/flux-operator/releases/download/v0.48.0/flux-operator-mcp_0.48.0_windows_arm64.zip",
-            "hash": "4510e7d95a155aba9231c9165e7faa173276fdf9b170fb67948da9a98e84bd44"
+            "url": "https://github.com/controlplaneio-fluxcd/flux-operator/releases/download/v0.38.1/flux-operator-mcp_0.38.1_windows_arm64.zip",
+            "hash": "128a5239fa5921691f6b70967fafc09e180608dd93f6738df986546005f345b2"
         }
     },
     "bin": "flux-operator-mcp.exe",

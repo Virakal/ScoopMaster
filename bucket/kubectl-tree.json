@@ -1,12 +1,12 @@
 {
-    "version": "0.6.0",
+    "version": "0.4.6",
     "description": "A kubectl plugin to browse Kubernetes object hierarchies as a tree.",
     "homepage": "https://github.com/ahmetb/kubectl-tree",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ahmetb/kubectl-tree/releases/download/v0.6.0/kubectl-tree_v0.6.0_windows_amd64.tar.gz",
-            "hash": "e069f1b5542e4372cdf819b1c8960eb3889dcca635953a57a9d51e953bf9dcb1"
+            "url": "https://github.com/ahmetb/kubectl-tree/releases/download/v0.4.6/kubectl-tree_v0.4.6_windows_amd64.tar.gz",
+            "hash": "e7d0d05298e6ec764e07c91377bc98f66538f7b89892828915ab54f48ad90715"
         }
     },
     "bin": "kubectl-tree.exe",
