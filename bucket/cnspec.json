@@ -1,0 +1,37 @@
+{
+    "version": "13.7.0",
+    "description": "An open source, cloud-native security to protect everything from build to runtime",
+    "homepage": "https://github.com/mondoohq/cnspec",
+    "license": {
+        "identifier": "BUSL-1.1",
+        "url": "https://github.com/mondoohq/cnspec/raw/refs/heads/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mondoohq/cnspec/releases/download/v13.7.0/cnspec_13.7.0_windows_amd64.zip",
+            "hash": "265ca8cd170bf8b7f439cd09379e4028171f5d501948349746415ad6f8393d09"
+        },
+        "arm64": {
+            "url": "https://github.com/mondoohq/cnspec/releases/download/v13.7.0/cnspec_13.7.0_windows_arm64.zip",
+            "hash": "d8d2a7e518a8791043a183590f24a2e587afabddfb99f9db784d8e43ce315575"
+        }
+    },
+    "bin": "cnspec.exe",
+    "checkver": {
+        "url": "https://github.com/mondoohq/cnspec/releases.atom",
+        "regex": "Repository/\\d+/v(.+?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mondoohq/cnspec/releases/download/v$version/cnspec_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/mondoohq/cnspec/releases/download/v$version/cnspec_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/cnspec_v$version_SHA256SUMS"
+        }
+    }
+}

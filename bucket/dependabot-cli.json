@@ -1,12 +1,12 @@
 {
-    "version": "1.81.0",
+    "version": "1.85.0",
     "description": "A tool for testing and debugging Dependabot update jobs.",
     "homepage": "https://github.com/dependabot/cli",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dependabot/cli/releases/download/v1.81.0/dependabot-v1.81.0-windows-amd64.zip",
-            "hash": "a5ef254979f45c78f6ae7a589ab3dfda2c60dafe76ca45495787cf6305b42fcf"
+            "url": "https://github.com/dependabot/cli/releases/download/v1.85.0/dependabot-v1.85.0-windows-amd64.zip",
+            "hash": "25d969e39287144fc13486994871631ec818b3efc2f4e93d92e7eaec58908a9c"
         }
     },
     "bin": "dependabot.exe",

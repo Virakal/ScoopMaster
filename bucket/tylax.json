@@ -1,0 +1,21 @@
+{
+    "version": "0.3.5",
+    "description": "A bi-directional converter between Typst and LaTeX.",
+    "homepage": "https://github.com/scipenai/tylax",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/scipenai/tylax/releases/download/v0.3.5/t2l-v0.3.5-x86_64-pc-windows-msvc.zip",
+            "hash": "7332a8671dd7e0d8adb38366e217b5b402c177a951dab7209adc5f5bc4d593ce"
+        }
+    },
+    "bin": "t2l.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/scipenai/tylax/releases/download/v$version/t2l-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
