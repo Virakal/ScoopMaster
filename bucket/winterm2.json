@@ -1,12 +1,12 @@
 {
-    "version": "1.0.14",
+    "version": "1.0.15",
     "description": "Windows terminal emulator inspired by macOS iTerm2, with split panes, tabs, themes and WebGL rendering",
     "homepage": "https://github.com/maqibg/Winterm2",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/maqibg/Winterm2/releases/download/v1.0.14/WinTerm2.Setup.1.0.14.exe#/dl.7z",
-            "hash": "6658b31162c1f0187ce7216a4a84432b6f4eb61ef917cd2a85774fd5fa42e92f"
+            "url": "https://github.com/maqibg/Winterm2/releases/download/v1.0.15/WinTerm2.Setup.1.0.15.exe#/dl.7z",
+            "hash": "e3b2e286778ccbb0f2f0ac204c306e58ad59d63467439daf64674b1a8143a717"
         }
     },
     "pre_install": [
