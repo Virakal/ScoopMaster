@@ -1,0 +1,22 @@
+{
+  "version": "0.3.0",
+  "description": "Terminal security - catches homograph attacks, pipe-to-shell, ANSI injection",
+  "homepage": "https://github.com/sheeki03/tirith",
+  "license": "AGPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/sheeki03/tirith/releases/download/v0.3.0/tirith-x86_64-pc-windows-msvc.zip",
+      "hash": "b8edf5d408f77624551dbb3df7946055b073183b92f3ebfca8862e7a9db25840"
+    }
+  },
+  "bin": "tirith.exe",
+  "notes": "Activate tirith by adding to your PowerShell profile ($PROFILE):\n\n  Invoke-Expression (& tirith init)\n\nThen restart your terminal. Verify: tirith doctor",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/sheeki03/tirith/releases/download/v0.3.0$version/tirith-x86_64-pc-windows-msvc.zip"
+      }
+    }
+  }
+}
