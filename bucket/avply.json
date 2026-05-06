@@ -1,12 +1,12 @@
 {
-    "version": "1.2.0",
+    "version": "1.4.0",
     "description": "Windows video preview, trimming and AV1 conversion tool",
     "homepage": "https://github.com/aviscaerulea/avply",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/aviscaerulea/avply/releases/download/v1.2.0/avply-1.2.0-x64.zip",
-            "hash": "dfefbe286ed2ee66adbe2d7211a6e85db8012ab90234e804c19744ce54eb8074"
+            "url": "https://github.com/aviscaerulea/avply/releases/download/v1.4.0/avply-1.4.0-x64.zip",
+            "hash": "14ae59911eff267abeebf5c865c9d603c4539b70a7dc78418f4c2bf824b3227f"
         }
     },
     "bin": "avply.exe",

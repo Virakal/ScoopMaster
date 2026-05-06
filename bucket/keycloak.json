@@ -1,0 +1,33 @@
+{
+    "version": "26.6.1",
+    "description": "Open Source Identity and Access Management",
+    "homepage": "https://www.keycloak.org/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/keycloak/keycloak/releases/download/26.6.1/keycloak-26.6.1.zip",
+            "hash": "30224d2b3a0f13562cb01f92207338afb5bad9d6f1495ec1c182f8b72d82342e"
+        }
+    },
+    "extract_dir": "keycloak-26.6.1",
+    "bin": [
+        [
+            "bin/kc.sh",
+            "kc"
+        ]
+    ],
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "checkver": {
+        "github": "https://github.com/keycloak/keycloak"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/keycloak/keycloak/releases/download/$version/keycloak-$version.zip"
+            }
+        },
+        "extract_dir": "keycloak-$version"
+    }
+}
