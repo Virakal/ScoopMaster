@@ -1,64 +1,20 @@
 {
-    "version": "7.0.3",
+    "version": "7.0.4",
     "description": "Rolling Release Stable Kernel for Windows Subsystem for Linux2 (WSL2)",
     "homepage": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.3/bzImage-x86_64",
-            "hash": "710db92dc5a3f0347bc90d8c8fad291be3e486094351aa22ecf8faa701abab84",
-            "post_install": [
-                "###########################################",
-                "# Set WSL2 rolling kernel in `.wslconfig` #",
-                "#      Channel: STABLE | Arch: x86_64     #",
-                "###########################################",
-                "$ini = Add-Type -memberDefinition @\"",
-                "[DllImport(\"Kernel32\")]",
-                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
-                "\"@ -passthru -name WSL2RollingKernelInstall -UsingNamespace System.Text",
-                "$kernel_path=\"$original_dir\\bzImage-x86_64\" -replace \"\\\\\", \"\\\\\" # double all back-slashess",
-                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernel\", $kernel_path, \"$env:USERPROFILE\\.wslconfig\")"
-            ],
-            "post_uninstall": [
-                "##############################################",
-                "# Remove WSL2 rolling kernel in `.wslconfig` #",
-                "##############################################",
-                "$ini = Add-Type -memberDefinition @\"",
-                "[DllImport(\"Kernel32\")]",
-                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
-                "\"@ -passthru -name WSL2RollingKernelUninstall -UsingNamespace System.Text",
-                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernel\", $null, \"$env:USERPROFILE\\.wslconfig\")"
-            ]
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.4/bzImage-x86_64",
+            "hash": "3e126c056393fb7ba82b9e5e7860e3aae8104a3154d3942b1e439bdd0bc02406"
         },
         "arm64": {
-            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.3/Image-arm64",
-            "hash": "e62da7a49bc1ec9149f6c5b616468d8cd55449945a1cd34876043924aa0ffa1c",
-            "post_install": [
-                "###########################################",
-                "# Set WSL2 rolling kernel in `.wslconfig` #",
-                "#      Channel: STABLE | Arch: arm64      #",
-                "###########################################",
-                "$ini = Add-Type -memberDefinition @\"",
-                "[DllImport(\"Kernel32\")]",
-                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
-                "\"@ -passthru -name WSL2RollingKernelInstall -UsingNamespace System.Text",
-                "$kernel_path=\"$original_dir\\Image-arm64\" -replace \"\\\\\", \"\\\\\" # double all back-slashess",
-                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernel\", $kernel_path, \"$env:USERPROFILE\\.wslconfig\")"
-            ],
-            "post_uninstall": [
-                "##############################################",
-                "# Remove WSL2 rolling kernel in `.wslconfig` #",
-                "##############################################",
-                "$ini = Add-Type -memberDefinition @\"",
-                "[DllImport(\"Kernel32\")]",
-                "public static extern long WritePrivateProfileString (string section, string key, string val, string filePath);",
-                "\"@ -passthru -name WSL2RollingKernelUninstall -UsingNamespace System.Text",
-                "$null = $ini::WritePrivateProfileString(\"wsl2\", \"kernel\", $null, \"$env:USERPROFILE\\.wslconfig\")"
-            ]
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.4/Image-arm64",
+            "hash": "b4d3b9afae7d5a4374e75ce7a48273fc56cbc9efc65e5df69250245b5e7f757b"
         }
     },
     "checkver": {
-        "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/latest",
+        "github": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling",
         "regex": "linux-wsl-stable-([\\d.]+)"
     },
     "autoupdate": {
