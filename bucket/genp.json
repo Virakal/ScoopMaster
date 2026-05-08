@@ -1,0 +1,51 @@
+{
+    "version": "4.0.3",
+    "description": "Adobe CC Universal Patcher (Open Source)",
+    "homepage": "https://github.com/TheMythologist/GenP",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/TheMythologist/GenP/releases/download/v4.0.3/GenP-v4.0.3.exe",
+                "https://github.com/TheMythologist/GenP/releases/download/v4.0.3/config.ini"
+            ],
+            "hash": [
+                "7C43816908DED0439B3E230410B0DE9A20E3E16959F8F5804A8CF40C20F58FEE",
+                "0C499BF43FCA5620168C7E2FC52B8BDA0CBA8F0AAFF1148459B326B517C011BC"
+            ]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\patch_states.ini\")) { New-Item \"$dir\\patch_states.ini\" -Type File | Out-Null }"
+    ],
+    "bin": "GenP-v4.0.3.exe",
+    "shortcuts": [
+        [
+            "GenP-v4.0.3.exe",
+            "GenP"
+        ]
+    ],
+    "persist": [
+        "patch_states.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/TheMythologist/GenP"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/TheMythologist/GenP/releases/download/v$version/GenP-v$version.exe",
+                    "https://github.com/TheMythologist/GenP/releases/download/v$version/config.ini"
+                ]
+            }
+        },
+        "bin": "GenP-v$version.exe",
+        "shortcuts": [
+            [
+                "GenP-v$version.exe",
+                "GenP"
+            ]
+        ]
+    }
+}

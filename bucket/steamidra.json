@@ -22,9 +22,10 @@
         ]
     ],
     "persist": [
-        "greenluma",
         "applist_profiles",
-        "manifests"
+        "greenluma",
+        "manifests",
+        "saved_lua"
     ],
     "pre_uninstall": "Copy-Item \"$dir\\settings.bin\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
     "checkver": {
