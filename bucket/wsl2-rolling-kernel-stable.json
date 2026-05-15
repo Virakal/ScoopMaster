@@ -1,16 +1,16 @@
 {
-    "version": "7.0.6",
+    "version": "7.0.7",
     "description": "Rolling Release Stable Kernel for Windows Subsystem for Linux2 (WSL2)",
     "homepage": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.6/bzImage-x86_64",
-            "hash": "1ad8047e5bb268d3f321f97308264b5f54993c693fa083a75bcca799ac16a4c5"
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.7/bzImage-x86_64",
+            "hash": "3bbd8b46f3eff920ffdecf8e431184c909302e20572f674b5bf4955df679fe81"
         },
         "arm64": {
-            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.6/Image-arm64",
-            "hash": "407d50b0892dee84fdc0d4dc29003a0e365661019b55d263a8a4daf8e2677728"
+            "url": "https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling/releases/download/linux-wsl-stable-7.0.7/Image-arm64",
+            "hash": "27439e34554a056d019f7b65fb9d3e0e90c9f589514710e87354eb4950531488"
         }
     },
     "checkver": {
