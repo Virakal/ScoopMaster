@@ -1,7 +1,7 @@
 {
     "version": "1.0.23.904",
-    "description": "Clash Mihomo for iOS/Android",
-    "homepage": "https://github.com/KaringX/clashmi",
+    "description": "又一款mihomo核心的代理工具",
+    "homepage": "https://clashmi.app/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
@@ -9,30 +9,15 @@
             "hash": "81eb5aafc5ec95c2bca6e47a9064c737681c18241a29ea3efc40891c721bac68"
         }
     },
-    "bin": "clashmi.exe",
     "shortcuts": [
         [
             "clashmi.exe",
-            "ClashMi"
+            "Clash Mi"
         ]
     ],
     "persist": "portable",
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:APPDATA\\clashmi\" \"$persist_dir\\AppData\" -Migrate"
-        ]
-    },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\clashmi\""
-    ],
     "checkver": {
-        "url": "https://api.github.com/repos/KaringX/clashmi/releases?per_page=1",
-        "jsonpath": "$.[0].tag_name",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/KaringX/clashmi"
     },
     "autoupdate": {
         "architecture": {
