@@ -1,12 +1,12 @@
 {
-    "version": "214",
+    "version": "215",
     "description": "Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc",
     "homepage": "https://github.com/mostlygeek/llama-swap",
     "license": "MIT license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mostlygeek/llama-swap/releases/download/v214/llama-swap_214_windows_amd64.zip",
-            "hash": "c2205cd5e96e7e8836897a0529e1d73f5cb8609dcf72c6a01967923055384c41"
+            "url": "https://github.com/mostlygeek/llama-swap/releases/download/v215/llama-swap_215_windows_amd64.zip",
+            "hash": "4801c82c665f9fea012a2a9d718c7560b1b1181efd8683a966d8e7877001f0b3"
         }
     },
     "bin": "llama-swap.exe",
