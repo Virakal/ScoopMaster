@@ -1,37 +1,18 @@
 {
-    "version": "0.23.7",
-    "description": "Universal AI IDE account manager for Antigravity, Codex, GitHub Copilot, Windsurf, Kiro, Cursor, Gemini CLI and more.",
-    "homepage": "https://github.com/jlcodes99/cockpit-tools",
-    "license": "CC-BY-NC-SA-4.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v0.23.7/Cockpit.Tools_0.23.7_x64-setup.exe#/dl.7z",
-            "hash": "37bf4be4e9b36737cabd294096b43efcbf9cf8092750727c434cd721da9cb8be"
-        }
-    },
-    "installer": {
-        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse -ErrorAction SilentlyContinue"
-    },
+    "version": "0.23.8",
+    "description": "通用 AI IDE 账号管理工具",
+    "homepage": "https://github.com/jlcodes99/cockpit-tools/",
+    "license": "Unknown",
+    "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v0.23.8/Cockpit.Tools_0.23.8_x64-setup.exe#/dl.7z",
+    "hash": "98610c2c03d70a528c77bac36fdbea0c0a64eba3ff390c51f919483b92a5f954",
     "shortcuts": [
         [
             "cockpit-tools.exe",
-            "Cockpit Tools"
+            "Cockpit-Tools"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/jlcodes99/cockpit-tools/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "v([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v$version/Cockpit.Tools_$version_x64-setup.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "https://api.github.com/repos/jlcodes99/cockpit-tools/releases/latest",
-            "jsonpath": "$.assets[?(@.name == 'Cockpit.Tools_$version_x64-setup.exe')].digest"
-        }
+        "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v$version/Cockpit.Tools_$version_x64-setup.exe#/dl.7z"
     }
 }
