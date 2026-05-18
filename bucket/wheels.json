@@ -1,7 +1,8 @@
 {
-    "##": "Stable channel - tracks wheels-dev/wheels GA tags. The two zero-filled hashes",
-    "##2": "below will be populated by Scoop's autoupdate after the first GA tag is",
-    "##3": "published. Pre-GA, the manifest is install-blocked by hash mismatch by design.",
+    "##": "Stable channel - tracks wheels-dev/wheels GA tags. Hashes populated manually",
+    "##2": "for the v4.0.0 GA on 2026-05-18 after the post-GA autoupdate failed to fire",
+    "##3": "(no autoupdate workflow in this bucket, and not registered with Excavator).",
+    "##4": "Future releases should be auto-populated once the autoupdate path is wired up.",
     "version": "4.0.0",
     "description": "Wheels CFML MVC framework - stable channel.",
     "homepage": "https://wheels.dev",
@@ -22,8 +23,8 @@
                 "https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.49.1.0/sqlite-jdbc-3.49.1.0.jar"
             ],
             "hash": [
-                "sha512:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-                "sha512:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "sha512:39db2c18388d49c4c046cd82c631a62494baf318502324c60fab25b0797420ae7c988ad2c451170bc32239bcda5f72a74cc3af4133a4557521cccda2428d8e51",
+                "sha512:017fc7706b1bf3644f8ea0c3b06583ac4f3648c5f20f2386b9d0ebb3786aa3e7e16449be6e2eecc5e4968ce66c23bd96b79ed044752d274a28c9b4ea33af99e0",
                 "sha512:75c948319b333d2e9d653d4986e766463f3f29062f62c364ccde2288e5f295bf65a857d54eda2e888cd5a80c2bd9fb727e016f4fca05fc42e56ee219225dd71b",
                 "sha512:90b3f6aed150f611fcb9454dfda5fbb9d7faad369937fa8718ac8813c45eb6f0430e6014b7b4c94b4b63e404ade68e83126571f94216de7bf6d2947f1c642803"
             ],
