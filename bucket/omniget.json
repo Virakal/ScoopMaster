@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/tonhowtf/omniget/releases/download/v0.6.2/omniget_0.6.2_x64-setup.exe#dl.7z",
+            "url": "https://github.com/tonhowtf/omniget/releases/download/v0.6.2/omniget_0.6.2_x64-setup.exe#dl.7z",
             "hash": "22a0071494ed77283c085b745d6d42bf59c4c4adfe6d4c010c9d32688b74ebae",
             "pre_install": "Remove-Item \"$dir\\`$*\" -Force -Recurse"
         }
@@ -45,9 +45,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/tonhowtf/omniget/releases/download/v$version/omniget_$version_x64-setup.exe#dl.7z"
+                "url": "https://github.com/tonhowtf/omniget/releases/download/v$version/omniget_$version_x64-setup.exe#dl.7z"
             }
         }
     }
 }
-
