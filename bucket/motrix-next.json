@@ -1,25 +1,19 @@
 {
-    "version": "3.8.10",
-    "description": "A full-featured download manager — rebuilt from the ground up",
+    "version": "3.9.0",
+    "description": "A full-featured download manager — rebuilt from the ground up.",
     "homepage": "https://motrix-next.pages.dev",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.8.10/MotrixNext_3.8.10_x64-setup.exe#/dl.7z",
-            "hash": "c81ae0962975872b79eea46b1b2fa2ab3a8e68586c9e10efb11b5091a45cda76"
+            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.9.0/MotrixNext_3.9.0_x64-setup.exe#/dl.7z",
+            "hash": "5a6daec0ac70cceda0fb88571bf8c35c27113fd3fad0b880f284304cf2b54ee5"
+        },
+        "arm64": {
+            "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v3.9.0/MotrixNext_3.9.0_arm64-setup.exe#/dl.7z",
+            "hash": "1579f7ff576d175cbfde4cf682ebcbc1ff34f739b5b8007f8cf57b3893e7ebcf"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
-    "persist_link": [
-        [
-            "$env:AppData\\com.motrix.next",
-            "AppData"
-        ],
-        [
-            "$env:LocalAppData\\com.motrix.next",
-            "LocalAppData"
-        ]
-    ],
+    "pre_install": "Remove-Item -Path \"$dir\\`$*\" -Force -Recurse",
     "shortcuts": [
         [
             "motrix-next.exe",
@@ -33,6 +27,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v$version/MotrixNext_$version_x64-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/AnInsomniacy/motrix-next/releases/download/v$version/MotrixNext_$version_arm64-setup.exe#/dl.7z"
             }
         }
     }
