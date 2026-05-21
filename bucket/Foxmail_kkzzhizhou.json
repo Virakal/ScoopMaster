@@ -19,7 +19,7 @@
         "FMStorage.list"
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/kkzzhizhou/scoop-zapps/master/versions/Foxmail.latest",
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/kkzzhizhou/scoop-zapps/master/versions/Foxmail.latest",
         "regex": "FoxmailSetup_([\\d.]+).exe"
     },
     "autoupdate": {
@@ -32,3 +32,4 @@
         ]
     ]
 }
+

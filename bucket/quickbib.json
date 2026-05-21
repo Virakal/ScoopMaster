@@ -5,11 +5,11 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.8.1/QuickBib-Windows-x64-portable-v0.8.1.zip",
+            "url": "https://gh-proxy.org/https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.8.1/QuickBib-Windows-x64-portable-v0.8.1.zip",
             "hash": "b46aa384097734e3a9452605f20d1ceeb46404f8518c4f6c0aeff3937986db85"
         },
         "arm64": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.8.1/QuickBib-Windows-ARM64-portable-v0.8.1.zip",
+            "url": "https://gh-proxy.org/https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.8.1/QuickBib-Windows-ARM64-portable-v0.8.1.zip",
             "hash": "13eeff7df66c3423b92829cf194f427dd6060bdc36c16b0c0fd9c25409b1a900"
         }
     },
@@ -26,11 +26,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-x64-portable-v$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-x64-portable-v$version.zip"
             },
             "arm64": {
-                "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-ARM64-portable-v$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-ARM64-portable-v$version.zip"
             }
         }
     }
 }
+
