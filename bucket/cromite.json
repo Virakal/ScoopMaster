@@ -1,24 +1,18 @@
 {
-    "version": "147.0.7727.56",
-    "description": "A Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy",
-    "homepage": "https://www.cromite.org/",
+    "version": "148.0.7778.168",
+    "description": "Chromium fork based on Bromite with built-in support for ad blocking and an eye for privacy",
+    "homepage": "https://github.com/uazo/cromite",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/uazo/cromite/blob/master/LICENSE"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/uazo/cromite/releases/download/v147.0.7727.56-271900671db643de04aa9f909f0dcc3415c8b827/chrome-win.zip",
-            "hash": "b4600dfc45ffe0e31734d463eafaad3b1e3d47a79f8f4d3b9305975f1b990ec0"
+            "url": "https://github.com/uazo/cromite/releases/download/v148.0.7778.168-cb3baf14f52eb4365d017f640f85310735c19b79/chrome-win.zip",
+            "hash": "13af6545c9c23ce3a7ebe26a73ba7794eea7af76e6fc6bac7c434072b6b12885"
         }
     },
     "extract_dir": "chrome-win",
-    "post_install": [
-        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Cromite\\User Data\")) {",
-        "    info '[Portable Mode]: Copying user data...'",
-        "    Copy-Item \"$env:LocalAppData\\Cromite\\User Data\\*\" \"$dir\\User Data\" -Recurse",
-        "}"
-    ],
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\chrome.exe"
     },
@@ -26,17 +20,17 @@
         [
             "chrome.exe",
             "cromite",
-            "--user-data-dir=\"$dir\\User Data\""
+            "--incognito --disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
         ]
     ],
     "shortcuts": [
         [
             "chrome.exe",
             "Cromite",
-            "--user-data-dir=\"$dir\\User Data\""
+            "--incognito --disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
         ]
     ],
-    "persist": "User Data",
+    "notes": "extras/cromite is recommended unless you hate persist 'User Data'.",
     "checkver": {
         "github": "https://github.com/uazo/cromite",
         "regex": "/releases/tag/v([\\d.]+)-(?<sha>[0-9a-f]+)"
