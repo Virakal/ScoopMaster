@@ -1,18 +1,18 @@
 {
-    "version": "0.1.8-rc.30",
+    "version": "0.1.8-rc.31",
     "description": "Network Load Monitor - nload for Windows/Linux/macOS",
     "homepage": "https://github.com/VincentZyuApps/winload",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/VincentZyuApps/winload/releases/download/v0.1.8-rc.30/winload-windows-x86_64-msvc-npcap-v0.1.8-rc.30.exe",
-            "hash": "9b54e88648c778ef7ed1cb40daadc5daf92953f62ba9185a6c2b256c268284be",
-            "bin": [["winload-windows-x86_64-msvc-npcap-v0.1.8-rc.30.exe", "win-nload"]]
+            "url": "https://github.com/VincentZyuApps/winload/releases/download/v0.1.8-rc.31/winload-windows-x86_64-msvc-npcap-v0.1.8-rc.31.exe",
+            "hash": "b085d8311a650b9b99407cdbe3bcf9e83e6094f93cab7758176b105e542057a0",
+            "bin": [["winload-windows-x86_64-msvc-npcap-v0.1.8-rc.31.exe", "win-nload"]]
         },
         "arm64": {
-            "url": "https://github.com/VincentZyuApps/winload/releases/download/v0.1.8-rc.30/winload-windows-aarch64-msvc-npcap-v0.1.8-rc.30.exe",
-            "hash": "71ec1c3c3ab02bc127f92cb0be00efa91dbc5406292f8ac30910426fd478fd10",
-            "bin": [["winload-windows-aarch64-msvc-npcap-v0.1.8-rc.30.exe", "win-nload"]]
+            "url": "https://github.com/VincentZyuApps/winload/releases/download/v0.1.8-rc.31/winload-windows-aarch64-msvc-npcap-v0.1.8-rc.31.exe",
+            "hash": "5f33b82fd0a7fe043d10e64ae27a8575c8e7b29632610eadf14185feb565da7f",
+            "bin": [["winload-windows-aarch64-msvc-npcap-v0.1.8-rc.31.exe", "win-nload"]]
         }
     },
     "checkver": {

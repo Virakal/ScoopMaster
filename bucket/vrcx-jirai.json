@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/FuLuTang/VRCX-jirai/releases/latest",
-        "regex": "(?<tagversion>[\\w.]+)/VRCX-Jirai_(?<version>[\\d.]+).zip"
+        "regex": "(?<tagversion>[\\w.]+)/VRCX-Jirai_(?<version>[\\d.]+)\\.zip"
     },
     "autoupdate": {
         "architecture": {

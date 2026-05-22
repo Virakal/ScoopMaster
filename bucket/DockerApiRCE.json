@@ -1,12 +1,18 @@
 {
     "version": "0.4",
     "description": "DockerApiRCE",
+    "notes": [
+        "漏洞检测利用",
+        "docker,api未授权访问"
+    ],
     "homepage": "https://github.com/0xchang/DockerApiRCE",
     "license": "UNKNOWN",
     "suggest": {
-        "java": "java/oraclejre8"
+        "JRE": [
+            "sec/oraclejre8"
+        ]
     },
-    "url": "https://gh-proxy.org/https://github.com/0xchang/DockerApiRCE/releases/download/v0.4/DockerApiRCE.jar",
+    "url": "https://github.com/0xchang/DockerApiRCE/releases/download/v0.4/DockerApiRCE.jar",
     "hash": "25344568287c49cfca504d9e3518e819aa876c94515df1892d0814a01637f583",
     "pre_install": [
         "Set-Content \"$dir\\DockerApiRCE.bat\" '@pushd %~dp0",
@@ -23,7 +29,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://gh-proxy.org/https://github.com/0xchang/DockerApiRCE/releases/download/v$version/DockerApiRCE.jar"
+        "url": "https://github.com/0xchang/DockerApiRCE/releases/download/v$version/DockerApiRCE.jar"
     }
 }
-
