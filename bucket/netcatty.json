@@ -1,12 +1,12 @@
 {
-    "version": "1.1.9",
+    "version": "1.1.11",
     "description": "A modern SSH client, SFTP browser, and terminal manager with a built-in AI agent. Native on macOS, Windows, and Linux. Open source.",
     "homepage": "https://netcatty.app",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.9/Netcatty-1.1.9-win-x64.exe",
-            "hash": "a7191dd2c1cfc05d88c0dcb9bbb455a5ec5964bcf35fd6eafd51c01d536f71f2"
+            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.11/Netcatty-1.1.11-win-x64.exe",
+            "hash": "82bc32596f844c46fe71b848f8d44097b933483525caa6e7afba95ba50cce54b"
         },
         "arm64": {
             "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.1/Netcatty-1.1.1-win-arm64.exe#/dl.7z",
