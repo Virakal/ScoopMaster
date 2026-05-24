@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh.jjj.gv.uy/https://github.com/thcp/stemdeck/releases/download/v0.6.0-alpha.2/StemDeck-Windows-x64.NVIDIA.zip",
+            "url": "https://github.com/thcp/stemdeck/releases/download/v0.6.0-alpha.2/StemDeck-Windows-x64.NVIDIA.zip",
             "hash": "b655cfbfb0216bb77d7a01a2309a40cf38e10fe1ac1dd6de146e7f2ba272b90d"
         }
     },
@@ -44,9 +44,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh.jjj.gv.uy/https://github.com/thcp/stemdeck/releases/download/v$version/StemDeck-Windows-x64.NVIDIA.zip"
+                "url": "https://github.com/thcp/stemdeck/releases/download/v$version/StemDeck-Windows-x64.NVIDIA.zip"
             }
         }
     }
 }
-
