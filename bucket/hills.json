@@ -1,0 +1,32 @@
+{
+    "version": "1.1.0",
+    "description": "一款支持emby的播放器",
+    "homepage": "https://t.me/Hills_app",
+    "license": "Freeware",
+    "url": "https://list.xrgzs.top/d/pxy/Software/Hills/HillsLite-v1.1.0.zip",
+    "hash": "8cc79a3bc8a3d684a591ba7d2246b4e1d0008b355927b08abfa169ff393e7a59",
+    "shortcuts": [
+        [
+            "HillsLite.exe",
+            "Hills"
+        ]
+    ],
+    "installer": {
+        "script": [
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:APPDATA\\com.mountains\\Hills\" \"$persist_dir\\AppData\" -Migrate"
+        ]
+    },
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Remove-Junction \"$env:APPDATA\\com.mountains\\Hills\""
+    ],
+    "checkver": {
+        "url": "https://list.xrgzs.top/d/pxy/Software/Hills/Version_Win.txt",
+        "regex": "(\\d+\\.[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://list.xrgzs.top/d/pxy/Software/Hills/HillsLite-v$version.zip"
+    }
+}

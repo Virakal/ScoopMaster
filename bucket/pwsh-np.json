@@ -1,0 +1,45 @@
+{
+    "version": "7.6.2",
+    "description": "PowerShell 是一种跨平台的任务自动化解决方案，由命令行 shell、脚本语言和配置管理框架组成。",
+    "homepage": "https://github.com/PowerShell/PowerShell",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.2/PowerShell-7.6.2-win-x64.msi#/installer.exe",
+            "hash": "096a6dbb5bb330c5e14559ff1a7081bd274c07c07e2545755b93a93417e32629"
+        },
+        "32bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.2/PowerShell-7.6.2-win-x86.msi#/installer.exe",
+            "hash": "f31d6e4b18dd370d325c497809a83d2e1530688c5bf7b850bb8afa7885b5fee8"
+        },
+        "arm64": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.2/PowerShell-7.6.2-win-arm64.msi#/installer.exe",
+            "hash": "9cdda4d469471e6cb29c74b1b085a569b5ebc6581b87f130d1d275cffbe0515f"
+        }
+    },
+    "installer": {
+        "script": [
+            "Move-Item \"$dir\\installer.exe\" \"$dir\\installer.msi\"",
+            "Invoke-ExternalCommand \"msiexec.exe\" -ArgumentList @(\"/package `\"$dir\\installer.msi`\"\", \"/quiet\", \"ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1\", \"ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1\", \"REGISTER_MANIFEST=1\", \"USE_MU=1\", \"ENABLE_MU=1\", \"ADD_PATH=1\") -Quiet",
+            "Remove-Item \"$dir\\installer.msi\" -Force -ErrorAction SilentlyContinue | Out-Null"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.msi#/installer.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.msi#/installer.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.msi#/installer.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/tag/v$version/",
+            "regex": "$basename\\s*<ul>\\s*<li>$sha256"
+        }
+    }
+}
