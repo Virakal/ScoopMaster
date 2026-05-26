@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.leigod.com/",
     "description": "Leigod Online Game Accelerator",
-    "version": "11.3.1.8",
+    "version": "11.3.1.9",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.leigod.com/help/privacyAgreement.html"
     },
-    "url": "https://update.leigod.com/soft/leigod/win/11.0.0.0/LeiGodSetup.11.3.1.8.exe#/dl.exe",
-    "hash": "bfc0d5ae24b447000ebab754f62e2b1575c53da45326ca4fa7fdd228e0275dda",
+    "url": "https://update.leigod.com/soft/leigod/win/11.0.0.0/LeiGodSetup.11.3.1.9.exe#/dl.exe",
+    "hash": "7540e72ba32ceff116a4eb93a8a53ef797cf34c33add5b8c6a9f57dc2fc85788",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\dl.exe\" \"$dir\"",
