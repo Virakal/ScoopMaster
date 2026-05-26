@@ -5,14 +5,14 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/different-ai/openwork/releases/download/v0.13.3/openwork-desktop-windows-x64.msi",
+            "url": "https://gh.jjj.gv.uy/https://github.com/different-ai/openwork/releases/download/v0.13.3/openwork-desktop-windows-x64.msi",
             "hash": "ca643bb3c4d24aca8ae28dd7d676c7afcbd720ad5946c405da3ec37f45db93d2"
         }
     },
     "extract_dir": "PFiles\\OpenWork",
     "shortcuts": [
         [
-            "OpenWork-Dev.exe",
+            "openwork.exe",
             "openwork (different-ai)"
         ]
     ],
@@ -31,14 +31,14 @@
         "}"
     ],
     "checkver": {
-        "url": "https://github.com/different-ai/openwork/releases",
-        "regex": "/releases/tag/v([\\d.]+)"
+        "github": "https://github.com/different-ai/openwork"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/different-ai/openwork/releases/download/v$version/openwork-desktop-windows-x64.msi"
+                "url": "https://gh.jjj.gv.uy/https://github.com/different-ai/openwork/releases/download/v$version/openwork-desktop-windows-x64.msi"
             }
         }
     }
 }
+
