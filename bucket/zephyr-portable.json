@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://gh.jjj.gv.uy/https://github.com/Juwan-Hwang/Zephyr/releases/download/v2.3.2/Zephyr-windows-portable.zip",
+            "url": "https://github.com/Juwan-Hwang/Zephyr/releases/download/v2.3.2/Zephyr-windows-portable.zip",
             "hash": "558a996d81889ff622e55123a81164229f2bcefc13a340ab46b3c949c74b155e"
         }
     },
@@ -44,9 +44,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh.jjj.gv.uy/https://github.com/Juwan-Hwang/Zephyr/releases/download/v$version/Zephyr-windows-portable.zip"
+                "url": "https://github.com/Juwan-Hwang/Zephyr/releases/download/v$version/Zephyr-windows-portable.zip"
             }
         }
     }
 }
-

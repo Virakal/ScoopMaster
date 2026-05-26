@@ -6,7 +6,7 @@
     "notes": "config location: C:\\Users\\<your username>\\AppData\\Local\\com.dbx.app - https://github.com/vicrack/scoop-bucket/blob/master/bucket/dbx.json https://github.com/vicrack/scoop-bucket",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.21/dbx_0.5.21_x64-setup.exe#/dl.7z",
+            "url": "https://gh.jjj.gv.uy/https://github.com/t8y2/dbx/releases/download/v0.5.21/dbx_0.5.21_x64-setup.exe#/dl.7z",
             "hash": "1050ac48c4a19b05ed012f12eb791ffab90242c5ba6502a5972539bace01e710"
         }
     },
@@ -20,8 +20,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/dbx_$version_x64-setup.exe#/dl.7z"
+                "url": "https://gh.jjj.gv.uy/https://github.com/t8y2/dbx/releases/download/v$version/dbx_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
 }
+
