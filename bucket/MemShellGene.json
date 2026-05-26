@@ -16,7 +16,7 @@
         "@start javaw.exe -jar \"MemShellGene.jar\" %*",
         "@popd' -Encoding Ascii"
     ],
-    "extract_dir":"",
+    "extract_dir": "",
     "bin": "MemShellGene.bat",
     "shortcuts": [
         [
@@ -31,5 +31,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/suizhibo/MemShellGene/releases/download/v$version-alpha/MemShellGene.jar"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: Java内存马生成和测试工具，支持多种内存马类型",
+        "【适用场景】: Java安全测试、渗透测试、漏洞验证",
+        "【技术特点】: 基于Java开发，支持多种Web容器，提供图形化界面"
+    ]
 }

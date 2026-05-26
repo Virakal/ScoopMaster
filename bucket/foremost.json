@@ -4,7 +4,13 @@
     "homepage": "https://github.com/jin-stuff/foremost",
     "license": "unknown",
     "url": "https://github.com/jin-stuff/foremost/archive/refs/heads/master.zip",
-    "hash":"befc5fa0d6377b9b550edf1cdb88c21805a965c80e0f5fb61ce8625917491086",
-    "extract_dir":"foremost-master\\binary",
-    "bin": "foremost.exe"
+    "hash": "befc5fa0d6377b9b550edf1cdb88c21805a965c80e0f5fb61ce8625917491086",
+    "extract_dir": "foremost-master\\binary",
+    "bin": "foremost.exe",
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: 数据恢复工具，通过文件页眉、页脚和内部数据结构恢复已删除文件",
+        "【适用场景】: 数字取证、数据恢复、安全分析",
+        "【技术特点】: 支持多种图像格式，可直接在驱动器上工作，命令行界面"
+    ]
 }

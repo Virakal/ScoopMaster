@@ -9,7 +9,7 @@
         ]
     },
     "url": "https://github.com/wafinfo/NCTOOls/archive/refs/heads/master.zip",
-    "hash":"03d540d53a10ab576b019585c3858dbf96fa9954f80be3054ea314eff20c1f33",
+    "hash": "03d540d53a10ab576b019585c3858dbf96fa9954f80be3054ea314eff20c1f33",
     "pre_install": [
         "Get-ChildItem \"$dir\" 'NCTOOls*.jar' | Select-Object -First 1 | Rename-Item -NewName 'NCTOOls.jar'",
         "Set-Content \"$dir\\NCTOOls.bat\" '@pushd %~dp0",
@@ -35,5 +35,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/wafinfo/NCTOOls/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 用友NC综合漏洞利用工具，支持多种用友NC漏洞检测",
+        "【适用场景】: 漏洞验证、渗透测试、安全评估",
+        "【技术特点】: Java开发，图形化界面，需要JRE环境"
+    ]
 }

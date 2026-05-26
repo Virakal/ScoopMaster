@@ -16,5 +16,11 @@
         "@start javaw.exe -jar \"FuzzDomain.jar\" %*",
         "@popd' -Encoding Ascii"
     ],
-    "bin": "FuzzDomain.bat"
+    "bin": "FuzzDomain.bat",
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 域名爆破模块，用于子域名枚举和发现",
+        "【适用场景】: 子域名发现、信息收集、渗透测试前期侦察",
+        "【技术特点】: 基于Java开发，提供图形化界面，支持字典爆破"
+    ]
 }

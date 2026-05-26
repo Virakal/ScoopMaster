@@ -5,5 +5,11 @@
     "license": "unknown",
     "url": "https://github.com/SpenserCai/GoWxDump/raw/refs/heads/master/Release/GoWxDump.exe",
     "hash": "7a804e3d76bb0e1bccbb55bb71abe790e33ab49f6cf6d1a2954491395484594a",
-    "bin":"GoWxDump.exe"
+    "bin": "GoWxDump.exe",
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: 微信客户端取证工具，获取微信号、手机号、昵称，分析聊天记录",
+        "【适用场景】: 数字取证、安全分析、信息收集",
+        "【技术特点】: 基于Go语言开发，支持微信客户端数据提取和分析"
+    ]
 }

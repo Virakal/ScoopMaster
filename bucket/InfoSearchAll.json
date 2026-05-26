@@ -26,5 +26,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/ExpLangcn/InfoSearchAll/releases/download/V$version/InfoSearchAll_JDK8.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 网络测绘平台集合工具，快速在多个平台搜索信息并合并展示及导出",
+        "【适用场景】: 信息收集、资产侦察、渗透测试",
+        "【技术特点】: 基于Java开发，提供图形化界面，集成多个网络测绘平台"
+    ]
 }

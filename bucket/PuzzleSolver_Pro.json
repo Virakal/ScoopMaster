@@ -8,7 +8,7 @@
         "ensure \"$persist_dir\" | Out-Null",
         "Copy-Item \"$persist_dir\\Byxs20-Data\\license.txt\" \"$dir\\Byxs20-Data\\license.txt\" -ErrorAction 'SilentlyContinue'"
     ],
-    "bin":"PuzzleSolver.exe",
+    "bin": "PuzzleSolver.exe",
     "shortcuts": [
         [
             "PuzzleSolver.exe",
@@ -22,5 +22,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/bright-angel/file/releases/download/PuzzleSolver_Pro/PuzzleSolver_Pro_v$version.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: CTF工具",
+        "【主要功能】: 针对CTF竞赛MISC方向的综合工具，支持多种杂项题目解题",
+        "【适用场景】: CTF竞赛、MISC题目解答、密码分析",
+        "【技术特点】: Windows可执行文件，图形化界面，专业版"
+    ]
 }

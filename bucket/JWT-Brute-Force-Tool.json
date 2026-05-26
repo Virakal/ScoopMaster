@@ -14,5 +14,11 @@
         "https://github.com/fightnvrgp/JWT-Brute-Force-Tool/releases/download/v1.0.0/jwt-brute-force-tool-windows-amd64.exe#/jwt-brute-force-tool.exe",
         "https://github.com/fightnvrgp/JWT-Brute-Force-Tool/archive/refs/heads/main.zip"
     ],
-    "bin": "jwt-brute-force-tool.exe"
+    "bin": "jwt-brute-force-tool.exe",
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: JWT密码爆破和生成工具，支持字典和暴力破解，支持多线程",
+        "【适用场景】: JWT安全测试、渗透测试、安全审计",
+        "【技术特点】: 基于Go语言开发，多线程爆破，效率高，支持JWT生成"
+    ]
 }

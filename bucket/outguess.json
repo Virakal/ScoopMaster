@@ -5,5 +5,11 @@
     "license": "unknown",
     "url": "https://github.com/bright-angel/file/releases/download/outguess/outguess-0.2.exe#/outguess.exe",
     "hash": "adb6ae51843904e841f16affb5426e16d7bb8c14817edafb3eadc2f0dad99500",
-    "bin": "outguess.exe"
+    "bin": "outguess.exe",
+    "notes": [
+        "【工具类型】: 隐写工具",
+        "【主要功能】: 通用隐写工具，在数据源的冗余位中插入隐藏信息，支持PPM、PNM、JPEG格式",
+        "【适用场景】: 数据隐藏、隐写分析、CTF竞赛",
+        "【技术特点】: Windows可执行文件，命令行工具，支持多种图像格式"
+    ]
 }

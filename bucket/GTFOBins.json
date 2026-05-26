@@ -13,5 +13,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/GTFOBins/GTFOBins.github.io/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全资料",
+        "【主要功能】: Unix二进制文件列表，可用于绕过本地安全限制提权",
+        "【适用场景】: Linux提权、渗透测试、安全研究",
+        "【技术特点】: 收集整理可用于提权的二进制文件，提供利用方法"
+    ]
 }

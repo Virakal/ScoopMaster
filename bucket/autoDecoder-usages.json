@@ -4,7 +4,7 @@
     "homepage": "https://github.com/f0ng/autoDecoder-usages",
     "license": "unknown",
     "url": "https://github.com/f0ng/autoDecoder-usages/archive/refs/heads/master.zip",
-    "hash":"b26167d5d9da10ab51e431a51a35def95b07d12b5db865719af8553ebfb039bc",
+    "hash": "b26167d5d9da10ab51e431a51a35def95b07d12b5db865719af8553ebfb039bc",
     "post_install": [
         "Move-Item -Path \"$dir\\autoDecoder-usages-main\\*\" -Destination \"$dir\\\"",
         "Remove-Item \"$dir\\autoDecoder-usages-main\" -Force -Recurse"
@@ -16,5 +16,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/f0ng/autoDecoder-usages/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全资料",
+        "【主要功能】: autoDecoder用法案例集，包含加解密、WAF绕过、参数替换等技巧",
+        "【适用场景】: 安全测试、WAF绕过、编码解码学习",
+        "【技术特点】: 文档资料集合，提供实战案例"
+    ]
 }

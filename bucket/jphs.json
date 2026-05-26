@@ -9,7 +9,6 @@
         "Jphswin.exe",
         "jphide.exe",
         "jpseek.exe"
-
     ],
     "shortcuts": [
         [
@@ -20,5 +19,11 @@
             "jpseek.exe",
             "Seek"
         ]
+    ],
+    "notes": [
+        "【工具类型】: 隐写工具",
+        "【主要功能】: JPHid和Seek隐写工具，用于在图像中隐藏和提取数据",
+        "【适用场景】: 数据隐藏、安全通信、数字取证",
+        "【技术特点】: 基于LSB隐写技术，支持BMP图像格式"
     ]
 }

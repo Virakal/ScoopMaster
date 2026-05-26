@@ -14,5 +14,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/wgpsec/ENScan_GO/releases/download/v$version/enscan-v$version-windows-amd64.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 企业信息收集工具，聚合ICP备案、APP、小程序、公众号等信息",
+        "【适用场景】: 信息收集、渗透测试前期侦察、资产梳理",
+        "【技术特点】: 基于Go语言开发，调用企业信息API，支持信息聚合导出"
+    ]
 }

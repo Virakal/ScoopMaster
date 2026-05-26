@@ -30,5 +30,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/HotBoy-java/PotatoTool/releases/download/ReleaseV$version/PotatoTool-$version-jdk8.jar#/PotatoTool.jar"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: 网络安全综合工具，集成解密、分析、扫描、溯源等功能",
+        "【适用场景】: 安全评估、红蓝对抗、渗透测试",
+        "【技术特点】: Java开发，图形化界面，需要JRE环境"
+    ]
 }

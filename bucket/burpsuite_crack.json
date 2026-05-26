@@ -23,5 +23,11 @@
     ],
     "url": "https://github.com/bright-angel/burpsuite_crack/archive/refs/heads/main.zip",
     "extract_dir": "burpsuite_crack-main",
-    "bin": "burpsuite_loader.bat"
+    "bin": "burpsuite_loader.bat",
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: Burp Suite破解工具，用于激活Burp Suite",
+        "【适用场景】: Burp Suite激活、安全测试工具准备",
+        "【技术特点】: 基于Java开发，配合Burp Suite使用"
+    ]
 }

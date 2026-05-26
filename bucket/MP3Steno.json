@@ -5,5 +5,11 @@
     "license": "unknown",
     "url": "https://github.com/bright-angel/file/releases/download/MP3Steno/MP3Steno.zip",
     "hash": "",
-    "bin": "MP3Steno.exe"
+    "bin": "MP3Steno.exe",
+    "notes": [
+        "【工具类型】: 隐写工具",
+        "【主要功能】: MP3音频隐写工具，支持在MP3中隐藏和提取文本信息",
+        "【适用场景】: 数据隐藏、安全通信、数字取证",
+        "【技术特点】: 基于音频频率分析，支持MP3和WAV格式"
+    ]
 }

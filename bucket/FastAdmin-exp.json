@@ -20,5 +20,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/3xsh0re/FastAdmin-exp/releases/download/v$version/FastAdmin-exp.jar"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 快速检测FastAdmin框架相关漏洞",
+        "【适用场景】: FastAdmin框架漏洞检测、安全评估、渗透测试",
+        "【技术特点】: 基于Java开发，支持多种FastAdmin漏洞检测"
+    ]
 }

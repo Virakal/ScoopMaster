@@ -16,5 +16,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/EnableSecurity/wafw00f/archive/refs/tags/v$version.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: WAF识别工具，可检测网站使用的Web应用防火墙类型",
+        "【适用场景】: 渗透测试前期侦察、安全评估、WAF绕过研究",
+        "【技术特点】: Python开发，命令行工具，支持多种WAF识别"
+    ]
 }

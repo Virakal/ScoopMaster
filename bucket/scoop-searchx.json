@@ -17,10 +17,9 @@
         "url": "https://github.com/bright-angel/scoop-searchx/releases/download/v$version/scoop-searchx.exe"
     },
     "notes": [
-        "【工具类型】: 命令行工具",
-        "【主要功能】: 从Scoop桶中快速检索应用程序，以表格形式展示搜索结果",
-        "【适用场景】: Scoop包管理，应用查找",
-        "【技术特点】: 原生Windows可执行文件，无需额外依赖",
-        "【注意事项】: 直接运行即可使用"
+        "【工具类型】: 开发工具",
+        "【主要功能】: Scoop应用搜索工具，支持从Scoop桶中快速检索应用程序，表格形式展示结果",
+        "【适用场景】: Scoop包管理、快速搜索、工具查找",
+        "【技术特点】: Windows可执行文件，命令行工具，支持表格输出"
     ]
 }

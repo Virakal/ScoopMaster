@@ -15,5 +15,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/TongchengOpenSource/AppScan/releases/download/$version/app-scan.Setup.$version.exe#/dl.7z"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: AppScan隐私合规检测工具，企业级自动化检测App隐私合规问题",
+        "【适用场景】: App隐私合规检测、安全评估、合规审计",
+        "【技术特点】: 图形化界面，自动化检测，企业级工具"
+    ]
 }

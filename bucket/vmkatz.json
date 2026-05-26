@@ -11,10 +11,9 @@
         "url": "https://github.com/nikaiw/VMkatz/releases/download/v$version/vmkatz-v$version-windows-x86_64.zip#/vmkatz.zip"
     },
     "notes": [
-        "【工具类型】: 安全测试",
-        "【主要功能】: VMware虚拟机内存快照分析与凭证提取",
-        "【适用场景】: 渗透测试、内存取证分析",
-        "【技术特点】: 基于Volatility框架，支持多种VMware快照格式",
-        "【注意事项】: 需要管理员权限运行，仅供合法授权测试使用"
+        "【工具类型】: 安全取证工具",
+        "【主要功能】: VMware虚拟机内存取证工具，提取系统凭证和敏感信息",
+        "【适用场景】: 数字取证、安全分析、渗透测试",
+        "【技术特点】: Windows可执行文件，支持多种内存分析功能"
     ]
 }

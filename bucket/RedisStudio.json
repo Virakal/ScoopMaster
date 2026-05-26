@@ -15,5 +15,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/cinience/RedisStudio/releases/download/$version/RedisStudio-en-$version.exe#/RedisStudio.exe"
-    }
+    },
+    "notes": [
+        "【工具类型】: 数据库工具",
+        "【主要功能】: Redis图形化客户端工具，支持Redis数据库管理",
+        "【适用场景】: Redis数据库管理、开发调试、数据查看",
+        "【技术特点】: Windows可执行文件，图形化界面"
+    ]
 }

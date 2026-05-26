@@ -11,5 +11,11 @@
             "AndroidKiller.exe",
             "Android Killer"
         ]
+    ],
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: Android Killer安卓逆向工具，支持Apk反编译、打包签名、ADB通信、logcat日志输出等",
+        "【适用场景】: Android逆向工程、应用分析、安全研究",
+        "【技术特点】: 图形化界面，一站式逆向工具，支持语法高亮"
     ]
 }

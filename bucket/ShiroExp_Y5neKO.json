@@ -2,8 +2,10 @@
     "version": "2.1",
     "description": "Shiro漏洞利用工具",
     "notes": [
-        "漏洞检测利用",
-        "Apache Shiro,密钥爆破,命令注入,内存马注入"
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: Shiro漏洞利用工具，支持Shiro反序列化漏洞检测和利用",
+        "【适用场景】: 漏洞验证、渗透测试、安全评估",
+        "【技术特点】: Java开发，命令行工具，需要JRE环境"
     ],
     "homepage": "https://github.com/Y5neKO/ShiroEXP",
     "license": "UNKNOWN",

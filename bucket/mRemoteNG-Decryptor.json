@@ -4,12 +4,12 @@
     "homepage": "https://github.com/ybdt/mRemoteNG-Decryptor",
     "license": "unknow",
     "suggest": {
-        "python":[
+        "python": [
             "miniconda3"
         ]
     },
     "url": "https://github.com/ybdt/mRemoteNG-Decryptor/archive/refs/heads/master.zip",
-    "hash":"f68f1eb79c38bcd1c57473e6b094c4217942a8aeafbb8d0476c762f1a15a485e",
+    "hash": "f68f1eb79c38bcd1c57473e6b094c4217942a8aeafbb8d0476c762f1a15a485e",
     "pre_install": [
         "Set-Content \"$dir\\mRemoteNG-Decryptor.bat\" '@pushd %~dp0",
         "@call activate python3env",
@@ -28,5 +28,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/ybdt/mRemoteNG-Decryptor/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 密码工具",
+        "【主要功能】: mRemoteNG密码解密工具，自动解密保存的凭据",
+        "【适用场景】: 密码恢复、安全审计、渗透测试",
+        "【技术特点】: 基于Python开发，自动化解密mRemoteNG配置文件"
+    ]
 }

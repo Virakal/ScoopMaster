@@ -22,5 +22,11 @@
             "CSRFTester.bat",
             "OWASP CSRFTester"
         ]
+    ],
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: OWASP CSRF测试工具，用于检测CSRF漏洞",
+        "【适用场景】: CSRF漏洞检测、安全评估、渗透测试",
+        "【技术特点】: 基于Java开发，图形化界面，OWASP项目"
     ]
 }

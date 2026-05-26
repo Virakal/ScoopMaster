@@ -22,10 +22,9 @@
         "url": "https://github.com/AugustineFulgur/ClarityJS/archive/refs/heads/main.zip#/clarityjs.zip"
     },
     "notes": [
-        "【工具类型】: 安全测试",
-        "【主要功能】: JavaScript代码解混淆工具",
-        "【适用场景】: 逆向工程、恶意代码分析",
-        "【技术特点】: 基于 Node.js，支持多种解混淆配置",
-        "【注意事项】: 包含unsafe模块，建议在隔离环境中运行"
+        "【工具类型】: 安全工具",
+        "【主要功能】: JavaScript解混淆工具，用于还原混淆的JavaScript代码",
+        "【适用场景】: JavaScript代码分析、安全研究、恶意代码分析",
+        "【技术特点】: 基于Node.js开发，命令行工具，支持多种混淆类型"
     ]
 }

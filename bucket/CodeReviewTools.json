@@ -20,5 +20,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Ppsoft1991/CodeReviewTools/releases/download/v$version/CodeReviewTools_v$version.jar#/CodeReviewTools.jar"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: 代码审计工具，用于源代码安全审计",
+        "【适用场景】: 代码审计、安全评估、漏洞挖掘",
+        "【技术特点】: 基于Java开发，命令行工具，支持多种编程语言"
+    ]
 }

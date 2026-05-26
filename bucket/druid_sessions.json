@@ -22,5 +22,11 @@
             "druid_sessions.bat",
             "获取 druid sessions"
         ]
+    ],
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 获取Alibaba Druid的sessions、SQL和URL信息",
+        "【适用场景】: Druid信息收集、安全评估、渗透测试",
+        "【技术特点】: 基于Java开发，图形化界面，支持Druid信息提取"
     ]
 }

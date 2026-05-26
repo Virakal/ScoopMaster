@@ -8,5 +8,11 @@
     "bin": [
         "npiet.exe",
         "npiet-foogol.exe"
+    ],
+    "notes": [
+        "【工具类型】: 开发工具",
+        "【主要功能】: Piet编程语言解释器，执行基于图像的Piet程序",
+        "【适用场景】: Piet语言编程、代码艺术创作、教育学习",
+        "【技术特点】: 支持PPM、PNG、GIF格式的Piet程序文件"
     ]
 }

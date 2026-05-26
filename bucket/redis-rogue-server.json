@@ -4,12 +4,12 @@
     "homepage": "https://github.com/n0b0dyCN/redis-rogue-server",
     "license": "unknown",
     "suggest": {
-        "python":[
+        "python": [
             "miniconda3"
         ]
     },
     "url": "https://github.com/n0b0dyCN/redis-rogue-server/archive/refs/heads/master.zip",
-    "hash":"246c24356b1f4fc16e1a8151668525dac735b35a29c26088d93ce92a7e7de505",
+    "hash": "246c24356b1f4fc16e1a8151668525dac735b35a29c26088d93ce92a7e7de505",
     "pre_install": [
         "Set-Content \"$dir\\redis-rogue-server.bat\" '@pushd %~dp0",
         "@call activate python3env",
@@ -28,5 +28,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/n0b0dyCN/redis-rogue-server/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: Redis RCE漏洞利用工具，针对Redis <=5.0.5版本",
+        "【适用场景】: 漏洞验证、渗透测试、安全评估",
+        "【技术特点】: Python开发，命令行工具，需要Python环境"
+    ]
 }

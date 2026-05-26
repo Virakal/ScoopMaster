@@ -1,13 +1,12 @@
 {
     "version": "1.2",
-    "description": "javafx练习,JS接口提取,漏洞检测",
+    "description": "javafx练习,JS接】提取,漏洞检测",
     "homepage": "https://github.com/0x7eTeam/0x7eTeamTools",
     "notes": [
-        "资产测绘采集,漏洞检测利用,内网渗透,远程连接",
-        "资产测绘API调用,fofa,鹰图,quake360",
-        "横向移动,WMIEXEC,PSEXEC,SMBEXEC,ATEXEC,DCOMEXEC",
-        "数据库连接,mysql,oracle",
-        "常用命令,编码转码,反弹shell,字典生成,杀软识别,DNSLOG"
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 0x7eTeam工具集，支持JS接口提取和漏洞检测",
+        "【适用场景】: 安全测试、漏洞检测、渗透测试",
+        "【技术特点】: 基于Java开发，图形化界面"
     ],
     "license": "UNKNOWN",
     "suggest": {

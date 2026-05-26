@@ -9,5 +9,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/WormChickenWizard/hikvision-decrypter/releases/download/v$version/hikvision-decrypter.exe"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: 海康威视摄像头配置文件解密工具",
+        "【适用场景】: 安防设备分析、安全审计、数字取证",
+        "【技术特点】: 基于C++开发，跨平台支持，解密海康威视配置文件"
+    ]
 }

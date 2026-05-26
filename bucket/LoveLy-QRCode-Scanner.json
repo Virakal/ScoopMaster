@@ -4,12 +4,12 @@
     "homepage": "https://github.com/Tokeii0/LoveLy-QRCode-Scanner",
     "license": "unknown",
     "suggest": {
-        "python":[
+        "python": [
             "miniconda3"
         ]
     },
     "url": "https://github.com/Tokeii0/LoveLy-QRCode-Scanner/archive/refs/heads/master.zip",
-    "hash":"2b40a35813d043b4a98c8387cb0fc19503c53c04cb65f2cd1f03248a896126d8",
+    "hash": "2b40a35813d043b4a98c8387cb0fc19503c53c04cb65f2cd1f03248a896126d8",
     "pre_install": [
         "Set-Content \"$dir\\LoveLy-QRCode-Scanner.bat\" '@pushd %~dp0",
         "@call activate python3env",
@@ -35,5 +35,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/Tokeii0/LoveLy-QRCode-Scanner/archive/refs/heads/master.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 二维码暴力破解工具，用于解码模糊或AI生成的二维码",
+        "【适用场景】: 安全测试、二维码解码、渗透测试",
+        "【技术特点】: 基于Python开发，使用OpenCV图像处理，支持多种二维码格式"
+    ]
 }

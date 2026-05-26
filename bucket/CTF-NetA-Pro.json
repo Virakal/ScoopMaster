@@ -9,7 +9,7 @@
         "ensure \"$persist_dir\" | Out-Null",
         "Copy-Item \"$persist_dir\\license\" \"$dir\\license\" -ErrorAction 'SilentlyContinue'"
     ],
-    "bin":"CTF-NetA.exe",
+    "bin": "CTF-NetA.exe",
     "shortcuts": [
         [
             "CTF-NetA.exe",
@@ -23,5 +23,11 @@
     },
     "autoupdate": {
         "url": "https://github.com/bright-angel/file/releases/download/CTF-NetA/CTF-NetA-V$version.7z"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: CTF网络流量分析工具专业版，对常见网络流量进行分析，快速自动获取flag",
+        "【适用场景】: CTF比赛、网络流量分析、安全研究",
+        "【技术特点】: 提供图形化界面，支持多种协议分析"
+    ]
 }

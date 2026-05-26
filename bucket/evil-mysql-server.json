@@ -9,5 +9,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/dushixiang/evil-mysql-server/releases/download/v$version/evil-mysql-server_$version_windows_amd64.tar.gz"
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 针对JDBC反序列化漏洞的恶意MySQL服务器，配合ysoserial使用",
+        "【适用场景】: JDBC反序列化漏洞测试、安全研究",
+        "【技术特点】: 模拟MySQL服务，触发JDBC反序列化漏洞，需要配合ysoserial使用"
+    ]
 }

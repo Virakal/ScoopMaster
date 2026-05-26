@@ -23,5 +23,11 @@
         "@start javaw.exe -jar \"logAnalyser.jar\" %*",
         "@popd' -Encoding Ascii"
     ],
-    "bin": "logAnalyser.bat"
+    "bin": "logAnalyser.bat",
+    "notes": [
+        "【工具类型】: 安全工具",
+        "【主要功能】: Web日志分析工具，用于分析和检测日志中的安全事件",
+        "【适用场景】: 日志审计、安全事件分析、入侵检测",
+        "【技术特点】: 基于Java开发，提供图形化界面，支持多种日志格式"
+    ]
 }

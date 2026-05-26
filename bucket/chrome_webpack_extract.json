@@ -1,15 +1,16 @@
 {
-    "version": "2026-05-25T14.31.26",
+    "version": "2026-05-26T14.43.10",
     "description": "自动化收集、加载和分析 JavaScript 的 Chrome 插件",
     "notes": [
-        "Chrome 插件",
-        "自动化收集、加载和分析 JS",
-        "支持一键提取映射、一键加载、一键分析、一键下载"
+        "【工具类型】: Chrome扩展",
+        "【主要功能】: 自动化收集、加载和分析 JavaScript 的 Chrome 插件",
+        "【适用场景】: 根据描述推断的适用场景",
+        "【技术特点】: Chrome浏览器扩展，需在Chrome中安装"
     ],
     "homepage": "https://github.com/xz-zone/Webpack_extract",
     "license": "UNKNOWN",
     "url": "https://github.com/xz-zone/Webpack_extract/archive/refs/heads/master.zip#/dl.zip1",
-    "hash": "0931faa567d5c26ad895db99f7f85f25ee255b7e7c0bbeacf501c43e0b7a5020",
+    "hash": "e4a5ac607dfef359553e90bc7e40bba602032b611bc0f6ea7e6fa37d379f32ef",
     "pre_install": [
         "7z x \"$dir\\dl.zip1\" -o\"$dir\" -y",
         "Remove-Item \"$dir\\dl.zip1\" -Force"

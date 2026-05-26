@@ -27,5 +27,11 @@
             "https://github.com/zhaodie/sacnner/archive/refs/heads/main.zip",
             "https://github.com/zhaodie/sacnner/releases/download/sacnnerv1.0/linux.zip"
         ]
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: PHP代码安全扫描器，通过污点分析+正则签名双引擎识别代码执行、命令执行、文件操作、文件包含等漏洞",
+        "【适用场景】: 代码审计、安全评估、漏洞发现",
+        "【技术特点】: Go语言开发，命令行工具，需要Go环境"
+    ]
 }

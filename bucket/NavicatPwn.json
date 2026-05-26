@@ -18,5 +18,11 @@
             "https://github.com/AabyssZG/NavicatPwn/releases/download/$version/NavicatPwn_amd64.exe#/NavicatPwn.exe",
             "https://github.com/AabyssZG/NavicatPwn/archive/refs/heads/main.zip"
         ]
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: Navicat后渗透利用框架，提取保存的数据库凭据",
+        "【适用场景】: 渗透测试、红队行动、凭据提取",
+        "【技术特点】: 针对Navicat的安全测试工具，支持凭据提取"
+    ]
 }

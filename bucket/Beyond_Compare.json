@@ -5,8 +5,8 @@
     "license": "UNKNOWN",
     "url": "https://github.com/bright-angel/file/releases/download/Beyond_Compare/Beyond_Compare_5.0.6.30713_64bit_Green.7z",
     "hash": "9D41015EDEB3974C5808112509C35A8FB0823BE102FC4635C452073A33FDCD68",
-    "extract_dir":"Beyond_Compare_5.0.6.30713_64bit_Green\\BCompare",
-    "bin":"BCompare.exe",
+    "extract_dir": "Beyond_Compare_5.0.6.30713_64bit_Green\\BCompare",
+    "bin": "BCompare.exe",
     "shortcuts": [
         [
             "BCompare.exe",
@@ -19,6 +19,12 @@
     },
     "autoupdate": {
         "url": "https://github.com/bright-angel/file/releases/download/Beyond_Compare/Beyond_Compare_$version_64bit_Green.7z",
-        "extract_dir":"Beyond_Compare_$version_64bit_Green\\BCompare"
-    }
+        "extract_dir": "Beyond_Compare_$version_64bit_Green\\BCompare"
+    },
+    "notes": [
+        "【工具类型】: 文件工具",
+        "【主要功能】: Beyond Compare文件对比工具，支持文件和文件夹差异比对、同步",
+        "【适用场景】: 代码审查、文件对比、数据同步",
+        "【技术特点】: 图形化界面，支持多种文件格式对比"
+    ]
 }

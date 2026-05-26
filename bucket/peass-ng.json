@@ -70,5 +70,11 @@
             "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86.exe",
             "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86_ofs.exe"
         ]
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 权限提升脚本套件，包含linpeas和winPEAS，用于检测提权漏洞",
+        "【适用场景】: 权限提升、渗透测试、安全评估",
+        "【技术特点】: 支持Windows和Linux，命令行工具，彩色输出"
+    ]
 }

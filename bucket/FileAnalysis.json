@@ -17,5 +17,11 @@
     "autoupdate": {
         "url": "https://github.com/Pascal-Lin/FileAnalysis/releases/download/$version/FileAnalysis_v$version.zip",
         "extract_dir": "FileAnalysis"
-    }
+    },
+    "notes": [
+        "【工具类型】: 文件工具",
+        "【主要功能】: 文件类型分析工具，基于TrIDLib库，识别文件类型和扩展名",
+        "【适用场景】: 文件类型识别、安全分析、文件鉴定",
+        "【技术特点】: 基于TrIDLib库，提供图形化界面，支持多种文件类型识别"
+    ]
 }
