@@ -16,8 +16,8 @@
     ],
     "installer": {
         "script": [
-            "$targetPath = \"$persist_dir\\CS2 Insight Agent\"",
-            "$configPath = \"$env:APPDATA\\CS2 Insight Agent\"",
+            "$targetPath = \"$persist_dir\\cs2-insight-agent\"",
+            "$configPath = \"$env:APPDATA\\cs2-insight-agent\"",
             "ensure $targetPath | Out-Null",
             "$linkType = (Get-Item -Path $configPath -ErrorAction SilentlyContinue).LinkType",
             "if (Test-Path $configPath) {",
