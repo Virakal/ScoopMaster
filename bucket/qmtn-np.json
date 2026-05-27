@@ -10,14 +10,10 @@
         }
     },
     "installer": {
-        "script": [
-            "Invoke-ExternalCommand -FilePath \"$dir\\qmtn_setup.exe\" -Args @('/S', '/noredist', \"/D=$dir\") -RunAs | Out-Null"
-        ]
+        "script": "Invoke-ExternalCommand -FilePath \"$dir\\qmtn_setup.exe\" -Args @('/S', '/noredist', \"/D=$dir\") -RunAs | Out-Null"
     },
     "uninstaller": {
-        "64bit": {
-            "script": "Invoke-ExternalCommand -FilePath \"$dir\\unins000.exe\" -Args @('/S' , '/noredist') -RunAs | Out-Null"
-        }
+        "script": "Invoke-ExternalCommand -FilePath \"$dir\\unins000.exe\" -Args @('/S' , '/noredist') -RunAs | Out-Null"
     },
     "shortcuts": [
         [

@@ -6,10 +6,9 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/neurosnap/sentences/releases/download/v1.1.2/sentences_windows-amd64.tar.gz",
-            "hash": "A2D51BD9CC8AACB2FB70C62A4DF76A3041CBA1D8131D0A536725227B0231E8B2"
+            "hash": "a2d51bd9cc8aacb2fb70c62a4df76a3041cba1d8131d0a536725227b0231e8b2"
         }
     },
-    "pre_install": "Rename-Item \"$dir\\sentences\" \"$dir\\sentences.exe\"",
     "bin": "sentences.exe",
     "checkver": "github",
     "autoupdate": {

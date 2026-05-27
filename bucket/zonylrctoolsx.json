@@ -13,7 +13,6 @@
             "hash": "ffc4156c937a7749ed24ff19732b955a18a793ab0ddbe36657deb4eb9d5b5efe"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\config.yaml\")) { New-Item \"$dir\\config.yaml\" | Out-Null }",
     "bin": [
         [
             "ZonyLrcTools.Cli.exe",
@@ -21,7 +20,10 @@
         ]
     ],
     "persist": "config.yaml",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/real-zony/ZonyLrcToolsX",
+        "regex": "ZonyLrcToolsX_Alpha\\.([\\d]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

@@ -16,6 +16,10 @@
             "64bit": {
                 "url": "https://github.com/epilande/repos/releases/download/v$version/repos-windows-x64.exe#/repos.exe"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }

@@ -23,7 +23,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gmic.eu/get_file.php?file=windows/gmic_$version_qt_win64.zip"
+                "url": "https://gmic.eu/get_file.php?file=windows/gmic_$version_qt_win64.zip",
+                "extract_dir": "gmic-$version-qt-win64"
             }
         }
     }
