@@ -15,7 +15,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://www.github.com/Gzh0821/pvzg_site",
+        "url": "https://www.github.com/Gzh0821/pvzg_site/releases",
         "regex": "/releases/tag/([\\d.]+[-\\w.]*)"
     },
     "autoupdate": {
