@@ -22,6 +22,7 @@
     },
     "checkver": {
         "url": "https://www.amd.com/en/support/downloads/drivers.html/chipsets/am4/x470.html",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
         "regex": "<h4>AMD Chipset Drivers[\\s\\S]*?Revision Number[\\s\\S]*?([\\d.]+)<\\/p>"
     },
     "autoupdate": {
