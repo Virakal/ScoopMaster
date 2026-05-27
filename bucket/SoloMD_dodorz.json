@@ -1,31 +1,30 @@
 {
-    "version": "4.3.1",
-    "description": "SoloMD — a lightweight, cross-platform Markdown + plain text editor. One file. One window. Just write.",
-    "homepage": "https://solomd.app/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://gh.jjj.gv.uy/https://github.com/zhitongblog/solomd/releases/download/v4.3.1/SoloMD_4.3.1_x64_en-US.msi",
-            "hash": "f02353a5de8fcc57941078e31d8efd5dea08aa3c8f39ca6e29310b7e245a3797"
-        }
-    },
-    "extract_dir": "PFiles\\SoloMD",
-    "bin": "SoloMD.exe",
-    "shortcuts": [
-        [
-            "SoloMD.exe",
-            "SoloMD"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/zhitongblog/solomd"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://gh.jjj.gv.uy/https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
-            }
-        }
+  "version": "4.3.1",
+  "description": "SoloMD — a lightweight, cross-platform Markdown + plain text editor. One file. One window. Just write.",
+  "homepage": "https://solomd.app/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/zhitongblog/solomd/releases/download/v4.3.1/SoloMD_4.3.1_x64_en-US.msi",
+      "hash": "f02353a5de8fcc57941078e31d8efd5dea08aa3c8f39ca6e29310b7e245a3797"
     }
+  },
+  "extract_dir": "PFiles\\SoloMD",
+  "bin": "SoloMD.exe",
+  "shortcuts": [
+    [
+      "SoloMD.exe",
+      "SoloMD"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/zhitongblog/solomd"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
+      }
+    }
+  }
 }
-
