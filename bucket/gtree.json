@@ -1,22 +1,29 @@
 {
-  "version": "1.9.3",
-  "architecture": {
-    "32bit": {
-      "url": "https://ghproxy.com/https://github.com/ddddddO/gtree/releases/download/v1.9.3/gtree_Windows_i386.zip",
-      "bin": [
-        "gtree.exe"
-      ],
-      "hash": "a58a85046b1499d14b5908eb1e7f3fc2b5972a302ab1435fc9daccf9773f7ad2"
+    "version": "1.13.6",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.13.6/gtree_Windows_i386.zip",
+            "bin": [
+                "gtree.exe"
+            ],
+            "hash": "bdeaa90a47af6ae08582219d09be005726ec974010cbae751b9f7318a93c21f4"
+        },
+        "64bit": {
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.13.6/gtree_Windows_x86_64.zip",
+            "bin": [
+                "gtree.exe"
+            ],
+            "hash": "925971c778cb7ccc0770644fa75425a37916a2b83f50533ae443b61578129419"
+        },
+        "arm64": {
+            "url": "https://github.com/ddddddO/gtree/releases/download/v1.13.6/gtree_Windows_arm64.zip",
+            "bin": [
+                "gtree.exe"
+            ],
+            "hash": "ee649eb94c09090e52e22865e5634f3addc5c26dc223a8ff34123c7c747b598a"
+        }
     },
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/ddddddO/gtree/releases/download/v1.9.3/gtree_Windows_x86_64.zip",
-      "bin": [
-        "gtree.exe"
-      ],
-      "hash": "8bd8e81e82f9c733d3da03010a21d83de64448b21640a8aa386dcca10e40e50b"
-    }
-  },
-  "homepage": "https://github.com/ddddddO/gtree",
-  "license": "BSD-2-Clause",
-  "description": "This CLI uses Markdown to generate directory trees and directories itself, and also verifies directories."
+    "homepage": "https://github.com/ddddddO/gtree",
+    "license": "BSD-2-Clause",
+    "description": "This CLI uses Markdown to generate directory trees and directories itself, and also verifies directories."
 }
