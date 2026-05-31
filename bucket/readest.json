@@ -8,51 +8,28 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/readest/readest/releases/download/v0.11.2/Readest_0.11.2_x64-setup.exe#/dl.7z",
-            "hash": "deeb6fcc7ae21faa67486a59b72554fa47dc6619cc2b33b1f033fa9b5987218d"
+            "url": "https://github.com/readest/readest/releases/download/v0.11.2/Readest_0.11.2_x64-portable.exe#/Readest.exe",
+            "hash": "714d056012924505148182a6d249e227426cb72cbc2b61f8df2cb62ee76ee7ac"
         },
         "arm64": {
-            "url": "https://github.com/readest/readest/releases/download/v0.11.2/Readest_0.11.2_arm64-setup.exe#/dl.7z",
-            "hash": "2db7081d16ee0c4b216284d15ba82b601669488aa6dad0a6a900760ac40da168"
+            "url": "https://github.com/readest/readest/releases/download/v0.11.2/Readest_0.11.2_arm64-portable.exe#/Readest.exe",
+            "hash": "c79a80ddb1d6c4f2c454b8176b8141408d0d17806207eaa28bb53408eb41f5a5"
         }
     },
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\settings.json\")) {",
+        "    Set-Content -Path \"$dir\\settings.json\" -Value '{\"autoCheckUpdates\":false}' -Encoding ASCII",
+        "}"
+    ],
     "shortcuts": [
         [
-            "readest.exe",
+            "Readest.exe",
             "Readest"
         ]
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "Rename-Item -Path \"$dir\\`$TEMP\" -NewName \"redist\"",
-        "$appDataPath = \"$env:APPDATA\\com.bilingify.readest\"",
-        "$appLocalDataPath = \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
-        "$persistLocal = \"$persist_dir\\Local\"",
-        "$persistRoaming = \"$persist_dir\\Roaming\"",
-        "if (Test-Path $appDataPath) {",
-        "    Remove-Item $appDataPath -Recurse -Force",
-        "}",
-        "if (Test-Path $appLocalDataPath) {",
-        "    Remove-Item $appLocalDataPath -Recurse -Force",
-        "}",
-        "if (-Not (Test-Path $persistRoaming)) {",
-        "    New-Item -Path $persistRoaming -ItemType Directory | Out-Null",
-        "}",
-        "if (-Not (Test-Path $persistLocal)) {",
-        "    New-Item -Path $persistLocal -ItemType Directory | Out-Null",
-        "}",
-        "New-Item -ItemType Junction -Path \"$appDataPath\" -Target $persistRoaming | Out-Null",
-        "New-Item -ItemType Junction -Path \"$appLocalDataPath\" -Target $persistLocal | Out-Null"
-    ],
-    "post_uninstall": [
-        "$appDataPath = \"$env:APPDATA\\com.bilingify.readest\"",
-        "$appLocalDataPath = \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
-        "if (Test-Path $appDataPath) {",
-        "    Remove-Item $appDataPath -Recurse -Force",
-        "}",
-        "if (Test-Path $appLocalDataPath) {",
-        "    Remove-Item $appLocalDataPath -Recurse -Force",
-        "}"
+    "persist": [
+        "Readest",
+        "settings.json"
     ],
     "checkver": {
         "github": "https://github.com/readest/readest"
@@ -60,15 +37,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
             },
             "arm64": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-setup.exe#/dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
             }
         }
-    },
-    "notes": [
-        "You may need to install Edge WebView2 Runtime to use Readest.",
-        "A installer of Edge WebView2 Runtime is available under the 'redist' folder of the Pot installation directory."
-    ]
+    }
 }
