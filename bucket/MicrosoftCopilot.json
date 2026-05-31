@@ -1,0 +1,10 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "version": "1.01.000",
+    "url": ["https://raw.githubusercontent.com/MarkMichaelis/ScoopBucket/main/blank"],
+    "installer": {
+        "script": [
+            "Write-Warning 'Microsoft Copilot consumer desktop app is built into Windows 11; no separate install required.'"
+        ]
+    }
+}
