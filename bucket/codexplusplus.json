@@ -1,28 +1,41 @@
 {
-    "version": "1.1.7",
-    "description": "CodexPlusPlus - Windows build",
-    "homepage": "https://github.com/pedoc/CodexPlusPlus",
+    "version": "1.1.9",
+    "description": "External enhancement launcher and manager for the Codex App.",
+    "homepage": "https://github.com/BigPizzaV3/CodexPlusPlus",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pedoc/CodexPlusPlus/releases/download/v1.1.7/CodexPlusPlus-1.1.7-windows-x64.zip",
-            "hash": "sha256:60c5e15bc8f314cbdeb1dd770d12cfbe485b86594670798f70485b6cd65ca596"
+            "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v1.1.9/CodexPlusPlus-1.1.9-windows-x64-setup.exe#/dl.7z",
+            "hash": "50b1300496f583bbe531c852c20687af5d84c7ae08a4dae6afdee64cf751bf3d"
         }
+    },
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse -ErrorAction SilentlyContinue"
     },
     "shortcuts": [
         [
             "codex-plus-plus.exe",
-            "CodexPlusPlus"
+            "Codex++"
         ],
         [
             "codex-plus-plus-manager.exe",
-            "CodexPlusPlusManager"
+            "Codex++ Manager"
         ]
     ],
+    "checkver": {
+        "url": "https://api.github.com/repos/BigPizzaV3/CodexPlusPlus/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/pedoc/CodexPlusPlus/releases/download/v$version/CodexPlusPlus-$version-windows-x64.zip"
+                "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v$version/CodexPlusPlus-$version-windows-x64-setup.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "https://api.github.com/repos/BigPizzaV3/CodexPlusPlus/releases/latest",
+            "jsonpath": "$.assets[?(@.name == 'CodexPlusPlus-$version-windows-x64-setup.exe')].digest"
         }
     }
 }
