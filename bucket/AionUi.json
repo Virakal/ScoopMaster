@@ -1,7 +1,6 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.1.9",
-    "description": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more",
+    "description": "Free, local, open-source 24/7 Cowork app and more",
     "homepage": "https://github.com/iOfficeAI/AionUi",
     "license": "Apache-2.0",
     "architecture": {
@@ -13,6 +12,12 @@
             "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.9/AionUi-2.1.9-win-arm64.exe#/dl.7z",
             "hash": "600db164fce1de2d144cb4c525a0e6a00bb0f4b895c8c8b6b1ff28866196649b"
         }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
+        ]
     },
     "shortcuts": [
         [
