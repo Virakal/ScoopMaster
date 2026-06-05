@@ -1,26 +1,26 @@
 {
-    "version": "1.7.1-rc1",
+    "version": "1.7.1",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1-rc1/swarmcli_Windows_i386.zip",
+            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1/swarmcli_Windows_i386.zip",
             "bin": [
                 "swarmcli.exe"
             ],
-            "hash": "61a0513a4b0689b39f39bb0f735bd9dc59439b4690faeb45efa92337fcb8eca1"
+            "hash": "d5e4431ef2bb5d1df970bcaf788f47b3b8910524834a6408587290b54978f0fc"
         },
         "64bit": {
-            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1-rc1/swarmcli_Windows_x86_64.zip",
+            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1/swarmcli_Windows_x86_64.zip",
             "bin": [
                 "swarmcli.exe"
             ],
-            "hash": "cc6e19b6769be4333ebdc1ee05d6a0e7baa42132de4fa0ebe850c003f671f135"
+            "hash": "f63b242cc8b61aaa39d811982f98c8c21058efa111fb239800368c42ad098003"
         },
         "arm64": {
-            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1-rc1/swarmcli_Windows_arm64.zip",
+            "url": "https://github.com/Eldara-Tech/swarmcli/releases/download/v1.7.1/swarmcli_Windows_arm64.zip",
             "bin": [
                 "swarmcli.exe"
             ],
-            "hash": "d242386d82c20f52dea36eb445d07412fc2c114ed9794f63687e63257573d2ed"
+            "hash": "364f48ec3344fd1243d35d791b0bce885d9ae4f8fa1fa72e6f23fb56f06c74bd"
         }
     },
     "homepage": "https://swarmcli.io",
