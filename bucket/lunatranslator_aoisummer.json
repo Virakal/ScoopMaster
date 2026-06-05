@@ -1,40 +1,40 @@
 {
-    "homepage": "https://github.com/HIllya51/LunaTranslator",
-    "description": "Galgame translator",
-    "license": "GPL-3.0",
-    "version": "10.15.9.5",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.9.5/LunaTranslator_x64_win7.zip",
-            "hash": "2b386434ca0f5ff77767670f795bf02221336685110eb36a60bf88ee32203445",
-            "extract_dir": "LunaTranslator_x64_win7"
-        },
-        "32bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.9.5/LunaTranslator_x86_win7.zip",
-            "hash": "295f71e56dafc45969b7ee373a595cd964c8b0a43e694b8fd254219d195a1b33",
-            "extract_dir": "LunaTranslator_x86_win7"
-        }
+  "homepage": "https://github.com/HIllya51/LunaTranslator",
+  "description": "Galgame translator",
+  "license": "GPL-3.0",
+  "version": "10.15.9.5",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.9.5/LunaTranslator_x64_win7.zip",
+      "hash": "2b386434ca0f5ff77767670f795bf02221336685110eb36a60bf88ee32203445",
+      "extract_dir": "LunaTranslator_x64_win7"
     },
-    "shortcuts": [
-        [
-            "LunaTranslator.exe",
-            "LunaTranslator"
-        ]
-    ],
-    "persist": [
-        "cache",
-        "translation_record",
-        "userconfig"
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win7.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.15.9.5/LunaTranslator_x86_win7.zip",
+      "hash": "295f71e56dafc45969b7ee373a595cd964c8b0a43e694b8fd254219d195a1b33",
+      "extract_dir": "LunaTranslator_x86_win7"
     }
+  },
+  "shortcuts": [
+    [
+      "LunaTranslator.exe",
+      "LunaTranslator"
+    ]
+  ],
+  "persist": [
+    "cache",
+    "translation_record",
+    "userconfig"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64_win7.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_win7.zip"
+      }
+    }
+  }
 }
