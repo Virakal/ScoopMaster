@@ -1,28 +1,47 @@
 {
-    "##": "CherryStudio",
-    "version": "1.9.10",
-    "description": "Cherry Studio 是一款支持多个大语言模型（LLM）服务商的桌面客户端，兼容 Windows、Mac 和 Linux 系统",
-    "homepage": "https://github.com/CherryHQ/cherry-studio",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/CherryHQ/cherry-studio?tab=License-1-ov-file#readme"
+    "version": "1.9.9",
+    "description": "A desktop client that supports for multiple LLM providers.",
+    "homepage": "https://cherry-ai.com",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
     },
-    "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.10/Cherry-Studio-1.9.10-x64-setup.exe#/dl.7z",
-    "hash": "b78eb27ba342562dfe90e6f48b7e17fb58bfc680bcf57bcc6e7aaffea645d0e5",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-setup.exe#/dl.7z"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-x64-portable.exe#/cherry-studio.exe",
+            "hash": "f3e8a0a392ffd4b20d2b989e379f96f236fd4a1e6d0e684986d58fdd0e42810a"
+        },
+        "arm64": {
+            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v1.9.9/Cherry-Studio-1.9.9-arm64-portable.exe#/cherry-studio.exe",
+            "hash": "f3def30ad5fbccc39ad3ba137900ebe47f51ebc41058840d14f731ca8c929699"
+        }
     },
     "pre_install": [
-        "Move-Item \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Force",
-        "Move-Item \"$dir\\`$R0\\Uninstall Cherry Studio.exe\" $dir -Force",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
-        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+        "if (-not (Test-Path \"$persist_dir\\data\") -and (Test-Path \"$env:APPDATA\\CherryStudio\")) {",
+        "    ensure \"$persist_dir\\data\" | Out-Null",
+        "    info '[Portable Mode] Copying user data...'",
+        "    Move-Item \"$env:APPDATA\\CherryStudio\\*\" \"$persist_dir\\data\"",
+        "    Remove-Item \"$env:APPDATA\\CherryStudio\" -Recurse -Force",
+        "}"
     ],
     "shortcuts": [
         [
-            "Cherry Studio.exe",
+            "cherry-studio.exe",
             "Cherry Studio"
         ]
-    ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/CherryHQ/cherry-studio"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-portable.exe#/cherry-studio.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-portable.exe#/cherry-studio.exe"
+            }
+        }
+    }
 }
