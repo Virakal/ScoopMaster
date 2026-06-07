@@ -1,19 +1,19 @@
 {
-    "version": "0.2.2",
+    "version": "0.3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Dieg0Code/nem/releases/download/v0.2.2/nem_windows_amd64.zip",
+            "url": "https://github.com/Dieg0Code/nem/releases/download/v0.3.0/nem_windows_amd64.zip",
             "bin": [
                 "nem.exe"
             ],
-            "hash": "8baf8ffdec1f36cb807dc4353291a5c0535471976e7172cab1f14bfd61dc8ab7"
+            "hash": "8a49ca64c5bdb7a0a00f997067b1eca4b5ca21503cf936ad2ba760074d274963"
         },
         "arm64": {
-            "url": "https://github.com/Dieg0Code/nem/releases/download/v0.2.2/nem_windows_arm64.zip",
+            "url": "https://github.com/Dieg0Code/nem/releases/download/v0.3.0/nem_windows_arm64.zip",
             "bin": [
                 "nem.exe"
             ],
-            "hash": "eb8c153d336071c1a782a84a7816726a0243e204040525a849c430ee2b7cfaa8"
+            "hash": "00a9373fdbdf26ffcba27ecd773fc7a206a193b1068b40ad74bc3139e3799844"
         }
     },
     "homepage": "https://github.com/Dieg0Code/nem",
