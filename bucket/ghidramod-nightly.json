@@ -1,40 +1,40 @@
 {
-  "homepage": "https://ghidra-sre.org/",
-  "description": "GhidraMod Nightly - NyaMisty",
-  "version": "12.2-20260606-134f5394fc",
-  "license": "Apache-2.0",
-  "hash": "94ffa4d76001c9900c245e04f6fd1177e8736eacb18f95ec3a49ce263b883122",
-  "url": "https://github.com/NyaMisty/ghidra_mod-ci/releases/download/2026-06-06-134f5394fc/ghidra_12.2_DEV_20260606.zip",
-  "extract_dir": "ghidra_12.2_DEV",
-  "bin": [
-    [
-      "ghidraRun.bat",
-      "ghidramod-nightly"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "ghidraRun.bat",
-      "Ghidra Mod Nightly",
-      "",
-      "support/ghidra.ico"
-    ]
-  ],
-  "suggest": {
-    "JDK": [
-      "java/oraclejdk",
-      "java/openjdk"
-    ]
-  },
-  "persist": "Ghidra\\Extensions",
-  "checkver": {
-    "url": "https://api.github.com/repos/NyaMisty/ghidra_mod-ci/releases?per_page=100",
-    "github_": "https://github.com/NyaMisty/ghidra_mod-ci",
-    "regex": "/download/(?<release>[0-9\\-]+?)-(?<commit>[0-9a-f]+?)/ghidra_(?<ver>[\\d.]+)_DEV_(?<date>\\d+)\\.zip",
-    "replace": "${ver}-${date}-${commit}"
-  },
-  "autoupdate": {
-    "url": "https://github.com/NyaMisty/ghidra_mod-ci/releases/download/$matchRelease-$matchCommit/ghidra_$matchVer_DEV_$matchDate.zip",
-    "extract_dir": "ghidra_$matchVer_DEV"
-  }
+    "homepage": "https://ghidra-sre.org/",
+    "description": "GhidraMod Nightly - NyaMisty",
+    "version": "12.2-20260606-134f5394fc",
+    "license": "Apache-2.0",
+    "hash": "94ffa4d76001c9900c245e04f6fd1177e8736eacb18f95ec3a49ce263b883122",
+    "url": "https://github.com/NyaMisty/ghidra_mod-ci/releases/download/2026-06-06-134f5394fc/ghidra_12.2_DEV_20260606.zip",
+    "extract_dir": "ghidra_12.2_DEV",
+    "bin": [
+        [
+            "ghidraRun.bat",
+            "ghidramod-nightly"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ghidraRun.bat",
+            "Ghidra Mod Nightly",
+            "",
+            "support/ghidra.ico"
+        ]
+    ],
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
+    "persist": "Ghidra\\Extensions",
+    "checkver": {
+        "url": "https://api.github.com/repos/NyaMisty/ghidra_mod-ci/releases?per_page=100",
+        "github_": "https://github.com/NyaMisty/ghidra_mod-ci",
+        "regex": "/download/(?<release>[0-9\\-]+?)-(?<commit>[0-9a-f]+?)/ghidra_(?<ver>[\\d.]+)_DEV_(?<date>\\d+)\\.zip",
+        "replace": "${ver}-${date}-${commit}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/NyaMisty/ghidra_mod-ci/releases/download/$matchRelease-$matchCommit/ghidra_$matchVer_DEV_$matchDate.zip",
+        "extract_dir": "ghidra_$matchVer_DEV"
+    }
 }
