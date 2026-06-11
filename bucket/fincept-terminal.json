@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Fincept-Corporation/FinceptTerminal",
     "license": "MIT",
     "url": "https://github.com/Fincept-Corporation/FinceptTerminal/releases/download/v4.1.0/FinceptTerminal-4.1.0-windows-x64-setup.exe",
-    "hash": "9b4d6a873a38b8757b72a5ab924c48f58bb2995d3f2dcde63f09f0acd1f8d943",
+    "hash": "dab2c288508ae93eef7a1d0c12befccf0ac2f39181a83f8da219742ec7046814",
     "installer": {
         "script": [
             "Start-Process -FilePath \"$dir\\$fname\" -ArgumentList 'install', '--accept-licenses', '--confirm-command', '--accept-messages', '--root', \"$dir\" -Wait -NoNewWindow",
