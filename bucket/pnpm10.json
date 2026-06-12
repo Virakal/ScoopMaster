@@ -16,9 +16,11 @@
 	"bin": ["pnpm.exe", ["pnpm.exe", "pnpx", "dlx"]],
 	"post_install": [
 		"pnpm config set enable-global-virtual-store true",
+		"pnpm config set cache-dir \"$($persist_dir -replace '\\\\', '/')/cache\"",
+		"pnpm config set state-dir \"$($persist_dir -replace '\\\\', '/')/state\"",
+		"pnpm config set store-dir \"$($persist_dir -replace '\\\\', '/')/store\"",
 		"pnpm setup"
 	],
-	"env_add_path": "bin",
 	"env_set": {
 		"PNPM_HOME": "$persist_dir"
 	},
