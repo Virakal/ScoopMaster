@@ -1,35 +1,33 @@
 {
-    "version": "1.1.36",
-    "description": "A beautiful, feature-rich SSH workspace built with Electron, React, and xterm.js.",
-    "homepage": "https://netcatty.app/",
+    "version": "1.1.37",
+    "description": "A modern SSH client, SFTP browser, and terminal manager with a built-in AI agent. Native on macOS, Windows, and Linux. Open source.",
+    "homepage": "https://netcatty.app",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.36/Netcatty-1.1.36-win-x64.exe#/dl.7z",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "hash": "c25e5beea8f16375b4c9936a3715553c5fcbfee8b692d465ab2cfaf48daa80ab"
+            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.37/Netcatty-1.1.37-win-x64.exe#/dl.7z",
+            "hash": "7e36675b355a0ffd8b94419d4502c1d8fd12ec107ec4d05dc6118b74571b58e6"
         },
         "arm64": {
-            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.36/Netcatty-1.1.36-win-arm64.exe#/dl.7z",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
-            "hash": "efd4d510f1a0e27f5d41524212dac9a6e4048411e850f86ccebd00cac009dd07"
+            "url": "https://github.com/binaricat/Netcatty/releases/download/v1.1.37/Netcatty-1.1.37-win-arm64.exe#/dl.7z",
+            "hash": "85a9fccf856b59addbba90388249956f88ea8a0c69a4ae79ce3659210d18ee8b"
         }
     },
+    "extract_dir": "$PLUGINSDIR",
+    "pre_install": [
+        "Remove-Item \"$dir\\*\" -Exclude \"app*.7z\"",
+        "Get-Item \"$dir\\app*.7z\" | Expand-7zipArchive -Destination \"$dir\" -Removal"
+    ],
+    "persist": "User Data",
     "shortcuts": [
         [
             "Netcatty.exe",
-            "Netcatty"
+            "Netcatty",
+            "--user-data-dir=\"$persist_dir\\User Data\""
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse -ErrorAction SilentlyContinue",
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\netcatty\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "notes": [
-        "Netcatty is NOT portable.",
-        "Settings are stored in '%APPDATA%\\netcatty', and can be purged using 'scoop uninstall --purge netcatty'."
-    ],
     "checkver": {
-        "url": "https://github.com/binaricat/Netcatty/releases.atom",
-        "regex": "Repository/\\d+/v(.+?)<"
+        "github": "https://github.com/binaricat/Netcatty"
     },
     "autoupdate": {
         "architecture": {
