@@ -1,60 +1,60 @@
 {
-  "version": "1.91.171",
-  "description": "Secure, Fast & Private Web Browser with Adblocker",
-  "homepage": "https://brave.com",
-  "license": {
-    "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
-    "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetup.exe",
-      "hash": "8c5d6433dd29827355b30eda09366a6fee6e5f3ee2c80d625e9134f48904d350"
+    "version": "1.91.171",
+    "description": "Secure, Fast & Private Web Browser with Adblocker",
+    "homepage": "https://brave.com",
+    "license": {
+        "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
+        "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
     },
-    "32bit": {
-      "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetup32.exe",
-      "hash": "401aff780c13fdbfee46dba6058e5ccb18f50b66a8ec7a021914368206b15baf"
-    },
-    "arm64": {
-      "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetupArm64.exe",
-      "hash": "09608d2a41bc219e5da9b697c169c3d3521cdc5a59e5b7ed64006abcb6ba9f1e"
-    }
-  },
-  "installer": {
-    "script": "Start-Process -FilePath \"$dir\\BraveBrowserStandaloneSilentSetup.exe\" -Wait"
-  },
-  "uninstaller": {
-    "script": [
-      "$uninstaller = Resolve-Path \"$env:LOCALAPPDATA\\BraveSoftware\\Brave-Browser\\Application\\*\\Installer\\setup.exe\" -ErrorAction SilentlyContinue",
-      "if ($uninstaller) {",
-      "    $uninstallString = \"`\"\" + $uninstaller.Path + \"`\" --uninstall\"",
-      "    cmd /c $uninstallString",
-      "    if ($LASTEXITCODE -ne 0) {",
-      "        Write-Host \"警告: 卸载可能未完全成功 (退出代码 $LASTEXITCODE)\"",
-      "    }",
-      "} else {",
-      "    Write-Host \"未找到 Brave 卸载程序，可能已被手动移除\"",
-      "}"
-    ]
-  },
-  "checkver": {
-    "url": "https://brave-browser-downloads.s3.brave.com/latest/release-windows-x64.version",
-    "regex": "([\\d.]+)"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup.exe"
-      },
-      "32bit": {
-        "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup32.exe"
-      },
-      "arm64": {
-        "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetupArm64.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetup.exe",
+            "hash": "8c5d6433dd29827355b30eda09366a6fee6e5f3ee2c80d625e9134f48904d350"
+        },
+        "32bit": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetup32.exe",
+            "hash": "401aff780c13fdbfee46dba6058e5ccb18f50b66a8ec7a021914368206b15baf"
+        },
+        "arm64": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.91.171/BraveBrowserStandaloneSilentSetupArm64.exe",
+            "hash": "09608d2a41bc219e5da9b697c169c3d3521cdc5a59e5b7ed64006abcb6ba9f1e"
+        }
     },
-    "hash": {
-      "url": "$url.sha256"
+    "installer": {
+        "script": "Start-Process -FilePath \"$dir\\BraveBrowserStandaloneSilentSetup.exe\" -Wait"
+    },
+    "uninstaller": {
+        "script": [
+            "$uninstaller = Resolve-Path \"$env:LOCALAPPDATA\\BraveSoftware\\Brave-Browser\\Application\\*\\Installer\\setup.exe\" -ErrorAction SilentlyContinue",
+            "if ($uninstaller) {",
+            "    $uninstallString = \"`\"\" + $uninstaller.Path + \"`\" --uninstall\"",
+            "    cmd /c $uninstallString",
+            "    if ($LASTEXITCODE -ne 0) {",
+            "        Write-Host \"警告: 卸载可能未完全成功 (退出代码 $LASTEXITCODE)\"",
+            "    }",
+            "} else {",
+            "    Write-Host \"未找到 Brave 卸载程序，可能已被手动移除\"",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://brave-browser-downloads.s3.brave.com/latest/release-windows-x64.version",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup32.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetupArm64.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
     }
-  }
 }
