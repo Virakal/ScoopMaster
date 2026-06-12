@@ -15,17 +15,13 @@
 	},
 	"bin": ["pnpm.exe", ["pnpm.exe", "pnpx", "dlx"]],
 	"post_install": [
-		"pnpm config set cacheDir \"$($persist_dir -replace '\\\\', '/')/cache\"",
-		"pnpm config set globalBinDir \"$($persist_dir -replace '\\\\', '/')/bin\"",
-		"pnpm config set globalDir \"$($persist_dir -replace '\\\\', '/')/global\"",
-		"pnpm config set stateDir \"$($persist_dir -replace '\\\\', '/')/state\"",
-		"pnpm config set storeDir \"$($persist_dir -replace '\\\\', '/')/store\""
+		"pnpm config set enable-global-virtual-store true",
+		"pnpm setup"
 	],
-	"env_add_path": "$persist_dir\\bin",
+	"env_add_path": "bin",
 	"env_set": {
 		"PNPM_HOME": "$persist_dir"
 	},
-	"persist": ["bin", "cache", "global", "state", "store"],
 	"checkver": {
 		"url": "https://api.github.com/repos/pnpm/pnpm/releases",
 		"regex": "pnpm (10[.][0-9.]+)"
