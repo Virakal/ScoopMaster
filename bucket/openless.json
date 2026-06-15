@@ -22,6 +22,18 @@
             "OpenLess"
         ]
     ],
+    "post_install": [
+        "$dll64 = \"$dir\\windows-ime\\x64\\OpenLessIme.dll\"",
+        "$dll86 = \"$dir\\windows-ime\\x86\\OpenLessIme.dll\"",
+        "$cmd = \"regsvr32.exe /s `\\`\"$dll64`\\`\"; & `\\`\"$env:SystemRoot\\SysWOW64\\regsvr32.exe`\\`\" /s `\\`\"$dll86`\\`\"\"",
+        "Start-Process powershell -ArgumentList \"-NoProfile -Command `\"$cmd`\"\" -Verb RunAs -Wait"
+    ],
+    "pre_uninstall": [
+        "$dll64 = \"$dir\\windows-ime\\x64\\OpenLessIme.dll\"",
+        "$dll86 = \"$dir\\windows-ime\\x86\\OpenLessIme.dll\"",
+        "$cmd = \"regsvr32.exe /s /u `\\`\"$dll64`\\`\"; & `\\`\"$env:SystemRoot\\SysWOW64\\regsvr32.exe`\\`\" /s /u `\\`\"$dll86`\\`\"\"",
+        "Start-Process powershell -ArgumentList \"-NoProfile -Command `\"$cmd`\"\" -Verb RunAs -Wait"
+    ],
     "checkver": {
         "github": "https://github.com/Open-Less/openless",
         "regex": "tag/v([\\d.]+)-tauri"
