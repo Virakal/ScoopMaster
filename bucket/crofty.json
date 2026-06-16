@@ -1,19 +1,19 @@
 {
-    "version": "0.4.0",
+    "version": "0.5.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nsys-nakamoto/crofty/releases/download/v0.4.0/crofty_0.4.0_windows_amd64.zip",
+            "url": "https://github.com/nsys-nakamoto/crofty/releases/download/v0.5.0/crofty_0.5.0_windows_amd64.zip",
             "bin": [
                 "crofty.exe"
             ],
-            "hash": "8741529d699231602619a7a4d264c512a2e88bea7158b9398de902b2c433b327"
+            "hash": "0b2dfa756201cce3073829efc9551bc617970dcb96ef1c205019395826ccc86f"
         },
         "arm64": {
-            "url": "https://github.com/nsys-nakamoto/crofty/releases/download/v0.4.0/crofty_0.4.0_windows_arm64.zip",
+            "url": "https://github.com/nsys-nakamoto/crofty/releases/download/v0.5.0/crofty_0.5.0_windows_arm64.zip",
             "bin": [
                 "crofty.exe"
             ],
-            "hash": "5d412f873e463b3802e61e034599e531bf915510bd9d004aa155894f8dc1cbb9"
+            "hash": "45c1dfeba0927e0195e00eefa2affde7b3ef797d26ce1a3dbc820a25991cb510"
         }
     },
     "homepage": "https://crofty.site",
