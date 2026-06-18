@@ -1,0 +1,22 @@
+{
+    "version": "1.0.6",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yeisme/taskbridge/releases/download/v1.0.6/taskbridge_Windows_x86_64.zip",
+            "bin": [
+                "taskbridge.exe"
+            ],
+            "hash": "6566c8d7e1d50754e8438fdae063715b19a7a3ae7a8df35944d798c58c1dfd7d"
+        },
+        "arm64": {
+            "url": "https://github.com/yeisme/taskbridge/releases/download/v1.0.6/taskbridge_Windows_arm64.zip",
+            "bin": [
+                "taskbridge.exe"
+            ],
+            "hash": "5d0400989378ddaa6876d6d83ffba2a053e5fc14b7321820845cd6bf73ac0156"
+        }
+    },
+    "homepage": "https://github.com/yeisme/taskbridge",
+    "license": "MIT",
+    "description": "TaskBridge CLI for AI-assisted multi-provider task workflows."
+}

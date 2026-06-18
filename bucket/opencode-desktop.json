@@ -13,12 +13,9 @@
             "hash": "1a19f2059eeab0d56c338b8301eba26dcec6461b901105b7c72e420e7d165640"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction Ignore",
-    "bin": [
-        [
-            "opencode-cli.exe",
-            "opencode"
-        ]
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-*.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction Ignore"
     ],
     "shortcuts": [
         [
