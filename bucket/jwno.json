@@ -30,7 +30,9 @@
         ]
     ],
     "persist": "jwno-config.janet",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/agent-kilo/jwno"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
