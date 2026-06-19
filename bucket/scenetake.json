@@ -1,0 +1,28 @@
+{
+    "description": "Run a YAML scenario and record terminal output as asciinema v3 .cast and animated .svg without installing asciinema",
+    "version": "0.4.0",
+    "homepage": "https://github.com/guitarrapc/scenetake",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/guitarrapc/scenetake/releases/download/v0.4.0/scenetake-win-amd64.zip",
+            "hash": "8db331179d65d68cd9924368f3bd7027a70c833fab1627691a9a1c409f1a3fc0"
+        },
+        "arm64": {
+            "url": "https://github.com/guitarrapc/scenetake/releases/download/v0.4.0/scenetake-win-arm64.zip",
+            "hash": "c3a80b38bab35016db5098598e89aca9661e61e2fb6659e8134377203c9d83d6"
+        }
+    },
+    "bin": "scenetake.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/guitarrapc/scenetake/releases/download/v$version/scenetake-win-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/guitarrapc/scenetake/releases/download/v$version/scenetake-win-arm64.zip"
+            }
+        }
+    }
+}
