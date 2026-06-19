@@ -1,26 +1,26 @@
 {
-    "version": "0.4.0",
+    "version": "0.5.0",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.4.0/chroncal_0.4.0_windows_386.zip",
+            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.5.0/chroncal_0.5.0_windows_386.zip",
             "bin": [
                 "chroncal.exe"
             ],
-            "hash": "f492f4d6650a6fd45371156a32bde1ac29985bdc0fb06357da531e8de20bf015"
+            "hash": "275e5d147e795eba122e7e3156ca057f229f756ec177946095b76078d5a057ff"
         },
         "64bit": {
-            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.4.0/chroncal_0.4.0_windows_amd64.zip",
+            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.5.0/chroncal_0.5.0_windows_amd64.zip",
             "bin": [
                 "chroncal.exe"
             ],
-            "hash": "603e240e6d558198cf28d4662d1dfa0f3cf8a1e8a10762188ba3b10e267a95e4"
+            "hash": "92ddd4860182845e1c4434df64a25d14bcbb159201d9bf95fb698110fd529438"
         },
         "arm64": {
-            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.4.0/chroncal_0.4.0_windows_arm64.zip",
+            "url": "https://github.com/DouglasdeMoura/chroncal/releases/download/v0.5.0/chroncal_0.5.0_windows_arm64.zip",
             "bin": [
                 "chroncal.exe"
             ],
-            "hash": "cb45c180ad0a9cb682698b5669daeb81c32f48f4767f19bfd3cb1e635b9ed9d6"
+            "hash": "81be7f16f75dfebc46953f9d68ddb66b053c62988027027e47299d22725245bf"
         }
     },
     "homepage": "https://github.com/DouglasdeMoura/chroncal",
