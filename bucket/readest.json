@@ -1,28 +1,46 @@
 {
     "version": "0.11.10",
-    "description": "An open-source ebook reader designed for immersive and deep reading experiences.",
-    "homepage": "https://github.com/chrox/readest",
-    "license": "AGPL-3.0-only",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
+    "homepage": "https://readest.com/",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/readest/readest/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chrox/readest/releases/download/v0.11.10/Readest_0.11.10_x64-setup.exe#/dl.7z",
-            "hash": "40d9f24a5e276399b1dadea9bc791492a6ee24c8a3c21660d3afea85b7bd0994"
+            "url": "https://github.com/readest/readest/releases/download/v0.11.10/Readest_0.11.10_x64-portable.exe#/Readest.exe",
+            "hash": "a008fa7c00a98b4be804cfa744256e4c433e72cb48db43d084aeb517059a0691"
+        },
+        "arm64": {
+            "url": "https://github.com/readest/readest/releases/download/v0.11.10/Readest_0.11.10_arm64-portable.exe#/Readest.exe",
+            "hash": "fe75205184e21d9d4bc40187af26c2f920729621a915f0b4a5d72df340f8c0e6"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$*\" -Force -Recurse",
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\settings.json\")) {",
+        "    Set-Content -Path \"$dir\\settings.json\" -Value '{\"autoCheckUpdates\":false}' -Encoding ASCII",
+        "}"
+    ],
     "shortcuts": [
         [
             "Readest.exe",
             "Readest"
         ]
     ],
+    "persist": [
+        "Readest",
+        "settings.json"
+    ],
     "checkver": {
-        "github": "https://github.com/chrox/readest"
+        "github": "https://github.com/readest/readest"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/chrox/readest/releases/download/v$version/Readest_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
             }
         }
     }
