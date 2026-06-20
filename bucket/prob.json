@@ -23,7 +23,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://stups.hhu-hosting.de/downloads/prob/tcltk/releases/",
+        "url": "https://stups.hhu-hosting.de/downloads/prob/tcltk/releases/?C=M;O=D",
         "regex": "href=\"?(\\d+(?:\\.\\d+)+)/"
     },
     "autoupdate": {
