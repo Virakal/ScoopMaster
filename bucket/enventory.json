@@ -1,12 +1,19 @@
 {
-    "version": "0.0.26",
+    "version": "0.0.27",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bbkane/enventory/releases/download/v0.0.26/enventory_0.0.26_windows_amd64.tar.gz",
+            "url": "https://github.com/bbkane/enventory/releases/download/v0.0.27/enventory_0.0.27_windows_amd64.tar.gz",
             "bin": [
                 "enventory.exe"
             ],
-            "hash": "ad996af3c200925af967bf2b8808d5964ffcbea5c00ee9103bf46539bc6b38b4"
+            "hash": "3751ca98ce1a15a7fe015bb1f4c389a737030e360ef3d8ab8f7fcd9c019019aa"
+        },
+        "arm64": {
+            "url": "https://github.com/bbkane/enventory/releases/download/v0.0.27/enventory_0.0.27_windows_arm64.tar.gz",
+            "bin": [
+                "enventory.exe"
+            ],
+            "hash": "f6dbbaa72411baa6c546302a360a17a46f859fd20d17db4382856847019fade5"
         }
     },
     "homepage": "https://github.com/bbkane/enventory",
