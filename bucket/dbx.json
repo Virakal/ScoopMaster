@@ -1,39 +1,26 @@
 {
     "version": "0.5.36",
-    "description": "Open-source database management tool",
+    "description": "Open-source, lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server",
     "homepage": "https://github.com/t8y2/dbx",
-    "license": "Apache-2.0",
+    "license": "Freeware",
+    "notes": "config location: C:\\Users\\<your username>\\AppData\\Local\\com.dbx.app - https://github.com/vicrack/scoop-bucket/blob/master/bucket/dbx.json https://github.com/vicrack/scoop-bucket",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.36/DBX_0.5.36_x64-setup.exe",
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.36/dbx_0.5.36_x64-setup.exe#/dl.7z",
             "hash": "f1cd5d30c349ef744eefc46d8ce860aff884e230105f0e61e1d1ff73c0c8bf7c"
-        },
-        "arm64": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.36/DBX_0.5.36_arm64-setup.exe",
-            "hash": "2a018001e9cfd36ad184b19646b25b3133f90d617086b1c87174f97622094e56"
         }
     },
-    "innosetup": false,
-    "installer": {
-        "args": [
-            "/S",
-            "/D=$dir"
+    "shortcuts": [
+        [
+            "dbx.exe",
+            "Dbx"
         ]
-    },
-    "uninstaller": {
-        "file": "uninstall.exe",
-        "args": "/S"
-    },
-    "checkver": {
-        "github": "https://github.com/t8y2/dbx"
-    },
+    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-setup.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_arm64-setup.exe"
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/dbx_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
