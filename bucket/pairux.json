@@ -1,1 +1,32 @@
-{"version":"0.8.0","description":"Collaborative screen sharing with remote control","homepage":"https://pairux.com","license":"MIT","url":"https://github.com/profullstack/pairux.com/releases/download/v0.8.0/PairUX.Setup.0.8.0.exe","hash":"a114367d89a8f39279706b2d9fb8f6839b13f0956541911492d93c2a370dcf9a","installer":{"args":["/S","/D=$dir"]},"uninstaller":{"file":"$dir\\Uninstall PairUX.exe","args":["/S"]},"shortcuts":[["PairUX.exe","PairUX"]],"checkver":{"github":"https://github.com/profullstack/pairux.com"},"autoupdate":{"url":"https://github.com/profullstack/pairux.com/releases/download/v$version/PairUX-$version-x64.exe"},"from":"https://github.com/profullstack/scoop-pairux"}
+{
+  "version": "0.8.2",
+  "description": "Collaborative screen sharing with remote control",
+  "homepage": "https://pairux.com",
+  "license": "MIT",
+  "url": "https://github.com/profullstack/pairux.com/releases/download/v0.8.2/PairUX.Setup.0.8.2.exe",
+  "hash": "59f1c4046bb24b6d237ee409d1424e90682461b682eb156722bd951539295fe3",
+  "installer": {
+    "args": [
+      "/S",
+      "/D=$dir"
+    ]
+  },
+  "uninstaller": {
+    "file": "$dir\\Uninstall PairUX.exe",
+    "args": [
+      "/S"
+    ]
+  },
+  "shortcuts": [
+    [
+      "PairUX.exe",
+      "PairUX"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/profullstack/pairux.com"
+  },
+  "autoupdate": {
+    "url": "https://github.com/profullstack/pairux.com/releases/download/v$version/PairUX-$version-x64.exe"
+  }
+}
