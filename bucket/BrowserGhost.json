@@ -1,13 +1,1 @@
-{
-    "version": "1",
-    "description": "抓取浏览器密码的工具(Scoop bucket by arch3rpro)",
-    "homepage": "https://github.com/QAX-A-Team/BrowserGhost",
-    "license": "unkown",
-    "url": "https://github.com/QAX-A-Team/BrowserGhost/releases/download/1/BrowserGhost.exe",
-    "hash": "ce0ae1416a4841144e8a377eed2a11fef988b08042606bac8121b4a4abd5391e",
-    "bin": "BrowserGhost.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/QAX-A-Team/BrowserGhost/releases/download/$version/BrowserGhost.exe"
-    }
-}
+{"version":"1","description":"BrowserGhost - 一款抓取浏览器密码的安全测试工具","homepage":"https://github.com/QAX-A-Team/BrowserGhost","license":"Unknown","notes":["警告：本工具仅用于安全研究和授权测试！","支持的浏览器：","- Chrome/Chrome Beta/Chromium","- Firefox","- Opera","- Edge","使用文档：https://github.com/QAX-A-Team/BrowserGhost#readme"],"architecture":{"64bit":{"url":"https://github.com/QAX-A-Team/BrowserGhost/releases/download/1/BrowserGhost.exe","hash":"ce0ae1416a4841144e8a377eed2a11fef988b08042606bac8121b4a4abd5391e"}},"bin":"BrowserGhost.exe","checkver":{"github":"https://github.com/QAX-A-Team/BrowserGhost","regex":"releases/tag/([\\d.]+)"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/QAX-A-Team/BrowserGhost/releases/download/$version/BrowserGhost.exe"}}},"from":"https://github.com/kenyon-wong/ktools"}
