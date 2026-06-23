@@ -1,12 +1,12 @@
 {
-    "version": "0.1.5",
+    "version": "0.1.6",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/csalwin/homebrew-tap/releases/download/v0.1.5/sitehost-tui_0.1.5_windows_amd64.zip",
+            "url": "https://github.com/csalwin/homebrew-tap/releases/download/v0.1.6/sitehost-tui_0.1.6_windows_amd64.zip",
             "bin": [
                 "sitehost-tui.exe"
             ],
-            "hash": "6c33e28a750628cf3ef0dcc575af5032b89634aab7c1e7eb0d62230fcef340db"
+            "hash": "fec485900ee7bd732fc7edce4332f664525b85c0463f8ed6a4460abb2c883c43"
         }
     },
     "homepage": "https://github.com/csalwin/Sithost-tui-go-port",
