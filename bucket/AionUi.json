@@ -1,29 +1,29 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.1.22",
-    "description": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more",
+    "description": "Free, local, open-source 24/7 AI Cowork workspace for Gemini, Claude, Codex, OpenCode, Qwen Code, and more",
     "homepage": "https://github.com/iOfficeAI/AionUi",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.22/AionUi-2.1.22-win-x64.exe#/dl.7z",
-            "hash": "e7bd955ba6ec6eefbc2e01b1523f7bb6f7a258833f46625fb5ef7aaebeaaa73f"
+            "hash": "e7bd955ba6ec6eefbc2e01b1523f7bb6f7a258833f46625fb5ef7aaebeaaa73f",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+            }
         },
         "arm64": {
             "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.22/AionUi-2.1.22-win-arm64.exe#/dl.7z",
-            "hash": "659e9f0e3d14a6bb8677345c9665211eae16f84435b5d16544df9872b4ac9780"
+            "hash": "659e9f0e3d14a6bb8677345c9665211eae16f84435b5d16544df9872b4ac9780",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-arm64.7z\" \"$dir\""
+            }
         }
     },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "AionUi.exe",
             "AionUi"
-        ]
-    ],
-    "bin": [
-        [
-            "AionUi.exe",
-            "aionui"
         ]
     ],
     "checkver": "github",

@@ -1,1 +1,28 @@
-{"version":"0.13.3","description":"A WYSIWYG Markdown editor with native AI. Fully open source. Free to use. Your data stays local.","homepage":"https://editor.markra.app/","license":"AGPL-3.0","architecture":{"64bit":{"url":"https://github.com/murongg/markra/releases/download/v0.13.3/Markra_0.13.3_windows_x64_setup.exe#dl.7z","hash":"a170d550f63d3293c07301b595b88516a5ebc57bdc0507bce464b95b9b9f8c02"}},"post_install":"Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse","bin":"markra.exe","shortcuts":[["markra.exe","Markra"]],"checkver":{"github":"https://github.com/murongg/markra"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/murongg/markra/releases/download/v$version/Markra_$version_windows_x64_setup.exe#dl.7z"}}},"from":"https://github.com/kkzzhizhou/scoop-apps"}
+{
+    "version": "0.14.0",
+    "description": "A WYSIWYG Markdown editor with native AI. Fully open source. Free to use. Your data stays local.",
+    "homepage": "https://github.com/murongg/markra",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/murongg/markra/releases/download/v0.14.0/Markra_0.14.0_windows_x64_portable.zip",
+            "hash": "437a6bd0b1f8e8a1bb39bbafeae37c985f22dc1b4e1fd54b74149f58f98193ca"
+        }
+    },
+    "extract_dir": "Markra",
+    "bin": "Markra.exe",
+    "shortcuts": [
+        [
+            "Markra.exe",
+            "Markra"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/murongg/markra/releases/download/v$version/Markra_$version_windows_x64_portable.zip"
+            }
+        }
+    }
+}
