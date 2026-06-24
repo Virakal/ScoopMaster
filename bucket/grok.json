@@ -1,16 +1,16 @@
 {
-    "version": "0.2.60",
+    "version": "0.2.63",
     "description": "xAI's coding agent and CLI for terminal-based software development.",
     "homepage": "https://x.ai/cli",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://x.ai/cli/grok-0.2.60-windows-x86_64.exe#/grok.exe",
-            "hash": "7c0da76034674d4723578ecac70e99d422a266038102891265cc2d4efb2f0a13"
+            "url": "https://x.ai/cli/grok-0.2.63-windows-x86_64.exe#/grok.exe",
+            "hash": "54a002eb79729101c17f47e8f540f5c751cf50041dc53bfa20321920e679c062"
         },
         "arm64": {
-            "url": "https://x.ai/cli/grok-0.2.60-windows-aarch64.exe#/grok.exe",
-            "hash": "0d0032b2641837b0e0a0ac190be00348a06563a2913abce171f6124c4644c519"
+            "url": "https://x.ai/cli/grok-0.2.63-windows-aarch64.exe#/grok.exe",
+            "hash": "2e758c51bde49a104e7667853ca6158fa76ae6f4c0e39afe93b04a51504281e7"
         }
     },
     "bin": [
