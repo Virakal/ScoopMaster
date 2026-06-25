@@ -1,1 +1,24 @@
-{"version":"1.0.30","description":"Qoder AI CLI tool - Terminal-based AI assistant for code development.","homepage":"https://qoder.com/cli","license":"Proprietary","architecture":{"64bit":{"url":"https://download.qoder.com/qodercli/releases/1.0.30/qodercli-windows-x64.zip","hash":"ccbaa030b1619678c0ad93f2bf55ca94012539f09f338cf361138eb84562ef55"}},"bin":"qodercli.exe","checkver":{"url":"https://download.qoder.com/qodercli/channels/manifest.json","regex":"/releases/([\\d.]+)/qodercli-windows"},"autoupdate":{"architecture":{"64bit":{"url":"https://download.qoder.com/qodercli/releases/$version/qodercli-windows-x64.zip"}}},"from":"https://github.com/hoilc/scoop-lemon"}
+{
+    "version": "1.0.30",
+    "description": "Qoder AI CLI tool - Terminal-based AI assistant for code development.",
+    "homepage": "https://qoder.com/cli",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.qoder.com/qodercli/releases/1.0.30/qodercli-windows-x64.zip",
+            "hash": "ccbaa030b1619678c0ad93f2bf55ca94012539f09f338cf361138eb84562ef55"
+        }
+    },
+    "bin": "qodercli.exe",
+    "checkver": {
+        "url": "https://download.qoder.com/qodercli/channels/manifest.json",
+        "regex": "/releases/([\\d.]+)/qodercli-windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.qoder.com/qodercli/releases/$version/qodercli-windows-x64.zip"
+            }
+        }
+    }
+}

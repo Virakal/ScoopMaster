@@ -1,12 +1,12 @@
 {
-    "version": "0.3.1",
+    "version": "0.3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cerberauth/stubidp/releases/download/v0.3.1/stubidp_Windows_x86_64.zip",
+            "url": "https://github.com/cerberauth/stubidp/releases/download/v0.3.0/stubidp_Windows_x86_64.zip",
             "bin": [
                 "stubidp.exe"
             ],
-            "hash": "234f357dd48682ed870502575ce9b77ffc5216a1a69017b292928255e9b81149"
+            "hash": "4f4f79908dc7b776fc60ec122a7cdcbca977daec19562dd7342a3be80b4e92a2"
         }
     },
     "homepage": "https://www.cerberauth.com/docs/stubidp/",
