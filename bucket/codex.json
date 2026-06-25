@@ -1,61 +1,23 @@
 {
-    "version": "0.142.1",
-    "description": "OpenAI's Codex AI coding assistant",
-    "homepage": "https://github.com/openai/codex",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": [
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-x86_64-pc-windows-msvc.exe#/codex.exe",
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-command-runner-x86_64-pc-windows-msvc.exe#/codex-command-runner.exe",
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-windows-sandbox-setup-x86_64-pc-windows-msvc.exe#/codex-windows-sandbox-setup.exe"
-            ],
-            "hash": [
-                "0c363b5badffe2f04071da22867ba9532348770bb780d525c390c4a87977acda",
-                "294fa4368d36dd3403a10f3833dd51ddf22d4e5db7f57855033190d815a00b06",
-                "b324f24f923d6d3f20fbd7f050b1f8f11cb487ccc1682f669f7ab7c689b89325"
-            ]
-        },
-        "arm64": {
-            "url": [
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-aarch64-pc-windows-msvc.exe#/codex.exe",
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-command-runner-aarch64-pc-windows-msvc.exe#/codex-command-runner.exe",
-                "https://github.com/openai/codex/releases/download/rust-v0.142.1/codex-windows-sandbox-setup-aarch64-pc-windows-msvc.exe#/codex-windows-sandbox-setup.exe"
-            ],
-            "hash": [
-                "3bdd0e2d97f7bd9c463c2bf774289fa3d5e6a238484914e0bc7e4c11f07b4e14",
-                "4eae97b754c7182c864e643f4f4914236abe601259f249b4690de689bada0c40",
-                "2a91bbc4bc52b24a8768098673a81b1dde879b7b454db36c9f6b9f9a788b49d7"
-            ]
-        }
-    },
-    "bin": [
-        [
-            "codex.exe",
-            "codex"
-        ]
-    ],
-    "checkver": {
-        "github": "https://api.github.com/repos/openai/codex/releases",
-        "jsonpath": "$..tag_name",
-        "regex": "rust-v(\\d+\\.\\d+\\.\\d+)(?![^\\d]*alpha|[^\\d]*beta|[^\\d]*rc|[^\\d]*preview)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-x86_64-pc-windows-msvc.exe#/codex.exe",
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-command-runner-x86_64-pc-windows-msvc.exe#/codex-command-runner.exe",
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-windows-sandbox-setup-x86_64-pc-windows-msvc.exe#/codex-windows-sandbox-setup.exe"
-                ]
-            },
-            "arm64": {
-                "url": [
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-aarch64-pc-windows-msvc.exe#/codex.exe",
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-command-runner-aarch64-pc-windows-msvc.exe#/codex-command-runner.exe",
-                    "https://github.com/openai/codex/releases/download/rust-v$version/codex-windows-sandbox-setup-aarch64-pc-windows-msvc.exe#/codex-windows-sandbox-setup.exe"
-                ]
-            }
-        }
-    }
+	"version": "0.142.2",
+	"description": "OpenAI's Codex AI coding assistant",
+	"homepage": "https://github.com/openai/codex",
+	"license": "Apache-2.0",
+	"url": "http://www.gstatic.com/generate_204#/dummy",
+	"hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+	"bin": [["node_modules\\.bin\\codex.ps1", "codex"]],
+	"installer": {
+		"script": "pushd $original_dir; pnpm add @openai/codex@0.142.2; popd;"
+	},
+	"post_uninstall": "pnpm store prune",
+	"depends": ["pnpm", "nodejs"],
+	"checkver": {
+		"url": "https://registry.npmjs.org/@openai/codex/latest",
+		"jsonpath": "$.version"
+	},
+	"autoupdate": {
+		"installer": {
+			"script": "pushd $original_dir; pnpm add @openai/codex@$version; popd;"
+		}
+	}
 }
