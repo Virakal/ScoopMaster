@@ -1,10 +1,10 @@
 {
-    "version": "2026.06.24.055548",
+    "version": "2026.06.26.165556",
     "homepage": "https://github.com/amzxyz/RIME-LMDG",
     "description": "基于32GB超大规模语料的RIME中文语法模型",
     "license": "CC-BY-4.0",
     "url": "https://github.com/amzxyz/RIME-LMDG/releases/download/LTS/wanxiang-lts-zh-hans.gram",
-    "hash": "ed27f0cf3816cf8191350eaa2475b7ab571d0447ffb4391599891421b191a160",
+    "hash": "e178d9493e0f4ba4fabd3280338ad06e0934a89b5ac1667fbc7db7c5c2cd003a",
     "installer": {
         "script": [
             "$weaselRegPath = \"HKLM:\\SOFTWARE\\WOW6432Node\\Rime\\Weasel\"",
