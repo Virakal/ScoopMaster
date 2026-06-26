@@ -1,9 +1,9 @@
 {
-    "version": "1.3",
+    "version": "1.4",
     "description": "LCEDA 3D model downloader.",
     "homepage": "https://github.com/seishinkouki/lceda_step_downloader",
-    "url": "https://github.com/seishinkouki/lceda_step_downloader/releases/download/v1.3/win-x86.zip",
-    "hash": "12175b7b793b6a649f9c812ec62bd6f8418f75ef19e24a404054f6388e6cc5a5",
+    "url": "https://github.com/seishinkouki/lceda_step_downloader/releases/download/v1.4/win-x86.zip",
+    "hash": "eee64845c0d1b881faa037961ce8aa489f6e91f3b2637cb3f3ccbda8c9117ea9",
     "pre_install": "if (!(Test-Path \"$persist_dir\\step\")) { New-Item -Path \"$dir\\step\" -ItemType Directory | Out-Null }",
     "shortcuts": [
         [
