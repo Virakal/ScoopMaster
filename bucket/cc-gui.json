@@ -1,5 +1,5 @@
 {
-    "version": "0.5.12",
+    "version": "0.5.14",
     "description": "Next-generation VibeCoding editor powered by Claude Code, Codex, and more, built with Tauri",
     "homepage": "https://github.com/zhukunpenglinyutong/desktop-cc-gui",
     "license": "AGPL-3.0-only",
@@ -11,8 +11,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhukunpenglinyutong/desktop-cc-gui/releases/download/v0.5.12/ccgui_0.5.12_x64-setup.exe#/dl.7z",
-            "hash": "a1cfc704378b3260a5d850a0c44ed0ecaafe132848ee9cd51f125492f2e39cb8"
+            "url": "https://github.com/zhukunpenglinyutong/desktop-cc-gui/releases/download/v0.5.14/ccgui_0.5.14_x64-setup.exe#/dl.7z",
+            "hash": "8cd67aad108a132eed26dbfb297e90cba031f2c4e85fdbed8f395abcb04b3cc8"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
