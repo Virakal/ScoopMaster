@@ -1,16 +1,16 @@
 {
-    "version": "2.23",
+    "version": "2.24",
     "description": "wfview is open-source software for the control of modern Icom radios",
     "homepage": "https://wfview.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://wfview.org/download/windows-x64-release-v2-23/?wpdmdl=1810/#dl.exe",
-            "hash": "b1658c7803cd9d2ff6f67c224777e2bca8fabb17316ded8b46733c1b282822de"
+            "url": "https://wfview.org/download/windows-x64-release-v2-24/?wpdmdl=1810/#dl.exe",
+            "hash": "b912b3841e0d3f510f03b343122049025f39abef3eb1fbd90f9394fd7411dec0"
         },
         "32bit": {
-            "url": "https://wfview.org/download/windows-x86-release-v2-23/?wpdmdl=1812/#dl.exe",
-            "hash": "a0c7bbdf9fef2586bf51ef8c320a0def36336410b06208df55331990be67b0d7"
+            "url": "https://wfview.org/download/windows-x86-release-v2-24/?wpdmdl=1812/#dl.exe",
+            "hash": "24a6c9aa189a6e244e6bb199e6104962ac98d2cc0ae5dd5eb2e3b4bce1ca972b"
         }
     },
     "pre_install": "(Get-ChildItem \"$dir\\$fname\")[0] | Rename-Item -NewName \"$dir\\installer.exe\"",
