@@ -1,17 +1,20 @@
 {
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Terminal multiplexer with a tmux-style CLI, daemon runtime, and native Windows support.",
   "homepage": "https://rmux.io",
   "license": "MIT OR Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Helvesec/rmux/releases/download/v0.7.0/rmux-0.7.0-windows-x86_64.zip",
-      "hash": "962b940ec391a2ec90f99c98379c9aa56828981e3801e97fc719e66a8cf0f32f",
-      "extract_dir": "rmux-0.7.0-windows-x86_64"
+      "url": "https://github.com/Helvesec/rmux/releases/download/v0.7.1/rmux-0.7.1-windows-x86_64.zip",
+      "hash": "4418d9e1e26473acce43465526e3dd34dcdca0a9d9fb7573232123f9c6702991",
+      "extract_dir": "rmux-0.7.1-windows-x86_64"
     }
   },
   "depends": "vcredist2022",
-  "bin": "rmux.exe",
+  "bin": [
+    "rmux.exe",
+    "rmux-daemon.exe"
+  ],
   "checkver": {
     "github": "https://github.com/Helvesec/rmux"
   },
