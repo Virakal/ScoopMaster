@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-    "version": "0.45.12",
+    "version": "0.45.16",
     "description": "A drag-and-drop CAD package for beginners.",
     "homepage": "https://cadoodlecad.com/",
     "license": "CC0-1.0",
@@ -8,11 +8,11 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/CommonWealthRobotics/CaDoodle-Application/releases/download/0.45.12/CaDoodle-Application.jar",
-                "https://github.com/CommonWealthRobotics/CaDoodle-Application/releases/download/0.45.12/jvm.json"
+                "https://github.com/CommonWealthRobotics/CaDoodle-Application/releases/download/0.45.16/CaDoodle-Application.jar",
+                "https://github.com/CommonWealthRobotics/CaDoodle-Application/releases/download/0.45.16/jvm.json"
             ],
             "hash": [
-                "a556985a77d78182c82cdbcaba9bbd6c35847e1e15d586819df7577549c26222",
+                "44e9b76db55408e32769e375ee6d9fdadd8e3ddcb7790472481223494758dde4",
                 "3abe7d696d1ff5ab951f3ed731c743aa0f974a0168b78bcec303fbc2e9ca572f"
             ]
         }
