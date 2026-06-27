@@ -25,10 +25,7 @@
         "& \"$bucketsdir\\\\code\\\\scripts\\\\unlink.ps1\" $codex_dir"
     ],
     "persist": ["data"],
-    "checkver": {
-        "github": "https://github.com/openai/codex",
-        "regex": "rust-v([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
