@@ -1,5 +1,5 @@
 {
-    "version": "202606252312",
+    "version": "202606262300",
     "description": "🦄 🎃 👻 V2Ray 路由规则文件加强版，可代替 V2Ray 官方 geoip.dat 和 geosite.dat，适用于 V2Ray、Xray-core、mihomo(Clash-Meta)、hysteria、Trojan-Go 和 leaf。Enhanced edition of V2Ray rules dat files, applicable to V2Ray, Xray-core, mihomo(Clash-Meta), hysteria, Trojan-Go and leaf. ",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
     "license": "GPL-3.0-or-later",
@@ -12,12 +12,12 @@
     },
     "depends": "extras/v2rayn",
     "url": [
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202606252312/geoip.dat",
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202606252312/geosite.dat"
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202606262300/geoip.dat",
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202606262300/geosite.dat"
     ],
     "hash": [
         "e551b66e9300a98ecc94a5dc8c86a3973bf7033138b0fa61eb0638419ce50057",
-        "3c2179133caab3f70279d36876290032c5d9fcfcbb76420fa0bf401b976f6085"
+        "1417d29aa40e07fa3cd92e730e8d81921a78b8e573849ca2a4b8199c7c1d3b2b"
     ],
     "installer": {
         "script": [
