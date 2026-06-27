@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://codeberg.org/forgejo-contrib/forgejo-cli/releases/download/v$version/forgejo-cli-x86_64-windows.zip",
+                "url": "https://codeberg.org/forgejo-contrib/forgejo-cli/releases/download/v$version/forgejo-cli-x86_64-windows.zip"
             }
         },
         "hash": {
