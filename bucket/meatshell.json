@@ -1,5 +1,5 @@
 {
-    "version": "0.4.20",
+    "version": "0.5.0",
     "description": "A lightweight FinalShell-style SSH/terminal client written in Rust + Slint",
     "homepage": "https://github.com/jeff141/meatshell",
     "license": "MIT OR Apache-2.0",
@@ -10,9 +10,9 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jeff141/meatshell/releases/download/v0.4.20/meatshell-v0.4.20-windows-x86_64.zip",
-            "hash": "66790f99e8129aa4634fe279ca8504afc358df4195d82d244a57baa2965a8880",
-            "extract_dir": "meatshell-v0.4.20-windows-x86_64"
+            "url": "https://github.com/jeff141/meatshell/releases/download/v0.5.0/meatshell-v0.5.0-windows-x86_64.zip",
+            "hash": "6fe7ca767496e1efaae75cf47eb75aa4aa946124b21836576b33a160d4fe4fbe",
+            "extract_dir": "meatshell-v0.5.0-windows-x86_64"
         }
     },
     "bin": "meatshell.exe",
