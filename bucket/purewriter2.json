@@ -1,12 +1,12 @@
 {
-    "version": "3.1.0",
+    "version": "3.1.1",
     "description": "Pure Writer Desktop",
     "homepage": "https://writer.drakeet.com/desktop2",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://kuromi.drakeet.cn/PureWriter2-3.1.0-Windows-x64.exe#/purewriter.exe",
-            "hash": "455270e8d87ae83b8e7850a4f23b16e23a1d5fa5a80cceba10ce88d4613739eb"
+            "url": "https://kuromi.drakeet.cn/PureWriter2-3.1.1-Windows-x64.exe#/purewriter.exe",
+            "hash": "2f3cb770d974f38f3bbd0d84734893809fb2991747d71a2ef05174e4b5402d62"
         }
     },
     "pre_install": [
