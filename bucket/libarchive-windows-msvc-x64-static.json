@@ -2,11 +2,11 @@
     "description": "Multi-format archive and compression library (Windows, MSVC, x64, static)",
     "homepage": "https://www.libarchive.org/",
     "license": "BSD-2-Clause",
-    "version": "3.8.7",
+    "version": "3.8.8",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/li-ruijie/libarchive/releases/download/v3.8.7/libarchive-v3.8.7-windows-msvc-x64-static.zip",
-            "hash": "d94eb9aec40bede93f2130ce35c4699f0791e205ef7b7e871fe971092449edbe"
+            "url": "https://github.com/li-ruijie/libarchive/releases/download/v3.8.8/libarchive-v3.8.8-windows-msvc-x64-static.zip",
+            "hash": "c14aee2bc1b6185a424dcb1d4b5a24aeebbb3251ce21e9d9fabff03f24cd7491"
         }
     },
     "bin": [
