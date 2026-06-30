@@ -1,1 +1,30 @@
-{"version":"0.12.62.112","description":"High-performance anime client. Experience seamless anime streaming across Android, Linux, Windows, and iOS.","homepage":"https://github.com/Anisurge/App","license":"Unknown","architecture":{"64bit":{"url":"https://github.com/Anisurge/App/releases/download/v0.12.62/Anisurge-0.12.62.112-win-x86_64-portable.zip","hash":"c78c7d476cb151c6396e6028391f1c7e8a038196a31e39cadd419fa531e4a110","extract_dir":"Anisurge"}},"shortcuts":[["Anisurge.exe","Anisurge"]],"checkver":{"github":"https://github.com/Anisurge/App","regex":"Anisurge-(([\\d.]+)\\.\\d+)-win-x86_64-portable\\.zip"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/Anisurge/App/releases/download/v$match2/Anisurge-$version-win-x86_64-portable.zip"}}},"from":"https://github.com/fahim-ahmed05/scoop-bucket"}
+{
+    "version": "0.12.62.112",
+    "description": "High-performance anime client. Experience seamless anime streaming across Android, Linux, Windows, and iOS.",
+    "homepage": "https://github.com/Anisurge/App",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Anisurge/App/releases/download/v0.12.62/Anisurge-0.12.62.112-win-x86_64-portable.zip",
+            "hash": "c78c7d476cb151c6396e6028391f1c7e8a038196a31e39cadd419fa531e4a110",
+            "extract_dir": "Anisurge"
+        }
+    },
+    "shortcuts": [
+        [
+            "Anisurge.exe",
+            "Anisurge"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Anisurge/App",
+        "regex": "Anisurge-(([\\d.]+)\\.\\d+)-win-x86_64-portable\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Anisurge/App/releases/download/v$match2/Anisurge-$version-win-x86_64-portable.zip"
+            }
+        }
+    }
+}
