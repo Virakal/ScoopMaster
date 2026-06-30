@@ -1,5 +1,5 @@
 {
-    "version": "0.1.15",
+    "version": "0.2.0",
     "description": "A native desktop browser for Claude Code, Codex, and Gemini CLI session transcripts",
     "homepage": "https://github.com/jerrywu001/cc-sessions-viewer",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jerrywu001/cc-sessions-viewer/releases/download/v0.1.15/cc-sessions-viewer_0.1.15_x64-setup.exe#/dl.7z",
-            "hash": "cd2c33591c156f2b0f3651fe3f7c3e7ac867fdb0cde3ab4c030565d0588016bc"
+            "url": "https://github.com/jerrywu001/cc-sessions-viewer/releases/download/v0.2.0/cc-sessions-viewer_0.2.0_x64-setup.exe#/dl.7z",
+            "hash": "b42cb253ad9110dff4836b345c3b526e979b4c9b0f1bc25bffc90741b0b4e729"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
