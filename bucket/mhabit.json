@@ -1,13 +1,13 @@
 {
-    "version": "1.25.1+164",
+    "version": "1.25.3+168",
     "description": "Micro habit tracker for personal growth",
     "homepage": "https://github.com/FriesI23/mhabit",
     "license": "Apache-2.0",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/FriesI23/mhabit/releases/download/v1.25.1+164/mhabit_x64.msix",
-            "hash": "5f8f8e69c30fed2a2de992957fe062df8606fe1534630f7dc743810d3cc0b657"
+            "url": "https://github.com/FriesI23/mhabit/releases/download/v1.25.3+168/mhabit_x64.msix",
+            "hash": "a933512f428439d46fd6190038eb62162135a17e3fb23cee5532acd55a126811"
         }
     },
     "pre_install": [
