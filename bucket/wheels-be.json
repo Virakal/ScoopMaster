@@ -3,7 +3,7 @@
     "##2": "OpenJDK 21 inlined as a 5th url/hash so `scoop install wheels-be` works",
     "##3": "from a fresh shell with no prerequisite buckets. Hashes for wheels-module",
     "##4": "and wheels-core are kept current by .github/workflows/autoupdate.yml.",
-    "version": "4.0.6-snapshot.2232",
+    "version": "4.0.6-snapshot.2233",
     "description": "Wheels CFML MVC framework - bleeding-edge channel (develop snapshots).",
     "homepage": "https://wheels.dev",
     "license": "Apache-2.0",
@@ -16,15 +16,15 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.0.6-snapshot.2232/wheels-module-4.0.6-snapshot.2232.zip",
-                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.0.6-snapshot.2232/wheels-core-4.0.6-snapshot.2232.zip",
+                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.0.6-snapshot.2233/wheels-module-4.0.6-snapshot.2233.zip",
+                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.0.6-snapshot.2233/wheels-core-4.0.6-snapshot.2233.zip",
                 "https://github.com/cybersonic/LuCLI/releases/download/v0.3.7/lucli-0.3.7.bat",
                 "https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.49.1.0/sqlite-jdbc-3.49.1.0.jar",
                 "https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_windows-x64_bin.zip"
             ],
             "hash": [
-                "sha512:46f1e029f77b90e61ea9a9261d1075959500f1aac39d81148406c209ad3fcb24e7f2b67d971b42d33e9e82fa08687a1f73c6637a2fe91151dc6ce75a4680b1da",
-                "sha512:d64bfff74aae685260495082440a5f50212516faa892648a5a2a7782ce1d943267cacf03f7721a4a303d9c600cd8c96e9cbbdc26273e1daa8748a3c6b1574d9d",
+                "sha512:eee4eec020e388b89d6a5e92e04f4dce2a2192c495ddc710a4ab6217010ba930b490737f7269d4123ee4763813fd29510b7839731eff6e5e0270328f2d71e4de",
+                "sha512:588445748b5a67adf15539212ce9b4e90752ae3f99d005ec82cc3a078e5e20e68b87b37b6929a8eb6ddf8a021acdcd965345b91e2566439874089f31c2e726a4",
                 "54305fc79144a4346039d886c5d70660718ef4658dc8533963482e7ec74449a2",
                 "5c8609d2ca341deb8c6f71778974b5ba4995c7d32d7c7c89d9392a3e72c39291",
                 "b6c17e747ae78cdd6de4d7532b3164b277daee97c007d3eaa2b39cca99882664"
