@@ -1,5 +1,5 @@
 {
-    "version": "1.0.26065",
+    "version": "1.0.26070",
     "description": "ADB Explorer – GUI file browser for ADB-connected devices",
     "homepage": "https://github.com/Alex4SSB/ADB-Explorer",
     "license": "MIT",
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Alex4SSB/ADB-Explorer/releases/download/v1.0.26065/ADB_Explorer_1.0.26065_x64.7z",
-            "hash": "5b176958a31ca216c11c248403f203613f6d51af3c1906441c215494a4477d86"
+            "url": "https://github.com/Alex4SSB/ADB-Explorer/releases/download/v1.0.26070/ADB_Explorer_1.0.26070_x64.7z",
+            "hash": "d0222a51f24a2cd6740df667f37b1615d1f2bcada646d5f71be204a373a74853"
         },
         "arm64": {
-            "url": "https://github.com/Alex4SSB/ADB-Explorer/releases/download/v1.0.26065/ADB_Explorer_1.0.26065_ARM64.7z",
-            "hash": "5f7f236b6c034ecff237ea5d9a6a4c0db99aa571a44744a89c58085f3290c925"
+            "url": "https://github.com/Alex4SSB/ADB-Explorer/releases/download/v1.0.26070/ADB_Explorer_1.0.26070_ARM64.7z",
+            "hash": "2878af5eff379dc6deee37d1fa9a3ddb5cc5a000b1fed8a0dc56597ccd748dc0"
         }
     },
     "pre_install": [
