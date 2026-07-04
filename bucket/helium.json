@@ -19,17 +19,20 @@
         [
             "chrome.exe",
             "helium",
-            "--user-data-dir=\"$persist_dir\\User Data\""
+            "--user-data-dir=\"$persist_dir\\User Data\" --force-renderer-accessibility"
         ]
     ],
     "shortcuts": [
         [
             "chrome.exe",
             "Helium",
-            "--user-data-dir=\"$persist_dir\\User Data\""
+            "--user-data-dir=\"$persist_dir\\User Data\" --force-renderer-accessibility"
         ]
     ],
-    "persist": "User Data",
+    "persist": [
+        "User Data",
+        "WidevineCdm"
+    ],
     "checkver": {
         "github": "https://github.com/imputnet/helium-windows"
     },
