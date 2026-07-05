@@ -1,1 +1,54 @@
-{"version":"4.0.4","description":"A cross-platform fluent-design AI-boost multi-threaded downloader built with Python.","homepage":"https://gd3.top/","license":"GPL-3.0-or-later","architecture":{"64bit":{"url":"https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v4.0.4/Ghost-Downloader-v4.0.4-Windows-x86_64.zip","hash":"62cfb5c04edee928ad16902561d30a335162acc9f1e8e574fb210e12a35f25d8"},"arm64":{"url":"https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v4.0.4/Ghost-Downloader-v4.0.4-Windows-arm64.zip","hash":"7e20cdd4823bb9b153103103d32ec7d1e20904917521d0a5d267b442933d69eb"}},"extract_dir":"dist\\Ghost-Downloader-3.dist","shortcuts":[["Ghost-Downloader-3.exe","Ghost Downloader"]],"pre_install":["if (!(Test-Path \"$persist_dir\\Ghost Downloader 配置文件.json\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 配置文件.json\").Length) {","    New-Item \"$persist_dir\\Ghost Downloader 配置文件.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null","    Set-Content -Path \"$persist_dir\\Ghost Downloader 配置文件.json\" -Value '{\"Software\":{\"CheckUpdateAtStartUp\":false}}'","}","if (!(Test-Path \"$persist_dir\\Ghost Downloader 记录文件\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 记录文件\").Length) {","    New-Item \"$persist_dir\\Ghost Downloader 记录文件\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null","}"],"pre_uninstall":["$bucket = $install.bucket",". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"","Stop-App"],"persist":["Ghost Downloader 配置文件.json","Ghost Downloader 记录文件"],"checkver":{"github":"https://github.com/XiaoYouChR/Ghost-Downloader-3"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v$version/Ghost-Downloader-v$version-Windows-x86_64.zip"},"arm64":{"url":"https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v$version/Ghost-Downloader-v$version-Windows-arm64.zip"}}},"from":"https://github.com/xrgzs/sdoog"}
+{
+    "version": "4.0.4",
+    "description": "A cross-platform fluent-design AI-boost multi-threaded downloader built with Python.",
+    "homepage": "https://gd3.top/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v4.0.4/Ghost-Downloader-v4.0.4-Windows-x86_64.zip",
+            "hash": "62cfb5c04edee928ad16902561d30a335162acc9f1e8e574fb210e12a35f25d8"
+        },
+        "arm64": {
+            "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v4.0.4/Ghost-Downloader-v4.0.4-Windows-arm64.zip",
+            "hash": "7e20cdd4823bb9b153103103d32ec7d1e20904917521d0a5d267b442933d69eb"
+        }
+    },
+    "extract_dir": "dist\\Ghost-Downloader-3.dist",
+    "shortcuts": [
+        [
+            "Ghost-Downloader-3.exe",
+            "Ghost Downloader"
+        ]
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Ghost Downloader 配置文件.json\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 配置文件.json\").Length) {",
+        "    New-Item \"$persist_dir\\Ghost Downloader 配置文件.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+        "    Set-Content -Path \"$persist_dir\\Ghost Downloader 配置文件.json\" -Value '{\"Software\":{\"CheckUpdateAtStartUp\":false}}'",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\Ghost Downloader 记录文件\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 记录文件\").Length) {",
+        "    New-Item \"$persist_dir\\Ghost Downloader 记录文件\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+        "}"
+    ],
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App"
+    ],
+    "persist": [
+        "Ghost Downloader 配置文件.json",
+        "Ghost Downloader 记录文件"
+    ],
+    "checkver": {
+        "github": "https://github.com/XiaoYouChR/Ghost-Downloader-3"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v$version/Ghost-Downloader-v$version-Windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v$version/Ghost-Downloader-v$version-Windows-arm64.zip"
+            }
+        }
+    }
+}
