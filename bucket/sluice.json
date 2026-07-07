@@ -1,19 +1,19 @@
 {
-    "version": "0.99.192",
+    "version": "0.99.193",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sluicesync/sluice/releases/download/v0.99.192/sluice_0.99.192_Windows_x86_64.zip",
+            "url": "https://github.com/sluicesync/sluice/releases/download/v0.99.193/sluice_0.99.193_Windows_x86_64.zip",
             "bin": [
                 "sluice.exe"
             ],
-            "hash": "c68f6444103a4dfd13c0af0dbc60101b7a897c4406b18aa2744af1d9fab18bbf"
+            "hash": "03fdf937175138b0ce0bdc9992275a44c0c7bbbb9c895bd662593e12ff8c73b3"
         },
         "arm64": {
-            "url": "https://github.com/sluicesync/sluice/releases/download/v0.99.192/sluice_0.99.192_Windows_arm64.zip",
+            "url": "https://github.com/sluicesync/sluice/releases/download/v0.99.193/sluice_0.99.193_Windows_arm64.zip",
             "bin": [
                 "sluice.exe"
             ],
-            "hash": "9617f02dd9a372218f1ab8ffffc8d78c65ad16100f9608e92cac8c0752bc4a98"
+            "hash": "1f8caae75084b1778864649b063e155542ecb886a10ee3e15ebbe106937709ff"
         }
     },
     "homepage": "https://sluicesync.com",
