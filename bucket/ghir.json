@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v1.0.0/ghir_windows_amd64.zip",
+            "bin": [
+                "ghir.exe"
+            ],
+            "hash": "345abe0b35fcc15cf9fe515af879a78a109b48e6add6f3701f448ec02cb796a9"
+        },
+        "arm64": {
+            "url": "https://github.com/suzuki-shunsuke/ghir/releases/download/v1.0.0/ghir_windows_arm64.zip",
+            "bin": [
+                "ghir.exe"
+            ],
+            "hash": "557ee0943862a72b535d666925fe88c2e57fc7592a09108e160f3c57722b3748"
+        }
+    },
+    "license": "MIT",
+    "description": "ghir is a CLI making GitHub Releases immutable\n"
+}

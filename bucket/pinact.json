@@ -1,0 +1,21 @@
+{
+    "version": "4.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v4.1.0/pinact_windows_amd64.zip",
+            "bin": [
+                "pinact.exe"
+            ],
+            "hash": "de04e9612a50cb7b0263d162400305ea02fc85410c38887d1be7446a7c5d5dc6"
+        },
+        "arm64": {
+            "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v4.1.0/pinact_windows_arm64.zip",
+            "bin": [
+                "pinact.exe"
+            ],
+            "hash": "3f8fedf5f7490b903497a8844a6954deb80a1eca5b1f38747e21aa9198a7c203"
+        }
+    },
+    "license": "MIT",
+    "description": "Pin GitHub Action versions by full length commit SHA.\nEdit GitHub Workflow and Composite action files and pin versions of Actions and Reusable Workflows.\npinact can also update their versions and verify version annotations\n"
+}
