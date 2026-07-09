@@ -1,28 +1,14 @@
 {
-    "version": "7.2.57",
-    "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service.",
-    "homepage": "https://help.router-for.me",
+    "version": "7.2.58",
+    "description": "CLIProxyAPI - A proxy server that provides OpenAI/Gemini/Claude/Codex/Grok compatible API interfaces for CLI.",
+    "homepage": "https://github.com/router-for-me/CLIProxyAPI",
     "license": "MIT",
-    "notes": [
-        "cli-proxy-api shim use \"$persist_dir\\config.yaml\" as the default config file.",
-        "To use a different config file, please run:",
-        "\"$dir\\cli-proxy-api.exe\" --config <NEW_CONFIG_FILE>"
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.57/CLIProxyAPI_7.2.57_windows_amd64.zip",
-            "hash": "8017d96004ef41c2ddd0fd75c7b4ec9c8b3e9a9ceaed26665a3ec85f9fb027c0"
-        },
-        "arm64": {
-            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.57/CLIProxyAPI_7.2.57_windows_aarch64.zip",
-            "hash": "1afdfbe3b6a485b6bd980a187e686220f350d9bbdd063d9a0eea020414c62348"
+            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.58/CLIProxyAPI_7.2.58_windows_amd64.zip",
+            "hash": "e45be3e1743a530d01c1b9bf97e282e00bf23c7d4ba734cd9ef1b04e66936ff1"
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path -Path \"$persist_dir\\config.yaml\")) {",
-        "    Copy-Item -Path \"$dir\\config.example.yaml\" -Destination \"$dir\\config.yaml\"",
-        "}"
-    ],
     "bin": [
         [
             "cli-proxy-api.exe",
@@ -31,6 +17,7 @@
         ]
     ],
     "persist": "config.yaml",
+    "post_install": "if (Test-Path \"$dir\\config.example.yaml\") { if (-not (Test-Path \"$persist_dir\\config.yaml\")) { Copy-Item \"$dir\\config.example.yaml\" \"$persist_dir\\config.yaml\" } }",
     "checkver": {
         "github": "https://github.com/router-for-me/CLIProxyAPI"
     },
@@ -38,13 +25,7 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_aarch64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
         }
     }
 }

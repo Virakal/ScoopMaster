@@ -1,12 +1,12 @@
 {
-  "version": "0.0.43",
+  "version": "0.0.44",
   "description": "Code intelligence tool that builds semantic knowledge graphs from source code",
   "homepage": "https://github.com/ScriptedAlchemy/tracedecay",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ScriptedAlchemy/tracedecay/releases/download/v0.0.43/tracedecay-v0.0.43-x86_64-windows.zip",
-      "hash": "9d2993d7176e7c2c978cc6cdc957c4cea89cf1159758ef9474a2e14c7720932a"
+      "url": "https://github.com/ScriptedAlchemy/tracedecay/releases/download/v0.0.44/tracedecay-v0.0.44-x86_64-windows.zip",
+      "hash": "ffff54138fb0a6e1b3a94937748320bbfb0827745a0737be6e475bf6ed276ea6"
     }
   },
   "bin": "tracedecay.exe",
