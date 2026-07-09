@@ -1,37 +1,23 @@
 {
-    "version": "4.3.6",
-    "description": "Professional Antigravity account manager and switcher.",
+    "version": "4.3.7",
+    "description": "Antigravity Account Manager & Switcher",
     "homepage": "https://github.com/lbjlaq/Antigravity-Manager",
     "license": "CC-BY-NC-SA-4.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v4.3.6/Antigravity.Tools_4.3.6_x64-setup.exe#/dl.7z",
-            "hash": "74bd5fdac633697259cca863405b11604fd7ffbe333d4022c86a811c26cefcba"
+            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v4.3.7/Antigravity.Tools_4.3.7_x64-setup.exe#/dl.7z",
+            "hash": "f27eba05e2086ece3c273fd78b6a00212a523ff4efaea50697224905d837f253"
         }
     },
-    "installer": {
-        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse -ErrorAction SilentlyContinue"
-    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
     "shortcuts": [
         [
             "antigravity_tools.exe",
             "Antigravity Tools"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/lbjlaq/Antigravity-Manager/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "v([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v$version/Antigravity.Tools_$version_x64-setup.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "https://api.github.com/repos/lbjlaq/Antigravity-Manager/releases/latest",
-            "jsonpath": "$.assets[?(@.name == 'Antigravity.Tools_$version_x64-setup.exe')].digest"
-        }
+        "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v$version/Antigravity.Tools_$version_x64-setup.exe#/dl.7z"
     }
 }
