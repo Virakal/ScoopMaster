@@ -1,19 +1,19 @@
 {
-    "version": "1.46.0",
+    "version": "1.47.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Gentleman-Programming/gentle-ai/releases/download/v1.46.0/gentle-ai_1.46.0_windows_amd64.zip",
+            "url": "https://github.com/Gentleman-Programming/gentle-ai/releases/download/v1.47.0/gentle-ai_1.47.0_windows_amd64.zip",
             "bin": [
                 "gentle-ai.exe"
             ],
-            "hash": "2eb8c972aac4e70bf85840dd98f475a04ac216019964dfcc7d5618a0f5e408ff"
+            "hash": "a3063a9ae28799620d9d47d0447102045a9a86556cef317069cb8020a3436942"
         },
         "arm64": {
-            "url": "https://github.com/Gentleman-Programming/gentle-ai/releases/download/v1.46.0/gentle-ai_1.46.0_windows_arm64.zip",
+            "url": "https://github.com/Gentleman-Programming/gentle-ai/releases/download/v1.47.0/gentle-ai_1.47.0_windows_arm64.zip",
             "bin": [
                 "gentle-ai.exe"
             ],
-            "hash": "9d4204298b215bab307f4a1e00168f76ee5f1e9a4f8a9e33ce303b7b5e0a322e"
+            "hash": "bc9a2692687f3ade8de667a3586803edb8716bafaa1b6c8aec8b33100fa1fbda"
         }
     },
     "homepage": "https://github.com/Gentleman-Programming/gentle-ai",
