@@ -10,11 +10,7 @@
         "Run following command to import uv-completion automatically in Powershell:",
         "$dir\\add-profile-content.ps1"
     ],
-    "pre_install": [
-        "if (-not (Test-Path (Find-BucketDirectory -Root -Name extras))) {",
-        "    throw 'Please install extras bucket first: scoop bucket add extras'",
-        "}"
-    ],
+    "pre_install": "if (!(Test-Path \"$bucketsdir\\extras\")) { throw 'Please install extras bucket first: scoop bucket add extras' }",
     "installer": {
         "script": [
             "Remove-Item \"$dir\\connecttest.txt\" -ErrorAction SilentlyContinue",
