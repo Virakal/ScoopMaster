@@ -1,5 +1,5 @@
 {
-    "version": "0.260",
+    "version": "0.264",
     "description": "Lightweight control tool for Asus laptops. (Manual fan control)",
     "homepage": "https://github.com/seerge/g-helper-experimental-release",
     "license": "unknown",
@@ -9,11 +9,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/seerge/g-helper-experimental-release/releases/download/v0.260/GHelper.zip",
-            "hash": "20296e1aa05eacbc82d9567a060bcec201f7142321cbc1b900d5e67b484c46f1"
+            "url": "https://github.com/seerge/g-helper-experimental-release/releases/download/v0.264/GHelper.zip",
+            "hash": "5217c91e81af2eebc3d2f8e57ff5e7780394f57a2280d42977d163ad73063670"
         }
     },
-    "pre_install": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
+    "pre_install": [
+        "if ((installed 'g-helper') -or (installed 'g-helper-experimental-pawnio')) { throw 'Only 1 g-helper can be install.' }",
+        "if (!(is_admin)) { throw 'Admin privileges are required.' }"
+    ],
     "post_install": [
         "if (Test-Path $env:APPDATA\\GHelper) {",
         "    Copy-Item -Path $env:APPDATA\\GHelper\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
@@ -28,19 +31,14 @@
     ],
     "pre_uninstall": "if (!(is_admin)) { throw 'Admin privileges are required.' }",
     "uninstaller": {
-        "script": "Remove-Item $env:APPDATA\\GHelper -Force -Recurse && Remove-Item $env:ProgramData\\GHelper -Force -Recurse"
+        "script": [
+            "Remove-Item $env:APPDATA\\GHelper -Force -Recurse",
+            "Remove-Item $env:ProgramData\\GHelper -Force -Recurse"
+        ]
     },
     "bin": "GHelper.exe",
-    "shortcuts": [
-        [
-            "GHelper.exe",
-            "G-Helper"
-        ]
-    ],
-    "persist": [
-        "data",
-        "backup"
-    ],
+    "shortcuts": [["GHelper.exe", "G-Helper"]],
+    "persist": ["data", "backup"],
     "checkver": {
         "github": "https://github.com/seerge/g-helper-experimental-release/"
     },
