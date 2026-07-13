@@ -1,12 +1,12 @@
 {
-    "version": "441",
+    "version": "442",
     "description": "Feature packed cross-platform music tracker for Last.fm, ListenBrainz, Libre.fm, Pleroma and other compatible services",
     "homepage": "https://kawaiidango.github.io/pano-scrobbler/",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kawaiiDango/pano-scrobbler/releases/download/441/pano-scrobbler-windows-x64.exe#/dl.7z",
-            "hash": "70dd09aaa769fedf16a2482656ecfb29e5b4b38dfafceb46bce14b75354e9e39"
+            "url": "https://github.com/kawaiiDango/pano-scrobbler/releases/download/442/pano-scrobbler-windows-x64.exe#/dl.7z",
+            "hash": "d381be7510370bdfad9b15adca2823c0016f15290cd0b192c3ae247a463ad422"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
