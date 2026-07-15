@@ -1,19 +1,19 @@
 {
-    "version": "1.0.8",
+    "version": "1.0.9",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/raucheacho/wotp/releases/download/v1.0.8/wotp-cli_1.0.8_windows_amd64.zip",
+            "url": "https://github.com/raucheacho/wotp/releases/download/v1.0.9/wotp-cli_1.0.9_windows_amd64.zip",
             "bin": [
                 "wotp.exe"
             ],
-            "hash": "b5f825141bf8789ef18bdb74c9d6e7e584a80c7618579b62fa1acb843ed2adf6"
+            "hash": "da0513555ce9490b21463b737d91ea15d9470f3a10cb46413ff3bd4a6a620508"
         },
         "arm64": {
-            "url": "https://github.com/raucheacho/wotp/releases/download/v1.0.8/wotp-cli_1.0.8_windows_arm64.zip",
+            "url": "https://github.com/raucheacho/wotp/releases/download/v1.0.9/wotp-cli_1.0.9_windows_arm64.zip",
             "bin": [
                 "wotp.exe"
             ],
-            "hash": "6f23e017d16cb16bc8bb56614d4d53c654d7f23a475ad0f4ce48d48bf284cf41"
+            "hash": "f105c00e0cdfe88c22b19feea2d101fb21df14454e6e970c0aa01668c974df8b"
         }
     },
     "homepage": "https://github.com/raucheacho/wotp",
