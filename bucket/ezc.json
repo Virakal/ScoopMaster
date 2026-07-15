@@ -1,12 +1,12 @@
 {
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "Cross-platform terminal file clipboard for Arch Linux and Windows",
     "homepage": "https://github.com/mornhussakuyo-hub/ezc",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mornhussakuyo-hub/ezc/releases/download/v0.1.2/ezc-windows-amd64.exe#/ezc.exe",
-            "hash": "33c7bbd6671b1942df98ce4761f1229b1be6d05546774ae4f2aa145620a90f5d"
+            "url": "https://github.com/mornhussakuyo-hub/ezc/releases/download/v0.1.4/ezc-windows-amd64.exe#/ezc.exe",
+            "hash": "e79579445d61a6406def49c5d6fc078cac31cf1fcff111bcc2269649c44e264c"
         }
     },
     "bin": "ezc.exe",
