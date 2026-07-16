@@ -1,15 +1,23 @@
 {
-    "##": "Paseo",
     "version": "0.1.109",
     "description": "Orchestrate multiple coding agents from desktop and mobile",
-    "homepage": "https://github.com/getpaseo/paseo",
-    "license": "https://github.com/getpaseo/paseo#License-1-ov-file",
-    "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.109/Paseo-Setup-0.1.109.exe#/dl.7z",
-    "hash": "3a1f48e5c8c39e0a2753bc342e39a11017e68d1d8a8c4754c4381bd13a2a0053",
-    "pre_install": [
-        "Move-Item \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Force",
-        "Remove-Item $dir\\* -Exclude app-64.7z -Force -Recurse",
-        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+    "homepage": "https://paseo.sh",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.109/Paseo-Setup-0.1.109-x64.zip",
+            "hash": "b903f487a4cb4dc4b4992e5039e256528cd10d6257c6cc735b09fc17d9c435aa"
+        },
+        "arm64": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.1.109/Paseo-Setup-0.1.109-arm64.zip",
+            "hash": "0c71e373029e03bef2863f89d6633110e1f14b16821880724f614c5505eeab26"
+        }
+    },
+    "bin": [
+        [
+            "resources\\bin\\paseo.cmd",
+            "paseo"
+        ]
     ],
     "shortcuts": [
         [
@@ -17,8 +25,17 @@
             "Paseo"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/getpaseo/paseo"
+    },
     "autoupdate": {
-        "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
+            }
+        }
     }
 }
