@@ -1,50 +1,27 @@
 {
-    "version": "7.2.83",
-    "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Grok Build as an OpenAI/Gemini/Claude/Codex compatible API service.",
-    "homepage": "https://help.router-for.me",
+    "version": "7.2.84",
+    "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 2.5 Pro, GPT 5, Claude, Qwen model through API",
+    "homepage": "https://github.com/router-for-me/CLIProxyAPI",
     "license": "MIT",
-    "notes": [
-        "cli-proxy-api shim use \"$persist_dir\\config.yaml\" as the default config file.",
-        "To use a different config file, please run:",
-        "\"$dir\\cli-proxy-api.exe\" --config <NEW_CONFIG_FILE>"
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.83/CLIProxyAPI_7.2.83_windows_amd64.zip",
-            "hash": "43cefec498f462ee2ae7cca50084cbb91708d34f7d5b4d19d6a5d50bcbe22c40"
-        },
-        "arm64": {
-            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.83/CLIProxyAPI_7.2.83_windows_aarch64.zip",
-            "hash": "d3e19001d84d4c5a56e42d2926c8c51ab81f78ee28dce573a35f0ab39e94ab1c"
+            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.84/CLIProxyAPI_7.2.84_windows_amd64.zip",
+            "hash": "f453bebcaee1e7ceb2a469111b3e0401afdf9c7f12e8b3b36c7c410e598c0021"
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path -Path \"$persist_dir\\config.yaml\")) {",
-        "    Copy-Item -Path \"$dir\\config.example.yaml\" -Destination \"$dir\\config.yaml\"",
-        "}"
-    ],
-    "bin": [
+    "bin": "cli-proxy-api.exe",
+    "persist": [
         [
-            "cli-proxy-api.exe",
-            "cli-proxy-api",
-            "--config \"$persist_dir\\config.yaml\""
+            "config.example.yaml",
+            "config.yaml"
         ]
     ],
-    "persist": "config.yaml",
-    "checkver": {
-        "github": "https://github.com/router-for-me/CLIProxyAPI"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_aarch64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
         }
     }
 }
