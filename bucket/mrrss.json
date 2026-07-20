@@ -1,34 +1,21 @@
 {
-    "version": "1.3.24",
-    "description": "A modern, cross-platform desktop RSS reader.",
-    "homepage": "https://github.com/WCY-dt/MrRSS",
-    "license": "GPL-3.0-or-later",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/WCY-dt/MrRSS/releases/download/v1.3.24/MrRSS-1.3.24-windows-amd64-portable.zip",
-            "hash": "1bc8f29f6669d12497053b6e6bd09f1811373578860ccbbcfafe8284cb73803f"
-        },
-        "arm64": {
-            "url": "https://github.com/WCY-dt/MrRSS/releases/download/v1.3.24/MrRSS-1.3.24-windows-arm64-portable.zip",
-            "hash": "dbc6c7e91ad42b8685f78c1b3ab354dd58b8fe55f84abeec1d561ac2dcefab69"
-        }
+    "version": "1.3.25",
+    "description": "A modern, cross-platform, and free AI RSS reader. 一个现代化、跨平台且免费的 AI RSS 阅读器.",
+    "homepage": "https://mrrss.ch3nyang.top/",
+    "license": "GPL-3.0-only",
+    "checkver": {
+        "github": "https://github.com/WCY-dt/MrRSS"
     },
+    "autoupdate": {
+        "url": "https://github.com/WCY-dt/MrRSS/releases/download/v$version/MrRSS-$version-windows-amd64-portable.zip"
+    },
+    "url": "https://github.com/WCY-dt/MrRSS/releases/download/v1.3.25/MrRSS-1.3.25-windows-amd64-portable.zip",
+    "hash": "102396bbb8faa435e4011a7fdedcf136e5ed775f98c55af280f1fea329a7d8f9",
     "shortcuts": [
         [
             "MrRSS.exe",
             "MrRSS"
         ]
     ],
-    "persist": "data",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/WCY-dt/MrRSS/releases/download/v$version/MrRSS-$version-windows-amd64-portable.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/WCY-dt/MrRSS/releases/download/v$version/MrRSS-$version-windows-arm64-portable.zip"
-            }
-        }
-    }
+    "persist": "data"
 }
