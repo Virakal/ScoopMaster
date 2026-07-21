@@ -1,15 +1,15 @@
 {
-    "version": "6.1",
+    "version": "6.2",
     "description": "Animate Event-B models with the ProB model checker, no Rodin required",
     "homepage": "https://github.com/eventb-rossi/eventb-animate",
     "license": "Apache-2.0",
     "depends": "java/temurin21-jdk",
-    "url": "https://github.com/eventb-rossi/eventb-animate/releases/download/v6.1/eventb-animate.jar",
-    "hash": "7e572f3c85e0ceb042b72828be15945c7eada7c0700e7f0b949c7e3cdb912f91",
+    "url": "https://github.com/eventb-rossi/eventb-animate/releases/download/v6.2/eventb-animate-6.2.jar#/eventb-animate.jar",
+    "hash": "128d8ad853d6352ab6b9602db0325a40be993639a059c41d25ab30e6679534b6",
     "pre_install": "'@\"%~dp0..\\..\\temurin21-jdk\\current\\bin\\java.exe\" -jar \"%~dp0eventb-animate.jar\" %*' | Out-File -Encoding ascii \"$dir\\eventb-animate.cmd\"",
     "bin": "eventb-animate.cmd",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/eventb-rossi/eventb-animate/releases/download/v$version/eventb-animate.jar"
+        "url": "https://github.com/eventb-rossi/eventb-animate/releases/download/v$version/eventb-animate-$version.jar#/eventb-animate.jar"
     }
 }
