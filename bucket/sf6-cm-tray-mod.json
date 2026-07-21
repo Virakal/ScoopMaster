@@ -1,0 +1,21 @@
+{
+    "version": "0.6",
+    "description": "Street Fighter 6 Training Mod",
+    "homepage": "https://fe.sctrip.asia/sf6cm",
+    "license": "Freeware",
+    "url": "https://sf6cm.oss-cn-beijing.aliyuncs.com/downloads/SF6CM_Tray_v0.6.zip",
+    "hash": "0766f52899289b307772c0a159c28b6af9148480e75fabb9b0c0a7c8ff6bdea3",
+    "shortcuts": [
+        [
+            "SF6CM_Tray.exe",
+            "SF6CM Tray"
+        ]
+    ],
+    "checkver": {
+        "url": "https://fe.sctrip.asia/sf6cm/update.html",
+        "regex": "id=\"updateTrayVersion\">v?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://sf6cm.oss-cn-beijing.aliyuncs.com/downloads/SF6CM_Tray_v$version.zip"
+    }
+}
