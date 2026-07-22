@@ -2,7 +2,7 @@
     "version": "2.96.0",
     "description": "gh completion as a PowerShell module",
     "homepage": "https://github.com/cli/cli",
-    "url": "https://github.com/Arama0517/completions/releases/download/gh_v2.96.0/gh-completion.psm1",
+    "url": "https://github.com/Arama0517/completions/releases/download/gh_2.96.0/gh-completion.psm1",
     "hash": "c877029dd7d00352bb1225c89f211660fd293067766295d996e40dd9fb7aad36",
     "license": "MIT",
     "depends": "gh",
@@ -10,7 +10,6 @@
         "Run following command to import gh-completion automatically in Powershell:",
         "$dir\\add-profile-content.ps1"
     ],
-    "pre_install": "if (!(Test-Path \"$bucketsdir\\extras\")) { throw 'Please install extras bucket first: scoop bucket add extras' }",
     "post_install": [
         "Import-Module gh-completion",
         "$BucketDir = Find-BucketDirectory -Root -Name $bucket",
@@ -38,9 +37,10 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/Arama0517/completions/releases",
-        "regex": "\"tag_name\":\\s*\"gh_v([\\d.]+)\""
+        "jsonpath": "$.[?(@.tag_name =~ /gh_.*/)].tag_name",
+        "regex": "gh_([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/Arama0517/completions/releases/download/gh_v$version/gh-completion.psm1"
+        "url": "https://github.com/Arama0517/completions/releases/download/gh_$version/gh-completion.psm1"
     }
 }

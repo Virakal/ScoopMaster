@@ -10,7 +10,6 @@
         "Run following command to import uv-completion automatically in Powershell:",
         "$dir\\add-profile-content.ps1"
     ],
-    "pre_install": "if (!(Test-Path \"$bucketsdir\\extras\")) { throw 'Please install extras bucket first: scoop bucket add extras' }",
     "post_install": [
         "Import-Module uv-completion",
         "$BucketDir = Find-BucketDirectory -Root -Name $bucket",
@@ -38,7 +37,8 @@
     },
     "checkver": {
         "url": "https://api.github.com/repos/Arama0517/completions/releases",
-        "regex": "\"tag_name\":\\s*\"uv_([\\d.]+)\""
+        "jsonpath": "$.[?(@.tag_name =~ /uv_.*/)].tag_name",
+        "regex": "uv_([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/Arama0517/completions/releases/download/uv_$version/uv-completion.psm1"
