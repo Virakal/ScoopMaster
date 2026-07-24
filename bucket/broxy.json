@@ -1,5 +1,5 @@
 {
-    "version": "v1.0.0-alpha.2",
+    "version": "1.0.0-alpha.2",
     "architecture": {
         "64bit": {
             "url": "https://github.com/rhaidiz/broxy/releases/download/v1.0.0-alpha.2/broxy_windows_amd64_v1.0.0-alpha.2.zip",
@@ -11,5 +11,11 @@
     },
     "homepage": "https://github.com/rhaidiz/broxy",
     "license": "GPL-3.0",
-    "description": "An HTTP/HTTPS intercept proxy written in Go.(Scoop bucket by arch3rpro)"
+    "description": "An HTTP/HTTPS intercept proxy written in Go.",
+    "notes": [
+        "【工具类型】: 网络工具",
+        "【主要功能】: HTTP/HTTPS拦截代理工具，基于Go语言开发",
+        "【适用场景】: HTTP代理、流量分析、安全测试",
+        "【技术特点】: 基于Go语言开发，命令行工具，轻量级"
+    ]
 }

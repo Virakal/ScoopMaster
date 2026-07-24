@@ -1,18 +1,21 @@
 {
-    "version": "1.0.46",
-    "description": "(Scoop bucket by arch3rpro) wscan - A web security scanner that focuses on web security, dedicated to making web security accessible to everyone.",
-    "homepage": "https://github.com/chushuai/wscan",
-    "license": "https://github.com/chushuai/wscan?tab=License-1-ov-file#readme",
-    "url": "https://github.com/chushuai/wscan/releases/download/1.0.46/wscan_windows_amd64.exe.zip",
-    "hash": "4fed7190dfe47b2023c64035275c6c5d83f750cb05024306aa09ee1c86d149d8",
-    "pre_install": "Rename-Item \"$dir\\wscan_windows_amd64.exe\" \"$dir\\wscan.exe\"",
+    "version": "2.0.0",
+    "description": "Webshell本地扫描器",
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: 本地Webshell扫描器，检测服务器上的恶意脚本文件",
+        "【适用场景】: 安全运维、恶意软件检测、主机安全检查",
+        "【技术特点】: Windows可执行文件，支持多种Webshell特征检测"
+    ],
+    "homepage": "http://edr.sangfor.com.cn/backdoor_detection.html",
+    "license": "MIT",
+    "url": "http://10.126.126.1/d/256785c9a2504fad850a/files/?p=%2Fwscan-2.0.0.zip&dl=1",
+    "hash": "7D89A2B43B98ABAFB2BF703BAC01B8F5FDE57DACC8B1EED3D4C513122A76526E",
     "bin": "wscan.exe",
-    "checkver": {
-        "url": "https://api.github.com/repos/chushuai/wscan/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/chushuai/wscan/releases/download/$version/wscan_windows_amd64.exe.zip"
-    }
+    "shortcuts": [
+        [
+            "wscan.exe",
+            "wscan"
+        ]
+    ]
 }

@@ -1,27 +1,29 @@
 {
-    "version": "2024-09-27T11.11.55",
-    "description": "(Scoop bucket by arch3rpro) PyShell - Multiplatform Python WebShell.",
+    "version": "mian",
+    "description": "Multiplatform Python WebShell.",
     "homepage": "https://github.com/JoelGMSec/PyShell",
     "license": "GPL-3.0",
     "suggest": {
-        "Python": "python3"
+        "python": "uv"
     },
     "url": "https://github.com/JoelGMSec/PyShell/archive/refs/heads/main.zip",
-    "hash": "f36e8ff6f512eed3036a96a1b64d7260e4117aca74a8ea712d84d11e237cdb14",
-    "extract_dir": "PyShell-main",
-    "pre_install": "Set-Content \"$dir\\pyshell.bat\" '@pushd %~dp0\npython3 \"pyshell.py\" %*\n@popd' -Encoding Ascii",
+    "extract_dir": "pyshell-main",
+    "pre_install": [
+        "Set-Content \"$dir\\pyshell.bat\" '@pushd %~dp0",
+        "@uv run python \"pyshell.py\" %*",
+        "@popd' -Encoding Ascii"
+    ],
     "post_install": [
-        "pip3 install -r \"$dir\\requirements.txt\"",
-        "pip3 install pyreadline3"
+        "uv venv \"$dir\\.venv\"",
+        "uv pip install -r $dir\\requirements.txt --python \"$dir\\.venv\\Scripts\\python.exe\"",
+        "uv venv \"$dir\\.venv\"",
+        "uv pip install pyreadline3 --python \"$dir\\.venv\\Scripts\\python.exe\""
     ],
     "bin": "pyshell.bat",
-    "checkver": {
-        "url": "https://api.github.com/repos/JoelGMSec/PyShell/commits",
-        "jsonpath": "$[0].commit.author.date",
-        "regex": "([\\d-]+)T([\\d:]+)",
-        "replace": "$1T$2"
-    },
-    "autoupdate": {
-        "url": "https://github.com/JoelGMSec/PyShell/archive/refs/heads/main.zip"
-    }
+    "notes": [
+        "【工具类型】: Python工具",
+        "【主要功能】: Multiplatform Python WebShell.",
+        "【适用场景】: WebShell后渗透、远程命令执行、红队评估",
+        "【技术特点】: 基于Python开发，需Python环境"
+    ]
 }

@@ -3,20 +3,17 @@
     "description": "The addon VHDX containing modules for Xanmod Kernel for WSL2.",
     "license": "GPL-2.0",
     "post_install": [
-        "$vhdx_file = \"$original_dir\\bzImage-x64v2-addons.vhdx\"",
-        ". $bucketsdir\\$bucket\\scripts\\Set-VhdxAcl.ps1",
-        "Set-VhdxAcl -Path $vhdx_file",
         ". $bucketsdir\\$bucket\\scripts\\IniFile.ps1",
-        "$vhdx_path = $vhdx_file -replace \"\\\\\", \"\\\\\" # double all back-slashess",
+        "$vhdx_path=\"$original_dir\\bzImage-x64v2-addons.vhdx\" -replace \"\\\\\", \"\\\\\" # double all back-slashess",
         "$null = [IniFile]::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $vhdx_path, \"$env:USERPROFILE\\.wslconfig\")"
     ],
     "post_uninstall": [
         ". $bucketsdir\\$($install.bucket)\\scripts\\IniFile.ps1",
         "$null = [IniFile]::WritePrivateProfileString(\"wsl2\", \"kernelModules\", $null, \"$env:USERPROFILE\\.wslconfig\")"
     ],
-    "version": "7.1.4-1.1",
-    "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/7.1.4-locietta-WSL2-xanmod1.1/bzImage-x64v2-addons.vhdx.7z",
-    "hash": "d81413444f7d24845ba6558f29e4ae0d1063b3996d4db863e7eb2898316611a0",
+    "version": "6.18.5-1.1",
+    "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/6.18.5-locietta-WSL2-xanmod1.1/bzImage-x64v2-addons.vhdx",
+    "hash": "287ed724d045936ab69595f9f10db7d03c825c25071050c91e6c03e48695ed50",
     "checkver": {
         "script": [
             "$LATEST = ((curl.exe -sL -H \"Authorization: Bearer $(Get-GitHubToken)\" https://api.github.com/repos/Locietta/xanmod-kernel-WSL2/tags?per_page=60 | ConvertFrom-Json).name | Select-String 'lts' -NotMatch)[0]",
@@ -26,6 +23,6 @@
         "replace": "${1}-${2}"
     },
     "autoupdate": {
-        "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/$matchMain-locietta-WSL2-xanmod$matchXanmod/bzImage-x64v2-addons.vhdx.7z"
+        "url": "https://github.com/Locietta/xanmod-kernel-WSL2/releases/download/$matchMain-locietta-WSL2-xanmod$matchXanmod/bzImage-x64v2-addons.vhdx"
     }
 }
