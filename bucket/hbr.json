@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/KarylDAZE/Maa-HBR",
+    "version": "1.2.0",
+    "license": "MIT",
+    "hash": "9281713416f10dca0dff23c6e3d0348efe0f642a2e424adc69f5ab633c3043da",
+    "url": "https://github.com/KarylDAZE/Maa-HBR/releases/download/v1.2.0/Maa-HBR-win-x86_64-v1.2.0.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/KarylDAZE/Maa-HBR/releases/download/v$version/Maa-HBR-win-x86_64-v$version.zip",
+        "extract_dir": "Maa-HBR-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "post_install": [
+        "$scoopRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $dir))",
+        "$sourceMeta = Join-Path $scoopRoot 'buckets\\maa-bucket\\bucket\\hbr.meta.json'",
+        "& (Join-Path $scoopRoot 'buckets\\maa-bucket\\scripts\\metadata-writer.ps1') -SourceMetaFile $sourceMeta -TargetDir $dir -OutputFile 'maa-metadata.json'"
+    ]
+}

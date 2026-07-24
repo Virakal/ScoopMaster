@@ -1,0 +1,22 @@
+{
+    "version": "0.1.15",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/datamitsu/datamitsu/releases/download/v0.1.15/datamitsu_0.1.15_windows_amd64.zip",
+            "bin": [
+                "datamitsu.exe"
+            ],
+            "hash": "4b84df010ef66318f9ff4bbd137d461a820bde9730858a9f457c1de28f43d347"
+        },
+        "arm64": {
+            "url": "https://github.com/datamitsu/datamitsu/releases/download/v0.1.15/datamitsu_0.1.15_windows_arm64.zip",
+            "bin": [
+                "datamitsu.exe"
+            ],
+            "hash": "a7b33e48b7459616ac70256bc59b409533b1ead3b8015032de4342779645b183"
+        }
+    },
+    "homepage": "https://datamitsu.com/",
+    "license": "MIT",
+    "description": "Configuration management and binary distribution tool.\nJavaScript-configurable tool orchestration for linting and development workflows."
+}

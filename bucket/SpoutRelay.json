@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "0.8.8",
+    "description": "Spout RTSP Publisher",
+    "homepage": "https://github.com/tomacheese/SpoutRelay",
+    "license": "MIT",
+    "url": "https://github.com/tomacheese/SpoutRelay/releases/download/v0.8.8/spout-relay-v0.8.8-win64.zip",
+    "hash": "90864bf7e8dc20033cc3eaefda9d8f7dfe3ec8bc96d27b9dbe53355c3a6f81e0",
+    "shortcuts": [
+        [
+            "spout-relay.exe",
+            "SpoutRelay",
+            "--config config/config.json"
+        ]
+    ],
+    "persist": [
+        "config",
+        "logs",
+        "state"
+    ],
+    "post_install": "if (!(Test-Path \"$dir\\config\\config.json\")) { Copy-Item \"$dir\\config.example.json\" \"$dir\\config\\config.json\" }",
+    "checkver": {
+        "url": "https://api.github.com/repos/tomacheese/SpoutRelay/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v(.+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tomacheese/SpoutRelay/releases/download/v$version/spout-relay-v$version-win64.zip"
+    }
+}

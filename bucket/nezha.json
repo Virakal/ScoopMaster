@@ -1,0 +1,37 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "0.4.6",
+    "description": "Code Editor for the AI Agents Era. Run multiple Claude Code and Codex agents across projects on your machine",
+    "homepage": "https://github.com/hanshuaikang/nezha",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hanshuaikang/nezha/releases/download/v0.4.6/NeZha_0.4.6_x64_en-US.msi",
+            "hash": "6cbda4474eeedc899b50aa5aa6a84347216af1c7b70a0fea6da3d978877a98c9"
+        },
+        "arm64": {
+            "url": "https://github.com/hanshuaikang/nezha/releases/download/v0.4.6/NeZha_0.4.6_arm64_en-US.msi",
+            "hash": "bb259f0cd2e136b408f3456a86dc99b2d3ec135d384095431580aef95dd71526"
+        }
+    },
+    "extract_dir": "PFiles/NeZha",
+    "shortcuts": [
+        [
+            "nezha.exe",
+            "NeZha"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hanshuaikang/nezha"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hanshuaikang/nezha/releases/download/v$version/NeZha_$version_x64_en-US.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/hanshuaikang/nezha/releases/download/v$version/NeZha_$version_arm64_en-US.msi"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "version": "0.60.0",
+    "description": "An elegant Go board and SGF editor for a more civilized age",
+    "homepage": "https://github.com/SabakiHQ/Sabaki",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SabakiHQ/Sabaki/releases/download/v0.60.0/sabaki-v0.60.0-win-x64-portable.exe#/app.7z",
+            "hash": "67a9169cdf8c4e283f6670511a743884bfe334800d27f84583abd22624d29ab4"
+        }
+    },
+    "extract_to": "",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "Sabaki.exe",
+            "Sabaki"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SabakiHQ/Sabaki/releases/download/v$version/sabaki-v$version-win-x64-portable.exe#/app.7z"
+            }
+        }
+    }
+}

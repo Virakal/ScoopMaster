@@ -1,0 +1,90 @@
+{
+    "version": "0.3.5",
+    "description": "A native desktop browser for Claude Code, Codex, Antigravity CLI, and opencode session transcripts",
+    "homepage": "https://github.com/jerrywu001/cc-sessions-viewer",
+    "license": "MIT",
+    "notes": [
+        "App state: %LOCALAPPDATA%\\com.wuchao.cc-sessions-viewer\\",
+        "This package persists the app state directory through a Scoop-managed Junction link",
+        "Agent sessions and app-created trash/worktree metadata remain in their native ~/.claude/, ~/.codex/, ~/.gemini/, and opencode paths"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jerrywu001/cc-sessions-viewer/releases/download/v0.3.5/Sessions.Viewer_0.3.5_x64-setup.exe#/dl.7z",
+            "hash": "f3971a67fb42942b170545a37abfef38c3563596de0a71dce5140038ac738c54"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "bin": "cc-sessions-viewer.exe",
+    "shortcuts": [
+        [
+            "cc-sessions-viewer.exe",
+            "CC Sessions Viewer"
+        ]
+    ],
+    "post_install": [
+        "$source = Join-Path $env:LOCALAPPDATA 'com.wuchao.cc-sessions-viewer'",
+        "$target = Join-Path $persist_dir 'data'",
+        "ensure $target",
+        "",
+        "if (Test-Path $source) {",
+        "    $item = Get-Item -LiteralPath $source -Force",
+        "    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {",
+        "        $expected = [IO.Path]::GetFullPath($target).TrimEnd('\\')",
+        "        $actual = @($item.Target) | Select-Object -First 1",
+        "        if ($actual -and [IO.Path]::GetFullPath($actual).TrimEnd('\\') -ieq $expected) {",
+        "            Write-Host \"Junction already managed by Scoop: $source\"",
+        "            return",
+        "        }",
+        "        throw \"Path is an existing reparse point not managed by this package: $source\"",
+        "    }",
+        "    if (-not $item.PSIsContainer) {",
+        "        throw \"Path exists and is not a directory: $source\"",
+        "    }",
+        "",
+        "    & robocopy $source $target /E /R:1 /W:1 /NFL /NDL /NJH /NJS /NP | Out-Null",
+        "    $copyExitCode = $LASTEXITCODE",
+        "    if ($copyExitCode -gt 7) {",
+        "        throw \"Migration failed with robocopy exit code ${copyExitCode}: $source\"",
+        "    }",
+        "",
+        "    $backup = \"$source.backup-$(Get-Date -Format 'yyyyMMdd-HHmmss')\"",
+        "    Move-Item -LiteralPath $source -Destination $backup -Force",
+        "    Write-Host \"Backed up original directory: $backup\"",
+        "}",
+        "",
+        "try {",
+        "    New-Item -Path $source -ItemType Junction -Value $target -Force | Out-Null",
+        "} catch {",
+        "    if ($backup -and (Test-Path $backup) -and -not (Test-Path $source)) {",
+        "        Move-Item -LiteralPath $backup -Destination $source -Force",
+        "    }",
+        "    throw",
+        "}"
+    ],
+    "post_uninstall": [
+        "$source = Join-Path $env:LOCALAPPDATA 'com.wuchao.cc-sessions-viewer'",
+        "if (Test-Path $source) {",
+        "    $item = Get-Item -LiteralPath $source -Force",
+        "    if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {",
+        "        $target = Join-Path $persist_dir 'data'",
+        "        $expected = [IO.Path]::GetFullPath($target).TrimEnd('\\')",
+        "        $actual = @($item.Target) | Select-Object -First 1",
+        "        if ($actual -and [IO.Path]::GetFullPath($actual).TrimEnd('\\') -ieq $expected) {",
+        "            Remove-Item -LiteralPath $source -Force",
+        "        }",
+        "    }",
+        "}"
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/jerrywu001/cc-sessions-viewer"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jerrywu001/cc-sessions-viewer/releases/download/v$version/Sessions.Viewer_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

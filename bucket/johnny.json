@@ -1,13 +1,34 @@
 {
     "version": "2.2",
-    "description": "John the Ripper 密码破解程序的 GUI 前端",
-    "homepage": "https://github.com/openwall/johnny",
+    "description": "GUI frontend to John the Ripper password cracker (Scoop bucket by arch3rpro)",
+    "homepage": "https://openwall.info/wiki/john/johnny",
     "license": {
         "identifier": "GPL-2.0-or-later",
         "url": "https://github.com/openwall/johnny/blob/master/LICENSE"
     },
-    "url": "http://10.126.126.1/d/256785c9a2504fad850a/files/?p=%2Fjohnny_2.2.zip&dl=1",
-    "hash": "32A3B5FAB63C9983CE71F42E90B3987E76505A0326E1B8E69070FAA0A1E00654",
+    "architecture": {
+        "64bit": {
+            "url": "https://openwall.info/wiki/_media/john/johnny/johnny_2.2_win.zip",
+            "hash": "c588b56648c375a3d820a22b6aeec094fb90b399287f1a8cf31a9d42b0149287"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (Test-Path \"$dir\\johnny_2.2_win.zip\") {",
+            "    Expand-7zipArchive \"$dir\\johnny_2.2_win.zip\" \"$dir\"",
+            "    Remove-Item \"$dir\\johnny_2.2_win.zip\" -Force",
+            "}",
+            "if (Test-Path \"$dir\\johnnyInstaller.exe\") {",
+            "    Write-Host \"安装程序已解压到: $dir\\johnnyInstaller.exe\" -ForegroundColor Yellow",
+            "    Write-Host \"重要提示: 请确保安装时选择以下目录: $dir\" -ForegroundColor Cyan",
+            "    Write-Host \"安装程序即将启动，请按照屏幕提示完成安装.\" -ForegroundColor Green",
+            "    Start-Process \"$dir\\johnnyInstaller.exe\" -NoNewWindow -Wait",
+            "} else {",
+            "    throw 'Installer executable not found in: $dir'",
+            "}"
+        ]
+    },
+    "notes": "此安装脚本由arch3rPro独家提供，请确保执行时，将Johnny安装到脚本中的目录以保证软件正常运行.",
     "bin": "johnny.exe",
     "shortcuts": [
         [
@@ -15,10 +36,15 @@
             "Johnny"
         ]
     ],
-    "notes": [
-        "【工具类型】: 密码破解工具",
-        "【主要功能】: John the Ripper密码破解程序的图形化前端",
-        "【适用场景】: 密码破解、安全审计、渗透测试",
-        "【技术特点】: 基于Qt开发的GUI工具，支持多种密码哈希格式"
-    ]
+    "checkver": {
+        "url": "https://openwall.info/wiki/john/johnny",
+        "regex": "johnny_(\\d+\\.\\d+)_win\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://openwall.info/wiki/_media/john/johnny/johnny_$version_win.zip",
+        "hash": {
+            "url": "https://openwall.info/wiki/john/johnny",
+            "regex": "SHA256\\s+hash:\\s+([a-fA-F0-9]{64})"
+        }
+    }
 }

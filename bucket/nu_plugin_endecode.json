@@ -1,0 +1,25 @@
+{
+    "version": "0.113.1",
+    "description": "Nushell plugin for more encoding schemes for encode and decode",
+    "homepage": "https://github.com/kaathewisegit/nugins",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kaathewisegit/nugins/releases/download/v0.113.1/nu_plugin_endecode-v0.113.1-x86_64-pc-windows-msvc.zip",
+            "hash": "2a4092561ea678e15c2ec2f9ddc8a726ff524c4e45cda625c45210651910f79d"
+        }
+    },
+    "post_install": [
+        "Write-Host; Write-Host; Write-Host 'RUN THIS COMMAND IN NUSHELL TO ADD AND USE THE PLUGIN' -ForegroundColor Green -BackgroundColor Black",
+        "Write-Host 'plugin add '$dir'\\nu_plugin_endecode.exe' -ForegroundColor Green -BackgroundColor Black",
+        "Write-Host 'plugin use '$dir'\\nu_plugin_endecode.exe' -ForegroundColor Green -BackgroundColor Black; Write-Host"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kaathewisegit/nugins/releases/download/v$version/nu_plugin_endecode-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

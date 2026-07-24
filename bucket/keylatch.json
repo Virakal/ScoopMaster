@@ -1,0 +1,16 @@
+{
+    "version": "0.9.4",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/keylatch/keylatch/releases/download/v0.9.4/keylatch_0.9.4_windows_amd64.zip",
+            "bin": [
+                "keylatchd.exe",
+                "keylatch.exe"
+            ],
+            "hash": "368db3c43d545511330148c899d2fea26e7b6e465b6b5df37203728175f1fdd9"
+        }
+    },
+    "homepage": "https://github.com/keylatch/keylatch",
+    "license": "Apache-2.0",
+    "description": "Zero-trust credential vault CLI for AI-assisted workflows"
+}

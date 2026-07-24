@@ -1,0 +1,26 @@
+{
+    "version": "1.27.0",
+    "description": "Bringing the real world to Web3 with a scalable, decentralized and programmable DLT infrastructure.",
+    "homepage": "https://github.com/iotaledger/iota",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/iotaledger/iota/releases/download/v1.27.0/iota-v1.27.0-windows-x86_64.tgz",
+            "hash": "1b056f0e9a2ab5af3663390ebbe0cf66828f51543606c082b04c9a67ecd2d8bc"
+        }
+    },
+    "env_add_path": ".",
+    "depends": "main/postgresql",
+    "checkver": {
+        "url": "https://api.github.com/repos/iotaledger/iota/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "\"v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/iotaledger/iota/releases/download/v$version/iota-v$version-windows-x86_64.tgz"
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "2.1.8",
+    "description": "KataGo analysis GUI and SGF editor",
+    "homepage": "https://github.com/rooklift/ogatak",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rooklift/ogatak/releases/download/v2.1.8/ogatak-2.1.8-windows.zip",
+            "hash": "9741e600d3ee67f78753e8a3f1139cace0a7825799ca01d014738ec49ac28550"
+        }
+    },
+    "extract_dir": "ogatak-2.0.9-windows",
+    "shortcuts": [
+        [
+            "ogatak.exe",
+            "Ogatak"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rooklift/ogatak/releases/download/v$version/ogatak-$version-windows.zip",
+                "extract_dir": "ogatak-$version-windows"
+            }
+        }
+    }
+}

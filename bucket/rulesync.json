@@ -1,0 +1,22 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "15.0.0",
+    "description": "A Utility CLI for AI Coding Agents",
+    "homepage": "https://github.com/dyoshikawa/rulesync",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dyoshikawa/rulesync/releases/download/v15.0.0/rulesync-windows-x64.exe#/rulesync.exe",
+            "hash": "70a9b4a4a32ed5bc9f4bf319973b0c1fe4219a3ce4c3da51d822e8fe09420129"
+        }
+    },
+    "bin": "rulesync.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dyoshikawa/rulesync/releases/download/v$version/rulesync-windows-x64.exe#/rulesync.exe"
+            }
+        }
+    }
+}

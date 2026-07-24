@@ -1,0 +1,27 @@
+{
+    "version": "8.12.30-19",
+    "description": "1Password Desktop GUI Beta Release",
+    "homepage": "https://1password.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://1password.com/legal/terms-of-service/"
+    },
+    "url": "https://downloads.1password.com/win/1PasswordSetup-8.12.30-19.BETA.msi",
+    "hash": "d0cbd209d5f9120afac2eddd297644e204fd6f03de47f30709f0f52b47934140",
+    "extract_dir": "ProgramFiles64Folder\\1Password",
+    "shortcuts": [
+        [
+            "app/8/1Password.exe",
+            "1Password"
+        ]
+    ],
+    "pre_uninstall": "if (Get-Process -name 1password -ea 0) {stop-process -name 1password -force -ea 0; wait-process -name 1password -ea 0; start-sleep 0.5}",
+    "checkver": {
+        "url": "https://releases.1password.com/windows/beta/index.xml",
+        "regex": "https://releases.1password.com/windows/beta/([\\d.-]+)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://downloads.1password.com/win/1PasswordSetup-$version.BETA.msi"
+    }
+}

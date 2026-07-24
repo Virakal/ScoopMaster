@@ -1,28 +1,69 @@
 {
-    "version": "0.3.10",
-    "description": "Archon CLI — workflow runner",
-    "homepage": "https://github.com/coleam00/Archon",
-    "license": "MIT",
+    "version": "9.3.66",
+    "description": "The complete toolkit for mastering endgame content.",
+    "homepage": "https://www.archon.gg/download",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.archon.gg/privacy-policy"
+    },
+    "url": "https://github.com/RPGLogs/Uploaders-archon/releases/download/v9.3.66/archon-v9.3.66.exe#/dl.7z",
+    "hash": "f497dd23db7443e32c0f653f6e3cc6bd47c37bb978965c288d0075f2715f2853",
+    "extract_dir": "$PLUGINSDIR",
     "architecture": {
+        "32bit": {
+            "installer": {
+                "script": [
+                    "Remove-Item \"$dir\\*\" -Exclude 'app-32.7z'",
+                    "Expand-7zipArchive \"$dir\\app-32.7z\" \"$dir\" -Removal"
+                ]
+            }
+        },
         "64bit": {
-            "url": "https://github.com/coleam00/Archon/releases/download/v0.3.10/archon-windows-x64.exe",
-            "hash": "e81247b7e46b4c1c34627efaee55dfc7b618e2275c9f24257744b4ee27ce63cd"
+            "installer": {
+                "script": [
+                    "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z'",
+                    "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+                ]
+            }
         }
     },
-    "bin": [
+    "pre_install": [
+        "$targetPath = \"$env:LocalAppData\\Programs\\Archon App\"",
+        "if (Test-Path \"$targetPath\") {",
+        "    Remove-Item -Path \"$targetPath\" -Force -Recurse",
+        "}",
+        "New-Item \"$targetPath\" -ItemType Junction -Target \"$dir\" | Out-Null"
+    ],
+    "post_install": [
+        "ensure \"$persist_dir\" | Out-Null",
+        "$targetPath = \"$env:AppData\\Archon App\"",
+        "$linkType = (Get-Item -Path \"$targetPath\" -ErrorAction SilentlyContinue).LinkType",
+        "if (Test-Path \"$targetPath\") {",
+        "    if ($linkType -eq 'Junction') {",
+        "        Remove-Item -Path \"$targetPath\" -Force",
+        "    } else {",
+        "        Get-ChildItem -Path \"$targetPath\" -Force | Move-Item -Destination $persist_dir -Force",
+        "        Remove-Item -Path \"$targetPath\" -Force -Recurse",
+        "    }",
+        "}",
+        "New-Item \"$targetPath\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+    ],
+    "uninstaller": {
+        "script": [
+            "Remove-Item -Path \"$env:LocalAppData\\Programs\\Archon App\" -Force -Recurse -ErrorAction SilentlyContinue",
+            "Remove-Item -Path \"$env:AppData\\Archon App\" -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
+    "shortcuts": [
         [
-            "archon-windows-x64.exe",
-            "archon"
+            "Archon App.exe",
+            "Archon App"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/coleam00/Archon"
+        "github": "https://github.com/RPGLogs/Uploaders-archon"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/coleam00/Archon/releases/download/v$version/archon-windows-x64.exe"
-            }
-        }
+        "url": "https://github.com/RPGLogs/Uploaders-archon/releases/download/v$version/archon-v$version.exe#/dl.7z"
     }
 }

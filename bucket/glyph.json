@@ -1,0 +1,30 @@
+{
+    "version": "0.17.2",
+    "description": "Cross-platform markdown viewer",
+    "homepage": "https://glyph-md.github.io",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hamidfzm/glyph/releases/download/v0.17.2/Glyph_0.17.2_x64_en-US.msi",
+            "hash": "2858c154aad8da161ca8910411034bdf1166594e08b7b363492d83ed250777f9"
+        }
+    },
+    "extract_dir": "PFiles\\Glyph",
+    "bin": "glyph.exe",
+    "shortcuts": [
+        [
+            "glyph.exe",
+            "Glyph"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hamidfzm/glyph"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hamidfzm/glyph/releases/download/v$version/Glyph_${version}_x64_en-US.msi"
+            }
+        }
+    }
+}

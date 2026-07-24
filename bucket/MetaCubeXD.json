@@ -1,0 +1,20 @@
+{
+    "version": "1.270.0",
+    "description": "MetaCubeXD",
+    "homepage": "https://github.com/MetaCubeX/metacubexd",
+    "license": "MIT",
+    "url": "https://github.com/MetaCubeX/metacubexd/releases/download/v1.270.0/compressed-dist.tgz",
+    "hash": "9906ffd9058d0ded762c7ca68a58caeef359d5918fee82c672daa4410ffcf815",
+    "post_install": [
+        "if (Test-Path \"$scoopdir\\apps\\Mihomo\") {",
+        "    if (!(Test-Path \"$scoopdir\\apps\\Mihomo\\current\\config\\ui\")) {",
+        "        Remove-Item \"$scoopdir\\apps\\Mihomo\\current\\config\\ui\" -Force -Recurse",
+        "    }",
+        "    Copy-Item -Path \"$dir\" \"$scoopdir\\apps\\Mihomo\\current\\config\\ui\" -Recurse",
+        "}"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/MetaCubeX/metacubexd/releases/download/v$version/compressed-dist.tgz"
+    }
+}
