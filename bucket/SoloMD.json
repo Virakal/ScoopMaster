@@ -1,16 +1,15 @@
 {
     "version": "4.10.1",
-    "description": "SoloMD — a lightweight, cross-platform Markdown + plain text editor. One file. One window. Just write.",
-    "homepage": "https://solomd.app/",
+    "description": "A lightweight Markdown and plain text editor built with Tauri 2.",
+    "homepage": "https://solomd.app",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhitongblog/solomd/releases/download/v4.10.1/SoloMD_4.10.1_x64_en-US.msi",
-            "hash": "41962dec79af5777ef8d988f0f4f50c35093f701d542e443de6d3f0b1594a29e"
+            "url": "https://github.com/zhitongblog/solomd/releases/download/v4.10.1/SoloMD_4.10.1_x64-setup.exe#/dl.7z",
+            "hash": "1e3010609ac34c22aa5ab92210a8417612578e40cb27436fe30a2d7c1fec441d"
         }
     },
-    "extract_dir": "PFiles\\SoloMD",
-    "bin": "SoloMD.exe",
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse -ErrorAction Ignore",
     "shortcuts": [
         [
             "SoloMD.exe",
@@ -23,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
+                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
