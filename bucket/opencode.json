@@ -1,12 +1,12 @@
 {
-    "version": "1.18.6",
+    "version": "1.18.7",
     "description": " AI coding agent, built for the terminal.",
     "homepage": "https://opencode.ai",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sst/opencode/releases/download/v1.18.6/opencode-windows-x64.zip",
-            "hash": "78431cb39138e987a020d6b36fb7cece0aadc1f32582fed618d9ea29aa6c3e8f"
+            "url": "https://github.com/sst/opencode/releases/download/v1.18.7/opencode-windows-x64.zip",
+            "hash": "54598e262c0744e6c3b9ddba85764917a48d366a9aa6c817c2feb9d34b3f1105"
         }
     },
     "bin": "opencode.exe",
