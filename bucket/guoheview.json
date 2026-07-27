@@ -16,6 +16,9 @@
             "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item -ItemType Directory -Path $persist_dir -Force | Out-Null; [System.IO.File]::WriteAllText(\"$persist_dir\\config.ini\", '') }"
         ]
     },
-    "shortcuts": [["GuoheView.exe", "果核看图"]],
+    "shortcuts": [
+        ["GuoheView.exe", "GuoheView"],
+        ["GuoheView.exe", "果核看图"]
+    ],
     "persist": ["config.ini", "plugins"]
 }
