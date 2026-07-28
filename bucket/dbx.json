@@ -1,31 +1,26 @@
 {
-    "version": "0.5.67",
-    "description": "Lightweight, cross-platform database client",
-    "homepage": "https://dbxio.com",
-    "license": "AGPL-3.0-only",
+    "version": "0.5.68",
+    "description": "Open-source, lightweight, cross-platform database client. Supports MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, ClickHouse, SQL Server",
+    "homepage": "https://github.com/t8y2/dbx",
+    "license": "Freeware",
+    "notes": "config location: C:\\Users\\<your username>\\AppData\\Local\\com.dbx.app - https://github.com/vicrack/scoop-bucket/blob/master/bucket/dbx.json https://github.com/vicrack/scoop-bucket",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.67/DBX_0.5.67_x64-portable.zip",
-            "hash": "571fd1d42a55e4bca6b6109017fc8d70cdefb3ce7911757ae3eb6e792e173e07"
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.68/dbx_0.5.68_x64-setup.exe#/dl.7z",
+            "hash": "088a0d793ee76c36236a6e33cf2e9d43b90f4b7695a054847558d630c0a7badd"
         }
     },
     "shortcuts": [
         [
-            "DBX.exe",
-            "DBX"
+            "dbx.exe",
+            "Dbx"
         ]
     ],
-    "env_set": {
-        "DBX_DATA_DIR": "$dir\\data"
-    },
-    "persist": "data",
-    "checkver": {
-        "github": "https://github.com/t8y2/dbx"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-portable.zip"
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/dbx_$version_x64-setup.exe#/dl.7z"
             }
         }
     }
