@@ -1,32 +1,24 @@
 {
-    "version": "3.7.2",
-    "description": "A lightweight, open-source, fully local alternative to Logitech Options+ for remapping Logitech HID++ mice.",
-    "homepage": "https://github.com/TomBadash/Mouser",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/TomBadash/Mouser/releases/download/v3.7.2/Mouser-Windows.zip",
-            "hash": "43f5ea0e8ce33d0fa6b41e4882fa671cbf2b7541f6918068bf7e5590e8f34848"
-        }
-    },
-    "extract_dir": "Mouser",
-    "shortcuts": [
-        [
-            "Mouser.exe",
-            "Mouser"
-        ]
-    ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\Mouser\", \"$env:LOCALAPPDATA\\Mouser\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "notes": [
-        "Mouser is NOT portable.",
-        "Settings are stored in '%APPDATA%\\Mouser', and will be purged during uninstallation with --purge flag."
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/TomBadash/Mouser/releases/download/v$version/Mouser-Windows.zip"
-            }
-        }
-    }
+   "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+   "version": "3.7.2",
+   "description": "A lightweight, open-source, fully local alternative to Logitech Options+ for remapping Logitech HID++ mice",
+   "homepage": "https://github.com/TomBadash/Mouser",
+   "license": {
+      "identifier": "MIT",
+      "url": "https://github.com/TomBadash/Mouser/blob/master/LICENSE"
+   },
+   "url": "https://github.com/TomBadash/Mouser/releases/download/v3.7.2/Mouser-Windows.zip",
+   "hash": "43f5ea0e8ce33d0fa6b41e4882fa671cbf2b7541f6918068bf7e5590e8f34848",
+   "shortcuts": [
+      [
+         "Mouser/Mouser.exe",
+         "Mouser"
+      ]
+   ],
+   "checkver": {
+      "github": "https://github.com/TomBadash/Mouser"
+   },
+   "autoupdate": {
+      "url": "https://github.com/TomBadash/Mouser/releases/download/v$version/Mouser-Windows.zip"
+   }
 }
