@@ -1,17 +1,17 @@
 {
-  "version": "0.25.0",
+  "version": "0.26.0",
   "description": "Portable, vendor-neutral context for AI (contextd)",
   "homepage": "https://github.com/orkcom-tech/contextverse",
   "license": "BUSL-1.1",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/orkcom-tech/contextverse/releases/download/v0.25.0/contextd_0.25.0_windows_amd64.zip",
-      "hash": "0b2339892657ea87b44f7d7d82b496cec6b22fcfd47d4fb13de3f2cfa0a1c2ee",
+      "url": "https://github.com/orkcom-tech/contextverse/releases/download/v0.26.0/contextd_0.26.0_windows_amd64.zip",
+      "hash": "6a276ee037578802529df94c16693ded2a795bb2193594cc36799b584f6f83cf",
       "bin": "contextd.exe"
     },
     "arm64": {
-      "url": "https://github.com/orkcom-tech/contextverse/releases/download/v0.25.0/contextd_0.25.0_windows_arm64.zip",
-      "hash": "e0d61901fa9613d11e9309e88799b95355ccde4eefaa4e9de8230bde65981018",
+      "url": "https://github.com/orkcom-tech/contextverse/releases/download/v0.26.0/contextd_0.26.0_windows_arm64.zip",
+      "hash": "f6854761b107aef1fd43d339c4ae4302d67a3c41524ae964af160d3a982997b2",
       "bin": "contextd.exe"
     }
   },
