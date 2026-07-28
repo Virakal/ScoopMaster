@@ -22,10 +22,10 @@
         "roms"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/HarbourMasters/Starship/releases/latest",
+        "url": "https://api.github.com/repos/HarbourMasters/Starship/releases",
         "jsonpath": {
-            "version": "$.tag_name",
-            "download": "$.assets[?(@.name =~ /.+Windows\\.zip$/i)].browser_download_url"
+            "version": "$.[0].tag_name",
+            "download": "$.[0].assets[?(@.name =~ /.+Windows\\.zip$/i)].browser_download_url"
         },
         "regex": "v([\\d\\.]+\\d+)"
     },
