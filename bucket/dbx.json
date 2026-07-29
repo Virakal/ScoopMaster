@@ -1,31 +1,39 @@
 {
-    "version": "0.5.68",
-    "description": "Lightweight, cross-platform database client",
-    "homepage": "https://dbxio.com",
-    "license": "AGPL-3.0-only",
+    "version": "0.5.69",
+    "description": "Open-source database management tool",
+    "homepage": "https://github.com/t8y2/dbx",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.68/DBX_0.5.68_x64-portable.zip",
-            "hash": "4c80d69a4237c1d8af2b7dedf1c85fd016a3b10344b00a12719859a697add0ae"
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.69/DBX_0.5.69_x64-setup.exe",
+            "hash": "7129d0f98bc44998d352144b528fa38378d386f363472d27ea5736808bf3dea4"
+        },
+        "arm64": {
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.69/DBX_0.5.69_arm64-setup.exe",
+            "hash": "cb9053f6373aa96bb4b44f840d8365e1e164a9245cb429b7a0a0099c85e885a9"
         }
     },
-    "shortcuts": [
-        [
-            "DBX.exe",
-            "DBX"
+    "innosetup": false,
+    "installer": {
+        "args": [
+            "/S",
+            "/D=$dir"
         ]
-    ],
-    "env_set": {
-        "DBX_DATA_DIR": "$dir\\data"
     },
-    "persist": "data",
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": "/S"
+    },
     "checkver": {
         "github": "https://github.com/t8y2/dbx"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-portable.zip"
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_arm64-setup.exe"
             }
         }
     }
