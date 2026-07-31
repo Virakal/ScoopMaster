@@ -1,17 +1,17 @@
 {
-    "version": "1.17.0",
+    "version": "1.17.1",
     "description": "GTP engine and self-play learning in Go",
     "homepage": "https://github.com/lightvector/KataGo",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/lightvector/KataGo/releases/download/v1.17.0/katago-v1.17.0-opencl-windows-x64.zip",
-                "https://github.com/lightvector/KataGo/releases/download/v1.17.0/katago-v1.17.0-opencl-windows-x64+bs50.zip"
+                "https://github.com/lightvector/KataGo/releases/download/v1.17.1/katago-v1.17.1-opencl-windows-x64.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.17.1/katago-v1.17.1-opencl-windows-x64+bs50.zip"
             ],
             "hash": [
-                "e8489616da8760855182b922fa115dec996c626e063321b920eda2722b26ff84",
-                "57a685e066ab3d03df98cb4f15fa10cedddf62a4635729ba90dc3c4d63f91a4a"
+                "68d0a9b11ef7e3c1ddfc5bcd400306ca66c3770dd67a22cb377d3aaaf32e8c66",
+                "aaabf0e200a6665c34a51729b5a71a1881f11ba3821da44c6be015fa17c760b6"
             ]
         }
     },
