@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/yetone/alma-releases/releases/download/v0.0.925/alma-0.0.925-win-x64.exe#/dl.7z",
-            "hash": "sha512:6833a0fe05b01d569e33d60d62c2836de3a970a127330fefca9f399a9acccd06f3a48f4b95d7b9bb4aac3e7af0b6031c4f93a119a60ee8f88c5e65884f9d098a",
+            "hash": "a0649d18031e58dfd5ec500e747fef651d399b709b085f0a004e370937a5b57c",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -27,11 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "find": "sha512:\\s+(.*)"
-                }
+                "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z"
             }
         }
     }
