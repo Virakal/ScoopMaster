@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
-    "version": "0.9.2",
+    "version": "0.10.0",
     "description": "A post-modern terminal file manager.",
     "homepage": "https://github.com/NSPC911/rovr",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/NSPC911/rovr/releases/download/v0.9.2/rovr-windows-x64-nuitka.zip",
-            "hash": "60e246ef81d0cc5c845e5169d3390fc2b450656282a113ed0b6feec4c86bd128"
+            "url": "https://github.com/NSPC911/rovr/releases/download/v0.10.0/rovr-windows-x64-nuitka.zip",
+            "hash": "680c9229765d5800fe236a7a3daca6edd369202de3cea8d3a427bc5eb70a6f0c"
         },
         "arm64": {
             "url": "https://github.com/NSPC911/rovr/releases/download/v0.7.0/rovr-windows-arm-nuitka.zip",
