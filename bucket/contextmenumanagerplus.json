@@ -21,6 +21,21 @@
         }
     },
     "innosetup": true,
+    "installer": {
+        "script": [
+            "# handle runtime cache",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:ProgramData\\ContextMenuMgr\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:ProgramData\\ContextMenuMgr\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
     "bin": "ContextMenuManagerPlus.exe",
     "shortcuts": [
         [
@@ -28,7 +43,6 @@
             "ContextMenuManagerPlus"
         ]
     ],
-    "persist": "Data",
     "checkver": {
         "github": "https://api.github.com/repos/PLFJY/ContextMenuMgr/releases/latest",
         "jp": "$.tag_name",
