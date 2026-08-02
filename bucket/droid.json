@@ -1,25 +1,25 @@
 {
-    "version": "0.186.0",
-    "description": "An native software development agents that work everywhere you do.",
-    "homepage": "https://factory.ai/",
-    "license": "unknown",
-    "depends": "ripgrep",
-    "architecture": {
-        "64bit": {
-            "url": "https://downloads.factory.ai/factory-cli/releases/0.186.0/windows/x64/droid.exe",
-            "hash": "a377fdf9fe357002705baa91dd610652ba7df44f28c8798fc5c22419242f80f3"
-        }
-    },
-    "bin": "droid.exe",
-    "checkver": {
-        "url": "https://app.factory.ai/cli/windows",
-        "regex": "\\$version = \\\"([\\d.]+)\\\""
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://downloads.factory.ai/factory-cli/releases/$version/windows/x64/droid.exe"
-            }
-        }
+  "version": "0.186.0",
+  "description": "An native software development agents that work everywhere you do.",
+  "homepage": "https://factory.ai/",
+  "license": "unknown",
+  "depends": "ripgrep",
+  "architecture": {
+    "64bit": {
+      "url": "https://downloads.factory.ai/factory-cli/releases/0.186.0/windows/x64/droid.exe",
+      "hash": "a377fdf9fe357002705baa91dd610652ba7df44f28c8798fc5c22419242f80f3"
     }
+  },
+  "bin": "droid.exe",
+  "checkver": {
+    "url": "https://app.factory.ai/cli/windows",
+    "regex": "\\$version = \\\"([\\d.]+)\\\""
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://downloads.factory.ai/factory-cli/releases/$version/windows/x64/droid.exe"
+      }
+    }
+  }
 }

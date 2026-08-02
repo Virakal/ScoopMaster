@@ -15,10 +15,7 @@
         "    Copy-Item \"$dir\\OpenSteamTool.dll\" $steamDir -Force",
         "}"
     ],
-    "checkver": {
-        "github": "https://api.github.com/repos/OpenSteam001/OpenSteamTool/releases/latest",
-        "regex": "\"tag_name\":\"(?:v)?([\\d.]+)\""
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/OpenSteam001/OpenSteamTool/releases/download/$version/OpenSteamTool-$version-Release.zip"
     }
