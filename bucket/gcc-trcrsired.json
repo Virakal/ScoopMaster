@@ -1,12 +1,12 @@
 {
-    "version": "20260709-gcc17",
+    "version": "20260804-gcc17",
     "description": "GNU Compiler Collection and binutils (trcrsired build)",
     "homepage": "https://github.com/trcrsired/gcc-releases",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trcrsired/gcc-releases/releases/download/20260709-gcc17/x86_64-w64-mingw32.x86_64-w64-mingw32.tar.xz#/dl.xz",
-            "hash": "a0390a709ecbe5c2789707f7223b5c003337c024b3ea5c2cc6ff6dc23aeb4716"
+            "url": "https://github.com/trcrsired/gcc-releases/releases/download/20260804-gcc17/x86_64-w64-mingw32.x86_64-w64-mingw32.tar.xz#/dl.xz",
+            "hash": "df1bd6764362d7c29414c233d5138dfab3fe85737182ee8e2bf214831c9b9dfa"
         }
     },
     "pre_install": [
@@ -23,7 +23,10 @@
         "Get-ChildItem -Path \"$dir\\lib\" -Filter *.dll | Move-Item -Destination \"$dir\\bin\""
     ],
     "env_add_path": "bin",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/trcrsired/gcc-releases/releases",
+        "jsonpath": "$[0].tag_name"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
