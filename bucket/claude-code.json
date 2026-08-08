@@ -1,68 +1,49 @@
 {
-    "version": "2.1.225",
-    "description": "An agentic coding tool that lives in your terminal",
-    "homepage": "https://github.com/anthropics/claude-code",
+    "version": "2.1.226",
+    "description": "Agentic coding assistant by Anthropic — write, edit, debug, and explore your codebase in your terminal",
+    "homepage": "https://code.claude.com",
     "license": "Proprietary",
-    "suggest": {
-        "git": "main/git"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.225/win32-x64/claude.exe",
-            "hash": "234a59d6ea4262bb4af65d28acf19d795906295d11249750161875fbede3576d"
+            "url": "https://downloads.claude.ai/claude-code-releases/2.1.226/win32-x64/claude.exe#/claude.exe",
+            "hash": "cec4e772e8237357554a8a5a86f821db9081e9fb05499bc4e5fd14b73f48708c"
         }
     },
     "bin": "claude.exe",
-    "env_set": {
-        "CLAUDE_CODE_GIT_BASH_PATH": "$env:GIT_INSTALL_ROOT\\bin\\bash.exe"
-    },
+    "pre_install": [
+        "# 将 ~/.claude 软链接到 persist/data，升级时数据不丢失",
+        "$claude_dir = Join-Path $env:USERPROFILE \".claude\"",
+        "$persist_data = Join-Path $persist_dir \"data\"",
+        "& \"$bucketsdir\\\\code\\\\scripts\\\\link.ps1\" $claude_dir $persist_data",
+        "# 确保 .local/bin 存在（Claude Code 自检依赖此路径）",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "if (-not (Test-Path $localBin)) { New-Item -ItemType Directory -Path $localBin -Force | Out-Null }"
+    ],
     "post_install": [
-        "$localBinDir = \"$env:USERPROFILE\\.local\\bin\"",
-        "if (-not (Test-Path $localBinDir)) {",
-        "    New-Item -ItemType Directory -Path $localBinDir -Force | Out-Null",
-        "    Write-Host \"Created directory: $localBinDir\" -ForegroundColor Green",
-        "}",
-        "$symlinkPath = Join-Path $localBinDir 'claude.exe'",
-        "if (Test-Path $symlinkPath) {",
-        "    Remove-Item $symlinkPath -Force",
-        "}",
-        "New-Item -ItemType SymbolicLink -Path $symlinkPath -Target \"$dir\\claude.exe\" -Force | Out-Null",
-        "Write-Host \"Created symlink: $symlinkPath -> $dir\\claude.exe\" -ForegroundColor Green"
+        "# 复制 scoop shim + .shim 配置到 ~/.local/bin（Claude Code 自检需要）",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "# 直接从 E:\\scoop\\shims\\ 复制（已包含正确的 .shim 配置）",
+        "Copy-Item \"$env:SCOOP\\shims\\claude.exe\" \"$localBin\\claude.exe\" -Force",
+        "Copy-Item \"$env:SCOOP\\shims\\claude.shim\" \"$localBin\\claude.shim\" -Force"
     ],
     "post_uninstall": [
-        "$symlinkPath = Join-Path \"$env:USERPROFILE\\.local\\bin\" 'claude.exe'",
-        "if (Test-Path $symlinkPath) {",
-        "    Remove-Item $symlinkPath -Force",
-        "    Write-Host \"Removed symlink: $symlinkPath\" -ForegroundColor Yellow",
-        "}"
+        "## 卸载时清理",
+        "$claude_dir = Join-Path $env:USERPROFILE \".claude\"",
+        "& \"$bucketsdir\\\\code\\\\scripts\\\\unlink.ps1\" $claude_dir",
+        "# 清理 .local/bin 中的 shim 副本",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "@(\"$localBin\\claude.exe\", \"$localBin\\claude.shim\") | ForEach-Object { if (Test-Path $_) { Remove-Item -Force $_ -ErrorAction SilentlyContinue } }"
     ],
-    "notes": [
-        "Claude Code has been installed and symlinked to ~/.local/bin/claude.exe",
-        "",
-        "Make sure ~/.local/bin is in your PATH:",
-        "  $env:PATH += \";$env:USERPROFILE\\.local\\bin\"",
-        "",
-        "To make it permanent, add to your PowerShell profile:",
-        "  notepad $PROFILE",
-        "",
-        "Usage:",
-        "  claude [command]",
-        "",
-        "For help, run: claude --help"
-    ],
+    "persist": "data",
     "checkver": {
-        "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest",
-        "regex": "([\\d.]+)"
+        "url": "https://downloads.claude.ai/claude-code-releases/latest",
+        "regex": "^([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/win32-x64/claude.exe"
+                "url": "https://downloads.claude.ai/claude-code-releases/$version/win32-x64/claude.exe#/claude.exe"
             }
-        },
-        "hash": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/manifest.json",
-            "jsonpath": "$.platforms['win32-x64'].checksum"
         }
     }
 }
