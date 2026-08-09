@@ -1,30 +1,27 @@
 {
-    "version": "0.8.2",
-    "description": "The world's first open-source AI-native vector design tool with concurrent Agent Teams. Design-as-Code alternative to Pencil",
-    "homepage": "https://github.com/ZSeven-W/openpencil",
-    "license": "MIT",
+    "version": "1.0.1",
+    "description": "Safety-first disk cleaner and disk space analyzer for macOS and Windows, with a duplicate file finder, large file cleanup, and app uninstaller",
+    "homepage": "https://github.com/harry0703/MangoDisk",
+    "license": "GPL-3.0-only",
     "notes": [
-        "OpenPencil 是一个开源 AI 原生矢量设计工具（0.8.0 起由 Electron 重写为 Rust 原生程序）",
-        "用户数据目录 1：%APPDATA%\\openpencil\\（settings.json、window.json、主题预设等）",
-        "用户数据目录 2：%USERPROFILE%\\.openpencil\\（ui.json、git-auth.json、MCP 端口等）",
-        "本包会将这两个目录持久化到 Scoop 的 persist，并在原路径创建 Junction 指向 persist"
+        "MangoDisk 是一个磁盘清理与空间分析工具，内置重复文件查找、大文件清理和应用卸载",
+        "用户数据目录 1：%APPDATA%\\app.mangodisk.desktop\\（settings.json、installation.json、.window-state.json）",
+        "用户数据目录 2：%LOCALAPPDATA%\\app.mangodisk.desktop\\（data、cache、runtime、logs）",
+        "本包会将这两个目录持久化到 Scoop 的 persist，并在原路径创建 Junction 指向 persist",
+        "应用内置自动更新（mangodisk.app），建议在设置中关闭，避免与 Scoop 的更新机制冲突"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ZSeven-W/openpencil/releases/download/v0.8.2/openpencil-desktop-windows-x86_64.zip",
-            "hash": "e09601fd4980cbcbab69a4c46d3b8a6ca3d9771c4fbd116ead3137ca1bcf808f"
+            "url": "https://github.com/harry0703/MangoDisk/releases/download/v1.0.1/MangoDisk-1.0.1-windows.exe#/dl.7z",
+            "hash": "7d2e56ed379dfa8fb1ee1330bdf16ac6d44972727938530c77937225ebd5c6a7"
         }
     },
-    "bin": [
-        [
-            "openpencil-desktop.exe",
-            "openpencil"
-        ]
-    ],
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "bin": "MangoDisk.exe",
     "shortcuts": [
         [
-            "openpencil-desktop.exe",
-            "OpenPencil"
+            "MangoDisk.exe",
+            "MangoDisk"
         ]
     ],
     "post_install": [
@@ -62,26 +59,21 @@
         "    New-Item -Path $source -ItemType Junction -Value $target | Out-Null",
         "}",
         "",
-        "& $createJunction (Join-Path $env:APPDATA 'openpencil') 'data'",
-        "& $createJunction (Join-Path $env:USERPROFILE '.openpencil') 'dotopenpencil'"
+        "& $createJunction (Join-Path $env:APPDATA 'app.mangodisk.desktop') 'appdata'",
+        "& $createJunction (Join-Path $env:LOCALAPPDATA 'app.mangodisk.desktop') 'localdata'"
     ],
     "persist": [
-        "data",
-        "dotopenpencil"
+        "appdata",
+        "localdata"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/ZSeven-W/openpencil/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "v(?<version>[\\d.]+)"
+        "github": "https://github.com/harry0703/MangoDisk"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ZSeven-W/openpencil/releases/download/v$version/openpencil-desktop-windows-x86_64.zip"
+                "url": "https://github.com/harry0703/MangoDisk/releases/download/v$version/MangoDisk-$version-windows.exe#/dl.7z"
             }
-        },
-        "hash": {
-            "mode": "download"
         }
     }
 }
