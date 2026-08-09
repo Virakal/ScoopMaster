@@ -1,10 +1,10 @@
 {
     "version": "1.1.12",
-    "description": "An open-source remake of the short-lived jetbrains git client",
+    "description": "An open-source remake of the short-lived JetBrains git client.",
     "homepage": "https://github.com/DetachHead/rebased",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/DetachHead/rebased/raw/refs/heads/master/LICENSE.txt"
+        "url": "https://github.com/DetachHead/rebased/blob/master/LICENSE.txt"
     },
     "architecture": {
         "64bit": {
@@ -12,34 +12,31 @@
             "hash": "db548d6a5686a5f20e1d3d3e94f320d60f188d4b3b48f675327ce93f34d29139"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "extract_to": "IDE",
+    "installer": {
+        "script": [
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" \"$dir\" \"$persist_dir\"",
+            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
     "bin": [
         [
-            "bin\\idea64.exe",
+            "IDE\\bin\\rebased64.exe",
             "rebased"
         ]
     ],
     "shortcuts": [
         [
-            "bin\\idea64.exe",
+            "IDE\\bin\\rebased64.exe",
             "Rebased"
         ]
     ],
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\detachhead\\IdeaIC1.0'; 'cache' = '$env:LOCALAPPDATA\\detachhead\\IdeaIC1.0' }"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\detachhead\\IdeaIC1.0'; 'cache' = '$env:LOCALAPPDATA\\detachhead\\IdeaIC1.0' }"
-        ]
-    },
-    "checkver": {
-        "github": "https://github.com/DetachHead/rebased"
-    },
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "IDE\\bin\\rebased64.exe.vmoptions",
+        "profile"
+    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
