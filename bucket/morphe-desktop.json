@@ -24,7 +24,7 @@
         ],
         "Android Debug Bridge": "main/adb"
     },
-    "notes": "You need to have JRE/JDK 21 installed on your computer to use Morphe CLI.",
+    "notes": "You need to have JRE/JDK 21 installed on your computer to use Morphe Desktop/CLI.",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/MorpheApp/morphe-desktop/releases/download/v$version/morphe-desktop-$version-all.jar#/morphe-desktop.jar"
