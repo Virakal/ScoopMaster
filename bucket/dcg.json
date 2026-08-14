@@ -1,0 +1,15 @@
+{
+  "version": "0.6.7",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Dicklesworthstone/destructive_command_guard/releases/download/v0.6.7/dcg-x86_64-pc-windows-msvc.zip",
+      "bin": [
+        "dcg.exe"
+      ],
+      "hash": "b73d95c7336cddc9ab6cde4fcbeae1279240f8fbc8dbf85e334940b3fe3561d5"
+    }
+  },
+  "homepage": "https://github.com/Dicklesworthstone/destructive_command_guard",
+  "license": "MIT",
+  "description": "Destructive Command Guard - Safety rails for AI coding agents"
+}
