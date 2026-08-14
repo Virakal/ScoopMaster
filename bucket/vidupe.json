@@ -1,0 +1,28 @@
+{
+    "homepage": "https://github.com/kristiankoskimaki/vidupe",
+    "description": "Find duplicate and similar video files by comparing actual video content, regardless of format and compression.",
+    "version": "1.211",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/kristiankoskimaki/vidupe/blob/master/LICENSE.txt"
+    },
+    "depends": "ffmpeg",
+    "url": "https://github.com/kristiankoskimaki/vidupe/releases/download/v1.211/Vidupe-1.211_win32.zip",
+    "hash": "0B62EF5369BB6DB213B7FB848191E89A3EE6E6E48BDDE7C858019FC977D55D3D",
+    "bin": "Vidupe\\Vidupe.exe",
+    "shortcuts": [
+        [
+            "Vidupe\\Vidupe.exe",
+            "Vidupe"
+        ]
+    ],
+    "persist": [
+        "Vidupe\\cache.db",
+        "Vidupe\\extensions.ini"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/kristiankoskimaki/vidupe/releases/download/v$version/Vidupe-$version_win32.zip"
+    },
+    "notes": "Requires FFmpeg (installed as a dependency). Place ffmpeg.exe in the same folder as Vidupe.exe or in any system directory."
+}
