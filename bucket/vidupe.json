@@ -1,14 +1,14 @@
 {
     "homepage": "https://github.com/liarchgh/vidupe",
     "description": "Find duplicate and similar video files by comparing actual video content, regardless of format and compression.",
-    "version": "1.214",
+    "version": "1.215",
     "license": {
         "identifier": "GPL-3.0",
         "url": "https://github.com/liarchgh/vidupe/blob/master/LICENSE.txt"
     },
     "depends": "ffmpeg",
-    "url": "https://github.com/liarchgh/vidupe/releases/download/v1.214/Vidupe-1.214_win32.zip",
-    "hash": "DE28B72BA6D29A586E265019B718835B7606F51EDBC188E433D95D21738B3564",
+    "url": "https://github.com/liarchgh/vidupe/releases/download/v1.215/Vidupe-1.215_win32.zip",
+    "hash": "F1B4C9CB80B01EA72362D2DB39C9392248BC2B32A3464283A274C5BA2E6EBB85",
     "bin": "Vidupe\\Vidupe.exe",
     "shortcuts": [
         [
