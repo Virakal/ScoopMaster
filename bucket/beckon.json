@@ -1,18 +1,18 @@
 {
-  "version": "0.9.17",
+  "version": "0.9.20",
   "description": "One key per app: launch, focus or cycle windows on macOS, Windows and Linux",
   "homepage": "https://github.com/xom11/beckon",
   "license": "Apache-2.0 OR MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/xom11/beckon/releases/download/v0.9.17/beckon-0.9.17-x86_64-pc-windows-msvc.zip",
-      "hash": "33982005649083deff2aad6ca47401ce4f2f1db8472843fe5e5c27d0aead4559",
-      "extract_dir": "beckon-0.9.17-x86_64-pc-windows-msvc"
+      "url": "https://github.com/xom11/beckon/releases/download/v0.9.20/beckon-0.9.20-x86_64-pc-windows-msvc.zip",
+      "hash": "bd9b681077c892514b2a086ccf4c419628103b678e63906bb534abcf6ca478cf",
+      "extract_dir": "beckon-0.9.20-x86_64-pc-windows-msvc"
     },
     "arm64": {
-      "url": "https://github.com/xom11/beckon/releases/download/v0.9.17/beckon-0.9.17-aarch64-pc-windows-msvc.zip",
-      "hash": "1b8e60f641ecd3dadcf2e35a19c9bad5d25a750cb54800ddfea813ba6c529938",
-      "extract_dir": "beckon-0.9.17-aarch64-pc-windows-msvc"
+      "url": "https://github.com/xom11/beckon/releases/download/v0.9.20/beckon-0.9.20-aarch64-pc-windows-msvc.zip",
+      "hash": "0ae301e35b2efdbed6fee10a97a386e673d308d0bb831148b16c2332115bd7d3",
+      "extract_dir": "beckon-0.9.20-aarch64-pc-windows-msvc"
     }
   },
   "bin": [
