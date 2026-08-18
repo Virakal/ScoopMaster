@@ -28,7 +28,10 @@
         "Winappx.ini",
         "Custom"
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/builtbybel/FluentCleaner/releases",
+        "regex": "/releases/tag/(\\d{2}\\.\\d{2}\\.\\d{2})\""
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
