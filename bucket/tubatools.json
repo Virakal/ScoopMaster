@@ -32,14 +32,11 @@
             "Remove-Module -Name AppsUtils"
         ]
     },
+    "bin": "TubaWinUi3.exe",
     "shortcuts": [
         [
-            "图吧工具箱WinUI3.exe",
+            "TubaWinUi3.exe",
             "图吧工具箱WinUI3"
-        ],
-        [
-            "图吧工具箱Winui3兼容版.exe",
-            "图吧工具箱Winui3兼容版"
         ]
     ],
     "checkver": {
