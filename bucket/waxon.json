@@ -1,0 +1,15 @@
+{
+    "version": "1.8.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/danfry1/waxon/releases/download/v1.8.0/waxon_1.8.0_windows_amd64.zip",
+            "bin": [
+                "waxon.exe"
+            ],
+            "hash": "0a66f5b105ba0e2e3c6248ca5c1df863d6b93107a6e3fe906d7f158749e70bfc"
+        }
+    },
+    "homepage": "https://github.com/danfry1/waxon",
+    "license": "GPL-3.0",
+    "description": "A vim-modal Spotify client for the terminal"
+}
