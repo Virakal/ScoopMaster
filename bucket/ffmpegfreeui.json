@@ -1,43 +1,32 @@
 {
-    "homepage": "https://github.com/Lake1059/FFmpegFreeUI",
-    "description": "3FUI 是 ffmpeg 在 Windows 上的轻度专业交互外壳，收录大量参数，界面美观，交互友好。此项目面向国内使用环境，让普通人也能够轻松压制视频和转换格式",
     "version": "6.1.36",
+    "description": "FFmpegFreeUI",
+    "homepage": "https://github.com/Lake1059/FFmpegFreeUI/blob/main/README.md",
     "license": "MIT",
-    "depends": "versions/windowsdesktop-runtime-10.0",
-    "notes": "Installing the .NET Desktop Runtime dependency requires administrator privileges.",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/6.1.36/FFmpegFreeUI.x64.exe",
             "hash": "37060a95b039547144a68d6084dd4dd8d5b515c381d8ef2a87e9f69d30a04b42"
-        },
-        "arm64": {
-            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/6.1.36/FFmpegFreeUI.arm64.exe",
-            "hash": "dea7f86a198435667c20b8d27fefb4a218364e0acda2b0159039f06f7566ff47"
         }
     },
-    "pre_install": [
-        "$arch = if ($architecture -eq 'arm64') { 'arm64' } else { 'x64' }",
-        "Move-Item \"$dir\\FFmpegFreeUI.$arch.exe\" \"$dir\\FFmpegFreeUI.exe\" -Force"
-    ],
-    "checkver": "github",
-    "persist": "Preset",
     "shortcuts": [
         [
             "FFmpegFreeUI.exe",
             "FFmpegFreeUI"
         ]
     ],
+    "pre_install": "Rename-Item \"$dir\\FFmpegFreeUI.x64.exe\" \"$dir\\FFmpegFreeUI.exe\"",
+    "bin": "FFmpegFreeUI.exe",
+    "persist": "Settings.json",
+    "checkver": {
+        "github": "https://github.com/Lake1059/FFmpegFreeUI",
+        "regex": "/releases/tag/([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.x64.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/$version/FFmpegFreeUI.arm64.exe"
             }
-        },
-        "hash": {
-            "mode": "download"
         }
     }
 }
