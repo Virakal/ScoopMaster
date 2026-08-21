@@ -1,38 +1,27 @@
 {
     "version": "0.0.990",
-    "description": "Elegant AI Provider Orchestration",
-    "homepage": "https://alma.now/",
-    "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/yetone/alma-releases/releases/download/v0.0.990/alma-0.0.990-win-x64.exe#/dl.7z",
-            "hash": "sha512:513b6aa5ad0b9313c95477f9bc8daa289458b24b8a41a739d38b6caa7f4da1ea037fdfaea5094571996b4afc7f86f5ff1c2d962ea155e73fdfcb90b739cb637d",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
-                ]
-            }
-        }
-    },
+    "description": "A beautiful desktop application that unifies your AI experience. Seamlessly switch between OpenAI, Anthropic, Google Gemini, and custom providers.",
+    "homepage": "https://github.com/yetone/alma-releases",
+    "url": "https://github.com/yetone/alma-releases/releases/download/v0.0.990/alma-0.0.990-win-x64.exe#/dl.7z",
+    "hash": "1556334a03ab1d184368f9c1a1a492debc324a62dd774ea51ed5889015bcf59d",
     "shortcuts": [
         [
             "Alma.exe",
             "Alma"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/yetone/alma-releases"
+    "persist": "userdata",
+    "pre_install": [
+        "7z x \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"-o$dir\" -y | Out-Null",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force",
+        "if (!(Test-Path \"$persist_dir\")) { New-Item -ItemType Directory -Path \"$persist_dir\" | Out-Null }",
+        "if (!(Test-Path \"$env:AppData\\Alma\")) { New-Item -ItemType Junction -Path \"$env:AppData\\Alma\" -Target \"$persist_dir\" -Force | Out-Null }"
+    ],
+    "uninstaller": {
+        "script": "if (Get-Item -Path \"$env:AppData\\Alma\" -ErrorAction SilentlyContinue | Where-Object { $_.LinkType -eq 'Junction' }) { Remove-Item \"$env:AppData\\Alma\" -Force }"
     },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "find": "sha512:\\s+(.*)"
-                }
-            }
-        }
+        "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z"
     }
 }
