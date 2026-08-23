@@ -1,10 +1,14 @@
 {
-    "version": "3.5.1",
-    "description": "Nerd Fonts patched 'AtkinsonHyperlegibleMono' Font family. (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)",
-    "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/AtkinsonHyperlegibleMono.zip",
-    "hash": "e68f8183f4fc475c55d85a3be3260b24c6ffa423e4c4c0b4fa3ed2ff1f9bd69b",
+    "version": "1.0",
+    "description": "阅圆字体 | 基于霞鹜 975 圆与 Dongle 的 OFL 衍生圆体中文阅读字体",
+    "homepage": "https://github.com/hiforrest/yueyuan",
+    "license": "OFL-1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hiforrest/yueyuan/raw/main/Yueyuan-Text.ttf#/Yueyuan-Text.exe",
+            "hash": "e2baacf688acba52e758131f3a14a5abf0a7cfea00c49d00491fec7e52ee2899"
+        }
+    },
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -35,18 +39,19 @@
             "    $accessControlList.SetAccessRule($allRestrictedApplicationPackagesAccessRule)",
             "    Set-Acl -AclObject $accessControlList $fontInstallDir",
             "}",
+            "ren $dir\\Yueyuan-Text.exe Yueyuan-Text.ttf",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*NerdFontMono-*' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*Yueyuan*' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
-            "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
+            "    Copy-Item $_.FullName -Destination $fontInstallDir",
             "}"
         ]
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*NerdFontMono-*' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*Yueyuan*' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -76,7 +81,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*NerdFontMono-*' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*Yueyuan*' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
@@ -85,8 +90,14 @@
             "}"
         ]
     },
-    "checkver": "github",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/hiforrest/yueyuan/main/README.md",
+        "regex": "版本\\s*\\|\\s*([\\d.]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/AtkinsonHyperlegibleMono.zip"
+        "url": "https://github.com/hiforrest/yueyuan/raw/main/Yueyuan-Text.ttf#/Yueyuan-Text.exe",
+        "hash": {
+            "mode": "download"
+        }
     }
 }
