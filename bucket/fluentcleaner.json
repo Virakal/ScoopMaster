@@ -1,9 +1,9 @@
 {
     "version": "26.08.01",
-    "description": "FluentCleaner is a modern Windows cleanup tool built with WinUI3 and powered by the winapp2.ini ecosystem.",
+    "description": "A real WinUI desktop cleaner with terminal control and multi-database support",
     "homepage": "https://github.com/builtbybel/FluentCleaner",
+    "notes": "settngs are placed in %appdata%/FluentCleaner",
     "license": "MIT",
-    "depends": "Microsoft.WindowsAppRuntime.2",
     "architecture": {
         "64bit": {
             "url": [
@@ -17,7 +17,6 @@
         }
     },
     "extract_dir": "FluentCleaner-win-x64",
-    "bin": "FCleaner.exe",
     "shortcuts": [
         [
             "FCleaner.exe",
@@ -25,8 +24,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/builtbybel/FluentCleaner/releases?per_page=100",
-        "regex": "\\\"tag_name\\\"\\s*:\\s*\\\"(?<version>\\d+\\.\\d+\\.\\d+)\\\""
+        "github": "https://github.com/builtbybel/FluentCleaner"
     },
     "autoupdate": {
         "architecture": {
