@@ -1,0 +1,23 @@
+{
+  "version": "1.0.37",
+  "description": "Knowe - AI multi-agent group chat application",
+  "homepage": "https://github.com/HirezmingD/Knowe-agent-groupchat",
+  "license": "MiT",
+  "url": "https://gh-proxy.com/github.com/HirezmingD/Knowe-agent-groupchat/releases/download/v1.0.37/Knowe-Setup-1.0.37.exe#/setup.exe",
+  "hash": "6903c97d1a955a7dbf0474ea862ec3a69b1191eda5c7c710e8d1af6b91d83fee",
+  "depends": [
+    "7zip"
+  ],
+  "pre_install": "scripts\\knowe\\pre_install.ps1",
+  "bin": "Knowe.exe",
+  "shortcuts": [
+    [
+      "Knowe.exe",
+      "Knowe"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/HirezmingD/Knowe-agent-groupchat/releases/download/v$version/Knowe-Setup-$version.exe#/setup.exe"
+  }
+}
