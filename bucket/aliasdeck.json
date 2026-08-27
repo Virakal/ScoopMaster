@@ -1,19 +1,19 @@
 {
-    "version": "0.5.6",
+    "version": "0.5.7",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/angeltonio/aliasdeck/releases/download/v0.5.6/aliasdeck_0.5.6_windows_amd64.zip",
+            "url": "https://github.com/angeltonio/aliasdeck/releases/download/v0.5.7/aliasdeck_0.5.7_windows_amd64.zip",
             "bin": [
                 "aliasdeck.exe"
             ],
-            "hash": "6c0b895d9ba7cfd0aef509449a1bd12ed1b6221fbc1fca2a21c4287c6ad4a523"
+            "hash": "c1d89ed56b9f880aa1d5fd63da0ba4687c7e5d73ea6239edc2a4cddde96a8127"
         },
         "arm64": {
-            "url": "https://github.com/angeltonio/aliasdeck/releases/download/v0.5.6/aliasdeck_0.5.6_windows_arm64.zip",
+            "url": "https://github.com/angeltonio/aliasdeck/releases/download/v0.5.7/aliasdeck_0.5.7_windows_arm64.zip",
             "bin": [
                 "aliasdeck.exe"
             ],
-            "hash": "fb2c47f719696257681fff153e259f3534bf74261f2a8a3190c82548521861cf"
+            "hash": "e9acdcd7166ed8f8a19d2a33617af30c8afabb472c74e70dadbc435504e4fe07"
         }
     },
     "homepage": "https://github.com/angeltonio/aliasdeck",
