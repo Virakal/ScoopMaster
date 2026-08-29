@@ -1,31 +1,31 @@
 {
-    "version": "1.2.2",
-    "description": "Easily execute SQL against CSV/TSV/LTSV/JSON and Microsoft Excel with shell",
-    "homepage": "https://github.com/nao1215/sqly",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/nao1215/sqly/releases/download/v1.2.2/sqly_1.2.2_windows_amd64.zip",
-            "hash": "e4b0ebf01232efbc7a8aa1dc9082fb601577698a18360516b49f1b72b82582af"
-        },
-        "arm64": {
-            "url": "https://github.com/nao1215/sqly/releases/download/v1.2.2/sqly_1.2.2_windows_arm64.zip",
-            "hash": "612bd68104b71b78aec237d3098fbbae7ee9abe9f61bc8fde055d761271c17b8"
-        }
+  "version": "1.2.2",
+  "description": "Easily execute SQL against CSV/TSV/LTSV/JSON and Microsoft Excel with shell",
+  "homepage": "https://github.com/nao1215/sqly",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/nao1215/sqly/releases/download/v1.2.2/sqly_1.2.2_windows_amd64.zip",
+      "hash": "e4b0ebf01232efbc7a8aa1dc9082fb601577698a18360516b49f1b72b82582af"
     },
-    "bin": "sqly.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/nao1215/sqly/releases/download/v$version/sqly_$version_windows_amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/nao1215/sqly/releases/download/v$version/sqly_$version_windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+    "arm64": {
+      "url": "https://github.com/nao1215/sqly/releases/download/v1.2.2/sqly_1.2.2_windows_arm64.zip",
+      "hash": "612bd68104b71b78aec237d3098fbbae7ee9abe9f61bc8fde055d761271c17b8"
     }
+  },
+  "bin": "sqly.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/nao1215/sqly/releases/download/v$version/sqly_$version_windows_amd64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/nao1215/sqly/releases/download/v$version/sqly_$version_windows_arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
 }
