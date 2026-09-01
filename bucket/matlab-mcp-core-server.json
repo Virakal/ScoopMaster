@@ -5,7 +5,7 @@
     "homepage": "https://www.mathworks.com/products/matlab-mcp-server.html",
     "license": {
         "identifier": "BSD-3-Clause",
-        "url": "https://github.com/matlab/matlab-mcp-server/raw/refs/heads/main/LICENSE.md"
+        "url": "https://gh-proxy.org/https://github.com/matlab/matlab-mcp-server/raw/refs/heads/main/LICENSE.md"
     },
     "notes": [
         "This manifest is deprecated and scheduled for removal on 2026-09-01. Please use `main/matlab-mcp-server` instead.",
@@ -18,7 +18,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/matlab/matlab-mcp-server/releases/download/v0.10.1/matlab-mcp-core-server-win64.exe#/matlab-mcp-core-server.exe",
+            "url": "https://gh-proxy.org/https://github.com/matlab/matlab-mcp-server/releases/download/v0.10.1/matlab-mcp-core-server-win64.exe#/matlab-mcp-core-server.exe",
             "hash": "d4c101f594181a9fbda81c443973f0a6dc6b083efab54fc69a0847fead425518"
         }
     },
@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/matlab/matlab-mcp-server/releases/download/v$version/matlab-mcp-core-server-win64.exe#/matlab-mcp-core-server.exe"
+                "url": "https://gh-proxy.org/https://github.com/matlab/matlab-mcp-server/releases/download/v$version/matlab-mcp-core-server-win64.exe#/matlab-mcp-core-server.exe"
             }
         }
     }
