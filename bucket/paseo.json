@@ -1,40 +1,27 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.7.0",
-    "description": "Orchestrate multiple coding agents from desktop and mobile",
-    "homepage": "https://paseo.sh",
-    "license": "AGPL-3.0-only",
+    "description": "Orchestrate coding agents remotely from your phone, desktop and CLI",
+    "homepage": "https://github.com/getpaseo/paseo",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/getpaseo/paseo/releases/download/v0.7.0/Paseo-Setup-0.7.0-x64.zip",
             "hash": "20343c0e7a07a7bf40e5cc18829ef13e3f940e0a17e0f165f3bcbdc70066b9b2"
-        },
-        "arm64": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.7.0/Paseo-Setup-0.7.0-arm64.zip",
-            "hash": "9f4a42467e3879b688b226e9e225b2a2536c1cb5136758325640fbad866b551e"
         }
     },
-    "bin": [
-        [
-            "resources\\bin\\paseo.cmd",
-            "paseo"
-        ]
-    ],
+    "bin": "resources/bin/paseo.cmd",
     "shortcuts": [
         [
             "Paseo.exe",
             "Paseo"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/getpaseo/paseo"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
             }
         }
     }
