@@ -22,7 +22,7 @@
         "    Set-Content -Path \"$persist_dir\\Config\\PixPinConfig.json\" -Value $json",
         "}",
         "if (-not (Test-Path \"$persist_dir\\LocalStorage.data\")) {",
-        "    Set-Content -Path \"$persist_dir\\LocalStorage.data\" -Value '[General]\nIsFirstRun=false'",
+        "    Set-Content -Path \"$persist_dir\\LocalStorage.data\" -Value @('[General]', 'IsFirstRun=false')",
         "}"
     ],
     "shortcuts": [
