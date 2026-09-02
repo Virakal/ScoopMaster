@@ -1,24 +1,45 @@
 {
-    "##": "Paseo",
     "version": "0.7.1",
-    "description": "Orchestrate multiple coding agents from desktop and mobile",
-    "homepage": "https://github.com/getpaseo/paseo",
-    "license": "https://github.com/getpaseo/paseo#License-1-ov-file",
-    "url": "https://github.com/getpaseo/paseo/releases/download/v0.7.1/Paseo-Setup-0.7.1.exe#/dl.7z",
-    "hash": "a863da7eb5654c6e4bb596f00d42aca4f0b8b787e548b675abe56b03132a9eec",
-    "pre_install": [
-        "Move-Item \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Force",
-        "Remove-Item $dir\\* -Exclude app-64.7z -Force -Recurse",
-        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+    "description": "Coding agents from your phone, desktop and CLI (Desktop Edition)",
+    "homepage": "https://paseo.sh",
+    "license": "AGPL-3.0-only",
+    "notes": [
+        "Paseo uses a local daemon to manage coding agents.",
+        "Desktop: opening the Paseo app starts the daemon automatically.",
+        "CLI / headless:",
+        "  paseo daemon start     # start the daemon",
+        "  paseo daemon status    # check status",
+        "  paseo daemon stop      # stop the daemon",
+        "CLI reference: https://paseo.sh/docs/cli"
     ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.7.1/Paseo-Setup-0.7.1-x64.zip",
+            "hash": "9e64ed43a3c68741bd5ff83fea43d172cb7000002928d5590f3f0b8a3cb1412d"
+        },
+        "arm64": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.7.1/Paseo-Setup-0.7.1-arm64.zip",
+            "hash": "25cf1c1b0ce4ae3a48426919a49106b37cf80252ad3bcb39aba1cdcf05b82e56"
+        }
+    },
+    "bin": "resources\\bin\\paseo.cmd",
     "shortcuts": [
         [
             "Paseo.exe",
             "Paseo"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/getpaseo/paseo"
+    },
     "autoupdate": {
-        "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
+            }
+        }
     }
 }

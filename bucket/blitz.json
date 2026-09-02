@@ -1,12 +1,12 @@
 {
-    "version": "2.1.625",
-    "description": "Personalized stats and insights powered by billions of matches",
+    "version": "2.1.626",
+    "description": "Personalized Stats and Insights",
     "homepage": "https://blitz.gg",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://blitz-main.blitz.gg/Blitz-2.1.625.exe#/dl.7z",
-            "hash": "ba409b35677d67cba487fadec7606f444d5d2e107a368b60739cface12925257"
+            "url": "https://blitz-main.blitz.gg/Blitz-2.1.626.exe#/dl.7z",
+            "hash": "c95c8d281e8a4387e0a2b7d4234b67b95dfd2a7f7089fbd2f40faff2c19f54a2"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -18,14 +18,8 @@
         ]
     ],
     "checkver": {
-        "script": [
-            "try {",
-            "    $Response = Invoke-WebRequest -Uri 'https://blitz.gg/download/win' -MaximumRedirection 0",
-            "} catch {",
-            "    $_.Exception.Response.Headers.Location",
-            "}"
-        ],
-        "regex": "([\\d.]+).exe"
+        "url": "https://blitz-main.blitz.gg/latest.yml",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
