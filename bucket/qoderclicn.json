@@ -1,12 +1,12 @@
 {
-    "version": "1.1.40",
-    "description": "QoderWork CLI - A local file operation tool for efficient file management, data analysis, and content creation.",
+    "version": "1.1.41",
+    "description": "Qoder CLI - A local file operation tool for efficient file management, data analysis, and content creation.",
     "homepage": "https://qoder.com.cn",
-    "license": "Unlicense",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/1.1.40/qoderclicn-windows-x64.zip",
-            "hash": "b6e08ef2eb8248e102a1af25606bf459465411a9185973374fe0d65fda5282c1"
+            "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/1.1.41/qoderclicn-windows-x64.zip",
+            "hash": "c0b02a0c1a8c3dc163506566c59cf6778704d19f1a618a29888b76b13dbc7786"
         }
     },
     "pre_install": [
@@ -15,12 +15,6 @@
         "if ($exe) { Rename-Item $exe.FullName 'qoderclicn.exe' -Force }"
     ],
     "bin": "qoderclicn.exe",
-    "shortcuts": [
-        [
-            "qoderclicn.exe",
-            "Qoder CLI CN"
-        ]
-    ],
     "checkver": {
         "url": "https://static.qoder.com.cn/qoder-cli-cn/channels/manifest.json",
         "jsonpath": "$.latest"
@@ -31,7 +25,7 @@
                 "url": "https://static.qoder.com.cn/qoder-cli-cn/releases/$version/qoderclicn-windows-x64.zip",
                 "hash": {
                     "url": "https://static.qoder.com.cn/qoder-cli-cn/channels/manifest.json",
-                    "jsonpath": "$.files[?(@.os == 'windows' && @.arch == 'amd64' && @.variant == 'standard')].sha256"
+                    "jsonpath": "$.files[] | select(.os == \"windows\" and .arch == \"amd64\" and .variant == \"standard\") | .sha256"
                 }
             }
         }
