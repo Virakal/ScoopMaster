@@ -1,13 +1,13 @@
 {
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Anchor files to qualified eIDAS timestamps and verify the proofs offline",
     "homepage": "https://trustbeat.eu/en",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TrustBeat/trustbeat-cli/releases/download/v0.2.0/trustbeat-0.2.0-x86_64-pc-windows-msvc.zip",
-            "hash": "a80a2d1293aa5e59cbdfabc3c2b1ba6d7ba770614f55a79246fadc5afb2ef715",
-            "extract_dir": "trustbeat-0.2.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/TrustBeat/trustbeat-cli/releases/download/v0.2.1/trustbeat-0.2.1-x86_64-pc-windows-msvc.zip",
+            "hash": "467b98b18ea3d0cde89d469ffc304f18ec1a5b890866bbabd3ee8ab5a748f009",
+            "extract_dir": "trustbeat-0.2.1-x86_64-pc-windows-msvc"
         }
     },
     "bin": "trustbeat.exe",

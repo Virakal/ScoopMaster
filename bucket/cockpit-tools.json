@@ -1,12 +1,8 @@
 {
     "version": "1.3.38",
-    "description": "Universal AI IDE account manager with multi-account switching and quota monitoring.",
+    "description": "A universal AI IDE account management tool.",
     "homepage": "https://github.com/jlcodes99/cockpit-tools",
     "license": "CC-BY-NC-SA-4.0",
-    "notes": [
-        "Cockpit Tools is NOT portable. Settings and data are stored in '%APPDATA%\\com.jlcodes.cockpit-tools' and '%LOCALAPPDATA%\\com.jlcodes.cockpit-tools'.",
-        "To remove all user data on uninstall, run: scoop uninstall --purge cockpit-tools"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v1.3.38/Cockpit.Tools_1.3.38_x64_en-US.msi",
@@ -20,7 +16,6 @@
             "Cockpit Tools"
         ]
     ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.jlcodes.cockpit-tools\", \"$env:LOCALAPPDATA\\com.jlcodes.cockpit-tools\" -Force -Recurse -ErrorAction SilentlyContinue }",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -29,8 +24,7 @@
             }
         },
         "hash": {
-            "url": "$baseurl/SHA256SUMS.txt",
-            "regex": "(?m)^([a-f0-9]{64})\\s+Cockpit\\.Tools_$version_x64_en-US\\.msi$"
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
