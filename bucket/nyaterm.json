@@ -1,6 +1,6 @@
 {
     "version": "1.2.9",
-    "description": "A modern remote terminal workspace - SSH/SFTP/Telnet/Serial client with tabbed workspace, AI assistant, GPU/Docker/process monitoring",
+    "description": "A modern remote terminal workspace",
     "homepage": "https://nyaterm.app",
     "license": "MIT",
     "architecture": {
@@ -13,11 +13,7 @@
             "hash": "ae76a1e940e0fbae1958280f30e6626953ca7d9809649e19467f417bbc184c80"
         }
     },
-    "pre_install": [
-        "Get-ChildItem -Path \"$dir\\NyaTerm-portable\" -Force | Move-Item -Destination \"$dir\" -Force",
-        "Remove-Item -Path \"$dir\\NyaTerm-portable\" -Force -Recurse"
-    ],
-    "bin": "NyaTerm.exe",
+    "extract_dir": "NyaTerm-portable",
     "shortcuts": [
         [
             "NyaTerm.exe",
