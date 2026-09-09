@@ -1,26 +1,34 @@
 {
     "version": "5.4.5",
-    "description": "A modern, high-performance local file search and productivity tool for Windows. A sleek, customizable alternative to Everything and Listary built with C# WPF and NT Services, featuring instant NTFS MFT parsing, real-time USN monitoring, and plugin support.",
-    "homepage": "https://lertaro.github.io/",
-    "license": {
-        "identifier": "MIT license",
-        "url": "https://github.com/Lertaro/Lertaro#MIT-1-ov-file"
+    "description": "现代化高颜值且高度可扩展的开源文件检索与启动工具，完美替代并拓展传统商业级桌面检索工作流。",
+    "homepage": "https://lertaro.github.io",
+    "license": "MIT",
+    "notes": [
+        "便携模式下，应用配置、索引与缓存保存在 '$persist_dir\\Data'，升级时会自动保留。",
+        "提供 CLI 命令 'lff' 和 GUI 命令 'lertaro'。",
+        "运行需要 .NET 10 Desktop Runtime（versions/windowsdesktop-runtime-10.0）。",
+        "更新前请退出 Lertaro，并执行 'Stop-Service LertaroService -Force -ErrorAction SilentlyContinue'。",
+        "建议关闭应用内的静默自动更新，统一使用 'scoop update lertaro'。"
+    ],
+    "suggest": {
+        ".NET Desktop Runtime 10.0": "versions/windowsdesktop-runtime-10.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.4.5/Lertaro-Setup.exe",
-            "hash": "eb4b02fa94fc3fdb7319bf1bc5222aec541f98a5527734810edfcd6abe2310a5"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.4.5/Lertaro-Portable.zip",
+            "hash": "4b0861c0a18656d17f141b1f257b0604a6bd636b0ed44e112262adbaf8974b14"
         },
         "arm64": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.4.5/Lertaro-Setup-arm64.exe",
-            "hash": "1974e53503feeeb1be263c5448e7587f911b4db6eb76807a9e6646b95dd3c6dc"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.4.5/Lertaro-Portable-arm64.zip",
+            "hash": "2b501bf845a0a030de30d83369422dff17979123373f4ed26aec2c7fc793721f"
         }
     },
-    "innosetup": true,
+    "extract_dir": "Lertaro",
     "bin": [
+        "lff.exe",
         [
             "Lertaro.App.exe",
-            "Lertaro"
+            "lertaro"
         ]
     ],
     "shortcuts": [
@@ -29,18 +37,28 @@
             "Lertaro"
         ]
     ],
+    "persist": "Data",
+    "pre_uninstall": [
+        "Stop-Service -Name 'LertaroService' -Force -ErrorAction SilentlyContinue",
+        "Get-Process -Name 'Lertaro.App', 'Lertaro.Service', 'lff' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue",
+        "if ($cmd -eq 'uninstall') {",
+        "    sc.exe stop LertaroService *>$null",
+        "    sc.exe delete LertaroService *>$null",
+        "    Remove-Item -Path 'HKCU:\\Software\\Classes\\lertaro' -Recurse -Force -ErrorAction SilentlyContinue",
+        "    Remove-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run' -Name 'Lertaro' -Force -ErrorAction SilentlyContinue",
+        "    if ($purge) { Remove-Item -Path 'HKCU:\\Software\\Lertaro' -Recurse -Force -ErrorAction SilentlyContinue }",
+        "}"
+    ],
     "checkver": {
-        "github": "https://api.github.com/repos/Lertaro/Lertaro/releases",
-        "jp": "$[0].tag_name",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/Lertaro/Lertaro"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup-arm64.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable-arm64.zip"
             }
         }
     }
