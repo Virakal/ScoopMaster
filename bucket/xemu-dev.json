@@ -16,11 +16,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-0.8.136-45-gfdfb5a8f48-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-0.8.136-45-gfdfb5a8f48-windows-x86_64.zip",
             "hash": "7f1f32dde7278a35c2a01f22f92afd87c6e108f25785744da7afbb14a73797e2"
         },
         "arm64": {
-            "url": "https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-0.8.136-45-gfdfb5a8f48-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-0.8.136-45-gfdfb5a8f48-windows-arm64.zip",
             "hash": "68d63e92eb51bbfeb66dba091cd24bfc127e8984b851d046713731f751017c0e"
         }
     },
@@ -54,7 +54,7 @@
     "shortcuts": [
         [
             "xemu.exe",
-            "Microsoft Xbox [xbx][xemu] (dev)"
+            "xemu (Development)"
         ]
     ],
     "persist": [
@@ -73,10 +73,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-$version-windows-x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-$version-windows-x86_64.zip"
             },
             "arm64": {
-                "url": "https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-$version-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/xemu-project/xemu/releases/download/pre-release/xemu-$version-windows-arm64.zip"
             }
         }
     }
