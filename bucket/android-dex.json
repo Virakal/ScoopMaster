@@ -1,0 +1,61 @@
+{
+    "version": "1.2",
+    "description": "Universal Samsung DeX alternative for all Android devices. Run Android apps on Windows, Linux & macOS with resizable windows, advanced FPS gaming controls, and high-performance wireless ADB mirroring.",
+    "homepage": "https://shrey113.github.io/Android-Dex/",
+    "license": {
+        "identifier": "Unknown"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.1.2/Android_Dex_Windows_x64.zip",
+            "hash": "ae8257766cb75494ad729f8d41f49ec8a9db05a8ee416c575c46ed584caa8901"
+        },
+        "arm64": {
+            "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.1.2/Android_Dex_Windows_ARM64.zip",
+            "hash": "e1c5c302b8c89986ad6528c572b7b3fd31b0c66e7083784f9296ff5bc6a54a98"
+        }
+    },
+    "extract_dir": "Android_Dex",
+    "installer": {
+        "script": [
+            "# handle runtime cache",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\com.example\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\com.example\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "bin": [
+        [
+            "Android_Dex.exe",
+            "AndroidDex"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Android_Dex.exe",
+            "AndroidDex"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Shrey113/Android-Dex/releases",
+        "jp": "$[0].tag_name",
+        "regex": "Android-Dex-v.([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.$version/Android_Dex_Windows_x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.$version/Android_Dex_Windows_ARM64.zip"
+            }
+        }
+    }
+}
