@@ -1,42 +1,42 @@
 {
-    "version": "34187924662",
-    "description": "🐇️玉兔毫：由 AutoHotkey 实现的 Rime 输入法引擎前端",
-    "homepage": "https://github.com/rimeinn/rabbit",
-    "license": "GPL-3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x64.zip",
-            "hash": "5e3714dc17dfcfbbb87084b534d16aaa2de703d7dad10d57b95d23835890c34c"
-        },
-        "32bit": {
-            "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x86.zip",
-            "hash": "194bb7270ee094bf8e1711fe8e622ac3d1fefcadd3a754450078599a5a8359ed"
-        }
+  "version": "34187924662",
+  "description": "🐇️玉兔毫：由 AutoHotkey 实现的 Rime 输入法引擎前端",
+  "homepage": "https://github.com/rimeinn/rabbit",
+  "license": "GPL-3.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x64.zip",
+      "hash": "5e3714dc17dfcfbbb87084b534d16aaa2de703d7dad10d57b95d23835890c34c"
     },
-    "pre_install": [
-        "rmdir \"$dir\\Rime\"",
-        "New-Item \"$dir\\.portable\" | Out-Null",
-        "ensure \"$persist_dir\\Rime\""
-    ],
-    "shortcuts": [
-        [
-            "Rabbit.exe",
-            "玉兔毫"
-        ]
-    ],
-    "persist": "Rime",
-    "checkver": {
-        "url": "https://api.github.com/repositories/655172280/actions/workflows/ci.yaml/runs?branch=master&status=success",
-        "jsonpath": "$.workflow_runs[0].id"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x86.zip"
-            }
-        }
+    "32bit": {
+      "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x86.zip",
+      "hash": "194bb7270ee094bf8e1711fe8e622ac3d1fefcadd3a754450078599a5a8359ed"
     }
+  },
+  "pre_install": [
+    "rmdir \"$dir\\Rime\"",
+    "New-Item \"$dir\\.portable\" | Out-Null",
+    "ensure \"$persist_dir\\Rime\""
+  ],
+  "shortcuts": [
+    [
+      "Rabbit.exe",
+      "玉兔毫"
+    ]
+  ],
+  "persist": "Rime",
+  "checkver": {
+    "url": "https://api.github.com/repositories/655172280/actions/workflows/ci.yaml/runs?branch=master&status=success",
+    "jsonpath": "$.workflow_runs[0].id"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/rimeinn/rabbit/releases/download/latest/rabbit-nightly-x86.zip"
+      }
+    }
+  }
 }
