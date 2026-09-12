@@ -1,40 +1,40 @@
 {
-  "version": "1.1.8",
-  "description": "Volcengine CLI — command-line tool for Volcengine OpenAPI (ve). Configure credentials, switch profiles, query and call service APIs.",
-  "homepage": "https://github.com/volcengine/volcengine-cli",
-  "license": "Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/volcengine/volcengine-cli/releases/download/v1.1.8/volcengine-cli_1.1.8_windows_amd64.zip",
-      "hash": "6bdbecac792cf5aa7a00854ca057ebda8d68ca758ac52e91422083072e7b6b9a"
-    },
-    "arm64": {
-      "url": "https://github.com/volcengine/volcengine-cli/releases/download/v1.1.8/volcengine-cli_1.1.8_windows_arm64.zip",
-      "hash": "20f91eb3a2e83af153ff9054f3060fde78daaf9a66a3c965f4306afc8f2bf7f0"
-    }
-  },
-  "bin": "ve.exe",
-  "checkver": {
-    "github": "https://github.com/volcengine/volcengine-cli"
-  },
-  "autoupdate": {
+    "version": "1.1.8",
+    "description": "Volcengine CLI — command-line tool for Volcengine OpenAPI (ve). Configure credentials, switch profiles, query and call service APIs.",
+    "homepage": "https://github.com/volcengine/volcengine-cli",
+    "license": "Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/volcengine/volcengine-cli/releases/download/v$version/volcengine-cli_$version_windows_amd64.zip",
-        "hash": {
-          "mode": "extract",
-          "url": "https://github.com/volcengine/volcengine-cli/releases/expanded_assets/v$version",
-          "regex": "volcengine-cli_$version_windows_amd64\\.zip.*?sha256:$sha256"
+        "64bit": {
+            "url": "https://github.com/volcengine/volcengine-cli/releases/download/v1.1.8/volcengine-cli_1.1.8_windows_amd64.zip",
+            "hash": "6bdbecac792cf5aa7a00854ca057ebda8d68ca758ac52e91422083072e7b6b9a"
+        },
+        "arm64": {
+            "url": "https://github.com/volcengine/volcengine-cli/releases/download/v1.1.8/volcengine-cli_1.1.8_windows_arm64.zip",
+            "hash": "20f91eb3a2e83af153ff9054f3060fde78daaf9a66a3c965f4306afc8f2bf7f0"
         }
-      },
-      "arm64": {
-        "url": "https://github.com/volcengine/volcengine-cli/releases/download/v$version/volcengine-cli_$version_windows_arm64.zip",
-        "hash": {
-          "mode": "extract",
-          "url": "https://github.com/volcengine/volcengine-cli/releases/expanded_assets/v$version",
-          "regex": "volcengine-cli_$version_windows_arm64\\.zip.*?sha256:$sha256"
+    },
+    "bin": "ve.exe",
+    "checkver": {
+        "github": "https://github.com/volcengine/volcengine-cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/volcengine/volcengine-cli/releases/download/v$version/volcengine-cli_$version_windows_amd64.zip",
+                "hash": {
+                    "mode": "extract",
+                    "url": "https://github.com/volcengine/volcengine-cli/releases/expanded_assets/v$version",
+                    "regex": "volcengine-cli_$version_windows_amd64\\.zip.*?sha256:$sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/volcengine/volcengine-cli/releases/download/v$version/volcengine-cli_$version_windows_arm64.zip",
+                "hash": {
+                    "mode": "extract",
+                    "url": "https://github.com/volcengine/volcengine-cli/releases/expanded_assets/v$version",
+                    "regex": "volcengine-cli_$version_windows_arm64\\.zip.*?sha256:$sha256"
+                }
+            }
         }
-      }
     }
-  }
 }
