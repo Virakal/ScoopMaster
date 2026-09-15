@@ -1,29 +1,30 @@
 {
     "version": "7.7.1",
-    "description": "Kilo - all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
-    "homepage": "https://github.com/Kilo-Org/kilocode",
+    "description": "Kilo Code is an AI coding agent built for the terminal.",
+    "homepage": "https://kilo.ai/cli",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Kilo-Org/kilocode/releases/download/v7.7.1/kilo-windows-x64.zip",
             "hash": "bb62a6ddf45a340a8fdc5def8827f3c3d83db5ad329474ddbb852844bd8bf0d7"
+        },
+        "arm64": {
+            "url": "https://github.com/Kilo-Org/kilocode/releases/download/v7.7.1/kilo-windows-arm64.zip",
+            "hash": "7cf84fe2e9af39b4329ed5ffa59ebb9ca00f3019dc6c01f6824629968ef9e01c"
         }
     },
     "bin": "kilo.exe",
-    "shortcuts": [
-        [
-            "kilo.exe",
-            "Kilo"
-        ]
-    ],
     "checkver": {
-        "url": "https://github.com/Kilo-Org/kilocode/releases",
-        "regex": "/Kilo-Org/kilocode/releases/tag/v([0-9]+\\.[0-9]+\\.[0-9]+)\""
+        "url": "https://github.com/Kilo-Org/kilocode/releases.atom",
+        "regex": "Repository/\\d+/v(.+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Kilo-Org/kilocode/releases/download/v$version/kilo-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Kilo-Org/kilocode/releases/download/v$version/kilo-windows-arm64.zip"
             }
         }
     }
