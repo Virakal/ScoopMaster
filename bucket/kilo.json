@@ -1,31 +1,31 @@
 {
-    "version": "7.7.1",
-    "description": "Kilo Code is an AI coding agent built for the terminal.",
+    "version": "7.7.2",
+    "description": "The most complete CLI for agentic engineering",
     "homepage": "https://kilo.ai/cli",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Kilo-Org/kilocode/releases/download/v7.7.1/kilo-windows-x64.zip",
-            "hash": "bb62a6ddf45a340a8fdc5def8827f3c3d83db5ad329474ddbb852844bd8bf0d7"
-        },
-        "arm64": {
-            "url": "https://github.com/Kilo-Org/kilocode/releases/download/v7.7.1/kilo-windows-arm64.zip",
-            "hash": "7cf84fe2e9af39b4329ed5ffa59ebb9ca00f3019dc6c01f6824629968ef9e01c"
-        }
+    "url": "http://www.gstatic.com/generate_204#/dummy",
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bin": [
+        [
+            "node_modules\\.bin\\kilo.ps1",
+            "kilo"
+        ]
+    ],
+    "installer": {
+        "script": "pushd $original_dir; pnpm add @kilocode/cli@7.7.2; popd;"
     },
-    "bin": "kilo.exe",
+    "post_uninstall": "pnpm store prune",
+    "depends": [
+        "pnpm",
+        "nodejs"
+    ],
     "checkver": {
-        "url": "https://github.com/Kilo-Org/kilocode/releases.atom",
-        "regex": "Repository/\\d+/v(.+?)<"
+        "url": "https://registry.npmjs.org/@kilocode/cli/latest",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Kilo-Org/kilocode/releases/download/v$version/kilo-windows-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Kilo-Org/kilocode/releases/download/v$version/kilo-windows-arm64.zip"
-            }
+        "installer": {
+            "script": "pushd $original_dir; pnpm add @kilocode/cli@$version; popd;"
         }
     }
 }
