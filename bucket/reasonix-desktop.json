@@ -5,13 +5,13 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v1.38.9/Reasonix-windows-amd64-installer.exe",
+            "url": "https://dl.reasonix.io/desktop-v1.38.9/Reasonix-windows-amd64-installer.exe",
             "hash": "f7ceb01900db737eb8ed779beea593366cc424d9875efd5a719ec53607711a8e"
         }
     },
     "pre_install": [
         "& 7z.exe x \"$dir\\Reasonix-windows-amd64-installer.exe\" -o\"$dir\" -y | Out-Null",
-        "Remove-Item \"$dir\\Reasonix-windows-amd64-installer.exe\", (Join-Path $dir '$PLUGINSDIR'), \"$dir\\webview2bootstrapper\" -Recurse -Force -ErrorAction SilentlyContinue"
+        "Remove-Item \"$dir\\Reasonix-windows-amd64-installer.exe\", (Join-Path $dir '$PLUGINSDIR'), (Join-Path $dir '$R9'), \"$dir\\uninstall.exe\", \"$dir\\webview2bootstrapper\" -Recurse -Force -ErrorAction SilentlyContinue"
     ],
     "shortcuts": [
         [
@@ -21,13 +21,17 @@
     ],
     "checkver": {
         "url": "https://github.com/esengine/DeepSeek-Reasonix/releases",
-        "regex": "tag/desktop-v(?<version>[\\d.]+)"
+        "regex": "tag/(?:desktop-)?v(?<version>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v$version/Reasonix-windows-amd64-installer.exe"
+                "url": "https://dl.reasonix.io/desktop-v$version/Reasonix-windows-amd64-installer.exe"
             }
+        },
+        "hash": {
+            "url": "https://dl.reasonix.io/desktop-v$version/latest.json",
+            "jsonpath": "$.platforms['windows-amd64'].sha256"
         }
     }
 }
