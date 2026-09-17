@@ -1,12 +1,12 @@
 {
-    "version": "1.8.1",
+    "version": "1.8.2",
     "description": "AI-native, GPU-accelerated terminal emulator with SSH, persistent sessions, split panes and AI CLI workflows.",
     "homepage": "https://github.com/Kuddev/pebrel",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Kuddev/pebrel/releases/download/v1.8.1/Pebrel-v1.8.1-windows-x64.zip",
-            "hash": "4e6315d47c4b8d1db612a7ada0231c88b570dfd7dd1faec56bd498a8a2face18"
+            "url": "https://github.com/Kuddev/pebrel/releases/download/v1.8.2/Pebrel-v1.8.2-windows-x64.zip",
+            "hash": "9a1957a337b7747ba9a47ddf7be40d159e5fd33ab6b57efc6e1643bab5360ade"
         }
     },
     "bin": [
