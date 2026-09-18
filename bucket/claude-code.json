@@ -7,49 +7,43 @@
         "url": "https://www.anthropic.com/legal/consumer-terms"
     },
     "notes": [
-        "Claude Code nonessential network traffic is disabled by default.",
-        "It's recommended to use `extras/cc-switch` to configure third-party API subscriptions."
+        "Claude Code relies on Git (https://git-scm.com/downloads/win) to function correctly.",
+        "If Claude Code fails to detect Git Bash, manually specify the path using the `CLAUDE_CODE_GIT_BASH_PATH` environment variable.",
+        "For more information: https://code.claude.com/docs/en/setup#set-up-on-windows"
     ],
     "suggest": {
-        "cc-switch": "extras/cc-switch"
+        "git": "main/git"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anthropics/claude-code/releases/download/v2.1.277/claude-win32-x64.zip",
-            "hash": "b5efb0f6da723328f4321104b39030a0b6cb2f09dc4efba04bb1e00ce910e32e"
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.277/win32-x64/claude.exe",
+            "hash": "c800bc865f08cdfa27a47b2134beb86258a64c1ca817de67514b6981811fe964"
         },
         "arm64": {
-            "url": "https://github.com/anthropics/claude-code/releases/download/v2.1.277/claude-win32-arm64.zip",
-            "hash": "b595d63ded413344b0c336e78a8906a04a09ff799b0d121705e2c36a860d3c69"
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.1.277/win32-arm64/claude.exe",
+            "hash": "e315ec5fc16695c60e9ba31a25a568d273b720293a90ff384277c3cf2e7315ad"
         }
     },
     "bin": "claude.exe",
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:USERPROFILE\\.claude\" \"$persist_dir\\.claude\" -Migrate",
-            "if (!(Test-Path \"$persist_dir\\.claude\\settings.json\") -or !(Get-Item \"$persist_dir\\.claude\\settings.json\").Length) {",
-            "    New-Item \"$persist_dir\\.claude\\settings.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-            "    Set-Content -Path \"$persist_dir\\.claude\\settings.json\" -Value '{\"env\":{\"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC\":\"1\",\"CLAUDE_CODE_USE_POWERSHELL_TOOL\":\"1\"},\"skipWebFetchPreflight\":true}' -Encoding Ascii",
-            "}"
-        ]
-    },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:USERPROFILE\\.claude\""
-    ],
     "checkver": {
-        "github": "https://github.com/anthropics/claude-code"
+        "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/latest",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anthropics/claude-code/releases/download/v$version/claude-win32-x64.zip"
+                "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/win32-x64/claude.exe",
+                "hash": {
+                    "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/manifest.json",
+                    "jsonpath": "$.platforms.win32-x64.checksum"
+                }
             },
             "arm64": {
-                "url": "https://github.com/anthropics/claude-code/releases/download/v$version/claude-win32-arm64.zip"
+                "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/win32-arm64/claude.exe",
+                "hash": {
+                    "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/manifest.json",
+                    "jsonpath": "$.platforms.win32-arm64.checksum"
+                }
             }
         }
     }
