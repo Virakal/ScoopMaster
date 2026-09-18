@@ -1,60 +1,60 @@
 {
-    "version": "1.6.3",
-    "description": "图吧工具箱 winUI3 版",
-    "homepage": "https://tubawinui3.cn/",
-    "license": {
-        "identifier": "GPL-3.0",
-        "url": "https://github.com/luolangaga/tubatools/blob/master/LICENSE"
+  "version": "1.6.3",
+  "description": "图吧工具箱 winUI3 版",
+  "homepage": "https://tubawinui3.cn/",
+  "license": {
+    "identifier": "GPL-3.0",
+    "url": "https://github.com/luolangaga/tubatools/blob/master/LICENSE"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/luolangaga/tubatools/releases/download/v1.6.3/TubaWinUi3_Portable_1.6.3_x64.zip",
+      "hash": "eea7d1e66b4e881f3df4b9c77f71235ee68d40a9d51b332b240949d3ee53464b"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/luolangaga/tubatools/releases/download/v1.6.3/TubaWinUi3_Portable_1.6.3_x64.zip",
-            "hash": "eea7d1e66b4e881f3df4b9c77f71235ee68d40a9d51b332b240949d3ee53464b"
-        },
-        "arm64": {
-            "url": "https://github.com/luolangaga/tubatools/releases/download/v1.6.3/TubaWinUi3_Portable_1.6.3_arm64.zip",
-            "hash": "87bf0fe93321c7cf405daca226ed29253e3e1ab29bddfdd7bb695f045d860091"
-        }
-    },
-    "innosetup": true,
-    "installer": {
-        "script": [
-            "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\TubaWinUi3\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\TubaWinUi3\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "shortcuts": [
-        [
-            "图吧工具箱WinUI3.exe",
-            "图吧工具箱WinUI3"
-        ],
-        [
-            "图吧工具箱Winui3兼容版.exe",
-            "图吧工具箱Winui3兼容版"
-        ]
-    ],
-    "checkver": {
-        "github": "https://api.github.com/repos/luolangaga/tubatools/releases",
-        "jp": "$[0].tag_name",
-        "regex": "v([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_arm64.zip"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/luolangaga/tubatools/releases/download/v1.6.3/TubaWinUi3_Portable_1.6.3_arm64.zip",
+      "hash": "87bf0fe93321c7cf405daca226ed29253e3e1ab29bddfdd7bb695f045d860091"
     }
+  },
+  "innosetup": true,
+  "installer": {
+    "script": [
+      "# handle runtime cache",
+      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+      "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\TubaWinUi3\"",
+      "Remove-Module -Name AppsUtils"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+      "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\TubaWinUi3\"",
+      "Remove-Module -Name AppsUtils"
+    ]
+  },
+  "shortcuts": [
+    [
+      "图吧工具箱WinUI3.exe",
+      "图吧工具箱WinUI3"
+    ],
+    [
+      "图吧工具箱Winui3兼容版.exe",
+      "图吧工具箱Winui3兼容版"
+    ]
+  ],
+  "checkver": {
+    "github": "https://api.github.com/repos/luolangaga/tubatools/releases",
+    "jp": "$[0].tag_name",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_x64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/luolangaga/tubatools/releases/download/v$version/TubaWinUi3_Portable_$version_arm64.zip"
+      }
+    }
+  }
 }
