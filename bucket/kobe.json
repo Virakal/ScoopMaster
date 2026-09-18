@@ -1,17 +1,17 @@
 {
-    "version": "0.50.1",
+    "version": "0.51.0",
     "description": "Kubernetes operator CLI for pools of pre-warmed virtual clusters — claim a configured cluster in seconds",
     "homepage": "https://github.com/kunobi-ninja/kobe",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kunobi-ninja/kobe/releases/download/v0.50.1/kobe-x86_64-pc-windows-msvc.zip",
-            "hash": "67d916a7a58bfa0ffcd06a4308066398f69af459e0e74c9dfc252322ea61d02c",
+            "url": "https://github.com/kunobi-ninja/kobe/releases/download/v0.51.0/kobe-x86_64-pc-windows-msvc.zip",
+            "hash": "2469c3f61dede1956824c55f52c7f227cc21a83f8d53a257668c22d0e7473eb0",
             "bin": "kobe.exe"
         },
         "arm64": {
-            "url": "https://github.com/kunobi-ninja/kobe/releases/download/v0.50.1/kobe-aarch64-pc-windows-msvc.zip",
-            "hash": "fa63f93ce8291d58abbb482f47f06a814e100bbaebed3f0b9fc18eef927e13dc",
+            "url": "https://github.com/kunobi-ninja/kobe/releases/download/v0.51.0/kobe-aarch64-pc-windows-msvc.zip",
+            "hash": "848fd7e2147c216d4742a4958719ed49b72a5393f4fad9a7f3af517be6030299",
             "bin": "kobe.exe"
         }
     },

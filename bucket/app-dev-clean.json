@@ -1,19 +1,19 @@
 {
-    "version": "0.1.0",
+    "version": "0.3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/latif-essam/app-dev-clean/releases/download/v0.1.0/app-dev-clean_windows_amd64.zip",
+            "url": "https://github.com/latif-essam/app-dev-clean/releases/download/v0.3.0/app-dev-clean_windows_amd64.zip",
             "bin": [
                 "app-dev-clean.exe"
             ],
-            "hash": "c4ca1ba24495a7306d2fd1bc7c835dc557d967bfe30277b1ae6e30b8867fbf4a"
+            "hash": "6989e01e12b71ceb92d0c3cbc74cfea527e0880d6229bb5e68040713b2c3227e"
         },
         "arm64": {
-            "url": "https://github.com/latif-essam/app-dev-clean/releases/download/v0.1.0/app-dev-clean_windows_arm64.zip",
+            "url": "https://github.com/latif-essam/app-dev-clean/releases/download/v0.3.0/app-dev-clean_windows_arm64.zip",
             "bin": [
                 "app-dev-clean.exe"
             ],
-            "hash": "4436c37c93af3f435a9ca4aa2b35a86d30c656b3d6957692bbaac4c2cbf8577d"
+            "hash": "bb300d981f5db12e2c5bcf01d51b248d3572c2a1fbdd991a189293260942845e"
         }
     },
     "homepage": "https://github.com/latif-essam/app-dev-clean",
@@ -22,5 +22,8 @@
     "post_install": [
         "$shims = if ($env:SCOOP) { \"$env:SCOOP\\shims\" } else { \"$env:USERPROFILE\\scoop\\shims\" }",
         "if (Test-Path $shims) { Set-Content -Path \"$shims\\adc.cmd\" -Value \"@`\"$dir\\app-dev-clean.exe`\" %*\" -Encoding ASCII -ErrorAction SilentlyContinue }"
+    ],
+    "depends": [
+        "git"
     ]
 }

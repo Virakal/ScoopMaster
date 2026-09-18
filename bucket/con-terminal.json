@@ -1,7 +1,7 @@
 {
     "version": "0.1.0-beta.99",
-    "description": "The Native Terminal Emulator with a builtin AI Harness",
-    "homepage": "https://github.com/nowledge-co/con-terminal",
+    "description": "The Native Terminal Emulator with a builtin AI Harness ",
+    "homepage": "https://con.nowledge.co/",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -9,17 +9,21 @@
             "hash": "1d293db9afde669df1b5f47286a2fcc5413b4f5cd291093d32e2b5de37241c61"
         }
     },
-    "bin": "con-app.exe",
+    "bin": [
+        [
+            "con-cli.exe",
+            "con-cli"
+        ]
+    ],
     "shortcuts": [
         [
             "con-app.exe",
-            "Con Terminal"
+            "con"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/nowledge-co/con-terminal/releases/latest",
-        "jsonpath": "tag_name",
-        "regex": "v([\\d.]+(?:-beta\\.\\d+))"
+        "github": "https://github.com/nowledge-co/con-terminal",
+        "regex": "([\\d.]+-(?:alpha|beta|rc)[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
