@@ -1,10 +1,10 @@
 {
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Terminal dashboard that measures what each AI coding model actually costs per passing test — routing, escalation and budget analytics across Claude Code, Codex CLI, GitHub Copilot, Gemini CLI, OpenCode and Local models, where an unknown cost stays unknown instead of rendering as $0.00. Live TUI or JSON/CSV.",
     "homepage": "https://sophanasok.github.io/ai-usage-tui-site/",
     "license": "MIT",
-    "url": "https://github.com/SophanaSok/ai-usage-tui/releases/download/v1.0.1/ai-usage-tui-v1.0.1-x86_64-windows.zip",
-    "hash": "c9af36d4f5e399b8ed6dd62a3935a49d37160871e4de6127671567262e9f5bab",
+    "url": "https://github.com/SophanaSok/ai-usage-tui/releases/download/v1.1.0/ai-usage-tui-v1.1.0-x86_64-windows.zip",
+    "hash": "2adb66283ec1d055b79b3f506952ab1dc8d0c61ee9d9582e724507ce6c2e7564",
     "bin": "ai-usage-tui.exe",
     "checkver": "github",
     "autoupdate": {
