@@ -13,10 +13,11 @@
             "hash": "1ebf0199d8aae174969bca655e23fdacfef752ab207b4ac25013e54a0415c851"
         }
     },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.json\")) { New-Item -Path \"$dir\\config.json\" -ItemType File | Out-Null }",
     "shortcuts": [
         [
             "MPF.exe",
-            "MPF"
+            "Media Preservation Frontend (MPF)"
         ]
     ],
     "persist": "config.json",
