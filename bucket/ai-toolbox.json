@@ -1,5 +1,5 @@
 {
-    "version": "1.1.5",
+    "version": "1.1.6",
     "description": "A desktop toolbox for managing AI coding assistants, providers, MCP servers, skills, sessions, and proxy gateways",
     "homepage": "https://github.com/coulsontl/ai-toolbox",
     "license": "MIT",
@@ -10,8 +10,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coulsontl/ai-toolbox/releases/download/v1.1.5/AI.Toolbox_1.1.5_x64-setup.exe#/dl.7z",
-            "hash": "27d6fa9028cab46f993782f7cc19ba5b4bee67af6f1bc128f1b5301bf06aacb1"
+            "url": "https://github.com/coulsontl/ai-toolbox/releases/download/v1.1.6/AI.Toolbox_1.1.6_x64-setup.exe#/dl.7z",
+            "hash": "d5d2a921b2d4c090d52017bb5f3d1193c8758a5296a202bd00971df3c1e80f9a"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
