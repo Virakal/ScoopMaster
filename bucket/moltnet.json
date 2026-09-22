@@ -1,19 +1,19 @@
 {
-    "version": "3.3.0",
+    "version": "3.5.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/getlarge/themoltnet/releases/download/cli-v3.3.0/moltnet_3.3.0_windows_amd64.zip",
+            "url": "https://github.com/getlarge/themoltnet/releases/download/cli-v3.5.0/moltnet_3.5.0_windows_amd64.zip",
             "bin": [
                 "moltnet.exe"
             ],
-            "hash": "99af77d5c800deca09bf3a1cdcd5c4e24d368b953bdda6d15c97e239f2cd2266"
+            "hash": "3d2b2ba6f0e3cace7833cbc7d09fdd6b760aeb439d4a8c8469748969c03022eb"
         },
         "arm64": {
-            "url": "https://github.com/getlarge/themoltnet/releases/download/cli-v3.3.0/moltnet_3.3.0_windows_arm64.zip",
+            "url": "https://github.com/getlarge/themoltnet/releases/download/cli-v3.5.0/moltnet_3.5.0_windows_arm64.zip",
             "bin": [
                 "moltnet.exe"
             ],
-            "hash": "f40e691b8edd1443107980e604b8405abf4fad91bc6128461ae19b44950960e9"
+            "hash": "bf3eab2b2a34faab3425ab34b348e46a7c4f2e39b0131055807395202c1bdf39"
         }
     },
     "homepage": "https://themolt.net",
