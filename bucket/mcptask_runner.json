@@ -1,19 +1,19 @@
 {
-    "version": "0.3.30",
+    "version": "0.3.31",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jchsoft/mcptask-releases/releases/download/v0.3.30/mcptask_runner_0.3.30_windows_amd64.zip",
+            "url": "https://github.com/jchsoft/mcptask-releases/releases/download/v0.3.31/mcptask_runner_0.3.31_windows_amd64.zip",
             "bin": [
                 "mcptask_runner.exe"
             ],
-            "hash": "2d351d970370803e486ff816a1eece85952c5c2a880688e06c58b3555df2acc4"
+            "hash": "cbd96e43b9a28d8477de4a2898f8f5baca0f2b01140ff3d1c314f7f0d9d61e77"
         },
         "arm64": {
-            "url": "https://github.com/jchsoft/mcptask-releases/releases/download/v0.3.30/mcptask_runner_0.3.30_windows_arm64.zip",
+            "url": "https://github.com/jchsoft/mcptask-releases/releases/download/v0.3.31/mcptask_runner_0.3.31_windows_arm64.zip",
             "bin": [
                 "mcptask_runner.exe"
             ],
-            "hash": "d0b5231a8c5ba4d2796d40b9958b083e18a76675d83101aed3e686d835393964"
+            "hash": "d8bc79cf98bc4e4642709fea87117dd8aa1a9074423d30ec8bdbb110f7f12b8f"
         }
     },
     "homepage": "https://mcptask.online",
