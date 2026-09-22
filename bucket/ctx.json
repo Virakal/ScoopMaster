@@ -1,12 +1,12 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "description": "Search the coding agent history already on your machine.",
     "homepage": "https://ctx.rs",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ctxrs/ctx/releases/download/v1.6.1/ctx-windows-x64.exe#/ctx.exe",
-            "hash": "0f561c77bc4a1fea4e5a584b79130b1adf39347da31359773ac5ae676f28fc04"
+            "url": "https://github.com/ctxrs/ctx/releases/download/v1.6.2/ctx-windows-x64.exe#/ctx.exe",
+            "hash": "62ab5b150873feca9051d7f1e5dd295e5662df3ac199dd6192a8848c177242dd"
         }
     },
     "bin": "ctx.exe",
