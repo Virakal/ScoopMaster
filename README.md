@@ -24,7 +24,7 @@ To help users to maintain all the apps updated, this repo provides two services,
 
 - The database indexes **262749** manifests.
 - The harvester gathers data from **2812** buckets.
-- The Bucket provides last versions for all the **60388** apps.
+- The Bucket provides last versions for all the **60389** apps.
 
 The system uses the platform in two ways:
 </br>
