@@ -1,11 +1,8 @@
 {
     "version": "4.0.0",
-    "description": "Redefining the open-source download manager",
-    "homepage": "https://rayburst.pages.dev/",
-    "license": {
-        "identifier": "MIT license",
-        "url": "https://github.com/AnInsomniacy/rayburst#MIT-1-ov-file"
-    },
+    "description": "A full-featured download manager — rebuilt from the ground up (Formerly known as Motrix Next).",
+    "homepage": "https://rayburst.pages.dev",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AnInsomniacy/rayburst/releases/download/v4.0.0/Rayburst_4.0.0_x64-setup.exe#/dl.7z",
@@ -16,25 +13,7 @@
             "hash": "c47295dd9609238e1e822475d7e8030ce5a5c8783556eb4bd486da9b15f03c2e"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninst*\" -Force -Recurse",
-    "installer": {
-        "script": [
-            "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\dev.aninsomniacy.rayburst\"",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\dev.aninsomniacy.rayburst\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\dev.aninsomniacy.rayburst\"",
-            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\dev.aninsomniacy.rayburst\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "bin": "rayburst.exe",
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse -ErrorAction Ignore",
     "shortcuts": [
         [
             "rayburst.exe",
@@ -42,9 +21,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/AnInsomniacy/rayburst/releases/latest",
-        "jp": "$.assets[*].browser_download_url",
-        "regex": "/releases/download/v([\\d.]+)/Rayburst_([\\d.]+)_x64-setup"
+        "github": "https://github.com/AnInsomniacy/rayburst"
     },
     "autoupdate": {
         "architecture": {
