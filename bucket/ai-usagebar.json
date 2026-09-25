@@ -24,7 +24,10 @@
             "AI Usage"
         ]
     ],
-    "pre_uninstall": "Stop-Process -Name 'ai-usagebar-tray' -Force -ErrorAction SilentlyContinue",
+    "pre_uninstall": [
+        "$root = Split-Path $dir",
+        "Get-Process -Name 'ai-usagebar-tray' -ErrorAction SilentlyContinue | Where-Object { $_.Path -like \"$root\\*\" } | Stop-Process -Force -ErrorAction SilentlyContinue"
+    ],
     "post_uninstall": [
         "$root = Split-Path $dir",
         "$run = 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'",
