@@ -1,19 +1,19 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/oscar1223/kiwi/releases/download/v0.1.0/kiwi_windows_amd64.zip",
+            "url": "https://github.com/oscar1223/kiwi/releases/download/v0.1.2/kiwi_windows_amd64.zip",
             "bin": [
                 "kiwi.exe"
             ],
-            "hash": "52460a68e6259cef33fe7ea3e1bee8a45bb5f79af6e3d2a2bc47d78808b04876"
+            "hash": "6896e622bab7eef270689c1dbdecfbe283336790a6ddc920477e327d50376562"
         },
         "arm64": {
-            "url": "https://github.com/oscar1223/kiwi/releases/download/v0.1.0/kiwi_windows_arm64.zip",
+            "url": "https://github.com/oscar1223/kiwi/releases/download/v0.1.2/kiwi_windows_arm64.zip",
             "bin": [
                 "kiwi.exe"
             ],
-            "hash": "d65ef9713775b28e485192cda4d0a3aa0217697dcc52531dd204688659be2229"
+            "hash": "d32fd832cdc259b42a1a7ed46cd44ceab4931217af1b5d3e7234adb52fb6bd66"
         }
     },
     "homepage": "https://github.com/oscar1223/kiwi",
