@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/kunkundi/crossdesk/releases/download/v1.5.3-20260927/crossdesk-win-x64-v1.5.3-20260927.exe#/dl.7z",
-            "hash": "d0fb95027fd1a9aae234a93e002daefa4c93a1ec597616dfb9d1a92d3534e438",
+            "hash": "fb44be68f03f78cf65de67f7d86b5853a571d62822093c08736fb3887636d915",
             "pre_install": [
                 "Move-Item \"$dir\\`$APPDATA\\CrossDesk\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\*.ico\" -Force -Recurse"
