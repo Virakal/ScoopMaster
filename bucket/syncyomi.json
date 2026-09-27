@@ -1,20 +1,20 @@
 {
-  "version": "1.5.7",
-  "description": "SyncYomi is an open-source project crafted to provide a seamless synchronization experience for your TachiyomiSY/Mihon manga reading progress and library across multiple devices.",
-  "homepage": "https://github.com/syncyomi/syncyomi",
-  "license": "GPL-2.0-only",
-  "url": "https://github.com/syncyomi/syncyomi/releases/download/v1.5.7/syncyomi_1.5.7_windows_x86_64.zip",
-  "hash": "b56bac504f8b89e9a9336c273b6930eab00f3f4a6c793fcbc9d379f87ef7b2ac",
-  "bin": [
-    [
-      "syncyomi.exe",
-      "syncyomi",
-      "--config $dir\\config"
-    ]
-  ],
-  "persist": "config",
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://github.com/syncyomi/syncyomi/releases/download/v$version/syncyomi_$version_windows_x86_64.zip"
-  }
+    "version": "1.5.7",
+    "description": "SyncYomi is an open-source project crafted to provide a seamless synchronization experience for your TachiyomiSY/Mihon manga reading progress and library across multiple devices.",
+    "homepage": "https://github.com/syncyomi/syncyomi",
+    "license": "GPL-2.0-only",
+    "url": "https://github.com/syncyomi/syncyomi/releases/download/v1.5.7/syncyomi_1.5.7_windows_x86_64.zip",
+    "hash": "b56bac504f8b89e9a9336c273b6930eab00f3f4a6c793fcbc9d379f87ef7b2ac",
+    "bin": [
+        [
+            "syncyomi.exe",
+            "syncyomi",
+            "--config $dir\\config"
+        ]
+    ],
+    "persist": "config",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/syncyomi/syncyomi/releases/download/v$version/syncyomi_$version_windows_x86_64.zip"
+    }
 }
