@@ -1,0 +1,62 @@
+{
+  "version": "1.9.2",
+  "description": "A library and tools for DNS programming and DNSSEC (ldns, drill, and example utilities).",
+  "homepage": "https://nlnetlabs.nl/projects/ldns/about/",
+  "license": "BSD-3-Clause",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/shanto/Scoop/releases/download/ldns-1.9.2/ldns-windows-x64.zip",
+      "hash": "c9f796c653747b48ec758c935507b56661d03648de549ef051cad01c3de1be5f"
+    },
+    "arm64": {
+      "url": "https://github.com/shanto/Scoop/releases/download/ldns-1.9.2/ldns-windows-arm64.zip",
+      "hash": "a43f9119ea6148e1ea15d4eca79c13062d699df7622637c6be5ca5688554658a"
+    }
+  },
+  "bin": [
+    "drill.exe",
+    "ldns-chaos.exe",
+    "ldns-compare-zones.exe",
+    "ldns-dane.exe",
+    "ldns-dpa.exe",
+    "ldns-gen-zone.exe",
+    "ldns-key2ds.exe",
+    "ldns-keyfetcher.exe",
+    "ldns-keygen.exe",
+    "ldns-mx.exe",
+    "ldns-notify.exe",
+    "ldns-nsec3-hash.exe",
+    "ldns-read-zone.exe",
+    "ldns-resolver.exe",
+    "ldns-revoke.exe",
+    "ldns-rrsig.exe",
+    "ldns-signzone.exe",
+    "ldns-test-edns.exe",
+    "ldns-testns.exe",
+    "ldns-update.exe",
+    "ldns-verify-zone.exe",
+    "ldns-version.exe",
+    "ldns-walk.exe",
+    "ldns-zcat.exe",
+    "ldns-zsplit.exe",
+    "ldnsd.exe"
+  ],
+  "persist": "root.key",
+  "checkver": {
+    "url": "https://nlnetlabs.nl/projects/ldns/about/",
+    "regex": "/ldns-([\\d.]+)\\.tar.gz"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/shanto/Scoop/releases/download/ldns-$version/ldns-windows-x64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/shanto/Scoop/releases/download/ldns-$version/ldns-windows-arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
+}
