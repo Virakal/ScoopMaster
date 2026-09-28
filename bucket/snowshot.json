@@ -1,23 +1,33 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.1.5-beta",
-    "description": "Capture, annotate, extract text, and record your screen. Turn a moment into something worth sharing",
-    "homepage": "https://github.com/mg-chao/snow-apps",
-    "license": "GPL-3.0-or-later",
+    "version": "1.1.6-beta",
+    "description": "SnowShot 是一款功能强大的截图工具，集成了文字识别、翻译和 AI 对话等功能",
+    "homepage": "https://github.com/mg-chao/snow-shot",
+    "license": "Apache-2.0|GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mg-chao/snow-apps/releases/download/v1.1.5-beta/snow-shot-1.1.5-beta-windows-x64-portable.zip",
-            "hash": "sha256:d4690a429abc3c94a9e5bf8bbf15228abc67f5c8ea051c9322f40a638761ef2b"
+            "url": "https://github.com/mg-chao/snow-apps/releases/download/v1.1.6-beta/snow-shot-1.1.6-beta-windows-x64-portable.zip",
+            "hash": "39650a8a35a53c123a5e5540e3f1f0c3d872fa10f099b4a0975e9fb967e95b6e"
         }
     },
-    "extract_dir": "bin",
+    "pre_install": "Get-ChildItem \"$dir\\Snow Shot_*\\*\" | Move-Item -Destination \"$dir\\\" -Force",
     "shortcuts": [
-        ["snow_shot.exe", "Snow Shot"]
+        [
+            "snowshot.exe",
+            "Snow Shot"
+        ]
     ],
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\com.chao.snowshot\" -Force -Recurse -ErrorAction SilentlyContinue }",
     "persist": [
-        "portable"
+        "configs",
+        "plugins",
+        "stores",
+        "captureHistoryImages"
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/mg-chao/snow-shot/releases",
+        "regex": "tree/v([\\d.\\-a-zA-Z]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
