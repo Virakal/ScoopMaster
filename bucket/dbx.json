@@ -1,12 +1,16 @@
 {
     "version": "0.6.27",
-    "description": "A lightweight database client with support for MySQL, PostgreSQL, Redis, MongoDB, DuckDB, ClickHouse, SQL Server, and more.",
-    "homepage": "https://github.com/t8y2/dbx",
+    "description": "Lightweight, cross-platform database client",
+    "homepage": "https://dbxio.com",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/t8y2/dbx/releases/download/v0.6.27/DBX_0.6.27_x64-portable.zip",
             "hash": "88f2bfc331aee9ccd2d8d0d058109713de1e877b32628328e8de868f86fee872"
+        },
+        "arm64": {
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.6.27/DBX_0.6.27_arm64-portable.zip",
+            "hash": "26e250f538e14f5cfa6cc36ebc26be8ee8305b2368cf046e7775cabe361f1b62"
         }
     },
     "shortcuts": [
@@ -15,16 +19,20 @@
             "DBX"
         ]
     ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.dbx.app\", \"$env:LOCALAPPDATA\\com.dbx.app\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "notes": [
-        "DBX is NOT portable.",
-        "Settings are stored in '%APPDATA%\\com.dbx.app', and can be purged using 'scoop uninstall --purge dbx'."
-    ],
-    "checkver": "github",
+    "env_set": {
+        "DBX_DATA_DIR": "$dir\\data"
+    },
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/t8y2/dbx"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-portable.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_arm64-portable.zip"
             }
         }
     }
