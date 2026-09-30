@@ -1,5 +1,5 @@
 {
-    "version": "b4082",
+    "version": "4082",
     "description": "A free, open-source, plastic guitar game that supports guitar (five fret), drums (plastic or e-kit), vocals, pro-keys, and more (nightly build).",
     "homepage": "https://yarg.in/",
     "license": "LGPL-3.0",
@@ -21,6 +21,6 @@
         "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://github.com/YARC-Official/YARG-BleedingEdge/releases/download/$version/YARG_$version-Windows-x64.zip"
+        "url": "https://github.com/YARC-Official/YARG-BleedingEdge/releases/download/b$version/YARG_b$version-Windows-x64.zip"
     }
 }

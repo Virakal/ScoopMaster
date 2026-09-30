@@ -15,7 +15,7 @@
     "persist": ["custom-models"],
     "checkver": {
         "github": "https://github.com/TNTwise/REAL-Video-Enhancer",
-        "regex": "releases/tag/RVE-([\\d.]+)"
+        "regex": "RVE-([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
