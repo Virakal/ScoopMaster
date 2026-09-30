@@ -6,21 +6,22 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/openchamber/openchamber/releases/download/v2.0.4/OpenChamber-2.0.4-win-x64.exe#/dl.7z",
-            "hash": "sha512:a01a7d9db4ba6d35af099367eabb52ee5d016b6022a92b9d14bdfbaeb9e3042ea453295ec957582054e9df506378eb32724d9dbdb3b291de41aeed8275e30659"
+            "hash": "72833d8bb494e36d8d36be91b8ca3a61749dcfd102f096c7915f78938786b47e",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+                ]
+            },
+            "bin": "OpenChamber.exe",
+            "shortcuts": [
+                [
+                    "OpenChamber.exe",
+                    "OpenChamber"
+                ]
+            ]
         }
     },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
-        ]
-    },
-    "shortcuts": [
-        [
-            "OpenChamber.exe",
-            "OpenChamber"
-        ]
-    ],
     "checkver": {
         "github": "https://github.com/openchamber/openchamber"
     },
@@ -29,10 +30,6 @@
             "64bit": {
                 "url": "https://github.com/openchamber/openchamber/releases/download/v$version/OpenChamber-$version-win-x64.exe#/dl.7z"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }

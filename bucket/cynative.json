@@ -1,19 +1,19 @@
 {
-    "version": "1.12.1",
+    "version": "1.12.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cynative/cynative/releases/download/v1.12.1/cynative_Windows_x86_64.zip",
+            "url": "https://github.com/cynative/cynative/releases/download/v1.12.2/cynative_Windows_x86_64.zip",
             "bin": [
                 "cynative.exe"
             ],
-            "hash": "5452e066195715fc96a683d7adc5a5b90ccb12158340b0144a3b4043a60a66d6"
+            "hash": "25751f8385bb18164643a6c39e62da5bd852395f808e8c2b5a96ff4c3b191888"
         },
         "arm64": {
-            "url": "https://github.com/cynative/cynative/releases/download/v1.12.1/cynative_Windows_arm64.zip",
+            "url": "https://github.com/cynative/cynative/releases/download/v1.12.2/cynative_Windows_arm64.zip",
             "bin": [
                 "cynative.exe"
             ],
-            "hash": "bb551e3b4c53cb58bef7e81ade3cf59181b23fc589f20a696810e50ce2dd6373"
+            "hash": "b6b0761da81bdf6aa8b5f220cee6bf666ba47d75451d7c7a3301d7dfb595d028"
         }
     },
     "homepage": "https://github.com/cynative/cynative",
