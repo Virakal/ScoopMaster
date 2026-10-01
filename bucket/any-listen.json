@@ -1,20 +1,20 @@
 {
-    "version": "0.8.0",
+    "version": "0.9.0",
     "description": "A cross-platform private music playback service",
     "homepage": "https://github.com/any-listen/any-listen",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.8.0/any-listen-0.8.0-win_x64-green.7z",
-            "hash": "c68ea64aef002be72c35d48575ee06c12cc1ed0258f029a8243bdbf133b6db6f"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.9.0/any-listen-0.9.0-win_x64-green.7z",
+            "hash": "b1455eb08604e07453558ed88fe3ff187459a154b1b32b0674e0d3752176e4c5"
         },
         "32bit": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.8.0/any-listen-0.8.0-win_legacy_ia32-green.7z",
-            "hash": "3fc3d36bfd42502194b2e1336ede1d51de423a919825aa71c98c74697ceb3921"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.9.0/any-listen-0.9.0-win_legacy_ia32-green.7z",
+            "hash": "84aae91a728595f00a2ef9d9ae3270d822f9faddf264ae2b4d37e87ae377c709"
         },
         "arm64": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.8.0/any-listen-0.8.0-win_arm64-green.7z",
-            "hash": "e43bb9c9f3056ae793756949bd9ecbd885d5085c8fc642511273588a2af5892e"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.9.0/any-listen-0.9.0-win_arm64-green.7z",
+            "hash": "6c2910492971dd5fe454bc37a5f0b3086bd5b5f46de1b20dc7c33de1457f0893"
         }
     },
     "shortcuts": [
