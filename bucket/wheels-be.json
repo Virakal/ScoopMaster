@@ -3,7 +3,7 @@
     "##2": "OpenJDK 21 inlined as a 5th url/hash so `scoop install wheels-be` works",
     "##3": "from a fresh shell with no prerequisite buckets. Hashes for wheels-module",
     "##4": "and wheels-core are kept current by .github/workflows/autoupdate.yml. Hashes for wheels-docs are kept current by the same workflow.",
-    "version": "4.1.3-snapshot.2682",
+    "version": "4.1.3-snapshot.2692",
     "description": "Wheels CFML MVC framework - bleeding-edge channel (develop snapshots).",
     "homepage": "https://wheels.dev",
     "license": "Apache-2.0",
@@ -17,20 +17,20 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2682/wheels-module-4.1.3-snapshot.2682.zip",
-                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2682/wheels-core-4.1.3-snapshot.2682.zip",
-                "https://github.com/wheels-dev/LuCLI/releases/download/v0.6.2.1/lucli-0.6.2.1.jar#/lucli.jar",
+                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2692/wheels-module-4.1.3-snapshot.2692.zip",
+                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2692/wheels-core-4.1.3-snapshot.2692.zip",
+                "https://github.com/wheels-dev/LuCLI/releases/download/v0.6.2.2/lucli-0.6.2.2.jar#/lucli.jar",
                 "https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.49.1.0/sqlite-jdbc-3.49.1.0.jar",
                 "https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_windows-x64_bin.zip",
-                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2682/wheels-docs-4.1.3-snapshot.2682.zip"
+                "https://github.com/wheels-dev/wheels-snapshots/releases/download/v4.1.3-snapshot.2692/wheels-docs-4.1.3-snapshot.2692.zip"
             ],
             "hash": [
-                "sha512:9ef5b1b1b3e116619a54e25084d030dfb90dad8c1c0ed383cfc1d18c3f454d5ee6648dea8ed25e628eeed6344cbfd3d3dea4b30b1e7382ceb0994dba0ffb2eee",
-                "sha512:78db52bd4b9115723b93b108812c507e48617c0571b8fb042e256a215e3afc6275c2b82f19565ea09f6f77ea68c1943e16266889089c5a9903835bb2f29d1627",
-                "b48f1cc7794c07b82aa6eaf818c1aee26de03eacd0e08e615cda24eb58ac4499",
+                "sha512:9ea2957dc83d7631a3a2985163755b88a5f53aea6fdcaf6f0d4831e6fb7e11c520c4f25f756847fbdc660e60ce14952cec41655c9da6001f9ca4c6b768b22251",
+                "sha512:de4201bd1aad9acbbeaebdfe98d7e043ccd2c309978df0e1af59f835a535fa814c9620c05fbebe55e4df022cd3646c89cc7b37c5ffdbfcf187923a5ca3b7c490",
+                "7d8b4089ec31e8d466d3b52f3743921d389d90c549b723f2126b8108848ef46a",
                 "5c8609d2ca341deb8c6f71778974b5ba4995c7d32d7c7c89d9392a3e72c39291",
                 "b6c17e747ae78cdd6de4d7532b3164b277daee97c007d3eaa2b39cca99882664",
-                "sha512:182eefc3f9cab54cc96e04376d0a91b1f231d0071eae26e196d659519949756faa5c61aff90817ba09d6a8cc40babe529c02f1a1480b6759e0a337f1be8e582a"
+                "sha512:d7c1764bf66f0b37ebc1cca2783172d9501c32a01ea36a2d34a85e26455a22ee29522e555cee76afc7f43c4e4d9aec086fbe73c9dba40ecec7bd0c5b9894da5c"
             ],
             "extract_dir": [
                 "",
@@ -165,7 +165,7 @@
                 "url": [
                     "https://github.com/wheels-dev/wheels-snapshots/releases/download/v$version/wheels-module-$version.zip",
                     "https://github.com/wheels-dev/wheels-snapshots/releases/download/v$version/wheels-core-$version.zip",
-                    "https://github.com/wheels-dev/LuCLI/releases/download/v0.6.2.1/lucli-0.6.2.1.jar#/lucli.jar",
+                    "https://github.com/wheels-dev/LuCLI/releases/download/v0.6.2.2/lucli-0.6.2.2.jar#/lucli.jar",
                     "https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.49.1.0/sqlite-jdbc-3.49.1.0.jar",
                     "https://download.java.net/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_windows-x64_bin.zip",
                     "https://github.com/wheels-dev/wheels-snapshots/releases/download/v$version/wheels-docs-$version.zip"
@@ -177,7 +177,7 @@
                     {
                         "url": "$url.sha512"
                     },
-                    "b48f1cc7794c07b82aa6eaf818c1aee26de03eacd0e08e615cda24eb58ac4499",
+                    "7d8b4089ec31e8d466d3b52f3743921d389d90c549b723f2126b8108848ef46a",
                     "sha512:90b3f6aed150f611fcb9454dfda5fbb9d7faad369937fa8718ac8813c45eb6f0430e6014b7b4c94b4b63e404ade68e83126571f94216de7bf6d2947f1c642803",
                     "sha256:b6c17e747ae78cdd6de4d7532b3164b277daee97c007d3eaa2b39cca99882664",
                     {

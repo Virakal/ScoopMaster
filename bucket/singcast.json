@@ -1,13 +1,13 @@
 {
-    "version": "1.2.3",
+    "version": "1.3.0-a",
     "description": "Multi-platform proxy client powered by sing-box, with Clash config support",
     "homepage": "https://mapleafgo.github.io/singcast/",
     "license": {
         "identifier": "GPL-3.0 license",
         "url": "https://github.com/mapleafgo/singcast#GPL-3.0-1-ov-file"
     },
-    "url": "https://github.com/mapleafgo/singcast/releases/download/v1.2.3/singcast-1.2.3-windows-amd64-portable.zip",
-    "hash": "ef0e66d5909ec35ec455b48643fd2e371d0334eaa1d1d9409fe0ee95632dfa62",
+    "url": "https://github.com/mapleafgo/singcast/releases/download/v1.3.0-a/singcast-1.3.0-a-windows-amd64-portable.zip",
+    "hash": "9da698c93ef00a9fb3d824a6712918f0eab26526767151db842ec7d6879f4fba",
     "installer": {
         "script": [
             "ensure \"$persist_dir\" | Out-Null",

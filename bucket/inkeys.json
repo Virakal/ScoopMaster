@@ -27,7 +27,8 @@
     ],
     "persist": ["Inkeys", "log", "opt", "ScreenShot"],
     "checkver": {
-        "github": "https://github.com/Alan-CRL/Inkeys"
+        "github": "https://github.com/Alan-CRL/Inkeys",
+        "regex": "(?:/releases/tag/|^)(\\d+[a-z]?)"
     },
     "autoupdate": {
         "architecture": {
