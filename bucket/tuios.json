@@ -1,21 +1,28 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
     "version": "0.8.2",
     "description": "Terminal UI OS (Terminal Multiplexer)",
     "homepage": "https://github.com/Gaurav-Gosain/tuios",
     "license": "MIT",
-    "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v0.8.2/tuios_0.8.2_Windows_x86_64.tar.gz",
-    "hash": "1a8a93c52dcc427f5be23afabd87984bb75e9e85efebbe86d28053283b8e38b6",
-    "bin": [
-        [
-            "tuios.exe",
-            "tuios"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/Gaurav-Gosain/tuios"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v0.8.2/tuios_0.8.2_Windows_x86_64.tar.gz",
+            "hash": "1a8a93c52dcc427f5be23afabd87984bb75e9e85efebbe86d28053283b8e38b6"
+        },
+        "32bit": {
+            "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v0.8.2/tuios_0.8.2_Windows_i386.tar.gz",
+            "hash": "9d16c3f1eb6288218359f2f9ddaa2d0956ac4859d8872080056685eb7f798f8d"
+        }
     },
+    "bin": "tuios.exe",
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v$version/tuios_$version_Windows_x86_64.tar.gz"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v$version/tuios_$version_Windows_x86_64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/Gaurav-Gosain/tuios/releases/download/v$version/tuios_$version_Windows_i386.tar.gz"
+            }
+        }
     }
 }

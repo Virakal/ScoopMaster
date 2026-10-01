@@ -1,40 +1,23 @@
 {
-    "version": "0.159.2",
-    "description": "OpenAI's Codex AI coding assistant",
-    "homepage": "https://github.com/openai/codex",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/openai/codex/releases/download/rust-v0.159.2/codex-package-x86_64-pc-windows-msvc.tar.gz",
-            "hash": "a7ab591043d99e8a88d0c2bebf15f810b15599a71148c4af944a755af3c71eef"
-        },
-        "arm64": {
-            "url": "https://github.com/openai/codex/releases/download/rust-v0.159.2/codex-package-aarch64-pc-windows-msvc.tar.gz",
-            "hash": "f017342f77ec57dffff57e59723738ac9f228ddab4f656c2bdfc65f1d9b87da3"
-        }
-    },
-    "bin": [
-        [
-            "bin\\codex.exe",
-            "codex"
-        ]
-    ],
-    "checkver": {
-        "github": "https://api.github.com/repos/openai/codex/releases",
-        "jsonpath": "$..tag_name",
-        "regex": "rust-v(\\d+\\.\\d+\\.\\d+)(?![^\\d]*alpha|[^\\d]*beta|[^\\d]*rc|[^\\d]*preview)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/openai/codex/releases/download/rust-v$version/codex-package-x86_64-pc-windows-msvc.tar.gz"
-            },
-            "arm64": {
-                "url": "https://github.com/openai/codex/releases/download/rust-v$version/codex-package-aarch64-pc-windows-msvc.tar.gz"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/codex-package_SHA256SUMS"
-        }
-    }
+	"version": "0.159.3",
+	"description": "OpenAI's Codex AI coding assistant",
+	"homepage": "https://github.com/openai/codex",
+	"license": "Apache-2.0",
+	"url": "http://www.gstatic.com/generate_204#/dummy",
+	"hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+	"bin": [["node_modules\\.bin\\codex.ps1", "codex"]],
+	"installer": {
+		"script": "pushd $original_dir; pnpm add @openai/codex@0.159.3; popd;"
+	},
+	"post_uninstall": "pnpm store prune",
+	"depends": ["pnpm", "nodejs"],
+	"checkver": {
+		"url": "https://registry.npmjs.org/@openai/codex/latest",
+		"jsonpath": "$.version"
+	},
+	"autoupdate": {
+		"installer": {
+			"script": "pushd $original_dir; pnpm add @openai/codex@$version; popd;"
+		}
+	}
 }
