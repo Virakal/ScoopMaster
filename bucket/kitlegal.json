@@ -1,19 +1,19 @@
 {
-    "version": "0.3.2",
+    "version": "0.4.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.3.2/kitlegal_windows_amd64.zip",
+            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.4.0/kitlegal_windows_amd64.zip",
             "bin": [
                 "kitlegal.exe"
             ],
-            "hash": "1bf1f77a8384221288a0a533e82f89fd1c96b7ec003e33af5c0e146c2af172cb"
+            "hash": "d6643c3036ec11db9e1170cf634c91ead6aa8479c2b0de5fcab9b6d0b24e053c"
         },
         "arm64": {
-            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.3.2/kitlegal_windows_arm64.zip",
+            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.4.0/kitlegal_windows_arm64.zip",
             "bin": [
                 "kitlegal.exe"
             ],
-            "hash": "1356bd9027d0f4c2683e28b1b3ef119a4e6742bccc22e3218dbd83c4bb6cd337"
+            "hash": "cff41b46e0cd76ccb4154a03bc13dd4d63b6bed52c27cabdbd08b36236e73d8c"
         }
     },
     "homepage": "https://github.com/jmorenobl/kitlegal",
