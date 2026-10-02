@@ -1,0 +1,46 @@
+{
+    "version": "0.2.19",
+    "description": "Unlock Music CLI version - A tool to unlock music files in batch.",
+    "homepage": "https://git.um-react.app/um/cli",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://git.um-react.app/um/cli/releases/download/v0.2.19/um-windows-amd64-v$version.zip",
+            "hash": "eed69413c7da4fd719f168fef8efe6a91f2beffc8360a4a12e143ef527941c35",
+            "bin": [
+                [
+                    "um-windows-amd64.exe",
+                    "um"
+                ]
+            ]
+        },
+        "arm64": {
+            "url": "https://git.um-react.app/um/cli/releases/download/v0.2.19/um-windows-arm64-v$version.zip",
+            "hash": "79c06c2eb89623b2df555fcdaaf5463b9aa6ad4d875e7484afcfb3c8fff90096",
+            "bin": [
+                [
+                    "um-windows-arm64.exe",
+                    "um"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://git.um-react.app/api/v1/repos/um/cli/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://git.um-react.app/um/cli/releases/download/v$version/um-windows-amd64-v$version.zip"
+            },
+            "arm64": {
+                "url": "https://git.um-react.app/um/cli/releases/download/v$version/um-windows-arm64-v$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
+    }
+}
