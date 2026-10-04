@@ -1,45 +1,45 @@
 {
-  "version": "20261003",
-  "description": "Canary build of the native SillyTavern client for desktop and mobile, built with Tauri and Rust.",
-  "homepage": "https://github.com/Darkatse/TauriTavern",
-  "license": "AGPL-3.0-only",
-  "suggest": {
-    "Microsoft Edge WebView2": "extras/webview2"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Darkatse/TauriTavern/releases/download/Canary/TauriTavern-20261003-canary-windows-x64-portable.exe#/TauriTavern.exe",
-      "hash": "df8490dbd5e6e31ff05c8797cfc723bc72e482ecb18bc92ad5992f4e07b407b3"
-    }
-  },
-  "pre_install": [
-    "if (!(Test-Path \"$persist_dir\\tauritavern-runtime.json\")) {",
-    "    $runtimeConfig = [ordered]@{ version = 1; data_root = \"$persist_dir\\data\"; migration = $null; migration_error = $null } | ConvertTo-Json -Compress",
-    "    [System.IO.File]::WriteAllText(\"$dir\\tauritavern-runtime.json\", $runtimeConfig)",
-    "}"
-  ],
-  "shortcuts": [
-    [
-      "TauriTavern.exe",
-      "TauriTavern (Canary)"
-    ]
-  ],
-  "persist": [
-    "data",
-    "logs",
-    ".data-archive",
-    "tauritavern-runtime.json"
-  ],
-  "checkver": {
-    "url": "https://api.github.com/repos/Darkatse/TauriTavern/releases/tags/Canary",
-    "jsonpath": "$.assets[*].browser_download_url",
-    "regex": "releases/download/Canary/TauriTavern-([\\d]{8})-canary-windows-x64-portable\\.exe"
-  },
-  "autoupdate": {
+    "version": "20261004",
+    "description": "Canary build of the native SillyTavern client for desktop and mobile, built with Tauri and Rust.",
+    "homepage": "https://github.com/Darkatse/TauriTavern",
+    "license": "AGPL-3.0-only",
+    "suggest": {
+        "Microsoft Edge WebView2": "extras/webview2"
+    },
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Darkatse/TauriTavern/releases/download/Canary/TauriTavern-$version-canary-windows-x64-portable.exe#/TauriTavern.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/Darkatse/TauriTavern/releases/download/Canary/TauriTavern-20261004-canary-windows-x64-portable.exe#/TauriTavern.exe",
+            "hash": "af7a257710a7cc244e07a582b2649a2571085085357e1e945961c4310ff55511"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\tauritavern-runtime.json\")) {",
+        "    $runtimeConfig = [ordered]@{ version = 1; data_root = \"$persist_dir\\data\"; migration = $null; migration_error = $null } | ConvertTo-Json -Compress",
+        "    [System.IO.File]::WriteAllText(\"$dir\\tauritavern-runtime.json\", $runtimeConfig)",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "TauriTavern.exe",
+            "TauriTavern (Canary)"
+        ]
+    ],
+    "persist": [
+        "data",
+        "logs",
+        ".data-archive",
+        "tauritavern-runtime.json"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Darkatse/TauriTavern/releases/tags/Canary",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "releases/download/Canary/TauriTavern-([\\d]{8})-canary-windows-x64-portable\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Darkatse/TauriTavern/releases/download/Canary/TauriTavern-$version-canary-windows-x64-portable.exe#/TauriTavern.exe"
+            }
+        }
     }
-  }
 }
