@@ -1,19 +1,19 @@
 {
-    "version": "0.5.2",
+    "version": "0.6.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/somaz94/kube-diff/releases/download/v0.5.2/kube-diff_0.5.2_windows_amd64.zip",
+            "url": "https://github.com/somaz94/kube-diff/releases/download/v0.6.1/kube-diff_0.6.1_windows_amd64.zip",
             "bin": [
                 "kube-diff.exe"
             ],
-            "hash": "72635335bb4982f9a5ea90c0690e19f5e19b407c984b78e37d1b4e30fcc2e72c"
+            "hash": "e242b3ed359a9650088c65f0eb4ecb9441b1f2b324cab3b0a292a16f0a97304e"
         },
         "arm64": {
-            "url": "https://github.com/somaz94/kube-diff/releases/download/v0.5.2/kube-diff_0.5.2_windows_arm64.zip",
+            "url": "https://github.com/somaz94/kube-diff/releases/download/v0.6.1/kube-diff_0.6.1_windows_arm64.zip",
             "bin": [
                 "kube-diff.exe"
             ],
-            "hash": "93695a88a7147efdbc1816069851add5791d6fb035be1b0cc212943a5c019e9f"
+            "hash": "055eb9c42ce4a5d30d7714059d44be96aff084569a2f825497e4c0768bdf2999"
         }
     },
     "homepage": "https://github.com/somaz94/kube-diff",
