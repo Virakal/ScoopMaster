@@ -1,34 +1,26 @@
 {
     "version": "0.11.0",
-    "description": "Coding agents from your phone, desktop and CLI (Desktop Edition)",
+    "description": "Orchestrate multiple coding agents from desktop and mobile",
     "homepage": "https://paseo.sh",
-    "license": "AGPL-3.0-only",
-    "notes": [
-        "Paseo uses a local daemon to manage coding agents.",
-        "Desktop: opening the Paseo app starts the daemon automatically.",
-        "CLI / headless:",
-        "  paseo daemon start     # start the daemon",
-        "  paseo daemon status    # check status",
-        "  paseo daemon stop      # stop the daemon",
-        "CLI reference: https://paseo.sh/docs/cli"
-    ],
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/getpaseo/paseo/releases/download/v0.11.0/Paseo-Setup-0.11.0-x64.exe#/dl.7z",
-            "hash": "sha512:32dca74a7e041a7fcec55893febbe7cf35516d15459a0924c8871767a8547eeabb24dd1353bb2765ec827756998323baf6cabc2d33ce122610f31ce6b927fc44"
+            "hash": "0d948a188c0a1f8268c02c87311333f260d64a715fdb386ee808258007c334fb",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\*.nsi\" -Recurse"
+            ]
         },
         "arm64": {
             "url": "https://github.com/getpaseo/paseo/releases/download/v0.11.0/Paseo-Setup-0.11.0-arm64.exe#/dl.7z",
-            "hash": "sha512:321e7b235e0baafc9c8d9718ab2389c8571fa658c726ee604f608c14b84c7d65d56869f61d812fbbdb8596357e6937b8f81e126f9c3eb03fb9addfb2ede4e2be"
+            "hash": "c3ef97be4d2a7cfbaa82f07f6cc7df441ef6fbaf2a17d00247a08384658cd3fa",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\*.nsi\" -Recurse"
+            ]
         }
     },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-*.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
-        ]
-    },
-    "bin": "resources\\bin\\paseo.cmd",
     "shortcuts": [
         [
             "Paseo.exe",
@@ -46,10 +38,6 @@
             "arm64": {
                 "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.exe#/dl.7z"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }
