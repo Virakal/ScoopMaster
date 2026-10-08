@@ -2,11 +2,14 @@
     "version": "0.3.0",
     "description": "An open-source, clean-room reimplementation of Adobe Photoshop in pure Rust",
     "homepage": "https://github.com/storytold/photocraft",
-    "license": "MIT",
+    "license": "Apache-2.0|MIT",
     "url": "https://github.com/storytold/photocraft/releases/download/v0.3.0/photocraft-0.3.0-windows-x64-portable.zip",
     "hash": "9997f7df3a6f0717b46bb0f503b3d920c3beedeb9e9c4e1ff2ef3b8671acd47e",
     "extract_dir": "photocraft-0.3.0-windows-x64-portable",
-    "bin": "photocraft.exe",
+    "bin": [
+        "photocraft.exe",
+        "photocraft-cli.exe"
+    ],
     "shortcuts": [
         [
             "photocraft.exe",
@@ -14,9 +17,16 @@
         ]
     ],
     "persist": "PhotoCraftData",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/storytold/photocraft/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "url": "https://github.com/storytold/photocraft/releases/download/v$version/photocraft-$version-windows-x64-portable.zip",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        },
         "extract_dir": "photocraft-$version-windows-x64-portable"
     }
 }
