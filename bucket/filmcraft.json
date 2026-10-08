@@ -1,6 +1,6 @@
 {
     "version": "0.2.1",
-    "description": "Open-source non-linear video editor with a Premiere-style workflow",
+    "description": "Professional, open-source video editing, rebuilt from scratch in Rust.",
     "homepage": "https://getartcraft.com/apps/filmcraft",
     "license": "MIT OR Apache-2.0",
     "architecture": {
@@ -19,17 +19,12 @@
         "filmcraft.exe",
         "filmcraft-cli.exe"
     ],
-    "persist": "data",
     "shortcuts": [
         [
             "filmcraft.exe",
             "FilmCraft"
         ]
     ],
-    "pre_install": "if (!(Test-Path \"$persist_dir\\data\")) { New-Item -ItemType Directory -Path \"$persist_dir\\data\" | Out-Null }",
-    "env_set": {
-        "FILMCRAFT_DATA_DIR": "$persist_dir\\data"
-    },
     "checkver": {
         "github": "https://github.com/storytold/filmcraft"
     },
@@ -43,10 +38,6 @@
                 "url": "https://github.com/storytold/filmcraft/releases/download/v$version/filmcraft-$version-windows-x86-portable.zip",
                 "extract_dir": "filmcraft-$version-windows-x86-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt",
-            "find": "$basename"
         }
     }
 }
