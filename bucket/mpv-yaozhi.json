@@ -19,6 +19,7 @@
         "url": "https://github.com/Yaozhil/mpv-Yaozhi"
     },
     "autoupdate": {
-        "url": "https://github.com/Yaozhil/mpv-Yaozhi/releases/download/mpv-Yaozhi/Yaozhi-mpv-$version.7z"
+        "url": "https://github.com/Yaozhil/mpv-Yaozhi/releases/download/mpv-Yaozhi/Yaozhi-mpv-$version.7z",
+        "extract_dir": "mpv-Yaozhi-$version"
     }
 }
