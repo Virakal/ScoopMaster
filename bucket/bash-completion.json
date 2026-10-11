@@ -2,29 +2,16 @@
     "version": "2.18.0",
     "description": "Programmable completion functions for bash",
     "homepage": "https://github.com/scop/bash-completion",
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-2.0",
     "url": "https://github.com/scop/bash-completion/releases/download/2.18.0/bash-completion-2.18.0.tar.xz",
-    "hash": "sha256:88bcf85124f77f74f2f2f8bcd16ac4382d807a827ede742a64940c7116aea33f",
+    "hash": "88bcf85124f77f74f2f2f8bcd16ac4382d807a827ede742a64940c7116aea33f",
     "extract_dir": "bash-completion-2.18.0",
-    "post_install": [
-        "$template = Join-Path $dir 'bash_completion.sh.in'",
-        "$target = Join-Path $dir 'bash_completion.sh'",
-        "$root = Split-Path $dir -Parent",
-        "$bashRoot = '/' + $root.Substring(0,1).ToLower() + ($root.Substring(2) -replace '\\\\','/')",
-        "$bashDir = $bashRoot + '/current'",
-        "$content = Get-Content -Raw $template",
-        "$content = $content -replace '@datadir@/@PACKAGE@', $bashDir",
-        "$content | Set-Content -NoNewline $target",
-        "Write-Host \"\nNotes\"",
-        "Write-Host \"-----\"",
-        "Write-Host \"Add next line to your ~/.bashrc:\"",
-        "Write-Host \". $bashDir/bash_completion.sh\"",
-        "Write-Host \"-----\""
-    ],
-    "checkver": {
-        "github": "https://github.com/scop/bash-completion"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/scop/bash-completion/releases/download/$version/bash-completion-$version.tar.xz"
+        "url": "https://github.com/scop/bash-completion/releases/download/$version/bash-completion-$version.tar.xz",
+        "hash": {
+            "url": "$baseurl/sha256sums.txt"
+        },
+        "extract_dir": "bash-completion-$version"
     }
 }
