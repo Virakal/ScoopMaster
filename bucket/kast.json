@@ -1,36 +1,36 @@
 {
-    "version": "1.1.0",
-    "description": "Lean, portable video player that casts to Chromecast, DLNA and AirPlay.",
-    "homepage": "https://github.com/naderi/kast/",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://github.com/naderi/kast/blob/main/LICENSE"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/naderi/kast/releases/download/v1.1.0/Kast-1.1.0-win-x64.7z",
-            "hash": "109c3b2f53c068be305127434ba8e7c86beb5ab2e4a412227f8db748d839d9a8"
-        }
-    },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\settings.json\")) { Set-Content \"$dir\\settings.json\" '{}' -Encoding UTF8 -NoNewline }"
-    ],
-    "shortcuts": [
-        [
-            "Kast.exe",
-            "Kast"
-        ]
-    ],
-    "persist": [
-        "settings.json",
-        "data"
-    ],
-    "checkver": "GitHub",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/naderi/kast/releases/download/v$version/Kast-$version-win-x64.7z"
-            }
-        }
+  "version": "1.1.0",
+  "description": "Lean, portable video player that casts to Chromecast, DLNA and AirPlay.",
+  "homepage": "https://github.com/naderi/kast/",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://github.com/naderi/kast/blob/main/LICENSE"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/naderi/kast/releases/download/v1.1.0/Kast-1.1.0-win-x64.7z",
+      "hash": "109c3b2f53c068be305127434ba8e7c86beb5ab2e4a412227f8db748d839d9a8"
     }
+  },
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\settings.json\")) { Set-Content \"$dir\\settings.json\" '{}' -Encoding UTF8 -NoNewline }"
+  ],
+  "shortcuts": [
+    [
+      "Kast.exe",
+      "Kast"
+    ]
+  ],
+  "persist": [
+    "settings.json",
+    "data"
+  ],
+  "checkver": "GitHub",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/naderi/kast/releases/download/v$version/Kast-$version-win-x64.7z"
+      }
+    }
+  }
 }

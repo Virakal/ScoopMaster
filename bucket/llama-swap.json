@@ -1,32 +1,15 @@
 {
-    "version": "263",
-    "description": "Reliable model swapping for any local OpenAI/Anthropic compatible server - llama.cpp, vllm, etc.",
+    "version": "264",
+    "description": "A light weight, transparent proxy server that provides automatic model swapping to llama.cpp's server.",
     "homepage": "https://github.com/mostlygeek/llama-swap",
     "license": "MIT",
-    "notes": [
-        "llama-swap shim use \"$persist_dir\\config.yaml\" as the default config file.",
-        "To use a different config file, please run:",
-        "\"$dir\\llama-swap.exe\" --config <NEW_CONFIG_FILE>"
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mostlygeek/llama-swap/releases/download/v263/llama-swap_263_windows_amd64.zip",
-            "hash": "87e25094fa519f9638c36a6ca61d68394a4d07c0e18b4aaad214c9e40b115676"
+            "url": "https://github.com/mostlygeek/llama-swap/releases/download/v264/llama-swap_264_windows_amd64.zip",
+            "hash": "cb056e8122db62c4c0914ce0909e2e71ea8d80e9fa8c8ac00186039c2d1882f1"
         }
     },
-    "pre_install": [
-        "if (-not (Test-Path -Path \"$persist_dir\\config.yaml\")) {",
-        "    New-Item -ItemType File -Path \"$dir\\config.yaml\" -Force | Out-Null",
-        "}"
-    ],
-    "bin": [
-        [
-            "llama-swap.exe",
-            "llama-swap",
-            "--config \"$persist_dir\\config.yaml\""
-        ]
-    ],
-    "persist": "config.yaml",
+    "bin": "llama-swap.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
