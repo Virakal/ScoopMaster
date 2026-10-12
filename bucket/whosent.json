@@ -1,6 +1,6 @@
 {
     "version": "0.2.0",
-    "description": "TUI for delegation chains (JWT token exchange, Biscuit, Mandatum): who sent this agent, how authority narrows hop by hop, and where trust breaks",
+    "description": "TUI for delegation chains (JWT token exchange, Biscuit, UCAN, macaroons): who sent this agent, how authority narrows hop by hop, and where trust breaks",
     "homepage": "https://github.com/kanywst/whosent",
     "license": "Apache-2.0",
     "architecture": {

@@ -1,0 +1,26 @@
+{
+    "version": "0.3.2",
+    "description": "An open-source parametric 3D CAD application built in pure Rust",
+    "homepage": "https://bherbruck.github.io/solidcraft/",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bherbruck/solidcraft/releases/download/v0.3.2/solvecraft-0.3.2-windows-x64-portable.zip",
+            "hash": "0af2cd241b019e474b636e03e3b8393a4f1a20ae9e1d64bca668ef2dd8b49307",
+            "extract_dir": "solvecraft-0.3.2-windows-x64-portable"
+        }
+    },
+    "bin": ["solvecraft.exe", "solvecraft-cli.exe"],
+    "shortcuts": [["solvecraft.exe", "SolidCraft"]],
+    "checkver": {
+        "github": "https://github.com/bherbruck/solidcraft/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bherbruck/solidcraft/releases/download/v$version/solvecraft-$version-windows-x64-portable.zip",
+                "extract_dir": "solvecraft-$version-windows-x64-portable"
+            }
+        }
+    }
+}
