@@ -1,19 +1,19 @@
 {
-    "version": "0.17.9",
+    "version": "0.18.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/adrianliechti/wingman-agent/releases/download/v0.17.9/wingman-agent_0.17.9_windows_amd64.zip",
+            "url": "https://github.com/adrianliechti/wingman-agent/releases/download/v0.18.0/wingman-agent_0.18.0_windows_amd64.zip",
             "bin": [
                 "wingman.exe"
             ],
-            "hash": "21e52ade54a9fd8de4f07c3551f79f8ef85f80870203e6fb9a9bd510820309b5"
+            "hash": "196292ec107c57a1ed50b96a04f5a3ecb93471a22ea9d107bdfd97f2faa66e6d"
         },
         "arm64": {
-            "url": "https://github.com/adrianliechti/wingman-agent/releases/download/v0.17.9/wingman-agent_0.17.9_windows_arm64.zip",
+            "url": "https://github.com/adrianliechti/wingman-agent/releases/download/v0.18.0/wingman-agent_0.18.0_windows_arm64.zip",
             "bin": [
                 "wingman.exe"
             ],
-            "hash": "e95b86bf1c9dc22b546bda5fe53663db508d278f67a0a2b66464967b432b2f6d"
+            "hash": "7b35b96c0b8c4437a890a92f52a11538019bfa2cf88f91254a56e44a88728c78"
         }
     }
 }
