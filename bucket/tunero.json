@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "description": "PC optimizer for Windows 11, gaming first. Explains every check and change with sources, backs up what it changes and can undo it.",
+  "homepage": "https://github.com/jozuern/Tunero",
+  "license": "GPL-3.0-only",
+  "notes": [
+    "Tunero asks for administrator rights on every start, because it changes system settings.",
+    "Your changes and their backups are kept in %ProgramData%\\Tunero. Undo them on the Changes page before 'scoop uninstall tunero', or use Settings > Uninstall in the app, which does both."
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/jozuern/Tunero/releases/download/v1.0.0/Tunero.exe",
+      "hash": "85c9be3de92e33bb29282207e704f4db959308a3c1a8ac69eb59bcd499fa0715"
+    }
+  },
+  "shortcuts": [
+    [
+      "Tunero.exe",
+      "Tunero PC Optimizer"
+    ]
+  ]
+}
