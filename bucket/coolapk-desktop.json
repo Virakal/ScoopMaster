@@ -1,35 +1,61 @@
 {
     "version": "1.34.0",
-    "description": "基于 Tauri 2、Vue 3 和 Rust 构建的现代非官方酷安桌面客户端",
-    "homepage": "https://coolapk.123741.xyz/",
-    "license": "MIT",
+    "description": "酷安跨平台桌面版",
+    "homepage": "https://github.com/daimiaopeng/coolapk-desktop",
+    "license": {
+        "identifier": "MIT license",
+        "url": "https://github.com/daimiaopeng/coolapk-desktop#MIT-1-ov-file"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.34.0/coolapk-desktop_1.34.0_x64-portable.exe#/coolapk-desktop.exe",
-            "hash": "57bef79da5837ec04dcbf308cc419e2b0a42aa8b18b1d1d1ba152d0c4a8f650e"
+            "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.34.0/coolapk-desktop_1.34.0_x64-setup.exe#/dl.7z",
+            "hash": "907e69b642edf74b76cfd636c60cff2b67a5eecbedb17dc62598a2002d9c433b"
         },
         "arm64": {
-            "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.34.0/coolapk-desktop_1.34.0_arm64-portable.exe#/coolapk-desktop.exe",
-            "hash": "7321aa27f0168cad4e24a10291d5082b21200526e0a6f232e002f1dd09154e23"
+            "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v1.34.0/coolapk-desktop_1.34.0_arm64-setup.exe#/dl.7z",
+            "hash": "5613052dad5e45d52b9841bb413b3ebca0571c70429ba0e72fb3abf968a45349"
         }
     },
+    "pre_install": [
+        "Remove-Item \"$dir\\`$*\", \"$dir\\uninst*\" -Force -Recurse",
+        "Get-ChildItem \"$dir\\coolapk*.exe\" | Rename-Item -NewName 'coolapk.exe'"
+    ],
+    "installer": {
+        "script": [
+            "# handle runtime cache",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\com.coolapk.desktop\"",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\com.coolapk.desktop\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\com.coolapk.desktop\"",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\com.coolapk.desktop\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "bin": "coolapk.exe",
     "shortcuts": [
         [
-            "coolapk-desktop.exe",
-            "酷安"
+            "coolapk.exe",
+            "Coolapk"
         ]
     ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\com.coolapk.desktop\" -Force -Recurse -ErrorAction SilentlyContinue }",
     "checkver": {
-        "github": "https://github.com/daimiaopeng/coolapk-desktop"
+        "github": "https://api.github.com/repos/daimiaopeng/coolapk-desktop/releases/latest",
+        "jp": "$.tag_name",
+        "regex": "v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v$version/coolapk-desktop_$version_x64-portable.exe#/coolapk-desktop.exe"
+                "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v$version/coolapk-desktop_$version_x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v$version/coolapk-desktop_$version_arm64-portable.exe#/coolapk-desktop.exe"
+                "url": "https://github.com/daimiaopeng/coolapk-desktop/releases/download/v$version/coolapk-desktop_$version_arm64-setup.exe#/dl.7z"
             }
         }
     }
