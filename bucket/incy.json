@@ -1,0 +1,35 @@
+{
+    "version": "3.8.10",
+    "description": "A cross-platform proxy client built on Xray-core.",
+    "homepage": "https://incy.cc/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/INCY-DEV/incy-platforms/releases/download/desktop-v3.8.10/incy-windows-portable.zip",
+            "hash": "7f06ce051b30c1b3d278ef790074667b8d22ec1ea301aee1f34826cfd1d5170c"
+        }
+    },
+    "extract_dir": "incy",
+    "shortcuts": [
+        [
+            "incy-desktop.exe",
+            "INCY"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\incy\", \"$env:LOCALAPPDATA\\incy\", \"$env:LOCALAPPDATA\\llc.itdev.incy\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "INCY is NOT portable.",
+        "Settings are stored in '%APPDATA%\\incy', and can be purged using 'scoop uninstall --purge incy'."
+    ],
+    "checkver": {
+        "url": "https://github.com/INCY-DEV/incy-platforms/releases.atom",
+        "regex": "Repository/\\d+/desktop-v(.+?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/INCY-DEV/incy-platforms/releases/download/desktop-v$version/incy-windows-portable.zip"
+            }
+        }
+    }
+}

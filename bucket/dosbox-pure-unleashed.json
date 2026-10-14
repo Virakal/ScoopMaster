@@ -1,0 +1,57 @@
+{
+    "version": "1.0-preview6",
+    "description": "DOSBox Pure Unleashed – enhanced DOSBox fork with ZIP loading, save states, and modern features",
+    "homepage": "https://github.com/schellingb/dosbox-pure-unleashed",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/1.0-preview6/dosbox_pure_unleashed-windows-64bit-1.0-preview6.zip",
+            "hash": "1836e03190451f4cef80b760ea8ac6d8ff229f1eab44114f5a1203f91b145953"
+        },
+        "32bit": {
+            "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/1.0-preview6/dosbox_pure_unleashed-windows-32bit-1.0-preview6.zip",
+            "hash": "f8f8cc15310699a6028af23f82a64549d9d38f86bef5acfc18d73d353a70eb5d"
+        },
+        "arm64": {
+            "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/1.0-preview6/dosbox_pure_unleashed-windows-arm64-1.0-preview6.zip",
+            "hash": "225dae22d1f6841bcaa2a78338227cd3bc3283f29dfc898ac20a69adda082e64"
+        }
+    },
+    "bin": "DOSBoxPure.exe",
+    "shortcuts": [
+        [
+            "DOSBoxPure.exe",
+            "DOSBox Pure Unleashed"
+        ]
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) { New-Item -Path \"$persist_dir\" -ItemType Directory | Out-Null }",
+        "if (!(Test-Path \"$persist_dir/DOSBoxPure.cfg\")) { New-Item -Path \"$persist_dir/DOSBoxPure.cfg\" -ItemType File | Out-Null }",
+        "if (!(Test-Path \"$persist_dir/saves\")) { New-Item -Path \"$persist_dir/saves\" -ItemType Directory | Out-Null }",
+        "if (!(Test-Path \"$persist_dir/system\")) { New-Item -Path \"$persist_dir/system\" -ItemType Directory | Out-Null }",
+        "if (!(Test-Path \"$persist_dir/cache\")) { New-Item -Path \"$persist_dir/cache\" -ItemType Directory | Out-Null }"
+    ],
+    "persist": [
+        "DOSBoxPure.cfg",
+        "saves",
+        "system",
+        "cache"
+    ],
+    "checkver": {
+        "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases",
+        "regex": "tag/([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/$version/dosbox_pure_unleashed-windows-64bit-$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/$version/dosbox_pure_unleashed-windows-32bit-$version.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/schellingb/dosbox-pure-unleashed/releases/download/$version/dosbox_pure_unleashed-windows-arm64-$version.zip"
+            }
+        }
+    }
+}

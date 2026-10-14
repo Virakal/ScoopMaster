@@ -1,0 +1,75 @@
+{
+    "version": "1.18.2",
+    "description": "GTP engine and self-play learning in Go",
+    "homepage": "https://github.com/lightvector/KataGo",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.1-cudnn8.9.7-windows-x64.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.1-cudnn8.9.7-windows-x64+bs50.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.5-cudnn8.9.7-windows-x64.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.5-cudnn8.9.7-windows-x64+bs50.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.8-cudnn9.8.0-windows-x64.zip",
+                "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.8-cudnn9.8.0-windows-x64+bs50.zip"
+            ],
+            "hash": [
+                "40b8f592eae0064e73a6fc7b07e52e91fe0c6b395533ec3632b5b2b2d6adb4e8",
+                "effd95d2bc6c2e2cea14c3eb8ce04d7af90c3279e9577642d6ce75051edf2d39",
+                "068c871926ca1a0d0f5589ca68beb7fe776a9a25a301f1e4d9eaf6b416977fe9",
+                "34a13ea82f281a33b6fd93dc700da03151e8872270b9521f81a56f2f7c1ab244",
+                "69a94227afaaf268634134805b9469f9f482760ee6c986d315d89525de0eefa2",
+                "1651446106766eef3c48f6b0769bdf13df091244f08dbbd7c3e7055662170c3a"
+            ]
+        }
+    },
+    "extract_to": [
+        "katago-cuda12.1",
+        "katago-cuda12.1-bs50",
+        "katago-cuda12.5",
+        "katago-cuda12.5-bs50",
+        "katago-cuda12.8",
+        "katago-cuda12.8-bs50"
+    ],
+    "bin": [
+        [
+            "katago-cuda12.1/katago.exe",
+            "katago-cuda121"
+        ],
+        [
+            "katago-cuda12.1-bs50/katago.exe",
+            "katago-cuda121-bs50"
+        ],
+        [
+            "katago-cuda12.5/katago.exe",
+            "katago-cuda125"
+        ],
+        [
+            "katago-cuda12.5-bs50/katago.exe",
+            "katago-cuda125-bs50"
+        ],
+        [
+            "katago-cuda12.8/katago.exe",
+            "katago-cuda128"
+        ],
+        [
+            "katago-cuda12.8-bs50/katago.exe",
+            "katago-cuda128-bs50"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.1-cudnn8.9.7-windows-x64.zip",
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.1-cudnn8.9.7-windows-x64+bs50.zip",
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.5-cudnn8.9.7-windows-x64.zip",
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.5-cudnn8.9.7-windows-x64+bs50.zip",
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.8-cudnn9.8.0-windows-x64.zip",
+                    "https://github.com/lightvector/KataGo/releases/download/v$version/katago-v$version-cuda12.8-cudnn9.8.0-windows-x64+bs50.zip"
+                ]
+            }
+        }
+    }
+}

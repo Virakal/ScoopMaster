@@ -1,0 +1,29 @@
+{
+    "version": "25.4.4.1.1",
+    "description": "(Community Edition) A high-performance embeddable Python 3 runtime for Java.",
+    "homepage": "https://www.graalvm.org/python/",
+    "license": "UPL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/oracle/graalpython/releases/download/graal-25.4.4/graalpy3.13-community-25.4.4-windows-amd64.zip",
+            "extract_dir": "graalpy-community3.13-25.4.4.1.1-windows-amd64",
+            "hash": "8639dcbc10ec27dce7619a5e80e2f7cfba5f2eba7c1476b1381eebc2fee898b7"
+        }
+    },
+    "bin": "bin\\graalpy.exe",
+    "checkver": {
+        "url": "https://repo1.maven.org/maven2/org/graalvm/polyglot/python/maven-metadata.xml",
+        "regex": "<latest>([\\d.]+)</latest>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/oracle/graalpython/releases/download/graal-$version/graalpy3.13-community-$version-windows-amd64.zip",
+                "extract_dir": "graalpy-community3.13-$version-windows-amd64"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

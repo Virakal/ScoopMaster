@@ -1,0 +1,22 @@
+{
+    "version": "3.1.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ks1686/peaproxy/releases/download/v3.1.2/peaproxy_3.1.2_windows_amd64.zip",
+            "bin": [
+                "peaproxy.exe"
+            ],
+            "hash": "0c93a90e1d8b2dbc738197e79a650e92ebf1a4c7fcb4465bd86a7c6cc9f37e46"
+        },
+        "arm64": {
+            "url": "https://github.com/ks1686/peaproxy/releases/download/v3.1.2/peaproxy_3.1.2_windows_arm64.zip",
+            "bin": [
+                "peaproxy.exe"
+            ],
+            "hash": "f8805dd5b52901281badc02c67e68ba59a9bcb68423cbaf6f0500d33475b80f1"
+        }
+    },
+    "homepage": "https://github.com/ks1686/peaproxy",
+    "license": "MIT",
+    "description": "Localhost multi-provider AI gateway with API keys, local runtimes, and optional subscription OAuth."
+}

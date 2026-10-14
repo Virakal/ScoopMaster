@@ -1,0 +1,27 @@
+{
+    "version": "8.12.42-32",
+    "description": "1Password Desktop GUI Beta Release",
+    "homepage": "https://1password.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://1password.com/legal/terms-of-service/"
+    },
+    "url": "https://downloads.1password.com/win/1PasswordSetup-8.12.42-32.BETA.msi",
+    "hash": "68f28a3114a092a4e3f2fde87747d0db886c7c495af77e75921cfe9167075f65",
+    "extract_dir": "ProgramFiles64Folder\\1Password",
+    "shortcuts": [
+        [
+            "app/8/1Password.exe",
+            "1Password"
+        ]
+    ],
+    "pre_uninstall": "if (Get-Process -name 1password -ea 0) {stop-process -name 1password -force -ea 0; wait-process -name 1password -ea 0; start-sleep 0.5}",
+    "checkver": {
+        "url": "https://releases.1password.com/windows/beta/index.xml",
+        "regex": "https://releases.1password.com/windows/beta/([\\d.-]+)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://downloads.1password.com/win/1PasswordSetup-$version.BETA.msi"
+    }
+}

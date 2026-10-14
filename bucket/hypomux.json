@@ -1,0 +1,27 @@
+{
+    "version": "2.7.0",
+    "description": "Windows multi-NIC bandwidth aggregator | 专为 Windows 平台打造的多网卡带宽并发聚合下载加速工具，用于在多连接下载场景中实现更稳定的带宽叠加体验",
+    "homepage": "https://github.com/Hypostasis-Cat/HypoMux",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Hypostasis-Cat/HypoMux/releases/download/v2.7.0/HypoMux_Setup_2.7.0.exe#/dl.7z",
+            "hash": "314f098917944ef849c93fde009bcadbdb8cab235794f9eba3c56f28a18d8d3d"
+        }
+    },
+    "shortcuts": [
+        [
+            "hypomux.exe",
+            "HypoMux"
+        ]
+    ],
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Hypostasis-Cat/HypoMux/releases/download/v$version/HypoMux_Setup_$version.exe#/dl.7z"
+            }
+        }
+    }
+}

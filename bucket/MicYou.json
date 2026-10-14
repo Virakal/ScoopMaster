@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "2.1.1",
+    "description": "MicYou is a powerful tool that turns your Android device into a high-quality microphone for your PC.",
+    "homepage": "https://github.com/LanRhyme/MicYou",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LanRhyme/MicYou/releases/download/v2.1.1/MicYou-Win-2.1.1-installer.exe",
+            "hash": "510c7963f4c815f3590458cd3f3938a0a3495e2fb65b6a84b75ffe1e0d5bda35"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "MicYou.exe",
+            "MicYou"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LanRhyme/MicYou/releases/download/v$version/MicYou-Win-$version-installer.exe"
+            }
+        }
+    }
+}

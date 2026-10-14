@@ -1,0 +1,53 @@
+{
+    "version": "26.09.3",
+    "description": "Powerful and intelligent flash cards",
+    "homepage": "https://apps.ankiweb.net",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ankitects/anki/releases/download/26.09.3/anki-26.09.3-win-x64.msi",
+            "hash": "8a45823d1c31017cebb7d3af4493d69b6ae3c185345fcb2390ede4af01e0a950",
+            "extract_dir": "PFiles64\\Anki"
+        },
+        "arm64": {
+            "url": "https://github.com/ankitects/anki/releases/download/26.09.3/anki-26.09.3-win-arm64.msi",
+            "hash": "445d5973ec92e8ed4fb09d606aed084e2aaeeaba853b53b5608a6f6cae66ee2a",
+            "extract_dir": "PFiles64\\Anki"
+        }
+    },
+    "pre_install": [
+        "@(",
+        "   '@echo off'",
+        "   'echo Starting Anki...'",
+        "   'set \"USB_ROOT=%~dp0\"'",
+        "   'set \"ANKI_LAUNCHER=%USB_ROOT%\\anki\"'",
+        "   'set \"ANKI_BASE=%USB_ROOT%\\data\"'",
+        "   'start /b \"\" \"%ANKI_LAUNCHER%\"'",
+        ") | Set-Content \"$dir\\anki.cmd\" -Encoding ASCII"
+    ],
+    "bin": "anki.cmd",
+    "shortcuts": [
+        [
+            "anki.cmd",
+            "Anki",
+            "",
+            "anki.exe"
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://api.github.com/repos/ankitects/anki/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<version>[\\d.]+)/anki-\\k<version>-win-x64\\.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ankitects/anki/releases/download/$version/anki-$version-win-x64.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/ankitects/anki/releases/download/$version/anki-$version-win-arm64.msi"
+            }
+        }
+    }
+}

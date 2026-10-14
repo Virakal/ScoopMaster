@@ -1,0 +1,34 @@
+{
+    "version": "0.10.1",
+    "description": "An open-source parametric 3D CAD application built in pure Rust",
+    "homepage": "https://bherbruck.github.io/solidcraft/",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/bherbruck/solidcraft/releases/download/v0.10.1/solidcraft-0.10.1-windows-x64-portable.zip",
+            "hash": "8805ce4def04ddfca459975b0437f7bdf547a06eb0c42c101ec7f783d79eff4f",
+            "extract_dir": "solidcraft-0.10.1-windows-x64-portable"
+        }
+    },
+    "bin": [
+        "solidcraft.exe",
+        "solidcraft-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "solidcraft.exe",
+            "SolidCraft"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/bherbruck/solidcraft/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/bherbruck/solidcraft/releases/download/v$version/solidcraft-$version-windows-x64-portable.zip",
+                "extract_dir": "solidcraft-$version-windows-x64-portable"
+            }
+        }
+    }
+}

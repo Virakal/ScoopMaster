@@ -1,0 +1,46 @@
+{
+    "version": "1.50.0",
+    "description": "The command Line client for Scalingo, a PaaS cloud hosting for developers.",
+    "homepage": "https://doc.scalingo.com/platform/cli/start",
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/Scalingo/cli/raw/refs/heads/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cli-dl.scalingo.com/release/scalingo_1.50.0_windows_amd64.zip",
+            "extract_dir": "scalingo_1.50.0_windows_amd64",
+            "hash": "d4e32eb5c5eb6c3375dbddf84914f7fc65e6359aa3af5c12ea7af3466d08c0c5"
+        },
+        "32bit": {
+            "url": "https://cli-dl.scalingo.com/release/scalingo_1.50.0_windows_386.zip",
+            "extract_dir": "scalingo_1.50.0_windows_386",
+            "hash": "381c01730d6410f62302758b67d7f98890d83540c622693fe795811d9f763598"
+        },
+        "arm64": {
+            "url": "https://cli-dl.scalingo.com/release/scalingo_1.50.0_windows_arm64.zip",
+            "extract_dir": "scalingo_1.50.0_windows_arm64",
+            "hash": "26708be00c0cbb69425f3bd46d9fd7a91703c34b05e3db571620b19f6e9f50e3"
+        }
+    },
+    "bin": "scalingo.exe",
+    "checkver": {
+        "github": "https://github.com/Scalingo/cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cli-dl.scalingo.com/release/scalingo_$version_windows_amd64.zip",
+                "extract_dir": "scalingo_$version_windows_amd64"
+            },
+            "32bit": {
+                "url": "https://cli-dl.scalingo.com/release/scalingo_$version_windows_386.zip",
+                "extract_dir": "scalingo_$version_windows_386"
+            },
+            "arm64": {
+                "url": "https://cli-dl.scalingo.com/release/scalingo_$version_windows_arm64.zip",
+                "extract_dir": "scalingo_$version_windows_arm64"
+            }
+        }
+    }
+}

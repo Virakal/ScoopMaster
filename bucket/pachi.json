@@ -1,0 +1,26 @@
+{
+    "version": "12.90",
+    "description": "A fairly strong Go/Baduk/Weiqi playing program",
+    "homepage": "https://github.com/pasky/pachi",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pasky/pachi/releases/download/pachi-12.90/pachi-12.90-win64-avx.zip",
+            "hash": "e07ef723ae293af42e192ef01c94348f158fe04ae7177f2fa7cfd04c312b902b"
+        }
+    },
+    "extract_dir": "Pachi-12.84",
+    "bin": "pachi.exe",
+    "checkver": {
+        "github": "https://github.com/pasky/pachi",
+        "regex": "pachi-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pasky/pachi/releases/download/pachi-$version/pachi-$version-win64-avx.zip",
+                "extract_dir": "Pachi-$version"
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.16.0",
+    "description": "Modern network speed testing and monitoring tool built with Go and React.",
+    "homepage": "https://github.com/autobrr/netronome",
+    "license": "MIT",
+    "url": "https://github.com/autobrr/netronome/releases/download/v0.16.0/netronome_0.16.0_windows_x86_64.zip",
+    "hash": "3d5f515d3d7bd87011b554fbc97fca1ad5d5d0341b5879e700ec43b72aefc6e2",
+    "bin": "netronome.exe",
+    "shortcuts": [
+        [
+            "netronome.exe",
+            "Netronome"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/autobrr/netronome"
+    },
+    "autoupdate": {
+        "url": "https://github.com/autobrr/netronome/releases/download/v$version/netronome_$version_windows_x86_64.zip"
+    }
+}

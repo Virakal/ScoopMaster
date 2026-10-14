@@ -1,0 +1,42 @@
+{
+    "version": "1.4.0",
+    "description": "JavaFX-based animator, constraint solver and model checker built on ProB (B, Event-B, CSP-M, TLA+, Z)",
+    "homepage": "https://prob.hhu.de/",
+    "license": "EPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://stups.hhu-hosting.de/downloads/prob2/1.4.0/ProB2-UI-1.4.0.exe#/setup.exe",
+            "hash": "20222dce6bafb08c45748d2521f26125edb849c8e0e87aeeef77a4c643405f00"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\setup.exe\" \"$dir\" -ExtractDir '.rsrc\\0\\RCDATA' -Switches '-tPE' -Removal",
+        "Rename-Item -LiteralPath \"$dir\\MSI\" 'ProB2-UI.msi'",
+        "Remove-Item -LiteralPath \"$dir\\.rsrc\",\"$dir\\PRODUCT_CODE\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "Expand-MsiArchive \"$dir\\ProB2-UI.msi\" \"$dir\" -ExtractDir 'ProB2-UI' -Removal"
+    ],
+    "bin": [
+        [
+            "ProB2-UI (with console).exe",
+            "prob2-ui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ProB2-UI.exe",
+            "ProB2-UI"
+        ]
+    ],
+    "checkver": {
+        "url": "https://stups.hhu-hosting.de/downloads/prob2/?C=M;O=D",
+        "regex": "href=\"?(\\d+(?:\\.\\d+)+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://stups.hhu-hosting.de/downloads/prob2/$version/ProB2-UI-$version.exe#/setup.exe"
+            }
+        }
+    },
+    "notes": "Upstream ships ProB2-UI for Windows only as a jpackage installer (an MSI wrapped in an .exe); it is unpacked portably, never run. The app bundles its own Java runtime, so no JDK is needed. The Start Menu shortcut launches the GUI with no console window; the 'prob2-ui' shim uses the console launcher, so stdout/stderr and --help are visible. The ProB kernel (probcli) is bundled and unpacked into a temporary directory at startup."
+}

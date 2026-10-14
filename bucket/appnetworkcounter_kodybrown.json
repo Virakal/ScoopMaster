@@ -1,0 +1,34 @@
+{
+    "homepage": "https://www.nirsoft.net/utils/app_network_counter.html",
+    "checkver": "AppNetworkCounter v(\\d+\\.\\d\\d)",
+    "version": "1.61",
+    "license": "freeware",
+    "description": "AppNetworkCounter is a simple tool for Windows that counts and displays the number of TCP/UDP bytes and packets sent and received by every application on your system. For every application, the following information is displayed: the number of sent and received bytes, number of sent and received packets, number of sent/received IPv4 bytes, and number of sent/received IPv6 bytes. It also displays the version information of the application - Product Name, Product Version, File Description, and Company Name.",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.nirsoft.net/utils/appnetworkcounter-x64.zip",
+            "hash": "20870033d3422207cc77c4bdee19d03a19f6aafbed222fa4b7b66992815d8b48"
+        },
+        "32bit": {
+            "url": "https://www.nirsoft.net/utils/appnetworkcounter.zip",
+            "hash": "4d2cc53b205056d1ba59e986539a6030fca84d0115d631146d3778c7a7d3f801"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.nirsoft.net/utils/appnetworkcounter-x64.zip"
+            },
+            "32bit": {
+                "url": "https://www.nirsoft.net/utils/appnetworkcounter.zip"
+            }
+        }
+    },
+    "bin": "AppNetworkCounter.exe",
+    "shortcuts": [
+        [
+            "AppNetworkCounter.exe",
+            "NirSoft\\AppNetworkCounter - Displays sent_received bytes of every app"
+        ]
+    ]
+}

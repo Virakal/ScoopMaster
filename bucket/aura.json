@@ -1,39 +1,27 @@
 {
-    "version": "0.1.38",
-    "description": "Agent Usage Reporter & Analyzer - a lightweight Rust system-tray indicator giving instant visibility into AI agent usage (tokens, quota windows, costs)",
-    "homepage": "https://github.com/Rfluid/aura",
-    "license": "MIT",
+    "version": "1.0.0",
+    "description": "A simple, lightweight, background manager written in Rust",
+    "homepage": "https://github.com/hmerritt/aura",
+    "license": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Rfluid/aura/releases/download/v0.1.38/aura-v0.1.38-x86_64-pc-windows-msvc.zip",
-            "hash": "764426d615ad5c03a5e8a24b6f0d8b267e83da854b0479bf053c747a528554ad"
-        },
-        "arm64": {
-            "url": "https://github.com/Rfluid/aura/releases/download/v0.1.38/aura-v0.1.38-aarch64-pc-windows-msvc.zip",
-            "hash": "5191d5d0e93275842341d43cfad220e0c7a04beded62f70838b5b9890e80e02b"
+            "url": "https://releases.mrrtt.me/aura/1.0.0/aura_1.0.0_windows_amd64.zip",
+            "hash": "7981d017b1468c902bcc826a874b826251cfe9bdab3678e6cce506b24762134b"
         }
     },
     "bin": "aura.exe",
-    "shortcuts": [
-        [
-            "aura.exe",
-            "Aura"
-        ]
-    ],
     "checkver": {
-        "github": "https://github.com/Rfluid/aura"
+        "url": "https://releases.mrrtt.me/aura/",
+        "regex": "(?<version>[0-9][\\.][0-9][\\.][0-9])",
+        "reverse": true,
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Rfluid/aura/releases/download/v$version/aura-v$version-x86_64-pc-windows-msvc.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Rfluid/aura/releases/download/v$version/aura-v$version-aarch64-pc-windows-msvc.zip"
+                "url": "https://mrrtt.me/releases/aura/$version/aura_$version_windows_amd64.zip",
+                "extract_dir": "aura_$version_windows_amd64"
             }
-        },
-        "hash": {
-            "url": "$url.sha256"
         }
     }
 }

@@ -1,0 +1,28 @@
+{
+    "version": "0.20.0",
+    "description": "Simple mind map tool.",
+    "homepage": "https://github.com/wanglin2/mind-map",
+    "license": "MIT",
+    "url": "https://github.com/wanglin2/mind-map/releases/download/0.20.0/Setup.0.20.0.exe",
+    "hash": "0c4abf13a2ea098d514bb17004413e541959cf392d4fa1580a915edd954aa865",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive -Path \"$dir\\$fname\" -Removal",
+            "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath $dir"
+        ]
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "bin": "思绪思维导图.exe",
+    "shortcuts": [
+        [
+            "思绪思维导图.exe",
+            "Simple Mind Map"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/wanglin2/mind-map"
+    },
+    "autoupdate": {
+        "url": "https://github.com/wanglin2/mind-map/releases/download/$version/Setup.$version.exe"
+    }
+}

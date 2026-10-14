@@ -1,0 +1,30 @@
+{
+    "version": "0.2.25",
+    "description": "PostgreSQL database anonymization and synthetic data generation tool.",
+    "homepage": "https://greenmask.io/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GreenmaskIO/greenmask/releases/download/v0.2.25/greenmask-windows-amd64.zip",
+            "hash": "11c9985239b8725485896d43a58c230f439adee8aa58ca2a6ee0ed9da8cdc485"
+        },
+        "arm64": {
+            "url": "https://github.com/GreenmaskIO/greenmask/releases/download/v0.2.25/greenmask-windows-arm64.zip",
+            "hash": "cd8ee08e0ac9a5f824c55ba20574e0990b9741dc898b142cc55ff840799f7b45"
+        }
+    },
+    "bin": "greenmask.exe",
+    "checkver": {
+        "github": "https://github.com/GreenmaskIO/greenmask"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GreenmaskIO/greenmask/releases/download/v$version/greenmask-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/GreenmaskIO/greenmask/releases/download/v$version/greenmask-windows-arm64.zip"
+            }
+        }
+    }
+}

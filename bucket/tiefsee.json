@@ -1,0 +1,23 @@
+{
+    "version": "4.3.2",
+    "description": "An open-source image viewer for Windows with powerful features and ease of use",
+    "homepage": "https://github.com/hbl917070/Tiefsee4",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hbl917070/Tiefsee4/releases/download/4.3.2/Tiefsee.zip",
+            "hash": "ec1f6d9778ca8c44102aa6e0e2899299120484ffdc1c5865717a64c4e4c1bd07"
+        }
+    },
+    "shortcuts": [
+        [
+            "Tiefsee.exe",
+            "Tiefsee"
+        ]
+    ],
+    "persist": "PortableMode",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/hbl917070/Tiefsee4/releases/download/$version/Tiefsee.zip"
+    }
+}

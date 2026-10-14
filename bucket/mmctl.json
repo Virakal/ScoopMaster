@@ -1,0 +1,24 @@
+{
+    "version": "11.11.1",
+    "description": "mattermost cli tool",
+    "homepage": "https://github.com/mattermost/mattermost",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.mattermost.com/mmctl/v11.11.1/windows_amd64.zip",
+            "hash": "2af5b369af9cea77e8a77af6c280d93d50b6274055d02760cda464fb866bf12a"
+        }
+    },
+    "bin": "mmctl.exe",
+    "pre_install": "Rename-Item \"$dir\\mmctl\" \"$dir\\mmctl.exe\"",
+    "checkver": {
+        "github": "https://github.com/mattermost/mattermost"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://releases.mattermost.com/mmctl/v$version/windows_amd64.zip"
+            }
+        }
+    }
+}

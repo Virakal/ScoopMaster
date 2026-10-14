@@ -1,0 +1,24 @@
+{
+    "version": "0.3.0",
+    "description": "A high-throughput, resumable parallel sync tool for SSH remotes and local-to-local transfers.",
+    "homepage": "https://github.com/AlpinDale/parsync",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AlpinDale/parsync/releases/download/v0.3.0/parsync-v0.3.0-x86_64-windows.zip",
+            "hash": "ea5b2d31b61d3071e88f3c3483347d58ec7ce3d59b78dad066da451bd7bf2183"
+        }
+    },
+    "bin": "parsync.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AlpinDale/parsync/releases/download/v$version/parsync-v$version-x86_64-windows.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/parsync-v$version-x86_64-windows.sha256"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "version": "155.0.8059.40-r1697595",
+    "license": "unknown",
+    "description": "Chromium fork",
+    "homepage": "https://github.com/Hibbiki/chromium-win64",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Hibbiki/chromium-win64/releases/download/v155.0.8059.40-r1697595/chrome.7z",
+            "hash": "67053171e962b6ef6204d382bf3018142478bac8b8bf6f3aa6199118701c79c2",
+            "extract_dir": "Chrome-bin"
+        }
+    },
+    "bin": [
+        [
+            "chrome.exe",
+            "chromium-hibbiki"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Chromium (Hibbiki-dev)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Hibbiki/chromium-win64",
+        "regex": "v([\\d\\w-\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Hibbiki/chromium-win64/releases/download/v$version/chrome.7z",
+                "extract_dir": "Chrome-bin"
+            }
+        }
+    }
+}

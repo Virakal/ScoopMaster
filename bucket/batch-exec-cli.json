@@ -1,0 +1,26 @@
+{
+  "version": "1.5.3",
+  "description": "🦅 Efficiently iterate through directories and execute commands with progress display and parallel execution",
+  "homepage": "https://github.com/chandq/batch-exec-cli",
+  "license": "MIT",
+  "depends": "nodejs-lts",
+  "url": "https://registry.npmjs.org/batch-exec-cli/-/batch-exec-cli-1.5.3.tgz",
+  "hash": "4319b6f0ccbbb58671dca85b6daa739996a580b18c7b1e20b5872f05b188295a",
+  "extract_dir": "package",
+  "installer": {
+    "script": "npm install --omit=dev --ignore-scripts --prefix \"$dir\""
+  },
+  "bin": [
+    [
+      "bin/batch-exec.cmd",
+      "batch-exec"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/chandq/batch-exec-cli",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "url": "https://registry.npmjs.org/batch-exec-cli/-/batch-exec-cli-$version.tgz"
+  }
+}

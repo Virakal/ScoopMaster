@@ -1,0 +1,31 @@
+{
+    "version": "0.2.23",
+    "description": "Your prompt vocabulary, one hotkey away, in every window",
+    "homepage": "https://promptline.cc",
+    "license": "MIT",
+    "notes": "Promptline's own setup exe installed it for the current user under %LOCALAPPDATA%\\Promptline, and the app updates itself.",
+    "url": "https://github.com/bekalpaslan/promptline/releases/download/v0.2.23/Promptline_0.2.23_x64-setup.exe",
+    "hash": "0f34fa41faf8423fbd90f746e1a53478ed3fdab6c6ef69c89ef06df1e28fd5dd",
+    "installer": {
+        "args": "/S"
+    },
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "    $key = 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Promptline'",
+            "    $un = (Get-ItemProperty -Path $key -ErrorAction SilentlyContinue).UninstallString",
+            "    if ($un) {",
+            "        Start-Process -FilePath $un.Trim('\"') -ArgumentList '/S' -Wait",
+            "        for ($i = 0; $i -lt 60 -and (Test-Path $key); $i++) { Start-Sleep -Seconds 1 }",
+            "    }",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://promptline.cc/latest.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://github.com/bekalpaslan/promptline/releases/download/v$version/Promptline_$version_x64-setup.exe"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "version": "26.10.5.0",
+    "description": "Sucrose Wallpaper Engine (nightly build)",
+    "homepage": "https://github.com/Taiizor/Sucrose",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Taiizor/Sucrose/releases/download/v26.10.5.0/Sucrose_Bundle_.NET_Framework_4.8_x64_26.10.5.0.7z",
+            "hash": "748d9bc97b99bea5dd17386e140778df7bed5e7f40b5cdaeddf54c947f78cf4b"
+        },
+        "32bit": {
+            "url": "https://github.com/Taiizor/Sucrose/releases/download/v26.10.5.0/Sucrose_Bundle_.NET_Framework_4.8_x86_26.10.5.0.7z",
+            "hash": "e1858bbea732ebe01e5844bd90963c44ef1785c81e79f9598f4c41a39a89ac5a"
+        },
+        "arm64": {
+            "url": "https://github.com/Taiizor/Sucrose/releases/download/v26.10.5.0/Sucrose_Bundle_.NET_Framework_4.8_ARM64_26.10.5.0.7z",
+            "hash": "d3d78ff078952052decdd5baadbdaa6cdd58f59840662063ed84f599a58a3f65"
+        }
+    },
+    "bin": "Sucrose.Launcher/Sucrose.Launcher.exe",
+    "shortcuts": [
+        [
+            "Sucrose.Launcher/Sucrose.Launcher.exe",
+            "Sucrose Nightly"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Taiizor/Sucrose/releases?per_page=100",
+        "jsonpath": "$[?(@.prerelease==true)].tag_name",
+        "regex": "v([0-9.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Taiizor/Sucrose/releases/download/v$version/Sucrose_Bundle_.NET_Framework_4.8_x64_$version.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/Taiizor/Sucrose/releases/download/v$version/Sucrose_Bundle_.NET_Framework_4.8_x86_$version.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/Taiizor/Sucrose/releases/download/v$version/Sucrose_Bundle_.NET_Framework_4.8_ARM64_$version.7z"
+            }
+        }
+    }
+}

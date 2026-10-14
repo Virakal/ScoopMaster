@@ -1,0 +1,35 @@
+{
+    "version": "0.4.6",
+    "description": "(Scoop bucket by arch3rpro) - Port of Wappalyzer (uncovers technologies used on websites) to automate mass scanning",
+    "homepage": "https://github.com/rverton/webanalyze",
+    "license": "MIT",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/rverton/webanalyze/releases/download/v0.4.6/webanalyze_Windows_i386.zip",
+            "hash": "4a78fea386f5bd819f37072a0edd0ad87ed957d81b72260cd098e98ea5e7f7c0"
+        },
+        "64bit": {
+            "url": "https://github.com/rverton/webanalyze/releases/download/v0.4.6/webanalyze_Windows_x86_64.zip",
+            "hash": "08c4e24636ebcf5a7e7e21af6ab8c1875133a2520f5a987371fafe26bbed1f00"
+        },
+        "arm64": {
+            "url": "https://github.com/rverton/webanalyze/releases/download/v0.4.6/webanalyze_Windows_arm64.zip",
+            "hash": "c0c27d35fbbdc7e63ae64d66ff3909aea1ad5403b1c790ec9effa9e2867669af"
+        }
+    },
+    "bin": "webanalyze.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/rverton/webanalyze/releases/download/v$version/webanalyze_Windows_i386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/rverton/webanalyze/releases/download/v$version/webanalyze_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/rverton/webanalyze/releases/download/v$version/webanalyze_Windows_arm64.zip"
+            }
+        }
+    }
+}

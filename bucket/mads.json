@@ -1,0 +1,19 @@
+{
+    "version": "2.1.9",
+    "description": "MADS is a multi-pass crossassembler designed for 6502 and 65816 processors",
+    "homepage": "https://github.com/tebe6502/Mad-Assembler",
+    "license": "MIT",
+    "url": "https://github.com/tebe6502/Mad-Assembler/archive/refs/tags/2.1.9.zip",
+    "hash": "a1a3ea2ebf0ef088879875a6ca0ad20955236dac072765d998a85a17a02e15fa",
+    "extract_dir": "Mad-Assembler-2.1.9",
+    "pre_install": [
+        "Move-Item $dir\\bin\\windows_x86_64\\*.* $dir -Force",
+        "Remove-Item $dir\\bin -Recurse"
+    ],
+    "bin": "mads.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tebe6502/Mad-Assembler/archive/refs/tags/$version.zip",
+        "extract_dir": "Mad-Assembler-$version"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "5.9.0.6",
+    "description": "FolderSize",
+    "homepage": "https://www.mindgems.com/products/Folder-Size/Folder-Size.html",
+    "license": "Freeware",
+    "url": "https://www.mindgems.com/software/FolderSize.exe",
+    "hash": "1453a209eaf589622cf398cd9cdda3a7fb17f96f2e4f18708524bb8980089b25",
+    "depends": "innounp",
+    "installer": {
+        "script": [
+            "Invoke-ExternalCommand -FilePath (Get-HelperPath -Helper Innounp) -ArgumentList '-x', \"$dir\\$fname\", \"-d$dir\", '-b', '-q', '-y' | Out-Null",
+            "New-Item \"$env:ProgramData\\MindGems\\FolderSize\" -ItemType Directory -Force | Out-Null",
+            "Move-Item \"$dir\\{app}\\FolderSize,2.exe\" \"$dir\\FolderSize.exe\" -Force",
+            "Move-Item \"$dir\\{commonappdata}\\MindGems\\FolderSize\\chart\" \"$env:ProgramData\\MindGems\\FolderSize\" -Force",
+            "Remove-Item \"$dir\\{app}\", \"$dir\\{commonappdata}\", \"$dir\\install_script.iss\" -Recurse -Force"
+        ]
+    },
+    "shortcuts": [
+        [
+            "FolderSize.exe",
+            "FolderSize"
+        ]
+    ],
+    "post_uninstall": [
+        "Remove-Item \"$env:ProgramData\\MindGems\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
+    "checkver": {
+        "url": "https://www.mindgems.com/products/Folder-Size/Folder-Size-Download.htm",
+        "regex": ">(\\d+(\\.\\d+)+)<"
+    },
+    "autoupdate": {
+        "url": "https://www.mindgems.com/software/FolderSize.exe"
+    }
+}

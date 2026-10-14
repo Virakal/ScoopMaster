@@ -1,22 +1,17 @@
 {
-    "version": "0.10.3",
-    "description": "Browse the Fediverse",
-    "homepage": "https://github.com/GeopJr/Tuba",
+    "version": "b1906",
+    "description": "Browse the Fediverse.",
+    "homepage": "https://tuba.geopjr.dev/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/GeopJr/Tuba/releases/download/v0.10.3/Tuba.Setup.exe",
-            "hash": "510a6c0bb4a67d054b1d3a7cc9de94f83fab1c1a560a829c51354babb42d21e0"
+            "url": "https://nightly.link/GeopJr/Tuba/actions/runs/36623928099/tuba_windows_portable.zip",
+            "hash": "9a9cafc4fcb96a3bb045d94e8ea580fcbf93f0c3c2eec260f94a6f7c6764475d"
+        },
+        "arm64": {
+            "url": "https://nightly.link/GeopJr/Tuba/actions/runs/36623928099/tuba_windows_portable_aarch64.zip",
+            "hash": "391326a308176d1491bfcc7c2da724ec15877fc1c3390947569fbb01432b27d0"
         }
-    },
-    "installer": {
-        "script": [
-            "Start-Process -Wait \"$dir\\$fname\" -ArgumentList @('/S', \"/D=$dir\") -Verb RunAs | Out-Null",
-            "Remove-Item \"$dir\\$fname\""
-        ]
-    },
-    "uninstaller": {
-        "script": "Start-Process \"$dir\\uninstall.exe\" -ArgumentList '/S' -Wait -Verb RunAs | Out-Null"
     },
     "shortcuts": [
         [
@@ -24,11 +19,18 @@
             "Tuba"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/GeopJr/Tuba/actions/workflows/msys2.yml?query=event%3Apush+branch%3Amain+is%3Asuccess",
+        "regex": "(?sm)/actions/runs/(?<run>\\d+)\".*?#(?<build>\\d+):",
+        "replace": "b${build}"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/GeopJr/Tuba/releases/download/v$version/Tuba.Setup.exe"
+                "url": "https://nightly.link/GeopJr/Tuba/actions/runs/$matchRun/tuba_windows_portable.zip"
+            },
+            "arm64": {
+                "url": "https://nightly.link/GeopJr/Tuba/actions/runs/$matchRun/tuba_windows_portable_aarch64.zip"
             }
         }
     }

@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0-alpha.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hop-top/poly-c12n/releases/download/c12n/v0.1.0-alpha.1/c12n_0.1.0-alpha.1_windows_amd64.zip",
+            "bin": [
+                "c12n.exe"
+            ],
+            "hash": "02c3affb0e6db2219d9867915d0563cf86f8fcaf22cbbdbe0bdf228aa326925b"
+        },
+        "arm64": {
+            "url": "https://github.com/hop-top/poly-c12n/releases/download/c12n/v0.1.0-alpha.1/c12n_0.1.0-alpha.1_windows_arm64.zip",
+            "bin": [
+                "c12n.exe"
+            ],
+            "hash": "7fc0544d1f96f98c2ad77b7043c3a5e46b70c0970de6f230fbe0494a3ed1f0df"
+        }
+    },
+    "homepage": "https://github.com/hop-top/poly-c12n",
+    "license": "MIT",
+    "description": "LLM request classification engine CLI"
+}

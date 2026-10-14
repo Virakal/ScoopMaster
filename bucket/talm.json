@@ -1,0 +1,31 @@
+{
+    "version": "0.35.0",
+    "description": "A tool to manage Talos Linux the GitOps way.",
+    "homepage": "https://github.com/cozystack/talm",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cozystack/talm/releases/download/v0.35.0/talm-windows-amd64.zip",
+            "hash": "3131ffd2b96dd98c8e0215516a8fef2dc2fe58965e1348508746dfb8c81fc5a6"
+        },
+        "arm64": {
+            "url": "https://github.com/cozystack/talm/releases/download/v0.35.0/talm-windows-arm64.zip",
+            "hash": "663505778104a37c0f46c8bae43ae0dad72ff4ca0010e3b57d7013b7f14f57e1"
+        }
+    },
+    "bin": "talm.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cozystack/talm/releases/download/v$version/talm-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/cozystack/talm/releases/download/v$version/talm-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/talm-checksums.txt"
+        }
+    }
+}

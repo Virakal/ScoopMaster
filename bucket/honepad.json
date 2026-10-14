@@ -1,0 +1,26 @@
+{
+    "version": "0.2.3",
+    "description": "Local CLI for public practice problems",
+    "homepage": "https://github.com/honepad/honepad",
+    "license": "Apache-2.0",
+    "depends": "python",
+    "url": "https://github.com/honepad/honepad/releases/download/v0.2.3/honepad-0.2.3-py3-none-any.whl#/honepad.whl",
+    "hash": "sha256:5f36d25e5d8c28dfb86c9a1dd2919f66219689e52baf50cba5fe6a7e18a8b1eb",
+    "installer": {
+        "script": [
+            "python -m pip install --disable-pip-version-check --no-warn-script-location --target \"$dir\" \"$dir\\honepad.whl\""
+        ]
+    },
+    "bin": [
+        [
+            "Scripts\\honepad.exe",
+            "honepad"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/honepad/honepad"
+    },
+    "autoupdate": {
+        "url": "https://github.com/honepad/honepad/releases/download/v$version/honepad-$version-py3-none-any.whl#/honepad.whl"
+    }
+}

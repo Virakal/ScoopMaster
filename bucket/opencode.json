@@ -1,34 +1,49 @@
 {
-    "version": "1.19.0",
-    "description": "The open source AI coding agent.",
-    "homepage": "https://opencode.ai/",
+    "version": "2.0.29",
+    "description": "The open source AI coding agent. (v2)",
+    "homepage": "https://opencode.ai/v2",
     "license": "MIT",
     "notes": [
-        "OpenCode v2 is now available via Scoop as `versions/opencode2`.",
-        "Its configuration is incompatible with v1, so you'll need to uninstall v1 before installing v2.",
-        "For migration instructions, see https://opencode.ai/v2/docs/migrate-v1/."
+        "The v2 configuration is incompatible with v1. Uninstall 'opencode' first, then install this version.",
+        "See https://opencode.ai/v2/docs/migrate-v1/ for migration steps."
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-windows-x64.zip",
-            "hash": "17108e9448c4fdad48eb8714c4ed6f5dfc9cf86c2eb8f2ce5d02043fef806eb5"
+            "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-2.0.29.tgz",
+            "hash": "sha512:ca7d38057c05a4767dd8c45a8e70a085c4f11007c48f539dff8ff90e9db88dc0d91d4f0cfe28174334983301950a5777ce9b84f58f6a92ea04dcc827278c5191"
         },
         "arm64": {
-            "url": "https://github.com/anomalyco/opencode/releases/download/v1.19.0/opencode-windows-arm64.zip",
-            "hash": "cfb6f1d40c4596613d2d40e34c48500da7b873f98f7458d3d4ea11136bf174f6"
+            "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-2.0.29.tgz",
+            "hash": "sha512:b031fe37d2e4221d4a74f75e7e7586e73893a7f087d505f458d025728f67359dcdf97cb2aba96c6ea43b054d6ec9d673062c2ae899944e9698b4a1a604674441"
         }
     },
-    "bin": "opencode.exe",
+    "extract_dir": "package\\bin",
+    "bin": [
+        "opencode.exe",
+        [
+            "opencode.exe",
+            "opencode2"
+        ]
+    ],
     "checkver": {
-        "github": "https://github.com/anomalyco/opencode"
+        "url": "https://registry.npmjs.org/@opencode%2fcli/latest",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-windows-x64.zip"
+                "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-$version.tgz",
+                "hash": {
+                    "url": "https://registry.npmjs.org/@opencode%2fcli-windows-x64",
+                    "regex": "(?s)$url.*?$base64"
+                }
             },
             "arm64": {
-                "url": "https://github.com/anomalyco/opencode/releases/download/v$version/opencode-windows-arm64.zip"
+                "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-$version.tgz",
+                "hash": {
+                    "url": "https://registry.npmjs.org/@opencode%2fcli-windows-arm64",
+                    "regex": "(?s)$url.*?$base64"
+                }
             }
         }
     }

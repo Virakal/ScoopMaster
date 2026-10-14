@@ -1,0 +1,51 @@
+{
+    "version": "0.2.11",
+    "description": "Lightweight and fast disk space analyzer with an interactive tree map. Written in Rust.",
+    "homepage": "https://github.com/filegram/filegram-desktop",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/filegram/filegram-desktop/releases/download/v0.2.11/filegram-windows-x86_64.zip",
+            "hash": "f6ef36a4dc597ce0dce00fa6c4ee8a57fe694f2e71ae544b0894b9570706358b",
+            "bin": [
+                [
+                    "filegram-windows-x86_64.exe",
+                    "filegram"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "filegram-windows-x86_64.exe",
+                    "Filegram"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/filegram/filegram-desktop/releases/download/v0.2.11/filegram-windows-i686.zip",
+            "hash": "4016d2311cb0b10ef01ae0e8d0318de386e6be8c0d0f917e4cb8ed6479634b0b",
+            "bin": [
+                [
+                    "filegram-windows-i686.exe",
+                    "filegram"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "filegram-windows-i686.exe",
+                    "Filegram"
+                ]
+            ]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/filegram/filegram-desktop/releases/download/v$version/filegram-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/filegram/filegram-desktop/releases/download/v$version/filegram-windows-i686.zip"
+            }
+        }
+    }
+}

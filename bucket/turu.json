@@ -1,0 +1,19 @@
+{
+    "version": "0.10.0",
+    "description": "Deterministic knowledge workspace management for AI agents",
+    "homepage": "https://github.com/charly-vibes/whisper",
+    "license": "MIT",
+    "url": "https://github.com/charly-vibes/whisper/releases/download/v0.10.0/turu_0.10.0_windows_amd64.zip",
+    "hash": "sha256:ae29f4f26777e43b702063602e3b5a7900d0386eb818fed99129b5649b88e5f8",
+    "bin": [
+        "turu.exe",
+        "turututu.exe",
+        "whisper.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/charly-vibes/whisper"
+    },
+    "autoupdate": {
+        "url": "https://github.com/charly-vibes/whisper/releases/download/v$version/turu_$version_windows_amd64.zip"
+    }
+}

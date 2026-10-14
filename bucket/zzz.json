@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "description": "A fancy sleep command written in Rust 💤",
+  "homepage": "https://github.com/CodeTease/zzz",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/CodeTease/zzz/releases/download/v0.2.0/zzz-0.2.0-x86_64-pc-windows-msvc.zip",
+      "hash": "658b52f7d70c602f311ba40055d18ae5692efab9b89e52dc2ab4d98db4503daa",
+      "bin": "zzz.exe"
+    },
+    "32bit": {
+      "url": "https://github.com/CodeTease/zzz/releases/download/v0.2.0/zzz-0.2.0-i686-pc-windows-msvc.zip",
+      "hash": "c489237e4608efba389f1aa981039e21bbfbe9edf43707627ef1ebd5729ca9b9",
+      "bin": "zzz.exe"
+    },
+    "arm64": {
+      "url": "https://github.com/CodeTease/zzz/releases/download/v0.2.0/zzz-0.2.0-aarch64-pc-windows-msvc.zip",
+      "hash": "2cf1efedd81286746256707757bd72327a3741f05d1d9fc699a1fb155b54aa97",
+      "bin": "zzz.exe"
+    }
+  },
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/CodeTease/zzz/releases/download/v$version/zzz-$version-x86_64-pc-windows-msvc.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/CodeTease/zzz/releases/download/v$version/zzz-$version-i686-pc-windows-msvc.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/CodeTease/zzz/releases/download/v$version/zzz-$version-aarch64-pc-windows-msvc.zip"
+      }
+    }
+  }
+}

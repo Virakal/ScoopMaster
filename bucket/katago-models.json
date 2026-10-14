@@ -1,0 +1,26 @@
+{
+    "version": "tf3-b11c768-s11003M-d5973M-7gres",
+    "description": "Strongest confidently-rated neural networks for KataGo.",
+    "homepage": "https://katagotraining.org/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://katagotraining.org/network_license/"
+    },
+    "url": "https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-tf3-b11c768-s11003M-d5973M-7gres.bin.gz#/model.dontautoexpand",
+    "hash": "93bdb63a3bfae4a70db0cb5265287495ecfc10b1ba1cc6814feeba1cdf055871",
+    "pre_install": "Get-ChildItem \"$dir\" 'model.dontautoexpand' | Select-Object -First 1 | Rename-Item -NewName 'model.bin.gz'",
+    "checkver": {
+        "url": "https://katagotraining.org/networks/",
+        "regex": "Strongest confidently-rated network:.*?<a href=\"[^\"]+/models/kata1/kata1-([^/]+).bin.gz\">"
+    },
+    "notes": "Model location: $dir\\model.bin.gz",
+    "suggest": {
+        "KataGo": [
+            "lemon/katago-opencl",
+            "lemon/katago-cpu"
+        ]
+    },
+    "autoupdate": {
+        "url": "https://media.katagotraining.org/uploaded/networks/models/kata1/kata1-$version.bin.gz#/model.dontautoexpand"
+    }
+}

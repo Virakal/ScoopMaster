@@ -1,0 +1,46 @@
+{
+    "version": "11.1.0",
+    "description": "All in one .wz file/map editor for MapleStory game files",
+    "homepage": "https://github.com/lastbattle/Harepacker-resurrected",
+    "license": "MPL-2.0",
+    "notes": [
+        "Configuration directory of HaRepacker is $HOME\\AppData\\Roaming\\HaRepacker",
+        "This software requires MapleStory client."
+    ],
+    "suggest": {
+        "hacreator": "hacreator"
+    },
+    "architecture": {
+        "64bit": {
+            "extract_dir": "win-x64",
+            "url": "https://github.com/lastbattle/Harepacker-resurrected/releases/download/11.1.0/HaRepacker_win-x64.zip",
+            "hash": "333c97815ab37186b5e9ad9e3a003d21dce09148ad86dca6c8750c056d63ce2f"
+        },
+        "32bit": {
+            "extract_dir": "win-x86",
+            "url": "https://github.com/lastbattle/Harepacker-resurrected/releases/download/11.1.0/HaRepacker_win-x86.zip",
+            "hash": "2c30d4dd9ad8751478a55640b6c293feb8dbbbfaf038aadf3687f3b298ab2d20"
+        }
+    },
+    "bin": "HaRepackerResurrected.exe",
+    "shortcuts": [
+        [
+            "HaRepackerResurrected.exe",
+            "HaRepacker"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/lastbattle/Harepacker-resurrected/",
+        "regex": "tag/([\\w\\.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lastbattle/Harepacker-resurrected/releases/download/$version/HaRepacker_win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/lastbattle/Harepacker-resurrected/releases/download/$version/HaRepacker_win-x86.zip"
+            }
+        }
+    }
+}

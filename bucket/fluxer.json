@@ -1,0 +1,26 @@
+{
+    "version": "2026.1014.114813",
+    "description": "Fluxer",
+    "homepage": "https://fluxer.app",
+    "license": "AGPLv3",
+    "url": "https://api.fluxer.app/dl/desktop/stable/win32/x64/latest/setup#/setup.exe",
+    "hash": "aa3c30924715de47b44716c6c249615db4a7a46c0f8c63fcf3864ffcb934ac00",
+    "installer": {
+        "script": "start-process -wait \"$dir\\setup.exe\" -a '-s'"
+    },
+    "uninstaller": {
+        "script": "start-process -wait \"$env:localappdata\\fluxer_app\\Update.exe\" -a '--uninstall -s'"
+    },
+    "checkver": {
+        "script": [
+            "$src = 'https://api.fluxer.app/dl/desktop/stable/win32/x64/latest/setup'",
+            "$html = curl.exe -IsSq $src",
+            "$ver = [regex]::Matches($html, 'x-fluxer-version: ([\\d.]+)')",
+            "[string]::Format('{0}', $ver.groups[1].value)"
+        ],
+        "regex": "(?<version>.+)"
+    },
+    "autoupdate": {
+        "url": "https://api.fluxer.app/dl/desktop/stable/win32/x64/latest/setup#/setup.exe"
+    }
+}

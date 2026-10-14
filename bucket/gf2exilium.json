@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/DarkLingYun/MaaGF2Exilium",
+    "version": "2.7.3",
+    "license": "MIT",
+    "hash": "1ed1792fc01cae34b9debbe68e79dd10d104f201167a1e35bace0aaee3dc504a",
+    "url": "https://github.com/DarkLingYun/MaaGF2Exilium/releases/download/v2.7.3/MaaGF2ExiliumGUI-win-x86_64-v2.7.3.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/DarkLingYun/MaaGF2Exilium/releases/download/v$version/MaaGF2ExiliumGUI-win-x86_64-v$version.zip",
+        "extract_dir": "MaaGF2ExiliumGUI-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "post_install": [
+        "$scoopRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $dir))",
+        "$sourceMeta = Join-Path $scoopRoot 'buckets\\maa-bucket\\bucket\\gf2exilium.meta.json'",
+        "& (Join-Path $scoopRoot 'buckets\\maa-bucket\\scripts\\metadata-writer.ps1') -SourceMetaFile $sourceMeta -TargetDir $dir -OutputFile 'maa-metadata.json'"
+    ]
+}

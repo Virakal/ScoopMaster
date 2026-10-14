@@ -1,0 +1,31 @@
+{
+    "version": "0.9.7",
+    "description": "Make it safe to serve untrusted SVG files.",
+    "homepage": "https://github.com/cloudflare/svg-hush",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/svg-hush-0.9.7/svg-hush-0.9.7-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "170bb20e411e1a3eef828b827a6d35403777b306f19fa6477add6bf37e792a82"
+        },
+        "arm64": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/svg-hush-0.9.7/svg-hush-0.9.7-aarch64-pc-windows-msvc.tar.gz",
+            "hash": "95227bfa5f23ae7de85b32e10937698bd6a27ee48f96e3353c9dd40b138c94d4"
+        }
+    },
+    "bin": "svg-hush.exe",
+    "checkver": {
+        "url": "https://crates.io/api/v1/crates/svg-hush?include=default_version",
+        "jsonpath": "$.crate.default_version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/svg-hush-$version/svg-hush-$version-x86_64-pc-windows-msvc.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/svg-hush-$version/svg-hush-$version-aarch64-pc-windows-msvc.tar.gz"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "0.1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kwmx/gignore/releases/download/v0.1.1/gignore_0.1.1_windows_amd64.zip",
+            "bin": [
+                "gignore.exe"
+            ],
+            "hash": "78c7011807016bef42f13adeeddcb6f7081436b765b3cd0bd1afa6984262ca73"
+        },
+        "arm64": {
+            "url": "https://github.com/kwmx/gignore/releases/download/v0.1.1/gignore_0.1.1_windows_arm64.zip",
+            "bin": [
+                "gignore.exe"
+            ],
+            "hash": "ee5afc2297e526147c517ac5c5387ee34074cdf0c58c702be7f9496f6d886d03"
+        }
+    },
+    "homepage": "https://github.com/kwmx/gignore",
+    "license": "MIT",
+    "description": "Build and maintain .gitignore files from a library of templates"
+}

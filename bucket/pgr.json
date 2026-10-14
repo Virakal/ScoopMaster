@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/overflow65537/MAA_Punish",
+    "version": "3.12.3",
+    "license": "MIT",
+    "hash": "3dafe6ac53b884701f027cb839a04b9a7fe71cb96a8650ae95166a1d0fcee75f",
+    "url": "https://github.com/overflow65537/MAA_Punish/releases/download/v3.12.3/MPA-win-x86_64-v3.12.3.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/overflow65537/MAA_Punish/releases/download/v$version/MPA-win-x86_64-v$version.zip",
+        "extract_dir": "MPA-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "post_install": [
+        "$scoopRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $dir))",
+        "$sourceMeta = Join-Path $scoopRoot 'buckets\\maa-bucket\\bucket\\pgr.meta.json'",
+        "& (Join-Path $scoopRoot 'buckets\\maa-bucket\\scripts\\metadata-writer.ps1') -SourceMetaFile $sourceMeta -TargetDir $dir -OutputFile 'maa-metadata.json'"
+    ]
+}

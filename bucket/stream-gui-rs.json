@@ -1,0 +1,27 @@
+{
+    "version": "1.5.3",
+    "description": "Browse Twitch and watch streams through Streamlink",
+    "homepage": "https://github.com/ChrisLauinger77/stream-gui-rs",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ChrisLauinger77/stream-gui-rs/releases/download/v1.5.3/Stream-GUI-RS_1.5.3_windows_x86_64.zip",
+            "hash": "42326e5f7369a181ae1806e1eea0952d36eccf9961d463706c2d20a45304389f"
+        }
+    },
+    "shortcuts": [
+        [
+            "stream-gui-rs.exe",
+            "Stream GUI RS"
+        ]
+    ],
+    "notes": "Install Streamlink 8.0+ and a compatible media player separately.",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ChrisLauinger77/stream-gui-rs/releases/download/v$version/Stream-GUI-RS_$version_windows_x86_64.zip"
+            }
+        }
+    }
+}

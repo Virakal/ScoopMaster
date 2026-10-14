@@ -1,21 +1,18 @@
 {
-    "version": "0.2",
-    "description": "MRA (short for Music Recognition Application) is a music recognition application, or music identifier, like Shazam but for PC.",
-    "homepage": "https://mra.jadquir.com/",
-    "license": "Freeware",
-    "url": "https://mra.jadquir.com/download/latest/portable#/dl.7z",
-    "hash": "2a0de3e5f9e941a13972cebca346df8b674a675611f8ed1708835194b92464ea",
-    "shortcuts": [
-        [
-            "MRA.exe",
-            "MRA"
-        ]
-    ],
-    "persist": "data",
-    "checkver": {
-        "github": "https://github.com/Jadquir/mra-files"
-    },
+    "homepage": "https://github.com/Saratoga-Official/MRA",
+    "version": "3.1.5",
+    "license": "MIT",
+    "hash": "69125c8deab685e8b9143a453dfc8de7afc11ffff2001b817b9fc9159e2c381f",
+    "url": "https://github.com/Saratoga-Official/MRA/releases/download/v3.1.5/MRA-win-x86_64-v3.1.5.zip",
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://mra.jadquir.com/download/latest/portable#/dl.7z"
-    }
+        "url": "https://github.com/Saratoga-Official/MRA/releases/download/v$version/MRA-win-x86_64-v$version.zip",
+        "extract_dir": "MRA-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "post_install": [
+        "$scoopRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $dir))",
+        "$sourceMeta = Join-Path $scoopRoot 'buckets\\maa-bucket\\bucket\\mra.meta.json'",
+        "& (Join-Path $scoopRoot 'buckets\\maa-bucket\\scripts\\metadata-writer.ps1') -SourceMetaFile $sourceMeta -TargetDir $dir -OutputFile 'maa-metadata.json'"
+    ]
 }

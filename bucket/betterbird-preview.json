@@ -1,0 +1,41 @@
+{
+    "version": "153.5.0esr-bb11",
+    "description": "A free email application that’s easy to set up and customize.",
+    "homepage": "https://www.betterbird.eu",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-153.5.0esr-bb11.en-US.win64.zip",
+            "hash": "bddffd8f6a082f79dca0022f1c20970d859f535ced10355a35454b8359855f39"
+        }
+    },
+    "bin": [
+        [
+            "BetterbirdLauncher.exe",
+            "BetterbirdLauncher_Preview"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "BetterbirdLauncher.exe",
+            "Betterbird Preview"
+        ]
+    ],
+    "persist": "profile",
+    "checkver": {
+        "url": "https://www.betterbird.eu/downloads/index.php",
+        "regex": "BetterbirdPortable-((?:[\\d.]+)esr-(?:\\w{4})(?:-build(\\d+))?)\\.en-US\\.win64\\.zip",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-$version.en-US.win64.zip",
+                "hash": {
+                    "url": "https://www.betterbird.eu/downloads/sha256-128.txt",
+                    "regex": "^$sha256\\s+\\*$basename$"
+                }
+            }
+        }
+    }
+}

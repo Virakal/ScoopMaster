@@ -1,0 +1,47 @@
+{
+    "version": "2.2.0-21548726416",
+    "description": "Cortex M SWO SWV Demux and Postprocess (Software)",
+    "homepage": "https://github.com/orbcode/orbuculum",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/Gaweringo/orbuculum/workflows/build-windows/main/orbuculum-win64.zip",
+            "hash": "6558d47c3fb9450e0708dce50ef24bb4ad80556712a1b59de3c594b0db2ef823"
+        }
+    },
+    "bin": [
+        "bin/dwarfdump.exe",
+        "bin/orbcat.exe",
+        "bin/orbdump.exe",
+        "bin/orblcd.exe",
+        "bin/orbprofile.exe",
+        "bin/orbstat.exe",
+        "bin/orbtop.exe",
+        "bin/orbtrace.exe",
+        "bin/orbuculum.exe",
+        "bin/orbzmq.exe"
+    ],
+    "checkver": {
+        "script": [
+            "$ErrorActionPreference = 'Stop'",
+            "$url = 'https://api.github.com/repos/orbcode/orbuculum/actions/workflows/build-windows.yml/runs?branch=main&status=success&per_page=1'",
+            "$runs = (Invoke-WebRequest $url).Content | ConvertFrom-Json",
+            "$run_id = $runs.workflow_runs[0].id",
+            "",
+            "$tags_url = 'https://api.github.com/repos/orbcode/orbuculum/tags?per_page=1'",
+            "$tags = (Invoke-WebRequest $tags_url).Content | ConvertFrom-Json",
+            "$latest_tag = $tags[0].name",
+            "",
+            "Write-Output \"$latest_tag $run_id\""
+        ],
+        "regex": "[v|V](?<version>[\\w\\.]*) (?<run>\\d*)",
+        "replace": "${version}-${run}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/orbcode/orbuculum/actions/runs/$matchRun/orbuculum-win64.zip"
+            }
+        }
+    }
+}

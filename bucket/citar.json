@@ -1,0 +1,45 @@
+{
+    "version": "0.1.5",
+    "description": "Civilization V-style 4X game for benchmarking language models",
+    "homepage": "https://github.com/jprodgers/CITAR",
+    "license": "MPL-2.0",
+    "notes": [
+        "Run 'citar setup' to find a model and configure CITAR.",
+        "Run 'citar' on its own to start playing - it opens your browser.",
+        "",
+        "Your games and settings are kept in %LOCALAPPDATA%\\CITAR and are not removed when you uninstall CITAR."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jprodgers/CITAR/releases/download/v0.1.5/CITAR-0.1.5-windows-x64.zip",
+            "hash": "38a577963b0d219f689fc2112613c9d724e8624b014e069f26bbbbf34bc6430a"
+        }
+    },
+    "extract_dir": "CITAR",
+    "bin": [
+        "citar.exe",
+        [
+            "citar-play.exe",
+            "citar-play"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "citar-play.exe",
+            "CITAR"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/jprodgers/CITAR"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jprodgers/CITAR/releases/download/v$version/CITAR-$version-windows-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

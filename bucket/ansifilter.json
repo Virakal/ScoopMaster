@@ -1,0 +1,26 @@
+{
+    "version": "2.24",
+    "description": "ANSI sequence filter",
+    "homepage": "https://gitlab.com/saalen/ansifilter",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/ansifilter/files/2.24/ansifilter-2.24-x64.zip/download#/dl.zip",
+            "hash": "150d41c5f2676eca4df4347f171807a4e69ead4d454340a4ae34e4f77e860c63",
+            "extract_dir": "ansifilter-2.24-x64"
+        }
+    },
+    "bin": "ansifilter.exe",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/ansifilter/files/",
+        "regex": "/projects/ansifilter/files/([\\d.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/ansifilter/files/$version/ansifilter-$version-x64.zip/download#/dl.zip",
+                "extract_dir": "ansifilter-$version-x64"
+            }
+        }
+    }
+}

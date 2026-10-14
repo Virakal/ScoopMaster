@@ -1,0 +1,30 @@
+{
+    "version": "1.4.3",
+    "description": "Lightweight and modern desktop file shelf and workspace organizer for Windows.",
+    "homepage": "https://github.com/ais7896-hue/KyteShelf",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/ais7896-hue/KyteShelf/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ais7896-hue/KyteShelf/releases/download/v1.4.3/KyteShelf_v1.4.3_Portable.zip",
+            "hash": "747A972F581834F51981F8B687E9DB947CC5DBC9D83B1018348BACBCFE19241D"
+        }
+    },
+    "bin": "KyteShelf.exe",
+    "shortcuts": [
+        [
+            "KyteShelf.exe",
+            "KyteShelf"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ais7896-hue/KyteShelf/releases/download/v$version/KyteShelf_v$version_Portable.zip"
+            }
+        }
+    }
+}

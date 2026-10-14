@@ -1,0 +1,32 @@
+{
+    "version": "0.6.7",
+    "description": "Pi - A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands.",
+    "homepage": "https://github.com/abcwyc/pi-agent-desktop",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/abcwyc/pi-agent-desktop/releases/download/v0.6.7/Pi.Agent_0.6.7_x64-setup.exe#/dl.7z",
+            "hash": "adaa62922fa219c0543b3a79ca2dd91dd83bc26472326d87b8e526d96fae7bae"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse",
+    "bin": "pi-agent-desktop.exe",
+    "shortcuts": [
+        [
+            "pi-agent-desktop.exe",
+            "Pi Agent"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/abcwyc/pi-agent-desktop",
+        "regex": "(?:/releases/tag/|^)v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/abcwyc/pi-agent-desktop/releases/download/v$version/Pi.Agent_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    },
+    "notes": "Bundles its own server runtime and Pi SDK; a separate pi CLI or Node.js installation is not needed."
+}

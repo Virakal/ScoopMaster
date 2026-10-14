@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "1.9.10",
+    "description": "A beautiful Windows desktop time tracking app built with Tauri & React",
+    "homepage": "https://github.com/Ceceliaee/patina",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Ceceliaee/patina/releases/download/v1.9.10/Patina_1.9.10_x64-setup.exe#/dl.7z",
+            "hash": "023fff00f2fd997f0b58f5272521986cf27798a0d7db504122e5640805f16b50"
+        }
+    },
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse"
+    },
+    "shortcuts": [
+        [
+            "Patina.exe",
+            "Patina"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Ceceliaee/patina/releases/download/v$version/Patina_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

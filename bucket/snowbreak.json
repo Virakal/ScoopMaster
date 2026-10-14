@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/overflow65537/MAA_SnowBreak",
+    "version": "3.7.41",
+    "license": "MIT",
+    "hash": "bc910cffb34b2b3bf05a6553f77829f7219767d64c94ac255214922198f98732",
+    "url": "https://github.com/overflow65537/MAA_SnowBreak/releases/download/v3.7.41/MSBA-win-x86_64-v3.7.41.zip",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/overflow65537/MAA_SnowBreak/releases/download/v$version/MSBA-win-x86_64-v$version.zip",
+        "extract_dir": "MSBA-win-x86_64-v$version"
+    },
+    "persist": "config",
+    "post_install": [
+        "$scoopRoot = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $dir))",
+        "$sourceMeta = Join-Path $scoopRoot 'buckets\\maa-bucket\\bucket\\snowbreak.meta.json'",
+        "& (Join-Path $scoopRoot 'buckets\\maa-bucket\\scripts\\metadata-writer.ps1') -SourceMetaFile $sourceMeta -TargetDir $dir -OutputFile 'maa-metadata.json'"
+    ]
+}

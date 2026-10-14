@@ -1,0 +1,42 @@
+{
+    "version": "7.5",
+    "description": "Unofficial WhatsApp Web desktop client built with Python and PyQt6.",
+    "homepage": "https://github.com/rafatosta/zapzap",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rafatosta/zapzap/releases/download/7.5/ZapZap-7.5-windows-x86_64.exe",
+            "hash": "7f197db3784bbbeede706c662595c5fabe8c108624d5700ece3b0a4394711ca4"
+        },
+        "arm64": {
+            "url": "https://github.com/rafatosta/zapzap/releases/download/7.5/ZapZap-7.5-windows-arm64.exe",
+            "hash": "c40e6f908db39843ecb0252398205130a5ed9f803a8f44f6cee3e1b9a404aeaf"
+        }
+    },
+    "pre_install": [
+        "if ($architecture -eq \"64bit\") { Rename-Item \"$dir\\ZapZap-$version-windows-x86_64.exe\" \"$dir\\ZapZap.exe\" }",
+        "if ($architecture -eq \"arm64\") { Rename-Item \"$dir\\ZapZap-$version-windows-arm64.exe\" \"$dir\\ZapZap.exe\" }"
+    ],
+    "bin": "ZapZap.exe",
+    "shortcuts": [
+        [
+            "ZapZap.exe",
+            "ZapZap"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rafatosta/zapzap/releases/download/$version/ZapZap-$version-windows-x86_64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/rafatosta/zapzap/releases/download/$version/ZapZap-$version-windows-arm64.exe"
+            }
+        },
+        "hash": {
+            "url": "https://api.github.com/repos/rafatosta/zapzap/releases/tags/$version",
+            "jsonpath": "$.assets[?(@.name == '$basename')].digest"
+        }
+    }
+}

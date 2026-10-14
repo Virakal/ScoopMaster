@@ -1,0 +1,31 @@
+{
+    "version": "0.32.0",
+    "description": "An MCP server that exposes OpenAPI definition endpoints as MCP tools.",
+    "homepage": "https://gitlab.com/lx-industries/rmcp-openapi",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/rmcp-openapi-server-0.32.0/rmcp-openapi-server-0.32.0-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "5a38b98f1f1179ea4148152e1509ace5e2a99247c1f27b0948f314fac3256d2e"
+        },
+        "arm64": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/rmcp-openapi-server-0.32.0/rmcp-openapi-server-0.32.0-aarch64-pc-windows-msvc.tar.gz",
+            "hash": "ce12b501dc102e533def271842274e6f263b511d4db35a7c180972344d5b2443"
+        }
+    },
+    "bin": "rmcp-openapi-server.exe",
+    "checkver": {
+        "url": "https://crates.io/api/v1/crates/rmcp-openapi-server?include=default_version",
+        "jsonpath": "$.crate.default_version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/rmcp-openapi-server-$version/rmcp-openapi-server-$version-x86_64-pc-windows-msvc.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/rmcp-openapi-server-$version/rmcp-openapi-server-$version-aarch64-pc-windows-msvc.tar.gz"
+            }
+        }
+    }
+}

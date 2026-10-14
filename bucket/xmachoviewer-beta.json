@@ -1,0 +1,41 @@
+{
+    "version": "0.4.0-20261012",
+    "description": "(BETA Version) A Mach-O viewer.",
+    "homepage": "https://github.com/horsicq/XMachOViewer",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/horsicq/XMachOViewer/releases/download/Beta/XMachOViewer_win64_portable_0.4.0_x64.zip",
+            "hash": "3056aa1318ecaf8825c2c9bf4f4782ae94d2ea13f6962007acbdafaed056860a"
+        },
+        "32bit": {
+            "url": "https://github.com/horsicq/XMachOViewer/releases/download/Beta/XMachOViewer_win32_portable_0.4.0_x86.zip",
+            "hash": "e7046725797c2723ad25a4094396c6b53a39887be1dbeb62b2ea071485842bca"
+        }
+    },
+    "shortcuts": [
+        [
+            "xmachoviewer.exe",
+            "XMachOViewer (Beta)"
+        ]
+    ],
+    "post_install": "Get-ChildItem \"$persist_dir\\backup\\*\" -Include '*.ini' | Move-Item -Force -Destination \"$dir\"",
+    "pre_uninstall": "Get-ChildItem \"$dir\\*\" -Include '*.ini' | Move-Item -Force -Destination \"$persist_dir\\backup\"",
+    "persist": "backup",
+    "checkver": {
+        "url": "https://github.com/horsicq/XMachOViewer/releases/expanded_assets/Beta",
+        "regex": "(?sm)XMachOViewer_win64_portable_(?<main>[\\d.]+)_x64.zip.+?(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T\\d{2}:\\d{2}:\\d{2}Z",
+        "replace": "${main}-${year}${month}${day}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/horsicq/XMachOViewer/releases/download/Beta/XMachOViewer_win64_portable_$matchMain_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/horsicq/XMachOViewer/releases/download/Beta/XMachOViewer_win32_portable_$matchMain_x86.zip"
+            }
+        }
+    }
+}

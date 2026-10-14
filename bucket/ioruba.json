@@ -1,0 +1,34 @@
+{
+  "version": "1.9.6",
+  "description": "Tactile audio mixer for Arduino-based control surfaces",
+  "homepage": "https://github.com/bernardopg/ioruba",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/bernardopg/ioruba/releases/download/v1.9.6/Ioruba_1.9.6_x64-setup.exe",
+      "hash": "36a529f13852f8486f7795d5c73daf987ad7634e56b8a13f5c7ce4959b8826aa"
+    }
+  },
+  "installer": {
+    "script": [
+      "$exe = \"$dir\\\\$fname\"",
+      "Start-Process -FilePath $exe -ArgumentList \"/S /D=$dir\" -Wait",
+      "Remove-Item $exe"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "& \"$dir\\\\Uninstall Ioruba.exe\" /S"
+    ]
+  },
+  "checkver": {
+    "github": "https://github.com/bernardopg/ioruba"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/bernardopg/ioruba/releases/download/v$version/Ioruba_$version_x64-setup.exe"
+      }
+    }
+  }
+}

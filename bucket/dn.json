@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Bynn-Intelligence/decision-node-cli/releases/download/v0.2.0/dn_0.2.0_windows_amd64.zip",
+            "bin": [
+                "dn.exe",
+                "bynn-dn.exe"
+            ],
+            "hash": "21fae3f7778aba2de3624665197ea67fc57648f47b27babc1f2f6ae91fd804c1"
+        },
+        "arm64": {
+            "url": "https://github.com/Bynn-Intelligence/decision-node-cli/releases/download/v0.2.0/dn_0.2.0_windows_arm64.zip",
+            "bin": [
+                "dn.exe",
+                "bynn-dn.exe"
+            ],
+            "hash": "ac506fe42227f17dff540181cc35d81f055fb5ce068f798519e358009109eb7b"
+        }
+    },
+    "homepage": "https://decisionnode.com",
+    "license": "MIT",
+    "description": "Ask DecisionNode from a terminal, a script or a pipeline"
+}

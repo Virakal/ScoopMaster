@@ -1,0 +1,41 @@
+{
+    "version": "0.102.2862.0",
+    "description": "System utilities to maximize productivity.",
+    "homepage": "https://github.com/microsoft/PowerToys",
+    "license": "MIT",
+    "suggest": {
+        ".NET Desktop Runtime": "extras/windowsdesktop-runtime-lts"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.102.2862.0/PowerToysSetup-0.102.2862.0-x64.exe#/setup.exe",
+            "hash": "46c7dce2ef3df90fe7bd03c03f691451ccd91fb1ee640a630aff492d051dafe7"
+        }
+    },
+    "installer": {
+        "args": [
+            "/silent",
+            "/norestart"
+        ],
+        "keep": true
+    },
+    "uninstaller": {
+        "file": "setup.exe",
+        "args": [
+            "/silent",
+            "/uninstall"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/microsoft/PowerToys/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "/releases/download/(?<tag>[\\w.]+)/PowerToysSetup-([\\d.]+)-x64\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/microsoft/PowerToys/releases/download/$matchTag/PowerToysSetup-$version-x64.exe#/setup.exe"
+            }
+        }
+    }
+}

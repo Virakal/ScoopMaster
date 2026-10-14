@@ -1,0 +1,31 @@
+{
+    "version": "1.6.0",
+    "description": "tldx helps you brainstorm available domain names fast.",
+    "homepage": "https://github.com/brandonyoungdev/tldx",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brandonyoungdev/tldx/releases/download/v1.6.0/tldx_1.6.0_windows_amd64.zip",
+            "hash": "147bf5a7d2dc6b2c3464854892749eedae964b636f38dc1f33a9c58386576436"
+        },
+        "arm64": {
+            "url": "https://github.com/brandonyoungdev/tldx/releases/download/v1.6.0/tldx_1.6.0_windows_arm64.zip",
+            "hash": "81ee180be4fa1c0274ced203051e486b1b95a0824dafd22cce91dfbec18e419a"
+        }
+    },
+    "bin": "tldx.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brandonyoungdev/tldx/releases/download/v$version/tldx_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/brandonyoungdev/tldx/releases/download/v$version/tldx_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/tldx_checksums.txt"
+        }
+    }
+}

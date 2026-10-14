@@ -1,0 +1,31 @@
+{
+  "version": "0.0.4",
+  "description": "Lightweight Windows replacement for Logitech Options+ for the MX Master 2S mouse.",
+  "homepage": "https://github.com/divyangchauhan/Mushak",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/divyangchauhan/Mushak/releases/download/v0.0.4/mushak.exe#/mushak.exe",
+      "hash": "7fdbe94ce166f374809edc0e0e8ec6d829d04eb913947315e1e2b5f823ef97cc"
+    }
+  },
+  "bin": "mushak.exe",
+  "shortcuts": [
+    [
+      "mushak.exe",
+      "Mushak"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/divyangchauhan/Mushak/releases/download/v$version/mushak.exe#/mushak.exe",
+        "hash": {
+          "url": "https://github.com/divyangchauhan/Mushak/releases/download/v$version/SHA256SUMS.txt",
+          "regex": "(?i)mushak\\.exe\\s+$sha256"
+        }
+      }
+    }
+  }
+}

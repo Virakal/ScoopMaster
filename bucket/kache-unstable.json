@@ -1,0 +1,43 @@
+{
+    "version": "0.15.0-rc.3",
+    "description": "Content-addressed zero-copy build cache for Rust, C/C++ and more (unstable / pre-release channel)",
+    "homepage": "https://github.com/kunobi-ninja/kache",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kunobi-ninja/kache/releases/download/v0.15.0-rc.3/kache-x86_64-pc-windows-msvc.zip",
+            "hash": "cb7ccb7fa715b23f8ecd2f959b06c6cf52d8a69d85e9d4617c70e527e893b065",
+            "bin": "kache.exe"
+        },
+        "arm64": {
+            "url": "https://github.com/kunobi-ninja/kache/releases/download/v0.15.0-rc.3/kache-aarch64-pc-windows-msvc.zip",
+            "hash": "2ddae15c08c2c581fc54e35fdb884ef26bb3194df461011545bd82d57b21d953",
+            "bin": "kache.exe"
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/kunobi-ninja/kache/releases",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+-(?:rc|beta|alpha)\\.\\d+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kunobi-ninja/kache/releases/download/v$version/kache-x86_64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/kunobi-ninja/kache/releases/download/v$version/kache-aarch64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    },
+    "notes": [
+        "This is the pre-release channel. Both 'kache' and 'kache-unstable' provide a 'kache' shim.",
+        "If you also have stable 'kache' installed, run 'scoop reset kache-unstable' to point 'kache' here,",
+        "or 'scoop reset kache' to switch back to the stable build."
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "version": "0.3.1",
+    "description": "A Rust rewrite of the Yggdrasil Network — an early-stage implementation of a fully end-to-end encrypted IPv6 networking protocol.",
+    "homepage": "https://github.com/Revertron/Yggdrasil-ng",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Revertron/Yggdrasil-ng/releases/download/v0.3.1/yggdrasil-ng-0.3.1-x64.msi",
+            "extract_dir": "PFiles64\\Yggdrasil-ng",
+            "hash": "9ee1fc973db24f6ac9289d35abb2f7b28c962dd6803a70d941a417f7062d9045"
+        },
+        "arm64": {
+            "url": "https://github.com/Revertron/Yggdrasil-ng/releases/download/v0.3.1/yggdrasil-ng-0.3.1-arm64.msi",
+            "extract_dir": "PFiles64\\Yggdrasil-ng",
+            "hash": "7cb9d3710c8c61b0704ed2ad11accb3532beb0e7f33e58b6bd4ae5e3f12190e6"
+        }
+    },
+    "bin": "yggdrasil.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Revertron/Yggdrasil-ng/releases/download/v$version/yggdrasil-ng-$version-x64.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/Revertron/Yggdrasil-ng/releases/download/v$version/yggdrasil-ng-$version-arm64.msi"
+            }
+        }
+    }
+}

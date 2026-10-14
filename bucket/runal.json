@@ -1,0 +1,15 @@
+{
+    "version": "0.13.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/emprcl/runal/releases/download/v0.13.0/runal_0.13.0_windows_amd64.zip",
+            "bin": [
+                "runal.exe"
+            ],
+            "hash": "903a1f20f55db9cc6cba1c66f217a8d85a3ff002584f602c6712414101c234ea"
+        }
+    },
+    "homepage": "https://empr.cl/runal/",
+    "license": "MIT",
+    "description": "Text-based creative coding environment for the terminal"
+}

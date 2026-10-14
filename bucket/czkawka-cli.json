@@ -1,0 +1,21 @@
+{
+    "version": "12.0.2",
+    "description": "Command-line file and directory cleaner and duplicate finder",
+    "homepage": "https://github.com/qarmin/czkawka",
+    "license": "MIT",
+    "url": "https://github.com/qarmin/czkawka/releases/download/12.0.2/windows_czkawka_cli.exe",
+    "hash": "eb7c2009d2dd49cf5202acbd65370caece0a3f819b9515e727cedb1ec088ed1a",
+    "bin": "windows_czkawka_cli.exe",
+    "shortcuts": [
+        [
+            "windows_czkawka_cli.exe",
+            "Czkawka CLI"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/qarmin/czkawka"
+    },
+    "autoupdate": {
+        "url": "https://github.com/qarmin/czkawka/releases/download/$version/windows_czkawka_cli.exe"
+    }
+}

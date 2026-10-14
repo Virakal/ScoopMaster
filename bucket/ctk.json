@@ -1,0 +1,28 @@
+{
+    "version": "0.7.1",
+    "description": "Compose and reproduce VS Code-family environments",
+    "homepage": "https://github.com/kshrkznr/code-toolkit",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kshrkznr/code-toolkit/releases/download/v0.7.1/ctk_v0.7.1_windows_amd64.zip",
+            "hash": "e9aff924af1f1d66af3cb2ec56cc890fdeee4ed58bc884c9870d8eb08708e6e1"
+        }
+    },
+    "bin": "ctk.exe",
+    "notes": [
+        "PowerShell completion is available but is not added to $PROFILE automatically.",
+        "To enable it for future sessions, add this line to $PROFILE:",
+        "ctk completion powershell | Out-String | Invoke-Expression"
+    ],
+    "checkver": {
+        "github": "https://github.com/kshrkznr/code-toolkit"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kshrkznr/code-toolkit/releases/download/v$version/ctk_v$version_windows_amd64.zip"
+            }
+        }
+    }
+}

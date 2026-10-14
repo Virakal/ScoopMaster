@@ -1,0 +1,23 @@
+{
+    "version": "1.0.1",
+    "description": "ListUsbDevs lists all attached USB devices or checks if certain ones, specified by commandline, are attached.",
+    "homepage": "https://www.uwe-sieber.de/misc_tools_e.html#listusbdevs",
+    "license": "Freeware",
+    "url": "https://www.uwe-sieber.de/files/ListUsbDevs.zip",
+    "hash": "fedb1a72037098e78985b0cff9b61814c68efb6b52c20bd462fcf8e81d40cd5e",
+    "architecture": {
+        "64bit": {
+            "extract_dir": "x64"
+        },
+        "32bit": {
+            "extract_dir": "Win32"
+        }
+    },
+    "bin": "ListUsbDevs.exe",
+    "checkver": {
+        "regex": "ListUsbDevs V([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.uwe-sieber.de/files/ListUsbDevs.zip"
+    }
+}

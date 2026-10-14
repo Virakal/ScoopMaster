@@ -1,0 +1,38 @@
+{
+    "version": "2.17.9",
+    "description": "Ant Download Manager (AntDM) is a fast download manager and video downloader for Windows, with browser integration, HLS/MPEG-DASH support, torrents, and MP3 audio extraction.",
+    "homepage": "https://antdownloadmanager.com",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://antdownloadmanager.com/downloads/AntDM-x64.2.17.9-portable.rar",
+            "hash": "cc28f183591be92a805d0cc79e5ca37d8a56872012bbb58aae205929de3f333e"
+        },
+        "32bit": {
+            "url": "https://antdownloadmanager.com/downloads/AntDM.2.17.9-portable.rar",
+            "hash": "81ee11ca899a2689fead3a31aa1c60222a648e0b073ba9b3cec877ba8918ae50"
+        }
+    },
+    "extract_dir": "AntDM",
+    "bin": "AntDM.exe",
+    "shortcuts": [
+        [
+            "AntDM.exe",
+            "Ant Download Manager"
+        ]
+    ],
+    "checkver": {
+        "url": "https://antdownloadmanager.com/download",
+        "regex": "AntDM(?:-x64)?\\.(?<version>\\d+\\.\\d+\\.\\d+)-portable\\.rar"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://antdownloadmanager.com/downloads/AntDM-x64.$version-portable.rar"
+            },
+            "32bit": {
+                "url": "https://antdownloadmanager.com/downloads/AntDM.$version-portable.rar"
+            }
+        }
+    }
+}

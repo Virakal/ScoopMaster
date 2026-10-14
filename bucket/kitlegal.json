@@ -1,0 +1,22 @@
+{
+    "version": "0.6.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.6.0/kitlegal_windows_amd64.zip",
+            "bin": [
+                "kitlegal.exe"
+            ],
+            "hash": "e1f1353426b0902a8694947d1df28f6c24adacbb677fabd179924673790fe6b4"
+        },
+        "arm64": {
+            "url": "https://github.com/jmorenobl/kitlegal/releases/download/v0.6.0/kitlegal_windows_arm64.zip",
+            "bin": [
+                "kitlegal.exe"
+            ],
+            "hash": "8fba91fd8afb25f2a40c9a31ed8e5007f2f3a1314d463377c97e2340e1e4aed6"
+        }
+    },
+    "homepage": "https://github.com/jmorenobl/kitlegal",
+    "license": "EUPL-1.2",
+    "description": "Tu asistente de IA responde con la ley vigente del BOE y la cita exacta"
+}

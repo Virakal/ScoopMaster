@@ -1,0 +1,49 @@
+{
+    "version": "0.53.0",
+    "description": "Amateur radio logbook software",
+    "homepage": "https://github.com/foldynl/QLog",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/foldynl/QLog/releases/download/v0.53.0/qlog-0.53.0-x86_64.exe#/dl.exe",
+    "hash": "006079153d1ab6d735505a7ba4ad07aa9fe3623b548247ef193976db02dc8724",
+    "installer": {
+        "script": [
+            "$sourcePath = \"$dir\\Qlog\";",
+            "Start-Process \"$dir\\$fname\" -ArgumentList @('--root', \"$sourcePath\", '--accept-licenses', '--default-answer', '--confirm-command', 'install') -Wait -Verb RunAs",
+            "",
+            "if (!(Test-Path $sourcePath)) { throw \"Source path not found: $sourcePath\" }",
+            "",
+            "Write-Host 'Creating shortcut for Qlog...';",
+            "$startMenuPath = Join-Path ([Environment]::GetFolderPath('StartMenu')) 'Programs';",
+            "$shortcutPath = Join-Path $startMenuPath 'Qlog.lnk';",
+            "$shell = New-Object -ComObject WScript.Shell;",
+            "$shortcut = $shell.CreateShortcut($shortcutPath);",
+            "$shortcut.TargetPath = \"$sourcePath\\qlog.exe\";",
+            "$shortcut.WorkingDirectory = \"$shortcutPath\";",
+            "$shortcut.IconLocation = \"$shortcutPath\\qlog.exe\";",
+            "$shortcut.Save();",
+            "Write-Host \"Shortcut created in Start Menu: $shortcutPath\";"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Start-Process \"$dir\\Qlog\\maintenancetool.exe\" -ArgumentList('--confirm-command', 'purge', 'de.dl2ic.qlog') -Wait -Verb RunAs",
+            "if (!(Test-Path \"$dir\\Qlog\")) {",
+            "  Write-Host 'QLog uninstalled successfully.';",
+            "} else {",
+            "  throw 'Uninstallation failed. Directory still exists.';",
+            "}"
+        ]
+    },
+    "shortcuts": [
+        [
+            "QLog\\qlog.exe",
+            "QLog"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/foldynl/QLog"
+    },
+    "autoupdate": {
+        "url": "https://github.com/foldynl/QLog/releases/download/v$version/qlog-$version-x86_64.exe#/dl.exe"
+    }
+}

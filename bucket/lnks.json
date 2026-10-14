@@ -1,0 +1,34 @@
+{
+    "version": "0.1.0",
+    "description": "Custom windows lnks for common operations",
+    "homepage": "https://github.com/chrishenn/lnks",
+    "license": "MIT",
+    "url": "https://github.com/chrishenn/lnks/releases/download/v0.1.0/lnks.zip",
+    "hash": "f921b61d402eb7cc0744ae74bf81939ebb5a5b3525aa0cc04c897e4caf7320ed",
+    "shortcuts": [
+        [
+            "lnks\\hibernate.lnk",
+            "hibernate"
+        ],
+        [
+            "lnks\\recycle_bin.lnk",
+            "recycle_bin"
+        ],
+        [
+            "lnks\\restart.lnk",
+            "restart"
+        ],
+        [
+            "lnks\\shutdown.lnk",
+            "shutdown"
+        ],
+        [
+            "lnks\\sleep.lnk",
+            "sleep"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/chrishenn/lnks/releases/download/v$version/lnks.zip"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "version": "1.8",
+    "description": "Open-source alternative to Fences for organizing the Windows desktop.",
+    "homepage": "https://github.com/Twometer/NoFences",
+    "license": "MIT",
+    "url": "https://github.com/Twometer/NoFences/releases/download/v1.8/NoFences.exe",
+    "bin": "NoFences.exe",
+    "shortcuts": [
+        [
+            "NoFences.exe",
+            "NoFences"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Twometer/NoFences"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Twometer/NoFences/releases/download/v$version/NoFences.exe"
+    }
+}

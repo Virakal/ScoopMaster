@@ -1,0 +1,31 @@
+{
+    "version": "2.0.4",
+    "description": "The command line utility for SeaORM.",
+    "homepage": "https://www.sea-ql.org/SeaORM/",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/sea-orm-cli-2.0.4/sea-orm-cli-2.0.4-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "d07dcbfa1e34d39b6868743ea3b9869ac1fb03fb9a4774975d65bd8e01b6e7d6"
+        },
+        "arm64": {
+            "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/sea-orm-cli-2.0.4/sea-orm-cli-2.0.4-aarch64-pc-windows-msvc.tar.gz",
+            "hash": "6976ef81d1e042f3fd94bec9ebeee7ed5c3ba73fa2c54165988e63cb32883406"
+        }
+    },
+    "bin": "sea-orm-cli.exe",
+    "checkver": {
+        "url": "https://crates.io/api/v1/crates/sea-orm-cli?include=default_version",
+        "jsonpath": "$.crate.default_version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/sea-orm-cli-$version/sea-orm-cli-$version-x86_64-pc-windows-msvc.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/cargo-bins/cargo-quickinstall/releases/download/sea-orm-cli-$version/sea-orm-cli-$version-aarch64-pc-windows-msvc.tar.gz"
+            }
+        }
+    }
+}

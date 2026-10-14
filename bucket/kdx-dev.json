@@ -1,0 +1,15 @@
+{
+    "version": "2026.14.0-develop-38615123671",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kodexa-ai/kdx-cli-releases/releases/download/v2026.14.0-develop-38615123671/kdx-dev_2026.14.0-develop-38615123671_windows_x86_64.zip",
+            "bin": [
+                "kdx-dev.exe"
+            ],
+            "hash": "f440cb189c1e2ffbcbb29644a7e60b5b21df0258dfbe249a6e1d521c3b948042"
+        }
+    },
+    "homepage": "https://www.kodexa.com",
+    "license": "Proprietary",
+    "description": "Kodexa CLI (Dev) - Development build of the Kodexa platform CLI"
+}

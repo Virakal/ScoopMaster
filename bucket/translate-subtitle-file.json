@@ -1,0 +1,27 @@
+{
+    "version": "5.5.28",
+    "description": "翻译字幕文件（.srt, .vtt, .ass 文件）",
+    "homepage": "https://github.com/1c7/Translate-Subtitle-File",
+    "license": "Unlicense",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/1c7/Translate-Subtitle-File/releases/download/v5.5.28/Zimoo-win32-x64-5.5.28.zip",
+            "hash": "4eed41f8e2aa3fcdcf9cd9130ada6de42a779ce42b435980ee3835c131d980e1"
+        }
+    },
+    "shortcuts": [
+        [
+            "Zimoo.exe",
+            "Zimoo",
+            "--user-data-dir=\"$persist_dir\\User Data\""
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/1c7/Translate-Subtitle-File/releases/download/v$version/Zimoo-win32-x64-$version.zip"
+            }
+        }
+    }
+}

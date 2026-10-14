@@ -1,0 +1,25 @@
+{
+    "version": "0.4.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.1/disbug_0.4.1_windows_amd64.zip",
+            "bin": [
+                "disbug.exe"
+            ],
+            "hash": "4c5b2fe783e4e0bcc590bc90973a80c71943eab5330f08be8776c818336408fb"
+        },
+        "arm64": {
+            "url": "https://github.com/disbug-io/disbug-cli/releases/download/v0.4.1/disbug_0.4.1_windows_arm64.zip",
+            "bin": [
+                "disbug.exe"
+            ],
+            "hash": "ace416cb84421439c59616ec5b22cbc903f9bb29ecc4b06a1e056ae478dfaf65"
+        }
+    },
+    "homepage": "https://app.disbug.io",
+    "license": "MIT",
+    "description": "Disbug CLI and MCP server for AI coding agents",
+    "post_install": [
+        "Write-Host \"Installation complete. Now run the guided Disbug onboarding flow: disbug onboard\""
+    ]
+}

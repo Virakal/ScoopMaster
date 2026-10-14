@@ -1,0 +1,19 @@
+{
+    "version": "20261010-df6851d",
+    "description": "Geosite rule set for sing-box.",
+    "homepage": "https://sing-box.sagernet.org/configuration/rule-set/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/SagerNet/sing-geosite/archive/df6851d87aeaeb9d6a9464288b317e7ff2288d78.zip",
+    "hash": "f2b7593f29c2f39cddcbe3202584b225d0dfb016139916b537651208a50443a4",
+    "extract_dir": "sing-geosite-df6851d87aeaeb9d6a9464288b317e7ff2288d78",
+    "checkver": {
+        "url": "https://api.github.com/repos/SagerNet/sing-geosite/branches/rule-set",
+        "jsonpath": "$..['sha','date']",
+        "regex": "\"(?<full>(?<short>[a-f0-9]{7})[a-f0-9]{33})\"\\s*,\\s*\"(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})T",
+        "replace": "${year}${month}${day}-${short}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/SagerNet/sing-geosite/archive/$matchFull.zip",
+        "extract_dir": "sing-geosite-$matchFull"
+    }
+}

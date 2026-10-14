@@ -1,0 +1,37 @@
+{
+  "version": "0.6.9",
+  "description": "One-button non-custodial miner that turns idle CPU/GPU time into crypto",
+  "homepage": "https://pasiv.network/",
+  "license": "Proprietary",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/hash-rate/pasiv-releases/releases/download/v0.6.9/Pasiv_0.6.9_x64-setup.exe#/dl.exe",
+      "hash": "13070a79702e7abdd8916efdb654caded412b4dc79379b3460c2bc4cbcc1eb8b"
+    }
+  },
+  "installer": {
+    "script": [
+      "$dl = \"$dir\\dl.exe\"",
+      "Start-Process -FilePath $dl -ArgumentList '/S' -Wait",
+      "Remove-Item $dl -Force"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "$u = \"$env:LOCALAPPDATA\\Pasiv\\uninstall.exe\"",
+      "if (Test-Path $u) { Start-Process -FilePath $u -ArgumentList '/S' -Wait }"
+    ]
+  },
+  "checkver": {
+    "url": "https://github.com/hash-rate/pasiv-releases/releases/latest/download/latest.json",
+    "jsonpath": "$.version"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/hash-rate/pasiv-releases/releases/download/v$version/Pasiv_$version_x64-setup.exe#/dl.exe"
+      }
+    }
+  },
+  "notes": "Pasiv mines nothing until you press Start. Payouts are non-custodial - the pool pays the wallet address you enter. The only fee is 4% on Monero, taken only while you are mining, to a published address you can audit on its pool (https://pasiv.network/whitepaper); every other coin is fee-free."
+}

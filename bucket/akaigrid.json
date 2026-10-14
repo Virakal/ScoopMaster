@@ -1,0 +1,31 @@
+{
+    "version": "1.4.0",
+    "description": "AkaiGrid is a fancy frontend for browsing your video folders on Windows",
+    "homepage": "https://github.com/louislam/akaigrid",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/louislam/akaigrid/releases/download/1.4.0/akaigrid-win-x64-1.4.0.7z",
+            "hash": "1d431a841a62272b9d40e7f3a4dc0e5c6f74a9124b4ef6b27bdc87bb81d85c01"
+        }
+    },
+    "extract_dir": "AkaiGrid",
+    "shortcuts": [
+        [
+            "AkaiGrid.exe",
+            "AkaiGrid"
+        ]
+    ],
+    "persist": [
+        "config.yaml",
+        "data"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/louislam/akaigrid/releases/download/$version/akaigrid-win-x64-$version.7z"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "version": "1.2.1",
+    "description": "Mihomo（Clash.Meta）CLI 控制工具，通过 RESTful API 管理代理、查看日志和运行状态",
+    "homepage": "https://github.com/inobit/mihomoctl",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/inobit/mihomoctl/releases/download/v1.2.1/mihomoctl_1.2.1_windows_amd64.zip",
+            "hash": "23d8fac95fd64364509328303f37effdd6e1b68c680daacf16d5d6823d88b299"
+        },
+        "arm64": {
+            "url": "https://github.com/inobit/mihomoctl/releases/download/v1.2.1/mihomoctl_1.2.1_windows_arm64.zip",
+            "hash": "a333f6720d8325dfaa2d6bd66d37509fb1dfcd783958630cf972ec24822bb14f"
+        }
+    },
+    "bin": "mihomoctl.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/inobit/mihomoctl/releases/download/v$version/mihomoctl_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/inobit/mihomoctl/releases/download/v$version/mihomoctl_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

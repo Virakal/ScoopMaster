@@ -1,0 +1,33 @@
+{
+    "version": "2.13.2",
+    "description": "Songloft 跨平台音乐播放器，连接面向个人用户的自托管音乐服务器",
+    "homepage": "https://songloft.hanxi.cc/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/songloft-org/songloft-player/releases/download/v2.13.2/songloft-windows-x64.zip",
+            "hash": "2c8052c437715384872f4eef193ff5048a119564d2ff96f10441ac77bd92121c"
+        }
+    },
+    "shortcuts": [
+        [
+            "songloft_flutter.exe",
+            "Songloft Player"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.songloft\\Songloft\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "Songloft Player is NOT portable.",
+        "Settings are stored in '%APPDATA%\\com.songloft\\Songloft', and will be purged during uninstallation with --purge flag."
+    ],
+    "checkver": {
+        "github": "https://github.com/songloft-org/songloft-player"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/songloft-org/songloft-player/releases/download/v$version/songloft-windows-x64.zip"
+            }
+        }
+    }
+}

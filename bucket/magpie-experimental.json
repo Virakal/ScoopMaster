@@ -1,0 +1,32 @@
+{
+    "version": "0.6.10-experimental",
+    "description": "Unofficial experimental Magpie fork with DLSS, FSR2, and NVIDIA RTX Video integrations",
+    "homepage": "https://github.com/SAOG0721/Magpie",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SAOG0721/Magpie/releases/download/v0.6.10-experimental/Magpie-Experimental-x64.zip",
+            "hash": "487b2f612de34c774c8f2a8a9c60acb2596377e0c552b2c4045005e9a723ddae",
+            "extract_dir": "Magpie-Experimental-x64"
+        }
+    },
+    "bin": "Magpie.exe",
+    "shortcuts": [
+        [
+            "Magpie.exe",
+            "Magpie Experimental"
+        ]
+    ],
+    "persist": "config",
+    "checkver": {
+        "url": "https://api.github.com/repos/SAOG0721/Magpie/releases",
+        "re": "\"tag_name\":\"v([\\d.]+-experimental(?:\\.\\d+)?)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SAOG0721/Magpie/releases/download/v$version/Magpie-Experimental-x64.zip"
+            }
+        }
+    }
+}

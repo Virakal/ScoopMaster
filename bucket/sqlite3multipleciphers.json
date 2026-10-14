@@ -1,0 +1,43 @@
+{
+    "version": "2.5.1",
+    "description": "SQLite3 encryption extension with support for multiple ciphers (With ICU support)",
+    "homepage": "https://utelle.github.io/SQLite3MultipleCiphers/",
+    "license": "MIT",
+    "notes": [
+        "SQLite3MultipleCiphers offers multiple ways to encrypt SQLite database. See details on its website.",
+        "Each SQLite3MultipleCiphers version is based on a specific SQLite version. Check the responded SQLite version by running the executable with the --version option."
+    ],
+    "suggest": {
+        "vcredist2022": "main/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/utelle/SQLite3MultipleCiphers/releases/download/v2.5.1/sqlite3mc-2.5.1-sqlite-3.53.4-win64.zip",
+            "hash": "858c4f2e9e262caca06e6c4fafee62d13dd90c21b649b047f17992bf0402981e"
+        },
+        "32bit": {
+            "url": "https://github.com/utelle/SQLite3MultipleCiphers/releases/download/v2.5.1/sqlite3mc-2.5.1-sqlite-3.53.4-win32.zip",
+            "hash": "731b843e190c096a06c88499f931a69cdfb8d41102783c0cf2a8b7bad5160283"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\\bin\\sqlite3mc_shellicu*.exe\" | Select-Object -First 1 | Rename-Item -NewName 'sqlite3mcicu.exe'",
+    "installer": {
+        "script": "Move-Item $dir\\bin\\sqlite3mc_shell_x64.exe $dir\\bin\\sqlite3mc.exe"
+    },
+    "bin": "bin\\sqlite3mc.exe",
+    "checkver": {
+        "github": "https://github.com/utelle/SQLite3MultipleCiphers",
+        "regex": "SQLite3 Multiple Ciphers ([\\d.]+) \\(based on SQLite (?<sqlite3version>[\\d.]+)\\)",
+        "reverse": false
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/utelle/SQLite3MultipleCiphers/releases/download/v$version/sqlite3mc-$version-sqlite-$matchSqlite3version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/utelle/SQLite3MultipleCiphers/releases/download/v$version/sqlite3mc-$version-sqlite-$matchSqlite3version-win32.zip"
+            }
+        }
+    }
+}

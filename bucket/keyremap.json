@@ -1,0 +1,15 @@
+{
+  "version": "0.5.2",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/huanfeng/keyremap/releases/download/v0.5.2/keyremap-0.5.2-windows-x86_64.zip",
+      "bin": [
+        "keyremap.exe"
+      ],
+      "hash": "86efbdeccce9447c6be509bca78898b9d357e0622e04b0dc872afe71b756a4be"
+    }
+  },
+  "description": "Windows keyboard/mouse remapper with tray control, mapping groups and config hot-reload",
+  "homepage": "https://github.com/huanfeng/keyremap",
+  "license": "MIT"
+}

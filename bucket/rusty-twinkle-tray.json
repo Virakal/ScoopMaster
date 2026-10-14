@@ -1,15 +1,14 @@
 {
-    "version": "2026-06-12",
+    "version": "14561856257",
     "description": "A small utility for quickly adjusting the brightness of external monitors using the DDC/CI protocol.",
     "homepage": "https://github.com/sidit77/rusty-twinkle-tray",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sidit77/rusty-twinkle-tray/releases/download/release-2026-06-12/rusty-twinkle-tray.exe",
-            "hash": "be69e63fff934229fd8f50d33597ad3d8218fe5336a3c1617235966eaafdde86"
+            "url": "https://nightly.link/sidit77/rusty-twinkle-tray/workflows/build/main/rusty-twinkle-tray.exe.zip",
+            "hash": "e5fb4e6c109966c37f0bed177d62eecae4cb2d1145b9bb3e2da19853c921b4bf"
         }
     },
-    "bin": "rusty-twinkle-tray.exe",
     "shortcuts": [
         [
             "rusty-twinkle-tray.exe",
@@ -17,13 +16,13 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/sidit77/rusty-twinkle-tray",
-        "regex": "tag/release-([\\d-]+)"
+        "url": "https://api.github.com/repositories/733894444/actions/workflows/build.yml/runs?branch=main&status=success",
+        "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/sidit77/rusty-twinkle-tray/releases/download/release-$version/rusty-twinkle-tray.exe"
+                "url": "https://nightly.link/sidit77/rusty-twinkle-tray/workflows/build/main/rusty-twinkle-tray.exe.zip"
             }
         }
     }

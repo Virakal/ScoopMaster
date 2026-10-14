@@ -1,0 +1,20 @@
+{
+    "checkver": {
+        "url": "https://api.github.com/repos/intiface/intiface-central/releases",
+        "jsonpath": "$..tag_name",
+        "regex": "(\\d*\\.\\d*\\.\\d*\\+\\d*)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/intiface/intiface-central/releases/download/v$version/intiface-central-v$matchHead-win-x64.exe"
+    },
+    "version": "3.2.2+46",
+    "url": "https://github.com/intiface/intiface-central/releases/download/v3.2.2+46/intiface-central-v3.2.2-win-x64.exe",
+    "hash": "fa8dfce3f9da58f8a217ca8301fb9edddc752741dabb3162f9d8661c24c83d7f",
+    "innosetup": "true",
+    "shortcuts": [
+        [
+            "intiface_central.exe",
+            "Intiface Central"
+        ]
+    ]
+}

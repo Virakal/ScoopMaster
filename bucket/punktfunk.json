@@ -1,0 +1,58 @@
+{
+    "version": "0.43.1",
+    "description": "Punktfunk client for Windows — low-latency desktop and game streaming (portable build)",
+    "homepage": "https://punktfunk.unom.io",
+    "license": "MIT OR Apache-2.0",
+    "notes": [
+        "This is the streaming client only. The host side installs with punktfunk-host-setup.exe from the releases page (it ships the virtual display and controller drivers).",
+        "If punktfunk-client.exe does not start, install the Windows App Runtime 2.x: https://learn.microsoft.com/windows/apps/windows-app-sdk/downloads"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://git.unom.io/unom/punktfunk/releases/download/v0.43.1/punktfunk-client-windows_0.43.1.0_x64-portable.zip",
+            "hash": "03c751934ffad6d1540c0da3bd5de8fc42397a8b1a25b90959f60a7dd32900d0"
+        },
+        "arm64": {
+            "url": "https://git.unom.io/unom/punktfunk/releases/download/v0.43.1/punktfunk-client-windows_0.43.1.0_arm64-portable.zip",
+            "hash": "fed9df6e7ec7fc34a6fda8cff8e220d8dc19eeb513d9184d1c81522ac4adaf21"
+        }
+    },
+    "bin": [
+        "punktfunk-client.exe",
+        "punktfunk-console.exe",
+        "punktfunk.exe"
+    ],
+    "shortcuts": [
+        [
+            "punktfunk-client.exe",
+            "Punktfunk"
+        ],
+        [
+            "punktfunk-console.exe",
+            "Punktfunk Console"
+        ]
+    ],
+    "checkver": {
+        "url": "https://git.unom.io/api/v1/repos/unom/punktfunk/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://git.unom.io/unom/punktfunk/releases/download/v$version/punktfunk-client-windows_$version.0_x64-portable.zip",
+                "hash": {
+                    "url": "$url.sha256",
+                    "regex": "^([a-fA-F0-9]{64})"
+                }
+            },
+            "arm64": {
+                "url": "https://git.unom.io/unom/punktfunk/releases/download/v$version/punktfunk-client-windows_$version.0_arm64-portable.zip",
+                "hash": {
+                    "url": "$url.sha256",
+                    "regex": "^([a-fA-F0-9]{64})"
+                }
+            }
+        }
+    }
+}

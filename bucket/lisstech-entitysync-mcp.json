@@ -1,0 +1,16 @@
+{
+  "version": "26.8.1",
+  "description": "LISSTech EntitySync MCP server for guarded vendor entity synchronization.",
+  "homepage": "https://github.com/LISSConsulting/LISSTech.EntitySync",
+  "license": "Proprietary",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/LISSConsulting/LISSTech.EntitySync/releases/download/mcp-v26.8.1/lisstech-entitysync-mcp-win-x64.zip",
+      "hash": "73ad31df75f7c55dcc17d66fb9aba3eddc56177bb12ec57ef7996be5059dc82f",
+      "bin": [
+        "lisstech-entitysync-mcp.exe",
+        "lisstech-entitysync-mcp"
+      ]
+    }
+  }
+}

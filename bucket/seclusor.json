@@ -1,0 +1,41 @@
+{
+  "version": "0.2.2",
+  "description": "Git-trackable secrets management with age encryption",
+  "homepage": "https://github.com/3leaps/seclusor",
+  "license": "MIT OR Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/3leaps/seclusor/releases/download/v0.2.2/seclusor-windows-amd64.exe",
+      "hash": "107eb0797a1845afbdc88e70d1c8935fef53bbecef084d1a47231dee9b2cbba5",
+      "bin": [
+        [
+          "seclusor-windows-amd64.exe",
+          "seclusor"
+        ]
+      ]
+    },
+    "arm64": {
+      "url": "https://github.com/3leaps/seclusor/releases/download/v0.2.2/seclusor-windows-arm64.exe",
+      "hash": "56bc6cc445c843ad6356911deef981e2e35aa8a6c5dc2f454b92e2ee3fe79094",
+      "bin": [
+        [
+          "seclusor-windows-arm64.exe",
+          "seclusor"
+        ]
+      ]
+    }
+  },
+  "checkver": {
+    "github": "https://github.com/3leaps/seclusor"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/3leaps/seclusor/releases/download/v$version/seclusor-windows-amd64.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/3leaps/seclusor/releases/download/v$version/seclusor-windows-arm64.exe"
+      }
+    }
+  }
+}

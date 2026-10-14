@@ -1,0 +1,45 @@
+{
+    "version": "20261011",
+    "description": "Open Source real-time strategy game engine for early Westwood games such as Command & Conquer: Red Alert written in C# using SDL and OpenGL.",
+    "homepage": "https://www.openra.net/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/OpenRA/OpenRA/releases/download/playtest-20261011/OpenRA-playtest-20261011-x64-winportable.zip",
+            "hash": "bd57c3aa3e2df1044f98d9e0cf3518ec15ea3622d5f1af071d23ba85bcb03e76"
+        }
+    },
+    "bin": [
+        "OpenRA.Utility.exe",
+        "OpenRA.Server.exe",
+        "RedAlert.exe",
+        "TiberianDawn.exe",
+        "Dune2000.exe"
+    ],
+    "shortcuts": [
+        [
+            "RedAlert.exe",
+            "OpenRA Playtest - Red Alert"
+        ],
+        [
+            "TiberianDawn.exe",
+            "OpenRA Playtest - Tiberian Dawn"
+        ],
+        [
+            "Dune2000.exe",
+            "OpenRA Playtest - Dune 2000"
+        ]
+    ],
+    "persist": "Support",
+    "checkver": {
+        "url": "https://github.com/OpenRA/OpenRA/releases.atom",
+        "regex": "Repository/\\d+/playtest-(.+?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/OpenRA/OpenRA/releases/download/playtest-$version/OpenRA-playtest-$version-x64-winportable.zip"
+            }
+        }
+    }
+}

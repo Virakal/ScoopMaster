@@ -1,0 +1,33 @@
+{
+    "version": "1.27.2",
+    "description": "A free, high-performance photo and video organizer for Windows.",
+    "homepage": "https://diffractor.com/",
+    "license": "LGPL-2.1-or-later",
+    "url": "https://github.com/diffractor/diffractor/releases/download/v1.27.2/diffractor.zip",
+    "hash": "8e06ff3bb10d4f4d9c182b6d0b90cef4fb0656fc0cafd2d25b277dbdba893d9a",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "diffractor64.exe",
+                    "Diffractor"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "diffractor32.exe",
+                    "Diffractor"
+                ]
+            ]
+        }
+    },
+    "notes": "Diffractor is NOT portable.",
+    "checkver": {
+        "github": "https://github.com/diffractor/diffractor"
+    },
+    "autoupdate": {
+        "url": "https://github.com/diffractor/diffractor/releases/download/v$version/diffractor.zip"
+    }
+}

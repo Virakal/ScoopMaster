@@ -1,0 +1,39 @@
+{
+    "version": "1.5.1",
+    "description": "IDM激活与状态维护工具",
+    "homepage": "https://github.com/angusdevgo/IDM_Pro_Tool",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/angusdevgo/IDM_Pro_Tool#GPL-3.0-1-ov-file"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/angusdevgo/IDM_Pro_Tool/releases/download/v1.5.1/IDM_Pro_Tool_v1.5.1.zip",
+            "hash": "219e7d35b3b90798c5c1d4d548418e5daa1a487e46ab29d7348f4289d34e42fd"
+        }
+    },
+    "bin": [
+        [
+            "IDM_Pro_Tool.exe",
+            "IDMProTool"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "IDM_Pro_Tool.exe",
+            "IDMProTool"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/angusdevgo/IDM_Pro_Tool/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/angusdevgo/IDM_Pro_Tool/releases/download/v$version/IDM_Pro_Tool_v$version.zip"
+            }
+        }
+    }
+}

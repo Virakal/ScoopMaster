@@ -1,0 +1,24 @@
+{
+    "version": "2026.09.11",
+    "description": "Cross-platform photo manager and lightweight digital asset manager (nightly channel).",
+    "homepage": "https://github.com/Hawkynt/PhotoManager",
+    "license": "LGPL-3.0-or-later",
+    "url": "https://github.com/Hawkynt/PhotoManager/releases/download/nightly-20260911/PhotoManager-UI-win-x64-1.0.0.24.zip",
+    "hash": "9d1fc3c96a822f8fa4685e69ff5a4d1dfb3d4b14ca1d44c5c5cfdd095057e8e6",
+    "bin": "Hawkynt.PhotoManager.UI.exe",
+    "shortcuts": [
+        [
+            "Hawkynt.PhotoManager.UI.exe",
+            "PhotoManager Nightly"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Hawkynt/PhotoManager/releases?per_page=1",
+        "jsonpath": "$[0].name",
+        "regex": "Nightly (?<date>(?<year>[0-9]{4})(?<month>[0-9]{2})(?<day>[0-9]{2})) \\((?<appversion>[^)]+)\\)",
+        "replace": "${year}.${month}.${day}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Hawkynt/PhotoManager/releases/download/nightly-$matchDate/PhotoManager-UI-win-x64-$matchAppversion.zip"
+    }
+}

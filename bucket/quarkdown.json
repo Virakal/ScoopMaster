@@ -1,20 +1,16 @@
 {
-  "version": "2.6.4",
-  "description": "A modern Markdown-based typesetting system",
-  "homepage": "https://github.com/iamgio/quarkdown",
-  "license": "GPL-3.0",
-  "url": "https://github.com/iamgio/quarkdown/releases/download/v2.6.4/quarkdown-windows-x64.zip",
-  "hash": "2191fe1c27d449b553f861b87799eb347d7997178866821388a482bd04402259",
-  "extract_dir": "quarkdown",
-  "bin": "bin\\quarkdown.bat",
-  "post_install": [
-    "if (Test-Path \"$dir\\scripts\\install-chrome.ps1\") { & \"$dir\\scripts\\install-chrome.ps1\" -TargetDir \"$dir\\lib\" | Out-Null } else { Write-Host 'Warning: this Quarkdown release does not ship a browser installer. PDF export may require a manual browser setup.' }",
-    "Remove-Item -Path \"$dir\\bin\\quarkdown\" -Force -ErrorAction SilentlyContinue",
-    "Move-Item -Path \"$dir\\bin\\quarkdown.bat\" -Destination \"$dir\\bin\\_quarkdown.bat\"",
-    "Set-Content -Path \"$dir\\bin\\quarkdown.bat\" -Value @(",
-    "  '@echo off',",
-    "  'set \"QD_CHROME_PATH=%~dp0..\\lib\\chrome-headless-shell-win64\\chrome-headless-shell.exe\"',",
-    "  '\"%~dp0_quarkdown\" %*'",
-    ")"
-  ]
+    "version": "2.6.4",
+    "description": "A modern Markdown-based typesetting system, designed around the key concept of versatility.",
+    "homepage": "https://quarkdown.com/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/iamgio/quarkdown/releases/download/v2.6.4/quarkdown-windows-x64.zip",
+    "hash": "2191fe1c27d449b553f861b87799eb347d7997178866821388a482bd04402259",
+    "extract_dir": "quarkdown",
+    "bin": "bin\\quarkdown.bat",
+    "checkver": {
+        "github": "https://github.com/iamgio/quarkdown"
+    },
+    "autoupdate": {
+        "url": "https://github.com/iamgio/quarkdown/releases/download/v$version/quarkdown-windows-x64.zip"
+    }
 }

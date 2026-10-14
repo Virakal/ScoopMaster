@@ -1,0 +1,26 @@
+{
+  "version": "0.6.0",
+  "description": "See which process listens on each port, which interfaces reach it, and how everything on your machine connects",
+  "homepage": "https://github.com/michelsalib/netbeagle",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/michelsalib/netbeagle/releases/download/v0.6.0/netbeagle-windows-x64.exe#/netbeagle.exe",
+      "hash": "884e42c8d399041ec826f8a18236771a62119d9be2984b8fe20702015e0b2712"
+    }
+  },
+  "bin": "netbeagle.exe",
+  "checkver": {
+    "github": "https://github.com/michelsalib/netbeagle"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/michelsalib/netbeagle/releases/download/v$version/netbeagle-windows-x64.exe#/netbeagle.exe",
+        "hash": {
+          "url": "$baseurl/SHA256SUMS"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "1.3",
+    "description": "Android desktop experience for controlling and mirroring Android devices.",
+    "homepage": "https://github.com/Shrey113/Android-Dex",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.1.3/Android_Dex_Windows_x64.zip",
+            "hash": "b5ab997a1f055ce1fefaabba3bc3f25cf9d214bf30d338e9d8e6cb8eeeeaf1b0"
+        }
+    },
+    "bin": "Android_Dex.exe",
+    "shortcuts": [
+        [
+            "Android_Dex.exe",
+            "Android DEX"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Shrey113/Android-Dex",
+        "regex": "tag/Android-Dex-v\\.(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Shrey113/Android-Dex/releases/download/Android-Dex-v.$version/Android_Dex_Windows_x64.zip"
+            }
+        }
+    }
+}

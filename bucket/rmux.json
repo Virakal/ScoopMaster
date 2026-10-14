@@ -1,22 +1,24 @@
 {
-    "version": "0.3.1",
-    "description": "A modern, Rust-based alternative to tmux with native Windows support",
-    "homepage": "https://rmux.io",
-    "license": "MIT",
+    "version": "0.10.0",
+    "description": "An async, typed terminal multiplexer engine written in Rust.",
+    "homepage": "https://rmux.io/",
+    "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Helvesec/rmux/releases/download/v0.3.1/rmux-v0.3.1-x86_64-pc-windows-msvc.zip",
-            "hash": "c387e1bca58e63a02f7b332225ed51211108bb7aef8fbb9d87cead65360ebe2a",
-            "extract_dir": "rmux-v0.3.1-x86_64-pc-windows-msvc"
+            "url": "https://github.com/Helvesec/rmux/releases/download/v0.10.0/rmux-0.10.0-windows-x86_64.zip",
+            "extract_dir": "rmux-0.10.0-windows-x86_64",
+            "hash": "e315e2d51d927ba9621732812c0f932c862d05f4b677dbf3cab76f0d27372a70"
         }
     },
     "bin": "rmux.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/Helvesec/rmux"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Helvesec/rmux/releases/download/v$version/rmux-v$version-x86_64-pc-windows-msvc.zip",
-                "extract_dir": "rmux-v$version-x86_64-pc-windows-msvc"
+                "url": "https://github.com/Helvesec/rmux/releases/download/v$version/rmux-$version-windows-x86_64.zip",
+                "extract_dir": "rmux-$version-windows-x86_64"
             }
         },
         "hash": {

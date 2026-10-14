@@ -1,0 +1,30 @@
+{
+    "version": "3.0.0",
+    "description": "A cross-platform media ripping and browsing GUI.",
+    "homepage": "https://mediaharbor.org",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MediaHarbor/mediaharbor/releases/download/v3.0.0/MediaHarbor_3.0.0_x64_en-US.msi",
+            "hash": "37cd81a6dc97e469e8c818a0bdae30b6424d865454babe5d8f80f5cb09f68a49"
+        }
+    },
+    "extract_dir": "PFiles\\MediaHarbor",
+    "shortcuts": [
+        [
+            "mediaharbor.exe",
+            "MediaHarbor"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\org.mediaharbor.MediaHarbor\", \"$env:LOCALAPPDATA\\mediaharbor\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "checkver": {
+        "github": "https://github.com/MediaHarbor/mediaharbor"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MediaHarbor/mediaharbor/releases/download/v$version/MediaHarbor_$version_x64_en-US.msi"
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "version": "5.3",
+    "description": "An open-source C#/.NET research server emulator for local protocol and networking experimentation.",
+    "homepage": "https://github.com/MikuLeaks/MikuSB",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MikuLeaks/MikuSB/releases/download/v5.3/MikuSB-win-x64.zip",
+            "hash": "0317f7171e574d4be9a22941e35bf2f2575af89916b7182abbbb24a0ee7e348a"
+        }
+    },
+    "shortcuts": [
+        [
+            "MikuSB.exe",
+            "MikuSB"
+        ]
+    ],
+    "persist": [
+        "Resources",
+        "Config",
+        "Client_User_Data",
+        "sdk-certs"
+    ],
+    "post_install": "Remove-Item \"$dir\\MikuSB.Updater.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MikuLeaks/MikuSB/releases/download/v$version/MikuSB-win-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

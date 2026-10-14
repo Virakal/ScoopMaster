@@ -1,0 +1,15 @@
+{
+  "description": "SOLution Validation tool that analyzes Microsoft Visual Studio solutions",
+  "homepage": "https://github.com/aegoroff/solv",
+  "version": "0.23.0",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/aegoroff/solv/releases/download/0.23.0/solv-0.23.0-x86_64-pc-windows-msvc.tar.gz",
+      "hash": "bb24604b9412f7c6fd37f2d3907fbecd9d21eb22de0a866c868a19e1ac2825b0",
+      "bin": [
+        "solv.exe"
+      ]
+    }
+  }
+}

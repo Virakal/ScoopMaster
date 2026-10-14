@@ -1,0 +1,30 @@
+{
+    "version": "1.53.0",
+    "description": "Utilities suite from VictoriaLogs: vlagent and vlogscli",
+    "homepage": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v1.53.0/vlutils-windows-amd64-v1.53.0.zip",
+            "hash": "5fcb519deae2d33d1f0f3233f5b987ec85bc3ce763e6a0429569e37f23cfb561"
+        }
+    },
+    "bin": [
+        [
+            "vlagent-windows-amd64-prod.exe",
+            "vlagent"
+        ],
+        [
+            "vlogscli-windows-amd64-prod.exe",
+            "vlogscli"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/download/v$version/vlutils-windows-amd64-v$version.zip"
+            }
+        }
+    }
+}

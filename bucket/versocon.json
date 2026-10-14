@@ -1,0 +1,20 @@
+{
+    "version": "0.3.4",
+    "description": "Free, 100% offline file converter: HEIC photos, PDFs (edit, sign, merge, compress, OCR) and video. No cloud, no account, no telemetry.",
+    "homepage": "https://github.com/lupanostefano/versocon",
+    "license": "MIT",
+    "notes": "OCR (Tesseract, Italian and English) and video (ffmpeg) engines are bundled: no extra install needed.",
+    "url": "https://github.com/lupanostefano/versocon/releases/download/v0.3.4/versocon-setup-0.3.4.exe",
+    "hash": "658c314cc440f1aac226da1932eaa7c2bbaa59c8fa51965b017a8c6cecedc1d2",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "Versocon.exe",
+            "VersoCon"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/lupanostefano/versocon/releases/download/v$version/versocon-setup-$version.exe"
+    }
+}

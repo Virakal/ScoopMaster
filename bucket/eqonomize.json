@@ -1,0 +1,30 @@
+{
+    "version": "1.5.13",
+    "description": "A personal accounting software, with focus on efficiency and ease of use for small households.",
+    "homepage": "https://eqonomize.github.io/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Eqonomize/Eqonomize/releases/download/v1.5.13/eqonomize-1.5.13-x64.zip",
+            "hash": "0fd03d05f1402751b8be374d4ca23192b3dd213935af900406af27373ca239f5"
+        }
+    },
+    "extract_dir": "eqonomize",
+    "shortcuts": [
+        [
+            "eqonomize.exe",
+            "Eqonomize"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "github": "https://github.com/Eqonomize/Eqonomize"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Eqonomize/Eqonomize/releases/download/v$version/eqonomize-$version-x64.zip"
+            }
+        }
+    }
+}

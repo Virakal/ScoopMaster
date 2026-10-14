@@ -1,0 +1,16 @@
+{
+    "version": "2026.10.02-8e8404f",
+    "description": "Agent identity management CLI for DNSid",
+    "homepage": "https://dnsid.ai",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/dnsid-ai/scoop-bucket/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.dnsid.ai/cli/2026.10.02-8e8404f/dnsid_windows_amd64.zip",
+            "hash": "5a8d84134668231783d27e4f00f40e8215c418532f30d8eea91cc028041967f9"
+        }
+    },
+    "bin": "dnsid.exe"
+}

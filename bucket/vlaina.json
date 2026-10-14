@@ -1,0 +1,38 @@
+{
+    "version": "1.1.0",
+    "description": "A local-first note app built for absolute privacy and choice.",
+    "homepage": "https://vlaina.com/",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/vladelaina/vlaina/releases/download/v1.1.0/vlaina-1.1.0-windows-x64-setup.exe#/dl.7z",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "hash": "4cc41b7166c49dc5e3ff548b2bf8bea47763a0f7a950302b023550176e8eea2a"
+        },
+        "arm64": {
+            "url": "https://github.com/vladelaina/vlaina/releases/download/v1.1.0/vlaina-1.1.0-windows-arm64-setup.exe#/dl.7z",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+            "hash": "0945e872fdc0901b49c3c623b28f2bf2fdef7f2fe2638cdbf06cccb3f16ba938"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "shortcuts": [
+        [
+            "vlaina.exe",
+            "vlaina"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/vladelaina/vlaina"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/vladelaina/vlaina/releases/download/v$version/vlaina-$version-windows-x64-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/vladelaina/vlaina/releases/download/v$version/vlaina-$version-windows-arm64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

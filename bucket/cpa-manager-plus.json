@@ -1,0 +1,37 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "1.14.6",
+    "description": "https://github.com/seakee/CPA-Manager-Plus",
+    "homepage": "https://github.com/seakee/CPA-Manager-Plus",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/seakee/CPA-Manager-Plus/releases/download/v1.14.6/cpa-manager-plus_v1.14.6_windows_amd64.zip",
+            "hash": "0329025afea7bd567cb311337ec9bc783a40a03658f58715cfadb529d58e64ef",
+            "extract_dir": "cpa-manager-plus_v1.14.6_windows_amd64"
+        },
+        "arm64": {
+            "url": "https://github.com/seakee/CPA-Manager-Plus/releases/download/v1.14.6/cpa-manager-plus_v1.14.6_windows_arm64.zip",
+            "hash": "b2637865782f9e271c721133d462a778ddf9b2b65e75b155fdeacb6c7b906389",
+            "extract_dir": "cpa-manager-plus_v1.14.6_windows_arm64"
+        }
+    },
+    "bin": [
+        "cpa-manager-plus.exe",
+        "cpa-manager-plusctl.ps1"
+    ],
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/seakee/CPA-Manager-Plus/releases/download/v$version/cpa-manager-plus_v$version_windows_amd64.zip",
+                "extract_dir": "cpa-manager-plus_v$version_windows_amd64"
+            },
+            "arm64": {
+                "url": "https://github.com/seakee/CPA-Manager-Plus/releases/download/v$version/cpa-manager-plus_v$version_windows_arm64.zip",
+                "extract_dir": "cpa-manager-plus_v$version_windows_arm64"
+            }
+        }
+    }
+}

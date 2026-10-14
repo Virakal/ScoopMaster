@@ -1,0 +1,53 @@
+{
+    "version": "2.2-build-20260913",
+    "description": "A tool to encode and decode FLAC files. Fork of the FLAC Frontend 2.1 but with advanced options.",
+    "homepage": "https://github.com/hat3k/FLAC-Frontend-H",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/hat3k/FLAC-Frontend-H/blob/main/LICENSE"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/hat3k/FLAC-Frontend-H/releases/download/2.2-build-20260913/FLAC.Frontend-H.build.20260913.x86.7z",
+            "hash": "b526e983e80c6f0ede1f86369a15b4a330cf37f9fb9481228db90dd2ab273a45"
+        },
+        "64bit": {
+            "url": "https://github.com/hat3k/FLAC-Frontend-H/releases/download/2.2-build-20260913/FLAC.Frontend-H.build.20260913.x64.7z",
+            "hash": "7f7b3ccf3b055e0eeb70e3a6cb6d1e24ae35ad52123436ea76df37b1bef8df97"
+        }
+    },
+    "pre_install": [
+        
+        "$innerFolder = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -match 'FLAC Frontend' } | Select-Object -First 1",
+        "if ($innerFolder) {",
+        "    Get-ChildItem \"$($innerFolder.FullName)\" | ForEach-Object {",
+        "        Move-Item \"$($_.FullName)\" \"$dir\"",
+        "    }",
+        "    Remove-Item \"$($innerFolder.FullName)\"",
+        "}"
+    ],
+    "bin": [
+        ["tools\\flac.exe", "flac"],
+        ["tools\\metaflac.exe", "metaflac"]
+    ],
+    "shortcuts": [
+        [
+            "FLAC frontend-H.exe",
+            "FLAC Frontend H"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hat3k/FLAC-Frontend-H",
+        "regex": "releases/tag/([\\d.]+-build-\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hat3k/FLAC-Frontend-H/releases/download/$version/FLAC.frontend-H.$match1.x86.7z"
+            },
+            "64bit": {
+                "url": "https://github.com/hat3k/FLAC-Frontend-H/releases/download/$version/FLAC.frontend-H.$match1.x64.7z"
+            }
+        }
+    }
+}

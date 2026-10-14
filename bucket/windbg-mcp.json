@@ -1,0 +1,72 @@
+{
+    "version": "0.23.0",
+    "description": "MCP server exposing WinDbg/DbgEng (live user-mode, kernel, crash dumps, TTD) to AI agents over stdio",
+    "homepage": "https://github.com/glslang/windbg-mcp",
+    "license": "MIT",
+    "notes": [
+        "Basic live/crash-dump debugging works out of the box with the System32 engine.",
+        "",
+        "For TTD replay and crash-dump !analyze, bundle the WinDbg engine DLLs next to the binary.",
+        "If WinDbg (Microsoft.WinDbg) is installed from the Store, post_install copies them automatically.",
+        "Otherwise, see: https://github.com/glslang/windbg-mcp#bundling-the-windbg-engine",
+        "",
+        "Disconnect the MCP server from any connected client before updating (scoop update windbg-mcp).",
+        "A connected client holds the exe open, since the server re-executes its own image to spawn engine workers."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/glslang/windbg-mcp/releases/download/v0.23.0/windbg-mcp-v0.23.0-windows-x64.zip",
+            "hash": "597c7a0379b9e30001ccef187dcd78dfbff0739b7bd9dbcb76cd109c670a25ac"
+        }
+    },
+    "post_install": [
+        "$wdPkg = Get-AppxPackage Microsoft.WinDbg -ErrorAction SilentlyContinue",
+        "if ($wdPkg) {",
+        "    $dlls = @('dbgeng.dll','dbghelp.dll','dbgcore.dll','dbgmodel.dll','symsrv.dll','msdia140.dll')",
+        "    # 64-bit engine payload: loose DLLs beside windbg-mcp.exe, plus triage/ttd/winext subdirs.",
+        "    $wd = \"$($wdPkg.InstallLocation)\\amd64\"",
+        "    foreach ($dll in $dlls) {",
+        "        $src = Join-Path $wd $dll",
+        "        if (Test-Path $src) { Copy-Item $src $dir -Force }",
+        "    }",
+        "    foreach ($sub in @('triage','ttd','winext')) {",
+        "        $src = Join-Path $wd $sub",
+        "        if (Test-Path $src) { Copy-Item $src $dir -Recurse -Force }",
+        "    }",
+        "    # kdexts.dll (!drvobj/!devobj/!irp for the driver tools) lives in winxp; copy just that file.",
+        "    $src = Join-Path $wd 'winxp\\kdexts.dll'",
+        "    if (Test-Path $src) {",
+        "        New-Item (Join-Path $dir 'winxp') -ItemType Directory -Force | Out-Null",
+        "        Copy-Item $src (Join-Path $dir 'winxp') -Force",
+        "    }",
+        "    # 32-bit engine payload: for 32-bit .NET (WoW64) targets, which the bundled x86\\windbg-mcp.exe worker drives.",
+        "    # Must live in the x86 subdir next to the x86 worker, never beside the x64 exe.",
+        "    $wd86 = \"$($wdPkg.InstallLocation)\\x86\"",
+        "    $dst86 = Join-Path $dir 'x86'",
+        "    if (Test-Path $wd86) {",
+        "        New-Item $dst86 -ItemType Directory -Force | Out-Null",
+        "        foreach ($dll in $dlls) {",
+        "            $src = Join-Path $wd86 $dll",
+        "            if (Test-Path $src) { Copy-Item $src $dst86 -Force }",
+        "        }",
+        "        $src = Join-Path $wd86 'winext'",
+        "        if (Test-Path $src) { Copy-Item $src (Join-Path $dst86 'winext') -Recurse -Force }",
+        "    }",
+        "    Write-Host 'WinDbg engine bundled for TTD replay, !analyze, kernel and 32-bit .NET debugging support.' -ForegroundColor Green",
+        "} else {",
+        "    Write-Host 'WinDbg (Microsoft.WinDbg) not found. Basic debugging works, but TTD replay' -ForegroundColor Yellow",
+        "    Write-Host 'and !analyze require the WinDbg engine. See: scoop info windbg-mcp' -ForegroundColor Yellow",
+        "}"
+    ],
+    "bin": "windbg-mcp.exe",
+    "checkver": {
+        "github": "https://github.com/glslang/windbg-mcp"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/glslang/windbg-mcp/releases/download/v$version/windbg-mcp-v$version-windows-x64.zip"
+            }
+        }
+    }
+}

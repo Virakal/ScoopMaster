@@ -1,0 +1,38 @@
+{
+    "version": "1.3.0",
+    "description": "Sesh, the awsesh desktop client",
+    "homepage": "https://github.com/elva-labs/awsesh",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/elva-labs/awsesh/releases/download/v1.3.0/awsesh-desktop-win32-x64.zip",
+            "hash": "a7ba3ac544be47084755934e3d3a41ecd5815da2364644701378227355f0b0e4"
+        }
+    },
+    "extract_dir": "Sesh",
+    "bin": [
+        [
+            "sesh.exe",
+            "awsesh-desktop"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "sesh.exe",
+            "Sesh"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/elva-labs/awsesh"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/elva-labs/awsesh/releases/download/v$version/awsesh-desktop-win32-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

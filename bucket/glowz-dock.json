@@ -1,0 +1,30 @@
+{
+    "version": "1.2.1",
+    "description": "A glossy dock for launching EXE, LNK, and Steam URLs on Windows 10/11 (portable ZIP release).",
+    "homepage": "https://github.com/Suraween/GlowZ-Dock",
+    "license": "MIT",
+    "url": "https://github.com/Suraween/GlowZ-Dock/releases/download/1.2.1/GlowZ-Dock_1.2.1.zip",
+    "hash": "c394c857c3373ddb907c09d1cd0f4e8a412fd508643f81bfbb885c50656707aa",
+    "persist": [
+        "GlowZ-Dock/.dock-cache",
+        "GlowZ-Dock/data"
+    ],
+    "bin": "GlowZ-Dock/GlowZ Dock.exe",
+    "shortcuts": [
+        [
+            "GlowZ-Dock/GlowZ Dock.exe",
+            "GlowZ Dock"
+        ],
+        [
+            "GlowZ-Dock/GlowZ Dock Settings.exe",
+            "GlowZ Dock Settings"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Suraween/GlowZ-Dock"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Suraween/GlowZ-Dock/releases/download/$version/GlowZ-Dock_$version.zip"
+    },
+    "notes": "Portable ZIP release. Version 1.2.1 stores its icon cache and settings in the application folder (.dock-cache and data). Autostart is not available in portable mode."
+}

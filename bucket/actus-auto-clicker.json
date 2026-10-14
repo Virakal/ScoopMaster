@@ -1,0 +1,37 @@
+{
+    "version": "0.1.25",
+    "description": "A simple, free desktop tool to automate mouse clicks.",
+    "homepage": "https://actusclicker.com/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.actusclicker.com/v0.1.25/Actus-v0.1.25-windows-x86_64-setup.exe#/dl.7z",
+            "hash": "82dc5c0c7e950414532626bf9b0b1a253622a80ca1f75c8a65ef87db03e9e60b"
+        }
+    },
+    "shortcuts": [
+        [
+            "actus-app.exe",
+            "Actus Auto Clicker"
+        ]
+    ],
+    "pre_install": "Move-Item -Path \"$dir\\resources\\opencv\\*\", \"$dir\\resources\\diagnose\\*\" -Destination \"$dir\" -ErrorAction SilentlyContinue",
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\com.fanhua.actus\", \"$env:LOCALAPPDATA\\com.fanhua.actus\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "Actus Auto Clicker is NOT portable.",
+        "Settings are stored in '%APPDATA%\\com.fanhua.actus', and will be purged during uninstallation with --purge flag."
+    ],
+    "checkver": {
+        "url": "https://api.actusclicker.com/releases/changelog?channel=stable&limit=1",
+        "jsonpath": "$.[0].version",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.actusclicker.com/v$version/Actus-v$version-windows-x86_64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}

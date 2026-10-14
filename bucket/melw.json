@@ -1,0 +1,28 @@
+{
+    "version": "0.4.0",
+    "description": "Melw - Markdown Editor Like WikiEngine",
+    "homepage": "https://github.com/hymkor/melw",
+    "license": "MIT License",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/hymkor/melw/releases/download/v0.4.0/melw-v0.4.0-windows-386.zip",
+            "hash": "9c0bfacf1af5a6cbae61f50a9b07f3af3aa4219fc1c09fa2931ef1b8c06eaa93"
+        },
+        "64bit": {
+            "url": "https://github.com/hymkor/melw/releases/download/v0.4.0/melw-v0.4.0-windows-amd64.zip",
+            "hash": "64804a1755a70ffc0835948061eaa6dd3f211597345596e618639b39a3ff26af"
+        }
+    },
+    "bin": "melw.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hymkor/melw/releases/download/v$version/melw-v$version-windows-386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/hymkor/melw/releases/download/v$version/melw-v$version-windows-amd64.zip"
+            }
+        }
+    }
+}

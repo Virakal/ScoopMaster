@@ -1,0 +1,31 @@
+{
+    "version": "0.3.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/medialo/gogws/releases/download/v0.3.1/gogws_0.3.1_windows_amd64.zip",
+            "bin": [
+                "gogws.exe"
+            ],
+            "hash": "4e0e09bc5913a4a0c982fc6ade87ff8d4c799103728320fef4acea7c8fec5c17"
+        },
+        "arm64": {
+            "url": "https://github.com/medialo/gogws/releases/download/v0.3.1/gogws_0.3.1_windows_arm64.zip",
+            "bin": [
+                "gogws.exe"
+            ],
+            "hash": "15066386b75162858bb880d2cf7a9e8f76c2aef8b286f8573948567418030231"
+        }
+    },
+    "homepage": "https://github.com/medialo/gogws",
+    "license": "AGPL",
+    "description": "Manage a folder full of Git repositories as one workspace: status, fetch, pull and clone them all in parallel.",
+    "depends": [
+        "git"
+    ],
+    "shortcuts": [
+        [
+            "gogws.exe",
+            "gogws"
+        ]
+    ]
+}

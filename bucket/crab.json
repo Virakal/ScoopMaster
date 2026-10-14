@@ -1,0 +1,15 @@
+{
+    "version": "1.5.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/atomicptr/crab/releases/download/v1.5.0/crab_1.5.0_windows_amd64.tar.gz",
+            "bin": [
+                "crab.exe"
+            ],
+            "hash": "221f0b09f951d9caca1a59c56077074e185667582f65f1e4a56a72006f00a5d1"
+        }
+    },
+    "homepage": "https://github.com/atomicptr/crab",
+    "license": "MIT",
+    "description": "A versatile tool to crawl dozens of URLs from a given source, like a sitemap or an URL list.\n"
+}

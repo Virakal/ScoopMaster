@@ -1,0 +1,18 @@
+{
+    "version": "2.5.2",
+    "description": "Enhanced audio panel for Windows with HeadsetControl integration",
+    "homepage": "https://github.com/ChrisLauinger77/QontrolPanel",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/ChrisLauinger77/QontrolPanel/releases/download/2.5.2/QontrolPanel_win64_msvc2022.zip",
+    "hash": "5ef1e845b0a640739d804db9ee99127d315d7023f0f2e11f8a1cef3abcae692f",
+    "shortcuts": [
+        [
+            "QontrolPanel\\bin\\QontrolPanel.exe",
+            "QontrolPanel"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/ChrisLauinger77/QontrolPanel/releases/download/$version/QontrolPanel_win64_msvc2022.zip"
+    }
+}
