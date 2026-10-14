@@ -1,37 +1,25 @@
 {
-    "version": "0.1.5",
-    "description": "A small yet beautiful email client",
-    "homepage": "https://pebble.byebug.cn",
-    "license": "AGPL-3.0-only",
+    "version": "0.0.2",
+    "description": "Pebble Programming Language",
+    "homepage": "https://github.com/pebble-lang/pebble",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/QingJ01/Pebble/releases/download/v0.1.5/Pebble_0.1.5_x64-setup.exe",
-            "hash": "799e5621771c3a7b94ad1f8b74da01d8c75bc9eb23c0bc196219243f85b17800"
+            "url": "https://github.com/pebble-lang/pebble/releases/download/v0.0.2/peb-0.0.2-windows-x86_64.zip",
+            "hash": "581538fcbb1b9744bd72ab8bcc937c8cb410441049a33baedc6b83db0e811d38"
         }
     },
-    "pre_install": [
-        "& 7z.exe x \"$dir\\Pebble_${version}_x64-setup.exe\" -o\"$dir\" -y | Out-Null",
-        "Remove-Item \"$dir\\Pebble_${version}_x64-setup.exe\", (Join-Path $dir '$PLUGINSDIR') -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
     "bin": [
         [
-            "pebble.exe",
-            "pebble"
+            "peb-windows-x86_64.exe",
+            "peb"
         ]
     ],
-    "shortcuts": [
-        [
-            "pebble.exe",
-            "Pebble"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/QingJ01/Pebble"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/QingJ01/Pebble/releases/download/v$version/Pebble_$version_x64-setup.exe"
+                "url": "https://github.com/pebble-lang/pebble/releases/download/v$version/peb-$version-windows-x86_64.zip"
             }
         },
         "hash": {

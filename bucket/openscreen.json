@@ -1,35 +1,32 @@
 {
-    "version": "2.0.0",
-    "description": "Open source screen recording application for Windows.",
-    "homepage": "https://github.com/getopenscreen/openscreen",
+    "version": "1.5.0",
+    "description": "可快速添加缩放效果及背景的录屏软件",
+    "homepage": "https://openscreen.vercel.app/",
     "license": "MIT",
-    "url": "https://github.com/getopenscreen/openscreen/releases/download/v2.0.0/Openscreen.Setup.2.0.0.exe",
-    "hash": "f5a8b877d41840aec4aac0158987e103e73c7b95b7780ea2bea4a0f33c899c55",
-    "installer": {
-        "args": [
-            "/S",
-            "/D=$dir"
-        ]
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/siddharthvaddem/openscreen/releases/download/v1.5.0/Openscreen.Setup.1.5.0.exe#/dl.7z",
+            "hash": "9bf826d66f76e9f9a32ff1adfd3cbe0cd78bb4b78471cd3f6420acca13ea8267"
+        }
     },
-    "uninstaller": {
-        "file": "Uninstall Openscreen.exe",
-        "args": "/S"
-    },
-    "bin": "Openscreen.exe",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app*.7z\" $dir",
+        "Remove-Item \"$dir\\`$*\" -Force -Recurse"
+    ],
     "shortcuts": [
         [
             "Openscreen.exe",
-            "OpenScreen"
+            "Openscreen"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/getopenscreen/openscreen"
+        "github": "https://github.com/siddharthvaddem/openscreen"
     },
     "autoupdate": {
-        "url": "https://github.com/getopenscreen/openscreen/releases/download/v$version/Openscreen.Setup.$version.exe",
-        "hash": {
-            "url": "https://api.github.com/repos/getopenscreen/openscreen/releases/tags/v$version",
-            "regex": "\"name\"\\s*:\\s*\"Openscreen.Setup.$version\\.exe\"[\\s\\S]*?\"digest\"\\s*:\\s*\"sha256:([a-f0-9]{64})\""
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/siddharthvaddem/openscreen/releases/download/v$version/Openscreen.Setup.$version.exe#/dl.7z"
+            }
         }
     }
 }

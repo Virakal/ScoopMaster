@@ -1,34 +1,29 @@
 {
-    "version": "1.0.7",
-    "description": "Local-first Windows file organization workbench with AI-assisted planning and reversible execution.",
-    "homepage": "https://github.com/qup1010/FilePilot",
-    "license": "MIT",
+    "version": "0.8.5",
+    "description": "A file explorer built from scratch for light-speed performance, with a modern and robust interface.",
+    "homepage": "https://filepilot.tech/",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qup1010/FilePilot/releases/download/v1.0.7/FilePilot_1.0.7_x64-setup.exe",
-            "hash": "735d08757ca0e4c2aa87fd6862c35eb70534560a19f01741b4db0473744d1061"
+            "url": "https://filepilot.nyc3.cdn.digitaloceanspaces.com/2026-08-31-v0.8.5/FPilot.exe",
+            "hash": "ab5e7bbfa50872225f24856697ef7341a58e51a5e521435ba0dfeeb8ab3b2676"
         }
     },
-    "installer": {
-        "args": [
-            "/S",
-            "/D=$dir"
-        ]
-    },
-    "bin": "file-pilot-desktop.exe",
+    "bin": "FPilot.exe",
     "shortcuts": [
         [
-            "file-pilot-desktop.exe",
-            "FilePilot"
+            "FPilot.exe",
+            "File Pilot"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/qup1010/FilePilot"
+        "url": "https://filepilot.tech/download",
+        "regex": "starlog/(?<date>\\d{4}-\\d{2}-\\d{2})-v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/qup1010/FilePilot/releases/download/v$version/FilePilot_$version_x64-setup.exe"
+                "url": "https://filepilot.nyc3.cdn.digitaloceanspaces.com/$matchDate-v$version/FPilot.exe"
             }
         }
     }

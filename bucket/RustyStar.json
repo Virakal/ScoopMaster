@@ -1,11 +1,8 @@
 {
-    "version": "r79",
-    "description": "EnergyStar alernative in Rust",
+    "version": "79",
+    "description": "EnergyStar alternative written in Rust, leveraging EcoQoS on Windows 11.",
     "homepage": "https://github.com/RustyStarX/RustyStar",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/RustyStarX/RustyStar/blob/main/LICENSE"
-    },
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/RustyStarX/RustyStar/releases/download/r79/x86_64-pc-windows-msvc.tar.gz",
@@ -24,16 +21,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/RustyStarX/RustyStar/releases/latest",
-        "jsonpath": "$.tag_name"
+        "github": "https://github.com/RustyStarX/RustyStar",
+        "regex": "r(\\d+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/RustyStarX/RustyStar/releases/download/$version/x86_64-pc-windows-msvc.tar.gz"
+                "url": "https://github.com/RustyStarX/RustyStar/releases/download/r$version/x86_64-pc-windows-msvc.tar.gz"
             },
             "arm64": {
-                "url": "https://github.com/RustyStarX/RustyStar/releases/download/$version/aarch64-pc-windows-msvc.tar.gz"
+                "url": "https://github.com/RustyStarX/RustyStar/releases/download/r$version/aarch64-pc-windows-msvc.tar.gz"
             }
         }
     }

@@ -1,48 +1,31 @@
 {
-    "version": "2.0.6-beta.4",
-    "description": "A fork of Fishstrap, focused on performance and customization.",
-    "homepage": "https://froststrap.xyz",
-    "license": {
-        "identifier": "MPL-2.0",
-        "url": "https://github.com/Froststrap/Froststrap/blob/main/LICENSE"
+    "version": "1.4.1.0",
+    "description": "A Bloxstrap/Fishstrap fork, focused on performance and customization",
+    "homepage": "https://froststrap.github.io/",
+    "license": "AGPL-3.0-or-later|MIT|Unlicense",
+    "suggest": {
+        ".NET Desktop Runtime 8.0": "versions/windowsdesktop-runtime-8.0"
     },
-    "url": "https://github.com/Froststrap/Froststrap/releases/download/v2.0.6-beta.4/Froststrap-windows-x64.msi",
-    "hash": "2699dd24f6d205661d27cd23ec973687ec1eae1a31677d491845642f24f46814",
-    "extract_dir": "Froststrap",
-    "bin": "Froststrap.exe",
-    "shortcuts": [
-        [
-            "Froststrap.exe",
-            "Froststrap"
-        ]
-    ],
-    "post_install": [
-        "$data = \"$env:LOCALAPPDATA\\Froststrap\"",
-        "if (!(Test-Path $persist_dir)) { New-Item $persist_dir -ItemType Directory | Out-Null }",
-        "$item = Get-Item $data -Force -ErrorAction SilentlyContinue",
-        "if ($item -and ($item.Attributes -band [IO.FileAttributes]::ReparsePoint)) {",
-        "    cmd /c rmdir \"$data\"",
-        "} elseif ($item) {",
-        "    Get-ChildItem $data -Force | ForEach-Object {",
-        "        if (!(Test-Path \"$persist_dir\\$($_.Name)\")) { Move-Item $_.FullName $persist_dir }",
-        "    }",
-        "    Remove-Item $data -Recurse -Force",
-        "}",
-        "New-Item -ItemType Junction -Path $data -Target $persist_dir | Out-Null"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RealMeddsam/Froststrap/releases/download/v1.4.1.0/Froststrap-v1.4.1.0.exe#/Froststrap.exe",
+            "hash": "cb28d4cb667c6078ceb272b6e892c0b8fc69581d6ab9024375a3b10e215ec0ba"
+        }
+    },
+    "installer": {
+        "script": "if ($cmd -eq 'update') { Start-Process \"$dir\\Froststrap.exe\" -Wait -Args @('-quiet', '-upgrade'); exit 0 } else { Start-Process \"$dir\\Froststrap.exe\" -Wait -Args @('-quiet'); }"
+    },
     "uninstaller": {
-        "script": [
-            "$data = \"$env:LOCALAPPDATA\\Froststrap\"",
-            "$item = Get-Item $data -Force -ErrorAction SilentlyContinue",
-            "if ($item -and ($item.Attributes -band [IO.FileAttributes]::ReparsePoint)) { cmd /c rmdir \"$data\" }"
-        ]
+        "script": "Start-Process \"$dir\\Froststrap.exe\" -Wait -Args @('-uninstall', '-quiet');"
     },
     "checkver": {
-        "url": "https://api.github.com/repos/Froststrap/Froststrap/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "v?([\\d.]+(?:-[\\w.]+)?)"
+        "github": "https://github.com/RealMeddsam/Froststrap"
     },
     "autoupdate": {
-        "url": "https://github.com/Froststrap/Froststrap/releases/download/v$version/Froststrap-windows-x64.msi"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RealMeddsam/Froststrap/releases/download/v$version/Froststrap-v$version.exe#/Froststrap.exe"
+            }
+        }
     }
 }

@@ -1,32 +1,44 @@
 {
-    "version": "1.9.1",
-    "description": "A native-feeling desktop shell for the Pi Coding Agent, built with Tauri + Lit.",
-    "homepage": "https://github.com/LCorleone/pi-desktop",
-    "license": "MIT",
+    "version": "0.20.1",
+    "description": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins",
+    "homepage": "https://github.com/vastsa/PI-Desktop",
+    "license": "LGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LCorleone/pi-desktop/releases/download/v1.9.1/Pi.Desktop_1.9.1_x64-setup.exe#/dl.7z",
-            "hash": "5c1d39e9b95817881e579161b278d5431d5ef88b1b9941d1b50c2bad389c68b8"
+            "url": "https://github.com/vastsa/PI-Desktop/releases/download/v0.20.1/PI-Desktop-Setup-0.20.1.exe#/dl.7z",
+            "hash": "sha512:e5fb5e508f2645573e215260006abb32a8cb35429d55b6738e2fcd9253ae14f8164b5b4c9b8034028a07a7bb8cd99654d644839c493f1f474d99cf0d37b57ec1"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse",
-    "bin": "pi-desktop.exe",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": [
+        [
+            "PI-Desktop.exe",
+            "pi-desktop"
+        ]
+    ],
     "shortcuts": [
         [
-            "pi-desktop.exe",
-            "Pi Desktop"
+            "PI-Desktop.exe",
+            "PI-Desktop"
         ]
     ],
     "checkver": {
-        "url": "https://github.com/LCorleone/pi-desktop/releases",
-        "regex": "tag_name=v([\\d.]+)"
+        "github": "https://github.com/vastsa/PI-Desktop"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LCorleone/pi-desktop/releases/download/v$version/Pi.Desktop_$version_x64-setup.exe#/dl.7z"
+                "url": "https://github.com/vastsa/PI-Desktop/releases/download/v$version/PI-Desktop-Setup-$version.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
-    },
-    "notes": "This manifest tracks pre-release builds. The app requires the Pi Coding Agent CLI: npm install -g @earendil-works/pi-coding-agent"
+    }
 }

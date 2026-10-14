@@ -1,60 +1,56 @@
 {
-    "version": "0.2.6",
-    "description": "Free & Open-Source CapCut replacement.",
+    "version": "0.2.2",
+    "description": "Open-Source CapCut replacement.",
     "homepage": "https://github.com/jub0t/Concat",
-    "license": {
-        "identifier": "AGPL-3.0",
-        "url": "https://github.com/jub0t/Concat/blob/main/LICENSE"
-    },
+    "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jub0t/Concat/releases/download/v0.2.6/Concat-0.2.6-windows-x86_64-setup.exe",
-            "hash": "ee26f6238dbec76267418d5bf0e2bd42c29268d1678b0a60bf06b7dfbf9e1922"
+            "url": "https://github.com/jub0t/Concat/releases/download/v0.2.2/Concat-0.2.2-windows-x86_64.zip",
+            "hash": "0f51b7bc0b02ee8d084fbd7769f6f19594fb437ea22aa95d9126efc262303f21",
+            "extract_dir": "Concat-0.2.2-windows-x86_64"
         },
         "arm64": {
-            "url": "https://github.com/jub0t/Concat/releases/download/v0.2.6/Concat-0.2.6-windows-aarch64-setup.exe",
-            "hash": "377c3e6eedc88a79d19387a938054e19f755262ad484f590b6a78dfcdb8e926b"
+            "url": "https://github.com/jub0t/Concat/releases/download/v0.2.2/Concat-0.2.2-windows-aarch64.zip",
+            "hash": "f0389ec8f72f1199e89eed07cd48a18fd087269a297c8bfe19fe28323af9e81c",
+            "extract_dir": "Concat-0.2.2-windows-aarch64"
         }
     },
-    "innosetup": true,
-    "installer": {
-        "script": [
-            "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\app.concat.editor\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\app.concat.editor\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
     "bin": "concat.exe",
+    "persist": [
+        "app.concat.editor",
+        ".config/app.concat.editor",
+        ".local/share/app.concat.editor"
+    ],
     "shortcuts": [
         [
             "concat.exe",
             "Concat"
         ]
     ],
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\app.concat.editor\")) { New-Item -ItemType Directory -Path \"$dir\\app.concat.editor\" | Out-Null }"
+    ],
     "checkver": {
-        "github": "https://api.github.com/repos/jub0t/Concat/releases/latest",
-        "jp": "$.tag_name",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/jub0t/Concat"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/jub0t/Concat/releases/download/v$version/Concat-$version-windows-x86_64-setup.exe"
+                "url": "https://github.com/jub0t/Concat/releases/download/v$version/Concat-$version-windows-x86_64.zip",
+                "extract_dir": "Concat-$version-windows-x86_64"
             },
             "arm64": {
-                "url": "https://github.com/jub0t/Concat/releases/download/v$version/Concat-$version-windows-aarch64-setup.exe"
+                "url": "https://github.com/jub0t/Concat/releases/download/v$version/Concat-$version-windows-aarch64.zip",
+                "extract_dir": "Concat-$version-windows-aarch64"
             }
         },
         "hash": {
-            "url": "$baseurl/SHA256SUMS"
+            "url": "$baseurl/SHA256SUMS",
+            "find": "$basename"
         }
-    }
+    },
+    "notes": [
+        "Portable mode: place a 'portable' folder beside concat.exe to keep settings, recents, and models local.",
+        "On Windows the app stores config at %APPDATA%\\app.concat.editor — persist entry 'app.concat.editor' maps to $dir\\app.concat.editor."
+    ]
 }

@@ -1,51 +1,43 @@
 {
-    "version": "2.0.1-alpha+80267a0",
-    "description": "Clash Nyanpasu! (∠・ω< )⌒☆ An opinionated Clash GUI based on Tauri.",
-    "homepage": "https://github.com/libnyanpasu/clash-nyanpasu",
-    "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_2.0.1-alpha+80267a0_x86_64_portable.zip",
-            "hash": "63fd98af534da20a650ffc3163549e03c38421f2910b59eafab4a8d65acd6fcd"
-        },
-        "arm64": {
-            "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_2.0.1-alpha+80267a0_aarch64_portable.zip",
-            "hash": "e436a24cf36a052b3cccf095474cc722a7efbc9ee927b0d6aeb85a697ddb83e7"
-        }
+  "version": "2.0.0-alpha+22e1793",
+  "description": "An opinionated Clash GUI based on Tauri.",
+  "homepage": "https://nyanpasu.elaina.moe/",
+  "license": "GPL-3.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_2.0.0-alpha+22e1793_x86_64_portable.zip",
+      "hash": "5231b6cc8ff0e0aa4b0dcd5d7a86695d940aee5a3731b1cd8e6d937d84d24bbd"
     },
-    "shortcuts": [
-        [
-            "Clash Nyanpasu.exe",
-            "Clash Nyanpasu Nightly"
-        ]
-    ],
-    "persist": ".config",
-    "post_install": [
-        "if (!(Test-Path \"$persist_dir\\.config\\PORTABLE\")) {",
-        "    New-Item -Path \"$persist_dir\\.config\\PORTABLE\" -ItemType file | Out-Null",
-        "}"
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/libnyanpasu/clash-nyanpasu/releases/tags/pre-release",
-        "jsonpath": "$.assets[*].name",
-        "regex": "Clash\\.Nyanpasu_(?<version>[^\",]+?)_x86_64_portable\\.zip"
+    "32bit": {
+      "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_2.0.0-alpha+22e1793_i686_portable.zip",
+      "hash": "d2636f765b7043e0ab137b21334e164044d853f5caba713d218ffdbf5210d5e8"
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_$version_x86_64_portable.zip",
-                "hash": {
-                    "url": "https://api.github.com/repos/libnyanpasu/clash-nyanpasu/releases/tags/pre-release",
-                    "jsonpath": "$.assets[?(@.name=='Clash.Nyanpasu_$version_x86_64_portable.zip')].digest"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_$version_aarch64_portable.zip",
-                "hash": {
-                    "url": "https://api.github.com/repos/libnyanpasu/clash-nyanpasu/releases/tags/pre-release",
-                    "jsonpath": "$.assets[?(@.name=='Clash.Nyanpasu_$version_aarch64_portable.zip')].digest"
-                }
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_2.0.0-alpha+22e1793_aarch64_portable.zip",
+      "hash": "2e528f53983f6c90bd2b0ad986ad16f4a4ff734277ec0f0268358012c1a11812"
     }
+  },
+  "shortcuts": [
+    [
+      "Clash Nyanpasu.exe",
+      "Clash Nyanpasu"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/expanded_assets/pre-release",
+    "regex": "Clash.Nyanpasu_(.*?)_x86_64_portable"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_$version_x86_64_portable.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_$version_i686_portable.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/libnyanpasu/clash-nyanpasu/releases/download/pre-release/Clash.Nyanpasu_$version_aarch64_portable.zip"
+      }
+    }
+  }
 }
