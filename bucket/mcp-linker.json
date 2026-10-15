@@ -1,12 +1,12 @@
 {
-    "version": "2.5.0",
+    "version": "2.6.0",
     "description": "mcp manager, add & syncs MCP server configurations across clients like Claude, Cursor💡 build-in AI assistant",
     "homepage": "https://github.com/milisp/mcp-linker",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/milisp/mcp-linker/releases/download/v2.5.0/MCPLinker_2.5.0_x64-setup.exe#/App.7z",
-            "hash": "f61dc5efb6bd1edbf844079cf2a2028353b84efe7cfd2ba90de6703514e19b2b"
+            "url": "https://github.com/milisp/mcp-linker/releases/download/v2.6.0/MCPLinker_2.6.0_x64-setup.exe#/App.7z",
+            "hash": "fffe64a07643598293b9e7866ca0c0811d91d84d85cf35df942676ac1cc0b205"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse",
