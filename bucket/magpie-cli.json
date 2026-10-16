@@ -1,43 +1,26 @@
 {
-    "version": "0.1.1265",
-    "description": "Terminal-only CLI for Magpie — one gateway to pick and route every coding agent's LLM API",
-    "homepage": "https://usemagpie.ai/",
+    "version": "0.1.1266",
+    "description": "Codex on DeepSeek, Claude Code on Kimi, from the menu bar",
+    "homepage": "https://github.com/yetone/magpie",
     "license": "MIT",
-    "notes": [
-        "Terminal-only lightweight build of Magpie for headless servers, WSL, and command-line usage.",
-        "Available commands: magpie, magpie-cli."
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1265/magpie-cli-windows-amd64.exe#/magpie-cli.exe",
-            "hash": "b61dc6edca329b121a59f328fcfb6bc0098f8cb7f2859e8374cb6435ca112aa3"
-        },
-        "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1265/magpie-cli-windows-arm64.exe#/magpie-cli.exe",
-            "hash": "9d779041bdce00c2acc2d950ec1485a233bfb87a18dad531a895c0352a015aa7"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.1266/magpie-cli-windows-amd64.exe#/magpie.exe",
+            "hash": "326daa61007aca2a3ecc9f01ce8affe294d8bcb28a3a7cee3da369373e60f48d"
         }
     },
-    "bin": [
-        "magpie-cli.exe",
-        [
-            "magpie-cli.exe",
-            "magpie"
-        ]
-    ],
+    "bin": "magpie-cli.exe",
     "checkver": {
         "github": "https://github.com/yetone/magpie-releases"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-cli-windows-amd64.exe#/magpie-cli.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-cli-windows-arm64.exe#/magpie-cli.exe"
+                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-cli-windows-amd64.exe#/magpie.exe",
+                "hash": {
+                    "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/SHA256SUMS"
+                }
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS"
         }
     }
 }

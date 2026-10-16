@@ -1,13 +1,13 @@
 {
-    "version": "4.43.0.3607",
+    "version": "4.43.1.3614",
     "description": "网易UU远程，提供低延迟远程连接与云游戏体验。",
     "homepage": "https://uuyc.163.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://uuyc.163.com/"
     },
-    "url": "https://a56.gdl.netease.com/UURemote_Setup_4.43.0.3607_1015144028_gwqd.exe?key1=d2247c45f74c71e2364f76d310d33b08&key2=6ad1d897&n=uuyc_4.43.0.exe",
-    "hash": "f26f84f01551538b9f6996d5cf0ccbf884fb12731903a4f3efa73be712c44da4",
+    "url": "https://a56.gdl.netease.com/UURemote_Setup_4.43.1.3614_1016022822_gwqd.exe?key1=03b876e904ee3e8a85217ae5da2c889c&key2=6ad253e2&n=uuyc_4.43.1.exe",
+    "hash": "9a69473798ad4861b966607859adbba9c8d1b2a2a0ea9e22bba7f14969656263",
     "installer": {
         "script": [
             "$src = \"$env:LOCALAPPDATA\\GameViewer\"",
@@ -96,12 +96,13 @@
             "$response.Close()",
             "return $location"
         ],
-        "regex": "https://a56\\.gdl\\.netease\\.com/UURemote_Setup_(?<version>[\\d.]+)_(?<build>[^?]+)\\.exe(?<query>\\?.*)"
+        "regex": "(?<url>https://a56\\.gdl\\.netease\\.com/UURemote_Setup_(?<version>[\\d.]+)_[^?]+\\.exe\\?.*)"
     },
     "autoupdate": {
-        "url": "https://a56.gdl.netease.com/UURemote_Setup_$matchVersion_$matchBuild.exe$matchQuery",
+        "url": "$matchUrl",
         "hash": {
             "mode": "download"
         }
-    }
+    },
+    "note": "This app does not persist user data, as there is no need to do so."
 }
