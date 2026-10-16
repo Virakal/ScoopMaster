@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "description": "Optimize and minify SVG files with SVGO and export them to PNG.",
+    "homepage": "https://tools.chaitanyaprabuddha.com/svg-optimizer",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/chayprabs/localtools/releases/download/svg-optimizer-v1.0.0/svg-optimizer-1.0.0-windows-x64.zip",
+            "hash": "db03a5b4f6c1c303e85fd832d22fa3734e575519e1c817626d033bac1e3be238"
+        }
+    },
+    "bin": "localtools-svg-optimizer.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/chayprabs/localtools/releases?per_page=100",
+        "regex": "\"tag_name\":\\s*\"svg-optimizer-v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/chayprabs/localtools/releases/download/svg-optimizer-v$version/svg-optimizer-$version-windows-x64.zip"
+            }
+        }
+    }
+}

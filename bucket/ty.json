@@ -4,13 +4,13 @@
     "homepage": "https://docs.astral.sh/ty/",
     "license": "MIT",
     "architecture": {
-        "32bit": {
-            "url": "https://github.com/astral-sh/ty/releases/download/0.0.89/ty-i686-pc-windows-msvc.zip",
-            "hash": "0338fc02890f6172c52b8ce50db235a1b654f6a55a5e057ae37770a72087c885"
-        },
         "64bit": {
             "url": "https://github.com/astral-sh/ty/releases/download/0.0.89/ty-x86_64-pc-windows-msvc.zip",
             "hash": "59232824e08b30b5aed11bab9a2d1296eab75c736938f6b8884e4597700a0fb2"
+        },
+        "32bit": {
+            "url": "https://github.com/astral-sh/ty/releases/download/0.0.89/ty-i686-pc-windows-msvc.zip",
+            "hash": "0338fc02890f6172c52b8ce50db235a1b654f6a55a5e057ae37770a72087c885"
         },
         "arm64": {
             "url": "https://github.com/astral-sh/ty/releases/download/0.0.89/ty-aarch64-pc-windows-msvc.zip",
@@ -23,15 +23,18 @@
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://github.com/astral-sh/ty/releases/download/$version/ty-i686-pc-windows-msvc.zip"
-            },
             "64bit": {
                 "url": "https://github.com/astral-sh/ty/releases/download/$version/ty-x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/astral-sh/ty/releases/download/$version/ty-i686-pc-windows-msvc.zip"
             },
             "arm64": {
                 "url": "https://github.com/astral-sh/ty/releases/download/$version/ty-aarch64-pc-windows-msvc.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }
