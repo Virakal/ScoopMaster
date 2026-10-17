@@ -1,12 +1,12 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Merge, split, reorder, rotate, compress, stamp, number, encrypt and fill PDF forms, offline.",
     "homepage": "https://tools.chaitanyaprabuddha.com/pdf-toolkit",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chayprabs/localtools/releases/download/pdf-toolkit-v1.0.0/pdf-toolkit-1.0.0-windows-x64.zip",
-            "hash": "0c935c937abb9c3f856361bfd79b7f8cfc1bb40014e9719c96bc732162d6b484"
+            "url": "https://github.com/chayprabs/localtools/releases/download/pdf-toolkit-v1.0.2/pdf-toolkit-1.0.2-windows-x64.zip",
+            "hash": "b4998a14869806f80b7ac0b4c5f81cc596e49ee528e85e512461b8a231d7dc43"
         }
     },
     "bin": "localtools-pdf-toolkit.exe",
