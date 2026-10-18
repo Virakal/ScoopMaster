@@ -11,7 +11,7 @@
     },
     "pre_install": [
         "& 7z.exe x \"$dir\\Pebble_${version}_x64-setup.exe\" -o\"$dir\" -y | Out-Null",
-        "Remove-Item \"$dir\\Pebble_${version}_x64-setup.exe\", (Join-Path $dir '$PLUGINSDIR') -Recurse -Force -ErrorAction SilentlyContinue"
+        "Remove-Item \"$dir\\Pebble_${version}_x64-setup.exe\", (Join-Path $dir '$PLUGINSDIR'), \"$dir\\uninstall.exe\" -Recurse -Force -ErrorAction SilentlyContinue"
     ],
     "bin": [
         [
