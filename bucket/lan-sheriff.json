@@ -1,0 +1,29 @@
+{
+    "version": "1.0.2",
+    "description": "Self-hosted network monitor: watch what leaves, map where it goes, flag what does not belong",
+    "homepage": "https://github.com/291-Group/LAN-Sheriff",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/291-Group/LAN-Sheriff/releases/download/v1.0.2/lan-sheriff_1.0.2_windows_amd64.tar.gz",
+            "hash": "11c7632639efe4734fd642fa79808433f33bd7c0b80f5928589938cdab7882ae"
+        }
+    },
+    "bin": "lan-sheriff.exe",
+    "notes": [
+        "Deputy Mode works now and needs no privileges.",
+        "Patrol Mode additionally needs Npcap, from https://npcap.com , which cannot be bundled because its licence forbids redistribution.",
+        "Seeing other devices also needs a vantage point: https://github.com/291-Group/LAN-Sheriff/blob/main/docs/VANTAGE-POINTS.md",
+        "Start it with: lan-sheriff"
+    ],
+    "checkver": {
+        "github": "https://github.com/291-Group/LAN-Sheriff"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/291-Group/LAN-Sheriff/releases/download/v$version/lan-sheriff_$version_windows_amd64.tar.gz"
+            }
+        }
+    }
+}
