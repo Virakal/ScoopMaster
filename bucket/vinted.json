@@ -1,19 +1,19 @@
 {
-    "version": "0.2.0",
+    "version": "0.2.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Microck/vinted-cli/releases/download/v0.2.0/vinted_0.2.0_windows_amd64.zip",
+            "url": "https://github.com/Microck/vinted-cli/releases/download/v0.2.2/vinted_0.2.2_windows_amd64.zip",
             "bin": [
                 "vinted.exe"
             ],
-            "hash": "f9ac659615124d047561609fac2a92b9f7f45de8c5c4d2433445556d8df12f2d"
+            "hash": "3dcdaa15f5360191f19671b229d3886043e3224383e0ab7a097e3fa0867e016d"
         },
         "arm64": {
-            "url": "https://github.com/Microck/vinted-cli/releases/download/v0.2.0/vinted_0.2.0_windows_arm64.zip",
+            "url": "https://github.com/Microck/vinted-cli/releases/download/v0.2.2/vinted_0.2.2_windows_arm64.zip",
             "bin": [
                 "vinted.exe"
             ],
-            "hash": "bac5b5d8be96355be32c92edc548503747eea95b0d852d784dde60fe030fd68a"
+            "hash": "2dc8c12f4e6bf4654357146f0ef46fbc081a93096705e2cff503739a981aecf2"
         }
     },
     "homepage": "https://github.com/Microck/vinted-cli",

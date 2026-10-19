@@ -1,19 +1,19 @@
 {
-    "version": "0.4.0",
+    "version": "0.4.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Microck/wallapop-cli/releases/download/v0.4.0/wallapop_0.4.0_windows_amd64.zip",
+            "url": "https://github.com/Microck/wallapop-cli/releases/download/v0.4.2/wallapop_0.4.2_windows_amd64.zip",
             "bin": [
                 "wallapop.exe"
             ],
-            "hash": "0530399fe54dd2e655d91f92037079c665ad314c85fd4adacc886b97b9674626"
+            "hash": "b6feff7e4efbe389bf169cd556792d4ac20050ad24891623d877ea4036ce15aa"
         },
         "arm64": {
-            "url": "https://github.com/Microck/wallapop-cli/releases/download/v0.4.0/wallapop_0.4.0_windows_arm64.zip",
+            "url": "https://github.com/Microck/wallapop-cli/releases/download/v0.4.2/wallapop_0.4.2_windows_arm64.zip",
             "bin": [
                 "wallapop.exe"
             ],
-            "hash": "d6889ce7fbc2c8d897648247f67ddc1c8134f50ce2def151370680508daf190a"
+            "hash": "5a744366b17a5bebf7daf9638c40a44982603c26d50557fc938aff65f2ec6636"
         }
     },
     "homepage": "https://github.com/Microck/wallapop-cli",
