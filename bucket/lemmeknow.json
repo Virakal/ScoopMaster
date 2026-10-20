@@ -11,7 +11,10 @@
         }
     },
     "bin": [
-        ["lemmeknow-windows.exe", "lemmeknow"]
+        [
+            "lemmeknow-windows.exe",
+            "lemmeknow"
+        ]
     ],
     "checkver": {
         "github": "https://github.com/swanandx/lemmeknow"
@@ -19,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/swanandx/lemmeknow/releases/download/v$cleanVersion/lemmeknow-windows.exe"
+                "url": "https://github.com/swanandx/lemmeknow/releases/download/v$version/lemmeknow-windows.exe"
             }
         }
     }

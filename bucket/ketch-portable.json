@@ -1,42 +1,42 @@
 {
-    "version": "0.10.0",
-    "description": "A fast, open-source download manager for every device you own.",
-    "homepage": "https://github.com/linroid/Ketch",
-    "license": {
-        "identifier": "Apache-2.0 license",
-        "url": "https://github.com/linroid/Ketch#Apache-2.0-1-ov-file"
+  "version": "0.10.0",
+  "description": "A fast, open-source download manager for every device you own.",
+  "homepage": "https://github.com/linroid/Ketch",
+  "license": {
+    "identifier": "Apache-2.0 license",
+    "url": "https://github.com/linroid/Ketch#Apache-2.0-1-ov-file"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/linroid/Ketch/releases/download/v0.10.0/ketch-desktop-0.10.0-windows-x64-portable.zip",
+      "hash": "281808ec67dc63195cae4354ca0b37027dd064974e4d57ac31fcb8d370db4f2a"
     },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/linroid/Ketch/releases/download/v0.10.0/ketch-desktop-0.10.0-windows-x64-portable.zip",
-            "hash": "281808ec67dc63195cae4354ca0b37027dd064974e4d57ac31fcb8d370db4f2a"
-        },
-        "arm64": {
-            "url": "https://github.com/linroid/Ketch/releases/download/v0.10.0/ketch-desktop-0.10.0-windows-arm64-portable.zip",
-            "hash": "df3451f98b1850cca94a384d897424638b331aa34c1f9f9788557680568b6061"
-        }
-    },
-    "extract_dir": "Ketch",
-    "bin": "Ketch.exe",
-    "shortcuts": [
-        [
-            "Ketch.exe",
-            "Ketch"
-        ]
-    ],
-    "checkver": {
-        "github": "https://api.github.com/repos/linroid/Ketch/releases",
-        "jp": "$[0].tag_name",
-        "regex": "v([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/linroid/Ketch/releases/download/v$version/ketch-desktop-$version-windows-x64-portable.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/linroid/Ketch/releases/download/v$version/ketch-desktop-$version-windows-arm64-portable.zip"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/linroid/Ketch/releases/download/v0.10.0/ketch-desktop-0.10.0-windows-arm64-portable.zip",
+      "hash": "df3451f98b1850cca94a384d897424638b331aa34c1f9f9788557680568b6061"
     }
+  },
+  "extract_dir": "Ketch",
+  "bin": "Ketch.exe",
+  "shortcuts": [
+    [
+      "Ketch.exe",
+      "Ketch"
+    ]
+  ],
+  "checkver": {
+    "github": "https://api.github.com/repos/linroid/Ketch/releases",
+    "jp": "$[0].tag_name",
+    "regex": "v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/linroid/Ketch/releases/download/v$version/ketch-desktop-$version-windows-x64-portable.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/linroid/Ketch/releases/download/v$version/ketch-desktop-$version-windows-arm64-portable.zip"
+      }
+    }
+  }
 }

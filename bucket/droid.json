@@ -1,28 +1,26 @@
 {
-    "version": "0.244.0",
-    "description": "Factory CLI（droid）命令行工具，用于连接 Factory 平台与本地开发环境。",
-    "homepage": "https://docs.factory.ai/cli/getting-started/overview",
-    "license": "Proprietary",
+    "version": "6.8.0",
+    "description": "DROID (Digital Record and Object Identification)",
+    "homepage": "https://github.com/digital-preservation/droid",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.factory.ai/factory-cli/releases/0.244.0/windows/x64/droid.exe",
-            "hash": "59a2afa69c806bc15ee5ed9d733b9b3fbde7709686ac256032bb9e45175f4557"
+            "url": "https://github.com/digital-preservation/droid/releases/download/droid-6.8.0/droid-binary-6.8.0-bin-win64-with-jre.zip",
+            "hash": "68ec8572485ea2c4d571829bd3c4f4f207b215eec9c5bb9e88189a75336e19e7"
         }
     },
-    "bin": "droid.exe",
+    "bin": "droid.bat",
     "checkver": {
-        "url": "https://app.factory.ai/cli/windows",
-        "regex": "\\$version = \\\"([0-9.]+)\\\""
+        "github": "https://api.github.com/repos/digital-preservation/droid/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /-bin-win64-with-jre\\.zip$/)].browser_download_url",
+        "regex": "/releases/download/(?<tag>(?:droid-)?(?<version>[\\d.]+))/droid-binary-[\\d.]+-bin-win64-with-jre\\.zip",
+        "replace": "${version}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.factory.ai/factory-cli/releases/$version/windows/x64/droid.exe"
+                "url": "https://github.com/digital-preservation/droid/releases/download/$matchTag/droid-binary-$version-bin-win64-with-jre.zip"
             }
-        },
-        "hash": {
-            "url": "https://downloads.factory.ai/factory-cli/releases/$version/windows/x64/droid.exe.sha256",
-            "regex": "^(?<hash>[a-f0-9]{64})$"
         }
     }
 }
