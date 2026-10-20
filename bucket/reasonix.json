@@ -1,30 +1,31 @@
 {
     "version": "2.46.0",
-    "description": "DeepSeek-native AI coding agent for your terminal",
-    "homepage": "https://github.com/esengine/DeepSeek-Reasonix",
+    "description": "Reasonix CLI, official CLI for Reasonix, a DeepSeek-native AI coding agent built to reduce API costs through aggressive context caching.",
+    "homepage": "https://reasonix.io",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/v2.46.0/reasonix-windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v2.46.0/reasonix-windows-amd64.zip",
             "hash": "cae90342109b9e38c456c486e954442608811a374f1f39bbc5f6a91d6d17845b"
         },
         "arm64": {
-            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/v2.46.0/reasonix-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v2.46.0/reasonix-windows-arm64.zip",
             "hash": "d319fe6586c58af06e30ada3ceb4644ce1b60e9250748d4e3b8309412f0f7353"
         }
     },
     "bin": "reasonix.exe",
     "checkver": {
-        "url": "https://github.com/esengine/DeepSeek-Reasonix/releases",
-        "regex": "tag/v(?<version>[\\d.]+)"
+        "github": "https://api.github.com/repos/esengine/DeepSeek-Reasonix/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "\"v([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-amd64.zip"
             },
             "arm64": {
-                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-arm64.zip"
             }
         },
         "hash": {
