@@ -1,5 +1,5 @@
 {
-    "version": "0.3.19",
+    "version": "0.3.20",
     "description": "Terminal Markdown reader: typeset maths, images, syntax highlighting",
     "homepage": "https://github.com/wudream813/markdown-in-terminal",
     "license": "MIT",
@@ -9,9 +9,9 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wudream813/markdown-in-terminal/releases/download/v0.3.19/mdt-0.3.19-win64.zip",
-            "hash": "217a0b21e504aa891179b33aab94ced1b729dd8133c82d33fbc6c28ccbdb4689",
-            "extract_dir": "mdt-0.3.19-win64"
+            "url": "https://github.com/wudream813/markdown-in-terminal/releases/download/v0.3.20/mdt-0.3.20-win64.zip",
+            "hash": "599f950699665c5c573ecee928c47e37ce5c70a686cdc43b7757eabe67fc8a80",
+            "extract_dir": "mdt-0.3.20-win64"
         }
     },
     "bin": "mdt.exe",
