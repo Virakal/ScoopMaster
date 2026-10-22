@@ -1,0 +1,18 @@
+{
+    "version": "0.4.0",
+    "description": "GrudgeLap - a keyboard-playable homage to the 1989 arcade driving simulators: stunt track with loop and drawbridge, traffic, ghost lap, two cars with real engine recordings.",
+    "homepage": "https://github.com/korayorhun/GrudgeLap",
+    "license": "MIT",
+    "url": "https://github.com/korayorhun/GrudgeLap/releases/download/v0.4.0/GrudgeLap-Portable-0.4.0.zip",
+    "hash": "a819bbb6b8ce15b79f450167739652fc45367bb6a541db0eb9b49d02cf87c6e2",
+    "shortcuts": [
+        [
+            "GrudgeLap.exe",
+            "GrudgeLap"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/korayorhun/GrudgeLap/releases/download/v$version/GrudgeLap-Portable-$version.zip"
+    }
+}
