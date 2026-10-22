@@ -17,7 +17,8 @@
             "if (-not (Test-Path \"$persist_dir\\data\")) { New-Item -ItemType Directory -Path \"$persist_dir\\data\" -Force | Out-Null }",
             "Write-Host 'Running MetasequoiaIME installer (confirm the UAC prompt)...' -f Cyan",
             "$proc = Start-Process -FilePath \"$dir\\$fname\" -ArgumentList @('/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART', \"/DATADIR=`\"$persist_dir\\data`\"\") -Wait -PassThru",
-            "if ($proc.ExitCode -notin @(0, 1641, 3010)) { throw \"Installer exited with code $($proc.ExitCode).\" }"
+            "if ($proc.ExitCode -notin @(0, 1641, 3010)) { throw \"Installer exited with code $($proc.ExitCode).\" }",
+            "Remove-Item \"$dir\\$fname\" -Force -ErrorAction SilentlyContinue"
         ]
     },
     "post_install": [
