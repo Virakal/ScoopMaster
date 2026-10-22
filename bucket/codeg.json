@@ -26,7 +26,8 @@
         ]
     ],
     "bin": [
-        "codeg.exe",
+        "codeg-cli.exe",
+        ["codeg-cli.exe", "codeg"],
         "codeg-computer-helper.exe",
         "codeg-mcp.exe"
     ],
