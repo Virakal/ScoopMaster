@@ -3,7 +3,10 @@
     "description": "Mise Backend Resolver: recommends which mise backend to install a GitHub repository with (uv tool install)",
     "homepage": "https://github.com/hasansezertasan/mibare",
     "license": "MIT",
-    "depends": "uv",
+    "depends": [
+        "mise",
+        "uv"
+    ],
     "url": "https://raw.githubusercontent.com/hasansezertasan/scoop-bucket/main/scripts/noop.ps1",
     "hash": "fdcbbea851292d9aa67f598bc6f1ab96e58873385972cd3d209ccab239cbad87",
     "installer": {
