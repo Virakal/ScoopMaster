@@ -1,35 +1,26 @@
 {
-    "version": "0.13.0",
-    "description": "An open-source, clean-room reimplementation of Adobe Photoshop built in pure Rust",
-    "homepage": "https://github.com/storytold/photocraft",
-    "license": "MIT|Apache 2.0",
+    "version": "0.14.0",
+    "description": "Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust",
+    "homepage": "https://getartcraft.com/apps/photocraft",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/storytold/photocraft/releases/download/v0.13.0/photocraft-0.13.0-windows-x64-portable.zip",
-            "hash": "c766bbab26665937f6f3340b4d4e09e19dfece5b8fd64cf6e580d6dd44303655",
-            "extract_dir": "photocraft-0.13.0-windows-x64-portable"
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.14.0/photocraft-0.14.0-windows-x64-portable.zip",
+            "hash": "5b814c15034ddc68d35da837aef0cec18c90e9325f7682f516dfc331d64e9ab0",
+            "extract_dir": "photocraft-0.14.0-windows-x64-portable"
         },
         "32bit": {
-            "url": "https://github.com/storytold/photocraft/releases/download/v0.13.0/photocraft-0.13.0-windows-x86-portable.zip",
-            "hash": "3ed594bbf2cdb0def3d0a0fbc21df6a2dfcf84f2b5948c3b326db6198e80ffcc",
-            "extract_dir": "photocraft-0.13.0-windows-x86-portable"
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.14.0/photocraft-0.14.0-windows-x86-portable.zip",
+            "hash": "0d757e413349d7ba605a1a128bcbf847842fb95a812869305699bc4fde198366",
+            "extract_dir": "photocraft-0.14.0-windows-x86-portable"
         },
         "arm64": {
-            "url": "https://github.com/storytold/photocraft/releases/download/v0.13.0/photocraft-0.13.0-windows-arm64-portable.zip",
-            "hash": "238e45effcf1506925ce0c2e8197d36ea139b1f37759f223b4b7912dec5766f3",
-            "extract_dir": "photocraft-0.13.0-windows-arm64-portable"
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.14.0/photocraft-0.14.0-windows-arm64-portable.zip",
+            "hash": "9bf9780c07931577643e0dc4d64ed6732fba14ad4e6cfc4c278b9029c906f118",
+            "extract_dir": "photocraft-0.14.0-windows-arm64-portable"
         }
     },
-    "bin": [
-        [
-            "photocraft.exe",
-            "PhotoCraft"
-        ],
-        [
-            "photocraft-cli.exe",
-            "photocraft-cli"
-        ]
-    ],
+    "bin": "photocraft-cli.exe",
     "shortcuts": [
         [
             "photocraft.exe",
@@ -37,7 +28,9 @@
         ]
     ],
     "persist": "PhotoCraftData",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/storytold/photocraft"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -52,6 +45,9 @@
                 "url": "https://github.com/storytold/photocraft/releases/download/v$version/photocraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "photocraft-$version-windows-arm64-portable"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
