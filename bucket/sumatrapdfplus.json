@@ -1,34 +1,34 @@
 {
-    "version": "3.7.68",
-    "description": "Windows 下的 PDF / 电子书阅读器，针对中文 EPUB/MOBI、离线查词、主题与 PDF 智能暗黑模式等做了增强。",
-    "homepage": "https://github.com/dengxibo/sumatrapdf-plus",
-    "license": {
-        "identifier": "GPL-3.0",
-        "url": "https://github.com/dengxibo/sumatrapdf-plus/blob/main/COPYING"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/3.7.68/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe",
-            "hash": "85eb16419f5ca6d4594fb17b678d2b2f0102eb055a7ec782dc4671bb426e5350"
-        }
-    },
-    "bin": "SumatraPDFPlus.exe",
-    "shortcuts": [
-        [
-            "SumatraPDFPlus.exe",
-            "SumatraPDFPlus"
-        ]
-    ],
-    "checkver": {
-        "github": "https://api.github.com/repos/dengxibo/sumatrapdf-plus/releases",
-        "jp": "$[0].tag_name",
-        "regex": "([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/$version/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe"
-            }
-        }
+  "version": "3.7.65",
+  "description": "Windows 下的 PDF / 电子书阅读器，针对中文 EPUB/MOBI、离线查词、主题与 PDF 智能暗黑模式等做了增强。",
+  "homepage": "https://github.com/dengxibo/sumatrapdf-plus",
+  "license": {
+    "identifier": "GPL-3.0",
+    "url": "https://github.com/dengxibo/sumatrapdf-plus/blob/main/COPYING"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/3.7.65/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe",
+      "hash": "c913f935d0cb920a79e246dd2d101360ffead85009c248140b285312e5bba5dc"
     }
+  },
+  "bin": "SumatraPDFPlus.exe",
+  "shortcuts": [
+    [
+      "SumatraPDFPlus.exe",
+      "SumatraPDFPlus"
+    ]
+  ],
+  "checkver": {
+    "github": "https://api.github.com/repos/dengxibo/sumatrapdf-plus/releases",
+    "jp": "$[0].tag_name",
+    "regex": "([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/$version/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe"
+      }
+    }
+  }
 }
