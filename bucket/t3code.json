@@ -1,6 +1,6 @@
 {
     "version": "0.1.2",
-    "description": "The open-source control plane for coding agents. Orchestrate Claude Code, Codex, OpenCode, Cursor, and Grok from one surface.",
+    "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes",
     "license": "MIT",
     "architecture": {
@@ -9,38 +9,27 @@
             "hash": "sha512:42f94ece2e344b211f0dc5ff5fabd2713d14d050c4f5f5ff59e7fb952f2c990035b2bb1ce21fc4bf352c2d98ed36fd51bbeefb43fce84b5fd99db9f9fe3b9a40"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue",
-            "$exe = Get-ChildItem \"$dir\\T3 Code*.exe\" -ErrorAction SilentlyContinue | Select-Object -First 1",
-            "if ($exe) { Rename-Item $exe.FullName 'T3 Code.exe' -Force }"
-        ]
-    },
-    "bin": [
-        [
-            "T3 Code.exe",
-            "t3code"
-        ]
-    ],
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
     "shortcuts": [
         [
-            "T3 Code.exe",
+            "T3 Code (Alpha).exe",
             "T3 Code"
         ]
     ],
+    "bin": "T3 Code (Alpha).exe",
     "checkver": {
-        "github": "https://github.com/pingdotgg/t3code"
+        "url": "https://github.com/pingdotgg/t3code/releases/latest",
+        "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z"
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/latest.yml",
+                    "regex": "url:\\s+T3-Code-$version-x64\\.exe\\s+sha512:\\s+$base64"
+                }
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }
