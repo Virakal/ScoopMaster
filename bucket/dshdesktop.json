@@ -1,0 +1,40 @@
+{
+    "version": "0.2.1-rc.3.20261024.1",
+    "description": "Unofficial portable Windows build of DeepSeek Harness Desktop, an Electron AI coding workspace.",
+    "homepage": "https://github.com/LeeXieXie/dshdesktop-releases",
+    "license": "MIT",
+    "notes": [
+        "Unofficial, unsigned community build, not an official DeepSeek distribution. Based on upstream 0.2.1-rc.3, including prerelease code.",
+        "Uses a bundled Node/Python runtime. No separate dsh CLI installation is required or registered by this manifest.",
+        "The reviewed community patch omits mandatory update-policy metadata for unsigned builds. No official updater feed is configured. Use Scoop for updates.",
+        "User data stays in upstream default locations. No existing configuration is migrated or removed. Do not run concurrently with an official installation sharing that data.",
+        "Build-time runtime/ASAR/ConPTY/Host checks and isolated Windows process startup passed. Account sign-in, model sessions and full GUI interaction were not tested.",
+        "Unsigned binaries may trigger SmartScreen. Review the release notes, build-source.json and retained licenses before installation."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LeeXieXie/dshdesktop-releases/releases/download/v0.2.1-rc.3.20261024.1/dshdesktop-0.2.1-rc.3.20261024.1-windows-x64.zip",
+            "hash": "9a6fa842d68cffb5558d314fd142a31f54627f0d48baed8974b42f5e008f1003"
+        }
+    },
+    "shortcuts": [
+        [
+            "DeepSeek Harness.exe",
+            "DeepSeek Harness Desktop (Community)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/LeeXieXie/dshdesktop-releases/releases/latest",
+        "regex": "/releases/tag/v(\\d+(?:\\.\\d+)+(?:-[0-9A-Za-z.-]+)?)[\"/<>]"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LeeXieXie/dshdesktop-releases/releases/download/v$version/dshdesktop-$version-windows-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
