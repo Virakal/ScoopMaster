@@ -1,8 +1,8 @@
 {
     "version": "0.11.0",
-    "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust.",
-    "homepage": "https://getartcraft.com/apps/wordcraft",
-    "license": "MIT OR Apache-2.0",
+    "description": "Writing and document design; an open-source, clean-room reimplementation of Microsoft Word, rebuilt in pure Rust",
+    "homepage": "https://github.com/storytold/wordcraft",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/wordcraft/releases/download/v0.11.0/wordcraft-0.11.0-windows-x64-portable.zip",
@@ -20,19 +20,14 @@
             "extract_dir": "wordcraft-0.11.0-windows-arm64-portable"
         }
     },
-    "bin": [
-        "wordcraft.exe",
-        "wordcraft-cli.exe"
-    ],
+    "bin": "wordcraft-cli.exe",
     "shortcuts": [
         [
             "wordcraft.exe",
             "WordCraft"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/storytold/wordcraft"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -47,6 +42,9 @@
                 "url": "https://github.com/storytold/wordcraft/releases/download/v$version/wordcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "wordcraft-$version-windows-arm64-portable"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

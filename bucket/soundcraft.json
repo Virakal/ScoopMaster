@@ -1,8 +1,8 @@
 {
     "version": "0.13.1",
-    "description": "Open-source multitrack audio and MIDI production, rebuilt from scratch in Rust.",
-    "homepage": "https://getartcraft.com/apps/soundcraft",
-    "license": "MIT OR Apache-2.0",
+    "description": "Recording, editing and mixing audio; an open-source, clean-room reimplementation of Avid Pro Tools, rebuilt in pure Rust",
+    "homepage": "https://github.com/storytold/soundcraft",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/soundcraft/releases/download/v0.13.1/soundcraft-0.13.1-windows-x64-portable.zip",
@@ -20,19 +20,14 @@
             "extract_dir": "soundcraft-0.13.1-windows-arm64-portable"
         }
     },
-    "bin": [
-        "soundcraft.exe",
-        "soundcraft-cli.exe"
-    ],
+    "bin": "soundcraft-cli.exe",
     "shortcuts": [
         [
             "soundcraft.exe",
             "SoundCraft"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/storytold/soundcraft"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -47,6 +42,9 @@
                 "url": "https://github.com/storytold/soundcraft/releases/download/v$version/soundcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "soundcraft-$version-windows-arm64-portable"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

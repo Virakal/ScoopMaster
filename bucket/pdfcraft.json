@@ -1,8 +1,8 @@
 {
     "version": "0.14.0",
-    "description": "The open-source PDF workbench: read, organize, combine, split and secure.",
+    "description": "The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust",
     "homepage": "https://getartcraft.com/apps/pdfcraft",
-    "license": "MIT OR Apache-2.0",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/pdfcraft/releases/download/v0.14.0/pdfcraft-0.14.0-windows-x64-portable.zip",
@@ -20,10 +20,7 @@
             "extract_dir": "pdfcraft-0.14.0-windows-arm64-portable"
         }
     },
-    "bin": [
-        "pdfcraft.exe",
-        "pdfcraft-cli.exe"
-    ],
+    "bin": "pdfcraft-cli.exe",
     "shortcuts": [
         [
             "pdfcraft.exe",
@@ -47,6 +44,9 @@
                 "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "pdfcraft-$version-windows-arm64-portable"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
