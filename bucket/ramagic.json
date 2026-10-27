@@ -1,5 +1,5 @@
 {
-    "version": "1.22",
+    "version": "1.33",
     "description": "Clear outdated working sets and standby cache to free RAM.",
     "homepage": "https://www.softwareok.com/?Download=RAMagic",
     "license": {
@@ -21,7 +21,7 @@
     "shortcuts": [
         [
             "RAMagic.exe",
-            "RAMagic"
+            "SoftwareOK - RAMagic"
         ]
     ],
     "pre_install": "if (-not (Test-Path \"$persist_dir\\SoftwareOK_Program.ini\")) { New-Item -Path \"$dir\\SoftwareOK_Program.ini\" -ItemType File | Out-Null }",

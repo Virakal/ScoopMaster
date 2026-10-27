@@ -1,5 +1,5 @@
 {
-    "version": "1.06",
+    "version": "1.07",
     "description": "Adjustable desktop rulers with click-through ghost mode.",
     "homepage": "https://www.softwareok.com/?Download=StaticDesktopRuler",
     "license": {
@@ -21,7 +21,7 @@
     "shortcuts": [
         [
             "StaticDesktopRuler.exe",
-            "StaticDesktopRuler"
+            "SoftwareOK - StaticDesktopRuler"
         ]
     ],
     "pre_install": "if (-not (Test-Path \"$persist_dir\\SoftwareOK_Program.ini\")) { New-Item -Path \"$dir\\SoftwareOK_Program.ini\" -ItemType File | Out-Null }",
