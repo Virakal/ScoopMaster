@@ -1,16 +1,16 @@
 {
-	"version": "10.34.5",
+	"version": "10.34.9",
 	"description": "Fast, disk space efficient package manager (version 10)",
 	"homepage": "https://pnpm.io/",
 	"license": "MIT",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/pnpm/pnpm/releases/download/v10.34.5/pnpm-win-x64.exe",
-			"hash": "fa9f420f55723453aaa99a98ca720e9d0e9f58cc808953669927bf15a95b4542"
+			"url": "https://github.com/pnpm/pnpm/releases/download/v10.34.9/pnpm-win-x64.exe",
+			"hash": "e0af8d34dd5319f7e9a6c9838779e7e85caf9cfdedf99a7a4106aa1fdcf16d5c"
 		},
 		"arm64": {
-			"url": "https://github.com/pnpm/pnpm/releases/download/v10.34.5/pnpm-win-arm64.exe",
-			"hash": "3b155b024217aaee9ad1410dcdae22df9222c270f43218a400a037592b009442"
+			"url": "https://github.com/pnpm/pnpm/releases/download/v10.34.9/pnpm-win-arm64.exe",
+			"hash": "ccd563e734c0609c7b8c5b0166eb378d257c47a8dbf863b624f481468c1e0a96"
 		}
 	},
 	"bin": ["pnpm.exe", ["pnpm.exe", "pnpx", "dlx"]],

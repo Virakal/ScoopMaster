@@ -1,22 +1,30 @@
 {
-    "version": "0.42.1",
-    "description": "A powerful and modular stable diffusion GUI and pipeline with a graph/nodes interface.",
+    "version": "0.43.0",
+    "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
     "homepage": "https://github.com/Comfy-Org/ComfyUI",
-    "license": "GPL-3.0-or-later",
+    "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Comfy-Org/ComfyUI/releases/download/v0.42.1/ComfyUI_windows_portable_amd.7z",
-            "hash": "8af051e342de65e5ca2d9f43a5f0b11a6377da10bd96159dc41e8722cc5841fc"
+            "url": "https://github.com/Comfy-Org/ComfyUI/releases/download/v0.43.0/ComfyUI_windows_portable_amd.7z",
+            "hash": "9a26c93ce43a6c277deff1d1a0fc69ca8e039430bad9b96134af560bb201e6cb"
         }
     },
     "extract_dir": "ComfyUI_windows_portable",
-    "persist": [
-        "ComfyUI/models",
-        "ComfyUI/custom_nodes",
-        "ComfyUI/output",
-        "ComfyUI/input"
+    "bin": "run_amd_gpu.bat",
+    "shortcuts": [
+        [
+            "run_amd_gpu.bat",
+            "ComfyUI"
+        ]
     ],
-    "checkver": "github",
+    "persist": [
+        "ComfyUI\\custom_nodes",
+        "ComfyUI\\models",
+        "ComfyUI\\output"
+    ],
+    "checkver": {
+        "github": "https://github.com/Comfy-Org/ComfyUI"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
