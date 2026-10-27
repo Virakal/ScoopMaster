@@ -1,19 +1,19 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/suzuki-shunsuke/rgo/releases/download/v0.1.0/rgo_windows_amd64.zip",
+            "url": "https://github.com/suzuki-shunsuke/rgo/releases/download/v0.1.2/rgo_windows_amd64.zip",
             "bin": [
                 "rgo.exe"
             ],
-            "hash": "632330ae758d0911057ca8af4b4b96a28ac528c26bedb1b043db50a4035cfda0"
+            "hash": "7128b29902d66385266ffd5622e816ac2000c58fa2e9200b9b42fbc3e57b4fdd"
         },
         "arm64": {
-            "url": "https://github.com/suzuki-shunsuke/rgo/releases/download/v0.1.0/rgo_windows_arm64.zip",
+            "url": "https://github.com/suzuki-shunsuke/rgo/releases/download/v0.1.2/rgo_windows_arm64.zip",
             "bin": [
                 "rgo.exe"
             ],
-            "hash": "612ee514944f8d7a4a14894e09b6177b1f3cfdf9c197769071c462e4116e044b"
+            "hash": "c497c89f08a3e7013635f89bef36d538cc956e4e4ef57210199190114a476898"
         }
     },
     "license": "MIT",
