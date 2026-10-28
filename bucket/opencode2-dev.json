@@ -1,40 +1,40 @@
 {
-  "version": "0.0.0-dev-21875",
-  "description": "The open source AI coding agent. (v2)",
-  "homepage": "https://opencode.ai/v2",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-0.0.0-dev-21875.tgz",
-      "hash": "sha512:b09b52c4d4cbca02e46bb9211b813630d32cb259c8486d5802fec572f153f5336b9fa12c9ca0484427790901e23689280edccb312936242503931c54613e2f24"
-    },
-    "arm64": {
-      "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-0.0.0-dev-21875.tgz",
-      "hash": "sha512:d83944e7e01f7768b5a8cc0c13e7dad812f26c883983c75b5b76ffce0009ca1bbf1e2d7c3e4cb5280d72589e0ad1582737ae6c182f9d0faa821d78989f64127c"
-    }
-  },
-  "extract_dir": "package\\bin",
-  "bin": "opencode2.exe",
-  "checkver": {
-    "url": "https://registry.npmjs.org/@opencode/cli/dev",
-    "jsonpath": "$.version"
-  },
-  "autoupdate": {
+    "version": "0.0.0-dev-150",
+    "description": "The open source AI coding agent. (v2)",
+    "homepage": "https://opencode.ai/v2",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-$version.tgz",
-        "hash": {
-          "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/$version",
-          "regex": "sha512-$base64"
+        "64bit": {
+            "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-0.0.0-dev-150.tgz",
+            "hash": "sha512:d9f0bd78b2da3f4fbd270fd81f3074a33c03c85e76c48d0aef5168cc43f7a48d32ca459b5b2318918a77e728750704e1c359bf6341f003bdafadec28c1055e0b"
+        },
+        "arm64": {
+            "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-0.0.0-dev-150.tgz",
+            "hash": "sha512:0d0beefb514e42e0275243821528754237a97e334baca6a84fc1aed702fe310cca86439367332106ef0d213435b4ea06e39c1768b78c35b00b9d8cd28897167c"
         }
-      },
-      "arm64": {
-        "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-$version.tgz",
-        "hash": {
-          "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/$version",
-          "regex": "sha512-$base64"
+    },
+    "extract_dir": "package\\bin",
+    "bin": "opencode2.exe",
+    "checkver": {
+        "url": "https://registry.npmjs.org/@opencode/cli/dev",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-$version.tgz",
+                "hash": {
+                    "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/$version",
+                    "regex": "sha512-$base64"
+                }
+            },
+            "arm64": {
+                "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/-/cli-windows-arm64-$version.tgz",
+                "hash": {
+                    "url": "https://registry.npmjs.org/@opencode/cli-windows-arm64/$version",
+                    "regex": "sha512-$base64"
+                }
+            }
         }
-      }
     }
-  }
 }

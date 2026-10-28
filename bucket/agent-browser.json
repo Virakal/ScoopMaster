@@ -5,29 +5,34 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe#/agent-browser.exe",
-            "hash": "b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751"
+            "url": [
+                "https://github.com/vercel-labs/agent-browser/releases/download/v0.40.0/agent-browser-win32-x64.exe#/agent-browser.exe",
+                "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v0.40.0.zip"
+            ],
+            "hash": [
+                "b142ca8946efda2d506e0947b232596e7949f08296e6b953b57f63eb50fee751",
+                "abd9778634b8a64c30ad92c39338d053b15b1e760428377fd615775dcf095f56"
+            ]
         }
     },
-    "bin": "agent-browser.exe",
     "post_install": [
-        "$zipUrl = \"https://github.com/vercel-labs/agent-browser/archive/refs/tags/v$version.zip\"",
-        "$tempDir = \"$env:TEMP\\agent-browser-skills\"",
-        "New-Item -ItemType Directory -Path $tempDir -Force | Out-Null",
-        "Invoke-WebRequest -Uri $zipUrl -OutFile \"$tempDir\\repo.zip\"",
-        "Expand-Archive -Path \"$tempDir\\repo.zip\" -DestinationPath $tempDir -Force",
-        "$root = Get-ChildItem -Path $tempDir -Directory | Select-Object -First 1",
-        "Copy-Item -Path \"$($root.FullName)\\skills\" -Destination \"$dir\\skills\" -Recurse -Force",
-        "Copy-Item -Path \"$($root.FullName)\\skill-data\" -Destination \"$dir\\skill-data\" -Recurse -Force",
-        "Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue"
+        "# 'agent-browser skills' looks for skills/ and skill-data/ next to the executable,",
+        "# the release executable does not embed them, so keep them from the source archive.",
+        "$src = \"$dir\\agent-browser-$version\"",
+        "Move-Item \"$src\\skills\", \"$src\\skill-data\" $dir",
+        "Remove-Item $src -Recurse -Force"
     ],
+    "bin": "agent-browser.exe",
     "checkver": {
         "github": "https://github.com/vercel-labs/agent-browser"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/vercel-labs/agent-browser/releases/download/v$version/agent-browser-win32-x64.exe#/agent-browser.exe"
+                "url": [
+                    "https://github.com/vercel-labs/agent-browser/releases/download/v$version/agent-browser-win32-x64.exe#/agent-browser.exe",
+                    "https://github.com/vercel-labs/agent-browser/archive/refs/tags/v$version.zip"
+                ]
             }
         }
     }

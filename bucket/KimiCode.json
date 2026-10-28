@@ -1,39 +1,39 @@
 {
-    "version": "2.3.3",
-    "description": "Moonshot AI coding agent CLI",
-    "homepage": "https://github.com/MoonshotAI/kimi-code",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://code.kimi.com/kimi-code/binaries/2.3.3/kimi-code-win32-x64.exe#/kimi-code.exe",
-            "hash": "9fb4c06f631f5fec6358e3f1149ded3b7c91952a2571a8da0ae3a8491e9820c1"
-        },
-        "arm64": {
-            "url": "https://code.kimi.com/kimi-code/binaries/2.3.3/kimi-code-win32-arm64.exe#/kimi-code.exe",
-            "hash": "a710e9ff27689d75d8e840d1e62e776429fd19b2802b23711f72b9cf597fa1e4"
-        }
+  "version": "2.3.3",
+  "description": "Moonshot AI coding agent CLI",
+  "homepage": "https://github.com/MoonshotAI/kimi-code",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://code.kimi.com/kimi-code/binaries/2.3.3/kimi-code-win32-x64.exe#/kimi-code.exe",
+      "hash": "9fb4c06f631f5fec6358e3f1149ded3b7c91952a2571a8da0ae3a8491e9820c1"
     },
-    "bin": "kimi-code.exe",
-    "checkver": {
-        "url": "https://code.kimi.com/kimi-code/latest",
-        "regex": "([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://code.kimi.com/kimi-code/binaries/$version/kimi-code-win32-x64.exe#/kimi-code.exe",
-                "hash": {
-                    "url": "https://code.kimi.com/kimi-code/binaries/$version/manifest.json",
-                    "jsonpath": "$.platforms['win32-x64'].checksum"
-                }
-            },
-            "arm64": {
-                "url": "https://code.kimi.com/kimi-code/binaries/$version/kimi-code-win32-arm64.exe#/kimi-code.exe",
-                "hash": {
-                    "url": "https://code.kimi.com/kimi-code/binaries/$version/manifest.json",
-                    "jsonpath": "$.platforms['win32-arm64'].checksum"
-                }
-            }
-        }
+    "arm64": {
+      "url": "https://code.kimi.com/kimi-code/binaries/2.3.3/kimi-code-win32-arm64.exe#/kimi-code.exe",
+      "hash": "a710e9ff27689d75d8e840d1e62e776429fd19b2802b23711f72b9cf597fa1e4"
     }
+  },
+  "bin": "kimi-code.exe",
+  "checkver": {
+    "url": "https://code.kimi.com/kimi-code/latest",
+    "regex": "([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://code.kimi.com/kimi-code/binaries/$version/kimi-code-win32-x64.exe#/kimi-code.exe",
+        "hash": {
+          "url": "https://code.kimi.com/kimi-code/binaries/$version/manifest.json",
+          "jsonpath": "$.platforms['win32-x64'].checksum"
+        }
+      },
+      "arm64": {
+        "url": "https://code.kimi.com/kimi-code/binaries/$version/kimi-code-win32-arm64.exe#/kimi-code.exe",
+        "hash": {
+          "url": "https://code.kimi.com/kimi-code/binaries/$version/manifest.json",
+          "jsonpath": "$.platforms['win32-arm64'].checksum"
+        }
+      }
+    }
+  }
 }
