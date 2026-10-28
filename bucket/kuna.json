@@ -1,25 +1,23 @@
 {
-  "version": "1.982",
+  "version": "1.984",
   "description": "Agent-first decompiler designed to be refined by other agents, ported from Ghidra and written in Rust",
   "homepage": "https://github.com/Noelo-Lab/kuna",
   "license": "Apache-2.0",
-  "extract_dir": "kuna-v1.982-windows-x86_64",
+  "extract_dir": "kuna-v1.984-windows-x86_64",
   "architecture": {
     "64bit": {
       "url": [
-        "https://github.com/Noelo-Lab/kuna/releases/download/v1.982/kuna-v1.982-windows-x86_64.zip",
-        "https://github.com/Noelo-Lab/kuna/releases/download/v1.982/kuna-v1.982-specs.tar.gz"
+        "https://github.com/Noelo-Lab/kuna/releases/download/v1.984/kuna-v1.984-windows-x86_64.zip",
+        "https://github.com/Noelo-Lab/kuna/releases/download/v1.984/kuna-v1.984-specs.tar.gz"
       ],
       "hash": [
-        "sha256:c5a15805d5a64b791e2df31f8e42bfdd4c081b916f91fdbf596128eef9c811ba",
-        "sha256:f19c58e96bd3871617bb6f9192553e579cc1310d594ad4e196673a64c19334cb"
+        "sha256:4a9a63a569b97f777818d7ce512202a8816d4f852d55246b50ecd415d4607bc4",
+        "sha256:dc08a6cd532ead74abcd691a5f27ab54bee494bbaa79f7595dc6e3b4a8ffd490"
       ]
     }
   },
   "bin": [
-    "kuna.exe",
-    "decomp_dbg.exe",
-    "slacomp.exe"
+    "kuna.exe"
   ],
   "env_set": {
     "KUNA_SPECS": "$dir\\specs"
