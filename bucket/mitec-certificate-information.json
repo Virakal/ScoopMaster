@@ -11,14 +11,15 @@
         ]
     ],
     "notes": [
-        "The official download page does not publish a static SHA-256 checksum for this file. Scoop's archive validation will check the archive layout, but a trusted checksum still needs to be added if one becomes available.",
+        "The official download page does not publish a static SHA-256 checksum; this manifest pins the SHA-256 calculated from the current official download. Refresh the hash if the upstream file changes.",
         "The vendor limits freeware use to private, educational and non-commercial purposes; review the product license before commercial use."
     ],
     "checkver": {
         "url": "https://www.mitec.cz/wp/mci/",
-        "regex": "(?is)Version History.*?(?<version>\\d+(?:\\.\\d+)+)\\s*\\|"
+        "regex": "(?is)Version History.*?(?<version>\\d+(?:\\.\\d+)+)"
     },
     "autoupdate": {
         "url": "https://www.mitec.cz/wp/files/CertInfo.zip"
-    }
+    },
+    "hash": "6183172dc2277111b3019460716b4f57ad5b5f09d3bf3584620bdaff033e7c7b"
 }
