@@ -1,12 +1,12 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.1",
     "description": "Windows hotkeys with active-window-driven virtual desktops",
     "homepage": "https://github.com/AruoTan/keybind",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AruoTan/keybind/releases/download/v2.3.0/keybind-scoop-x64.zip",
-            "hash": "e4f336402e12245e4ca0a37a2b20374200d5c3da3293a625904405588eef4e2d"
+            "url": "https://github.com/AruoTan/keybind/releases/download/v2.3.1/keybind-scoop-x64.zip",
+            "hash": "fee532ab83cf95f37c7a2ac8311ff419f5188a33ea80a607dd448e87e7323274"
         }
     },
     "bin": "keybind.exe",
