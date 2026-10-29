@@ -1,8 +1,8 @@
 {
     "version": "2.9.1",
-    "description": "Markdown editor with live preview",
+    "description": "A Markdown editor with live preview, tables, diagrams, and math support",
     "homepage": "https://github.com/sftwrdotdev/Markpad",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/sftwrdotdev/Markpad/releases/download/v2.9.1/Markpad_2.9.1_x64.exe",
@@ -10,16 +10,6 @@
             "shortcuts": [
                 [
                     "Markpad_2.9.1_x64.exe",
-                    "Markpad"
-                ]
-            ]
-        },
-        "arm64": {
-            "url": "https://github.com/sftwrdotdev/Markpad/releases/download/v2.9.1/Markpad_2.9.1_arm64.exe",
-            "hash": "f646170d0c71efa497b861dd92d8c951c4588b13bdf9f68ff31085766057e95c",
-            "shortcuts": [
-                [
-                    "Markpad_2.9.1_arm64.exe",
                     "Markpad"
                 ]
             ]
@@ -35,15 +25,6 @@
                 "shortcuts": [
                     [
                         "Markpad_$version_x64.exe",
-                        "Markpad"
-                    ]
-                ]
-            },
-            "arm64": {
-                "url": "https://github.com/sftwrdotdev/Markpad/releases/download/v$version/Markpad_$version_arm64.exe",
-                "shortcuts": [
-                    [
-                        "Markpad_$version_arm64.exe",
                         "Markpad"
                     ]
                 ]
