@@ -1,13 +1,13 @@
 {
-    "version": "2.2.2",
+    "version": "2.2.3",
     "description": "The open source AI coding agent. V2",
     "homepage": "https://opencode.ai/",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/anomalyco/opencode/blob/dev/LICENSE"
     },
-    "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-2.2.2.tgz",
-    "hash": "sha512:b454bdbd8a74ffe54e798a5c5af032d5eda2304c7ac79fd76a0569c2d8c6df7a1cbee9a7e51daa68a1a1aa1239e96bbc1df7adf9561ac3c9f06f1f41ab1242a9",
+    "url": "https://registry.npmjs.org/@opencode/cli-windows-x64/-/cli-windows-x64-2.2.3.tgz",
+    "hash": "sha512:622f30d899e16eddd543983ec5da24382916877db96bdae700a4f060de845cb56a26d458594146bfb916e75b778626b8e661b84ba33f723a32d8b2e38dd92ea9",
     "extract_dir": "package\\bin",
     "pre_install": [
         "# Please keep the folder list the same in both pre_install and uninstaller scripts.",
