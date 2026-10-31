@@ -1,34 +1,30 @@
 {
-    "version": "1.39.0",
-    "description": "Deep clean, uninstall apps, optimize, analyze disk, and monitor Windows from the terminal.",
-    "homepage": "https://github.com/tw93/Mole/tree/windows",
-    "license": "GPL-3.0-or-later",
+    "version": "1.40.0",
+    "description": "Mole for Windows - Deep clean and optimize your system.",
+    "homepage": "https://github.com/tw93/Mole",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tw93/Mole/releases/download/V1.39.0-windows/mole-1.39.0-x64.zip",
-            "hash": "04c65f7e2ea589215f760c6180f6e83bed41d0425724eabba1993e4caa28a467"
+            "url": "https://github.com/tw93/Mole/releases/download/V1.40.0-windows/mole-1.40.0-x64.zip",
+            "hash": "4c3db06cf0c3add621640f11b62e6f36e8296bb9b1509b84779d2d67ecc0b3f8"
         }
     },
     "bin": [
-        "mo.exe",
+        "mole.ps1",
         [
-            "mo.exe",
+            "mole.ps1",
             "mole"
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/tw93/Mole/releases?per_page=100",
-        "jsonpath": "$[?(@.prerelease == false)].tag_name",
-        "regex": "\"V([\\d.]+)-windows\""
+        "url": "https://github.com/tw93/Mole/releases",
+        "regex": "/releases/tag/[vV]([\\d.]+)-windows"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/tw93/Mole/releases/download/V$version-windows/mole-$version-x64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

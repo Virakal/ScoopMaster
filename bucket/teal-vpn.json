@@ -1,5 +1,5 @@
 {
-  "version": "0.1.35",
+  "version": "0.1.37",
   "description": "Private VPN for Windows 10 and 11 with a free plan of 500 MB a day, no ads and no browsing logs. Made for networks that block VPNs.",
   "homepage": "https://tealvpn.com/windows",
   "license": {
@@ -12,12 +12,12 @@
   ],
   "architecture": {
     "64bit": {
-      "url": "https://github.com/tealvpn/windows/releases/download/v0.1.35/TealVPN-Setup-x64.exe",
-      "hash": "sha256:7de57a65591969f7407ec7f92b2352a75769735be32fd93158308417484a0502"
+      "url": "https://github.com/tealvpn/windows/releases/download/v0.1.37/TealVPN-Setup-x64.exe",
+      "hash": "sha256:52d272d6d65a279c0cd4ff2fbc2f9e0c24bbd6110c9fad51d53c840c45bcc37f"
     },
     "arm64": {
-      "url": "https://github.com/tealvpn/windows/releases/download/v0.1.35/TealVPN-Setup-arm64.exe",
-      "hash": "sha256:88f33caab1bd0c57567ae65dd79b8e5c61dcba71fc2188781aab2e23e05ef252"
+      "url": "https://github.com/tealvpn/windows/releases/download/v0.1.37/TealVPN-Setup-arm64.exe",
+      "hash": "sha256:f439841b5428cd1c663dc3dc0041bedab8c68187761bf22af16192efe693ca0f"
     }
   },
   "installer": {
