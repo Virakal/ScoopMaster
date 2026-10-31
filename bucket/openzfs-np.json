@@ -1,0 +1,34 @@
+{
+    "version": "2.4.4rc6b",
+    "description": "The open source port of OpenZFS on Windows",
+    "homepage": "https://github.com/openzfsonwindows/openzfs",
+    "license": "Freeware",
+    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.4rc7/OpenZFSOnWindows-debug-2.4.4rc6b.exe#/setup.exe",
+    "hash": "c7d7c8befeb60433808c6902e012cb7eb5dbf55ca1e54f6467d154c654c02b1b",
+    "installer": {
+        "args": [
+            "/VERYSILENT",
+            "/NOCANCEL",
+            "/NORESTART",
+            "/CLOSEAPPLICATIONS"
+        ]
+    },
+    "checkver": {
+        "script": [
+            "$headers = @{ 'User-Agent' = 'KiroBucket-ScoopCheckver'; 'Accept' = 'application/vnd.github+json' }",
+            "if ($env:GITHUB_TOKEN) { $headers.Authorization = \"Bearer $env:GITHUB_TOKEN\" }",
+            "$releases = Invoke-RestMethod -Uri 'https://api.github.com/repos/openzfsonwindows/openzfs/releases?per_page=100' -Headers $headers -TimeoutSec 30 -ErrorAction Stop",
+            "$release = $releases | Where-Object { -not $_.draft -and @($_.assets | Where-Object { $_.name -match '^OpenZFSOnWindows-debug-.+\\.exe$' }).Count -gt 0 } | Sort-Object { [datetime]$_.published_at } -Descending | Select-Object -First 1",
+            "if ($null -eq $release) { throw 'No published OpenZFS release contains a matching Windows debug installer.' }",
+            "$assets = @($release.assets | Where-Object { $_.name -match '^OpenZFSOnWindows-debug-.+\\.exe$' } | Sort-Object { [datetime]$_.updated_at })",
+            "$name = $assets[-1].name",
+            "$versionMatch = [regex]::Match($name, '^OpenZFSOnWindows-debug-(?<version>.+)\\.exe$')",
+            "if (-not $versionMatch.Success) { throw 'Could not extract the OpenZFS installer version from the asset name.' }",
+            "Write-Output \"$($versionMatch.Groups['version'].Value) $($release.tag_name)\""
+        ],
+        "regex": "^(?<version>\\S+)\\s(?<tag>\\S+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/openzfsonwindows/openzfs/releases/download/$matchTag/OpenZFSOnWindows-debug-$version.exe#/setup.exe"
+    }
+}

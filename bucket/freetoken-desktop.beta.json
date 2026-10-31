@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0-beta.25",
+    "description": "Unlock datacenter-class intelligence on the hardware you already own — Run 290B+ frontier MoE models locally on your gaming PC at blistering interactive speeds.",
+    "license": "Apache-2.0",
+    "homepage": "https://www.flashml.ai",
+    "url": "https://github.com/FlashML-org/FreeToken-Web/releases/download/v0.2.0-beta.25/FreeToken-Setup-win-x64.exe#/dl.7z",
+    "hash": "ee5dd6a5c929828d829993632858c71076272c0af1172dd503e0ca6e0f7801b4",
+    "shortcuts": [
+        [
+            "freetoken-desktop.exe",
+            "FreeToken Desktop"
+        ]
+    ],
+    "pre_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\", \"$dir\\[NSIS].nsi\", \"$dir\\uninstall.exe\", \"$dir\\engine\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "checkver": {
+        "url": "https://api.github.com/repos/FlashML-org/FreeToken-Web/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+.*)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FlashML-org/FreeToken-Web/releases/download/v$version/FreeToken-Setup-win-x64.exe#/dl.7z"
+    }
+}
