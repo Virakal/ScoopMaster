@@ -16,7 +16,7 @@
             "Nook"
         ]
     ],
-    "notes": "Nook registers the nook:// URL protocol under HKCU when it starts. The uninstall hook removes the registration only when it still points to this Scoop installation.",
+    "notes": "The upstream Nook 0.2.1 Windows setup is built with Inno Setup (installer/nook.iss compiled by installer/build.ps1). Scoop uses its innounp helper to extract the {app} payload into this version directory instead of executing Setup. Nook registers the nook:// URL protocol under HKCU when it starts. The uninstall hook removes the registration only when it still points to this Scoop installation.",
     "pre_uninstall": [
         "$exe = Join-Path $dir 'nook.exe'",
         "$schemeKey = 'HKCU:\\Software\\Classes\\nook'",

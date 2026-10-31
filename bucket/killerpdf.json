@@ -1,13 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "description": "PDF editor for Windows. Install or run portable. GPLv3. No account, no subscription, no telemetry",
     "homepage": "https://github.com/SteveTheKiller/KillerPDF",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SteveTheKiller/KillerPDF/releases/download/v1.9.0/KillerPDF.exe",
-            "hash": "7192269354fb8f1994481bc4a54cc2745c6002ee5e0c0ee997ced6ac2a0a2fbf"
+            "url": "https://github.com/SteveTheKiller/KillerPDF/releases/download/v1.9.1/KillerPDF.exe",
+            "hash": "8f7a224994e75660e0caaba26d14c773422dd96acb22e2252d63e9c6fe39dcb8"
         }
     },
     "shortcuts": [
