@@ -1,0 +1,31 @@
+{
+    "version": "0.9.1",
+    "description": "Pool the spare power of every computer into one cloud. Installs sys0 (client) and sys1 (node).",
+    "homepage": "https://a-hackers-guide.github.io/sys1/",
+    "license": "Unlicense",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/A-Hackers-Guide/sys1/releases/download/v0.9.1/sys1_0.9.1_windows_amd64.zip",
+            "hash": "9c8a53904c60022ffb15b9e5e7db6da3077ce8ec255fbde449f68fc145f9dc9b"
+        },
+        "arm64": {
+            "url": "https://github.com/A-Hackers-Guide/sys1/releases/download/v0.9.1/sys1_0.9.1_windows_arm64.zip",
+            "hash": "208982d484cda5793176f31857c89d4e48b12588f236a04c02acf0985709ac29"
+        }
+    },
+    "bin": ["sys0.exe", "sys1.exe"],
+    "notes": [
+        "Lend this PC to a pool:  sys0   (run as Administrator to install the background service)",
+        "Run a node here:         sys1"
+    ],
+    "checkver": {
+        "github": "https://github.com/A-Hackers-Guide/sys1"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": { "url": "https://github.com/A-Hackers-Guide/sys1/releases/download/v$version/sys1_$version_windows_amd64.zip" },
+            "arm64": { "url": "https://github.com/A-Hackers-Guide/sys1/releases/download/v$version/sys1_$version_windows_arm64.zip" }
+        },
+        "hash": { "url": "$baseurl/checksums.txt" }
+    }
+}
