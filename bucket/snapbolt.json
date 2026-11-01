@@ -1,12 +1,12 @@
 {
-  "version": "2.6.0",
+  "version": "2.6.2",
   "description": "The 'CleanShot X for Windows' - Fast Screenshot, Full-Page Scrolling Capture, MP4/GIF Screen Recorder, 100% Offline QR/OCR & Color Picker (8 Languages)",
   "homepage": "https://snapbolt.dev",
   "license": "Freeware",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v2.6.0/SnapBolt_v2.6.0_win-x64.zip",
-      "hash": "6de8406d1cad7b6db8a27449cda991055c6c4c6b660c5c8cd30adc003f33c168"
+      "url": "https://snapbolt.dev/download/SnapBolt_v2.6.2_win-x64.zip",
+      "hash": "2fc856c39817f55d0f61f7d7cdb2e4ecd69314a21139789f6d4d4bfcc9f4ef2d"
     }
   },
   "bin": "SnapBolt.exe",
@@ -17,12 +17,13 @@
     ]
   ],
   "checkver": {
-    "github": "https://github.com/poron2356-a11y/SnapBolt"
+    "url": "https://snapbolt.dev/en",
+    "regex": "v([\\d.]+)"
   },
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v$version/SnapBolt_v$version_win-x64.zip"
+        "url": "https://snapbolt.dev/download/SnapBolt_v$version_win-x64.zip"
       }
     }
   }

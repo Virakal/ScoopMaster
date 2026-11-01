@@ -1,16 +1,12 @@
 {
-    "version": "4.0.23",
-    "description": "A desktop all-in-one assistant tool for AI coding agents.",
-    "homepage": "https://ccswitch.io",
+    "version": "4.0.24",
+    "description": "Claude Code、Codex 与 Gemini CLI 的一体化桌面配置助手",
+    "homepage": "https://github.com/farion1231/cc-switch",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/farion1231/cc-switch/releases/download/v4.0.23/CC-Switch-v4.0.23-Windows-Portable.zip",
-            "hash": "5ceca11e328479aa6050c2d5603b4238902ecb54f20ae955e6b21c71564df7f0"
-        },
-        "arm64": {
-            "url": "https://github.com/farion1231/cc-switch/releases/download/v4.0.23/CC-Switch-v4.0.23-Windows-arm64-Portable.zip",
-            "hash": "76f5b7a6407995423b24f0f021b8dafe1c4994d48461f934d0fb2f7150a62a9f"
+            "url": "https://github.com/farion1231/cc-switch/releases/download/v4.0.24/CC-Switch-v4.0.24-Windows-Portable.zip",
+            "hash": "ca653df66b89533dd476b1ce2a2886fab3053858a7bc51aeb656d578522e2014"
         }
     },
     "shortcuts": [
@@ -19,16 +15,11 @@
             "CC-Switch"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/farion1231/cc-switch"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/farion1231/cc-switch/releases/download/v$version/CC-Switch-v$version-Windows-Portable.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/farion1231/cc-switch/releases/download/v$version/CC-Switch-v$version-Windows-arm64-Portable.zip"
             }
         }
     }
