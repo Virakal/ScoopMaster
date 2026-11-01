@@ -5,8 +5,8 @@
   "license": "Freeware",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v2.6.0/SnapBolt_v1.0.0_win-x64.zip",
-      "hash": "5e5a4f2aa4875c57e6a9ef0605f5e48f068c0811341fa5858f366a31a085b741"
+      "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v2.6.0/SnapBolt_v2.6.0_win-x64.zip",
+      "hash": "6de8406d1cad7b6db8a27449cda991055c6c4c6b660c5c8cd30adc003f33c168"
     }
   },
   "bin": "SnapBolt.exe",
@@ -22,7 +22,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v$version/SnapBolt_v1.0.0_win-x64.zip"
+        "url": "https://github.com/poron2356-a11y/SnapBolt/releases/download/v$version/SnapBolt_v$version_win-x64.zip"
       }
     }
   }

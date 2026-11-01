@@ -1,15 +1,15 @@
 {
-    "version": "0.2.0",
+    "version": "0.3.1",
     "description": "A Windows tray app that reconnects a saved Wi-Fi profile when its network is absent.",
     "homepage": "https://github.com/Hezric/Homing",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Hezric/Homing/releases/download/v0.2.0/Homing-0.2.0-windows-x64.zip",
-            "hash": "7f1dbdb35b298446ea05e0e434c140dec5c40b20eb73112eb88ecbe52e433351"
+            "url": "https://github.com/Hezric/Homing/releases/download/v0.3.1/Homing-0.3.1-windows-x64.zip",
+            "hash": "3a5a034fb076d0b8b6277b63839d45d330037fdb59ed45dbbe335f09dd7cf0f5"
         }
     },
-    "extract_dir": "Homing-0.2.0-windows-x64",
+    "extract_dir": "Homing-0.3.1-windows-x64",
     "shortcuts": [
         [
             "homing.exe",

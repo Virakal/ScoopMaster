@@ -11,11 +11,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/DPanel-dev/gui/releases/download/v1.11.2/dpanel-desktop-ce-amd64-portable.zip",
+            "url": "https://gh-proxy.org/https://github.com/DPanel-dev/gui/releases/download/v1.11.2/dpanel-desktop-ce-amd64-portable.zip",
             "hash": "db07157b97ef114674dd729b4b8d185692a3f5c318d3c0034dd3db349d0e442e"
         },
         "arm64": {
-            "url": "https://github.com/DPanel-dev/gui/releases/download/v1.11.2/dpanel-desktop-ce-arm64-portable.zip",
+            "url": "https://gh-proxy.org/https://github.com/DPanel-dev/gui/releases/download/v1.11.2/dpanel-desktop-ce-arm64-portable.zip",
             "hash": "185de5aaeacbc50d481bb52d0dc74b01e0518967060d92d102df9386461eb732"
         }
     },
@@ -36,10 +36,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/DPanel-dev/gui/releases/download/v$version/dpanel-desktop-ce-amd64-portable.zip"
+                "url": "https://gh-proxy.org/https://github.com/DPanel-dev/gui/releases/download/v$version/dpanel-desktop-ce-amd64-portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/DPanel-dev/gui/releases/download/v$version/dpanel-desktop-ce-arm64-portable.zip"
+                "url": "https://gh-proxy.org/https://github.com/DPanel-dev/gui/releases/download/v$version/dpanel-desktop-ce-arm64-portable.zip"
             }
         }
     }
