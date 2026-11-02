@@ -1,30 +1,30 @@
 {
-  "version": "2.0.0-beta.27",
-  "description": "A fully functional AI Agent desktop client that supports Webui access and can be creatively customized and expanded!",
-  "homepage": "https://github.com/Stack-Cairn/LiveAgent",
-  "license": "MIT",
-  "notes": "config location: C:\\Users\\<your username>\\AppData\\Local\\com.xiaofei.liveagent - https://github.com/vicrack/scoop-bucket/blob/master/bucket/liveagent.json https://github.com/vicrack/scoop-bucket",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Stack-Cairn/LiveAgent/releases/download/v2.0.0-beta.27/LiveAgent-v2.0.0-beta.27-Windows-x64-portable.zip",
-      "hash": "630073519d629f1a4451cb55bb6bb563d14365da76ae393d6c7d52447b5211ca"
-    }
-  },
-  "shortcuts": [
-    [
-      "LiveAgent.exe",
-      "LiveAgent"
-    ]
-  ],
-  "checkver": {
-    "url": "https://github.com/Stack-Cairn/LiveAgent/releases",
-    "regex": "/releases/tag/v(\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?)(?=[\"/])"
-  },
-  "autoupdate": {
+    "version": "2.0.0-beta.27",
+    "description": "A fully functional AI Agent desktop client that supports Webui access and can be creatively customized and expanded!",
+    "homepage": "https://github.com/Stack-Cairn/LiveAgent",
+    "license": "MIT",
+    "notes": "config location: C:\\Users\\<your username>\\AppData\\Local\\com.xiaofei.liveagent - https://github.com/vicrack/scoop-bucket/blob/master/bucket/liveagent.json https://github.com/vicrack/scoop-bucket",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Stack-Cairn/LiveAgent/releases/download/v$version/LiveAgent-v$version-Windows-x64-portable.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/Stack-Cairn/LiveAgent/releases/download/v2.0.0-beta.27/LiveAgent-v2.0.0-beta.27-Windows-x64-portable.zip",
+            "hash": "630073519d629f1a4451cb55bb6bb563d14365da76ae393d6c7d52447b5211ca"
+        }
+    },
+    "shortcuts": [
+        [
+            "LiveAgent.exe",
+            "LiveAgent"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Stack-Cairn/LiveAgent/releases",
+        "regex": "/releases/tag/v(\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?)(?=[\"/])"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Stack-Cairn/LiveAgent/releases/download/v$version/LiveAgent-v$version-Windows-x64-portable.zip"
+            }
+        }
     }
-  }
 }

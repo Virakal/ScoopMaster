@@ -1,12 +1,12 @@
 {
-    "version": "0.10.10",
+    "version": "0.11.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/project-starkite/starkite/releases/download/v0.10.10/kite_0.10.10_windows_amd64.zip",
+            "url": "https://github.com/project-starkite/starkite/releases/download/v0.11.3/kite_0.11.3_windows_amd64.zip",
             "bin": [
                 "kite.exe"
             ],
-            "hash": "2c1a1ad1915f872ec51b0cae775ee87cf6cf594612b2861454ff664a204bf6de"
+            "hash": "cbe3a63324e34a14f3386dacf05127bcedf6706cf93d56c6d3e562db56890fd0"
         }
     },
     "homepage": "https://starkite.dev",
