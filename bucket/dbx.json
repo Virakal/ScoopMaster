@@ -28,22 +28,17 @@
     },
     "persist": "data",
     "checkver": {
-        "url": "https://github.com/t8y2/dbx/releases/latest/download/latest.json",
-        "jsonpath": "$.version"
+        "github": "https://github.com/t8y2/dbx",
+        "regex": "(?<tag>v(?<version>[\\d.]+)(?:-beta\\.\\d{8}\\.\\d+)?)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-portable.zip"
+                "url": "https://github.com/t8y2/dbx/releases/download/$matchTag/DBX_$version_x64-portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_arm64-portable.zip"
+                "url": "https://github.com/t8y2/dbx/releases/download/$matchTag/DBX_$version_arm64-portable.zip"
             }
-        },
-        "hash": {
-            "mode": "json",
-            "url": "https://api.github.com/repos/t8y2/dbx/releases/latest",
-            "jsonpath": "$.assets[?(@.name == '$basename')].digest"
         }
     }
 }
