@@ -1,0 +1,35 @@
+{
+    "version": "2.8.9",
+    "description": "ReShade, HDR mod, DLSS and NVIDIA driver manager for PC games",
+    "homepage": "https://github.com/RankFTW/RHI",
+    "license": "GPL-3.0",
+    "notes": [
+        "Requires the .NET 8 Desktop Runtime: https://dotnet.microsoft.com/download/dotnet/8.0",
+        "Update through Scoop ('scoop update RHI'); RHI's built-in updater runs the official installer, which installs outside Scoop's control."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RankFTW/RHI/releases/download/RHI-2.8.9/RHI-Setup.exe",
+            "hash": "4d45fb6e70bec5ec10d44298667102fcb0fe77cdd4e1a8169ece782e6a955775"
+        }
+    },
+    "innosetup": true,
+    "bin": "RHI.exe",
+    "shortcuts": [
+        [
+            "RHI.exe",
+            "RHI"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/RankFTW/RHI",
+        "regex": "RHI-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RankFTW/RHI/releases/download/RHI-$version/RHI-Setup.exe"
+            }
+        }
+    }
+}

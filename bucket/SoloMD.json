@@ -1,16 +1,19 @@
 {
     "version": "5.0.13",
-    "description": "SoloMD — a lightweight, cross-platform Markdown + plain text editor. One file. One window. Just write.",
-    "homepage": "https://solomd.app/",
+    "description": "Free, open-source Markdown editor with live preview, math, diagrams and export.",
+    "homepage": "https://solomd.app",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhitongblog/solomd/releases/download/v5.0.13/SoloMD_5.0.13_x64_en-US.msi",
-            "hash": "f34cb3fcc1acef00d41b0ba800e9fe3ab95cfcda56d077d098332eecde6add28"
+            "url": "https://github.com/zhitongblog/solomd/releases/download/v5.0.13/SoloMD_5.0.13_x64-portable.zip",
+            "hash": "9ddd6c4b4c48a64afda8ba1df95c8fe2a09bf2bd7302e31533ee4e4893d605d1"
+        },
+        "arm64": {
+            "url": "https://github.com/zhitongblog/solomd/releases/download/v5.0.13/SoloMD_5.0.13_arm64-portable.zip",
+            "hash": "37baf2adc99419eb486cc06a74240e8b5339642fd5d336be72122905c8e697ca"
         }
     },
-    "extract_dir": "PFiles\\SoloMD",
-    "bin": "SoloMD.exe",
+    "bin": "solomd-mcp.exe",
     "shortcuts": [
         [
             "SoloMD.exe",
@@ -23,8 +26,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
+                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64-portable.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_arm64-portable.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
