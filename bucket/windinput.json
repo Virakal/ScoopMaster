@@ -1,36 +1,20 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.129.0",
-    "description": "清风输入法 | 轻量、快速、可定制的开源中文输入法，专为五笔和码表输入方案设计（Windows / macOS）",
-    "homepage": "https://github.com/huanfeng/WindInput",
+    "description": "清风输入法 (WindInput) — 轻量、快速、可定制的开源中文输入法，支持五笔、全拼、双拼及混合输入。本包为便携/绿色版（便捷模式），免安装就地运行。",
+    "homepage": "https://windinput.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/huanfeng/WindInput/releases/download/v0.129.0/WindInput-Portable-0.129.0.zip",
-            "hash": "6163c84bfa9045bc13a44736d89ed69e571328e55922d72232a5d120345520f6",
-            "extract_dir": "WindInput-0.129.0"
+            "hash": "6163c84bfa9045bc13a44736d89ed69e571328e55922d72232a5d120345520f6"
         }
     },
-    "bin": [
-        "wind_input.exe",
-        "wind_cli.bat"
-    ],
+    "extract_dir": "WindInput-0.129.0",
+    "bin": "wind_portable.exe",
     "shortcuts": [
         [
             "wind_portable.exe",
             "WindInput"
-        ],
-        [
-            "wind_setting.exe",
-            "WindInput Settings"
-        ],
-        [
-            "wind_portable.exe",
-            "清风输入法"
-        ],
-        [
-            "wind_setting.exe",
-            "清风输入法 设置"
         ]
     ],
     "persist": "userdata",
@@ -38,11 +22,15 @@
         "github": "https://github.com/huanfeng/WindInput"
     },
     "autoupdate": {
+        "extract_dir": "WindInput-$version",
         "architecture": {
             "64bit": {
-                "url": "https://github.com/huanfeng/WindInput/releases/download/v$version/WindInput-Portable-$version.zip",
-                "extract_dir": "WindInput-$version"
+                "url": "https://github.com/huanfeng/WindInput/releases/download/v$version/WindInput-Portable-$version.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/huanfeng/WindInput/releases/download/v$version/WindInput-Portable-$version.zip.sha256",
+            "find": "(?<hash>[0-9a-f]{64})"
         }
     }
 }
