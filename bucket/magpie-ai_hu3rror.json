@@ -1,45 +1,45 @@
 {
-    "version": "0.1.2685",
-    "description": "Unified model, provider, and gateway manager for AI coding agents.",
-    "homepage": "https://usemagpie.ai",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.2685/magpie-windows-amd64.exe#/magpie.exe",
-            "hash": "55c707143e5cdfb9920026204939e9365b3a01f74361819641e59a92dc567d0a"
-        },
-        "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.2685/magpie-windows-arm64.exe#/magpie.exe",
-            "hash": "dfd17fca7485117f0d672f090b5099952a47578194b84c1f4d3addd403543787"
-        }
+  "version": "0.1.2685",
+  "description": "Unified model, provider, and gateway manager for AI coding agents.",
+  "homepage": "https://usemagpie.ai",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.2685/magpie-windows-amd64.exe#/magpie.exe",
+      "hash": "55c707143e5cdfb9920026204939e9365b3a01f74361819641e59a92dc567d0a"
     },
-    "pre_install": [
-        "if (-not (Test-Path -LiteralPath \"$persist_dir\\data\\settings.json\" -PathType Leaf)) {",
-        "    ensure \"$dir\\data\" | Out-Null",
-        "    @{ noAutoUpdate = $true } | ConvertTo-Json | Set-Content -LiteralPath \"$dir\\data\\settings.json\" -Force -Encoding ASCII",
-        "}"
-    ],
-    "shortcuts": [
-        [
-            "magpie.exe",
-            "Magpie"
-        ]
-    ],
-    "persist": "data",
-    "checkver": {
-        "github": "https://github.com/yetone/magpie-releases"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS"
-        }
+    "arm64": {
+      "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.2685/magpie-windows-arm64.exe#/magpie.exe",
+      "hash": "dfd17fca7485117f0d672f090b5099952a47578194b84c1f4d3addd403543787"
     }
+  },
+  "pre_install": [
+    "if (-not (Test-Path -LiteralPath \"$persist_dir\\data\\settings.json\" -PathType Leaf)) {",
+    "    ensure \"$dir\\data\" | Out-Null",
+    "    @{ noAutoUpdate = $true } | ConvertTo-Json | Set-Content -LiteralPath \"$dir\\data\\settings.json\" -Force -Encoding ASCII",
+    "}"
+  ],
+  "shortcuts": [
+    [
+      "magpie.exe",
+      "Magpie"
+    ]
+  ],
+  "persist": "data",
+  "checkver": {
+    "github": "https://github.com/yetone/magpie-releases"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/SHA256SUMS"
+    }
+  }
 }
