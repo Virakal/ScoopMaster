@@ -32,5 +32,5 @@
             "regex": "\"name\":\\s*\"AppGroup_v$version\\.win-x64\\.zip\".*?\"digest\":\\s*\"sha256:([a-fA-F0-9]{64})\""
         }
     },
-    "notes": "Uses the portable ZIP without the bundled .NET 8 runtime; .NET 8 must be installed separately. The config folder is persisted so portable AppGroup data survives Scoop upgrades."
+    "notes": "Requires the .NET 8 Desktop Runtime; it is not included in the portable ZIP."
 }
