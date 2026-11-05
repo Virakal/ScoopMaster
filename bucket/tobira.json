@@ -1,19 +1,19 @@
 {
-    "version": "1.6.0",
+    "version": "1.7.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xavidop/tobira/releases/download/v1.6.0/tobira_1.6.0_windows_amd64.zip",
+            "url": "https://github.com/xavidop/tobira/releases/download/v1.7.0/tobira_1.7.0_windows_amd64.zip",
             "bin": [
                 "tobira.exe"
             ],
-            "hash": "fe747c28b500f29fee5a0ed3deb1db4288a113f6db24e728497325c8019aa05b"
+            "hash": "7806f1a4db805aea07f1261d4e7a5cf978e6dd485ee48b3743e1e54dd8be5b03"
         },
         "arm64": {
-            "url": "https://github.com/xavidop/tobira/releases/download/v1.6.0/tobira_1.6.0_windows_arm64.zip",
+            "url": "https://github.com/xavidop/tobira/releases/download/v1.7.0/tobira_1.7.0_windows_arm64.zip",
             "bin": [
                 "tobira.exe"
             ],
-            "hash": "f56bb5b50a3c9e0dd29bb31c9c812b3002fb0c8eeb5777ae975f8dcd52d5c35f"
+            "hash": "84e6c206de39e6eb31056be33ff52c48e9d99f3cc2ef8dd61058527b2f6343f9"
         }
     },
     "homepage": "https://xavidop.github.io/tobira/",
