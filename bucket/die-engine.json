@@ -1,10 +1,10 @@
 {
-    "version": "3.21",
+    "version": "4.0.0",
     "description": "Detect It Easy - file type, compiler, packer, protector, and binary analysis tool",
     "homepage": "https://github.com/horsicq/DIE-engine",
     "license": "MIT",
-    "url": "https://github.com/horsicq/DIE-engine/releases/download/3.21/die_win64_portable_3.21_x64.zip",
-    "hash": "078f2934f267392247f9c7b759a1c2457a48bc2000b25b80c2f129955ee4a3b9",
+    "url": "https://github.com/horsicq/DIE-engine/releases/download/4.0.0/die_win64_4.0.0.zip",
+    "hash": "522a649e795123ab89bb7963e3b7c0b492af5a1ece8052f1dee04f3d5cd58593",
     "pre_install": "$exe = Get-ChildItem -Path $dir -Recurse -Filter 'die.exe' -File | Select-Object -First 1; if (-not $exe) { throw 'die.exe was not found in the extracted archive.' }; if ($exe.DirectoryName -ne $dir) { Get-ChildItem -Path $exe.DirectoryName -Force | Move-Item -Destination $dir -Force }",
     "bin": "die.exe",
     "shortcuts": [
@@ -17,6 +17,6 @@
         "github": "https://github.com/horsicq/DIE-engine"
     },
     "autoupdate": {
-        "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win64_portable_$version_x64.zip"
+        "url": "https://github.com/horsicq/DIE-engine/releases/download/$version/die_win64_$version.zip"
     }
 }
