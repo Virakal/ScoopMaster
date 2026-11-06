@@ -1,19 +1,19 @@
 {
-    "version": "0.2.0",
+    "version": "0.3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/somaz94/whatdies/releases/download/v0.2.0/whatdies_0.2.0_windows_amd64.zip",
+            "url": "https://github.com/somaz94/whatdies/releases/download/v0.3.0/whatdies_0.3.0_windows_amd64.zip",
             "bin": [
                 "whatdies.exe"
             ],
-            "hash": "e93605b21e6e9c7065e72b6a10cd1bcb0b28c1bb705e8858fbe571ee307e7dea"
+            "hash": "ab87085a6fecc80a81f12c9532d7f6b91248ec80d749332d0fc56067e2d5e781"
         },
         "arm64": {
-            "url": "https://github.com/somaz94/whatdies/releases/download/v0.2.0/whatdies_0.2.0_windows_arm64.zip",
+            "url": "https://github.com/somaz94/whatdies/releases/download/v0.3.0/whatdies_0.3.0_windows_arm64.zip",
             "bin": [
                 "whatdies.exe"
             ],
-            "hash": "0a3d41512a8c50529b26575271b8690b80227b82ea536012fa9467dd2b8f510f"
+            "hash": "b1459aea76b8660adf32b583a11f42cda44159527c8cacbb70aa4bce16b5b7e2"
         }
     },
     "homepage": "https://github.com/somaz94/whatdies",
