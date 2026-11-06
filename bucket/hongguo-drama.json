@@ -1,12 +1,12 @@
 {
-    "version": "5.9",
+    "version": "6.0",
     "description": "A desktop app for browsing, playing, and downloading Hongguo short dramas.",
     "homepage": "https://github.com/jackotom/hongguo-drama",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jackotom/hongguo-drama/releases/download/v5.9/hongguo-downloader-5.9-win-x64.zip",
-            "hash": "ff290d6129425d9fa27fe223b7042e5059fd77d1c405698b10c61617c192cce2"
+            "url": "https://github.com/jackotom/hongguo-drama/releases/download/v6.0/hongguo-downloader-6.0-win-x64.zip",
+            "hash": "86c0964032710f65fdd5cafa14b6254a84f96327739e9bbeb63509b8a3fecfc7"
         }
     },
     "pre_install": "Get-ChildItem -LiteralPath $dir -Filter 'hongguo-downloader-*.exe' -File | Select-Object -First 1 | Rename-Item -NewName 'hongguo-drama.exe'",
