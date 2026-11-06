@@ -1,5 +1,5 @@
 {
-    "version": "2026.11.06",
+    "version": "2026.11.07",
     "description": "交易: MT5",
     "homepage": "https://www.jrjr.com",
     "license": "Unknown",
@@ -24,7 +24,7 @@
         ]
     },
     "checkver": {
-        "url": "https://cdn.rainte.com",
+        "url": "https://cdn.rainte.com/scoop/scoop.md",
         "script": [
             "[string]$date = Get-Date -Format 'yyyy.MM.dd'",
             "Write-Output $date"

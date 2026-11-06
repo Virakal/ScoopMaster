@@ -1,10 +1,10 @@
 {
-    "version": "0.16.14",
+    "version": "0.16.15",
     "description": "PvZ2 Gardendless | A rewritten Plants vs Zombies 2 PC port",
     "homepage": "https://pvzge.com",
     "license": "Apache-2.0 license",
-    "url": "https://storage.pvzge.com/pvzge-0.16.14.zip",
-    "hash": "37343b3400e6b71a5c2e24c29bb4a06f571b35858a267b332c90216903b0ea33",
+    "url": "https://storage.pvzge.com/pvzge-0.16.15.zip",
+    "hash": "7d2636f74f220aee980a0128dfb294e570d0a796456252fad4c4fcf0fdb9daf9",
     "pre_install": "Rename-Item \"$dir\\pvzge-$version.exe\" \"$dir\\pvzge.exe\"",
     "shortcuts": [
         [

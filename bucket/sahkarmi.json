@@ -1,12 +1,12 @@
 {
-    "version": "0.24.0",
+    "version": "0.25.0",
     "description": "Desktop team of AI coworkers that run locally, each with its own browser and memory, and stop for human approval before payments, emails or public posts.",
     "homepage": "https://sahkarmi.site",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ganguydhrubo/sahakarmi/releases/download/v0.24.0/Sahkarmi-0.24.0-x64.exe#/dl.7z",
-            "hash": "c874b9d00a8a41b0ec4a4a467ac7a5615587bf9fd76de8170d7b2aed5423202a"
+            "url": "https://github.com/ganguydhrubo/sahakarmi/releases/download/v0.25.0/Sahkarmi-0.25.0-x64.exe#/dl.7z",
+            "hash": "5432bc6a23ad1ea539ebef4ab0941940151b3be6d33001692bea003cc38939ba"
         }
     },
     "pre_install": [
