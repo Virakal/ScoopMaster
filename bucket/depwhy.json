@@ -1,0 +1,11 @@
+{
+  "version": "0.5.1",
+  "description": "Explains why a package is in your dependency tree, from the lockfile, offline",
+  "homepage": "https://github.com/dpologdvinity/depwhy",
+  "license": "MIT",
+  "architecture": {
+    "64bit": { "url": "https://github.com/dpologdvinity/depwhy/releases/download/v0.5.1/depwhy_0.5.1_windows_amd64.zip", "hash": "94e991edcad704e7954638debc2192dacd8611a4bab9224098b323178441aa4d" },
+    "arm64": { "url": "https://github.com/dpologdvinity/depwhy/releases/download/v0.5.1/depwhy_0.5.1_windows_arm64.zip", "hash": "2fe831d88a3a12a0675eec1e871c4e3cd5bb81262ef7f06ea955ddf262cdc9a8" }
+  },
+  "bin": "depwhy.exe"
+}

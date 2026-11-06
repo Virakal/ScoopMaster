@@ -1,12 +1,16 @@
 {
     "version": "1.16.0",
-    "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
-    "homepage": "https://mcp-toolbox.dev/",
+    "description": "MCP server that connects AI agents, IDEs and applications directly to databases.",
+    "homepage": "https://mcp-toolbox.dev",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://storage.googleapis.com/mcp-toolbox-for-databases/v1.16.0/windows/amd64/toolbox.exe",
             "hash": "326c9783187f7a3d639baa0a2a78ef3f452ea945aa31b6d5ff82f75d505b7e7f"
+        },
+        "arm64": {
+            "url": "https://storage.googleapis.com/mcp-toolbox-for-databases/v1.16.0/windows/arm64/toolbox.exe",
+            "hash": "304e3a29953434413c3e417d3c833c117ea23aa4b3dcef604cddb8a16d0fbf62"
         }
     },
     "bin": "toolbox.exe",
@@ -16,7 +20,18 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage.googleapis.com/mcp-toolbox-for-databases/v$version/windows/amd64/toolbox.exe"
+                "url": "https://storage.googleapis.com/mcp-toolbox-for-databases/v$version/windows/amd64/toolbox.exe",
+                "hash": {
+                    "url": "https://github.com/googleapis/mcp-toolbox/releases/tag/v$version",
+                    "regex": "(?s)windows/amd64.*?$sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://storage.googleapis.com/mcp-toolbox-for-databases/v$version/windows/arm64/toolbox.exe",
+                "hash": {
+                    "url": "https://github.com/googleapis/mcp-toolbox/releases/tag/v$version",
+                    "regex": "(?s)windows/arm64.*?$sha256"
+                }
             }
         }
     }
