@@ -1,34 +1,17 @@
 {
-    "version": "1.3.0-rc.3",
-    "description": "Feature rich, native desktop YouTube Music client built with Tauri and Rust",
-    "homepage": "https://github.com/SimoHypers/limusic",
-    "license": "GPL-3.0-or-later",
+    "version": "1.3.0",
+    "description": "Feature-rich, native desktop YouTube Music client",
+    "homepage": "https://simohypers.github.io/limusic",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SimoHypers/limusic/releases/download/v1.3.0-rc.3/limusic_1.3.0-rc.3_x64-setup.exe#/dl.7z",
-            "hash": "0bf664963790396c9b9a88199aa13e86706819231396786afbc4671d6c64d92b"
+            "url": "https://github.com/SimoHypers/limusic/releases/download/v1.3.0/limusic_1.3.0_x64-setup.exe#/dl.7z",
+            "hash": "f9cd822af29ad88d0842a0ac0ca066286a668f263f3740a97c7b18a57b9963fc"
         }
     },
     "pre_install": [
-        "$subdirs = @('$INSTDIR', '$_OUTDIR')",
-        "foreach ($sub in $subdirs) {",
-        "    $subPath = Join-Path $dir $sub",
-        "    if (Test-Path $subPath) {",
-        "        Get-ChildItem \"$subPath\\*\" | Move-Item -Destination $dir -Force",
-        "        Remove-Item $subPath -Recurse -Force",
-        "    }",
-        "}",
-        "$plugins = Join-Path $dir '$PLUGINSDIR'",
-        "if (Test-Path $plugins) {",
-        "    Remove-Item $plugins -Recurse -Force",
-        "}",
-        "Remove-Item \"$dir\\uninstall*.exe*\" -Force -ErrorAction SilentlyContinue"
-    ],
-    "bin": [
-        [
-            "limusic-app.exe",
-            "limusic"
-        ]
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "Remove-Item \"$dir\\uninstall.exe\" -Force -ErrorAction SilentlyContinue"
     ],
     "shortcuts": [
         [
@@ -37,8 +20,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/SimoHypers/limusic",
-        "regex": "releases/tag/v?([\\d.]+(?:-[a-zA-Z0-9.]+)?)"
+        "github": "https://github.com/SimoHypers/limusic"
     },
     "autoupdate": {
         "architecture": {
