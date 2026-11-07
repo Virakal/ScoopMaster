@@ -1,12 +1,12 @@
 {
-    "version": "8.5.10",
+    "version": "8.5.11",
     "description": "Convert files to Markdown for AI agents",
     "homepage": "https://sylphxai.github.io/anymd/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SylphxAI/anymd/releases/download/v8.5.10/anymd-win32-x64-msvc.zip",
-            "hash": "ff3e8af117a1e86e6b6d3d5a214a1e63b393ee1e5ea3a2ac3d42925558de3e03"
+            "url": "https://github.com/SylphxAI/anymd/releases/download/v8.5.11/anymd-win32-x64-msvc.zip",
+            "hash": "ef8658735afa81b8e28af4b2ab5fcb002ede83f0df10a287775b9ac3ff25fa68"
         }
     },
     "bin": "anymd.exe",
