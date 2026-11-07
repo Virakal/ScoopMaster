@@ -1,16 +1,16 @@
 {
-    "version": "0.1.16",
+    "version": "0.1.20",
     "description": "mygo-music - a native music player you extend with plugins.",
     "homepage": "https://github.com/egoist/mygo-music",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.16/mygo-music-0.1.16-windows-amd64.tar.gz",
-            "hash": "87d9ad5af059b04b2e61dd1e1235ef0680ef3c4f7cd2f02ae7ecadb53e32c88c"
+            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.20/mygo-music-0.1.20-windows-amd64.tar.gz",
+            "hash": "76fab25347c9066cefea80e9bea1a76a7450d161cbd93241fa40711f217941fb"
         },
         "arm64": {
-            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.16/mygo-music-0.1.16-windows-arm64.tar.gz",
-            "hash": "87fa4346bea8a36150b5d8722f876e38865fe17aeefc6a198bb9c15f22c20629"
+            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.20/mygo-music-0.1.20-windows-arm64.tar.gz",
+            "hash": "78ce10fd620c08c3bce201fe37a32b7be25075d07e248805e684beffd4a92c4a"
         }
     },
     "shortcuts": [

@@ -1,5 +1,5 @@
 {
-    "version": "202611060232",
+    "version": "202611070527",
     "description": "custom protocol network proxy",
     "homepage": "https://watfaq.gitbook.io/clashrs-user-manual/",
     "license": {
@@ -9,15 +9,15 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Watfaq-legacy/clash-rs/releases/download/latest/clash-rs-x86_64-pc-windows-msvc.exe",
-            "hash": "4d95f300d8b719bba06c36bde6633019c87f56c1ab621623ac1ef61a5b6cd19b"
+            "hash": "18754f961d414582d2ffc871f53e124242447d970edd85eff3b6e194bb8bdd89"
         },
         "32bit": {
             "url": "https://github.com/Watfaq-legacy/clash-rs/releases/download/latest/clash-rs-i686-pc-windows-msvc.exe",
-            "hash": "275ac676e7d2195a12c7f12cc0755eec6b9b22f2c86c3b867e3ce577f4116a7c"
+            "hash": "abd9ca77f2364fe945d47c1648ccb7838152f5687677b1f0137686c5ac820e5e"
         },
         "arm64": {
             "url": "https://github.com/Watfaq-legacy/clash-rs/releases/download/latest/clash-rs-aarch64-pc-windows-msvc.exe",
-            "hash": "72c8a50269fabd698aaf440b7556f2b1fc8b13bd615efcaa62959961f499968e"
+            "hash": "22aaab709f566c368acdcd371dba453791e6171d089c5f06acbbd7851e6d1a71"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\\clash*.exe\" | Rename-Item -NewName 'clashrs.exe'",
