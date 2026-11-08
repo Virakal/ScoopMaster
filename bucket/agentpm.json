@@ -1,12 +1,12 @@
 {
-  "version": "0.1.40",
+  "version": "0.1.41",
   "description": "AgentPM CLI",
   "homepage": "https://github.com/agentpm-dev/cli",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/agentpm-dev/cli/releases/download/v0.1.40/agentpm-x86_64-pc-windows-msvc.zip",
-      "hash": "7AE83C692BCAD00333CB6EA9FFFEAF4B7C64438CA25D20E2A0DAE59B6173FFC3"
+      "url": "https://github.com/agentpm-dev/cli/releases/download/v0.1.41/agentpm-x86_64-pc-windows-msvc.zip",
+      "hash": "5233B2D7F155A9BF5F515B07E21133FD4B0CBA9B25516BB91928877254D68E7A"
     }
   },
   "bin": "agentpm.exe",
