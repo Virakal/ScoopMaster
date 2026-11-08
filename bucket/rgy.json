@@ -12,6 +12,30 @@
     "searchctl.exe",
     "searchd.exe"
   ],
+  "post_install": [
+    "info 'rgy: READ THIS. Despite the name, searchctl is NOT a systemd service and does not require systemd.'",
+    "info '  It is a plain CLI. The daemon (searchd) is a separate, OPTIONAL binary.'",
+    "info '  Scoop did not install or start it. Nothing here depends on the system init.'",
+    "$answer = 'N'",
+    "if ([Environment]::UserInteractive) {",
+    "    $answer = Read-Host 'Install and configure the rgy search daemon now? [y/N]'",
+    "} else {",
+    "    info '  (non-interactive install: not asking. Run rgy-autostart install yourself to enable it.)'",
+    "}",
+    "if ($answer -match '^[Yy]') {",
+    "    info '  Registering the daemon in your own session now (no elevation, no dialog) ...'",
+    "    & (Join-Path $dir 'rgy-autostart.exe') install",
+    "    info '  Done. Check it with: rgy-autostart doctor'",
+    "    info '  Undo it later with: rgy-autostart uninstall'",
+    "} else {",
+    "    info '  No daemon installed. Two things to know:'",
+    "    info '   - searchctl needs an INDEX, not a daemon. Index at least once:'",
+    "    info '       searchctl --root $env:USERPROFILE --reindex --count ''*'''",
+    "    info '   - rgxy needs a RUNNING daemon, not an index. Without one it says ''no connection to the daemon''.'",
+    "    info '     Try it with nothing installed: Start-Process searchd.exe -ArgumentList ''--root'',$env:USERPROFILE,''--listen'',''pipe:rgy-try''; rgxy.exe --endpoint pipe:rgy-try --query invoice'",
+    "    info '     Or just use searchctl for one question. See the README for a daily index timer.'",
+    "}"
+  ],
   "shortcuts": [
     [
       "rgxy.exe",

@@ -1,14 +1,14 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.130.1",
+    "version": "0.131.0",
     "description": "清风输入法 | 轻量、快速、可定制的开源中文输入法，专为五笔和码表输入方案设计（Windows / macOS）",
     "homepage": "https://github.com/huanfeng/WindInput",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/huanfeng/WindInput/releases/download/v0.130.1/WindInput-Portable-0.130.1.zip",
-            "hash": "9805e8bd049d433b8dcafac3cec1ed66660361dcc38bad075cb14d40077f1ccb",
-            "extract_dir": "WindInput-0.130.1"
+            "url": "https://github.com/huanfeng/WindInput/releases/download/v0.131.0/WindInput-Portable-0.131.0.zip",
+            "hash": "f6ce97a8282a6abef259f9f1e1eaae8f9f211466861a864322b55ecab042e354",
+            "extract_dir": "WindInput-0.131.0"
         }
     },
     "bin": [
