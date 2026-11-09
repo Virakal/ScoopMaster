@@ -1,17 +1,17 @@
 {
-    "version": "0.15.2",
+    "version": "0.15.4",
     "description": "Fast and lightweight terminal file manager written in Rust",
     "homepage": "https://github.com/runa-fm/runa",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/runa-fm/runa/releases/download/v0.15.2/runa-windows-x86_64.zip",
-            "hash": "7a4eb669c4e88d58fcd8e6bcd2fb4f4ce2453d50edb6654a28b6f77ee0d0a0f6",
+            "url": "https://github.com/runa-fm/runa/releases/download/v0.15.4/runa-windows-x86_64.zip",
+            "hash": "d4581bcd5d84fca18715a3ca2f2e598854686d59a7ff114a3a551d38f19cc48b",
             "extract_dir": "runa-windows-x86_64"
         },
         "arm64": {
-            "url": "https://github.com/runa-fm/runa/releases/download/v0.15.2/runa-windows-aarch64.zip",
-            "hash": "e7f5b1b1ab74353921c8a0d993fedf09eff6309410a54002c753cfc24f7315de",
+            "url": "https://github.com/runa-fm/runa/releases/download/v0.15.4/runa-windows-aarch64.zip",
+            "hash": "42bc49d0d3d0dfc770816b2510a5994134b7a3fc518647af897f7d6b98bfc8d3",
             "extract_dir": "runa-windows-aarch64"
         }
     },
