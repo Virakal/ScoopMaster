@@ -1,0 +1,33 @@
+{
+    "version": "3.18.0",
+    "description": "Pake-generated desktop wrapper for ProgramMusic.",
+    "homepage": "https://musicforprogramming.net/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/tw93/Pake/releases/download/V3.18.0/ProgramMusic_x64.msi",
+    "hash": "dd44d747df9ac52d1ed8b618e4dcf7467d97548f0d6102c535061ed6d16345d7",
+    "bin": [
+        [
+            "PFiles\\ProgramMusic\\pake-programmusic.exe",
+            "programmusic"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PFiles\\ProgramMusic\\pake-programmusic.exe",
+            "ProgramMusic"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/tw93/Pake/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^V([\\d.]+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tw93/Pake/releases/download/V$version/ProgramMusic_x64.msi",
+        "hash": {
+            "mode": "download"
+        }
+    },
+    "notes": "Scoop uses its native MSI administrative extraction (msiexec /a) to unpack the application into the Scoop version directory; it does not run the MSI's normal per-machine installation sequence or apply its Windows Installer registrations. Scoop manages the command shim and Start Menu shortcut. Requires Microsoft Edge WebView2 Runtime, which is not bundled in these MSI packages.",
+    "##": "Installer Type: MSI (Scoop native administrative extraction)"
+}

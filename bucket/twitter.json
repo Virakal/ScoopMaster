@@ -1,0 +1,33 @@
+{
+    "version": "3.18.0",
+    "description": "Pake-generated desktop wrapper for Twitter.",
+    "homepage": "https://x.com/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/tw93/Pake/releases/download/V3.18.0/Twitter_x64.msi",
+    "hash": "9a91fa942c9ab625463fb6fe5e5547f6fa85869e7199fa8100e8fb27b66cde25",
+    "bin": [
+        [
+            "PFiles\\Twitter\\pake-twitter.exe",
+            "twitter"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "PFiles\\Twitter\\pake-twitter.exe",
+            "Twitter"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/tw93/Pake/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^V([\\d.]+)$"
+    },
+    "autoupdate": {
+        "url": "https://github.com/tw93/Pake/releases/download/V$version/Twitter_x64.msi",
+        "hash": {
+            "mode": "download"
+        }
+    },
+    "notes": "Scoop uses its native MSI administrative extraction (msiexec /a) to unpack the application into the Scoop version directory; it does not run the MSI's normal per-machine installation sequence or apply its Windows Installer registrations. Scoop manages the command shim and Start Menu shortcut. Requires Microsoft Edge WebView2 Runtime, which is not bundled in these MSI packages.",
+    "##": "Installer Type: MSI (Scoop native administrative extraction)"
+}
