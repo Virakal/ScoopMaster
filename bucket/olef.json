@@ -1,5 +1,5 @@
 {
-  "version": "3.5.0",
+  "version": "3.7.0",
   "description": "Drive Android apps from the command line with streaming JSON events.",
   "homepage": "https://olef.dev",
   "license": {
@@ -8,8 +8,8 @@
   },
   "architecture": {
     "64bit": {
-      "url": "https://github.com/olef-dev/olef/releases/download/v3.5.0/olef-x86_64-pc-windows-msvc.zip",
-      "hash": "c5d541a393caec4c991ad28b154b65c2f317d4d5f189ae1430470bd639b2ad51"
+      "url": "https://github.com/olef-dev/olef/releases/download/v3.7.0/olef-x86_64-pc-windows-msvc.zip",
+      "hash": "0b84cb723ebc96bbf37ef3fdbbe3123ca3b9dcb69436c6921ef509fdedee4910"
     }
   },
   "bin": [

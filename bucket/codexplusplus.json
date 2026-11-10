@@ -1,14 +1,24 @@
 {
-    "version": "2.4.0",
-    "description": "An enhanced tool for CodexApp, striving to make Codex better to use and more comfortable.",
+    "version": "2.6.0",
+    "description": "Enhanced launcher and management tool for the Codex desktop app",
     "homepage": "https://github.com/BigPizzaV3/CodexPlusPlus",
-    "license": "MIT",
+    "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v2.4.0/CodexPlusPlus-2.4.0-windows-x64-setup.exe#/dl.7z",
-            "hash": "079747d745061c7cf56c40e46c31a8e44350365cb15b8017622a23be853b1993"
+            "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v2.6.0/CodexPlusPlus-2.6.0-windows-x64.zip",
+            "hash": "b923353ce6ceff6eb8e138d2abb43bd7a75e7fbf6dfa1a8721f452debb643de3"
         }
     },
+    "bin": [
+        [
+            "codex-plus-plus.exe",
+            "codexplusplus"
+        ],
+        [
+            "codex-plus-plus-manager.exe",
+            "codexplusplus-manager"
+        ]
+    ],
     "shortcuts": [
         [
             "codex-plus-plus.exe",
@@ -19,12 +29,11 @@
             "Codex++ Manager"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v$version/CodexPlusPlus-$version-windows-x64-setup.exe#/dl.7z"
+                "url": "https://github.com/BigPizzaV3/CodexPlusPlus/releases/download/v$version/CodexPlusPlus-$version-windows-x64.zip"
             }
         }
     }

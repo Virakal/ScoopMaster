@@ -1,0 +1,22 @@
+{
+    "version": "1.0.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xavidop/hikyaku/releases/download/v1.0.0/hikyaku_1.0.0_windows_amd64.zip",
+            "bin": [
+                "hikyaku.exe"
+            ],
+            "hash": "693686571688a7d2658155a72dcb59fdf55d7e8ab1ed0091cb46f9af33f42522"
+        },
+        "arm64": {
+            "url": "https://github.com/xavidop/hikyaku/releases/download/v1.0.0/hikyaku_1.0.0_windows_arm64.zip",
+            "bin": [
+                "hikyaku.exe"
+            ],
+            "hash": "d2b494eb67c8bb1290435af74608ab13f9fab8b5094d7cffc40b7fdbae345488"
+        }
+    },
+    "homepage": "https://xavidop.github.io/hikyaku/",
+    "license": "MIT",
+    "description": "YAML-configured message relay with AI routing, retries and fallbacks."
+}

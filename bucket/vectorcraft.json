@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.23.0",
-    "description": "Vector illustration; an open-source, clean-room reimplementation of Adobe Illustrator, rebuilt in pure Rust",
+    "description": "Open-source Adobe Illustrator-style vector graphics app in pure Rust",
     "homepage": "https://github.com/storytold/vectorcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/vectorcraft/releases/download/v0.23.0/vectorcraft-0.23.0-windows-x64-portable.zip",
@@ -15,11 +16,14 @@
             "extract_dir": "vectorcraft-0.23.0-windows-arm64-portable"
         }
     },
-    "bin": "vectorcraft-cli.exe",
+    "bin": [
+        "vectorcraft.exe",
+        "vectorcraft-cli.exe"
+    ],
     "shortcuts": [
         [
             "vectorcraft.exe",
-            "VectorCraft"
+            "Vectorcraft"
         ]
     ],
     "checkver": "github",
@@ -33,9 +37,6 @@
                 "url": "https://github.com/storytold/vectorcraft/releases/download/v$version/vectorcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "vectorcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
