@@ -28,6 +28,6 @@
             "mode": "download"
         }
     },
-    "notes": "Scoop uses its native MSI administrative extraction (msiexec /a) to unpack the application into the Scoop version directory; it does not run the MSI's normal per-machine installation sequence or apply its Windows Installer registrations. Scoop manages the command shim and Start Menu shortcut. Requires Microsoft Edge WebView2 Runtime, which is not bundled in these MSI packages.",
+    "notes": "Requires Microsoft Edge WebView2 Runtime.",
     "##": "Installer Type: MSI (Scoop native administrative extraction)"
 }

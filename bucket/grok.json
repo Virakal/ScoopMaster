@@ -1,33 +1,41 @@
 {
-    "version": "3.18.0",
-    "description": "Pake-generated desktop wrapper for Grok.",
-    "homepage": "https://grok.com/",
-    "license": "GPL-3.0-only",
-    "url": "https://github.com/tw93/Pake/releases/download/V3.18.0/Grok_x64.msi",
-    "hash": "40b06f51ba86d70891f7c1237b188c02b34078c6a2ec6a53069fa4924d0e51bb",
-    "bin": [
-        [
-            "PFiles\\Grok\\pake-grok.exe",
-            "grok"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "PFiles\\Grok\\pake-grok.exe",
-            "Grok"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/tw93/Pake/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "^V([\\d.]+)$"
-    },
-    "autoupdate": {
-        "url": "https://github.com/tw93/Pake/releases/download/V$version/Grok_x64.msi",
-        "hash": {
-            "mode": "download"
+    "version": "1.0.77",
+    "description": "xAI's coding agent and CLI for terminal-based software development.",
+    "homepage": "https://x.ai/cli",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://x.ai/cli/grok-1.0.77-windows-x86_64.exe#/grok.exe",
+            "hash": "6b757512d240a6439535ca75aad039e581d00f17ba8e937112fd0dbaadf1bc81"
+        },
+        "arm64": {
+            "url": "https://x.ai/cli/grok-1.0.77-windows-aarch64.exe#/grok.exe",
+            "hash": "ab4e5fddcd9f189fb379405a8fbfda43edf38dbbe893d302c0df697d180a6034"
         }
     },
-    "notes": "Scoop uses its native MSI administrative extraction (msiexec /a) to unpack the application into the Scoop version directory; it does not run the MSI's normal per-machine installation sequence or apply its Windows Installer registrations. Scoop manages the command shim and Start Menu shortcut. Requires Microsoft Edge WebView2 Runtime, which is not bundled in these MSI packages.",
-    "##": "Installer Type: MSI (Scoop native administrative extraction)"
+    "bin": [
+        [
+            "grok.exe",
+            "grok"
+        ],
+        [
+            "grok.exe",
+            "agent"
+        ]
+    ],
+    "notes": "Run 'grok login' after installation. Grok Build access requires an eligible xAI subscription.",
+    "checkver": {
+        "url": "https://x.ai/cli/stable",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://x.ai/cli/grok-$version-windows-x86_64.exe#/grok.exe"
+            },
+            "arm64": {
+                "url": "https://x.ai/cli/grok-$version-windows-aarch64.exe#/grok.exe"
+            }
+        }
+    }
 }

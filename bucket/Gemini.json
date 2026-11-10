@@ -1,33 +1,55 @@
 {
-    "version": "3.18.0",
-    "description": "Pake-generated desktop wrapper for Gemini.",
-    "homepage": "https://gemini.google.com/",
-    "license": "GPL-3.0-only",
-    "url": "https://github.com/tw93/Pake/releases/download/V3.18.0/Gemini_x64.msi",
-    "hash": "c1059ecf1c87665ff766f0f60fe380869b13caa4f83bd531a54a35789ecf38c4",
-    "bin": [
-        [
-            "PFiles\\Gemini\\pake-gemini.exe",
-            "gemini"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "PFiles\\Gemini\\pake-gemini.exe",
-            "Gemini"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/tw93/Pake/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "^V([\\d.]+)$"
+  "version": "1.18.0",
+  "description": "Google Gemini desktop application",
+  "homepage": "https://gemini.google/desktop/",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://policies.google.com/terms"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://dl.google.com/release2/Google%20DeepMind/mu4o5z2at26ymd2qhpxppwy2ju_1.18.0/GeminiSetup-1.18.0_uncompressed.exe#/dl.7z",
+      "hash": "61b10b307de9d33b700178fc2ea010eda447c7cbc83ba8b648d7639642559878"
     },
-    "autoupdate": {
-        "url": "https://github.com/tw93/Pake/releases/download/V$version/Gemini_x64.msi",
-        "hash": {
-            "mode": "download"
-        }
-    },
-    "notes": "Scoop uses its native MSI administrative extraction (msiexec /a) to unpack the application into the Scoop version directory; it does not run the MSI's normal per-machine installation sequence or apply its Windows Installer registrations. Scoop manages the command shim and Start Menu shortcut. Requires Microsoft Edge WebView2 Runtime, which is not bundled in these MSI packages.",
-    "##": "Installer Type: MSI (Scoop native administrative extraction)"
+    "arm64": {
+      "url": "https://dl.google.com/release2/Google%20DeepMind/kdmcqzazhwpdazbe7ai4a3mepy_1.17.0/GeminiSetup-1.17.0_uncompressed.exe#/dl.7z",
+      "hash": "d1d71a4cc99037aed7cfb2c5984c5a8f353279219e54e5977b83aa93bb6b52f5"
+    }
+  },
+  "extract_dir": "app-1.18.0",
+  "bin": "Gemini.exe",
+  "shortcuts": [
+    [
+      "Gemini.exe",
+      "Gemini"
+    ],
+    [
+      "GeminiAppLauncher.exe",
+      "Gemini App Launcher"
+    ]
+  ],
+  "checkver": {
+    "script": [
+      "$appid = '{533DD80C-942A-4464-B6A9-2E59428D784E}'",
+      "$headers = @{ 'x-goog-update-appid' = $appid; 'x-goog-update-updater' = 'GoogleUpdater/1.0' }",
+      "foreach ($arch in 'x64', 'arm64') {",
+      "    $body = @{ request = @{ os = @{ sp = ''; version = '10.0.26100'; arch = $arch; platform = 'win' }; app = @( @{ appid = $appid; ap = 'prod'; version = '1.0.0.0'; cohort = '1::'; enabled = $true; updatecheck = @{} } ) } } | ConvertTo-Json -Depth 8 -Compress",
+      "    $resp = Invoke-WebRequest -Uri 'https://update.googleapis.com/service/update2/json' -Method Post -Headers $headers -ContentType 'application/json' -Body $body -UseBasicParsing",
+      "    $raw = $resp.Content -replace '^[\\x29\\x5d\\x7d\\x27]+\\s*', ''",
+      "    (($raw | ConvertFrom-Json).gupdate.app[0].updatecheck.codebase)",
+      "}"
+    ],
+    "regex": "(?<path64>release2/[^/\\s]+/[^/\\s]+_(?<version>\\d+(?:\\.\\d+)+)/[^/\\s]+)\\s+\\S+?(?<patharm>release2/[^/\\s]+/[^/\\s]+_\\d+(?:\\.\\d+)+/[^/\\s]+)"
+  },
+  "autoupdate": {
+    "extract_dir": "app-$version",
+    "architecture": {
+      "64bit": {
+        "url": "https://dl.google.com/$matchPath64#/dl.7z"
+      },
+      "arm64": {
+        "url": "https://dl.google.com/$matchPatharm#/dl.7z"
+      }
+    }
+  }
 }
