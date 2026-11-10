@@ -1,43 +1,43 @@
 {
-    "version": "3000.12.32",
-    "description": "Official terminal CLI for the Devin agent by Cognition.",
-    "homepage": "https://cli.devin.ai",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://cognition.com/legal/platform-terms-of-service"
+  "version": "3000.12.32",
+  "description": "Official terminal CLI for the Devin agent by Cognition.",
+  "homepage": "https://cli.devin.ai",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://cognition.com/legal/platform-terms-of-service"
+  },
+  "notes": "The official installer runs 'devin setup' after installing to configure shell integration. If you need that, run it once from the installed binary.",
+  "architecture": {
+    "64bit": {
+      "url": "https://static.devin.ai/cli/3000.12.32/devin-3000.12.32-x86_64-pc-windows.zip",
+      "hash": "071528ffe2822cc93d04931e9be384cb61a8910c33027c128b5e3992fdab99a0"
     },
-    "notes": "The official installer runs 'devin setup' after installing to configure shell integration. If you need that, run it once from the installed binary.",
-    "architecture": {
-        "64bit": {
-            "url": "https://static.devin.ai/cli/3000.12.32/devin-3000.12.32-x86_64-pc-windows.zip",
-            "hash": "071528ffe2822cc93d04931e9be384cb61a8910c33027c128b5e3992fdab99a0"
-        },
-        "arm64": {
-            "url": "https://static.devin.ai/cli/3000.12.32/devin-3000.12.32-aarch64-pc-windows.zip",
-            "hash": "68bd8639bda9df69ed6ba55d89e5e9a8d45450ae6e0300a243f43a2c97e2de63"
-        }
-    },
-    "bin": "bin\\devin.exe",
-    "checkver": {
-        "url": "https://static.devin.ai/cli/current/manifest.json",
-        "jsonpath": "$.version"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://static.devin.ai/cli/$version/devin-$version-x86_64-pc-windows.zip",
-                "hash": {
-                    "url": "https://static.devin.ai/cli/$version/manifest.json",
-                    "jsonpath": "$.platforms.x86_64-pc-windows.sha256"
-                }
-            },
-            "arm64": {
-                "url": "https://static.devin.ai/cli/$version/devin-$version-aarch64-pc-windows.zip",
-                "hash": {
-                    "url": "https://static.devin.ai/cli/$version/manifest.json",
-                    "jsonpath": "$.platforms.aarch64-pc-windows.sha256"
-                }
-            }
-        }
+    "arm64": {
+      "url": "https://static.devin.ai/cli/3000.12.32/devin-3000.12.32-aarch64-pc-windows.zip",
+      "hash": "68bd8639bda9df69ed6ba55d89e5e9a8d45450ae6e0300a243f43a2c97e2de63"
     }
+  },
+  "bin": "bin\\devin.exe",
+  "checkver": {
+    "url": "https://static.devin.ai/cli/current/manifest.json",
+    "jsonpath": "$.version"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://static.devin.ai/cli/$version/devin-$version-x86_64-pc-windows.zip",
+        "hash": {
+          "url": "https://static.devin.ai/cli/$version/manifest.json",
+          "jsonpath": "$.platforms.x86_64-pc-windows.sha256"
+        }
+      },
+      "arm64": {
+        "url": "https://static.devin.ai/cli/$version/devin-$version-aarch64-pc-windows.zip",
+        "hash": {
+          "url": "https://static.devin.ai/cli/$version/manifest.json",
+          "jsonpath": "$.platforms.aarch64-pc-windows.sha256"
+        }
+      }
+    }
+  }
 }

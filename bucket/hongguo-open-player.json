@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/zfdang/hongguo-open-player/releases/download/v1.11.2/hongguo-open-player-1.11.2-win-x64-setup.exe#/dl.7z",
-            "hash": "e89e5e90d985533092d35a7d3e30265db4cc48cf6135759f5c5516e378e05ba1",
+            "hash": "193367ed833501be2fe5ae72c396ca88001f1f22539cec518ba4bbbfd15caa2a",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Force -Recurse",
