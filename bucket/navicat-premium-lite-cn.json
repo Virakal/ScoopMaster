@@ -1,15 +1,20 @@
 {
-    "version": "18.0.5",
+    "version": "18.0.6",
     "description": "Database administration and development tool",
     "homepage": "https://navicat.com.cn/products/navicat-premium-lite",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dn.navicat.com.cn/download/navicat18_premium_lite_en_x64.exe",
-            "hash": "ad29cb97e91058eef3b4a5a0f4c0ff7a3605e87282d16e5594b454380896d717"
+            "url": "https://dn.navicat.com.cn/download/navicat18_premium_lite_cs_x64.exe",
+            "hash": "dd8f8ea33baa1db4a5561ca5ac179be7139c5f10ff584aa8204d4685d5fb901c"
         }
     },
     "innosetup": true,
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App"
+    ],
     "shortcuts": [
         [
             "navicat.exe",
@@ -23,8 +28,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dn.navicat.com.cn/download/navicat$majorVersion_premium_lite_en_x64.exe"
+                "url": "https://dn.navicat.com.cn/download/navicat$majorVersion_premium_lite_cs_x64.exe"
             }
         }
-    }
+    },
+    "notes": "Scoop can't persist data of this application, so please take care to back up your database!"
 }
