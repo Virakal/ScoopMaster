@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.19.0",
-    "description": "Video editing, color and sound; an open-source, clean-room reimplementation of Adobe Premiere Pro, rebuilt in pure Rust",
+    "description": "Open-source Adobe Premiere Pro-style video editor in pure Rust",
     "homepage": "https://github.com/storytold/filmcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/filmcraft/releases/download/v0.19.0/filmcraft-0.19.0-windows-x64-portable.zip",
@@ -15,11 +16,14 @@
             "extract_dir": "filmcraft-0.19.0-windows-arm64-portable"
         }
     },
-    "bin": "filmcraft-cli.exe",
+    "bin": [
+        "filmcraft.exe",
+        "filmcraft-cli.exe"
+    ],
     "shortcuts": [
         [
             "filmcraft.exe",
-            "FilmCraft"
+            "Filmcraft"
         ]
     ],
     "checkver": "github",
@@ -33,9 +37,6 @@
                 "url": "https://github.com/storytold/filmcraft/releases/download/v$version/filmcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "filmcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

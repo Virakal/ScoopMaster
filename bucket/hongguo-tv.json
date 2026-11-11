@@ -1,5 +1,5 @@
 {
-    "version": "0.2.164",
+    "version": "0.2.166",
     "description": "红果短剧 Android TV 及webOS、Mac、Windows 、Linux正式安装包、版本信息与更新说明 Android TV,webOS,Mac,Windows,Linux app for Hongguo short dramas.",
     "homepage": "https://github.com/aston314/hongguo-tv-releases",
     "license": {
@@ -7,8 +7,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/aston314/hongguo-tv-releases/releases/download/desktop-v0.2.164/hongguo-desktop-0.2.164-windows-x64.zip",
-            "hash": "f015d59ab690d92f44031d1836c27dd745c18e9552d2dc9ee45c6bb67e34a7c3"
+            "url": "https://github.com/aston314/hongguo-tv-releases/releases/download/desktop-v0.2.166/hongguo-desktop-0.2.166-windows-x64.zip",
+            "hash": "1472e512408706b267482ca037fbdde6a31dff4cc1875a4219db19637591bbed"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\\红果*.exe\" | Rename-Item -NewName 'hongguo-tv.exe'",

@@ -1,7 +1,7 @@
 {
     "version": "1.2.0",
-    "description": "Pi coding agent compiled ahead of time to one native executable (faster startup, lower CPU/memory than Pi on Node).",
-    "homepage": "https://pi-bolt.opensec.in",
+    "description": "Pi, the coding agent, compiled ahead of time to native code. Starts 3x sooner than Pi on Bun and uses about a third of its CPU.",
+    "homepage": "https://github.com/opensec-git/Pi-Bolt",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -9,10 +9,10 @@
             "hash": "b44f1deeec71a328887819c903ec4ec64954bf3dc5ae1f54e6128f6237520797"
         }
     },
+    "extract_dir": "pi-bolt-win32-x64",
     "bin": "pi-bolt.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/opensec-git/Pi-Bolt/releases/latest",
-        "jsonpath": "$.tag_name",
+        "github": "https://github.com/opensec-git/Pi-Bolt",
         "regex": "bolt-v([\\d.]+)"
     },
     "autoupdate": {
