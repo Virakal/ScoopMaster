@@ -22,9 +22,7 @@
         "The processcontainer backend needs Windows 11 24H2 or later with the updates listed at https://github.com/microsoft/mxc/blob/main/docs/backends/process-container/os-version-support.md",
         "The hyperlight and wslc backends need extra setup: 'wxc-exec --setup-hyperlight' and 'wxc-exec --setup-wslc --image <image>'."
     ],
-    "checkver": {
-        "github": "https://github.com/microsoft/mxc"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/microsoft/mxc/releases/download/v$version/mxc-release-binaries.zip"
     }
