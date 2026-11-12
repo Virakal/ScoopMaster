@@ -1,26 +1,22 @@
 {
     "version": "3.6.0",
-    "description": "把任意 Windows 程序自启动最小化到托盘或后台启动",
+    "description": "Windows startup and tray manager for launching, hiding, scheduling, and organizing applications.",
     "homepage": "https://github.com/OUBIGFA/WinTray",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/OUBIGFA/WinTray/releases/download/v3.6.0/WinTray-Portable.zip",
-            "hash": "cd72de0e418ef3c5cd44570a6cb911cfd4fae3aa996b0ffb93262139b7b4239c"
-        }
-    },
+    "url": "https://github.com/OUBIGFA/WinTray/releases/download/v3.6.0/WinTray-Portable.zip",
+    "hash": "cd72de0e418ef3c5cd44570a6cb911cfd4fae3aa996b0ffb93262139b7b4239c",
+    "bin": "WinTray.exe",
     "shortcuts": [
         [
             "WinTray.exe",
             "WinTray"
         ]
     ],
-    "checkver": "github",
+    "notes": "The portable app stores its settings and logs under %LOCALAPPDATA%\\WinTray. Configuring automatic startup can create or update Windows login startup entries.",
+    "checkver": {
+        "github": "https://github.com/OUBIGFA/WinTray"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/OUBIGFA/WinTray/releases/download/v$version/WinTray-Portable.zip"
-            }
-        }
+        "url": "https://github.com/OUBIGFA/WinTray/releases/download/v$version/WinTray-Portable.zip"
     }
 }
