@@ -16,6 +16,12 @@
         }
     },
     "bin": "gputaskman.exe",
+    "shortcuts": [
+        [
+            "gputaskman.exe",
+            "GPU Task Manager"
+        ]
+    ],
     "checkver": {
         "url": "https://github.com/shanselman/gputaskman/releases/latest",
         "regex": "/releases/tag/v([\\d.]+)"

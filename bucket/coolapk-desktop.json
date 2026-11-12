@@ -1,5 +1,5 @@
 {
-    "version": "1.42.1",
+    "version": "1.43.0",
     "description": "基于 Tauri 2、Vue 3 和 Rust 构建的现代非官方酷安桌面客户端",
     "homepage": "https://github.com/coolapk-desktop/Coolapk-Desktop",
     "license": "MIT",
@@ -14,12 +14,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coolapk-desktop/Coolapk-Desktop/releases/download/v1.42.1/coolapk-desktop_1.42.1_x64-portable.exe#/coolapk-desktop.exe",
-            "hash": "783fb0902a773bc7193c37fd06c5582d4f81dcf8df3681c31912ab5d78e4ab6d"
+            "url": "https://github.com/coolapk-desktop/Coolapk-Desktop/releases/download/v1.43.0/coolapk-desktop_1.43.0_x64-portable.exe#/coolapk-desktop.exe",
+            "hash": "05a3037fd83942f2b65b55ebbc0a7b821def3ef6a1a19642548c94d6cb8331c1"
         },
         "arm64": {
-            "url": "https://github.com/coolapk-desktop/Coolapk-Desktop/releases/download/v1.42.1/coolapk-desktop_1.42.1_arm64-portable.exe#/coolapk-desktop.exe",
-            "hash": "b9c031d57f60b98a09d208d54a6fbc1152bff10368e536ca71dd5961076591bc"
+            "url": "https://github.com/coolapk-desktop/Coolapk-Desktop/releases/download/v1.43.0/coolapk-desktop_1.43.0_arm64-portable.exe#/coolapk-desktop.exe",
+            "hash": "d505d75c0b5fe8527eead538c7f86c13e481752c781a6f623a5954ee282c6272"
         }
     },
     "shortcuts": [

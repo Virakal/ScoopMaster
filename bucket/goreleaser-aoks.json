@@ -1,33 +1,33 @@
 {
-    "version": "2.20.1",
-    "homepage": "https://goreleaser.com",
-    "description": "Deliver Go binaries as fast and easily as possible",
-    "license": "MIT",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/goreleaser/goreleaser/releases/download/v2.20.1/goreleaser_Windows_i386.zip",
-            "hash": "6594ec1e3410aabd3d20e42a5dc0ad1f51125e259ef69d087db72933c210d1e1"
-        },
-        "64bit": {
-            "url": "https://github.com/goreleaser/goreleaser/releases/download/v2.20.1/goreleaser_Windows_x86_64.zip",
-            "hash": "b84ce9966dc8313edb935846431123b8a9d249eb7140a44783a1a45a5addcf5d"
-        }
+  "version": "2.20.1",
+  "homepage": "https://goreleaser.com",
+  "description": "Deliver Go binaries as fast and easily as possible",
+  "license": "MIT",
+  "architecture": {
+    "32bit": {
+      "url": "https://github.com/goreleaser/goreleaser/releases/download/v2.20.1/goreleaser_Windows_i386.zip",
+      "hash": "6594ec1e3410aabd3d20e42a5dc0ad1f51125e259ef69d087db72933c210d1e1"
     },
-    "bin": "goreleaser.exe",
-    "checkver": {
-        "github": "https://github.com/goreleaser/goreleaser"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/goreleaser/goreleaser/releases/download/v$version/goreleaser_Windows_x86_64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/goreleaser/goreleaser/releases/download/v$version/goreleaser_Windows_i386.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+    "64bit": {
+      "url": "https://github.com/goreleaser/goreleaser/releases/download/v2.20.1/goreleaser_Windows_x86_64.zip",
+      "hash": "b84ce9966dc8313edb935846431123b8a9d249eb7140a44783a1a45a5addcf5d"
     }
+  },
+  "bin": "goreleaser.exe",
+  "checkver": {
+    "github": "https://github.com/goreleaser/goreleaser"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/goreleaser/goreleaser/releases/download/v$version/goreleaser_Windows_x86_64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/goreleaser/goreleaser/releases/download/v$version/goreleaser_Windows_i386.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
 }
