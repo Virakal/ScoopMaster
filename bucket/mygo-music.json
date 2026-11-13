@@ -1,18 +1,11 @@
 {
     "version": "0.1.24",
-    "description": "A native music player you extend with plugins.",
-    "homepage": "https://music.egoist.dev/",
+    "description": "Native desktop music player for local files, playlists, lyrics, plugins, and podcast captions.",
+    "homepage": "https://github.com/egoist/mygo-music",
     "license": "AGPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.24/mygo-music-0.1.24-windows-amd64.tar.gz",
-            "hash": "27f4ae76de758ad2fb4f1bd83001f6fd2ef764352a630705bd6f2a0a842e19b6"
-        },
-        "arm64": {
-            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.24/mygo-music-0.1.24-windows-arm64.tar.gz",
-            "hash": "fe12b9412af2d8606253e598438baa46b154503a46002356d8029b82804e097d"
-        }
-    },
+    "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.24/mygo-music-0.1.24-windows-amd64.tar.gz",
+    "hash": "27f4ae76de758ad2fb4f1bd83001f6fd2ef764352a630705bd6f2a0a842e19b6",
+    "bin": "MyGo Music.exe",
     "shortcuts": [
         [
             "MyGo Music.exe",
@@ -23,16 +16,12 @@
         "github": "https://github.com/egoist/mygo-music"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/egoist/mygo-music/releases/download/v$version/mygo-music-$version-windows-amd64.tar.gz"
-            },
-            "arm64": {
-                "url": "https://github.com/egoist/mygo-music/releases/download/v$version/mygo-music-$version-windows-arm64.tar.gz"
-            }
-        },
+        "url": "https://github.com/egoist/mygo-music/releases/download/v$version/mygo-music-$version-windows-amd64.tar.gz",
         "hash": {
-            "url": "$baseurl/SHA256SUMS"
+            "mode": "json",
+            "url": "https://api.github.com/repos/egoist/mygo-music/releases/tags/v$version",
+            "jp": "$.assets[?(@.name == 'mygo-music-$version-windows-amd64.tar.gz')].digest"
         }
-    }
+    },
+    "notes": "The music library, settings, plugins, and session data are stored in the user's MyGo app data directory, outside Scoop's versioned install directory. Use Scoop to manage app updates."
 }

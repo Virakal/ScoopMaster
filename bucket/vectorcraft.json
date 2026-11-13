@@ -1,7 +1,7 @@
 {
     "version": "0.24.1",
-    "description": "Vector illustration; an open-source, clean-room reimplementation of Adobe Illustrator, rebuilt in pure Rust",
-    "homepage": "https://github.com/storytold/vectorcraft",
+    "description": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
+    "homepage": "https://getartcraft.com/apps/vectorcraft",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
@@ -22,7 +22,11 @@
             "VectorCraft"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://api.github.com/repos/storytold/vectorcraft/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

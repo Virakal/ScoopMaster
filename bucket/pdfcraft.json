@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.21.1",
-    "description": "The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust",
+    "description": "Open-source Adobe Acrobat-style PDF app in pure Rust",
     "homepage": "https://github.com/storytold/pdfcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/pdfcraft/releases/download/v0.21.1/pdfcraft-0.21.1-windows-x64-portable.zip",
@@ -15,11 +16,14 @@
             "extract_dir": "pdfcraft-0.21.1-windows-arm64-portable"
         }
     },
-    "bin": "pdfcraft-cli.exe",
+    "bin": [
+        "pdfcraft.exe",
+        "pdfcraft-cli.exe"
+    ],
     "shortcuts": [
         [
             "pdfcraft.exe",
-            "PdfCraft"
+            "Pdfcraft"
         ]
     ],
     "checkver": "github",
@@ -33,9 +37,6 @@
                 "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "pdfcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
