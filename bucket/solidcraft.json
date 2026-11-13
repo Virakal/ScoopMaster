@@ -1,19 +1,15 @@
 {
     "version": "0.40.1",
-    "description": "An open-source parametric 3D CAD application built in pure Rust",
-    "homepage": "https://bherbruck.github.io/solidcraft/",
-    "license": "Apache-2.0|MIT",
+    "description": "Open-source parametric 3D CAD application",
+    "homepage": "https://github.com/tangency-labs/solidcraft",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bherbruck/solidcraft/releases/download/v0.40.1/solidcraft-0.40.1-windows-x64-portable.zip",
+            "url": "https://github.com/tangency-labs/solidcraft/releases/download/v0.40.1/solidcraft-0.40.1-windows-x64-portable.zip",
             "hash": "7227b9b3e44393e8615c433819a4df2f4e06b3260a8248eed321501e2455ed2d",
             "extract_dir": "solidcraft-0.40.1-windows-x64-portable"
         }
     },
-    "bin": [
-        "solidcraft.exe",
-        "solidcraft-cli.exe"
-    ],
     "shortcuts": [
         [
             "solidcraft.exe",
@@ -21,12 +17,12 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/bherbruck/solidcraft/"
+        "github": "https://github.com/tangency-labs/solidcraft"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/bherbruck/solidcraft/releases/download/v$version/solidcraft-$version-windows-x64-portable.zip",
+                "url": "https://github.com/tangency-labs/solidcraft/releases/download/v$version/solidcraft-$version-windows-x64-portable.zip",
                 "extract_dir": "solidcraft-$version-windows-x64-portable"
             }
         }

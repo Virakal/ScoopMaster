@@ -1,59 +1,48 @@
 {
-    "version": "0.10.0",
-    "description": "The fast all-in-one Node.js toolkit",
+    "##": "Why here? Testing.",
+    "version": "0.11.0",
+    "description": "A fast all-in-one toolkit that augments Node.js instead of replacing it.",
     "homepage": "https://nubjs.com",
     "license": "MIT",
+    "notes": "Run `nub pm shim` and add `$env:LOCALAPPDATA\\nub\\shims` to PATH for Corepack style shims",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nubjs/nub/releases/download/v0.10.0/nub-win32-x64.zip",
-            "hash": "53fe2a1719d93e1fa209cd3737cc438690596ecfe1c867135b24f7f133c7a7f8"
+            "url": "https://github.com/nubjs/nub/releases/download/v0.11.0/nub-win32-x64.zip",
+            "hash": "14e428c144cb6728287cedee5cd5e5a2b0c359a2fbe2eb0bbc5db5c266d9cee1"
         },
         "arm64": {
-            "url": "https://github.com/nubjs/nub/releases/download/v0.10.0/nub-win32-arm64.zip",
-            "hash": "5ce6906c25b113a06d1fdbaa2e69c0a24823f6712a9364c3a6ae46c928ecf86e"
+            "url": "https://github.com/nubjs/nub/releases/download/v0.11.0/nub-win32-arm64.zip",
+            "hash": "a859623fc5f359efa9a7dc19f225fac7f5f2fe253b6a8101054108d83c4cc742"
         }
     },
+    "extract_dir": "bin",
     "post_install": [
-        "$pmDir = if ($env:XDG_DATA_HOME) {",
-        "    Join-Path $env:XDG_DATA_HOME 'nub\\shims'",
-        "} elseif ($env:LOCALAPPDATA) {",
-        "    Join-Path $env:LOCALAPPDATA 'nub\\shims'",
-        "} else { $null }",
-        "$nodeDir = if ($env:XDG_DATA_HOME) {",
-        "    Join-Path $env:XDG_DATA_HOME 'nub\\node-shim'",
-        "} elseif ($env:LOCALAPPDATA) {",
-        "    Join-Path $env:LOCALAPPDATA 'nub\\node-shim'",
-        "} else { $null }",
-        "$nub = Join-Path $dir 'bin\\nub.exe'",
-        "if ($pmDir -and (Test-Path -LiteralPath $pmDir -PathType Container)) {",
-        "    try { & $nub pm shim | Out-Null } catch { }",
-        "}",
-        "if ($nodeDir -and (Test-Path -LiteralPath $nodeDir -PathType Container)) {",
-        "    try { & $nub node shim | Out-Null } catch { }",
-        "}"
-    ],
-    "pre_uninstall": [
-        "if ($cmd -eq 'update') { return }",
-        "$nub = Join-Path $dir 'bin\\nub.exe'",
-        "try { & $nub pm unshim | Out-Null } catch { }",
-        "try { & $nub node unshim | Out-Null } catch { }",
-        "$roots = @()",
-        "if ($env:XDG_DATA_HOME) {",
-        "    $roots += (Join-Path $env:XDG_DATA_HOME 'nub\\shims')",
-        "    $roots += (Join-Path $env:XDG_DATA_HOME 'nub\\node-shim')",
-        "}",
-        "if ($env:LOCALAPPDATA) {",
-        "    $roots += (Join-Path $env:LOCALAPPDATA 'nub\\shims')",
-        "    $roots += (Join-Path $env:LOCALAPPDATA 'nub\\node-shim')",
-        "}",
-        "foreach ($root in $roots) {",
-        "    try { Remove-Path -Path $root -Global:$global } catch { }",
+        "# Update Corepack style shims if they've already been created",
+        "if ([System.IO.Directory]::Exists([System.IO.Path]::Combine($env:LOCALAPPDATA, 'nub', 'shims'))) {",
+        "    info 'Updating Corepack style shims (`nub pm shim`).'",
+        "    $null = nub pm shim",
         "}"
     ],
     "bin": [
-        "bin\\nub.exe",
-        "bin\\nubr.exe",
-        "bin\\nubx.exe"
+        "nub.exe",
+        "nubx.exe"
+    ],
+    "post_uninstall": [
+        "# Inform of leftover directories if any were found",
+        "$LeftoverDirectories = [string[]](",
+        "    [System.IO.Path]::Combine($env:LOCALAPPDATA, 'nub'),",
+        "    [System.IO.Path]::Combine($env:USERPROFILE, '.config', 'nub')",
+        "    [System.IO.Path]::Combine($env:USERPROFILE, '.cache', 'nub') | Where-Object -FilterScript {",
+        "        [System.IO.Directory]::Exists($_)",
+        "    }",
+        ")",
+        "if ($LeftoverDirectories.Count -gt 0) {",
+        "    $Message = [string] \"`r`nFound some leftover directories you might want to delete:\"",
+        "    $LeftoverDirectories.ForEach{",
+        "        $Message += \"`r`n* '{0}'\" -f $_",
+        "    }",
+        "    info $Message",
+        "}"
     ],
     "checkver": {
         "github": "https://github.com/nubjs/nub"
@@ -66,9 +55,6 @@
             "arm64": {
                 "url": "https://github.com/nubjs/nub/releases/download/v$version/nub-win32-arm64.zip"
             }
-        },
-        "hash": {
-            "url": "$url.sha256"
         }
     }
 }
