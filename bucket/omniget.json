@@ -1,17 +1,17 @@
 {
-    "version": "0.15.1",
+    "version": "0.16.6",
     "description": "Universal downloader and media player: video, audio, images, courses and torrents from 1,800+ sites, with 36 course platforms and 158 offline study and media tools.",
     "homepage": "https://omniget.nav.bd/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/OpenSelena/omniget/releases/download/v0.15.1/omniget_0.15.1_x64-portable.exe",
-                "https://github.com/OpenSelena/omniget/releases/download/v0.15.1/omniget-chrome-extension-v0.15.1.zip"
+                "https://github.com/OpenSelena/omniget/releases/download/v0.16.6/omniget_0.16.6_x64-portable.exe",
+                "https://github.com/OpenSelena/omniget/releases/download/v0.16.6/omniget-chrome-extension-v0.16.6.zip"
             ],
             "hash": [
-                "b08853dc6e38bc3626e1c1cd407ffa842143a5b0554742e7a10ad819b70f8906",
-                "d4b4bb93f494b3743ddb434d8176c54b34d98e34730cf2b180cd759faba26543"
+                "5db562c2532a19161424444fdc2e2822eff4fe8f9f9f087135cf08dd00fd2241",
+                "ea0f35dba60cfb61b633726d790dfc8cc14c0c1639e1b940faa7c82d2e64f5e4"
             ]
         }
     },

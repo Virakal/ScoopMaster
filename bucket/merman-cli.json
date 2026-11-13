@@ -5,7 +5,7 @@
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Latias94/merman/releases/download/v0.10.0/merman-cli-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/Latias94/merman/releases/download/v0.10.0/merman-cli-x86_64-pc-windows-msvc.zip",
             "hash": "0c223ce7fff97153ace64c69602bbd005d76317cac019927b80623c710510879"
         }
     },
@@ -18,7 +18,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Latias94/merman/releases/download/v$version/merman-cli-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/Latias94/merman/releases/download/v$version/merman-cli-x86_64-pc-windows-msvc.zip"
             }
         },
         "hash": {

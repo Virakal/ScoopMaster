@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.18.1",
-    "description": "Presentations and slide shows; an open-source, clean-room reimplementation of Microsoft PowerPoint, rebuilt in pure Rust",
+    "description": "Open-source PowerPoint-style presentations app in pure Rust",
     "homepage": "https://github.com/storytold/deckcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/deckcraft/releases/download/v0.18.1/deckcraft-0.18.1-windows-x64-portable.zip",
@@ -22,7 +23,7 @@
     "shortcuts": [
         [
             "deckcraft.exe",
-            "DeckCraft"
+            "Deckcraft"
         ]
     ],
     "checkver": "github",
@@ -36,9 +37,6 @@
                 "url": "https://github.com/storytold/deckcraft/releases/download/v$version/deckcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "deckcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

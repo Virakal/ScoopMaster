@@ -1,7 +1,7 @@
 {
     "version": "0.19.1",
-    "description": "Spreadsheets and data; an open-source, clean-room reimplementation of Microsoft Excel, rebuilt in pure Rust",
-    "homepage": "https://github.com/storytold/gridcraft",
+    "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+    "homepage": "https://getartcraft.com/apps/gridcraft",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
@@ -22,7 +22,11 @@
             "GridCraft"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://api.github.com/repos/storytold/gridcraft/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

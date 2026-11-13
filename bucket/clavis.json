@@ -1,0 +1,22 @@
+{
+    "version": "0.2.5",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Dumhouse/clavis/releases/download/v0.2.5/clavis_0.2.5_windows_amd64.zip",
+            "bin": [
+                "clavis.exe"
+            ],
+            "hash": "d10d966dda8f7bc6149c8ea30c4154407342a0b6d0ac5f6afeda5da06d9833b3"
+        },
+        "arm64": {
+            "url": "https://github.com/Dumhouse/clavis/releases/download/v0.2.5/clavis_0.2.5_windows_arm64.zip",
+            "bin": [
+                "clavis.exe"
+            ],
+            "hash": "fcf52be1681821aeef71a6b0becc382360c090429dbd76026865593807dc04b3"
+        }
+    },
+    "homepage": "https://dumhouse.github.io/clavis/",
+    "license": "Apache-2.0",
+    "description": "Open-source secrets management for humans, machines, and AI agents."
+}
