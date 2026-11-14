@@ -15,10 +15,7 @@
             "extract_dir": "texturecraft-0.6.1-windows-arm64-portable"
         }
     },
-    "bin": [
-        "texturecraft.exe",
-        "texturecraft-cli.exe"
-    ],
+    "bin": "texturecraft-cli.exe",
     "shortcuts": [
         [
             "texturecraft.exe",

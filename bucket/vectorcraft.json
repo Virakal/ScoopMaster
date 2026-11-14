@@ -14,11 +14,6 @@
             "hash": "589d1c9c7090a05a033462af04042ee0a9dd3a188d7440a9f965799d2d66161d",
             "extract_dir": "vectorcraft-0.24.1-windows-x64-portable"
         },
-        "32bit": {
-            "url": "https://github.com/storytold/vectorcraft/releases/download/v0.22.0/vectorcraft-0.22.0-windows-x86-portable.zip",
-            "hash": "27014bddc6b37669873c753310bcbcc86ba279ed025740566110e844cc0b861d",
-            "extract_dir": "vectorcraft-0.24.1-windows-x86-portable"
-        },
         "arm64": {
             "url": "https://github.com/storytold/vectorcraft/releases/download/v0.24.1/vectorcraft-0.24.1-windows-arm64-portable.zip",
             "hash": "885df2b888c3d670c6b0a785813039f9d0426eea00ed750da7ec4cbb0bf8d612",
@@ -41,10 +36,6 @@
             "64bit": {
                 "url": "https://github.com/storytold/vectorcraft/releases/download/v$version/vectorcraft-$version-windows-x64-portable.zip",
                 "extract_dir": "vectorcraft-$version-windows-x64-portable"
-            },
-            "32bit": {
-                "url": "https://github.com/storytold/vectorcraft/releases/download/v0.22.0/vectorcraft-0.22.0-windows-x86-portable.zip",
-                "extract_dir": "vectorcraft-$version-windows-x86-portable"
             },
             "arm64": {
                 "url": "https://github.com/storytold/vectorcraft/releases/download/v$version/vectorcraft-$version-windows-arm64-portable.zip",
