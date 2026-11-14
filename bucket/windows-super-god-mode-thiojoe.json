@@ -25,7 +25,6 @@
         ]
     ],
     "persist": "Super God Mode",
-    "notes": "The generated `Super God Mode` folder is persisted across updates and normal uninstall. Use `scoop uninstall -p windows-super-god-mode-thiojoe` to remove it as well.",
     "checkver": {
         "url": "https://api.github.com/repos/ThioJoe/Windows-Super-God-Mode/releases/latest",
         "jsonpath": "$.tag_name",
@@ -39,5 +38,7 @@
             "jsonpath": "$.assets[?(@.name=='Super_God_Mode.ps1')].digest",
             "regex": "^sha256:([a-fA-F0-9]{64})$"
         }
-    }
+    },
+    "notes": "The generated `Super God Mode` folder is persisted across updates and normal uninstall. Use `scoop uninstall -p windows-super-god-mode-thiojoe` to remove it as well."
 }
+

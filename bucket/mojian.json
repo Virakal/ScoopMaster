@@ -1,47 +1,47 @@
 {
-    "version": "0.4.1",
-    "description": "Native plain-text editor for ordinary folders",
-    "homepage": "https://github.com/ox0pine/mojian",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ox0pine/mojian/releases/download/v0.4.1/mojian-setup-0.4.1-amd64.exe#/dl.7z",
-            "hash": "e8c2d9748a496da79008ba4faeb33d1ae74870a41c021831ff54b475680af4bf"
-        },
-        "arm64": {
-            "url": "https://github.com/ox0pine/mojian/releases/download/v0.4.1/mojian-setup-0.4.1-arm64.exe#/dl.7z",
-            "hash": "d22b2640df2b2d45a6ab5f48f64479b4473a06357076f0a19b68dddd96761936"
-        }
+  "version": "0.4.1",
+  "description": "Native plain-text editor for ordinary folders",
+  "homepage": "https://github.com/ox0pine/mojian",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/ox0pine/mojian/releases/download/v0.4.1/mojian-setup-0.4.1-amd64.exe#/dl.7z",
+      "hash": "e8c2d9748a496da79008ba4faeb33d1ae74870a41c021831ff54b475680af4bf"
     },
-    "bin": "Mojian.exe",
-    "shortcuts": [
-        [
-            "Mojian.exe",
-            "Mojian"
-        ]
-    ],
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction SilentlyContinue",
-    "notes": [
-        "Mojian is a GUI editor that also accepts a folder or file path: 'mojian .' or 'mojian path\\to\\file.md'.",
-        "Settings and layouts are stored in %APPDATA%\\Mojian and are not managed by Scoop.",
-        "The Windows build is a local-only client: SSH and remote projects are not available.",
-        "Builds are unsigned, so Windows SmartScreen may warn on first launch."
-    ],
-    "checkver": {
-        "github": "https://github.com/ox0pine/mojian"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ox0pine/mojian/releases/download/v$version/mojian-setup-$version-amd64.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://github.com/ox0pine/mojian/releases/download/v$version/mojian-setup-$version-arm64.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS",
-            "find": "$basename"
-        }
+    "arm64": {
+      "url": "https://github.com/ox0pine/mojian/releases/download/v0.4.1/mojian-setup-0.4.1-arm64.exe#/dl.7z",
+      "hash": "d22b2640df2b2d45a6ab5f48f64479b4473a06357076f0a19b68dddd96761936"
     }
+  },
+  "bin": "Mojian.exe",
+  "shortcuts": [
+    [
+      "Mojian.exe",
+      "Mojian"
+    ]
+  ],
+  "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction SilentlyContinue",
+  "notes": [
+    "Mojian is a GUI editor that also accepts a folder or file path: 'mojian .' or 'mojian path\\to\\file.md'.",
+    "Settings and layouts are stored in %APPDATA%\\Mojian and are not managed by Scoop.",
+    "The Windows build is a local-only client: SSH and remote projects are not available.",
+    "Builds are unsigned, so Windows SmartScreen may warn on first launch."
+  ],
+  "checkver": {
+    "github": "https://github.com/ox0pine/mojian"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/ox0pine/mojian/releases/download/v$version/mojian-setup-$version-amd64.exe#/dl.7z"
+      },
+      "arm64": {
+        "url": "https://github.com/ox0pine/mojian/releases/download/v$version/mojian-setup-$version-arm64.exe#/dl.7z"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/SHA256SUMS",
+      "find": "$basename"
+    }
+  }
 }
