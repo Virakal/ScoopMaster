@@ -1,16 +1,16 @@
 {
-    "version": "6.41.1",
+    "version": "6.42.0",
     "description": "nebcli command-line tool",
     "homepage": "https://github.com/nebinfra/nebcli-dist",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nebinfra/nebcli-dist/releases/download/v6.41.1/nebcli_6.41.1_windows_amd64.zip",
-            "hash": "c73caef1c084854494f964e7bee0733946195233f432039a3950a502085d9563"
+            "url": "https://github.com/nebinfra/nebcli-dist/releases/download/v6.42.0/nebcli_6.42.0_windows_amd64.zip",
+            "hash": "cda20dce032a686ebf033f4243f100bbf9a0395b7a23dd6881dae41d200b36bf"
         },
         "arm64": {
-            "url": "https://github.com/nebinfra/nebcli-dist/releases/download/v6.41.1/nebcli_6.41.1_windows_arm64.zip",
-            "hash": "2d397bfcb52634669a6667727fbbafbc83e8e03ca41a9ad74c57a239ea168ca7"
+            "url": "https://github.com/nebinfra/nebcli-dist/releases/download/v6.42.0/nebcli_6.42.0_windows_arm64.zip",
+            "hash": "84a3dd630ae2d96b8000f0a0e04e236be630d50cad8897e04262b0a7bcb30b18"
         }
     },
     "bin": "nebcli.exe",
