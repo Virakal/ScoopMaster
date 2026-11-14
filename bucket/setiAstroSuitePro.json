@@ -1,11 +1,11 @@
 {
     "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-    "version": "1.24.2",
+    "version": "1.24.3",
     "description": "Full featured astronomical image processing software",
     "homepage": "https://www.setiastro.com/seti-astro-suite-pro",
     "license": "Freeware",
-    "url": "https://github.com/setiastro/setiastrosuitepro/releases/download/V1.24.2/setiastrosuitepro_windows.zip",
-    "hash": "3db2122fd74a4abcc5d02a3a271f0e94eed3fefe0b69aa9869c4db2bed79556f",
+    "url": "https://github.com/setiastro/setiastrosuitepro/releases/download/V1.24.3/setiastrosuitepro_windows.zip",
+    "hash": "2b2f5e2184669df33b88161532e9841b44fd0a2b10a76d2de18fafcc80dfd2ab",
     "depends": "innounp",
     "installer": {
         "script": [
