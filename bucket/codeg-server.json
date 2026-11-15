@@ -1,12 +1,12 @@
 {
-    "version": "0.44.0",
+    "version": "0.45.0",
     "description": "Collaborative multi-agent AI coding workspace. Server edition.",
     "homepage": "https://github.com/xintaofei/codeg",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xintaofei/codeg/releases/download/v0.44.0/codeg-server-windows-x64.zip",
-            "hash": "25d8a793d9730e11b6b2fccc01cb17fa309556e1394c3710c5521903a2148204",
+            "url": "https://github.com/xintaofei/codeg/releases/download/v0.45.0/codeg-server-windows-x64.zip",
+            "hash": "c2e3425330a3ef292110e43c0b9a2c9c80ba98cc9069033fbfa8dd31a638fcbc",
             "extract_dir": "codeg-server-windows-x64"
         }
     },
