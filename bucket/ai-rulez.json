@@ -1,12 +1,12 @@
 {
-    "version": "5.13.3",
+    "version": "5.13.4",
     "description": "Manage agent configuration, skills, and governance across coding agents.",
     "homepage": "https://github.com/Goldziher/ai-rulez",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Goldziher/ai-rulez/releases/download/v5.13.3/ai-rulez_5.13.3_windows_amd64.zip",
-            "hash": "9a2fa06372e8a1ee9ebada9c05baec8879ce54e32ba49a204ca3116c13ba6dc5"
+            "url": "https://github.com/Goldziher/ai-rulez/releases/download/v5.13.4/ai-rulez_5.13.4_windows_amd64.zip",
+            "hash": "1d7908d56a2009899f438683de925ba7b90d0cb023c10cde744097a00c74a614"
         }
     },
     "bin": "ai-rulez.exe",

@@ -1,12 +1,19 @@
 {
     "version": "0.10.0",
-    "description": "The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.",
-    "homepage": "https://github.com/multica-ai/multica",
-    "license": "MIT",
+    "description": "Project management for human + agent teams (CLI)",
+    "homepage": "https://multica.ai",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/multica-ai/multica/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/multica-ai/multica/releases/download/v0.10.0/multica-cli-0.10.0-windows-amd64.zip",
             "hash": "1ba66907aba13d7d9ed92084a26e07f6c94204a51a4ebf67162a8249925df9ab"
+        },
+        "arm64": {
+            "url": "https://github.com/multica-ai/multica/releases/download/v0.10.0/multica-cli-0.10.0-windows-arm64.zip",
+            "hash": "506f492d2f97a5a3b457dc1f1d784bab23283fee6344249c6d4046738284d8d4"
         }
     },
     "bin": "multica.exe",
@@ -14,9 +21,16 @@
         "github": "https://github.com/multica-ai/multica"
     },
     "autoupdate": {
-        "url": "https://github.com/multica-ai/multica/releases/download/v$version/multica-cli-$version-windows-amd64.zip",
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/multica-ai/multica/releases/download/v$version/multica-cli-$version-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/multica-ai/multica/releases/download/v$version/multica-cli-$version-windows-arm64.zip"
+            }
+        },
         "hash": {
-            "url": "$url.sha256"
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

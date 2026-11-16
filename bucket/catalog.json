@@ -42,7 +42,7 @@
   {
    "name": "tsucwico",
    "version": "26.11.1002",
-   "description": "Tsu Cwico - kiểm tra bản quyền Windows/Office và cấu hình máy (bản dòng lệnh)",
+   "description": "Tsu Cwico - bộ công cụ rà quét và gỡ bỏ phần mềm Windows chuyên sâu (bản dòng lệnh)",
    "homepage": "https://cwico.tsudev.com",
    "license": "Apache-2.0",
    "arch": [
@@ -73,14 +73,15 @@
   },
   {
    "name": "tsudev-files",
-   "version": "2.4.0-vn.1",
-   "description": "Chuyển đổi tệp ngoại tuyến 260+ định dạng - bản Việt hóa, gia cố bảo mật của Filee",
+   "version": "2.4.1-vn.1",
+   "description": "TsuFiles - chuyển đổi tệp ngoại tuyến 260+ định dạng (bản Việt hóa, gia cố bảo mật của Filee)",
    "homepage": "https://files.tsudev.com",
    "license": "MIT",
    "arch": [
     "any"
    ],
    "commands": [
+    "tsufiles",
     "tsudev-files"
    ],
    "replacedBy": null,
@@ -132,6 +133,22 @@
    "replacedBy": null,
    "install": "scoop install tsudev/tsudev-trafficmonitor",
    "installFull": "scoop bucket add tsudev https://github.com/tsudev-org/scoop-bucket; scoop install tsudev/tsudev-trafficmonitor"
+  },
+  {
+   "name": "tsudisk",
+   "version": "26.11.1701",
+   "description": "TsuDisk - quản lý phân vùng ổ cứng Windows an toàn: phân tích, lập kế hoạch, mở rộng ổ C: kể cả khi Recovery chắn đường",
+   "homepage": "https://disk.tsudev.com",
+   "license": "Apache-2.0",
+   "arch": [
+    "64bit"
+   ],
+   "commands": [
+    "tsudisk"
+   ],
+   "replacedBy": null,
+   "install": "scoop install tsudev/tsudisk",
+   "installFull": "scoop bucket add tsudev https://github.com/tsudev-org/scoop-bucket; scoop install tsudev/tsudisk"
   },
   {
    "name": "tsuswico",
