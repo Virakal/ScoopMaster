@@ -1,5 +1,5 @@
 {
-    "version": "26.11.1704",
+    "version": "26.11.1801",
     "description": "TsuDisk - quản lý phân vùng ổ cứng Windows an toàn: phân tích, lập kế hoạch, mở rộng ổ C: kể cả khi Recovery chắn đường",
     "homepage": "https://disk.tsudev.com",
     "license": "Apache-2.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.1704/tsudisk_26.11.1704_x64-portable.exe#/tsudisk.exe",
-            "hash": "6f03f3ed1d1db386b7456ede39d3fd8416e52de4b158aebd70e752f74ebc4da1"
+            "url": "https://github.com/tsudev-org/tsudisk/releases/download/v26.11.1801/tsudisk_26.11.1801_windows-x64-portable.exe#/tsudisk.exe",
+            "hash": "09fad62a7f5a8845d099af527f53cdfde73a8f03f9d3486804b15b2d852cc61f"
         }
     },
     "bin": "tsudisk.exe",
@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_x64-portable.exe#/tsudisk.exe",
+                "url": "https://github.com/tsudev-org/tsudisk/releases/download/v$version/tsudisk_$version_windows-x64-portable.exe#/tsudisk.exe",
                 "hash": {
                     "url": "$baseurl/SHA256SUMS.txt",
-                    "regex": "$sha256\\s+tsudisk_$version_x64-portable\\.exe"
+                    "regex": "$sha256\\s+tsudisk_$version_windows-x64-portable\\.exe"
                 }
             }
         }

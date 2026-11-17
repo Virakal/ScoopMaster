@@ -1,40 +1,29 @@
 {
     "version": "1.13.11",
-    "description": "An AI-powered code review CLI that combines deterministic pipelines with an LLM agent to produce line-level comments.",
-    "homepage": "https://open-codereview.ai",
+    "description": "A hybrid architecture code review tool",
+    "homepage": "https://open-codereview.ai/",
     "license": "Apache-2.0",
-    "notes": [
-        "Installation and setup guide: https://open-codereview.ai/docs/installation",
-        "Git 2.41 or newer is required.",
-        "Run 'ocr config provider' to configure an LLM before reviewing code.",
-        "Configuration and session data are stored in %USERPROFILE%\\.opencodereview; 'scoop uninstall --purge' does not remove it."
-    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.11/opencodereview-windows-amd64.exe#/ocr.exe",
+            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.11/opencodereview-windows-amd64.exe#/opencodereview.exe",
             "hash": "aa1fb88e6c8814bd903744f94f926202f5bb28d60c84051d7f07e3f518119fcf"
-        },
-        "arm64": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.11/opencodereview-windows-arm64.exe#/ocr.exe",
-            "hash": "bda0e419d436d0ff0227742cabcb4aa46e6245a6f096b0a60b5ff20cefc4d9cf"
         }
     },
-    "bin": "ocr.exe",
+    "bin": [
+        [
+            "opencodereview.exe",
+            "ocr"
+        ]
+    ],
+    "persist": ".opencodereview",
     "checkver": {
         "github": "https://github.com/alibaba/open-code-review"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-amd64.exe#/ocr.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-arm64.exe#/ocr.exe"
+                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-amd64.exe#/opencodereview.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/sha256sum.txt",
-            "regex": "$sha256\\s+$basename"
         }
     }
 }

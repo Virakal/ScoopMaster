@@ -1,17 +1,17 @@
 {
-    "version": "4.5.0",
+    "version": "4.6.1",
     "description": "Independent YouTube Music desktop player with synced lyrics, an EQ and a phone remote",
     "homepage": "https://github.com/tonieninja/zenith-player",
     "license": "MIT",
     "notes": "Zenith is not affiliated with, endorsed by or sponsored by Google or YouTube.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tonieninja/zenith-player/releases/download/v4.5.0/Zenith_4.5.0_x64_portable.exe#/zenith-player.exe",
-            "hash": "f684b81b035f41d576dd79a3c0869d99bb117ca8d4797b0a4a6222cf7ec054fa"
+            "url": "https://github.com/tonieninja/zenith-player/releases/download/v4.6.1/Zenith_4.6.1_x64_portable.exe#/zenith-player.exe",
+            "hash": "93e8c0fe821e699d7d6ecdb1162af5b7406e1797836e589a469399144b96af56"
         },
         "32bit": {
-            "url": "https://github.com/tonieninja/zenith-player/releases/download/v4.5.0/Zenith_4.5.0_x86_portable.exe#/zenith-player.exe",
-            "hash": "28f8f2f17e997b0513276859c66965fc3d1554a4b560f69d194b8e119fd04c40"
+            "url": "https://github.com/tonieninja/zenith-player/releases/download/v4.6.1/Zenith_4.6.1_x86_portable.exe#/zenith-player.exe",
+            "hash": "ea6d35f103cee1ffc721ff4a206b5d33cd4844e3964a3f7e6ed4cc95091fe059"
         }
     },
     "shortcuts": [
