@@ -1,5 +1,5 @@
 {
-    "version": "1.4.100-master-be73d3473f6b",
+    "version": "1.4.108-master-732a64ff7df8",
     "description": "A native Windows-first, BusyBox-style POSIX shell and utility bundle. Nightly build from master.",
     "homepage": "https://github.com/xiongnemo/nemosh",
     "license": "Apache-2.0",
@@ -10,9 +10,19 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiongnemo/nemosh/releases/download/v1.4.100-master-be73d3473f6b/nemosh-v1.4.100-master-be73d3473f6b-windows-amd64.zip",
-            "hash": "2e26c1cdbc8958dd2661446caae9f0aff25fd0c16db669f40d3ec9c751696f10",
-            "extract_dir": "nemosh-v1.4.100-master-be73d3473f6b-windows-amd64"
+            "url": "https://github.com/xiongnemo/nemosh/releases/download/v1.4.108-master-732a64ff7df8/nemosh-v1.4.108-master-732a64ff7df8-windows-amd64.zip",
+            "hash": "eedc7335e3f8f3d0b0885fa630d4edeef719aea408f2a4fe32e599dca09e6508",
+            "extract_dir": "nemosh-v1.4.108-master-732a64ff7df8-windows-amd64"
+        },
+        "32bit": {
+            "url": "https://github.com/xiongnemo/nemosh/releases/download/v1.4.108-master-732a64ff7df8/nemosh-v1.4.108-master-732a64ff7df8-windows-386.zip",
+            "hash": "9b4050a6da7c81cd32fa7833426b558804d5e32660c576a5751ae7049443c754",
+            "extract_dir": "nemosh-v1.4.108-master-732a64ff7df8-windows-386"
+        },
+        "arm64": {
+            "url": "https://github.com/xiongnemo/nemosh/releases/download/v1.4.108-master-732a64ff7df8/nemosh-v1.4.108-master-732a64ff7df8-windows-arm64.zip",
+            "hash": "62d5de4693ca9d6c5cdfd28c9d320b2ba98e3c01386873d6cbf138f72d69fa7e",
+            "extract_dir": "nemosh-v1.4.108-master-732a64ff7df8-windows-arm64"
         }
     },
     "bin": "nemosh.exe",
@@ -25,6 +35,14 @@
             "64bit": {
                 "url": "https://github.com/xiongnemo/nemosh/releases/download/v$version/nemosh-v$version-windows-amd64.zip",
                 "extract_dir": "nemosh-v$version-windows-amd64"
+            },
+            "32bit": {
+                "url": "https://github.com/xiongnemo/nemosh/releases/download/v$version/nemosh-v$version-windows-386.zip",
+                "extract_dir": "nemosh-v$version-windows-386"
+            },
+            "arm64": {
+                "url": "https://github.com/xiongnemo/nemosh/releases/download/v$version/nemosh-v$version-windows-arm64.zip",
+                "extract_dir": "nemosh-v$version-windows-arm64"
             }
         }
     }

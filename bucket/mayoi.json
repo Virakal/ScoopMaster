@@ -1,12 +1,12 @@
 {
-    "version": "0.22.1",
+    "version": "0.22.3",
     "description": "Native Go code editor with Vim mode, Git integration, search, terminal, and remote SSH.",
     "homepage": "https://github.com/sorrycc/Mayoi",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.22.1/mayoi-0.22.1-windows-amd64.tar.gz",
-            "hash": "eb89ded88de61c7f2c13d3c84001539ff8e3490cbe6acec72d2456c8d6bbf63b",
+            "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.22.3/mayoi-0.22.3-windows-amd64.tar.gz",
+            "hash": "dd32265fb1a0130efcaed05225fdb81e651c47419e8e81f7524f7e93e103a5c0",
             "bin": "Mayoi.exe",
             "shortcuts": [
                 [
@@ -16,8 +16,8 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.22.1/mayoi-0.22.1-windows-arm64.tar.gz",
-            "hash": "20d16da43e79320f3d13f2a1d46da147dfe5e8ff4e1accc488046c37478d5fa5",
+            "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.22.3/mayoi-0.22.3-windows-arm64.tar.gz",
+            "hash": "b07e2484ea7102e817d991e6c30f077b4aa481f5b13d8b21832a0c3aa2914b1b",
             "bin": "Mayoi.exe",
             "shortcuts": [
                 [

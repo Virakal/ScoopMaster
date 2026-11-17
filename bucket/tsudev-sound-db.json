@@ -1,15 +1,13 @@
 {
-    "version": "26.11.1701",
+    "version": "26.11.1704",
     "description": "Sound Db - máy đo âm thanh chính xác: mức dB (IEC 61672-1), phổ FFT, phổ đồ, dải octave, cao độ, liều tiếng ồn",
     "homepage": "https://sounddb.tsudev.com",
     "license": "Apache-2.0",
-    "notes": [
-        "Bản Windows chưa ký Authenticode: SmartScreen có thể cảnh báo. Kiểm chứng: gh attestation verify <tệp> -R tsudev-org/sound-db"
-    ],
+    "notes": "Bản Windows chưa ký Authenticode: SmartScreen có thể cảnh báo. Kiểm chứng: gh attestation verify <tệp> -R tsudev-org/sound-db",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tsudev-org/sound-db/releases/download/v26.11.1701/sound-db_26.11.1701_x64-windows.zip",
-            "hash": "9e952f0bc38f861cbdfd8d29537dffeaa69182866568ca6eb52bcbf85839f8e8"
+            "url": "https://github.com/tsudev-org/sound-db/releases/download/v26.11.1704/sound-db_26.11.1704_x64-windows.zip",
+            "hash": "790c7754861a9e0fe95911aec4c358984b7bda66469cb39c7a4f82636850e133"
         }
     },
     "shortcuts": [

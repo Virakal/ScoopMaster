@@ -6,11 +6,11 @@
         "identifier": "Proprietary",
         "url": "https://uuyc.163.com/"
     },
-    "url": "https://a56.gdl.netease.com/UURemote_Setup_4.48.0.5446_1116133031_gwqd.exe?key1=6efadc6ddbedc9ca431ed27e51fdb461&key2=6afc6bd4&n=uuyc_4.48.0.exe",
+    "url": "https://a56.gdl.netease.com/UURemote_Setup_4.48.0.5446_1116133031_gwqd.exe?key1=1ae1450a245560625e714e4c1ba0686f&key2=6afc29da&n=uuyc_4.48.0.exe",
     "hash": "e2f48009ffdd29d4648ca87c88b110158ab2c07b86e0b07d51a8859916016f82",
     "installer": {
         "script": [
-            ". \"$bucketsdir\\$bucket\\scripts\\utils.ps1\"",
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
             "New-PersistDirectory \"$env:LOCALAPPDATA\\GameViewer\" \"$persist_dir\\AppData\" -Migrate",
             "$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)",
             "if (-not $isAdmin) { Write-Warning \"`nuuyc installation requires administrator privileges.`nPlease rerun Scoop in an elevated PowerShell.`n\"; exit 1 }",
