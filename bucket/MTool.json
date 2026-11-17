@@ -1,57 +1,57 @@
 {
-    "version": "DC06CC3E",
-    "description": "Game translation and modification tool for players",
-    "homepage": "https://mtool.app/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://trs.mtool.app/tosen.html"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://dl.mtool.app/downloadRelease/checkCRC/1dd862a874f2719a5fb4bb5564d18ea4/v/1/lang/en/file/MTool.zip",
-            "hash": "caf7b54cc921de640090a5342fa8ccc26047779a6172f8e9e9a89574d9d28204",
-            "extract_dir": "MTool"
-        }
-    },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\Tool\\fakeLocalStorage.json\")) {",
-        "    Set-Content \"$dir\\Tool\\fakeLocalStorage.json\" '{}' -Encoding UTF8",
-        "}"
-    ],
-    "bin": [
-        [
-            "Use me to open the Tool.bat",
-            "mtool"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "Use me to open the Tool.bat",
-            "MTool"
-        ],
-        [
-            "Tool\\MTool.exe",
-            "MTool (Direct)"
-        ]
-    ],
-    "persist": [
-        "Tool\\gameSaveBackup",
-        "Tool\\gameLib",
-        "Tool\\fakeLocalStorage.json"
-    ],
-    "notes": [
-        "MTool is proprietary software.",
-        "Basic features are free; advanced features require a paid license."
-    ],
-    "checkver": {
-        "url": "https://trs.mtool.app/release.php?lang=en",
-        "regex": "Latest version:\\s*(?<version>[0-9A-F]+)[\\s\\S]*?window\\.downloadUrls\\s*=\\s*\\[[\\s\\S]*?https://dl\\.mtool\\.app/downloadRelease/checkCRC/(?<hash>[a-f0-9]+)/v/1/lang/(?:chs|en)/file/MTool\\.zip"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://dl.mtool.app/downloadRelease/checkCRC/$matchHash/v/1/lang/en/file/MTool.zip"
-            }
-        }
+  "version": "DA7C7869",
+  "description": "Game translation and modification tool for players",
+  "homepage": "https://mtool.app/",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://trs.mtool.app/tosen.html"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://dl.mtool.app/downloadRelease/checkCRC/6517361f3574b36e78d395a82df8df36/v/1/lang/en/file/MTool.zip",
+      "hash": "09490f6b26ccb43a383f6536f0459597c1bed5fe780a64721473aac2cb9dafe0",
+      "extract_dir": "MTool"
     }
+  },
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\Tool\\fakeLocalStorage.json\")) {",
+    "    Set-Content \"$dir\\Tool\\fakeLocalStorage.json\" '{}' -Encoding UTF8",
+    "}"
+  ],
+  "bin": [
+    [
+      "Use me to open the Tool.bat",
+      "mtool"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "Use me to open the Tool.bat",
+      "MTool"
+    ],
+    [
+      "Tool\\MTool.exe",
+      "MTool (Direct)"
+    ]
+  ],
+  "persist": [
+    "Tool\\gameSaveBackup",
+    "Tool\\gameLib",
+    "Tool\\fakeLocalStorage.json"
+  ],
+  "notes": [
+    "MTool is proprietary software.",
+    "Basic features are free; advanced features require a paid license."
+  ],
+  "checkver": {
+    "url": "https://trs.mtool.app/release.php?lang=en",
+    "regex": "Latest version:\\s*(?<version>[0-9A-F]+)[\\s\\S]*?window\\.downloadUrls\\s*=\\s*\\[[\\s\\S]*?https://dl\\.mtool\\.app/downloadRelease/checkCRC/(?<hash>[a-f0-9]+)/v/1/lang/(?:chs|en)/file/MTool\\.zip"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://dl.mtool.app/downloadRelease/checkCRC/$matchHash/v/1/lang/en/file/MTool.zip"
+      }
+    }
+  }
 }

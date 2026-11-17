@@ -1,37 +1,21 @@
 {
-    "version": "0.1.4340",
-    "description": "Unified model, provider, and gateway manager for AI coding agents. (rolling release, tracks GitHub latest)",
+    "version": "0.1.4346",
+    "description": "Unified model, provider, and gateway manager for AI coding agents.",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
     "notes": [
-        "Tracks the latest GitHub releases of Magpie (rolling channel), auto-updated by CI every 6 hours.",
-        "To update: exit Magpie (tray - Quit) first, then run 'scoop update' followed by 'scoop update magpie-ai'. Scoop silently skips update/uninstall while Magpie is running.",
-        "In-app auto update is preset off via data/settings.json (only when it doesn't already exist; existing settings are kept as-is).",
-        "scoop uninstall won't remove external integration (Open at login, magpie:// handler, user PATH entry from Settings - Command line). Use in-app Settings - Uninstall magpie to clean up, or 'magpie uninstall --keep-data' to keep settings."
+        "Scoop persists data since version 0.1.1067. You may need to move data by yourself.",
+        "Before: '$env:USERPROFILE\\.config\\magpie'",
+        "After : '$persist_dir\\data'"
     ],
-    "suggest": {
-        "WebView2": "extras/webview2"
-    },
     "architecture": {
         "64bit": {
-            "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4340/magpie-windows-amd64.exe#/magpie.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4340/magpie-cli-windows-amd64.exe#/magpie-cli.exe"
-            ],
-            "hash": [
-                "906db768f90a1af89fac9a1593fa545d8e596e62649b8f397bb79b688c9efcfd",
-                "6bdcc45be5f1944712b4d4e658f06f5fa9c65a50f6f646c0d6e419a2056307e0"
-            ]
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4346/magpie-windows-amd64.exe#/magpie.exe",
+            "hash": "f23c40e30901716d4a0a70b3350939465d14516e7c2f41c4a38119f582facabf"
         },
         "arm64": {
-            "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4340/magpie-windows-arm64.exe#/magpie.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4340/magpie-cli-windows-arm64.exe#/magpie-cli.exe"
-            ],
-            "hash": [
-                "a5277beb203c270c04d03dc5a735331ad3fb0012cdcced94f72faaff24707f05",
-                "78149acca77405c2c51b3a9848ed7ade8e6d0b214930dd50abc9b76c6561d978"
-            ]
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4346/magpie-windows-arm64.exe#/magpie.exe",
+            "hash": "467e0649b2bdb6483aa35d59d4ae30eb06d99329276142706e5ea1f0a6f6f3a9"
         }
     },
     "pre_install": [
@@ -40,16 +24,10 @@
         "    @{ noAutoUpdate = $true } | ConvertTo-Json | Set-Content -LiteralPath \"$dir\\data\\settings.json\" -Force -Encoding ASCII",
         "}"
     ],
-    "bin": [
-        [
-            "magpie-cli.exe",
-            "magpie"
-        ]
-    ],
     "shortcuts": [
         [
             "magpie.exe",
-            "Magpie AI"
+            "Magpie"
         ]
     ],
     "persist": "data",
@@ -59,16 +37,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": [
-                    "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe",
-                    "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-cli-windows-amd64.exe#/magpie-cli.exe"
-                ]
+                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
             },
             "arm64": {
-                "url": [
-                    "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe",
-                    "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-cli-windows-arm64.exe#/magpie-cli.exe"
-                ]
+                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
             }
         },
         "hash": {

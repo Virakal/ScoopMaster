@@ -1,8 +1,9 @@
 {
     "version": "0.28.66",
-    "description": "Review surface for AI coding agents: annotate plans, specs, markdown and diffs in the browser, then send the feedback back to the agent.",
+    "description": "Annotate plans, specs, markdown, HTML, and other interactive artifacts. Review diffs and PRs. Send feedback to your agent.",
     "homepage": "https://plannotator.ai",
-    "license": "Apache-2.0",
+    "license": "Apache-2.0|MIT",
+    "notes": "See https://docs.plannotator.ai/open-source/start/installation#finish-your-agent-setup to finish the step for your agent.",
     "architecture": {
         "64bit": {
             "url": "https://github.com/backnotprop/plannotator/releases/download/v0.28.66/plannotator-win32-x64.exe#/plannotator.exe",
@@ -14,7 +15,6 @@
         }
     },
     "bin": "plannotator.exe",
-    "notes": "Installs the CLI only. Agent hooks, skills and slash commands are set up by the upstream installer (https://plannotator.ai/install.ps1) or per agent as documented upstream.",
     "checkver": {
         "github": "https://github.com/backnotprop/plannotator"
     },
@@ -26,6 +26,9 @@
             "arm64": {
                 "url": "https://github.com/backnotprop/plannotator/releases/download/v$version/plannotator-win32-arm64.exe#/plannotator.exe"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

@@ -1,0 +1,33 @@
+{
+    "version": "0.90.0-beta.59",
+    "description": "PC recomps, all in one place. Find, install, update and play PC recomps from one launcher.",
+    "homepage": "https://recomplauncher.com",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/elripalda/RecompLauncher/releases/download/v0.90.0-beta.59/RecompLauncher_0.90.0-beta.59_x64-setup.exe#/dl.7z",
+            "hash": "e2560e3580958e00f8fb1198eaec4506c4c33f2cfffad87df8e19864908e19f4"
+        }
+    },
+    "installer": {
+        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*.exe\" -Force -Recurse -ErrorAction SilentlyContinue"
+    },
+    "shortcuts": [
+        [
+            "recomplauncher.exe",
+            "RecompLauncher"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/elripalda/RecompLauncher/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/elripalda/RecompLauncher/releases/download/v$version/RecompLauncher_$version_x64-setup.exe#/dl.7z"
+            }
+        }
+    }
+}
