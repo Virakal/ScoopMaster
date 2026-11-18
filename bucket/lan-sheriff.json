@@ -1,12 +1,12 @@
 {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Self-hosted network monitor: watch what leaves, map where it goes, flag what does not belong",
     "homepage": "https://github.com/291-Group/LAN-Sheriff",
     "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/291-Group/LAN-Sheriff/releases/download/v1.0.2/lan-sheriff_1.0.2_windows_amd64.tar.gz",
-            "hash": "11c7632639efe4734fd642fa79808433f33bd7c0b80f5928589938cdab7882ae"
+            "url": "https://github.com/291-Group/LAN-Sheriff/releases/download/v1.0.3/lan-sheriff_1.0.3_windows_amd64.tar.gz",
+            "hash": "3c12be640fc916df99154c5838b951ebae1047d81374f6dca6f208d4e7884023"
         }
     },
     "bin": "lan-sheriff.exe",

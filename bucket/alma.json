@@ -1,20 +1,16 @@
 {
-    "version": "0.4.789",
-    "description": "A powerful harness of its own, and the best herdr GUI.",
-    "homepage": "https://alma.now",
+    "version": "0.4.815",
+    "description": "Elegant AI Provider Orchestration",
+    "homepage": "https://alma.now/",
     "license": "Proprietary",
-    "suggest": {
-        "herdr": "herdr"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.789/alma-0.4.789-win-x64.exe#/dl.7z",
-            "hash": "sha512:bc62de5895af12a85bece06050619df1bdbc9b45d4ba0e856b432f40483accdaf4af41d855a90f68333dcf86ab5701348d9049581375d9faf8ec438603c9864a",
-            "installer": {
-                "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
-            }
+            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.815/alma-0.4.815-win-x64.zip",
+            "hash": "sha512:ba75bff6d4795f545bc69d3a8b78704fde6c2319961baaa205c5c0e196c5f889f938695ded7b2a2b914bff1e7ea6e8eddf7290aed431b4fa9148e14bddb8d248"
         }
     },
+    "extract_dir": "Alma",
+    "bin": "Alma.exe",
     "shortcuts": [
         [
             "Alma.exe",
@@ -27,12 +23,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z"
+                "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.zip",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "find": "alma-$version-win-x64\\.zip\\s+sha512:\\s+([A-Za-z0-9+/=]+)"
+                }
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?s)$basename.*?sha512: $base64"
         }
     }
 }
