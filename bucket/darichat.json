@@ -1,13 +1,13 @@
 {
-    "version": "3.2.3",
+    "version": "3.2.6",
     "description": "Team chat with translation and AI",
     "homepage": "https://darichat.com/",
     "license": "Proprietary",
     "notes": "앱이 스스로 업데이트한다.",
     "architecture": {
         "64bit": {
-            "url": "https://darichat.com/api/file/download/darichat-3.2.3-win-x64.zip",
-            "hash": "4af7be23d856ce7e6448b93b1c8f9c4a479e98b58e31c2a5436ecb9efa27a668"
+            "url": "https://darichat.com/api/file/download/darichat-3.2.6-win-x64.zip",
+            "hash": "4ea394dad6bc788b4610c502b38f192be838123e4be8b1fd6bc5da44b07df3dc"
         }
     },
     "extract_dir": "다리챗-win32-x64",

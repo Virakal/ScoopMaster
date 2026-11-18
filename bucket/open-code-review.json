@@ -1,12 +1,12 @@
 {
-    "version": "1.13.11",
+    "version": "1.13.12",
     "description": "Open Code Review brings Alibaba's battle-tested code review Agent into your workflow.",
     "homepage": "https://open-codereview.ai",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.11/opencodereview-windows-amd64.exe",
-            "hash": "aa1fb88e6c8814bd903744f94f926202f5bb28d60c84051d7f07e3f518119fcf",
+            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.12/opencodereview-windows-amd64.exe",
+            "hash": "d84b3d10e776d00825dd27aadd2a3612a884ad276a82eb823eae62ed5a200fb9",
             "bin": [
                 [
                     "opencodereview-windows-amd64.exe",
@@ -15,8 +15,8 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.11/opencodereview-windows-arm64.exe",
-            "hash": "bda0e419d436d0ff0227742cabcb4aa46e6245a6f096b0a60b5ff20cefc4d9cf",
+            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.12/opencodereview-windows-arm64.exe",
+            "hash": "ff65a2ae93a46dce2f5bc18c29a21c48f8eccc0b935f7fd45b99c732694e0b1b",
             "bin": [
                 [
                     "opencodereview-windows-arm64.exe",

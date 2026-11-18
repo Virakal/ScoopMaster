@@ -1,6 +1,6 @@
 {
     "##": "Download URL https://github.com/RoutineMiku/apkstart/releases",
-    "version": "0.5.8",
+    "version": "0.6.1",
     "description": "Windows 上的安卓应用运行器，双击 APK 即安装，应用以独立窗口与桌面图标运行",
     "homepage": "https://github.com/RoutineMiku/apkstart",
     "license": "MIT",
@@ -15,8 +15,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RoutineMiku/apkstart/releases/download/v0.5.8/ApkStart-v0.5.8-win64-portable.zip",
-            "hash": "73fe4bfc89a817f420d31f220e443135d370b7ed20c0ac229bac8f594b2d633a"
+            "url": "https://github.com/RoutineMiku/apkstart/releases/download/v0.6.1/ApkStart-v0.6.1-win64-portable.zip",
+            "hash": "0902ec66bbbed2bd826e281603692f53e2a26797c9bd9cb927359854fde46a31"
         }
     },
     "bin": [
