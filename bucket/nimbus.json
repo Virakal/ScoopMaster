@@ -1,12 +1,12 @@
 {
-  "version": "11.3.0",
+  "version": "11.4.0",
   "description": "Local-first AI agent framework (headless gateway + CLI)",
   "homepage": "https://github.com/nimbus-agent/Nimbus",
   "license": "AGPL-3.0-only",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/nimbus-agent/Nimbus/releases/download/v11.3.0/nimbus-headless-windows-x64.zip",
-      "hash": "7f892fa97d8fad6f4077bdb10f02e96aabd722ea6e1877ae2e114304199c6b1d"
+      "url": "https://github.com/nimbus-agent/Nimbus/releases/download/v11.4.0/nimbus-headless-windows-x64.zip",
+      "hash": "f1dfaac38cc83cff6868a5f15aed085074ae8f82c9cfd550537259381c72d7e4"
     }
   },
   "bin": [

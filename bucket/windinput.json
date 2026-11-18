@@ -1,6 +1,6 @@
 {
     "version": "0.132.0",
-    "description": "清风输入法，Rust + TSF 的开源中文输入法，支持五笔86/全拼/双拼、辅助码与表情 | Open-source Chinese IME for Windows built on Rust + TSF",
+    "description": "WindInput, an open-source Chinese IME for Windows built on Rust + TSF, supporting Wubi 86 / full pinyin / double pinyin, auxiliary codes, and emoji",
     "homepage": "https://github.com/huanfeng/WindInput",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/huanfeng/WindInput/releases/download/v0.132.0/WindInput-Portable-0.132.0.zip",
@@ -74,12 +74,12 @@
         }
     },
     "notes": [
-        "安装/更新全自动：post_install 经 %LOCALAPPDATA%\\WindInput（指向本应用 current 目录的 junction，由 manifest 自动创建和清理，请勿手动删除）完成注册与启动；全新注册需确认一次 UAC，已注册（含更新场景）则直接启动引擎、零 UAC。",
-        "安装完成后用 Win+空格 切换到「清风输入法」；设置入口为 wind_setting.exe 或启动器托盘菜单。",
-        "更新：引擎常驻进程经 junction 路径运行、不在 scoop 应用目录内，因此不触发 scoop 的占用检查，直接 scoop update windinput 即可（自动停进程、保留注册、重启引擎，零 UAC）。更新前请关闭 wind_setting 设置窗口和启动器托盘——它们若从 scoop 目录启动仍会被占用检查拦截。若曾手动从 scoop 目录运行 -start 导致注册路径回退，下次安装/更新会自动迁回 junction（需确认两次 UAC）。",
-        "卸载：直接 scoop uninstall windinput 即可，pre_uninstall 会自动结束相关进程，随后卸载器弹 UAC 注销 TSF、删除开机自启，并顺带移除 %LOCALAPPDATA%\\WindInput junction。",
-        "便携版用户数据就地存放在 userdata 目录（config.toml 配置、自造词与词频 userdata\\data、自定义主题 userdata\\themes），已 persist；data 目录是随版本发布的只读词库/主题资源，不 persist，scoop 升级自动更新词库。",
-        "Trusted Mode 游戏（如 CS2）只加载系统目录下已签名 DLL：按官方 wind-portable 说明在程序根目录建名为 system_deploy 的空文件切换系统部署模式（极少数场景，需 -stop 后 -start 生效）。",
-        "输入法引擎问题请到上游反馈：https://github.com/huanfeng/WindInput"
+        "Install/update are fully automatic: post_install registers and starts the engine via %LOCALAPPDATA%\\WindInput (a junction pointing to this app's current directory, created and cleaned up by the manifest — do not delete it manually); fresh registration requires one UAC confirmation, while already-registered installs (including updates) start the engine directly with zero UAC.",
+        "After install, switch to 'WindInput' with Win+Space; open settings via wind_setting.exe or the launcher tray menu.",
+        "Updates: the resident engine process runs from the junction path, outside the scoop app directory, so it does not trigger scoop's busy check — just run scoop update windinput (it stops the process, keeps the registration, restarts the engine, zero UAC). Close the wind_setting window and the launcher tray before updating — if launched from the scoop directory they are still caught by the busy check. If the registration path fell back after running -start manually from the scoop directory, the next install/update migrates it back to the junction (requires two UAC confirmations).",
+        "Uninstall: just run scoop uninstall windinput; pre_uninstall stops the related processes, then the uninstaller pops a UAC prompt to unregister the TSF and remove autostart, and also removes the %LOCALAPPDATA%\\WindInput junction.",
+        "Portable user data lives in-place in the userdata directory (config.toml settings, custom words and word frequency in userdata\\data, custom themes in userdata\\themes) and is persisted; the data directory holds read-only dictionary/theme resources shipped with each release, is not persisted, and dictionaries are updated automatically on scoop upgrade.",
+        "Trusted Mode games (e.g. CS2) only load signed DLLs from the system directory: follow the official wind-portable instructions and create an empty file named system_deploy in the program root to switch to system deployment mode (rare cases; takes effect after -stop then -start).",
+        "Report IME engine issues upstream: https://github.com/huanfeng/WindInput"
     ]
 }
