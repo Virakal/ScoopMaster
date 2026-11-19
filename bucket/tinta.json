@@ -1,15 +1,23 @@
 {
     "version": "4.1.2",
-    "description": "Fast, lightweight markdown viewer for Windows (native Direct2D, ~2.5 MB, no Electron)",
+    "description": "Fast, lightweight Markdown and Mermaid viewer.",
     "homepage": "https://tinta.cc",
     "license": "MIT",
-    "url": "https://github.com/oipoistar/tinta/releases/download/v4.1.2/tinta.exe",
-    "hash": "f4d54a79ea97ace9459a4538a4dcbf6029a1448aa5b80f8e2b9ac07a74db2c32",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/oipoistar/tinta/releases/download/v4.1.2/tinta.exe",
+            "hash": "f4d54a79ea97ace9459a4538a4dcbf6029a1448aa5b80f8e2b9ac07a74db2c32"
+        }
+    },
     "bin": "tinta.exe",
     "checkver": {
         "github": "https://github.com/oipoistar/tinta"
     },
     "autoupdate": {
-        "url": "https://github.com/oipoistar/tinta/releases/download/v$version/tinta.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/oipoistar/tinta/releases/download/v$version/tinta.exe"
+            }
+        }
     }
 }

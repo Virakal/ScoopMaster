@@ -1,40 +1,28 @@
 {
-    "version": "1.13.12",
-    "description": "Open Code Review brings Alibaba's battle-tested code review Agent into your workflow.",
-    "homepage": "https://open-codereview.ai",
+    "version": "1.13.13",
+    "description": "A hybrid architecture code review tool",
+    "homepage": "https://open-codereview.ai/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.12/opencodereview-windows-amd64.exe",
-            "hash": "d84b3d10e776d00825dd27aadd2a3612a884ad276a82eb823eae62ed5a200fb9",
-            "bin": [
-                [
-                    "opencodereview-windows-amd64.exe",
-                    "ocr"
-                ]
-            ]
-        },
-        "arm64": {
-            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.12/opencodereview-windows-arm64.exe",
-            "hash": "ff65a2ae93a46dce2f5bc18c29a21c48f8eccc0b935f7fd45b99c732694e0b1b",
-            "bin": [
-                [
-                    "opencodereview-windows-arm64.exe",
-                    "ocr"
-                ]
-            ]
+            "url": "https://github.com/alibaba/open-code-review/releases/download/v1.13.13/opencodereview-windows-amd64.exe#/opencodereview.exe",
+            "hash": "8580eb0661b7707831cb9bdbd3840f08ddae9e8ebc31dbdf13db51251515ac7b"
         }
     },
+    "bin": [
+        [
+            "opencodereview.exe",
+            "ocr"
+        ]
+    ],
+    "persist": ".opencodereview",
     "checkver": {
         "github": "https://github.com/alibaba/open-code-review"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-amd64.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-arm64.exe"
+                "url": "https://github.com/alibaba/open-code-review/releases/download/v$version/opencodereview-windows-amd64.exe#/opencodereview.exe"
             }
         }
     }
