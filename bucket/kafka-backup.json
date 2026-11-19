@@ -1,9 +1,9 @@
 {
-  "version": "0.28.1",
+  "version": "0.29.0",
   "description": "High-performance Kafka backup and restore with point-in-time recovery",
   "homepage": "https://github.com/osodevops/kafka-backup",
   "license": "MIT",
-  "architecture": { "64bit": { "url": "https://github.com/osodevops/kafka-backup/releases/download/v0.28.1/kafka-backup-cli-x86_64-pc-windows-msvc.zip", "hash": "7039d7a0b564aac1e42ad101aecddf83f7d67d0cf55fd89e2252d38c0a626f50" } },
+  "architecture": { "64bit": { "url": "https://github.com/osodevops/kafka-backup/releases/download/v0.29.0/kafka-backup-cli-x86_64-pc-windows-msvc.zip", "hash": "e2ffdd5fcd04e400d7660ab8a4b771ee2c133bf480f48554277c0f9777fd6b3d" } },
   "bin": "kafka-backup.exe",
   "checkver": "github",
   "autoupdate": { "architecture": { "64bit": { "url": "https://github.com/osodevops/kafka-backup/releases/download/v$version/kafka-backup-cli-x86_64-pc-windows-msvc.zip" } } }

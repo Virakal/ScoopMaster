@@ -1,5 +1,5 @@
 {
-    "version": "0.12.26081.0",
+    "version": "0.12.26083.0",
     "description": "Adds Everything search to Command Palette.",
     "homepage": "https://github.com/lin-ycv/EverythingCommandPalette",
     "license": "epl-2.0",
@@ -12,12 +12,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lin-ycv/EverythingCommandPalette/releases/download/v0.12.26081.0/VictorLin.EverythingCP_0.12.26081.0_x64__yazqh14evg2ve.Msix#/ecp.msix",
-            "hash": "f27fe6994488beca873a86a8a2ae895a5a8d2be1909766c09d66d9c8434bf470"
+            "url": "https://github.com/lin-ycv/EverythingCommandPalette/releases/download/v0.12.26083.0/VictorLin.EverythingCP_0.12.26083.0_x64__yazqh14evg2ve.Msix#/ecp.msix",
+            "hash": "f97f068a7438eccb7691fe1d887b84ef7994e630a77b914a1f75848441b08c9f"
         },
         "arm64": {
-            "url": "https://github.com/lin-ycv/EverythingCommandPalette/releases/download/v0.12.26081.0/VictorLin.EverythingCP_0.12.26081.0_arm64__yazqh14evg2ve.Msix#/ecp.msix",
-            "hash": "448aa49a40d7840f34e88da32014963c6b5c60366c98cd6c6ab003b725d69390"
+            "url": "https://github.com/lin-ycv/EverythingCommandPalette/releases/download/v0.12.26083.0/VictorLin.EverythingCP_0.12.26083.0_arm64__yazqh14evg2ve.Msix#/ecp.msix",
+            "hash": "7ba5cdb50ede1cb35c31601d9060a83bbb4fed06cbf1b46c71ea76c264f01a4f"
         }
     },
     "post_install": "Add-AppxPackage \"$dir\\ecp.msix\"",
