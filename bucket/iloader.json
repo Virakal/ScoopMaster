@@ -1,24 +1,29 @@
 {
     "version": "2.4.1",
-    "description": "User friendly sideloader",
-    "homepage": "https://github.com/nab138/iloader",
-    "license": "MIT",
+    "description": "User-friendly iOS sideloading companion that installs SideStore, LiveContainer and other IPAs, and manages pairing files and development certificates.",
+    "homepage": "https://iloader.app",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/nab138/iloader/blob/main/LICENSE"
+    },
+    "notes": [
+        "iloader needs Apple's iPhone drivers to see your device: install iTunes, or run 'winget install Apple.AppleMobileDeviceSupport'.",
+        "Update with 'scoop update iloader' and decline iloader's in-app update prompt, so it doesn't install a second copy outside Scoop."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/nab138/iloader/releases/download/v2.4.1/iloader-windows-x64.exe#/dl.7z",
             "hash": "0b9a129ae55106074c2648ec8c0eb17bc580bf7041126f4d94fbb488d7620ff7"
         }
     },
-    "installer": {
-        "script": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
-    },
     "bin": "iloader.exe",
     "shortcuts": [
         [
             "iloader.exe",
-            "iLoader"
+            "iloader"
         ]
     ],
+    "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Recurse -Force -ErrorAction SilentlyContinue",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
