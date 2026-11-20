@@ -9,10 +9,10 @@
     "hash": "8878bafe6f63fc5f60cc928bd2527bdb2a58609697a320597395313e6c556388",
     "bin": "AstroWizard.exe",
     "checkver": {
-        "url": "https://github.com",
-        "regex": "https://github\\.com/lukomaticoYT/astrowizard-releases/releases/download/(\\d{4}-\\d{2}-\\d{2})/AstroWizard\\.exe"
+        "url": "https://github.com/lukomaticoYT/astrowizard-releases/releases/",
+        "regex": "(\\d{4}-\\d{2}-\\d{2})"
     },
     "autoupdate": {
-        "url": "https://github.com/download/$version/AstroWizard.exe"
+        "url": "https://github.com/lukomaticoYT/astrowizard-releases/releases/download/$version/AstroWizard.exe"
     }
 }

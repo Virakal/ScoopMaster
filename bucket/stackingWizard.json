@@ -9,10 +9,10 @@
     "hash": "81e22cb6ad074e7ada6574c480853515f4bb65d013e757a0c7970c5d02eaaf87",
     "bin": "StackingWizard.exe",
     "checkver": {
-        "url": "https://github.com",
-        "regex": "https://github\\.com/lukomaticoYT/astrowizard-releases/releases/download/stackingwizard-beta-(\\d{4}-\\d{2}-\\d{2})/StackingWizard\\.exe"
+        "url": "https://github.com/lukomaticoYT/astrowizard-releases/releases/",
+        "regex": "stackingwizard-beta-(\\d{4}-\\d{2}-\\d{2})"
     },
     "autoupdate": {
-        "url": "https://github.com/download/stackingwizard-beta-$version/StackingWizard.exe"
+        "url": "https://github.com/lukomaticoYT/astrowizard-releases/releases/download/stackingwizard-beta-$version/StackingWizard.exe"
     }
 }

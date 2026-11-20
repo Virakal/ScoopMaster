@@ -1,12 +1,12 @@
 {
-    "version": "0.9.8",
+    "version": "0.9.9",
     "description": "Native Markdown editor with WYSIWYG editing, tabs, local folder navigation and file associations.",
     "homepage": "https://kevinxc5.github.io/leafmark/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/KevinXC5/leafmark/releases/download/v0.9.8/leafmark-0.9.8-windows-amd64.tar.gz",
-            "hash": "4cc97fb8108c0f8f8d4f4d238747d29267c2d4a86656269574cb16f1dd92c945",
+            "url": "https://github.com/KevinXC5/leafmark/releases/download/v0.9.9/leafmark-0.9.9-windows-amd64.tar.gz",
+            "hash": "f0eb298aca49a7d790979695a2ec31269df8d783cdb83ae3dd4f3898ddbd9149",
             "bin": "Leafmark.exe",
             "shortcuts": [
                 [
@@ -16,8 +16,8 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/KevinXC5/leafmark/releases/download/v0.9.8/leafmark-0.9.8-windows-arm64.tar.gz",
-            "hash": "5ecb41cd55e8eabfe9eb523606c351315544939ce91ef3467267a58060ccc030",
+            "url": "https://github.com/KevinXC5/leafmark/releases/download/v0.9.9/leafmark-0.9.9-windows-arm64.tar.gz",
+            "hash": "c1476e4c2b768380ba58711ca06c3b6d4902ca4049581c86087d4898d17d858b",
             "bin": "Leafmark.exe",
             "shortcuts": [
                 [

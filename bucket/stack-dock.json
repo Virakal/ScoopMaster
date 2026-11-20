@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0-beta",
+    "description": "Customizable Windows dock for apps, games, files, folders, and links.",
+    "homepage": "https://github.com/TNVR-HSN/stack-dock",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/TNVR-HSN/stack-dock/releases/download/v0.2.0-beta/StackDock_0.2.0-beta_x64_portable.zip",
+            "hash": "802451a6fe035daa9e5d796fdb5bedc382a3bc254969229750b7df23c592490d",
+            "extract_dir": "StackDock_0.2.0-beta_x64_portable"
+        }
+    },
+    "shortcuts": [
+        [
+            "StackDock_portable.exe",
+            "StackDock"
+        ]
+    ],
+    "notes": "The portable build stores its layout in the current Windows user's WebView2 local storage, not beside the executable. Microsoft Edge WebView2 Runtime is required.",
+    "checkver": {
+        "github": "https://github.com/TNVR-HSN/stack-dock",
+        "jsonpath": "$.tag_name",
+        "regex": "^v(?<version>[\\d.]+-[\\w.]+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/TNVR-HSN/stack-dock/releases/download/v$version/StackDock_$version_x64_portable.zip",
+                "extract_dir": "StackDock_$version_x64_portable"
+            }
+        }
+    }
+}

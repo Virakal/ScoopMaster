@@ -80,6 +80,15 @@
                     "summary": "Docker CLI + Docker Engine (dockerd) for Windows containers. NOT Docker Desktop",
                     "homepage": "https://www.docker.com/",
                     "requirements": "dockerd only runs Windows containers and needs the Windows 'Containers' feature; registering the service (dockerd --register-service) needs an elevated shell. The CLI can talk to any remote/WSL Linux engine. x64 only."
+                },
+                {
+                    "name": "vscode",
+                    "source": "scoop",
+                    "package": "extras/vscode",
+                    "command": "code",
+                    "summary": "Visual Studio Code editor (portable, per user)",
+                    "homepage": "https://code.visualstudio.com/",
+                    "requirements": "Scoop's notes ('scoop info vscode') show the .reg files that add 'Open with Code' to Explorer and register file associations."
                 }
             ]
         },

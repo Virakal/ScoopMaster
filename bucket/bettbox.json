@@ -1,51 +1,19 @@
 {
-    "version": "1.19.8",
-    "description": "Another Better Mihomo Client",
     "homepage": "https://github.com/appshubcc/Bettbox",
+    "description": "Another Better Mihomo Client",
+    "version": "1.19.8",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.8/Bettbox-1.19.8-windows-amd64-setup.exe",
-            "hash": "86c456772de24e0044664418ecd31f1334d0e67fe1c3489c8c9971d92617bdfc"
-        },
-        "arm64": {
-            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.8/Bettbox-1.19.8-windows-arm64-setup.exe",
-            "hash": "ebbf669e87ccbfbfa7b232c1151ab048c485e716bcf224283255ada6dc2d379c"
-        }
-    },
-    "innosetup": true,
+    "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.8/Bettbox-1.19.8-windows-amd64-compatible-portable.zip",
+    "hash": "14359a001dba8b2a6a0b007d60bbf9393546497d6f6212e8ee724369a379f303",
     "shortcuts": [
         [
             "Bettbox.exe",
             "Bettbox"
         ]
     ],
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:APPDATA\\com.appshub\\Bettbox\" \"$persist_dir\\AppData\" -Migrate"
-        ]
-    },
-    "pre_uninstall": [
-        "while (Get-Service -Name 'BetboxHelperevice' -ErrorAction SilentlyContinue) {",
-        "    Invoke-ExternalCommand 'sc.exe' -ArgumentList @('stop', 'BetboxHelperevice') -RunAs -Quiet",
-        "    Invoke-ExternalCommand 'sc.exe' -ArgumentList @('delete', 'BetboxHelperevice') -RunAs -Quiet",
-        "}",
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\com.appshub\\Bettbox\"",
-        "Remove-EmptyDirectory \"$env:APPDATA\\com.appshub\""
-    ],
+    "persist": "portable",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-setup.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-arm64-setup.exe"
-            }
-        }
+        "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-compatible-portable.zip"
     }
 }

@@ -1,16 +1,16 @@
 {
-    "version": "0.6.3",
+    "version": "0.7.0",
     "description": "Native desktop e-book library that reads and writes calibre libraries and supports book-source plugins.",
     "homepage": "https://dalibre.randynamic.org",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/djyde/dalibre/releases/download/v0.6.3/dalibre-0.6.3-windows-amd64.tar.gz",
-            "hash": "cd0fc817dd41ae7cdcf03ad9c97d4e25d081e4f7f0ad0c325841fab3e90c02cb"
+            "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-0.7.0-windows-amd64.tar.gz",
+            "hash": "0a18f0f1712aca5b487596e6627a72b27cae01fb987a83ca926c8388e4dec671"
         },
         "arm64": {
-            "url": "https://github.com/djyde/dalibre/releases/download/v0.6.3/dalibre-0.6.3-windows-arm64.tar.gz",
-            "hash": "fe3c5ffa288418ce758d6888618933717ced86d1692aecee494e5bb87ec57303"
+            "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-0.7.0-windows-arm64.tar.gz",
+            "hash": "09043f26ea8a27ec43e43a4dc7dde139c1578cc353c571da7a023aad4f8c687c"
         }
     },
     "bin": "dalibre.exe",
