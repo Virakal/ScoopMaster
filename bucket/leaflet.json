@@ -1,30 +1,25 @@
 {
-    "version": "2026.11.17",
-    "description": "A native desktop app where people and AI agents write living documents together",
+    "version": "2026.11.19",
+    "description": "Native block-based notebook for notes, specs and meeting records with AI agents, local-first storage and optional sync.",
     "homepage": "https://github.com/tacshi/Leaflet",
-    "license": "Proprietary",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tacshi/Leaflet/releases/download/v2026.11.17/leaflet-2026.11.17-windows-amd64.tar.gz",
-            "hash": "985f509efe54ca945ef9c64ee6b29cadcb56f57fe97a5a825a91624a38b3c963"
+            "url": "https://github.com/tacshi/Leaflet/releases/download/v2026.11.19/leaflet-2026.11.19-windows-amd64.tar.gz",
+            "hash": "96d868180a91feb521d5e9fe90b3bc1df9fb531cbbbda48763e297fb8c23c345"
         },
         "arm64": {
-            "url": "https://github.com/tacshi/Leaflet/releases/download/v2026.11.17/leaflet-2026.11.17-windows-arm64.tar.gz",
-            "hash": "38a6354a574e6d9ef10f00f8404c05b2c7f1f12a1ca47ff1df858334fb6835a6"
+            "url": "https://github.com/tacshi/Leaflet/releases/download/v2026.11.19/leaflet-2026.11.19-windows-arm64.tar.gz",
+            "hash": "26c5141191af811be1b1fc78d1414a04d1c9c1071e0dd159bc52860a8952db80"
         }
     },
     "bin": "Leaflet.exe",
-    "persist": "data",
     "shortcuts": [
         [
             "Leaflet.exe",
             "Leaflet"
         ]
     ],
-    "pre_install": "if (!(Test-Path \"$dir\\data\")) { New-Item -ItemType Directory -Path \"$dir\\data\" | Out-Null }",
-    "env_set": {
-        "LEAFLET_DATA_DIR": "$persist_dir\\data"
-    },
     "checkver": {
         "github": "https://github.com/tacshi/Leaflet"
     },
@@ -36,10 +31,7 @@
             "arm64": {
                 "url": "https://github.com/tacshi/Leaflet/releases/download/v$version/leaflet-$version-windows-arm64.tar.gz"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS",
-            "find": "$basename"
         }
-    }
+    },
+    "notes": "Leaflet keeps notes in the workspace folder you choose. Its built-in sync is optional and uses iCloud Drive or a Leaflet server; no Scoop-directory persistence is required."
 }

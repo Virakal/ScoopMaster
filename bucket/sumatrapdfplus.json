@@ -1,5 +1,5 @@
 {
-    "version": "3.7.101",
+    "version": "3.7.102",
     "description": "Windows 下的 PDF / 电子书阅读器，针对中文 EPUB/MOBI、离线查词、主题与 PDF 智能暗黑模式等做了增强。",
     "homepage": "https://github.com/dengxibo/sumatrapdf-plus",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/3.7.101/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe",
-            "hash": "45be31e02e35746dc7b1fc6e72b137dc156631eb18e5dab807bac9e46a50f3b0"
+            "url": "https://github.com/dengxibo/sumatrapdf-plus/releases/download/3.7.102/SumatraPDF-Plus.exe#/SumatraPDFPlus.exe",
+            "hash": "59b7df4dcb0e9ac6ab939725989a31205f6caed9f41132f304835c6c9f82af8f"
         }
     },
     "bin": "SumatraPDFPlus.exe",
