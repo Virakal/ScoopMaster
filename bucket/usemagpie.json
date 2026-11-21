@@ -1,5 +1,5 @@
 {
-    "version": "0.1.4654",
+    "version": "0.1.4656",
     "description": "Magpie — one local gateway (127.0.0.1:3425) that switches the model for every AI agent (Claude Code, Codex, Gemini CLI, Cursor, dsh and many more). This package installs both the Magpie desktop app and the magpie CLI.",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
@@ -12,12 +12,12 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4654/magpie-windows-amd64.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4654/magpie-cli-windows-amd64.exe"
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4656/magpie-windows-amd64.exe",
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4656/magpie-cli-windows-amd64.exe"
             ],
             "hash": [
-                "110c1747c98fc33079a7ef7c2e76f2426d094e2629831f535fe31bf254b9f6f6",
-                "7d0818557cc0dc0fdc37c2a5bff48c3d588b04d6e9da539dfbe449472211bc00"
+                "7a959ac940ab033b88d3918ae53a10818a075aa9c9e93b4a845692e9b5e819ee",
+                "d016beff09774bdc05aaafc3a45c99e6ecdfbbc7f3c7d9c62fc3f811b0ac205d"
             ],
             "bin": [
                 [
@@ -39,12 +39,12 @@
         },
         "arm64": {
             "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4654/magpie-windows-arm64.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4654/magpie-cli-windows-arm64.exe"
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4656/magpie-windows-arm64.exe",
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4656/magpie-cli-windows-arm64.exe"
             ],
             "hash": [
-                "6831154044d6e7eeb17705ef955ff3c54ab6bd2f532f3ed286ca5819ac0da318",
-                "1a733467ba5dd2379f274ad06e8bc779d75d855df4f9bea7e46da0c0e4f4562b"
+                "2e33df090ccc21771491760dd4c77d64122c5e34c9b5c5ffdf84364bd02451e2",
+                "f99eb9356d30e08f5cced2ab8c69115705c7b1f1b4761c9525d50b6ded45e9b9"
             ],
             "bin": [
                 [

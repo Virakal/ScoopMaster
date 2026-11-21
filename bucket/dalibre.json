@@ -1,46 +1,46 @@
 {
-  "version": "0.7.0",
-  "description": "A lightweight Calibre alternative",
-  "homepage": "https://dalibre.randynamic.org",
-  "license": "Proprietary",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-setup-0.7.0-amd64.exe#/dl.7z",
-      "hash": "b9f8f65c023270b5753dd434ab16d1420317124f5c62f4d59c250da71910e0b4"
-    },
-    "arm64": {
-      "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-setup-0.7.0-arm64.exe#/dl.7z",
-      "hash": "faa3750232705740686f267c121efa80630b7d59294a70c6bbd2ef887f0d921c"
-    }
-  },
-  "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse -Force -ErrorAction SilentlyContinue",
-  "bin": "Dalibre.exe",
-  "shortcuts": [
-    [
-      "Dalibre.exe",
-      "Dalibre"
-    ]
-  ],
-  "notes": [
-    "Dalibre keeps its settings in %APPDATA%\\Dalibre\\settings.json, cover thumbnails in %LOCALAPPDATA%\\Dalibre\\thumbs, and installed plugins in %APPDATA%\\Dalibre\\plugins. These live outside the Scoop directory and are not managed by Scoop.",
-    "Set DALIBRE_PLUGINS to load plugins from another folder, and DALIBRE_LIBRARY to open a specific calibre library at startup.",
-    "Dalibre updates itself from its own GitHub releases, which can conflict with 'scoop update'. Disable automatic update checks in Settings if you prefer Scoop to manage versions."
-  ],
-  "checkver": {
-    "github": "https://github.com/djyde/dalibre"
-  },
-  "autoupdate": {
+    "version": "0.7.0",
+    "description": "A lightweight Calibre alternative",
+    "homepage": "https://dalibre.randynamic.org",
+    "license": "Proprietary",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/djyde/dalibre/releases/download/v$version/dalibre-setup-$version-amd64.exe#/dl.7z"
-      },
-      "arm64": {
-        "url": "https://github.com/djyde/dalibre/releases/download/v$version/dalibre-setup-$version-arm64.exe#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-setup-0.7.0-amd64.exe#/dl.7z",
+            "hash": "b9f8f65c023270b5753dd434ab16d1420317124f5c62f4d59c250da71910e0b4"
+        },
+        "arm64": {
+            "url": "https://github.com/djyde/dalibre/releases/download/v0.7.0/dalibre-setup-0.7.0-arm64.exe#/dl.7z",
+            "hash": "faa3750232705740686f267c121efa80630b7d59294a70c6bbd2ef887f0d921c"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS",
-      "find": "$basename"
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "bin": "Dalibre.exe",
+    "shortcuts": [
+        [
+            "Dalibre.exe",
+            "Dalibre"
+        ]
+    ],
+    "notes": [
+        "Dalibre keeps its settings in %APPDATA%\\Dalibre\\settings.json, cover thumbnails in %LOCALAPPDATA%\\Dalibre\\thumbs, and installed plugins in %APPDATA%\\Dalibre\\plugins. These live outside the Scoop directory and are not managed by Scoop.",
+        "Set DALIBRE_PLUGINS to load plugins from another folder, and DALIBRE_LIBRARY to open a specific calibre library at startup.",
+        "Dalibre updates itself from its own GitHub releases, which can conflict with 'scoop update'. Disable automatic update checks in Settings if you prefer Scoop to manage versions."
+    ],
+    "checkver": {
+        "github": "https://github.com/djyde/dalibre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/djyde/dalibre/releases/download/v$version/dalibre-setup-$version-amd64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/djyde/dalibre/releases/download/v$version/dalibre-setup-$version-arm64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS",
+            "find": "$basename"
+        }
     }
-  }
 }

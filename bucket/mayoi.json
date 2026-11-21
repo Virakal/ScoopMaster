@@ -1,44 +1,42 @@
 {
     "version": "0.23.1",
-    "description": "Native Go code editor with Vim mode, Git integration, search, terminal, and remote SSH.",
+    "description": "A small, fast code editor written in Go, drawing a native GPU UI with no webview and no Electron.",
     "homepage": "https://github.com/sorrycc/Mayoi",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.23.1/mayoi-0.23.1-windows-amd64.tar.gz",
-            "hash": "5d4dd0cb80ead9b7aac94a5be6f9c5f799defcaeb51ae8b096afdcf66e692c32",
-            "bin": "Mayoi.exe",
-            "shortcuts": [
-                [
-                    "Mayoi.exe",
-                    "Mayoi"
-                ]
-            ]
+            "hash": "5d4dd0cb80ead9b7aac94a5be6f9c5f799defcaeb51ae8b096afdcf66e692c32"
         },
         "arm64": {
             "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.23.1/mayoi-0.23.1-windows-arm64.tar.gz",
-            "hash": "94f2ef3d72661125398dfa60e500beaa970c78f830776ba8d5ddcc97c4e4d967",
-            "bin": "Mayoi.exe",
-            "shortcuts": [
-                [
-                    "Mayoi.exe",
-                    "Mayoi"
-                ]
-            ]
+            "hash": "94f2ef3d72661125398dfa60e500beaa970c78f830776ba8d5ddcc97c4e4d967"
         }
     },
-    "checkver": {
-        "github": "https://github.com/sorrycc/Mayoi"
-    },
+    "bin": "Mayoi.exe",
+    "shortcuts": [
+        [
+            "Mayoi.exe",
+            "Mayoi"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-amd64.tar.gz"
+                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-amd64.tar.gz",
+                "hash": {
+                    "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/SHA256SUMS",
+                    "regex": "$sha256\\s+mayoi-$version-windows-amd64\\.tar\\.gz"
+                }
             },
             "arm64": {
-                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-arm64.tar.gz"
+                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-arm64.tar.gz",
+                "hash": {
+                    "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/SHA256SUMS",
+                    "regex": "$sha256\\s+mayoi-$version-windows-arm64\\.tar\\.gz"
+                }
             }
         }
-    },
-    "notes": "Mayoi includes its own signed in-app updater. Scoop can also manage the installed version; avoid running both update mechanisms at the same time."
+    }
 }

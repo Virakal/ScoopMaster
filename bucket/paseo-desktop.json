@@ -1,35 +1,35 @@
 {
-  "version": "0.16.2",
-  "description": "Coding agents from your phone, desktop and CLI (Desktop Edition)",
-  "homepage": "https://paseo.sh",
-  "license": "AGPL-3.0-only",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/getpaseo/paseo/releases/download/v0.16.2/Paseo-Setup-0.16.2-x64.zip",
-      "hash": "ee421c3c6c66c8a5433546fecf14633691e50387929cc1b464f91462220a4415"
-    },
-    "arm64": {
-      "url": "https://github.com/getpaseo/paseo/releases/download/v0.16.2/Paseo-Setup-0.16.2-arm64.zip",
-      "hash": "89c87858906d310be0acf303ef0e9280263aa904f959a8b2a0a53ce8d22494bd"
-    }
-  },
-  "shortcuts": [
-    [
-      "Paseo.exe",
-      "Paseo"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/getpaseo/paseo"
-  },
-  "autoupdate": {
+    "version": "0.16.2",
+    "description": "Coding agents from your phone, desktop and CLI (Desktop Edition)",
+    "homepage": "https://paseo.sh",
+    "license": "AGPL-3.0-only",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
-      },
-      "arm64": {
-        "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.16.2/Paseo-Setup-0.16.2-x64.zip",
+            "hash": "ee421c3c6c66c8a5433546fecf14633691e50387929cc1b464f91462220a4415"
+        },
+        "arm64": {
+            "url": "https://github.com/getpaseo/paseo/releases/download/v0.16.2/Paseo-Setup-0.16.2-arm64.zip",
+            "hash": "89c87858906d310be0acf303ef0e9280263aa904f959a8b2a0a53ce8d22494bd"
+        }
+    },
+    "shortcuts": [
+        [
+            "Paseo.exe",
+            "Paseo"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/getpaseo/paseo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
+            }
+        }
     }
-  }
 }
