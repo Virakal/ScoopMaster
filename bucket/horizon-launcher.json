@@ -1,13 +1,13 @@
 {
-    "version": "0.2.89",
+    "version": "0.2.92",
     "description": "Launcher for Horizon, a Minecraft: Java Edition reimplementation written in Rust.",
     "homepage": "https://playhorizon.dev",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/horizon-rust/horizon/blob/main/LICENSE"
     },
-    "url": "https://github.com/horizon-rust/horizon/releases/download/launcher%400.2.89/horizon-launcher-windows-x64.zip",
-    "hash": "c12218f5c327f71cb90e8355a277a86dd334be717814c0a3f1f60d3bf6993a1a",
+    "url": "https://github.com/horizon-rust/horizon/releases/download/launcher%400.2.92/horizon-launcher-windows-x64.zip",
+    "hash": "c266abc9a287e8bae96585be7209e2e7d2139653940c3d1807693e3891206b3e",
     "env_set": {
         "HORIZON_LAUNCHER_HOME": "$persist_dir\\launcher",
         "HORIZON_HOME": "$persist_dir\\game",

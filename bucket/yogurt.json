@@ -1,10 +1,10 @@
 {
-    "version": "0.3.56",
+    "version": "0.3.59",
     "description": "Local-first AI desktop app for meeting notes, transcription, and summaries.",
     "homepage": "https://github.com/FrigadeHQ/yogurt",
     "license": "MIT",
-    "url": "https://github.com/FrigadeHQ/yogurt/releases/download/v0.3.56/Yogurt-windows-x64.exe#/dl.7z",
-    "hash": "ebf96243ec2b9e6079160c491d0840ca7f7dcc1a2cfec17e807ca7d0d3123b0c",
+    "url": "https://github.com/FrigadeHQ/yogurt/releases/download/v0.3.59/Yogurt-windows-x64.exe#/dl.7z",
+    "hash": "e05384f5e63e2ccec78d77bb1e9e62f0ccb07af657583f8f59fe68506c6e5265",
     "depends": "7zip",
     "pre_install": [
         "$payload = Join-Path $dir '$PLUGINSDIR\\app-64.7z'",
@@ -13,9 +13,7 @@
         "$mainExe = Join-Path $dir 'Yogurt.exe'",
         "if (-not (Test-Path -LiteralPath $mainExe -PathType Leaf)) { throw 'Yogurt.exe was not found after extracting the nested application archive.' }"
     ],
-    "post_install": [
-        "Remove-Item -LiteralPath (Join-Path $dir '$PLUGINSDIR'), (Join-Path $dir '$R0') -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
+    "post_install": "Remove-Item -LiteralPath (Join-Path $dir '$PLUGINSDIR'), (Join-Path $dir '$R0') -Recurse -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "Yogurt.exe",

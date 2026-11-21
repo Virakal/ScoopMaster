@@ -1,5 +1,5 @@
 {
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "Free, portable Windows toolkit for PC technicians, IT pros, and sysadmins: profile backup and restore, partition management, diagnostics, app deployment and removal, file and network tools, USB image flashing, and email archive tools.",
     "homepage": "https://sakutility.com/",
     "license": "AGPL-3.0-or-later",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RandyNorthrup/S.A.K.-Utility/releases/download/v0.9.3/SAK-Utility-Windows-x64.zip",
-            "hash": "4de827f7ed62a550ab2c0038e02ef3761c3148bf76cb97f858132a6b33fc0e70"
+            "url": "https://github.com/RandyNorthrup/S.A.K.-Utility/releases/download/v0.9.4/SAK-Utility-Windows-x64.zip",
+            "hash": "ecd73d9b8af0bb9a1496d07d5f4f6b701a26d5bffa015271def6167d154e62da"
         }
     },
     "pre_install": "if (Test-Path \"$persist_dir\\data\" -PathType Container) { Copy-Item \"$persist_dir\\data\" \"$dir\" -Recurse -Force }",
