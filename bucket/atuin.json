@@ -1,7 +1,7 @@
 {
     "version": "18.25.1",
-    "description": "✨ Magical shell history",
-    "homepage": "https://github.com/atuinsh/atuin",
+    "description": "Shell history tool featuring advanced context-aware search, along with secure sync and backup.",
+    "homepage": "https://atuin.sh",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -18,6 +18,9 @@
             "64bit": {
                 "url": "https://github.com/atuinsh/atuin/releases/download/v$version/atuin-x86_64-pc-windows-msvc.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

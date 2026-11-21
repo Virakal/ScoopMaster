@@ -18,6 +18,7 @@
             "desktop-tools"
         ]
     ],
+    "persist": "Profile/User",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
