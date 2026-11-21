@@ -1,17 +1,25 @@
 {
-    "version": "0.1.173",
-    "description": "Open-source Grok Bot alternative: a local-first chat app running a team of AI agents, each with its own computer.",
+    "version": "0.1.175",
+    "description": "Open-source Grok Bot alternative — local-first AI bots with a computer they can use",
     "homepage": "https://mausbot.com",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/milind-soni/OpenMausBot/releases/download/v0.1.173/OpenMausBot-setup.exe#/dl.7z",
-            "hash": "7f7b634b191b961e68cec27cb70b7c3424e3ec7ef2cf52d0d4c61d1119dd0c81"
+            "url": "https://github.com/milind-soni/OpenMausBot/releases/download/v0.1.175/OpenMausBot-0.1.175-setup.exe#/dl.7z",
+            "hash": "sha512:35595c5566f954836afcefcf2799f609d28bd7c734c42d6070b580582977377613c5b27fc5a90960b2b6016b75680414fb092eaa55f36076ea7a42db9068c720"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Recurse -Force -ErrorAction SilentlyContinue"
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": [
+        [
+            "OpenMausBot.exe",
+            "openmausbot"
+        ]
     ],
     "shortcuts": [
         [
@@ -25,9 +33,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/milind-soni/OpenMausBot/releases/download/v$version/OpenMausBot-setup.exe#/dl.7z"
+                "url": "https://github.com/milind-soni/OpenMausBot/releases/download/v$version/OpenMausBot-$version-setup.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
-    },
-    "notes": "Bots drive the claude, codex or grok CLI already installed on this machine. State lives in %USERPROFILE%\\.openmausbot."
+    }
 }

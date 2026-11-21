@@ -1,13 +1,13 @@
 {
-    "version": "2.7.0",
+    "version": "2.8.0",
     "description": "Free and open-source screen sharing for private live streams with friends",
     "homepage": "https://piik.tv",
     "license": "MIT",
     "notes": "Piik App stores its configuration in %APPDATA%\\Piik.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/TNTcraftHIM/Piik/releases/download/v2.7.0/piik-app-windows-amd64.zip",
-            "hash": "f9238c47f8a224d7994883d475afeae5eda923c4bf6ed035975f2838bf62617e"
+            "url": "https://github.com/TNTcraftHIM/Piik/releases/download/v2.8.0/piik-app-windows-amd64.zip",
+            "hash": "0af7182c79c8219d505c8e1293a2157ea48aa6fe18eaa9a52a1e9f21aa2d303d"
         }
     },
     "bin": "piik-app.exe",

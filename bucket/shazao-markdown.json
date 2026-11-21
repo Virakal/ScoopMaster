@@ -1,32 +1,29 @@
 {
-    "version": "0.6.24",
-    "description": "Shazao（沙枣） Windows 上的所见即所得 Markdown 编辑器",
+    "version": "0.6.26",
+    "description": "A native Markdown reader and editor for Windows with WYSIWYG and rich table editing. | Windows 原生 Markdown 阅读与编辑器，打开就读、落笔就写，支持所见即所得与丰富的表格编辑",
     "homepage": "https://github.com/yakoye/Shazao-markdown",
-    "license": "MIT",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.24/Shazao-v0.6.24-win64.zip",
-            "hash": "2782d26e1fa4a7d3b1ebbae23fa4cba70cf525143ee481dfd3b615389c1bbe8a"
+            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.26/Shazao-markdown.exe#/Shazao.exe",
+            "hash": "825d6d853868b53a86cbb5425259dd587f330fe3bbe6957b700ae9a9e24690e5"
         }
     },
-    "bin": "Shazao-markdown.exe",
     "shortcuts": [
         [
-            "Shazao-markdown.exe",
-            "Shazao-markdown"
+            "Shazao.exe",
+            "Shazao"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/yakoye/Shazao-markdown"
-    },
-    "persist": [
-        
-    ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v$version/Shazao-v$version-win64.zip"
+                "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v$version/Shazao-markdown.exe#/Shazao.exe"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS-v$version.txt"
         }
     }
 }
