@@ -3,11 +3,6 @@
     "description": "Unified model, provider, and gateway manager for AI coding agents.",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
-    "notes": [
-        "Scoop persists data since version 0.1.1067. You may need to move data by yourself.",
-        "Before: '$env:USERPROFILE\\.config\\magpie'",
-        "After : '$persist_dir\\data'"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4657/magpie-windows-amd64.exe#/magpie.exe",

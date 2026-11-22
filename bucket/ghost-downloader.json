@@ -1,8 +1,8 @@
 {
     "version": "4.5.11",
-    "description": "A cross-platform fluent-design AI-boost multi-threaded downloader built with Python.",
-    "homepage": "https://gd3.top/",
-    "license": "GPL-3.0-or-later",
+    "description": "Ghost Downloader 3. A powerful all-in-one downloader supporting HTTP, FTP, BitTorrent, ed2k and more.",
+    "homepage": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+    "license": "GPL-3.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v4.5.11/Ghost-Downloader-v4.5.11-Windows-x86_64.zip",
@@ -13,34 +13,14 @@
             "hash": "36c31276d0db5bcd574bf9f10c778a124d12b303ec5d9e6582eed28b1cd537be"
         }
     },
-    "extract_dir": "dist\\Ghost-Downloader-3.dist",
+    "bin": "Ghost-Downloader-3.exe",
     "shortcuts": [
         [
             "Ghost-Downloader-3.exe",
-            "Ghost Downloader"
+            "Ghost Downloader 3"
         ]
     ],
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\Ghost Downloader 配置文件.json\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 配置文件.json\").Length) {",
-        "    New-Item \"$persist_dir\\Ghost Downloader 配置文件.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-        "    Set-Content -Path \"$persist_dir\\Ghost Downloader 配置文件.json\" -Value '{\"Software\":{\"CheckUpdateAtStartUp\":false}}'",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\Ghost Downloader 记录文件\") -or !(Get-Item \"$persist_dir\\Ghost Downloader 记录文件\").Length) {",
-        "    New-Item \"$persist_dir\\Ghost Downloader 记录文件\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-        "}"
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App"
-    ],
-    "persist": [
-        "Ghost Downloader 配置文件.json",
-        "Ghost Downloader 记录文件"
-    ],
-    "checkver": {
-        "github": "https://github.com/XiaoYouChR/Ghost-Downloader-3"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -50,5 +30,6 @@
                 "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3/releases/download/v$version/Ghost-Downloader-v$version-Windows-arm64.zip"
             }
         }
-    }
+    },
+    "notes": "Requires a CPU with AVX instruction set support (Qt 6.6+ requirement)."
 }
