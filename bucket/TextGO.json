@@ -1,27 +1,27 @@
 {
-    "version": "1.2.1",
-    "homepage": "https://github.com/C5H12O5/TextGO",
-    "license": "A customizable text selection popup tool",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/C5H12O5/TextGO/releases/download/v1.2.1/TextGO_1.2.1_x64-setup.exe#/dl.7z",
-            "hash": "68cf5d68f46a802fa9d1da1f8c9bd7334750cfeb8c511c85b841f83e74d40fba"
-        }
-    },
-    "bin": "text-go.exe",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-    "shortcuts": [
-        [
-            "text-go.exe",
-            "TextGO"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/C5H12O5/TextGO/releases/download/v$version/TextGO_$version_x64-setup.exe#/dl.7z"
-            }
-        }
+  "version": "1.2.1",
+  "homepage": "https://github.com/C5H12O5/TextGO",
+  "license": "A customizable text selection popup tool",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/C5H12O5/TextGO/releases/download/v1.2.1/TextGO_1.2.1_x64-setup.exe#/dl.7z",
+      "hash": "68cf5d68f46a802fa9d1da1f8c9bd7334750cfeb8c511c85b841f83e74d40fba"
     }
+  },
+  "bin": "text-go.exe",
+  "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+  "shortcuts": [
+    [
+      "text-go.exe",
+      "TextGO"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/C5H12O5/TextGO/releases/download/v$version/TextGO_$version_x64-setup.exe#/dl.7z"
+      }
+    }
+  }
 }

@@ -1,13 +1,13 @@
 {
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "Rewrite apps in Rust one piece at a time, checking each port against the original's recorded behavior",
     "homepage": "https://github.com/erkamyaman/rust-anything",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/erkamyaman/rust-anything/releases/download/v3.0.0/rust-anything-v3.0.0-x86_64-pc-windows-msvc.zip",
-            "hash": "11056e34fad8a8a69da27d47c99b661aeff852d3c0c8593c4c1bc281fe3bda81",
-            "extract_dir": "rust-anything-v3.0.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/erkamyaman/rust-anything/releases/download/v3.1.0/rust-anything-v3.1.0-x86_64-pc-windows-msvc.zip",
+            "hash": "58ceb06f677625f98fa77060d89688c7ed04cde52295aaba60c3c83615b2999f",
+            "extract_dir": "rust-anything-v3.1.0-x86_64-pc-windows-msvc"
         }
     },
     "##": "Upstream ships prebuilt binaries for Windows x86_64 only (no 32bit or arm64). 'rust-anything setup' edits coding-agent config files and writes '<file>.rust-anything.bak' backups; it is not run at install time so the user stays in control.",

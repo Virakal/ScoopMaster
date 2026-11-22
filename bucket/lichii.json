@@ -1,39 +1,54 @@
 {
-    "homepage": "https://github.com/zortos293/Lichii",
     "version": "366",
-    "description": "VERY experimental Nintendo Switch 2 emulator.",
+    "description": "Experimental Nintendo Switch and Switch 2 emulator",
+    "homepage": "https://lichiiemulator.app/",
     "license": {
-        "identifier": "BSL-1.1",
-        "url": "https://github.com/tgeorgiadis/quiver-launcher/blob/main/LICENSE"
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/zortos293/Lichii/blob/nx2/LICENSE.txt"
     },
-    "persist": "user",
+    "notes": [
+        "Lichii requires legally obtained game files, keys, and firmware to function. These are not included.",
+        "Lichii is experimental. Back up your saves before testing builds."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/zortos293/Lichii/releases/download/build-366/lichii-windows-x86_64.zip",
-            "hash": "7913ab93d74d888fc1b9185ae42a19ae5366dfd0b7a4dd887e7d6198e7cfdddb",
-            "bin": "lichii.exe",
-            "shortcuts": [
-                [
-                    "Lichii.exe",
-                    "Nintendo Switch 2"
-                ]
-            ]
+            "hash": "7913ab93d74d888fc1b9185ae42a19ae5366dfd0b7a4dd887e7d6198e7cfdddb"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\lichii\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\lichii\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": "eden-cli.exe",
+    "shortcuts": [
+        [
+            "lichii.exe",
+            "Nintendo Switch 2 [nsw2][lichii]"
+        ]
+    ],
+    "persist": "user",
     "checkver": {
-        "url": "https://api.github.com/repos/zortos293/Lichii/releases/latest",
-        "jsonpath": {
-            "version": "$.tag_name",
-            "download": "$.assets[?(@.name =~ /lichii-windows-x86_64\\.zip/i)].browser_download_url",
-            "hash": "$.assets[?(@.name =~ /lichii-windows-x86_64\\.zip/i)].digest"
-        },
+        "url": "https://api.github.com/repos/zortos293/Lichii/releases?per_page=20",
+        "jsonpath": "$[0].tag_name",
         "regex": "build-([\\d]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$matchDownload",
-                "hash": "$matchHash"
+                "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
+                    "jsonpath": "$.assets[?(@.name == '$basename')].digest",
+                    "mode": "json"
+                }
             }
         }
     }
