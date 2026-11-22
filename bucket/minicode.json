@@ -1,12 +1,12 @@
 {
-    "version": "3.1.1",
+    "version": "3.2.1",
     "description": "Native Windows AI coding workspace with a shared agent runtime, task management, code review and bundled local tooling.",
     "homepage": "https://minicode.oyster.ink/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/oysterhyd/minicode/releases/download/v3.1.1/minicode-3.1.1-windows-amd64.tar.gz",
-            "hash": "e812c850db76d7124c1ce4b5aef1c738e460f5366d6f85b489492351e27261fe",
+            "url": "https://github.com/oysterhyd/minicode/releases/download/v3.2.1/minicode-3.2.1-windows-amd64.tar.gz",
+            "hash": "2af8f1aa8ad24b2421b2330a1a53c39696d208d3c359128bf77dc0b79923e792",
             "bin": "MiniCode.exe",
             "shortcuts": [
                 [

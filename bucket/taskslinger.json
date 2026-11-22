@@ -1,10 +1,10 @@
 {
-    "version": "0.9.7",
+    "version": "0.9.8",
     "description": "Native Windows Task Manager replacement with process monitoring, performance graphs, services, startup apps, and network connections.",
     "homepage": "https://taskslinger.net/",
     "license": "Proprietary",
-    "url": "https://taskslinger.net/download/v0.9.7/winget/x64.exe#/TaskSlinger-Setup.exe",
-    "hash": "4b22c20607132dc303b170f1ccaab64510a581b8fdde98c02c9efd8d3480d691",
+    "url": "https://taskslinger.net/download/v0.9.8/winget/x64.exe#/TaskSlinger-Setup.exe",
+    "hash": "1e12f814013bfd743841d6965f22dc0cdf4378537dc8f888fb260289ca4ce1e4",
     "checkver": {
         "url": "https://taskslinger.net/changelog/",
         "regex": "TaskSlinger (?<version>[\\d.]+)"

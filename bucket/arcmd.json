@@ -1,41 +1,29 @@
 {
-  "version": "0.2.5",
-  "description": "Native Markdown editor built with Go and MyGo Native UI, featuring Arc-style Spaces, rich text editing, and standard Markdown files",
-  "homepage": "https://github.com/Ciao1019/ArcMD",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/Ciao1019/ArcMD/releases/download/v0.2.5/arcmd-0.2.5-windows-amd64.zip",
-      "hash": "e5a4753e69fe9da9e2424db52d0dda29cc4bff2afe9a77d68bd0aef31b53d9f9"
-    }
-  },
-  "bin": "ArcMD.exe",
-  "shortcuts": [
-    [
-      "ArcMD.exe",
-      "ArcMD"
-    ]
-  ],
-  "persist": "config",
-  "env_set": {
-    "ARCMD_HOME": "$persist_dir"
-  },
-  "notes": [
-    "ArcMD stores its settings in '%APPDATA%\\ArcMD' (spaces.json, prefs.json, plugins, trash) unless ARCMD_HOME is set, which this manifest points at the Scoop persist directory.",
-    "New spaces are created as regular folders under '%USERPROFILE%\\Documents\\ArcMD' by default; those are your own documents and are not managed by Scoop."
-  ],
-  "checkver": {
-    "github": "https://github.com/Ciao1019/ArcMD"
-  },
-  "autoupdate": {
+    "version": "0.2.7",
+    "description": "Native Markdown rich-text editor with colorful spaces, split views, and local-first notes.",
+    "homepage": "https://github.com/Ciao1019/ArcMD",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/Ciao1019/ArcMD/releases/download/v$version/arcmd-$version-windows-amd64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/Ciao1019/ArcMD/releases/download/v0.2.7/arcmd-0.2.7-windows-amd64.zip",
+            "hash": "85d1e3f43a66f5ca3d44a118be2f49251808f9925c6c1390972ebf4e8f3ed8f2"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS.txt",
-      "find": "$basename"
+    "bin": "ArcMD.exe",
+    "shortcuts": [
+        [
+            "ArcMD.exe",
+            "ArcMD"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Ciao1019/ArcMD"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Ciao1019/ArcMD/releases/download/v$version/arcmd-$version-windows-amd64.zip"
+            }
+        }
     }
-  }
 }

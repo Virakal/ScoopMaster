@@ -1,13 +1,13 @@
 {
-    "version": "0.45.0",
+    "version": "0.46.2",
     "description": "Open-source parametric 3D CAD application",
     "homepage": "https://github.com/tangency-labs/solidcraft",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tangency-labs/solidcraft/releases/download/v0.45.0/solidcraft-0.45.0-windows-x64-portable.zip",
-            "hash": "747bb16c65032ed2b2050b83d12c7d97dff84d480de29c1455afaf667ab753d1",
-            "extract_dir": "solidcraft-0.45.0-windows-x64-portable"
+            "url": "https://github.com/tangency-labs/solidcraft/releases/download/v0.46.2/solidcraft-0.46.2-windows-x64-portable.zip",
+            "hash": "84cfbaa11bc2cf3cff01d10f61976fa2769ebb6d1b762e2769fcfc8a93112b95",
+            "extract_dir": "solidcraft-0.46.2-windows-x64-portable"
         }
     },
     "shortcuts": [
