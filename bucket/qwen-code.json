@@ -1,28 +1,22 @@
 {
     "version": "0.28.4",
-    "description": "An open-source AI coding agent that lives in your terminal.",
-    "homepage": "https://qwen.ai/qwencode",
+    "description": "Coding agent that lives in the digital world",
+    "homepage": "https://qwenlm.github.io/qwen-code-docs",
     "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.28.4/qwen-code-win-x64.zip",
-            "hash": "81234b13006160d5bd6b9ab2d5a072964d38796c83e23ee3395c626cb141458a"
-        }
-    },
-    "extract_dir": "qwen-code",
-    "bin": "bin\\qwen.cmd",
+    "depends": "nodejs-lts",
+    "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.28.4/cli.js",
+    "hash": "90656b9968d85b4ea09d037d64bf80feacc50bd9a7aba13c572265b8c6d9bf61",
+    "bin": [
+        [
+            "node",
+            "qwen",
+            "$dir\\cli.js"
+        ]
+    ],
     "checkver": {
-        "url": "https://api.github.com/repos/QwenLM/qwen-code/releases",
-        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+        "github": "https://github.com/QwenLM/qwen-code"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/qwen-code-win-x64.zip"
-            }
-        },
-        "hash": {
-            "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/SHA256SUMS"
-        }
+        "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/cli.js"
     }
 }
