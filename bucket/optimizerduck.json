@@ -1,17 +1,15 @@
 {
     "version": "2.29.0",
-    "description": "Free, open-source Windows optimization tool focused on performance, privacy, and simplicity.",
+    "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
     "homepage": "https://optimizerduck.vercel.app/",
-    "license": "GPL-3.0-only",
-    "notes": "Applies tweaks that need administrator rights, so Windows prompts for elevation. Create a system restore point before changing anything.",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/itsfatduck/optimizerDuck/blob/master/LICENSE"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/itsfatduck/optimizerDuck/releases/download/v2.29.0/optimizerDuck-Windows-x64-2.29.0.exe#/optimizerDuck.exe",
             "hash": "d343440168e93c73c8be2315755c9ab8fa4f20f9209ce2b8338f8c8fc97fab8f"
-        },
-        "arm64": {
-            "url": "https://github.com/itsfatduck/optimizerDuck/releases/download/v2.29.0/optimizerDuck-Windows-arm64-2.29.0.exe#/optimizerDuck.exe",
-            "hash": "ffa502e84abdd5622295020df15d6d05fc4f2f58e5d3ca07569f1e703094aa5e"
         }
     },
     "shortcuts": [
@@ -20,6 +18,18 @@
             "optimizerDuck"
         ]
     ],
+    "installer": {
+        "script": [
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:LOCALAPPDATA\\optimizerDuck\" \"$persist_dir\\AppData\" -Migrate"
+        ]
+    },
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "Remove-Junction \"$env:LOCALAPPDATA\\optimizerDuck\""
+    ],
     "checkver": {
         "github": "https://github.com/itsfatduck/optimizerDuck"
     },
@@ -27,9 +37,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/itsfatduck/optimizerDuck/releases/download/v$version/optimizerDuck-Windows-x64-$version.exe#/optimizerDuck.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/itsfatduck/optimizerDuck/releases/download/v$version/optimizerDuck-Windows-arm64-$version.exe#/optimizerDuck.exe"
             }
         }
     }

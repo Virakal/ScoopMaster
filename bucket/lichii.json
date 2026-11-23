@@ -1,56 +1,55 @@
 {
     "version": "386",
-    "description": "VERY experimental Nintendo Switch 2 emulator, forked from yuzu and Eden (PGO build).",
-    "homepage": "https://github.com/zortos293/Lichii",
+    "description": "Experimental Nintendo Switch and Switch 2 emulator",
+    "homepage": "https://lichiiemulator.app/",
     "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/zortos293/Lichii/raw/nx2/LICENSE.txt"
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/zortos293/Lichii/blob/nx2/LICENSE.txt"
     },
-    "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+    "notes": [
+        "Lichii requires legally obtained game files, keys, and firmware to function. These are not included.",
+        "Lichii is experimental. Back up your saves before testing builds."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zortos293/Lichii/releases/download/build-386/lichii-windows-x86_64.zip",
+            "hash": "357330af969d6bd799ea3431de5315aeaf1317a2abee2cbedafe7f9277c7fa45"
+        }
     },
-    "url": "https://github.com/zortos293/Lichii/releases/download/build-386/lichii-windows-x86_64-pgo.zip",
-    "hash": "9d47545d108d6d4a670b303f1f16d8a2c84b81142e431344db1c16ab74e1132b",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\user\")) {",
-        "    New-Item \"$persist_dir\\user\" -ItemType Directory -Force | Out-Null",
-        "    if (Test-Path \"$env:APPDATA\\lichii\") {",
-        "        if (Get-Process lichii -ErrorAction SilentlyContinue) {",
-        "            warn 'Lichii is running, so its %APPDATA%\\lichii profile was not copied into the portable user directory.'",
-        "        } else {",
-        "            Write-Host 'Copying %APPDATA%\\lichii into the portable user directory...' -ForegroundColor Yellow",
-        "            Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse -Force -ErrorAction Continue",
-        "            warn 'The old profile in %APPDATA%\\lichii was kept as a copy; Lichii now uses the portable user directory.'",
-        "        }",
-        "    }",
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\lichii\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\lichii\" -Recurse",
+        "   }",
         "}"
     ],
-    "bin": [
-        [
-            "lichii.exe",
-            "lichii"
-        ],
-        [
-            "eden-cli.exe",
-            "lichii-cli"
-        ]
-    ],
+    "bin": "eden-cli.exe",
     "shortcuts": [
         [
             "lichii.exe",
-            "Lichii"
+            "Nintendo Switch 2 [nsw2][lichii]"
         ]
     ],
     "persist": "user",
     "checkver": {
-        "github": "https://github.com/zortos293/Lichii",
-        "regex": "build-(\\d+)"
+        "url": "https://api.github.com/repos/zortos293/Lichii/releases?per_page=20",
+        "jsonpath": "$[0].tag_name",
+        "regex": "build-([\\d]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64-pgo.zip",
-        "hash": {
-            "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
-            "jsonpath": "$.assets[?(@.name == '$basename')].digest"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
+                    "jsonpath": "$.assets[?(@.name == '$basename')].digest",
+                    "mode": "json"
+                }
+            }
         }
     }
 }
