@@ -1,35 +1,35 @@
 {
-    "version": "0.5.6",
-    "description": "A native macOS and Windows proxy client for mihomo (Clash.Meta). Built in Go with MyGo, no webview.",
-    "homepage": "https://marukolibro.github.io/Hop",
-    "license": "GPL-3.0-or-later",
-    "notes": [
-        "Hop stores its data (subscriptions, settings, the bundled core) in %AppData%\\hop, outside the Scoop install directory, so it is not persisted by Scoop and survives updates and uninstalls.",
-        "Launch Hop from the Start Menu shortcut, or from a shell with the shimmed command 'Hop'. Default local ports: 17890 (HTTP/SOCKS mixed proxy), 19090 (core controller).",
-        "Hop can update itself from GitHub releases; run 'scoop hold hop' if you want Scoop to remain the only updater.",
-        "Enhanced mode (TUN) installs a privileged helper service the first time you enable it, which requires administrator approval."
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/marukolibro/Hop/releases/download/v0.5.6/hop-0.5.6-windows-amd64.tar.gz",
-            "hash": "61196ca94c7bb19fd82cd12433ece5b4b2d3bb89e8a23c6a025ede45f31a7c8c"
-        }
-    },
-    "bin": "Hop.exe",
-    "shortcuts": [
-        [
-            "Hop.exe",
-            "Hop"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/marukolibro/Hop"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/marukolibro/Hop/releases/download/v$version/hop-$version-windows-amd64.tar.gz"
-            }
-        }
+  "version": "0.5.6",
+  "description": "A native macOS and Windows proxy client for mihomo (Clash.Meta). Built in Go with MyGo, no webview.",
+  "homepage": "https://marukolibro.github.io/Hop",
+  "license": "GPL-3.0-or-later",
+  "notes": [
+    "Hop stores its data (subscriptions, settings, the bundled core) in %AppData%\\hop, outside the Scoop install directory, so it is not persisted by Scoop and survives updates and uninstalls.",
+    "Launch Hop from the Start Menu shortcut, or from a shell with the shimmed command 'Hop'. Default local ports: 17890 (HTTP/SOCKS mixed proxy), 19090 (core controller).",
+    "Hop can update itself from GitHub releases; run 'scoop hold hop' if you want Scoop to remain the only updater.",
+    "Enhanced mode (TUN) installs a privileged helper service the first time you enable it, which requires administrator approval."
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/marukolibro/Hop/releases/download/v0.5.6/hop-0.5.6-windows-amd64.tar.gz",
+      "hash": "61196ca94c7bb19fd82cd12433ece5b4b2d3bb89e8a23c6a025ede45f31a7c8c"
     }
+  },
+  "bin": "Hop.exe",
+  "shortcuts": [
+    [
+      "Hop.exe",
+      "Hop"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/marukolibro/Hop"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/marukolibro/Hop/releases/download/v$version/hop-$version-windows-amd64.tar.gz"
+      }
+    }
+  }
 }

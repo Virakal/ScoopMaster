@@ -1,5 +1,5 @@
 {
-    "version": "0.1.4708",
+    "version": "0.1.4730",
     "description": "Unified model, provider, and gateway manager for AI coding agents. (rolling release, tracks GitHub latest)",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
@@ -15,22 +15,22 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4708/magpie-windows-amd64.exe#/magpie.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4708/magpie-cli-windows-amd64.exe#/magpie-cli.exe"
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-windows-amd64.exe#/magpie.exe",
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-cli-windows-amd64.exe#/magpie-cli.exe"
             ],
             "hash": [
-                "4848521a907e868e1db89bc627c6b6a1b65a0b928250bd5ea0d138ee59267cb7",
-                "f8002f7499b71dfae0efd8b70beb492a91d092847ee486c9beb787f3610c6ff4"
+                "36afaa73b30c82633286d44eab7b34afb4a9ec61990e85323e92c20bebbaa281",
+                "f5402c9b81a169d054624c1d749b1e36cf0c9014e8c1b2f225a8daed719f36df"
             ]
         },
         "arm64": {
             "url": [
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4708/magpie-windows-arm64.exe#/magpie.exe",
-                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4708/magpie-cli-windows-arm64.exe#/magpie-cli.exe"
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-windows-arm64.exe#/magpie.exe",
+                "https://github.com/yetone/magpie-releases/releases/download/v0.1.4730/magpie-cli-windows-arm64.exe#/magpie-cli.exe"
             ],
             "hash": [
-                "515a389f55b49d0f0b00de6ff727e966d9047abb2d1647554c82db97696ef011",
-                "c9ad18fbb9ea2992a2d9c8b6c38ce08a9fda313b059b236a56abfd6faa16339c"
+                "218499dff4348104258e9944a1c5ff3e68e3b0df67145719c61a268b3defdf8e",
+                "e8c7c88c25282b79a8e277db5e8753fba4fca4db217ded3770d79dfea5c9c4c9"
             ]
         }
     },
