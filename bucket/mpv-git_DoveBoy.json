@@ -1,48 +1,48 @@
 {
-  "version": "202611221723",
-  "description": "A free, open source, and cross-platform media player",
-  "homepage": "https://mpv.io",
-  "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
-  "notes": [
-    "To set and unset file type associations and AutoPlay handlers, run '$dir\\mpv-register.bat' and '$dir\\mpv-unregister.bat', respectively.",
-    "You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
-  ],
-  "suggest": {
-    "yt-dlp": "yt-dlp"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-22-c2a42f414f/mpv-x86_64-20261122-git-c2a42f414f.7z",
-      "hash": "eac92e0458d731992f26ec32872618e90ab9e9909c3b64f8d2dca80552c4f6d2"
+    "version": "202611231636",
+    "description": "A free, open source, and cross-platform media player",
+    "homepage": "https://mpv.io",
+    "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
+    "notes": [
+        "To set and unset file type associations and AutoPlay handlers, run '$dir\\mpv-register.bat' and '$dir\\mpv-unregister.bat', respectively.",
+        "You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
+    ],
+    "suggest": {
+        "yt-dlp": "yt-dlp"
     },
-    "arm64": {
-      "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-22-c2a42f414f/mpv-aarch64-20261122-git-c2a42f414f.7z",
-      "hash": "edaf25e66a405c12bbcfc4f0f06648bcb70e69658d73c90fb024192766c4c6c0"
-    }
-  },
-  "pre_install": "'updater.bat', 'installer' | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }",
-  "env_add_path": ".",
-  "shortcuts": [
-    [
-      "mpv.exe",
-      "mpv"
-    ]
-  ],
-  "persist": "portable_config",
-  "checkver": {
-    "github": "https://api.github.com/repos/zhongfly/mpv-winbuild/releases/latest",
-    "jsonpath": "$..['tag_name', 'name']",
-    "regex": "(?<tag>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})-(?<commit>[a-f0-9]{10})).*?(?<hour>\\d{2}):(?<minute>\\d{2})",
-    "replace": "${year}${month}${day}${hour}${minute}"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$matchTag/mpv-x86_64-$matchYear$matchMonth$matchDay-git-$matchCommit.7z"
-      },
-      "arm64": {
-        "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$matchTag/mpv-aarch64-$matchYear$matchMonth$matchDay-git-$matchCommit.7z"
-      }
+        "64bit": {
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-23-35efcf53d5/mpv-x86_64-20261123-git-35efcf53d5.7z",
+            "hash": "120475003d471cac593e47635236e8d17bd8f74970be5b750e4d1a3d9e506263"
+        },
+        "arm64": {
+            "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/2026-11-23-35efcf53d5/mpv-aarch64-20261123-git-35efcf53d5.7z",
+            "hash": "042c2279072072918d579750422a2b3cb45982a1d46c47bfa63b32409c424168"
+        }
+    },
+    "pre_install": "'updater.bat', 'installer' | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }",
+    "env_add_path": ".",
+    "shortcuts": [
+        [
+            "mpv.exe",
+            "mpv"
+        ]
+    ],
+    "persist": "portable_config",
+    "checkver": {
+        "github": "https://api.github.com/repos/zhongfly/mpv-winbuild/releases/latest",
+        "jsonpath": "$..['tag_name', 'name']",
+        "regex": "(?<tag>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})-(?<commit>[a-f0-9]{10})).*?(?<hour>\\d{2}):(?<minute>\\d{2})",
+        "replace": "${year}${month}${day}${hour}${minute}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$matchTag/mpv-x86_64-$matchYear$matchMonth$matchDay-git-$matchCommit.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/zhongfly/mpv-winbuild/releases/download/$matchTag/mpv-aarch64-$matchYear$matchMonth$matchDay-git-$matchCommit.7z"
+            }
+        }
     }
-  }
 }
