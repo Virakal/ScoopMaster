@@ -1,31 +1,31 @@
 {
-    "version": "0.43.1",
-    "description": "Zero-config application builder that automatically analyzes and turns your code into an image",
-    "homepage": "https://github.com/railwayapp/railpack",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/railwayapp/railpack/releases/download/v0.43.1/railpack-v0.43.1-x86_64-pc-windows-msvc.zip",
-            "hash": "126f3e4e8d22a4fe26836e280b4fd71b14feb53ac532a0310c8bf8d5dbac372a"
-        },
-        "arm64": {
-            "url": "https://github.com/railwayapp/railpack/releases/download/v0.43.1/railpack-v0.43.1-arm64-pc-windows-msvc.zip",
-            "hash": "c44bca9605320e54712e0d78a189dc4055fc3f87bd5c2703ad23272c7605c2a5"
-        }
+  "version": "0.43.1",
+  "description": "Zero-config application builder that automatically analyzes and turns your code into an image",
+  "homepage": "https://github.com/railwayapp/railpack",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/railwayapp/railpack/releases/download/v0.43.1/railpack-v0.43.1-x86_64-pc-windows-msvc.zip",
+      "hash": "126f3e4e8d22a4fe26836e280b4fd71b14feb53ac532a0310c8bf8d5dbac372a"
     },
-    "bin": "railpack.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/railwayapp/railpack/releases/download/v$version/railpack-v$version-x86_64-pc-windows-msvc.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/railwayapp/railpack/releases/download/v$version/railpack-v$version-arm64-pc-windows-msvc.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
-        }
+    "arm64": {
+      "url": "https://github.com/railwayapp/railpack/releases/download/v0.43.1/railpack-v0.43.1-arm64-pc-windows-msvc.zip",
+      "hash": "c44bca9605320e54712e0d78a189dc4055fc3f87bd5c2703ad23272c7605c2a5"
     }
+  },
+  "bin": "railpack.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/railwayapp/railpack/releases/download/v$version/railpack-v$version-x86_64-pc-windows-msvc.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/railwayapp/railpack/releases/download/v$version/railpack-v$version-arm64-pc-windows-msvc.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/checksums.txt"
+    }
+  }
 }

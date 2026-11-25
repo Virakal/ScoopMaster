@@ -1,10 +1,18 @@
 {
+    "version": "1.20.1",
+    "description": "A network debugging and rule-based traffic splitting client powered by the Mihomo",
     "homepage": "https://github.com/appshubcc/Bettbox",
-    "description": "Another Better Mihomo Client",
-    "version": "1.20.0",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.20.0/Bettbox-1.20.0-windows-amd64-standard-setup.exe",
-    "hash": "b9502741058e25176d6f15989c53ccb10f5bd309a16f5212c2a035b02b6bca58",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.20.1/Bettbox-1.20.1-windows-amd64-setup.exe",
+            "hash": "23f6ff849d5fb1b7fe2e505ad372d9a1fb4e9a824f7e888a4f9f8fdc56e01713"
+        },
+        "arm64": {
+            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.20.1/Bettbox-1.20.1-windows-arm64-setup.exe",
+            "hash": "abdb6d8b8d15b64a9f7765751be3d92e2b2c4676ac2894768348884ff36e4abd"
+        }
+    },
     "innosetup": true,
     "shortcuts": [
         [
@@ -12,9 +20,16 @@
             "Bettbox"
         ]
     ],
-    "persist": "portable",
+    "pre_uninstall": "if (Get-Service -Name 'BettboxHelperService' -ErrorAction SilentlyContinue | Where-Object { $_.Status -eq 'Running' }) { info \"If file locks prevent uninstallation, run 'sudo sc stop BettboxHelperService' and 'sudo sc delete BettboxHelperService' manually.\" }",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-standard-setup.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-arm64-setup.exe"
+            }
+        }
     }
 }

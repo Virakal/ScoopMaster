@@ -1,19 +1,19 @@
 {
-    "version": "0.8.3",
+    "version": "0.8.4",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/michael-ltm/hopkit/releases/download/v0.8.3/hopkit_windows_amd64.zip",
+            "url": "https://github.com/michael-ltm/hopkit/releases/download/v0.8.4/hopkit_windows_amd64.zip",
             "bin": [
                 "hopkit.exe"
             ],
-            "hash": "cb55258cfb9cc126070e58ff6a1674f940b2ce51b0ba0eb7d13d2cdd5dfb2d04"
+            "hash": "c4f2bfa9eb3750b750ea785e08b6b432e19968815ff144ae3b67558d148cd864"
         },
         "arm64": {
-            "url": "https://github.com/michael-ltm/hopkit/releases/download/v0.8.3/hopkit_windows_arm64.zip",
+            "url": "https://github.com/michael-ltm/hopkit/releases/download/v0.8.4/hopkit_windows_arm64.zip",
             "bin": [
                 "hopkit.exe"
             ],
-            "hash": "96828d8e8f72503619804eaa76907d911253e23420ae7207e11b142bde9aa1ed"
+            "hash": "b74b3aff56c83c24d2e494a840226d136082de57007b676bf67f0b9d00c94727"
         }
     },
     "homepage": "https://github.com/michael-ltm/hopkit",

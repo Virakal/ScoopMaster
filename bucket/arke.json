@@ -1,16 +1,16 @@
 {
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "A file explorer for Windows that never freezes",
     "homepage": "https://github.com/Koimsurai/Arke",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.9.0/arke-0.9.0.exe#/arke.exe",
-            "hash": "d5a56da93630ea9bb1784406fe2db02f4ed1a46e994f7ca900a197f99a3a84b1"
+            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.9.1/arke-0.9.1.exe#/arke.exe",
+            "hash": "8cdf5b7b707da199dbbf03c3d6b1fe77a7fdcab34989b8b6a0fb5eff31a1c590"
         },
         "arm64": {
-            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.9.0/arke-0.9.0-arm64.exe#/arke.exe",
-            "hash": "ff400b679e2c032c1156c29777368162d17f4d5c111ba50d5ad723e34d31cb15"
+            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.9.1/arke-0.9.1-arm64.exe#/arke.exe",
+            "hash": "015550c33e74e6eb8da6ce8dc354d656e827b312e084ebdcbf2fa41fb69e0acc"
         }
     },
     "bin": "arke.exe",
@@ -37,7 +37,5 @@
             }
         }
     },
-    "notes": [
-        "Installing the optional live-search service (Settings > Search) asks for administrator approval."
-    ]
+    "notes": "Installing the optional live-search service (Settings > Search) asks for administrator approval."
 }

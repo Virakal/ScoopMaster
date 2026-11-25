@@ -1,29 +1,37 @@
 {
     "version": "0.35.0",
-    "description": "Fast FFmpeg GUI",
-    "homepage": "https://github.com/66HEX/frame",
-    "license": "GPL-3.0-only",
+    "description": "GUI for FFmpeg: convert video, audio, images and subtitles",
+    "homepage": "https://www.framegui.app/",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/66HEX/frame/blob/master/LICENSE"
+    },
+    "notes": [
+        "Ships its own FFmpeg and FFprobe in 'binaries\\' (with NVIDIA NVENC encoders); no FFmpeg install is needed.",
+        "Update through Scoop ('scoop update frame'); Frame's built-in updater runs the official Inno installer, which installs a second copy into %LOCALAPPDATA%\\Programs\\Frame, outside Scoop's control."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/66HEX/frame/releases/download/0.35.0/Frame-x86_64.exe#/dl.7z",
+            "url": "https://github.com/66HEX/frame/releases/download/0.35.0/Frame-x86_64.exe",
             "hash": "cb7167298b9acf9d3d7f3450a50ca259efba72045ccb1e7ddcd1d2317ea02dcd"
         }
     },
+    "innosetup": true,
+    "bin": "Frame.exe",
     "shortcuts": [
         [
-            "frame.exe",
+            "Frame.exe",
             "Frame"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/66HEX/frame"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/66HEX/frame/releases/download/$version/Frame-x86_64.exe#/dl.7z"
+                "url": "https://github.com/66HEX/frame/releases/download/$version/Frame-x86_64.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS"
         }
     }
 }

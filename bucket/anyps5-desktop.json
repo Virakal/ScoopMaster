@@ -1,5 +1,5 @@
 {
-    "version": "0.1.29",
+    "version": "0.1.30",
     "description": "PS5-style launcher for the AnyPS5 engine: finds game dumps, unlocks them and starts them, with controls, saves and trophies per game",
     "homepage": "https://github.com/AnyTogether/AnyPS5-Desktop",
     "license": "GPL-2.0-only",
@@ -7,8 +7,8 @@
         "The launcher downloads the AnyPS5 engine (relinker and system libraries) from upstream releases into `%LOCALAPPDATA%\\AnyPS5\\Toolkits` the first time it unlocks a game, so it does not need the `anyps5` package.",
         "It detects a Scoop install and asks for `scoop update anyps5-desktop` instead of running the installer itself."
     ],
-    "url": "https://github.com/AnyTogether/AnyPS5-Desktop/releases/download/v0.1.29/AnyPS5-Desktop-windows-x64.zip",
-    "hash": "048f411d6383c3f3b947a9f4297d91caf5f9c57787f294f84a9fbbfcf567069c",
+    "url": "https://github.com/AnyTogether/AnyPS5-Desktop/releases/download/v0.1.30/AnyPS5-Desktop-windows-x64.zip",
+    "hash": "19c748ae61241874f3a86e2a8516ad4a44bf891dcf2c79cf3aac38e2c0f0b877",
     "shortcuts": [
         [
             "anyps5_desktop.exe",

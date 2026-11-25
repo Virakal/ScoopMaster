@@ -1,22 +1,22 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nicholaswilde/mdfm/releases/download/v0.1.0/mdfm-0.1.0-x86_64-pc-windows-msvc.zip",
+            "url": "https://github.com/nicholaswilde/mdfm/releases/download/v0.1.1/mdfm-0.1.1-x86_64-pc-windows-msvc.zip",
             "bin": [
                 "mdfm.exe"
             ],
-            "hash": "09766168fee922807791e920b0007c4ffcaa51010e51af081ef274e7351e3000"
+            "hash": "f6eb062a67ec2ab27b8ffa7661a8e306aec397de9112a23205783f0f2850c159"
         },
         "32bit": {
-            "url": "https://github.com/nicholaswilde/mdfm/releases/download/v0.1.0/mdfm-0.1.0-i686-pc-windows-msvc.zip",
+            "url": "https://github.com/nicholaswilde/mdfm/releases/download/v0.1.1/mdfm-0.1.1-i686-pc-windows-msvc.zip",
             "bin": [
                 "mdfm.exe"
             ],
-            "hash": "d1a85fa646f8dfe7e0bbd7fbe36c04e0655aaf9d217e8272d013ba7c401ce6ec"
+            "hash": "83ce978f2098fe7ed8ad8d1f3fec93fc9cc6391552b3ab6e1a06ccdf64b4e64a"
         }
     },
     "homepage": "https://nicholaswilde.io/mdfm",
     "license": "Apache-2.0",
-    "description": "📄 jq for Markdown frontmatter: query, mutate, delete, and validate YAML and TOML frontmatter without modifying the Markdown body 🔧"
+    "description": "\ud83d\udcc4 jq for Markdown frontmatter: query, mutate, delete, and validate YAML and TOML frontmatter without modifying the Markdown body \ud83d\udd27"
 }
