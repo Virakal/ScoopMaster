@@ -1,34 +1,20 @@
 {
-    "version": "2026.11.25.8d0cbc9",
-    "description": "{bash,zsh,fish,powershell,nushell}-completions for 1000+ commands.",
+    "version": "2026.11.25.114615",
+    "description": "Completions for argc, covering a wide range of CLI tools",
     "homepage": "https://github.com/sigoden/argc-completions",
     "license": "MIT",
-    "url": "https://github.com/sigoden/argc-completions/archive/8d0cbc9d48a36be2a44cdedddf17f5df090d098b.zip",
-    "hash": "928a21aa810d54c60560c204c3bf975ec83939b04e3ac921b877966994e459bf",
-    "depends": [
-        "git",
-        "yq"
-    ],
-    "suggest": {
-        "argc": "sdoog/argc"
-    },
+    "url": "https://github.com/sigoden/argc-completions/archive/refs/heads/main.zip",
+    "hash": "576981b128585440b711eb6cf814d2989eda947999dfef4884285fabe28aaf16",
     "env_set": {
-        "ARGC_COMPLETIONS_ROOT": "$dir",
-        "ARGC_COMPLETIONS_PATH": "$dir\\completions\\windows;$dir\\completions"
+        "ARGC_COMPLETIONS_ROOT": "$dir\\argc-completions-main",
+        "ARGC_COMPLETIONS_PATH": "$dir\\argc-completions-main\\completions\\windows;$dir\\argc-completions-main\\completions"
     },
-    "pre_install": [
-        "# Scoop cannot move symbol link from extracted folder",
-        "Get-ChildItem -Directory \"$dir\\argc-completions-*\" | ForEach-Object {",
-        "    Move-Item \"$($_.FullName)\\*\" $dir -Force",
-        "    Remove-Item $_ -Recurse -Force",
-        "}"
-    ],
     "checkver": {
         "url": "https://github.com/sigoden/argc-completions/commits/main.atom",
-        "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
-        "replace": "${1}.${2}.${3}.${short}"
+        "regex": "<updated>(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2}):(\\d{2}):(\\d{2})Z</updated>",
+        "replace": "$1.$2.$3.$4$5$6"
     },
     "autoupdate": {
-        "url": "https://github.com/sigoden/argc-completions/archive/$matchSha.zip"
+        "url": "https://github.com/sigoden/argc-completions/archive/refs/heads/main.zip"
     }
 }

@@ -1,39 +1,28 @@
 {
-    "version": "0.95.3",
+    "version": "0.97.0",
     "description": "ML-powered manga translator, written in Rust.",
-    "homepage": "https://koharu.rs/",
+    "homepage": "https://github.com/mayocream/koharu",
     "license": "GPL-3.0-only|Apache-2.0",
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mayocream/koharu/releases/download/0.95.3/koharu_0.95.3_x64-setup.exe#/dl.7z",
-            "hash": "a0b5ecf1c17bba5c33bf1ff1dc4ec580457eb02bf730376e99a536e5fba643d3"
+            "url": "https://github.com/mayocream/koharu/releases/download/0.97.0/koharu_0.97.0_x64-setup.exe#/dl.7z",
+            "hash": "b40fa464afd666ed46892f1ccad332597baf26860a0e2f64fa08bc225b9beca8"
         }
     },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\config.toml\" -ItemType File | Out-Null }",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
-    ],
-    "bin": "koharu.exe",
+    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "bin": "Koharu.exe",
     "shortcuts": [
         [
-            "koharu.exe",
+            "Koharu.exe",
             "Koharu"
         ]
     ],
-    "persist": [
-        "blobs",
-        "fonts",
-        "models",
-        "projects",
-        "runtime",
-        "config.toml"
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\Koharu\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": [
+        "Koharu is NOT portable.",
+        "Settings are stored in '%LOCALAPPDATA%\\Koharu', and can be purged using 'scoop uninstall --purge koharu'."
     ],
-    "checkver": {
-        "github": "https://github.com/mayocream/koharu"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
