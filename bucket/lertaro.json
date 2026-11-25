@@ -1,28 +1,19 @@
 {
     "version": "5.13.7",
-    "description": "A modern, high-performance local file search and productivity tool for Windows. A sleek, customizable alternative to Everything and Listary built with C# WPF and NT Services, featuring instant NTFS MFT parsing, real-time USN monitoring, and plugin support.",
-    "homepage": "https://lertaro.github.io/",
-    "license": {
-        "identifier": "MIT license",
-        "url": "https://github.com/Lertaro/Lertaro#MIT-1-ov-file"
-    },
+    "description": "适用于 Windows 的高性能本地文件检索与效率启动工具 | High-performance local file search and productivity launcher for Windows",
+    "homepage": "https://lertaro.github.io",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.13.7/Lertaro-Setup.exe",
-            "hash": "da588336879ae33edfa77091da7b6004b8ab621437a9bb86a43310abd64d3516"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.13.7/Lertaro-Portable.zip",
+            "hash": "a1ed4d8a32b4b587b7c5419413f1bda1f49c0dfc65df7909f1e674d1110e4565"
         },
         "arm64": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.13.7/Lertaro-Setup-arm64.exe",
-            "hash": "1da57c0c9c5e4bc9a15438ac5838c7a76e9dcf3a8ee31b0f3d3690a2fadb6601"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.13.7/Lertaro-Portable-arm64.zip",
+            "hash": "3408ba0b3d484e70e646b5c56a3486ac12568d2f9ba5962d12e274cdc59c8fa3"
         }
     },
     "innosetup": true,
-    "bin": [
-        [
-            "Lertaro.App.exe",
-            "Lertaro"
-        ]
-    ],
     "shortcuts": [
         [
             "Lertaro.App.exe",
@@ -30,17 +21,15 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/Lertaro/Lertaro/releases",
-        "jp": "$[0].tag_name",
-        "regex": "v([\\d.]+)"
+        "github": "https://github.com/Lertaro/Lertaro"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup-arm64.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable-arm64.zip"
             }
         }
     }

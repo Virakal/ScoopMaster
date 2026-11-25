@@ -1,5 +1,5 @@
 {
-    "version": "2.9.6",
+    "version": "2.9.6.1",
     "description": "ReShade, HDR mod, DLSS and NVIDIA driver manager for PC games",
     "homepage": "https://github.com/RankFTW/RHI",
     "license": "GPL-3.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RankFTW/RHI/releases/download/RHI-2.9.6/RHI-Setup.exe",
-            "hash": "efc321119df95b65dc9f41d1ce32d251a12e7ae90ca2e3a2499d83521ab61966"
+            "url": "https://github.com/RankFTW/RHI/releases/download/RHI-2.9.6.1/RHI-Setup.exe",
+            "hash": "74591d30e1bf4cdab99bb1845bdd504eea1d26038d9cebc73acb7a30844288f3"
         }
     },
     "innosetup": true,
