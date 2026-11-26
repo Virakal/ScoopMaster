@@ -1,17 +1,17 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.29.0",
+    "version": "0.30.0",
     "description": "System-wide ad blocker and privacy guard for Windows, macOS, and Linux.",
     "homepage": "https://irbis.sh/zen",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/irbis-sh/zen-desktop/releases/download/v0.29.0/Zen_windows_amd64.zip",
-            "hash": "af59bdb3443b136c9ef27c13a378027806861d472542900edda63a3885763d61"
+            "url": "https://github.com/irbis-sh/zen-desktop/releases/download/v0.30.0/Zen_windows_amd64.zip",
+            "hash": "ac2d808b0251769060ab384c34474cd12b9e2fc9022222b6c74d17faafe9f291"
         },
         "arm64": {
-            "url": "https://github.com/irbis-sh/zen-desktop/releases/download/v0.29.0/Zen_windows_arm64.zip",
-            "hash": "9f6fdcbd26377d019f6c6d81c93ef176475c1cfc4e17622b273bee78f345e5b1"
+            "url": "https://github.com/irbis-sh/zen-desktop/releases/download/v0.30.0/Zen_windows_arm64.zip",
+            "hash": "9e485dd220df282e5864e60f2721c2c53c8217dd7db88cc4fcc0eda9140f34b5"
         }
     },
     "bin": [

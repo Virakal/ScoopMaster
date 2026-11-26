@@ -7,7 +7,8 @@
         "Upstream ships this host as an installer; this package unpacks the portable ZIP, which upstream recommends only for special cases such as running several instances.",
         "Run install_portable.bat / uninstall_portable.bat from the app directory as administrator to install or remove the Windows service, firewall rules and the optional virtual-display / gamepad drivers.",
         "The Start menu shortcut starts sunshine.exe elevated (UAC prompt); finish the first-run wizard at https://localhost:47990/ afterwards.",
-        "Settings, app list and pairing data live in $dir\\config (persisted across updates)."
+        "Settings, app list and pairing data live in $dir\\config (persisted across updates).",
+        "Uninstalling leaves two admin-only leftovers created by Sunshine itself: the persisted config folder (its local-auth.token is owned by Administrators) and the firewall rules named sunshine.exe / Sunshine. Remove both from an elevated prompt."
     ],
     "architecture": {
         "64bit": {

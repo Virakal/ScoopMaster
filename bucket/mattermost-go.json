@@ -1,51 +1,51 @@
 {
-  "version": "0.5.5",
-  "description": "Native Mattermost client written in Go (Mattermost Go)",
-  "homepage": "https://github.com/txchen/mattermostgo",
-  "license": "Apache-2.0",
-  "notes": [
-    "Windows support is a preview and the installer is unsigned: if SmartScreen warns, choose More info then Run anyway.",
-    "Mattermost Go has its own signed auto-updater that checks once a day and installs updates in place; let it update, or run 'scoop update mattermost-go' again, but do not mix both.",
-    "Servers and the image cache live under your user profile (most likely %APPDATA%\\com.github.txchen.mattermostgo), not in the Scoop directory, so they survive updates and uninstalls. Session tokens are kept in Windows Credential Manager."
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/txchen/mattermostgo/releases/download/v0.5.5/mattermost-go-setup-0.5.5-amd64.exe#/dl.7z",
-      "hash": "b26b8e659a6ffa5b99abd07534cc9b2653ced25fea82eb9e87aadaa5cbd78b5f"
-    },
-    "arm64": {
-      "url": "https://github.com/txchen/mattermostgo/releases/download/v0.5.5/mattermost-go-setup-0.5.5-arm64.exe#/dl.7z",
-      "hash": "8f085b4d9e051812764a980409fa0a4de49b68680663952d359bd9589aa6e0a9"
-    }
-  },
-  "bin": [
-    [
-      "Mattermost Go.exe",
-      "mattermost-go"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "Mattermost Go.exe",
-      "Mattermost Go"
-    ]
-  ],
-  "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
-  "checkver": {
-    "github": "https://github.com/txchen/mattermostgo"
-  },
-  "autoupdate": {
+    "version": "0.5.5",
+    "description": "Native Mattermost client written in Go (Mattermost Go)",
+    "homepage": "https://github.com/txchen/mattermostgo",
+    "license": "Apache-2.0",
+    "notes": [
+        "Windows support is a preview and the installer is unsigned: if SmartScreen warns, choose More info then Run anyway.",
+        "Mattermost Go has its own signed auto-updater that checks once a day and installs updates in place; let it update, or run 'scoop update mattermost-go' again, but do not mix both.",
+        "Servers and the image cache live under your user profile (most likely %APPDATA%\\com.github.txchen.mattermostgo), not in the Scoop directory, so they survive updates and uninstalls. Session tokens are kept in Windows Credential Manager."
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/txchen/mattermostgo/releases/download/v$version/mattermost-go-setup-$version-amd64.exe#/dl.7z"
-      },
-      "arm64": {
-        "url": "https://github.com/txchen/mattermostgo/releases/download/v$version/mattermost-go-setup-$version-arm64.exe#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://github.com/txchen/mattermostgo/releases/download/v0.5.5/mattermost-go-setup-0.5.5-amd64.exe#/dl.7z",
+            "hash": "b26b8e659a6ffa5b99abd07534cc9b2653ced25fea82eb9e87aadaa5cbd78b5f"
+        },
+        "arm64": {
+            "url": "https://github.com/txchen/mattermostgo/releases/download/v0.5.5/mattermost-go-setup-0.5.5-arm64.exe#/dl.7z",
+            "hash": "8f085b4d9e051812764a980409fa0a4de49b68680663952d359bd9589aa6e0a9"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS",
-      "find": "$basename"
+    "bin": [
+        [
+            "Mattermost Go.exe",
+            "mattermost-go"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Mattermost Go.exe",
+            "Mattermost Go"
+        ]
+    ],
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$*\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "checkver": {
+        "github": "https://github.com/txchen/mattermostgo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/txchen/mattermostgo/releases/download/v$version/mattermost-go-setup-$version-amd64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/txchen/mattermostgo/releases/download/v$version/mattermost-go-setup-$version-arm64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS",
+            "find": "$basename"
+        }
     }
-  }
 }

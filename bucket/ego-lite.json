@@ -9,8 +9,8 @@
         "ego-browser 命令由本清单的 shim 提供，不依赖 onboarding 写入的 PATH。",
         "升级 / 重装前请先完全退出 ego lite。",
         "清单版本取官网安装器版本与更新服务载荷版本中的较高者；实际运行版本可用 ego-browser --version 查看。",
-        "用户数据保存在 %LOCALAPPDATA%\\Citro Labs\\ego\\User Data，不随 Scoop 升级或卸载删除。",
-        "首次启动会在 ~/.local/share/ego 建立指向 current 的 junction 并写入用户 PATH；卸载时本清单会自动清理这两个链接和 PATH 项。"
+        "用户数据保存在 %LOCALAPPDATA%\\Citro Labs\\ego\\User Data，Scoop 升级与卸载均不触碰该目录。",
+        "首次启动会在 ~/.local/share/ego 建立指向 current 的 junction 并把该 junction 写入用户 PATH；卸载时本清单只解除 junction，不移除 PATH 项（重装后继续生效）。"
     ],
     "architecture": {
         "64bit": {
@@ -55,24 +55,42 @@
             "if (!(Test-Path \"$dir\\ego.exe\")) { abort 'ego lite installation failed: ego.exe was not extracted.' }"
         ]
     },
+    "post_install": {
+        "script": [
+            "$versionDir = Get-ChildItem -Path $dir -Directory | Where-Object { $_.Name -match '^\\d+(\\.\\d+)+$' -and (Test-Path \"$($_.FullName)\\chrome.dll\") } | Select-Object -First 1",
+            "if (!$versionDir) {",
+            "    warn 'ego lite: no inner browser version directory found; skipping junction repair.'",
+            "} else {",
+            "    $egoHome = \"$env:USERPROFILE\\.local\\share\\ego\"",
+            "    $active = \"$egoHome\\active_version_dir\"",
+            "    if (Test-Path $active) {",
+            "        $item = Get-Item $active -Force",
+            "        if ($item.LinkType -eq 'Junction' -and $item.Target -ne $versionDir.FullName) {",
+            "            Write-Host 'Repairing active_version_dir junction for the new version...' -ForegroundColor Cyan",
+            "            [System.IO.Directory]::Delete($active)",
+            "            New-Item -ItemType Junction -Path $active -Target $versionDir.FullName | Out-Null",
+            "        }",
+            "    }",
+            "}"
+        ]
+    },
     "uninstaller": {
         "script": [
             "$egoHome = \"$env:USERPROFILE\\.local\\share\\ego\"",
             "$active = \"$egoHome\\active_version_dir\"",
             "if (Test-Path $active) {",
-            "    $target = (Get-Item $active -Force).Target",
-            "    if ($target -like \"$scoopdir\\apps\\$app\\*\") {",
-            "        foreach ($link in @($active, \"$egoHome\\ego-skills\")) {",
-            "            $item = Get-Item $link -Force -ErrorAction SilentlyContinue",
-            "            if ($item -and $item.LinkType -eq 'Junction') { [System.IO.Directory]::Delete($link) }",
-            "        }",
-            "        Remove-Item $egoHome -Force -ErrorAction SilentlyContinue",
-            "        $userPath = [Environment]::GetEnvironmentVariable('Path', 'User')",
-            "        if ($userPath) {",
-            "            $normalized = [System.IO.Path]::GetFullPath($active)",
-            "            $entries = @($userPath -split ';' | Where-Object { $_ -and ([System.IO.Path]::GetFullPath($_) -ne $normalized) })",
-            "            $newPath = $entries -join ';'",
-            "            if ($newPath -ne $userPath) { [Environment]::SetEnvironmentVariable('Path', $newPath, 'User') }",
+            "    $item = Get-Item $active -Force",
+            "    if ($item.LinkType -eq 'Junction') {",
+            "        $target = $item.Target",
+            "        if ($target -and $target.Replace('/', '\\') -like \"$scoopdir\\apps\\$app\\*\") {",
+            "            Write-Host 'Removing ego junctions under ~/.local/share/ego...' -ForegroundColor Cyan",
+            "            foreach ($link in @($active, \"$egoHome\\ego-skills\")) {",
+            "                $entry = Get-Item $link -Force -ErrorAction SilentlyContinue",
+            "                if ($entry -and $entry.LinkType -eq 'Junction') { [System.IO.Directory]::Delete($link) }",
+            "            }",
+            "            if ((Get-ChildItem $egoHome -Force -ErrorAction SilentlyContinue | Measure-Object).Count -eq 0) {",
+            "                Remove-Item $egoHome -Force -ErrorAction SilentlyContinue",
+            "            }",
             "        }",
             "    }",
             "}"

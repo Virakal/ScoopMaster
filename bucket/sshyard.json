@@ -1,8 +1,8 @@
 {
     "version": "1.7.0",
-    "description": "Native desktop SSH / SFTP client with terminals, file management and AI assistance in one app.",
-    "homepage": "https://sshyard.com",
-    "license": "AGPL-3.0-only",
+    "description": "Native SSH and SFTP client with terminal tabs, split panes, host management and AI assistance.",
+    "homepage": "https://github.com/Licoy/sshyard",
+    "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Licoy/sshyard/releases/download/v1.7.0/sshyard-1.7.0-windows-amd64-portable.zip",
@@ -13,6 +13,7 @@
             "hash": "6b32892858ab4281db6a6126ae1c002c56aa8d4771b28566d6b680e9bcef0c73"
         }
     },
+    "bin": "SSHYard.exe",
     "shortcuts": [
         [
             "SSHYard.exe",
@@ -20,8 +21,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/Licoy/sshyard/releases",
-        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+        "github": "https://github.com/Licoy/sshyard"
     },
     "autoupdate": {
         "architecture": {
@@ -31,9 +31,7 @@
             "arm64": {
                 "url": "https://github.com/Licoy/sshyard/releases/download/v$version/sshyard-$version-windows-arm64-portable.zip"
             }
-        },
-        "hash": {
-            "url": "https://github.com/Licoy/sshyard/releases/download/v$version/SHA256SUMS"
         }
-    }
+    },
+    "notes": "SSHYard stores settings, hosts, session data and secrets in the Windows user data directory outside Scoop. It has signed in-app updates; use Scoop as the update authority to avoid concurrent updates."
 }
