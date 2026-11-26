@@ -1,13 +1,13 @@
 {
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.",
     "homepage": "https://github.com/rustfs/rustfs",
     "notes": "Please set the RUSTFS_ACCESS_KEY and RUSTFS_SECRET_KEY environment variables to your desired access key and secret key before running RustFS.",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rustfs/rustfs/releases/download/1.0.6/rustfs-windows-x86_64-v1.0.6.zip",
-            "hash": "d718157c08ffcbc32e667176f941d6d36b37c7d73335b9f82d4d30a2d5ea5393"
+            "url": "https://github.com/rustfs/rustfs/releases/download/1.0.7/rustfs-windows-x86_64-v1.0.7.zip",
+            "hash": "d8f58a799836d964bd16440a042028d870130288b7c0c0924471983027d8dce8"
         }
     },
     "env_set": {

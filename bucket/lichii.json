@@ -1,55 +1,56 @@
 {
     "version": "410",
-    "description": "Experimental Nintendo Switch and Switch 2 emulator",
-    "homepage": "https://lichiiemulator.app/",
+    "description": "VERY experimental Nintendo Switch 2 emulator, forked from yuzu and Eden (PGO build).",
+    "homepage": "https://github.com/zortos293/Lichii",
     "license": {
-        "identifier": "GPL-3.0",
-        "url": "https://github.com/zortos293/Lichii/blob/nx2/LICENSE.txt"
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/zortos293/Lichii/raw/nx2/LICENSE.txt"
     },
-    "notes": [
-        "Lichii requires legally obtained game files, keys, and firmware to function. These are not included.",
-        "Lichii is experimental. Back up your saves before testing builds."
-    ],
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/zortos293/Lichii/releases/download/build-410/lichii-windows-x86_64.zip",
-            "hash": "2880109e3f3d067222b8bb3685e90e03c8fd2aae0d4aecb4e69841d4d19ba606"
-        }
+    "suggest": {
+        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
     },
+    "url": "https://github.com/zortos293/Lichii/releases/download/build-410/lichii-windows-x86_64-pgo.zip",
+    "hash": "1234366a25122496607ad1ec3d65ee2ee680e82ab4a350e07af2c91e917b04e1",
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\")) {",
-        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
-        "   New-item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
-        "   if (Test-Path \"$env:APPDATA\\lichii\") {",
-        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
-        "       Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
-        "       Remove-Item -Path \"$env:APPDATA\\lichii\" -Recurse",
-        "   }",
+        "if (!(Test-Path \"$persist_dir\\user\")) {",
+        "    New-Item \"$persist_dir\\user\" -ItemType Directory -Force | Out-Null",
+        "    if (Test-Path \"$env:APPDATA\\lichii\") {",
+        "        if (Get-Process lichii -ErrorAction SilentlyContinue) {",
+        "            warn 'Lichii is running, so its %APPDATA%\\lichii profile was not copied into the portable user directory.'",
+        "        } else {",
+        "            Write-Host 'Copying %APPDATA%\\lichii into the portable user directory...' -ForegroundColor Yellow",
+        "            Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse -Force -ErrorAction Continue",
+        "            warn 'The old profile in %APPDATA%\\lichii was kept as a copy; Lichii now uses the portable user directory.'",
+        "        }",
+        "    }",
         "}"
     ],
-    "bin": "eden-cli.exe",
+    "bin": [
+        [
+            "lichii.exe",
+            "lichii"
+        ],
+        [
+            "eden-cli.exe",
+            "lichii-cli"
+        ]
+    ],
     "shortcuts": [
         [
             "lichii.exe",
-            "Nintendo Switch 2 [nsw2][lichii]"
+            "Lichii"
         ]
     ],
     "persist": "user",
     "checkver": {
-        "url": "https://api.github.com/repos/zortos293/Lichii/releases?per_page=20",
-        "jsonpath": "$[0].tag_name",
-        "regex": "build-([\\d]+)"
+        "github": "https://github.com/zortos293/Lichii",
+        "regex": "build-(\\d+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64.zip",
-                "hash": {
-                    "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
-                    "jsonpath": "$.assets[?(@.name == '$basename')].digest",
-                    "mode": "json"
-                }
-            }
+        "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64-pgo.zip",
+        "hash": {
+            "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
+            "jsonpath": "$.assets[?(@.name == '$basename')].digest"
         }
     }
 }
