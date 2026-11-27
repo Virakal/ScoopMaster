@@ -1,45 +1,45 @@
 {
-    "version": "0.142.3",
-    "description": "使用 AI 能力一键翻译 小说、游戏、字幕 等文本内容的次世代文本翻译器",
-    "homepage": "https://github.com/neavo/LinguaGacha",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v0.142.3/LinguaGacha_v0.142.3_Windows_x64.zip",
-            "hash": "52e895beaf693497f742285509bae689bf93186facf556f9499d84d81ba82bf6"
-        },
-        "arm64": {
-            "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v0.142.3/LinguaGacha_v0.142.3_Windows_arm64.zip",
-            "hash": "95461ac6727c55ba1098dff74a5e14eaacf7e77f8888533e637b8b1ee211adcc"
-        }
+  "version": "0.142.3",
+  "description": "使用 AI 能力一键翻译 小说、游戏、字幕 等文本内容的次世代文本翻译器",
+  "homepage": "https://github.com/neavo/LinguaGacha",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v0.142.3/LinguaGacha_v0.142.3_Windows_x64.zip",
+      "hash": "52e895beaf693497f742285509bae689bf93186facf556f9499d84d81ba82bf6"
     },
-    "license": "Freeware",
-    "shortcuts": [
-        [
-            "app.exe",
-            "LinguaGacha"
-        ]
-    ],
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.json\") -or !(Get-Item \"$persist_dir\\config.json\").Length) {",
-        "    New-Item \"$persist_dir\\config.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-        "}"
-    ],
-    "persist": [
-        "resource\\preset",
-        "config.json"
-    ],
-    "checkver": {
-        "github": "https://github.com/neavo/LinguaGacha",
-        "regex": "MANUAL_BUILD_v([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v$version/LinguaGacha_v$version_Windows_x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v$version/LinguaGacha_v$version_Windows_arm64.zip"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v0.142.3/LinguaGacha_v0.142.3_Windows_arm64.zip",
+      "hash": "95461ac6727c55ba1098dff74a5e14eaacf7e77f8888533e637b8b1ee211adcc"
     }
+  },
+  "license": "Freeware",
+  "shortcuts": [
+    [
+      "app.exe",
+      "LinguaGacha"
+    ]
+  ],
+  "pre_install": [
+    "if (!(Test-Path \"$persist_dir\\config.json\") -or !(Get-Item \"$persist_dir\\config.json\").Length) {",
+    "    New-Item \"$persist_dir\\config.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+    "}"
+  ],
+  "persist": [
+    "resource\\preset",
+    "config.json"
+  ],
+  "checkver": {
+    "github": "https://github.com/neavo/LinguaGacha",
+    "regex": "MANUAL_BUILD_v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v$version/LinguaGacha_v$version_Windows_x64.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/neavo/LinguaGacha/releases/download/MANUAL_BUILD_v$version/LinguaGacha_v$version_Windows_arm64.zip"
+      }
+    }
+  }
 }

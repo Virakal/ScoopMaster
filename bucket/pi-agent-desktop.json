@@ -1,92 +1,20 @@
 {
     "version": "0.8.7",
     "description": "Pi - A cross-platform AI coding agent, bringing the Claude Code experience to your desktop. No environment setup, no terminal commands.",
-    "homepage": "https://github.com/abcwyc/pi-agent-desktop",
+    "homepage": "https://pi.348580.xyz/en/",
     "license": "MIT",
-    "notes": "User data (~\\.pi) is persisted to Scoop's persist directory via NTFS Junction. Run 'pi-clean-cache' to wipe runtime caches.",
     "architecture": {
         "64bit": {
             "url": "https://github.com/abcwyc/pi-agent-desktop/releases/download/v0.8.7/Pi.Agent_0.8.7_x64-setup.exe#/dl.7z",
             "hash": "30f822ce405e4da9f1924329da3a4b801f17c129b2aeafc9f5cd9098e83991d0"
         }
     },
-    "pre_install": [
-        "if (Test-Path \"$dir\\`$PLUGINSDIR\\app-64.7z\") { Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" }",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
-        "$cleanerPath = \"$dir\\clean-cache.cmd\"",
-        "$cmdLines = @(",
-        "    '@echo off',",
-        "    'echo [1/2] Terminating Pi Desktop and child processes...',",
-        "    'taskkill /F /T /IM pi-agent-desktop.exe >nul 2>&1',",
-        "    'echo [2/2] Wiping temporary WebView2 and Electron caches (preserving sessions)...',",
-        "    'rd /s /q \"%APPDATA%\\pi-agent-desktop\\Cache\" >nul 2>&1',",
-        "    'rd /s /q \"%APPDATA%\\pi-agent-desktop\\Code Cache\" >nul 2>&1',",
-        "    'rd /s /q \"%APPDATA%\\pi-agent-desktop\\GPUCache\" >nul 2>&1',",
-        "    'rd /s /q \"%APPDATA%\\pi-agent-desktop\\DawnGraphiteCache\" >nul 2>&1',",
-        "    'rd /s /q \"%APPDATA%\\pi-agent-desktop\\DawnWebGPUCache\" >nul 2>&1',",
-        "    'rd /s /q \"%LOCALAPPDATA%\\pi-agent-desktop\\EBWebView\\Default\\Cache\" >nul 2>&1',",
-        "    'rd /s /q \"%LOCALAPPDATA%\\pi-agent-desktop\\EBWebView\\Default\\Code Cache\" >nul 2>&1',",
-        "    'rd /s /q \"%LOCALAPPDATA%\\pi-agent-desktop\\EBWebView\\Default\\GPUCache\" >nul 2>&1',",
-        "    'rd /s /q \"%LOCALAPPDATA%\\pi-agent-desktop\\EBWebView\\Default\\DawnCache\" >nul 2>&1',",
-        "    'rd /s /q \"%LOCALAPPDATA%\\pi-agent-desktop\\EBWebView\\Crashpad\" >nul 2>&1',",
-        "    'echo [Done] Cache cleaned. Sessions, plugins, and persist data remain untouched!',",
-        "    'ping 127.0.0.1 -n 3 >nul'",
-        ")",
-        "[System.IO.File]::WriteAllText($cleanerPath, ($cmdLines -join \"`r`n\"), [System.Text.UTF8Encoding]::new($false))"
-    ],
-    "post_install": [
-        "Start-Process -FilePath 'taskkill.exe' -ArgumentList '/F', '/T', '/IM', 'pi-agent-desktop.exe' -WindowStyle Hidden -Wait -ErrorAction SilentlyContinue",
-        "$targetDir = \"$persist_dir\\.pi\"",
-        "if (!(Test-Path -LiteralPath $targetDir)) { New-Item -ItemType Directory -Path $targetDir -Force | Out-Null }",
-        "$linkPath = \"$env:USERPROFILE\\.pi\"",
-        "$needCreateJunction = $true",
-        "if (Test-Path -LiteralPath $linkPath) {",
-        "    $item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue",
-        "    if ($item -and ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) {",
-        "        $currentTarget = ($item.Target | Select-Object -First 1)",
-        "        $normalizedTarget = ($currentTarget -replace '^\\\\(\\?\\?|\\?\\)\\\\', '').TrimEnd('\\')",
-        "        if ($normalizedTarget -and ($normalizedTarget -eq $targetDir.TrimEnd('\\'))) {",
-        "            $needCreateJunction = $false",
-        "        } else {",
-        "            cmd.exe /c \"rmdir `\"$linkPath`\"\" 2>`$null",
-        "        }",
-        "    } else {",
-        "        Get-ChildItem -LiteralPath $linkPath -Force | ForEach-Object {",
-        "            Copy-Item -LiteralPath $_.FullName -Destination $targetDir -Recurse -Force",
-        "        }",
-        "        Remove-Item -LiteralPath $linkPath -Recurse -Force -ErrorAction SilentlyContinue",
-        "    }",
-        "}",
-        "if ($needCreateJunction) {",
-        "    cmd.exe /c \"rmdir `\"$linkPath`\"\" 2>`$null",
-        "    New-Item -ItemType Junction -Path $linkPath -Target $targetDir -Force | Out-Null",
-        "}"
-    ],
-    "pre_uninstall": [
-        "Start-Process -FilePath 'taskkill.exe' -ArgumentList '/F', '/T', '/IM', 'pi-agent-desktop.exe' -WindowStyle Hidden -Wait -ErrorAction SilentlyContinue",
-        "$linkPath = \"$env:USERPROFILE\\.pi\"",
-        "$item = Get-Item -LiteralPath $linkPath -Force -ErrorAction SilentlyContinue",
-        "if ($item -and ($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint)) {",
-        "    cmd.exe /c \"rmdir `\"$linkPath`\"\" 2>`$null",
-        "}"
-    ],
-    "bin": [
-        "pi-agent-desktop.exe",
-        [
-            "clean-cache.cmd",
-            "pi-clean-cache"
-        ]
-    ],
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse",
+    "bin": "pi-agent-desktop.exe",
     "shortcuts": [
         [
             "pi-agent-desktop.exe",
             "Pi Agent"
-        ],
-        [
-            "clean-cache.cmd",
-            "Pi Agent - Clear Cache",
-            "",
-            "pi-agent-desktop.exe"
         ]
     ],
     "checkver": {
@@ -99,5 +27,6 @@
                 "url": "https://github.com/abcwyc/pi-agent-desktop/releases/download/v$version/Pi.Agent_$version_x64-setup.exe#/dl.7z"
             }
         }
-    }
+    },
+    "notes": "Bundles its own server runtime and Pi SDK; a separate pi CLI or Node.js installation is not needed."
 }

@@ -20,7 +20,6 @@
             "Arke"
         ]
     ],
-    "notes": "Arke keeps its settings in %APPDATA%\\Arke. Update with: scoop update arke",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -37,5 +36,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "Installing the optional live-search service (Settings > Search) asks for administrator approval."
 }
