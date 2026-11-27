@@ -9,12 +9,7 @@
             "hash": "6804ea404ce409e1f087839ea83caabb1405c493c46a43d0faa13b3b31b8eeb9"
         }
     },
-    "bin": [
-        [
-            "pkgx.exe",
-            "pkgx"
-        ]
-    ],
+    "bin": "pkgx.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {

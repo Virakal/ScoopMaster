@@ -16,7 +16,7 @@
         ["qodercn.cmd", "qoderclicn"]
     ],
     "pre_install": [
-        "$wrapper = \"@echo off`r`nset `\"QODERCN_CONFIG_DIR=%~dp0qodercn-config`\"`r`n`\"%~dp0qoderclicn.exe`\" %*`r`nexit /b %ERRORLEVEL%`r`n\"",
+        "$wrapper = \"@echo off`r`nsetlocal`r`nset `\"QODERCN_CONFIG_DIR=%~dp0qodercn-config`\"`r`n`\"%~dp0qoderclicn.exe`\" %*`r`nexit /b %ERRORLEVEL%`r`n\"",
         "[IO.File]::WriteAllText((Join-Path $dir 'qodercn.cmd'), $wrapper, [Text.Encoding]::ASCII)"
     ],
     "post_install": [

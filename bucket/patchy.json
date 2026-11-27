@@ -1,65 +1,65 @@
 {
-  "version": "1.42",
-  "description": "Open-source image editor focused on PSD compatibility and workflows familiar to Adobe Photoshop users.",
-  "homepage": "https://github.com/SethRobinson/Patchy",
-  "license": {
-    "identifier": "MIT license",
-    "url": "https://github.com/SethRobinson/Patchy#MIT-1-ov-file"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.42/PatchyWindowsInstaller.exe#/dl.7z",
-      "hash": "0b30071d0a37c1898695bcea206d4458bc511e16098e6661d24dd8251f2c4b2f"
+    "version": "1.43",
+    "description": "Open-source image editor focused on PSD compatibility and workflows familiar to Adobe Photoshop users.",
+    "homepage": "https://github.com/SethRobinson/Patchy",
+    "license": {
+        "identifier": "MIT license",
+        "url": "https://github.com/SethRobinson/Patchy#MIT-1-ov-file"
     },
-    "arm64": {
-      "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.42/PatchyWindowsArm64Installer.exe#/dl.7z",
-      "hash": "2422605003b7430c8b5be4bd9ae437e461c2cad0007b9596bff54b22be20a729"
-    }
-  },
-  "pre_install": [
-    "Expand-7zipArchive \"$dir\\PatchyWindowsNoInstaller.zip\" \"$dir\"",
-    "Move-Item -Path \"$dir\\Patchy\\*\" -Destination \"$dir\" -Force",
-    "Remove-Item -Path \"$dir\\Patchy\" -Force -Recurse",
-    "Remove-Item -Path \"$dir\\InstallPatchy.*\", \"$dir\\UninstallPatchy.exe\", \"$dir\\*.ico\", \"$dir\\*.txt\" -Force -ErrorAction SilentlyContinue"
-  ],
-  "installer": {
-    "script": [
-      "# handle runtime cache",
-      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-      "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\RTsoft\"",
-      "Remove-Module -Name AppsUtils"
-    ]
-  },
-  "uninstaller": {
-    "script": [
-      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-      "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\RTsoft\"",
-      "Remove-Module -Name AppsUtils"
-    ]
-  },
-  "bin": "patchy.exe",
-  "shortcuts": [
-    [
-      "patchy.exe",
-      "Patchy"
-    ]
-  ],
-  "checkver": {
-    "github": "https://api.github.com/repos/SethRobinson/Patchy/releases",
-    "jp": "$[0].tag_name",
-    "regex": "v([\\d.]+)"
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/SethRobinson/Patchy/releases/download/v$version/PatchyWindowsInstaller.exe#/dl.7z"
-      },
-      "arm64": {
-        "url": "https://github.com/SethRobinson/Patchy/releases/download/v$version/PatchyWindowsArm64Installer.exe#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.43/PatchyWindowsInstaller.exe#/dl.7z",
+            "hash": "a75b73ad119b04fb256aa1d7f3566822088346ea15ee13a6e2de5ca1dafc0b1e"
+        },
+        "arm64": {
+            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.43/PatchyWindowsArm64Installer.exe#/dl.7z",
+            "hash": "c5797463750a0c5a9b851a544e594881c2240457699f6db8fe1dfa7a58e1ce1f"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA256SUMS.txt"
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\PatchyWindowsNoInstaller.zip\" \"$dir\"",
+        "Move-Item -Path \"$dir\\Patchy\\*\" -Destination \"$dir\" -Force",
+        "Remove-Item -Path \"$dir\\Patchy\" -Force -Recurse",
+        "Remove-Item -Path \"$dir\\InstallPatchy.*\", \"$dir\\UninstallPatchy.exe\", \"$dir\\*.ico\", \"$dir\\*.txt\" -Force -ErrorAction SilentlyContinue"
+    ],
+    "installer": {
+        "script": [
+            "# handle runtime cache",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\RTsoft\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\RTsoft\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "bin": "patchy.exe",
+    "shortcuts": [
+        [
+            "patchy.exe",
+            "Patchy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/SethRobinson/Patchy/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SethRobinson/Patchy/releases/download/v$version/PatchyWindowsInstaller.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/SethRobinson/Patchy/releases/download/v$version/PatchyWindowsArm64Installer.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
     }
-  }
 }
