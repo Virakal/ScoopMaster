@@ -1,5 +1,5 @@
 {
-    "version": "0.1.30",
+    "version": "0.1.31",
     "description": "PS5-style launcher for AnyPS5: finds PS5 game dumps, unlocks them with the AnyPS5 engine and starts them.",
     "homepage": "https://github.com/AnyTogether/AnyPS5-Desktop",
     "license": "GPL-2.0-only",
@@ -15,8 +15,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AnyTogether/AnyPS5-Desktop/releases/download/v0.1.30/AnyPS5-Desktop-windows-x64.zip",
-            "hash": "19c748ae61241874f3a86e2a8516ad4a44bf891dcf2c79cf3aac38e2c0f0b877"
+            "url": "https://github.com/AnyTogether/AnyPS5-Desktop/releases/download/v0.1.31/AnyPS5-Desktop-windows-x64.zip",
+            "hash": "045676acf964fc29e76da674c0e9744340100a5ae90b84c2b28de0d3b055aeb5"
         }
     },
     "shortcuts": [

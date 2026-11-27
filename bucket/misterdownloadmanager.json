@@ -1,18 +1,38 @@
 {
     "version": "0.5.2",
-    "description": "An open-source, clean-room download manager written from scratch in pure Rust.",
+    "description": "Fast, resumable download manager with browser integration, video/torrent support, and an MCP server",
     "homepage": "https://misterdownloadmanager.com",
-    "license": "GPL-3.0-or-later",
-    "extract_dir": "MisterDownloadManager-0.5.2-portable",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "FFmpeg": "ffmpeg",
+        "yt-dlp": "yt-dlp",
+        "gallery-dl": "gallery-dl"
+    },
+    "notes": [
+        "Install the browser extension to catch downloads automatically:",
+        "  Chrome / Edge / Brave: https://chromewebstore.google.com/detail/mister-download-manager/ejoleppdfgjdndddcjoehopknmlglojp",
+        "  Firefox: https://addons.mozilla.org/firefox/addon/mister-download-manager/",
+        "",
+        "Native messaging host has been automatically registered for your browsers."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v0.5.2/MisterDownloadManager-0.5.2-portable.zip",
-            "hash": "0907a6c6aed5c4967e89549e883147d2b33b073e6f8b0d914dff84d32f3b7cf7"
+            "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v0.5.2/MisterDownloadManager-0.5.2-x64.zip",
+            "hash": "703c1676c90e34869dfd8e7fb675e06c9093bb5e23db92232a6a7534a50b9f63",
+            "extract_dir": "MisterDownloadManager-0.5.2-x64"
         }
     },
     "bin": [
+        [
+            "misterdownloadmanager-cli.exe",
+            "mdm"
+        ],
         "misterdownloadmanager-cli.exe",
-        "misterdownloadmanager-mcp.exe"
+        "misterdownloadmanager-mcp.exe",
+        [
+            "misterdownloadmanager.exe",
+            "misterdownloadmanager"
+        ]
     ],
     "shortcuts": [
         [
@@ -20,15 +40,20 @@
             "Mister Download Manager"
         ]
     ],
-    "persist": "data",
+    "post_install": "& \"$dir\\misterdownloadmanager-nmhost.exe\" --register",
+    "pre_uninstall": [
+        "if (Test-Path \"$dir\\misterdownloadmanager-nmhost.exe\") {",
+        "    & \"$dir\\misterdownloadmanager-nmhost.exe\" --unregister",
+        "}"
+    ],
     "checkver": {
         "github": "https://github.com/anefzaoui/misterdownloadmanager"
     },
     "autoupdate": {
-        "extract_dir": "MisterDownloadManager-$version-portable",
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v$version/MisterDownloadManager-$version-portable.zip"
+                "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v$version/MisterDownloadManager-$version-x64.zip",
+                "extract_dir": "MisterDownloadManager-$version-x64"
             }
         },
         "hash": {
