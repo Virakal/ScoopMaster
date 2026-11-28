@@ -1,18 +1,10 @@
 {
-    "version": "0.10.1",
-    "description": "A file explorer for Windows that never freezes",
     "homepage": "https://github.com/Koimsurai/Arke",
+    "description": "A file explorer for Windows that never freezes",
+    "version": "0.10.1",
     "license": "AGPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.10.1/arke-0.10.1.exe#/arke.exe",
-            "hash": "3371bb41ee2b60a6e9562548a1956864ecce700f500eada719299cd54aa727c6"
-        },
-        "arm64": {
-            "url": "https://github.com/Koimsurai/Arke/releases/download/v0.10.1/arke-0.10.1-arm64.exe#/arke.exe",
-            "hash": "75642cb8d915e3487fd606fc5081fd4946af71a28e61e5d22f7683a6e8dcf274"
-        }
-    },
+    "url": "https://github.com/Koimsurai/Arke/releases/download/v0.10.1/arke-0.10.1.exe#/arke.exe",
+    "hash": "3371bb41ee2b60a6e9562548a1956864ecce700f500eada719299cd54aa727c6",
     "bin": "arke.exe",
     "shortcuts": [
         [
@@ -22,20 +14,9 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe#/arke.exe",
-                "hash": {
-                    "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe.sha256"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version-arm64.exe#/arke.exe",
-                "hash": {
-                    "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version-arm64.exe.sha256"
-                }
-            }
+        "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe#/arke.exe",
+        "hash": {
+            "url": "https://github.com/Koimsurai/Arke/releases/download/v$version/arke-$version.exe.sha256"
         }
-    },
-    "notes": "Installing the optional live-search service (Settings > Search) asks for administrator approval."
+    }
 }

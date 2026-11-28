@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://uuyc.163.com/"
     },
-    "url": "https://a56.gdl.netease.com/UURemote_Setup_4.49.0.6162_1126083648_gwqd.exe?key1=08a4c1fcf74707b27134fa56645b7919&key2=6b08e44c&n=uuyc_4.49.0.exe",
+    "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd#/uuyc.exe",
     "hash": "6466c6b00a7bff54bed8ff25486e5e120f80f741c9f8070d566a14c713325d3f",
     "installer": {
         "script": [
@@ -96,13 +96,12 @@
             "$response.Close()",
             "return $location"
         ],
-        "regex": "(?<url>https://a56\\.gdl\\.netease\\.com/UURemote_Setup_(?<version>[\\d.]+)_[^?]+\\.exe\\?.*)"
+        "regex": "https://a56\\.gdl\\.netease\\.com/UURemote_Setup_(?<version>[\\d.]+)_(?<build>[^?]+)\\.exe(?<query>\\?.*)"
     },
     "autoupdate": {
-        "url": "$matchUrl",
+        "url": "https://api.nrd.nie.163.com/api/v1/release/dl/1?channel=gwqd#/uuyc.exe",
         "hash": {
             "mode": "download"
         }
-    },
-    "note": "This app does not persist user data, as there is no need to do so."
+    }
 }

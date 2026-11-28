@@ -1,55 +1,55 @@
 {
-    "version": "0.3.5",
-    "description": "Lightweight SSH client with a GPUI interface and a CLI for AI agents: jump hosts, SFTP, port forwarding, session recording and audited command execution.",
-    "homepage": "https://termlet.dev",
-    "license": "AGPL-3.0-or-later",
-    "notes": "The portable edition stores its data in 'Termlet/data' next to the executable. The arm64 build is experimental.",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/termlet/termlet/releases/download/v0.3.5/termlet-0.3.5-win-x64-portable.zip",
-            "hash": "cb2bcb143b5af0063ce3b205f5757786ccc27d43d8cd92b9753239895a20580d"
-        },
-        "arm64": {
-            "url": "https://github.com/termlet/termlet/releases/download/v0.3.5/termlet-0.3.5-win-arm64-portable.zip",
-            "hash": "7d10e95585632374bc5a3b8e5caafbdad1d698b759217e9ed5276393af4e6288"
-        }
+  "version": "0.3.5",
+  "description": "Lightweight SSH client with a GPUI interface and a CLI for AI agents: jump hosts, SFTP, port forwarding, session recording and audited command execution.",
+  "homepage": "https://termlet.dev",
+  "license": "AGPL-3.0-or-later",
+  "notes": "The portable edition stores its data in 'Termlet/data' next to the executable. The arm64 build is experimental.",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/termlet/termlet/releases/download/v0.3.5/termlet-0.3.5-win-x64-portable.zip",
+      "hash": "cb2bcb143b5af0063ce3b205f5757786ccc27d43d8cd92b9753239895a20580d"
     },
-    "bin": [
-        [
-            "Termlet/bin/termlet.exe",
-            "termlet"
-        ],
-        [
-            "Termlet/Termlet.exe",
-            "termlet-gui"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "Termlet/Termlet.exe",
-            "Termlet"
-        ]
-    ],
-    "persist": "Termlet/data",
-    "checkver": {
-        "github": "https://github.com/termlet/termlet"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/termlet/termlet/releases/download/v$version/termlet-$version-win-x64-portable.zip",
-                "hash": {
-                    "url": "https://github.com/termlet/termlet/releases/download/v$version/SHA256SUMS",
-                    "regex": "(?m)^([a-f0-9]{64})\\s+termlet-$version-win-x64-portable\\.zip$"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/termlet/termlet/releases/download/v$version/termlet-$version-win-arm64-portable.zip",
-                "hash": {
-                    "url": "https://github.com/termlet/termlet/releases/download/v$version/SHA256SUMS",
-                    "regex": "(?m)^([a-f0-9]{64})\\s+termlet-$version-win-arm64-portable\\.zip$"
-                }
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/termlet/termlet/releases/download/v0.3.5/termlet-0.3.5-win-arm64-portable.zip",
+      "hash": "7d10e95585632374bc5a3b8e5caafbdad1d698b759217e9ed5276393af4e6288"
     }
+  },
+  "bin": [
+    [
+      "Termlet/bin/termlet.exe",
+      "termlet"
+    ],
+    [
+      "Termlet/Termlet.exe",
+      "termlet-gui"
+    ]
+  ],
+  "shortcuts": [
+    [
+      "Termlet/Termlet.exe",
+      "Termlet"
+    ]
+  ],
+  "persist": "Termlet/data",
+  "checkver": {
+    "github": "https://github.com/termlet/termlet"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/termlet/termlet/releases/download/v$version/termlet-$version-win-x64-portable.zip",
+        "hash": {
+          "url": "https://github.com/termlet/termlet/releases/download/v$version/SHA256SUMS",
+          "regex": "(?m)^([a-f0-9]{64})\\s+termlet-$version-win-x64-portable\\.zip$"
+        }
+      },
+      "arm64": {
+        "url": "https://github.com/termlet/termlet/releases/download/v$version/termlet-$version-win-arm64-portable.zip",
+        "hash": {
+          "url": "https://github.com/termlet/termlet/releases/download/v$version/SHA256SUMS",
+          "regex": "(?m)^([a-f0-9]{64})\\s+termlet-$version-win-arm64-portable\\.zip$"
+        }
+      }
+    }
+  }
 }

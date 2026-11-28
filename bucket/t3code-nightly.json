@@ -1,41 +1,44 @@
 {
-    "version": "0.1.14-nightly.20261127.5359",
-    "description": "Nightly builds of a minimal web GUI for coding agents",
+    "version": "0.1.14-nightly.20261128.5372",
+    "description": "Desktop app for orchestrating AI coding agents (nightly builds)",
     "homepage": "https://t3.codes",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.14-nightly.20261127.5359/T3-Code-0.1.14-nightly.20261127.5359-x64.exe#/dl.7z",
-            "hash": "sha512:72e80170b26566835df86f22ed10de01e2e0147ed7f92a1d53c54947efa35c3a231b66210186988dfb9da7adabcb63d2716d36adb6ccc2fe04ac90725ea32727"
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.14-nightly.20261128.5372/T3-Code-0.1.14-nightly.20261128.5372-x64.exe#/dl.7z",
+            "hash": "sha512:0c9f18063e47284f7ab81bfa6800f46ca819459cff9d8823c4c9e2c6d2c700e6206c815406c9ebd35eb053dc2c5237959fe1b7df6a6ddfbdc090c1792a18fc81"
+        },
+        "arm64": {
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.14-nightly.20261128.5372/T3-Code-0.1.14-nightly.20261128.5372-arm64.exe#/dl.7z",
+            "hash": "sha512:0fc5d70e6caa8740071391305c623c1c46b9b5544f9370b626a6b9c478bd61c36e4c30c36d62a44f16fd14f5a7865d14006650be2af9664ec5230e4c8d68ed96"
         }
     },
-    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+    "pre_install": [
+        "Get-Item \"$dir\\`$PLUGINSDIR\\app*.7z\" | Select-Object -First 1 | Expand-7zipArchive -DestinationPath $dir",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse -ErrorAction Ignore"
+    ],
     "shortcuts": [
         [
             "T3 Code (Nightly).exe",
-            "T3 Code Nightly"
-        ]
-    ],
-    "bin": [
-        [
-            "T3 Code (Nightly).exe",
-            "t3code-nightly"
+            "T3 Code (Nightly)"
         ]
     ],
     "checkver": {
         "url": "https://api.github.com/repos/pingdotgg/t3code/releases",
-        "jsonpath": "$[?(@.tag_name =~ /nightly/)].tag_name",
-        "regex": "v([\\d.]+-nightly\\.[\\d.]+)"
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+-nightly\\.\\d{8}\\.\\d+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z",
-                "hash": {
-                    "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/nightly.yml",
-                    "regex": "url:\\s+T3-Code-$version-x64\\.exe\\s+sha512:\\s+$base64"
-                }
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-arm64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/nightly.yml",
+            "regex": "(?sm)$basename.*?$base64"
         }
     }
 }

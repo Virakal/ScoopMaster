@@ -1,28 +1,28 @@
 {
-    "version": "0.9.98",
-    "description": "A tool for installing and managing VR mods",
-    "homepage": "https://mrsurvivor-installers.com/",
-    "license": "Unknown",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB/releases/download/0.9.98/MRSURVIV0RS-VR-HUB-0.9.98.zip",
-            "hash": "0ed5710f113ff8a76e7ff0e50800188bfa1a6995ca2e98825c000a9ea000debc"
-        }
-    },
-    "shortcuts": [
-        [
-            "MRSURVIV0RS-VR-HUB.exe",
-            "MRSURVIV0RS VR HUB"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB/releases/download/$version/MRSURVIV0RS-VR-HUB-$version.zip"
-            }
-        }
+  "version": "0.9.98",
+  "description": "A tool for installing and managing VR mods",
+  "homepage": "https://mrsurvivor-installers.com/",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB/releases/download/0.9.98/MRSURVIV0RS-VR-HUB-0.9.98.zip",
+      "hash": "0ed5710f113ff8a76e7ff0e50800188bfa1a6995ca2e98825c000a9ea000debc"
     }
+  },
+  "shortcuts": [
+    [
+      "MRSURVIV0RS-VR-HUB.exe",
+      "MRSURVIV0RS VR HUB"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/MrSurviv0r/MRSURVIV0R-S-VR-HUB/releases/download/$version/MRSURVIV0RS-VR-HUB-$version.zip"
+      }
+    }
+  }
 }

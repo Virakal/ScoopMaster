@@ -1,19 +1,22 @@
 {
-    "version": "0.10.1-beta.6",
-    "description": "Any Listen - A cross-platform private music playback service.",
-    "homepage": "https://github.com/any-listen/any-listen-desktop",
-    "license": "GPL-3.0-only",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "0.10.1",
+    "description": "A private music playback application.",
+    "homepage": "https://github.com/any-listen/any-listen",
+    "license": {
+        "identifier": "Custom License based on AGPL v3.0",
+        "url": "https://github.com/any-listen/any-listen/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.10.1-beta.6/any-listen-0.10.1-beta.6-win_x64-green.7z",
-            "hash": "eae8bb0b1361c5b08649e6ef1d79a55e64620d4b647d308b19c263917db1206b"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.10.1/any-listen-0.10.1-win_x64-green.7z",
+            "hash": "715d9407e3c507f4d47dbce6eb7037d0e2e9973ea3432a8767e3239ad58eba06"
         },
         "arm64": {
-            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.10.1-beta.6/any-listen-0.10.1-beta.6-win_arm64-green.7z",
-            "hash": "43115c21bcdc711b34b28773d95645646cd09e9b895e169950356da703376bfd"
+            "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v0.10.1/any-listen-0.10.1-win_arm64-green.7z",
+            "hash": "86b2fa5b87c47b5b43e7a4723a960a684f7aae50154efd5f20ccb60aecf51c12"
         }
     },
-    "bin": "any-listen.exe",
     "shortcuts": [
         [
             "any-listen.exe",
@@ -21,25 +24,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/any-listen/any-listen-desktop/releases",
-        "jsonpath": "$[0].tag_name",
-        "regex": "v([\\d.]+-beta\\.\\d+)"
+        "github": "https://github.com/any-listen/any-listen-desktop"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_x64-green.7z",
-                "hash": {
-                    "url": "$baseurl/SHA256SUMS.txt",
-                    "regex": "$sha256\\s+any-listen-$version-win_x64-green\\.7z"
-                }
+                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_x64-green.7z"
             },
             "arm64": {
-                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_arm64-green.7z",
-                "hash": {
-                    "url": "$baseurl/SHA256SUMS.txt",
-                    "regex": "$sha256\\s+any-listen-$version-win_arm64-green\\.7z"
-                }
+                "url": "https://github.com/any-listen/any-listen-desktop/releases/download/v$version/any-listen-$version-win_arm64-green.7z"
             }
         }
     }

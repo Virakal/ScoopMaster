@@ -1,19 +1,19 @@
 {
-    "version": "0.8.20",
+    "version": "0.8.26",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/attainable-engineer/attain-cli/releases/download/v0.8.20/attain_0.8.20_windows_amd64.zip",
+            "url": "https://github.com/attainable-engineer/attain-cli/releases/download/v0.8.26/attain_0.8.26_windows_amd64.zip",
             "bin": [
                 "attain.exe"
             ],
-            "hash": "1c57a527dfa9133107d07afdd225c97e6eda819cd6fd894080e443af6ccd9e8e"
+            "hash": "e529dfd2c1760a84cd81a381298c7c9650e418e12cfc226b4974b79aa35b9e70"
         },
         "arm64": {
-            "url": "https://github.com/attainable-engineer/attain-cli/releases/download/v0.8.20/attain_0.8.20_windows_arm64.zip",
+            "url": "https://github.com/attainable-engineer/attain-cli/releases/download/v0.8.26/attain_0.8.26_windows_arm64.zip",
             "bin": [
                 "attain.exe"
             ],
-            "hash": "5abb1c3eab91b904c3f64c43fe30a1bf2f371ee86ef0100b5ba0901988b79661"
+            "hash": "03028f07caf9ec780a8e0aaefe7b4c31a387e9ac002f51820cd5405569daa110"
         }
     },
     "homepage": "https://attainable.software",
