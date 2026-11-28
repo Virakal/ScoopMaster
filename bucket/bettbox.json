@@ -14,12 +14,28 @@
         }
     },
     "innosetup": true,
-    "bin": "Bettbox.exe",
     "shortcuts": [
         [
             "Bettbox.exe",
             "Bettbox"
         ]
+    ],
+    "installer": {
+        "script": [
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:APPDATA\\com.appshub\\Bettbox\" \"$persist_dir\\AppData\" -Migrate"
+        ]
+    },
+    "pre_uninstall": [
+        "while (Get-Service -Name 'BetboxHelperevice' -ErrorAction SilentlyContinue) {",
+        "    Invoke-ExternalCommand 'sc.exe' -ArgumentList @('stop', 'BetboxHelperevice') -RunAs -Quiet",
+        "    Invoke-ExternalCommand 'sc.exe' -ArgumentList @('delete', 'BetboxHelperevice') -RunAs -Quiet",
+        "}",
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "Remove-Junction \"$env:APPDATA\\com.appshub\\Bettbox\"",
+        "Remove-EmptyDirectory \"$env:APPDATA\\com.appshub\""
     ],
     "checkver": "github",
     "autoupdate": {
@@ -30,9 +46,6 @@
             "arm64": {
                 "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-arm64-setup.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/sha256sums.txt"
         }
     }
 }

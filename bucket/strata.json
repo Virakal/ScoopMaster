@@ -1,6 +1,6 @@
 {
     "##": "Strata 桌面版官方 Windows 安装包（NSIS setup.exe，用户级安装）。release tag 为 v<version>，默认资产名 Strata-<version>-windows-x64-setup.exe；安装包不含推理引擎，首次启动时由应用按显卡下载。",
-    "version": "0.2.22",
+    "version": "0.2.23",
     "description": "Strata 桌面应用（本地 AI 聊天与编码预览，官方 Windows 安装包）",
     "homepage": "https://github.com/Niko1221/Strata",
     "license": {
@@ -16,8 +16,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Niko1221/Strata/releases/download/v0.2.22/Strata-0.2.22-windows-x64-setup.exe",
-            "hash": "d978eed0e144ccfb1c286be7ef5c2b35e85eaf7bf2f56325979e61413e07b1ca"
+            "url": "https://github.com/Niko1221/Strata/releases/download/v0.2.23/Strata-0.2.23-windows-x64-setup.exe",
+            "hash": "5f620817dc4be0db6122697b2c1a0f08bbafcb52961cb17a5ba6634ca44d4240"
         }
     },
     "installer": {
