@@ -1,8 +1,15 @@
 {
     "version": "0.35.0",
-    "description": "A native media conversion utility built in Rust.",
-    "homepage": "https://www.framegui.app",
-    "license": "GPL-3.0-or-later",
+    "description": "GUI for FFmpeg: convert video, audio, images and subtitles",
+    "homepage": "https://www.framegui.app/",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/66HEX/frame/blob/master/LICENSE"
+    },
+    "notes": [
+        "Ships its own FFmpeg and FFprobe in 'binaries\\' (with NVIDIA NVENC encoders); no FFmpeg install is needed.",
+        "Update through Scoop ('scoop update frame'); Frame's built-in updater runs the official Inno installer, which installs a second copy into %LOCALAPPDATA%\\Programs\\Frame, outside Scoop's control."
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/66HEX/frame/releases/download/0.35.0/Frame-x86_64.exe",
@@ -10,13 +17,13 @@
         }
     },
     "innosetup": true,
+    "bin": "Frame.exe",
     "shortcuts": [
         [
             "Frame.exe",
             "Frame"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\frame-update-helper.exe\" -Force -Recurse -ErrorAction SilentlyContinue",
     "checkver": {
         "github": "https://github.com/66HEX/frame"
     },

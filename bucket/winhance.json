@@ -1,15 +1,18 @@
 {
     "version": "26.11.27",
-    "description": "Windows enhancement, debloating, optimization and customization utility",
-    "homepage": "https://github.com/memstechtips/Winhance",
-    "license": "Unknown",
+    "description": "Application designed to optimize, customize and enhance your Windows experience.",
+    "homepage": "https://winhance.net/",
+    "license": {
+        "identifier": "CC BY-NC-SA 4.0",
+        "url": "https://github.com/memstechtips/Winhance#License-1-ov-file"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/memstechtips/Winhance/releases/download/v26.11.27/Winhance.Installer.exe",
             "hash": "a77b931b5eee6173600a0bb3ea7711a2b0ff7aadebb68e2fc7673a55ee4fdb1f"
         }
     },
-    "pre_install": "Start-Process -FilePath (Join-Path $dir 'Winhance.Installer.exe') -ArgumentList '/SILENT','/SUPPRESSMSGBOXES',('/DIR=\"{0}\"' -f $dir),'/TASKS=\"portableinstall\"' -Wait; Remove-Item (Join-Path $dir 'Winhance.Installer.exe') -Force",
+    "innosetup": true,
     "bin": "Winhance.exe",
     "shortcuts": [
         [
@@ -18,7 +21,9 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/memstechtips/Winhance"
+        "github": "https://api.github.com/repos/memstechtips/Winhance/releases/latest",
+        "jp": "$.assets[*].browser_download_url",
+        "regex": "/releases/download/v([\\d.]+)/Winhance.Installer\\.exe"
     },
     "autoupdate": {
         "architecture": {

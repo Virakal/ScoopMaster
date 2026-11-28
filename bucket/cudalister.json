@@ -1,5 +1,5 @@
 {
-    "version": "1.8.6.4",
+    "version": "1.8.7.0",
     "description": "Lister plugin for Total Commander, based on ATSynEdit",
     "homepage": "https://github.com/Alexey-T/CudaLister",
     "license": "MPL 2.0",
@@ -7,12 +7,12 @@
     "notes": "CudaLister is a Lister plugin for Total Commander, NOT a standalone application. It cannot be executed directly and is intended to be used within Total Commander.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Alexey-T/CudaLister/releases/download/1.8.6.4/wlx_cudalister_1.8.6.4.zip",
-            "hash": "a573dc813b6b209a379b42d661f9587481f317fafd1a9e6cb885d4dd450dcfa0"
+            "url": "https://github.com/Alexey-T/CudaLister/releases/download/1.8.7.0/wlx_cudalister_1.8.7.0.zip",
+            "hash": "882f1ad526618de3cdacc65ef73bddbaf075c2f09d353d1fe680f7ade905f70e"
         },
         "32bit": {
-            "url": "https://github.com/Alexey-T/CudaLister/releases/download/1.8.6.4/wlx_cudalister_1.8.6.4.zip",
-            "hash": "a573dc813b6b209a379b42d661f9587481f317fafd1a9e6cb885d4dd450dcfa0"
+            "url": "https://github.com/Alexey-T/CudaLister/releases/download/1.8.7.0/wlx_cudalister_1.8.7.0.zip",
+            "hash": "882f1ad526618de3cdacc65ef73bddbaf075c2f09d353d1fe680f7ade905f70e"
         }
     },
     "pre_install": [
